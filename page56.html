@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 56</title>
+<meta name="description" content="Page 56">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page56.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 56</h1>
+<article class="article-card">
+    <h2>#3241. How we made global routing faster with Bloom filters</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-we-made-global-routing-faster-with-bloom-filters" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1UqfFjdv2TVIS8yNSy2dRj/23997384dcbc3227587879ace2a39951/How_we_used_bloom_filters_to_make_our_global_routing_faster.jpg" alt="How we made global routing faster with Bloom filters" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1UqfFjdv2TVIS8yNSy2dRj/23997384dcbc3227587879ace2a39951/How_we_used_bloom_filters_to_make_our_global_routing_faster.jpg" alt="How we made global routing faster with Bloom filters" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Recently, we shipped an optimization to our global routing service that reduced its memory usage by 15%, improved time-to-first-byte (TTFB) from the 75th percentile and above by 10%, and significantly improved routing speeds for websites with many static paths.</p>
+<p>A small number of websites, with hundreds of thousands of static paths, were creating a bottleneck that slowed down our entire routing service. By replacing a slow JSON parsing operation with a Bloom filter, we brought path lookup latency down to nearly zero and improved performance for everyone.</p>
+<p>When you make a request to a Vercel deployment, our routing service first checks whether the requested path exists before attempting to serve it. This prevents unnecessary requests to storage and protects against enumeration attacks, where attackers try to discover hidden files by guessing URLs.</p>
+<p>We do this by generating a JSON file on build that contains a tree of every path in your project's build outputs, including static assets, pages, API routes, webpack chunks, and Next.js route segments.</p>
+<p>Before serving a request, the routing service consults this JSON file and checks if the path exists. If it doesn't, we immediately return a 404. This early check ensures we only fetch documents from storage when we're sure they exist.</p>
+<p>The majority of apps generate small path lookups that parse in under a millisecond</p>
+<p>90th percentile lookups take on average 4 milliseconds</p>
+<p>There's no noticeable impact on performance</p>
+<p>But some websites generate massive path lists:</p>
+<p>E-commerce sites with large product catalogs</p>
+<p>Documentation sites with thousands of pages</p>
+<p>These sites can create 1.5+ megabyte lookup files that take dramatically longer to parse. At the 99th percentile, parsing this JSON file takes about 100 milliseconds; at the 99.9th percentile, it takes about 250 milliseconds.</p>
+<p>Given that our routing service is single-threaded, parsing this JSON file also blocks the event loop. This means that for those websites whose path lookups take 250 milliseconds to parse, it literally takes 250 milliseconds longer to serve the website while we wait for the operation to finish.</p>
+<p>A Bloom filter is a probabilistic data structure that can be used to test whether an element, or key, is a member of a set. To insert a key, it is hashed multiple times, and the indices corresponding to each hash are set to 1. To query, you hash the key like above and check each index. If any are 0, the key is not in the Bloom filter.</p>
+<p>Bloom filters can return false positives, but never false negatives. For path lookups, this property is valuable. If the Bloom filter says a path does not exist, we can safely return a 404; if it says a path might exist, we fall back to checking the build outputs.</p>
+<p>This makes Bloom filters a good match for the problem:</p>
+<p>We can't afford false negatives (returning 404 for valid pages), and Bloom filters guarantee this won't happen</p>
+<p>False positives just trigger an extra storage request to find the file doesn't exist</p>
+<p>Bloom filters are dramatically smaller and faster than storing the actual path list</p>
+<p>The main challenge was coordinating Bloom filter implementations across two services written in different languages:</p>
+<p>Build service: Generates Bloom filter from all deployment paths</p>
+<p>Routing service: Queries Bloom filter for incoming requests</p>
+<p>Both needed identical Bloom filter logic to ensure compatibility. We implemented matching Bloom filter algorithms in both codebases.</p>
+<p>The build service now uploads a JSON Lines (JSONL) file, which looks like this:</p>
+<p>The first line is a JSON object containing the Bloom filter parameters:</p>
+<p>n: number of elements in the Bloom filter</p>
+<p>The second line is the Bloom filter buffer encoded as Base64. Even Base64 encoded, this Bloom filter is 70-80% smaller than the previous JSON file, which makes it faster to upload during builds and to parse in our routing service.</p>
+<p>Our routing service now fetches the paths file, creates a Bloom filter, and checks membership against the requested path.</p>
+<p>Although the Bloom filter is represented in the file as a Base64 string, we don’t actually want to treat it as a string. String operations are expensive, and they’re the reason why the previous approach is so slow. The goal of this optimization is precisely to avoid them.</p>
+<p>Instead, we can ignore the double quotes and treat the Base64 data as the Bloom filter directly. Then, when checking membership, we can decode each byte as needed.</p>
+<p>This means the speed at which we can create a Bloom filter is bound by file reading, which is orders of magnitude faster than string creation, so we can create very large Bloom filters nearly instantly.</p>
+<p>With the Bloom filter in place, the 99th percentile duration for path lookup is about 0.5 milliseconds, which is 200x faster than the JSON parsing approach; and the 99.9th percentile duration is 2.4 milliseconds, which is about 100x faster than the previous approach.</p>
+<p>This is amazing for our heaviest websites, which were previously bottlenecked by path lookup. But this improvement has also had ripple effects across our entire routing service.</p>
+<p>It turns out that path lookup for those few heavy websites was disproportionately hogging our routing service’s memory and CPU, which was making it run more slowly across the board. Once we shipped this improvement to path lookup, the heap size and memory usage of the routing service dropped by 15%.</p>
+<p>The reduced heap size relieved garbage collection pressure, a primary bottleneck in JSON parsing, so parsing the old path lookup file (which is still done for projects that haven’t deployed since we rolled out the Bloom filter) also sped up dramatically at all percentiles.</p>
+<p>All this culminated in the TTFB from 75th to 99th percentile across all requests served by our routing service becoming 10% faster.</p>
+<p>By bringing the duration of the path lookup operation down to effectively zero, we’ve eliminated an entire class of memory and CPU intensive processes when we serve websites, which makes it faster for everyone and dramatically faster for our heaviest websites.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-we-made-global-routing-faster-with-bloom-filters" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3240. Filter deployments by author</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/filter-deployments-by-author" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6RKHRUkrtDWWxfHmynBvxl/4cc8ceb82f90b413c9b4a05f15de0a60/Frame_1430105511.png" alt="Filter deployments by author" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6RKHRUkrtDWWxfHmynBvxl/4cc8ceb82f90b413c9b4a05f15de0a60/Frame_1430105511.png" alt="Filter deployments by author" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now filter deployments in the dashboard by author, using username, email, or Git username. Filters persist in the URL, making it easy to share filtered views with your team.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/filter-deployments-by-author" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3239. Anomaly alerts now include error spikes</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/anomaly-alerts-now-include-error-spikes" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/52CIBzelyjBUDJsU0pgFyM/2953661e58746a6133664bc79b922ba7/Error_Alerts_in_Observability_-_Light.png" alt="Anomaly alerts now include error spikes" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/52CIBzelyjBUDJsU0pgFyM/2953661e58746a6133664bc79b922ba7/Error_Alerts_in_Observability_-_Light.png" alt="Anomaly alerts now include error spikes" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Enterprise customers with Observability Plus can now be alerted when error events deviate from normal behavior, helping teams catch issues earlier.</p>
+<p>The system automatically detects and groups abnormal error patterns, such as sudden spikes in 5XX responses on a specific route. Alert detail pages include relevant log lines, making it easier to investigate and resolve the underlying cause.</p>
+<p>Error anomaly detection, joining anomaly alerts for unusual app metric usage, is available in limited beta for Enterprise customers with Observability Plus</p>
+<p>If you have feedback or questions, drop them in the Vercel Community thread.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/anomaly-alerts-now-include-error-spikes" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3238. BotID uncovers hidden SEO poisoning</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/botid-uncovers-hidden-seo-poisoning" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/BDhXhyV6Il2R6vh1rDL07/631004e8b77417da6f6fa8eb157e4f1e/BotID_discovers_search_poisoning.jpg" alt="BotID uncovers hidden SEO poisoning" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/BDhXhyV6Il2R6vh1rDL07/631004e8b77417da6f6fa8eb157e4f1e/BotID_discovers_search_poisoning.jpg" alt="BotID uncovers hidden SEO poisoning" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Your traffic is spiking and you spot suspicious bot activity in your logs. You deploy BotID expecting to find malicious scrapers, but the results show verified Google bots. Normal crawlers doing their job. But then you notice what they're actually searching for on your site. Queries that have nothing to do with your business. What do you do?</p>
+<p>This exact scenario recently played out at one of the largest financial institutions in the world. What they discovered was a years-old SEO attack still generating suspicious traffic patterns.</p>
+<p>The institution's security team was seeing significant bot traffic hitting their deployments with weird and malicious-looking search queries. The volume was concerning and the queries had nothing to do with financial services. They needed to stop this traffic in a reliable way.</p>
+<p>They implemented BotID's invisible CAPTCHA to mitigate the surge in bot traffic and identify the problematic sources before it could impact their systems further.</p>
+<p>The results from BotID were unexpected. The suspicious traffic was not from malicious scrapers or attack infrastructure. Instead, every request originated from bots.fyi-verified Google crawlers, including Googlebot, Google AdsBot, and other legitimate Google services.</p>
+<p>A short list of the queries being searched for</p>
+<p>Why would verified Google bots be making these strange search queries on a financial institution's website?</p>
+<p>Digging deeper into their site's history revealed the answer. Years ago, before moving to Vercel, their previous infrastructure had been compromised through SEO poisoning.</p>
+<p>SEO poisoning is an attack where malicious actors manipulate a website to get search engines to index specific content. Attackers create URLs with malicious query parameters that get crawled and indexed by search engines. For example, if your site has search functionality at /search?q=, attackers generate thousands of URLs like /search?q=spam-keyword and trick search engines into indexing these pages.</p>
+<p>The poisoned pages can then appear in search results, directing traffic to spam or malicious content hosted on legitimate domains.</p>
+<p>In this case, Google had indexed thousands of malicious search pages from the compromised site years earlier. Even though the institution had migrated to completely new infrastructure on Vercel, Google's index still contained these poisoned URLs.</p>
+<p>Google's bots were systematically attempting to re-crawl these indexed pages, generating the suspicious search queries in their current logs. What appeared to be an active attack was actually Google trying to refresh stale indexed content from a historical compromise.</p>
+<p>With BotID providing clear identification of legitimate Google traffic, the team could implement the right approach:</p>
+<p>Update robots.txt to disallow crawling of search parameter patterns</p>
+<p>Submit removal requests through Google Search Console for the poisoned indexed pages</p>
+<p>Monitor de-indexing progress while allowing legitimate Google crawlers to continue normal operations</p>
+<p>Without proper bot identification, they might have spent significant effort trying to block Google's crawlers, which would be both impossible and harmful to their search visibility.</p>
+<p>This case demonstrates why bot identification matters just as much as bot blocking. Vercel's verified bot registry powering BotID prevented misidentifying legitimate crawlers while revealing the root cause of suspicious traffic patterns.</p>
+<p>The institution's problem wasn't current malicious activity but historical technical debt manifesting through search engine behavior.</p>
+<p>When you encounter suspicious bot patterns, understanding the traffic source can be more valuable than immediately blocking it. Proper identification reveals whether you're dealing with an active threat or a symptom of deeper issues.</p>
+<p>Understand what your bot traffic is actually telling you</p>
+<p>Detect and stop advanced bots before they reach your most sensitive routes. Easy to implement, hard to bypass.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/botid-uncovers-hidden-seo-poisoning" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3237. Claimed deployments now include third-party resources</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/claimed-deployments-now-include-third-party-resources" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/KcTGeKRw0HsSjq0uNLGks/6884d55e9e2ad943c12fc8fc5d0f439d/Resource_Claims_-_Light.png" alt="Claimed deployments now include third-party resources" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/KcTGeKRw0HsSjq0uNLGks/6884d55e9e2ad943c12fc8fc5d0f439d/Resource_Claims_-_Light.png" alt="Claimed deployments now include third-party resources" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>AI platforms, coding tools, and workflow apps can now create projects on Vercel that users can later claim as their own, transferring deployment ownership together with any resources by third-party providers.</p>
+<p>Instant deployment: Any third-party can use the Vercel API to create a project, deploy an application, and attach a resource store (such as a database).</p>
+<p>Claim and transfer: When a user claims the Vercel deployment, the attached resources automatically move with it. Full ownership of the complete deployment is handed off to the user.</p>
+<p>This is available today through Prisma, the first Vercel Marketplace provider to support instant deployment. Prisma customers can now spin up a database and a Vercel-hosted app together as a single, bundled stack.</p>
+<p>We’re expanding this flow to more Marketplace providers so they can pair their products, such as authentication, observability, and workflow services, with Vercel deployments through one-click claiming.</p>
+<p>Check out our Claim Deployments live demo and documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/claimed-deployments-now-include-third-party-resources" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3236. Query data on external API requests in Vercel Observability</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/query-data-on-external-api-requests-in-vercel-observability" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Query%20data%20on%20external%20API%20requests%20in%20Vercel%20Observability&amp;format=changelog" alt="Query data on external API requests in Vercel Observability" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Query%20data%20on%20external%20API%20requests%20in%20Vercel%20Observability&format=changelog" alt="Query data on external API requests in Vercel Observability" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Observability Plus now supports querying and visualizing external API requests.</p>
+<p>Observability Plus's query builder allows customers to explore their Vercel data and visualize traffic, performance, and other key metrics. You can now author custom queries on request counts or time to first byte (TTFB) for external API calls, such as fetch requests to an AI provider.</p>
+<p>TTFB queries include breakdowns by average, min, max, p75, p90, p95, and p99. You can also filter or group results by request hostname to focus on specific APIs.</p>
+<p>The query builder is available to Pro and Enterprise teams using Observability Plus.</p>
+<p>Learn more about Observability and Observability Plus.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/query-data-on-external-api-requests-in-vercel-observability" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3235. Request collapsing for ISR cache misses</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/request-collapsing-for-isr-cache-misses" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4UHAtPUS1rCtq3wvtFhEiH/72db9e0197a1c444373f742ca22638d0/slack-imgs.jpeg" alt="Request collapsing for ISR cache misses" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4UHAtPUS1rCtq3wvtFhEiH/72db9e0197a1c444373f742ca22638d0/slack-imgs.jpeg" alt="Request collapsing for ISR cache misses" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Vercel CDN now prevents cache stampedes through request collapsing on an expired Incremental Static Regeneration (ISR) page into a single function invocation per region. Without collapsing, simultaneous requests each trigger regeneration, wasting compute and overloading backends. With collapsing, one request regenerates the page while others wait and return the cached result.</p>
+<p>This improves reliability, reduces backend load, and saves significant compute at scale.</p>
+<p>The feature is applied automatically for cacheable routes. Cacheability is inferred from framework metadata, so no configuration is required.</p>
+<p>Implementation details are available in the Preventing the stampede: Request collapsing in the Vercel CDN blog post.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/request-collapsing-for-isr-cache-misses" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3234. Zero-configuration FastAPI backends</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/zero-config-fastapi-backends" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6bdnndVO6Gu140EhF4cswf/5ade97c12cd5f7f570da998e61dc5e01/FastAPI-light.png" alt="Zero-configuration FastAPI backends" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6bdnndVO6Gu140EhF4cswf/5ade97c12cd5f7f570da998e61dc5e01/FastAPI-light.png" alt="Zero-configuration FastAPI backends" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>FastAPI, a modern, high-performance, web framework for building APIs with Python, is now supported with zero-configuration.</p>
+<p>Vercel's framework-defined infrastructure now recognizes and deeply understands FastAPI applications. This update removes the need for redirects in vercel.json or using the /api folder.</p>
+<p>Backends on Vercel use Fluid compute with Active CPU pricing by default. This means your FastAPI app will automatically scale up and down based on traffic, and you only pay for what you use.</p>
+<p>Deploy FastAPI on Vercel or visit the FastAPI on Vercel documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/zero-config-fastapi-backends" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3233. Vercel Domains overhauled with instant search and at-cost pricing</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-domains-at-cost-pricing-and-the-fastest-on-the-web" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7w7ZPRSy49oAX8SaNlWfW8/725aaa20477187ae5c3d9f58dbf99871/domains-search-Final_OG.png" alt="Vercel Domains overhauled with instant search and at-cost pricing" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7w7ZPRSy49oAX8SaNlWfW8/725aaa20477187ae5c3d9f58dbf99871/domains-search-Final_OG.png" alt="Vercel Domains overhauled with instant search and at-cost pricing" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We’ve rebuilt Vercel Domains end to end, making it faster, simpler, and more affordable to find and buy the right domain for your project.</p>
+<p>Search without login: Look up domains instantly, even when you’re not signed in.</p>
+<p>At-cost pricing: Domains are offered at registrar cost, with savings up to 50% on popular TLDs.</p>
+<p>Transparent results: Availability and pricing surface instantly, with no upsells or unnecessary add-ons.</p>
+<p>Fastest search on the web: Real-time, streaming results show availability and premium status instantly.</p>
+<p>Expanded TLD coverage: Support for more registries so every project can find the right home.</p>
+<p>Bulk checkout: Purchase multiple domains in a single streamlined transaction.</p>
+<p>This update makes Vercel Domains the fastest way to claim a name and get to production. As part of the overhaul, we’ve partnered with name.com as our upstream registrar, delivering better pricing and reliability.</p>
+<p>An upcoming blog will share how we built this speed using structured concurrency, layered caching, Bloom filters, and partitioned batching.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-domains-at-cost-pricing-and-the-fastest-on-the-web" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3232. Preventing the stampede: Request collapsing in the Vercel CDN</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/cdn-request-collapsing" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/47KWL5T1j8Ul0R5vUJ6gcg/64d979c48e918d634dbd76bcd30a26e7/OG_Card.png" alt="Preventing the stampede: Request collapsing in the Vercel CDN" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/47KWL5T1j8Ul0R5vUJ6gcg/64d979c48e918d634dbd76bcd30a26e7/OG_Card.png" alt="Preventing the stampede: Request collapsing in the Vercel CDN" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>When you deploy a Next.js app with Incremental Static Regeneration (ISR), pages get regenerated on-demand after their cache expires. ISR lets you get the performance benefits of static generation while keeping your content fresh.</p>
+<p>But there's a problem. When many users request the same ISR route at once and the cache is expired, each request can trigger its own function invocation. This is called a "cache stampede." It wastes compute, overloads your backend, and can cause downtime.</p>
+<p>The Vercel CDN now prevents this with request collapsing. When multiple requests hit the same uncached path, only one request per region invokes a function. The rest wait and get the cached response.</p>
+<p>Vercel automatically infers cacheability for each request through framework-defined infrastructure, configuring our globally distributed router. No manual configuration needed.</p>
+<p>To understand why request collapsing matters, let's look at how the Vercel CDN serves requests when everything is working smoothly.</p>
+<p>The Vercel CDN is globally distributed, starting with the ISR cache, which lives alongside your functions and stores the results of static regeneration. It's the source of truth that replicates content to each region's Vercel cache. When a user makes a request, the nearest CDN region serves it (more specifically, a node within each region).</p>
+<p>Each region has multiple nodes (server instances) that scale based on traffic. Each node runs multiple workers to handle concurrent requests and maintains a small in-memory cache for frequently requested content.</p>
+<p>Hot content gets served immediately from the node's in-memory cache</p>
+<p>If not found there, the request checks the regional CDN cache, which pulls from the ISR cache</p>
+<p>If not found there, checks the ISR cache. If the ISR cache has a valid page, it returns without running your function</p>
+<p>Problems start when all caches miss. Picture a page that just recently expired, or a new route getting hit for the first time. Multiple users request it simultaneously. Each request sees an empty cache and triggers a function invocation.</p>
+<p>Without coordination, each of those misses invokes the function independently. For a popular route, this can mean dozens of simultaneous invocations, all regenerating the same page. This wastes compute and hammers your backend.</p>
+<p>This is where request collapsing comes in. By synchronizing concurrent misses, the system ensures that only one invocation per region runs, and every other request waits briefly to receive that same response once it is cached.</p>
+<p>All other requests receive the result from cache once it completes</p>
+<p>Cache coherency improves because only one invocation writes the response at a time</p>
+<p>Request collapsing only works when a request is known to produce a cacheable response. Requests that might return different results or aren't meant to be cached at all can't collapse requests.</p>
+<p>An ISR page that regenerates the same content for all users can be safely collapsed</p>
+<p>A dynamic API route that returns user-specific data cannot be collapsed</p>
+<p>A page with random content or timestamps should not be collapsed</p>
+<p>The challenge is determining this automatically. Vercel solves this through framework integration. When you deploy your app, Vercel analyzes your routes and understands which ones use ISR, static generation, or dynamic rendering. This metadata gets distributed to every CDN region.</p>
+<p>When a request arrives, the CDN already knows whether that specific route can be safely cached and collapsed. This happens without any configuration from you. The framework’s code tells Vercel how each route behaves, and Vercel applies the correct caching strategy automatically, including features like request collapsing.</p>
+<p>Request collapsing works through a two-level distributed locking system.</p>
+<p>At the node level, each CDN node maintains an in-memory lock. When multiple requests for the same uncached path arrive at that node, the lock ensures that only one proceeds. Others wait until the cache fills. This prevents a single node from firing multiple function invocations for the same path.</p>
+<p>At the regional level, every region enforces its own lock across all nodes. After acquiring the node lock, a request tries to get the regional lock. Only one request per region can hold both locks simultaneously, meaning only one function invocation per region can regenerate a page.</p>
+<p>This design makes collapsing scalable. Without the node-level grouping, hundreds of concurrent requests could all compete for the regional lock simultaneously. This would create a thundering herd problem where the lock coordination itself becomes a bottleneck.</p>
+<p>Instead, the node lock groups requests locally first. The number of waiters at the regional level stays proportional to nodes in the region, not total requests. Within a node, waiters scale with concurrent requests hitting that specific node.</p>
+<p>By bounding the waiters at each level, the CDN prevents the lock coordination from becoming overwhelmed. Every request is either served from cache immediately or waits briefly for a lock holder to complete.</p>
+<p>The mechanism can be expressed in pseudocode like this:</p>
+<p>Lock-based flow: check cache, acquire locks, regenerate if needed.</p>
+<p>Every request checks the cache first, then acquires both locks before regenerating.</p>
+<p>Locking alone doesn't collapse requests. If every waiter invoked the function after getting the lock, work would still be duplicated.</p>
+<p>To solve this, the CDN uses the well-known double-checked locking pattern. The idea is simple but powerful: check the cache twice.</p>
+<p>First check: When a request arrives, check the cache. If content exists, return immediately without getting a lock</p>
+<p>Acquire lock: If the cache is empty, acquire the node and regional locks. This guarantees only one request can proceed with regeneration</p>
+<p>Second check: After getting the lock, check the cache again. Another request might have completed and populated the cache while this request waited for the lock. If that is the case, the current request can skip regeneration and simply return the cached value</p>
+<p>Regeneration: Only if the cache is still empty does the request invoke the function and set the cache before releasing the lock</p>
+<p>This ensures concurrent requests don't duplicate work. The first request regenerates the page. Others either get immediate cache hits or read the new value after waiting.</p>
+<p>Double-checked locking: only regenerate if the cache is still empty after lock acquisition.</p>
+<p>Notice that the cache is written asynchronously after the function returns. This allows the response to be sent back to the user without waiting for the cache set operation to complete, reducing the time to first byte. Meanwhile, the lock is released as soon as the cache is populated, so waiters can proceed quickly.</p>
+<p>So far we have assumed the function always succeeds. But real systems fail, and request collapsing needs to handle those cases gracefully. Two failure modes are especially important:</p>
+<p>Function errors: If the function invocation throws an error, the result cannot be cached. That means the second cache lookup still returns nothing. The next request that acquires the lock must attempt regeneration again. In this case, collapsing does not help because there is no valid response to share, but the system still ensures that errors do not poison the cache</p>
+<p>Function timeouts: Timeouts are more dangerous. If the lock holder takes a long time (or never completes) the other requests waiting on the lock could be stuck indefinitely. During a traffic spike, this can mean dozens or hundreds of requests pile up behind a single slow invocation</p>
+<p>To prevent this, locks are created with explicit timeouts. If a request cannot acquire the lock within a fixed window (for example, a few seconds), it abandons waiting and proceeds to invoke the function itself. This “hedging” ensures that slow regenerations do not block all requests for that route. Even in the worst case, users continue to get responses, though at the cost of multiple invocations.</p>
+<p>Lock creation with timeouts to prevent requests from waiting indefinitely.</p>
+<p>With this configuration, each request waits at most three seconds for both the node-level and regional locks. If the locks are not acquired in time, the request moves forward independently.</p>
+<p>This timeout policy strikes a balance. It preserves the benefits of collapsing under normal conditions, but it also avoids cascading failures when functions are slow or unstable. In effect, the system optimizes for the common case while still remaining resilient to errors and long-tail latencies.</p>
+<p>The number of function calls elided by request collapsing varies a lot over time.  E.g. the graph below shows request collapsed jumping from 30 per second to 120 per second for a short window.</p>
+<p>In production, the Vercel CDN currently collapses over 3M requests per day on cache miss, on top of the 90M collapsed requests from background revalidations. This feature is enabled for all projects on Vercel, so any customer using ISR benefits from request collapsing automatically.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/cdn-request-collapsing" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3231. Node.js Vercel Functions now support per-path request cancellation</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/node-js-vercel-functions-now-support-per-path-request-cancellation" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Node.js%20Vercel%20Functions%20now%20support%20per-path%20request%20cancellation%20&amp;format=changelog" alt="Node.js Vercel Functions now support per-path request cancellation" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Node.js%20Vercel%20Functions%20now%20support%20per-path%20request%20cancellation%20&format=changelog" alt="Node.js Vercel Functions now support per-path request cancellation" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Functions using Node.js can now detect when a request is cancelled and stop execution before completion. This is configurable on a per-path basis, and includes actions like navigating away, closing a tab, or hitting stop on an AI chat to terminate compute processing early.</p>
+<p>This reduces unnecessary compute, token generation, and sending data the user would never see.</p>
+<p>To enable cancellation, add "supportsCancellation": true to your vercel.json configuration. You can apply it to specific paths or all functions:</p>
+<p>Once enabled, you can listen for cancellation using Request.signal.aborted or the abort event:</p>
+<p>If you’re using the AI SDK, forward the abortSignal to your stream:</p>
+<p>Learn more about cancelling Function requests.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/node-js-vercel-functions-now-support-per-path-request-cancellation" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3230. Collaborating with Anthropic on Claude Sonnet 4.5 to power intelligent coding agents</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/collaborating-with-anthropic-on-claude-sonnet-4-5" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3MjQvSdXpocuHQkR88pC58/c49ec00594cc86d5e99b2336686bdc6e/Anthropic_OG.jpeg" alt="Collaborating with Anthropic on Claude Sonnet 4.5 to power intelligent coding agents" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3MjQvSdXpocuHQkR88pC58/c49ec00594cc86d5e99b2336686bdc6e/Anthropic_OG.jpeg" alt="Collaborating with Anthropic on Claude Sonnet 4.5 to power intelligent coding agents" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Claude Sonnet 4.5 is now available on Vercel AI Gateway with full support in AI SDK. We’ve been testing the model in v0, across our Next.js build pipelines, and inside our new Coding Agent Platform template. The model shows improvements in design sensibility and code quality, with measurable gains when building and linting Next.js applications.</p>
+<p>Claude Sonnet 4.5 builds on Anthropic's strengths in reasoning and coding. When paired with the Vercel AI Cloud, it powers a new class of developer workflows where AI can plan, execute, and ship changes safely inside your repositories.</p>
+<p>Try Claude Sonnet 4.5 on AI Gateway instantly, with no setup or install necessary. Open the playground and start prompting.</p>
+<p>Our internal evaluations show Claude Sonnet 4.5 outperforms its predecessor on core agentic coding tasks:</p>
+<p>Next.js builds: Higher first-pass success rates with fewer missing dependency errors. The model correctly infers which packages are needed and includes them in package.json before attempting builds</p>
+<p>Linting: Stronger adherence to Next.js and ESLint defaults</p>
+<p>Implementing features: Improved handling of Next.js-specific functionality, such as correctly using <Image> from next/image and other framework-native components</p>
+<p>Frontend design in v0: Cleaner component structures, better Tailwind usage, and more accessible UI patterns</p>
+<p>Handling challenging prompts: When v0 prompts get nuanced, Claude Sonnet 4.5 finds the right context faster and more accurately. It avoids being tripped up by small details or unclear requirements, staying on track to deliver the right solution</p>
+<p>Complex applications: For complicated apps like 3D worlds, Claude Sonnet 4.5 often gets it right in a single attempt, piecing together moving parts, interactions, and structure without extended back and forth</p>
+<p>Clarification over guessing: When a query is unclear, Claude Sonnet 4.5 asks for clarification instead of wasting tokens on something irrelevant</p>
+<p>These improvements make Claude Sonnet 4.5 effective for coding agents that execute full task chains: understanding a request, generating code, verifying with builds and tests, and shipping changes.</p>
+<p>To show what’s possible, we’ve released a Coding Agent Platform template that defaults to Anthropic's Claude Code agent using Claude Sonnet 4.5.</p>
+<p>It's a multi-agent system that can run Claude Code, OpenAI Codex CLI, Cursor CLI, or opencode. After connecting your GitHub organization, you select a repository and define a task (for example, “add dark mode,” “lint this project,” or “create a new API route”). The agent plans, executes, and commits changes automatically.</p>
+<p>Each task runs in an isolated sandbox. The platform installs dependencies (including the coding tool you choose), executes CLI commands with the selected model, and pushes changes back to GitHub. You review the pull request and decide whether to merge.</p>
+<p>Progress streams in real time. The UI (built with Next.js and Tailwind CSS) shows commands as they run, builds as they complete, and commits as they’re created. State is persisted in Postgres, with task history and management available for review.</p>
+<p>Run coding agents in the Vercel AI Cloud with Vercel Sandbox + AI Gateway.</p>
+<p>The Coding Agent Platform template runs on the Vercel AI Cloud, where each layer of the stack makes background coding agents viable.</p>
+<p>At the foundation is Vercel Sandbox, which provisions secure, short-lived environments for installs, builds, and tests. This isolation keeps agent tasks reproducible and prevents interference with the rest of your project. Inside a Sandbox, you have full command-line access to clone repositories, run commands, and use complete agentic coding toolchains.</p>
+<p>Sandboxes scale with demand. As you create new prompts and tasks, they spin up in parallel, removing the need for local compute and improving both performance and cost efficiency. Sandbox is powered by Fluid compute, which scales elastically and uses Active CPU pricing. Agents can remain idle without incurring charges, so you only pay for CPU when compute is actively used.</p>
+<p>Each task also makes lightweight AI calls through the AI SDK and AI Gateway. For example, when an agent starts a task, the system generates a descriptive Git branch name based on the task, repository, and context.</p>
+<p>Together, these systems provide an integrated execution layer. Instead of piecing together separate tools, the Vercel AI Cloud connects model reasoning with safe, scalable execution, making autonomous coding agents practical in production.</p>
+<p>We are open-sourcing the Coding Agent template under the same vision as our Open SDK strategy:</p>
+<p>Plug in new agents, domain-specific tools, or custom commit logic</p>
+<p>Reference implementation that you can bootstrap or deploy on your teams while taking advantage of AI Gateway, AI SDK, and Vercel AI Cloud platform</p>
+<p>We’ll provide documentation, examples, and a contributor guide so that the community can evolve it.</p>
+<p>Claude Sonnet 4.5 is available today through AI Gateway and AI SDK. You can try it instantly in the playground, or deploy the Coding Agent Template to run real tasks against your repositories.</p>
+<p>Try Claude Sonnet 4.5 on AI Gateway instantly, with no setup or install necessary. Open the playground and start prompting.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/collaborating-with-anthropic-on-claude-sonnet-4-5" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3229. View &amp; query bot verification data in Vercel Observability</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/view-and-query-bot-verification-data-in-vercel-observability" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5aJXuafWQJFIujBXSKWszk/a1b9ccbe15d40d5ef9646cfe68aca82a/Verified_Bots_in_O11y_-_Light.png" alt="View &amp; query bot verification data in Vercel Observability" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5aJXuafWQJFIujBXSKWszk/a1b9ccbe15d40d5ef9646cfe68aca82a/Verified_Bots_in_O11y_-_Light.png" alt="View & query bot verification data in Vercel Observability" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel inspects every request to identify bot traffic. For requests claiming to come from a verified source, Vercel cross-checks against its directory of verified bots and validates them against strict verification criteria.</p>
+<p>We've added three new dimensions to the query builder when analyzing Edge Requests to help you understand bot activity to your projects:</p>
+<p>Bot verified: Distinguish between verified, spoofed, and unverifiable bots</p>
+<p>Additionally, the Edge Requests dashboard in Observability now displays verification badges next to bot names.</p>
+<p>Try it out or learn more about Observability and Observability Plus.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/view-and-query-bot-verification-data-in-vercel-observability" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3228. Stripe is now available in beta on the Vercel Marketplace</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/stripe-is-now-available-in-beta-on-the-vercel-marketplace" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6pqFNSvo51wfz4tv7p2Z9S/75faf1c65a82e1a793fc8a54226e576c/Vercel___Stripe_-_Light.png" alt="Stripe is now available in beta on the Vercel Marketplace" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6pqFNSvo51wfz4tv7p2Z9S/75faf1c65a82e1a793fc8a54226e576c/Vercel___Stripe_-_Light.png" alt="Stripe is now available in beta on the Vercel Marketplace" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Stripe is now available in beta on the Vercel Marketplace as a new payment provider.</p>
+<p>You can now provision a fully functional Stripe claimable sandbox directly from Vercel with no setup required. When ready, link it to a Stripe account and soon promote it to production.</p>
+<p>This makes it easy for teams to move from prototype to production for use cases like:</p>
+<p>Ecommerce storefronts: Test complete checkout flows before launch.</p>
+<p>SaaS billing: Validate subscriptions, usage-based pricing, and invoicing.</p>
+<p>Demos and templates: Share preconfigured environments for testing or client demos.</p>
+<p>Developer onboarding: Give teams instant access to ready-to-use Stripe sandboxes.</p>
+<p>Get started today with this example to build your first online simple store using Vercel and Stripe.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/stripe-is-now-available-in-beta-on-the-vercel-marketplace" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3227. Towards the AI Cloud: Our Series F</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/series-f" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/28xFR4WAqHYmENvTZ4M33Y/5af04bf5aaa3497f540ab5617bad44ef/OG_Card.jpg" alt="Towards the AI Cloud: Our Series F" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/28xFR4WAqHYmENvTZ4M33Y/5af04bf5aaa3497f540ab5617bad44ef/OG_Card.jpg" alt="Towards the AI Cloud: Our Series F" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today, Vercel announced an important milestone: a Series F funding round valuing our company at $9.3 billion. The $300M investment is co-led by longtime partners at Accel and new investors at GIC, alongside other incredible supporters. We're also launching a ~$300M tender offer for certain early investors, employees, and former employees.</p>
+<p>To all the customers, investors, and Vercelians who have been on this journey with us: thank you.</p>
+<p>We recently celebrated our 10th anniversary, and this has been, without a doubt, the biggest year in Vercel's history. The web is undergoing a massive evolution. We're moving from the world of pixels to the world of tokens.</p>
+<p>Our founding insight back in 2015 was simple: the world’s largest companies – Amazon, Google, Facebook – had internal infrastructure that allowed them to build and ship fast. They defined the protocols, the infrastructure, and the frameworks. The rest of the world didn't have access to that. Vercel was founded to democratize that advantage.</p>
+<p>Then the world changed. We used to build pages, and now we’re going to build agents.</p>
+<p>What makes this moment so unique is that not even the giants have figured it out yet. Everyone's being disrupted. It's a great time for startups, a great time for innovators, a great time for enterprises. But companies that don't iterate quickly will be left behind.</p>
+<p>This transformation demanded we evolve with it. We've evolved as much in this last year as we did in the first nine. Because there has to be a cloud that's designed and purpose-built for AI applications. Vercel has built this from the ground up with the AI Cloud.</p>
+<p>When we raised our Series C four years ago, I talked about three things:</p>
+<p>Today, we're doing the same three things, but for AI.</p>
+<p>Building the SDK for AI. The AI SDK might be one of the most consequential projects we've ever worked on. It provides access to more than 60 models through a unified interface. Just like React brought accessibility to pages, the AI SDK is bringing accessibility to tokens to multiple sources of intelligence.</p>
+<p>The numbers tell the story: the AI SDK has crossed 3 million downloads per week (by far our fastest-growing open source project ever).</p>
+<p>Lowering the barrier to entry. With the rise in popularity of ChatGPT, developers we speak to every day want the power to build their own agents and deploy them safely in their own environments.</p>
+<p>We recently open-sourced a ChatGPT Enterprise-like template. We also shipped an open source vibe coding platform with v0. Our bet on open source has become a powerful flywheel, and we’re excited to continue democratizing agents and making them accessible to everyone.</p>
+<p>Focusing on the end user. And don't forget about the pixels. Interfaces still matter. The biggest AI products, Grok, Claude, and Cursor, are using Next.js to power their frontends. In the last 12 months, Next.js has been downloaded over 500 million times, exceeding the total downloads from 2016 to 2024.</p>
+<p>Agents will completely reshape the web, including how we work. Vercel is powering that shift. As we turn the corner into the last quarter of 2025, we're locking in.</p>
+<p>The AI Cloud isn’t just a foundation for developers building agents. It’s where we’re building our own. Earlier this month, we introduced Vercel Agent in public beta with a new skill: AI-powered code reviews. These reviews go beyond the diff, scanning your entire codebase, generating and actually validating fixes (by running your app with the patch in Vercel Sandboxes), and surfacing them directly in your pull requests.</p>
+<p>What makes this powerful is that Agent isn’t static. It adapts to frameworks like Next.js and React, supports multiple languages from TypeScript to Go and Python, and validates every recommendation against real execution environments. It’s a glimpse of what happens when infrastructure is no longer just provisioned, but actively participates in making applications faster, safer, and more efficient.</p>
+<p>Coming up in the next few weeks: general availability of the v0 iOS app. Currently in public beta, it's the manifestation of something profound we discovered about work: 70% of development happens outside traditional work hours. The best ideas don't wait for you to be at your desk.</p>
+<p>v0’s mobile app is the evolution of your Notes app, except your ideas get built for you in the background. Build at the speed of sound with voice prompts. Start a project on your computer, leave your desk, and get notified when your long-running agent tasks complete. With more than 10,000 people on the waitlist, v0 on mobile represents the collapse of the last barriers between imagination and creation.</p>
+<p>2025 was the year my lifelong belief in a dynamic web exceeded what I thought was possible: millions of developers (and agents) creating experiences we couldn't imagine just a year ago.</p>
+<p>I'll see you there (and also at Next.js Conf and Ship AI), building the future on the free, open, and infinitely creative web.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/series-f" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3226. Deployment-level configuration for Fluid compute</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/deployment-level-configuration-for-fluid-compute" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Deployment-level%20configuration%20for%20Fluid%20compute&amp;format=changelog" alt="Deployment-level configuration for Fluid compute" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Deployment-level%20configuration%20for%20Fluid%20compute&format=changelog" alt="Deployment-level configuration for Fluid compute" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now configure Fluid compute on a per-deployment basis.</p>
+<p>By setting "fluid": true in your vercel.json, Fluid compute will be activated for that specific deployment. You can also enable or disable Fluid regardless of project level settings.</p>
+<p>This allows teams to selectively test and adopt Fluid compute without changing the global project settings.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/deployment-level-configuration-for-fluid-compute" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3225. Faster time-to-start for v0 builds</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/faster-time-to-start-for-v0-builds" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Faster%20time-to-start%20for%20v0%20builds&amp;format=changelog" alt="Faster time-to-start for v0 builds" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Faster%20time-to-start%20for%20v0%20builds&format=changelog" alt="Faster time-to-start for v0 builds" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Publishing v0 apps is now 1.1s faster on average.</p>
+<p>We reduced the time it takes to send source files during deployment creation, improving the overall deployment pipeline and shortening feedback loops for developers.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/faster-time-to-start-for-v0-builds" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3224. Static IPs are now available for more secure connectivity</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/static-ips-are-now-available-for-more-secure-connectivity" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/aJ7JhFrGX9T0bIztMu6I7/b8c92cfd9e7faa066a69bf15807b9f28/static_ips_og_card.jpeg" alt="Static IPs are now available for more secure connectivity" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/aJ7JhFrGX9T0bIztMu6I7/b8c92cfd9e7faa066a69bf15807b9f28/static_ips_og_card.jpeg" alt="Static IPs are now available for more secure connectivity" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Pro and Enterprise teams can now use Static IPs to securely connect to external services like databases that require IP allowlisting. Traffic from builds and functions routes through consistent, shared static IPs.</p>
+<p>To enable Static IPs, you can access Connectivity > Static IPs from your project or team settings.</p>
+<p>Static IPs are offered in addition to Secure Compute, which remains available for teams that need a fully dedicated VPC model.  Note, Secure Compute has also moved within the Connectivity settings of your projects and teams.</p>
+<p>This is part of our move to bring more enterprise features self-serve.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/static-ips-are-now-available-for-more-secure-connectivity" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3223. Invalidate the CDN cache by tag</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/invalidate-the-cdn-cache-by-tag" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/yovas22LP80ijzybBwsvi/5b82e3635185ec9fa9ce1e5f4d97ac2d/purge-by-tag-light-mode.png" alt="Invalidate the CDN cache by tag" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/yovas22LP80ijzybBwsvi/5b82e3635185ec9fa9ce1e5f4d97ac2d/purge-by-tag-light-mode.png" alt="Invalidate the CDN cache by tag" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now invalidate CDN cache contents by tag.</p>
+<p>This marks all cached content associated with the tag as stale. The next request serves stale content instantly while revalidation happens in the background, with no latency impact for users.</p>
+<p>There are several ways to invalidate content:</p>
+<p>In addition to invalidating by tag if the origin content changes, you can also delete by tag if the origin content is gone. However, deleting the cache can increase latency while new content is generated or cause downtime if your origin is unresponsive, so use with caution.</p>
+<p>Available on all plans. Learn more about cache invalidation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/invalidate-the-cdn-cache-by-tag" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3222. Python package manager uv is now available for builds with zero configuration</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/python-package-manager-uv-is-now-available-for-builds-with-zero" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/337D8Bn6ZlgKnxd6uiEaRW/6b96c8d87ad9c675a34339885b5698bc/Vercel___UV-_Light.png" alt="Python package manager uv is now available for builds with zero configuration" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/337D8Bn6ZlgKnxd6uiEaRW/6b96c8d87ad9c675a34339885b5698bc/Vercel___UV-_Light.png" alt="Python package manager uv is now available for builds with zero configuration" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel now uses uv, a fast Python package manager written in Rust, as the default package manager during the installation step for all Python builds.</p>
+<p>This change makes builds 30-65% faster and adds support for more dependency formats. In addition to requirements.txt or Pipfile, projects can now declare dependencies with a uv.lock or pyproject.toml file.</p>
+<p>Learn more about the Python runtime on Vercel.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/python-package-manager-uv-is-now-available-for-builds-with-zero" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html" class="active">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

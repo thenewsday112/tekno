@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Entertainment - News Portal Indonesia</title>
+<meta name="description" content="Latest entertainment news">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/entertainment.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html" class="active">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">Entertainment - News Portal Indonesia</h1>
+<article class="article-card">
+    <h2>#247. Origin Range Requests: Serving large files without range-request tuning</h2>
+    <div class="article-meta">
+        📅 Oct 23, 2026 &nbsp;|&nbsp; Category: <strong>Entertainment</strong> &nbsp;|&nbsp; 
+        <a href="https://blog.cloudflare.com/origin-range-requests/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://blog.cloudflare.com/_emdash/api/media/file/01M5MZPB7A2K0S0V8PAH4CRWG6.png" alt="Origin Range Requests: Serving large files without range-request tuning" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://blog.cloudflare.com/_emdash/api/media/file/01M5MZPB7A2K0S0V8PAH4CRWG6.png" alt="Origin Range Requests: Serving large files without range-request tuning" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A video player seeking to the middle of a movie asks for a few megabytes. Under our old range caching, that one request could make Cloudflare pull 128 MiB from the origin and move it between data centers, sometimes after the viewer had already left. Range requests are how large files get delivered, and caching them naively easily leads to wasted network bandwidth and wasted disk operations when running a CDN at scale.</p>
+<p>So we rebuilt how our cache handles them. For R2, Cloudflare's object storage, p99 time to first byte dropped by about half, and a follow-up improvement cut tiered cacheÂ traffic for R2Â and similar workloads by about 6%.</p>
+<p>Today, we're making that new implementation available as Origin Range Requests, a self-service feature on all plans. There's no range size to tune and no need to contact support. Turn it on with a Cache Rule, and Cloudflare handles the rest.</p>
+<p>An HTTP range request asks for part of a resource instead of the whole resource. The client sends a normal GETÂ with a RangeÂ header:</p>
+<p>If the server supports the request, it returns 206 Partial ContentÂ and identifies the returned bytes with Content-Range:</p>
+<p>Range requests are common for large objects. A video player can request bytes around a seek position instead of the whole file. A download manager can resume after an interruption. A package manager can fetch part of an artifact. A client can inspect the end of a file without downloading everything before it.</p>
+<p>The client decides whether to request a range, and Cloudflare does not change that request. Instead, Origin Range Requests changes how Cloudflare satisfies it.</p>
+<p>Cloudflare has supported range-request caching for years via static zone configuration.</p>
+<p>The previous implementation resembled the cache-slicing described in an nginx blog post: each client request was mapped to fixed-size ranges of the file, with the range size and file extensions configured per zone.</p>
+<p>The size of each range created a tradeoff: small ranges led to many small origin requests and memory pressure on Cloudflare from coalescing all of the requests in-memory, while large ranges caused Cloudflare to download much more data than the client requested. Updates to the range size itself would invalidate cache entries, since the size was part of the cache key.</p>
+<p>This design also meant people requesting content through our network could have unpleasant experiences accessing these files. Concurrent requests that fell inside the same range, no matter how far apart each clientâs requested range was, could block each other. Our nginx-based cache also couldnât combine range caching with concurrent streaming, a feature we built to let multiple clients read a file from cache while it's still being written. Turning both on together cut responses short, so each range had to be fully downloaded before anyone could read it, and popular files needed a separate origin fetch for every range.</p>
+<p>The extra bytes could also cross several parts of our distributed cache: from the origin to one data center, between cache tiers, and then toward the client. Every hop multiplied the waste. No value works equally well for a small seek, a sequential download, a large media file, and every origin and cache topology.</p>
+<p>Our internal cache limitations were directly exposed to customers, who should not need to understand our capabilities in-depth to have files served efficiently.</p>
+<p>Fortunately, our transition from nginx to a Pingora-based caching server created an opportunity to address the implementation problems that had forced a hard-to-use setting onto customers.</p>
+<p>The fix came from something Pingora was already doing. To make it easy to resume interrupted downloads, it stores every cached file on disk in fixed-size chunks. If the cache already thinks in chunks, the range size doesn't need to be a setting at all, it can just be the chunk!</p>
+<p>For a range request, Cloudflare checks which requested bytes are already cached. It serves those bytes directly. For missing bytes, it fetches origin ranges aligned to the cache's fixed-sized-chunk boundaries, stores the result in the same chunks used for ordinary cache storage, and returns only the bytes requested by the client.</p>
+<p>For example, a request for bytes 150-250Â can cause Cloudflare to fetch the aligned chunk containing those bytes. The downstream response still contains only 150-250.</p>
+<p>This does not eliminate extra work for requests smaller than our chunk size â such a request can still require fetching the whole chunk containing it. We also are taking on the cost of more work for non-aligned ranges. The difference is that the extra work is bounded and predictable, and no longer determined by a customer-selected range size that can cause unpredictable effects on us and origins.</p>
+<p>Parsing the RangeÂ header is straightforward. The harder problem is producing one correct response when the requested bytes are split across cached data, an origin response, and downloads already in progress.</p>
+<p>This is a coordinator, not a single cache lookup. One request can use a cached prefix, an in-flight download, and a newly fetched suffix. The internal origin response can be larger than the downstream response, but the downstream status and headers describe only the requested range.</p>
+<p>If an existing download covers another request's bytes, the second request can attach to that download instead of starting another origin fetch. This shares work during bursts for popular large files.</p>
+<p>The design uses the existing cache data model. Headers identify the asset version, the body is stored in bounded chunks, and metadata records which ranges were written successfully.</p>
+<p>Composed range responses are valid only when all bytes belong to the same representation. The coordinator checks that each origin response matches the requested range, that the total asset size is stable, and that the entity tag remains consistent across subrequests.</p>
+<p>The If-RangeÂ header lets a client request a range only if the representation still matches a known validator. If it does not match, Cloudflare returns the full representation instead of combining bytes from different versions.</p>
+<p>Cloudflare also avoids composing ranges for a representation it is about to decompress because the range over a set of compressed bytes would be different from those selected by the range in a decompressed response. In these cases, Cloudflare serves the transformed full response rather than advertising a range it cannot honor correctly.</p>
+<p>Before opening Origin Range Requests to everyone, we moved existing users of the old range-caching feature onto the new implementation, starting with the workloads that hurt us most.</p>
+<p>Those workloads had a lot of concurrent range requests against very large files, often on very spiky traffic. Configured range sizes on the old system ran from tens of kilobytes to tens of gigabytes. With a large range size, a request that wouldn't fill a floppy disk could make us download a few DVDs' worth of data from the origin and move it across several data centers, sometimes after the client had already given up and gone elsewhere. With a small range size, one request turned into a long line of tiny origin requests, each holding memory while it waited. Both patterns caused real operational incidents for us.</p>
+<p>R2 was the largest internal user. Its configured range size was 64 MiB, so a small read that crossed a range boundary could cost us 128 MiB of transfer between data centers. After moving R2 to the new implementation, we saw:</p>
+<p>Once the cache no longer depended on a customer-selected range size, the product configuration could not be simpler. Customers select matching traffic through Cache Rules. Cloudflare handles the chunking and cache coordination.</p>
+<p>Origin Range Requests is intended for traffic where clients naturally request parts of a large cacheable object:</p>
+<p>We intend to make this the default way certain file types are served on our network, modifiable by cache rules.</p>
+<p>This feature does not change normal cache eligibility. Enabling it does not make an otherwise uncacheable response cacheable. The origin also needs to support byte ranges for partial origin fetches to be useful.</p>
+<p>To turn it on, create a Cache RuleÂ that matches your large-file traffic and set Origin Range Requests to On. You can do this in the dashboard under Caching > Cache Rules, or through the API with origin_range_requests: { "mode": "on" }. Customers choose the traffic; the edge handles the cache coordination and correctness requirements.</p>
+<p>Thanks for subscribing! Check your inbox to confirm.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://blog.cloudflare.com/origin-range-requests/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#876. Algolia Connector for Supabase</h2>
+    <div class="article-meta">
+        📅 Jul 17, 2025 &nbsp;|&nbsp; Category: <strong>Entertainment</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/algolia-connector-for-supabase" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/launch-week-15/day-4-algolia-connector/og.png" alt="Algolia Connector for Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/launch-week-15/day-4-algolia-connector/og.png" alt="Algolia Connector for Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today, Algolia is launching a new Supabase Connector, making it easier than ever to index your Postgres data and power world-class search experiences without writing a single line of code.</p>
+<p>With just a few clicks, you can connect your Supabase database to Algolia, select the tables you want to sync, and configure how often the data updates. Algolia handles the rest. You get a fast, reliable, scalable search index, and your team gets to focus on building.</p>
+<p>Supabase is more than a backend. It is a growing ecosystem of tools that work well together so developers can build faster, scale more easily, and stay focused on their product.</p>
+<p>Partners like Algolia bring best-in-class functionality (in Algolia’s case, fast and flexible search) directly into the Supabase workflow. For developers, that means fewer workarounds, no glue code, and a smoother path from idea to production.</p>
+<p>For partners, integrating with Supabase means more than technical compatibility. It means product visibility to tens of thousands of active projects. Supabase regularly features integrations in our docs, Launch Weeks, blog, and community programs. Developers discover and adopt your product in the context where they’re already building.</p>
+<p>Read on to see how the Algolia Connector for Supabase works.</p>
+<p>To get started with Algolia’s connector, prepare the data in your Supabase database, create Supabase as a source in Algolia’s dashboard, set up your Algolia index and configure your sync job. Here’s how you can get started in just a few minutes.</p>
+<p>Before you connect to Algolia, you will want to ensure all the fields you want to make searchable are in one place. If the fields you want to index live in more than one table, you can stitch them together in a Postgres View, allowing Algolia’s connector to get all the data you want to index.</p>
+<p>For example, imagine you’re creating an app that allows you to easily find a movie to watch. You want to search across movie titles, genres, rating and actors. However, movies and actors are in two separate tables. You can create a view (e.g., movies_view) that combines the columns you need:</p>
+<p>Later in the Algolia dashboard, you will be able to pick exactly which columns you want to index.</p>
+<p>First, you will need to fill in your Supabase connection info. From the Supabase dashboard:</p>
+<p>Once you create Supabase as a data source, you'll need to tell Algolia where to index your data.</p>
+<p>Once configured, create the task. Algolia will start syncing records from Supabase into your search index (in the YouTube demo above, 8,800+ movie records were synced in under a minute).</p>
+<p>You can now instantly search your Supabase data using Algolia's lightning-fast API.</p>
+<p>With the Algolia + Supabase connector, you don’t need to build or maintain custom data pipelines. With Algolia, you don’t need to worry about scaling your own search infrastructure. With Algolia’s API clients, you just connect and go.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/algolia-connector-for-supabase" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2098. Supabase Alpha September 2020</h2>
+    <div class="article-meta">
+        📅 Oct 03, 2020 &nbsp;|&nbsp; Category: <strong>Entertainment</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-alpha-september-2020" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/supabase-september-2020.png" alt="Supabase Alpha September 2020" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/supabase-september-2020.png" alt="Supabase Alpha September 2020" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're now 7 months into building Supabase. This update is a big one!</p>
+<p>We've released OAuth logins! You can now enable third-party logins on your app for Bitbucket, GitHub, GitLab, or Google.</p>
+<p>You can duplicate your tables, just like you would inside a spreadsheet.</p>
+<p>Extensions are easier to use. You can enable Postgres extensions with the click of a button.</p>
+<p>The SQL editor now stores your query history in your browser. You can also save your favorite queries to run later!</p>
+<p>Supabase was given access to GitHub Discussions! This is the place for you to ask questions or show off what you've built with Supabase.</p>
+<p>There's been plenty of drama during Hacktoberfest, but Supabase is committed to helping new contributors get started with open source. We've already seen a lot of issues closed by new members to our community and first-time contributors. If you're looking for ways to get involved, read our Hacktoberfest blog post, check our live stream, and then dive into our project board.</p>
+<p>Our focus now is to move from Alpha to Beta and we'll be improving stability, reliability, and performance. We've created a Benchmarks repository, where we'll be measuring the performance of all the open source tools we use.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-alpha-september-2020" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2898. Ben Noordhuis&#x27;s Departure</h2>
+    <div class="article-meta">
+        📅 Dec 03, 2013 &nbsp;|&nbsp; Category: <strong>Entertainment</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/uncategorized/bnoordhuis-departure" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/announcement/Node.js%20%E2%80%94%20Ben%20Noordhuis&#x27;s%20Departure" alt="Ben Noordhuis&#x27;s Departure" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/announcement/Node.js%20%E2%80%94%20Ben%20Noordhuis's%20Departure" alt="Ben Noordhuis's Departure" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>As of this past weekend, Ben Noordhuis has decided to step away from
+Node.js and libuv, and is no longer acting as a core committer.</p>
+<p>Ben has done a tremendous amount of great work in the past. We're sad
+to lose the benefit of his continued hard work and expertise, and
+extremely grateful for what he has added to Node.js and libuv over the
+years.</p>
+<p>Many of you already have expressed your opinion regarding recent
+drama, and I'd like to ask that you please respect our wishes to let
+this issue rest, so that we can all focus on the road forward.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/uncategorized/bnoordhuis-departure" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

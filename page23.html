@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 23</title>
+<meta name="description" content="Page 23">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page23.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 23</h1>
+<article class="article-card">
+    <h2>#3901. Why all application migrations should be incremental</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/incremental-migrations" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2zgWh9XuR9Xn0qGYhhPG20/7b25c85e7b5a5d090074099d69b34745/Final_OG_Card.png" alt="Why all application migrations should be incremental" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2zgWh9XuR9Xn0qGYhhPG20/7b25c85e7b5a5d090074099d69b34745/Final_OG_Card.png" alt="Why all application migrations should be incremental" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Large migrations are inevitable, but they don't have to be painful or risky. Learn why incrementally migrating is the solution.</p>
+<p>In 2023, there are few software projects that are true greenfield endeavors. Instead, migrations of existing systems are the new normal. Migrations done wrong can introduce substantial business and timeline risks into any software project. An incremental migration strategy can minimize those risks while pulling forward validation of business impact.</p>
+<p>Vercel’s product is designed to support incremental migration from the ground up. In this post you'll get a high-level overview of incremental migration strategies and considerations.</p>
+<p>Almost all software projects that require migrations should aim for incremental migrations in order to:</p>
+<p>Minimize risk by reducing the scope of the individual steps of the migration.</p>
+<p>Minimize risk by having a more natural path to rolling back in the case of unexpected issues.</p>
+<p>Allow validating the technical implementation and business value substantially earlier in the process.</p>
+<p>Achieve downtime-free migration without maintenance windows.</p>
+<p>Big bang migrations are migrations in which a system is replaced in a one-time full switchover. There may be intermediate steps, but they are all performed in very short order. Basically, you pick a date, and on that date, all usage is moved from the legacy system to the new system.</p>
+<p>Problems with big bang migrations can include:</p>
+<p>You may go through the entire process only to learn that there are product problems that are very expensive to fix this late in the program.</p>
+<p>Rehearsals are inherently difficult to execute, making it hard to assess upfront whether a migration will succeed.</p>
+<p>You may reach a point of no return where a migration has to be completed even if major problems are noticed while it is happening.</p>
+<p>It may be required to take the legacy system offline while the migration is happening leading to lost business. Such maintenance windows often escalate in duration as issues are only discovered while the migration is running.</p>
+<p>An incremental migration strategy involves gradually transitioning to a new or significantly updated software system. During this process, both the old and new systems run simultaneously, and either features or users are moved over in phases instead of all at once.</p>
+<p>There are two major types of incremental migrations:</p>
+<p>1. Vertical: Feature-by-feature increments</p>
+<p>In this strategy, subsets of system functionality are switched to the new system. Think of this as migrating one feature at a time where both systems are operating in parallel and functionality is routed to the new or legacy system based on whether the respective feature has been migrated or not.</p>
+<p>In horizontal migrations, while "users" are commonly the main unit being moved, other entities can be used instead. The ideal choice would be an entity that can be easily divided or "sharded" within a system, ensuring minimal interaction between these separate shards.</p>
+<p>It would not be uncommon to see vertical and horizontal incremental migration strategies combined in complex migrations. In that case you’d see a user-by-user migration on per-feature basis.</p>
+<p>The primary trade-off of incremental migrations is the introduction of additional effort to implement the interop between the new and legacy system. This must be weighed against the reduction in risk and faster time to business validation.</p>
+<p>This is particularly challenging if the systems have to access each other’s data. In case of a horizontal incremental migration, picking the right unit of increment is the most crucial decision to minimize data dependencies. Common entities where this is true is a "user," or an "organization."</p>
+<p>Frontend migrations are a special case of migration in which a frontend layer is migrated while the backend stays stable. Frontend migrations are generally easier to execute because the stateful data continues to be handled by the same "system of record," and only the rendering and processing for the backend’s data is updated.</p>
+<p>While the term "frontend" sometimes evokes expectations of user interfaces and similar modalities, the principle of layered migration can be extended deep into larger systems: for example, even if entire systems are exchanged including their primary database, it can be helpful to keep the data-warehouse layer stable and to ingest data from legacy and new systems concurrently.</p>
+<p>Not changing the analytics layers at the same time as applications has the additional benefit of retaining a reliable system for the purpose of judging the performance of the new system.</p>
+<p>A special case of such a frontend migration is one where the legacy system wasn’t properly decomposed into backend and frontend. If the goal is to switch to a new frontend, it may be possible to introduce an API into the legacy system such that a new frontend can be introduced while keeping the existing system around as a backend.</p>
+<p>The above is common when companies bought into monolithic systems that coupled frontend and backend into a single system. As these companies want more control over the user interface they are presenting to their users, they often introduce separated frontends that treat the previous monolith as an API service.</p>
+<p>The key primitive to incremental migration of web frontends is the reverse proxy. Reverse proxies allow a web server to serve content from multiple different web servers under its primary domain.</p>
+<p>Step 1 of any migration to new serving infrastructure is to introduce a reverse proxy that forwards all requests to the legacy infra. The reverse proxy can:</p>
+<p>Be co-located with the new frontend (recommended)</p>
+<p>Be a dedicated system that is introduced specifically for the migration</p>
+<p>Co-locating the reverse proxy with the new frontend is recommended because it allows exposing the new infrastructure to production traffic without expected behavior changes.</p>
+<p>Vercel applications come with built-in reverse proxy functionality to help implement such migrations. Notably, the reverse proxy can be programmed through Edge Middleware which helps implementing the migration increments as well as request adapters between new and legacy systems.</p>
+<p>When this stage is complete the new infrastructure is formally in production yet all actual logic gets served by the legacy system. We expect zero behavior changes after step 1, so it is easy to verify that this step of the migration was successful.</p>
+<p>At the beginning of step 2, the new system serves all of the traffic but none of the actual application logic. The new system can now be configured to take over part of the traffic while continuing to proxy all other traffic to the legacy system.</p>
+<p>For example, in a web shop one might start serving a subset of the product detail pages from the new system while everything else is proxied. These increments in functionality can be validated one step at a time.</p>
+<p>Traffic migrations are a special case of a horizontal incremental migration.</p>
+<p>Vercel itself is currently in the middle of a major incremental migration of its primary serving system. The team has chosen an incremental migration strategy paired with dark launches. Their goal for the new system is to have bug-for-bug compatibility with the legacy system while substantially improving latency and CPU usage.</p>
+<p>A dark launch is the introduction of a secondary system while an existing system continues to serve the user-facing traffic. In our dark launch phase we send traffic both to the old and new system and compare the results to validate that they behave exactly the same.</p>
+<p>Naturally, a dark launch uses additional resources (since both old and new systems are engaged for the same traffic effectively doubling processing needs). Respectively, it is advisable to only run a subset of traffic through the dark launch path.</p>
+<p>At Vercel, our incremental rollout plan looks like this:</p>
+<p>Observe differences in responses between old and new system</p>
+<p>If needed, fix the behavior of the new system</p>
+<p>Validate that the new system does, indeed, improve latency and CPU usage</p>
+<p>Once the dark launch behaves sufficiently like the new system and the goals of the new system achieved, switch the same X% of traffic over to the new system</p>
+<p>As of today, we've successfully finished this migration and are now serving 100% of traffic on the new system.</p>
+<p>Incremental migrations can seem like additional scope that one might wish to avoid, but mature organizations realize that they are usually worth the effort. Incremental migrations minimize risk, improve the time to validating the business value of a change, and eliminate planned downtime.</p>
+<p>Frontend migrations are a special case of migrations where systems of record stays the same while the frontend is replaced. Migrations to Vercel are often such frontend migrations. Our platform provides specialized tools to support such migration through reverse proxying and fine-grained request management in Edge Middleware.</p>
+<p>Our experts can help you navigate Vercel for your team's unique needs.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/incremental-migrations" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3900. Using Zig in our incremental Turborepo migration from Go to Rust</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-we-continued-porting-turborepo-to-rust" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3mRjZyk0lxfn6YxXiEcaWJ/c702ebf8e9e1529d63d35b29ee7e6969/OG_Card.png" alt="Using Zig in our incremental Turborepo migration from Go to Rust" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3mRjZyk0lxfn6YxXiEcaWJ/c702ebf8e9e1529d63d35b29ee7e6969/OG_Card.png" alt="Using Zig in our incremental Turborepo migration from Go to Rust" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Learn how we're cross-compiling a Rust-Go-Rust sandwich to six platforms.</p>
+<p>We’ve been porting Turborepo, the high-performance build system for JavaScript and TypeScript, from Go to Rust. We talked about how we started the porting process, so now let’s talk about how we began porting our two main commands: run and prune.</p>
+<p>When we last left off, we had begun our port by implementing global turbo and command line argument parsing in Rust. Because of issues around static linking and Go’s incompatibility with musl, an essential requirement for compatibility with Alpine Linux, we split Turborepo into two binaries: one Rust and one Go.</p>
+<p>After that, we ported the auxiliary commands like login, link, unlink. These were fairly simple to port since they only required a basic HTTP client and some configuration management. We were able to move them in one or two pull requests at a time.</p>
+<p>However, after these commands, we ended up with a problem: How could we port run and prune? run and prune are the commands that do the majority of the work in turbo. run, well, runs your tasks, like build, lint, and test. prune takes your Turborepo and produces a subset of it that only contains a single package and its dependencies. This is helpful when you want to only use a specific package, such as in a Docker container, and don’t want to copy the entire Turborepo into the container.</p>
+<p>As such, they’re quite large chunks of code. run, for instance, does the following:</p>
+<p>Processes configuration from command line arguments, your turbo.json files, environment variables, etc.</p>
+<p>Spins up a dependency graph of the various packages in your Turborepo, i.e. the package graph.</p>
+<p>Determines which packages have been modified.</p>
+<p>Figures out which tasks need to be run and in which order, using a task dependency graph, i.e. the Task Graph.</p>
+<p>Saves the outputs of these tasks to file system cache and/or remote cache.</p>
+<p>And this is a simplified, high-level version! In reality, there’s a lot more going on such as filtering, dry runs, hashing, and more. We couldn’t move these commands in one or two pull requests like we could with the auth commands from before. We needed a way to move them incrementally.</p>
+<p>We considered a few strategies for moving run and prune to Rust, all based on principles of incremental migration.</p>
+<p>The first strategy that we considered was to continue what we were already doing for command-line parsing: Do more work in the Rust code and pass the result to the Go code. However, this had a fatal flaw. Almost all of the work that we were doing in run involved either the package dependency graph or the task dependency graph. Graphs can get large extremely quickly, so serializing them over JSON would induce a lot of overhead.</p>
+<p>Also, from a stability perspective, the package graph is the core abstraction within turbo. We needed to build up enough infrastructure and testing to make sure that it was rock-solid before we could ship a ported version.</p>
+<p>Another option would be to build up a Rust version of run / prune from scratch, then switch over once it’s completed. We didn’t want to do this, since, as stated in the previous blog post, we weren’t confident that we could produce a full rewrite that kept the same behavior.</p>
+<p>We also had some ideas that involved reusing our existing infrastructure, such as creating a trampoline where the Go binary would have an entry-point function that could redirect to different parts of the run pipeline, so the Rust code could call the Go binary, get a result, process that more, then call the Go binary again. This would allow us to reuse the two binary setup that we already had. If you’re familiar with JavaScript callbacks, you can think of this as the Rust code producing events that the Go code handles with a callback.</p>
+<p>Similarly to the previous option, we considered adapting Turborepo’s daemon for porting. The daemon is a performance optimization that runs in the background and watches the files in your Turborepo. That way, when you run a task, turbo already knows which files have changed and, therefore, which tasks to run. Our strategy would be to port the daemon to Rust, and then add more and more functionality to the daemon, such as having it create the package graph and task graph. However, the daemon is meant as an optional performance improvement, so making it an essential part of the run pipeline would be a significant shift in architecture.</p>
+<p>After considering these options, we settled on building what we call the “Rust-Go-Rust sandwich” or the “Go sandwich” for short. It consists of a Rust binary that calls a Go binary, which in turn calls Rust libraries that are statically linked into the Go binary. This allows us to split up the run and prune code between the two languages and port individual dependencies. This way, we could tackle run and prune incrementally, allowing for better testing and debugging through the migration.</p>
+<p>The Rust dependencies that we’ve ported are contained in the turborepo-ffi crate. We compile that crate to a C static library, (a staticlib in Rust terms). From there, we link it to our Go binary using CGO. Unlike last time, we didn’t run into any segfault issues because, while linking Go to Rust is broken with musl, linking Rust to Go is fine.</p>
+<p>To communicate between Go and Rust, we decided to use protobuf, as it was platform-independent, relatively compact, and had an explicit schema that could be used to generate Rust and Go types, keeping our types in sync across languages. This was especially important since we had a lot more surface area between Rust and Go than when we were porting the command line arguments.</p>
+<p>Finally, we modified our build process so that we could toggle the Go sandwich on or off. That way, we could always revert back to the Go code if we encountered bugs in the Rust implementation. This did mean that we had to keep the Go code around, but we knew that this was ultimately temporary.</p>
+<p>Let’s walk through an example of porting to Rust. We have code to include environment variables in what’s called our global hash, which determines whether or not we have a global change that necessitates re-running all of our tasks. This is a nice, self-contained chunk of code, so it was a good candidate for porting.</p>
+<p>To start, we needed to determine what exactly we wanted to port. Ideally, we should be porting non-trivial chunks, as we don’t want to be inducing the protobuf overhead for a trivial function—but it shouldn’t be so large that it’s out of the scope of a single PR. In this case, we decided to port the getGlobalHashableEnvVars function, which takes the user's environment variable configuration and determines which environment variables to provide as inputs to the global hash.</p>
+<p>Next, we split up the existing code into the old Go implementation (global_hash_go.go) and the new Go code that calls the Rust implementation (global_hash_rust.go). We use Go build tags to decide which implementation to build so we can always toggle back to the old Go implementation if the new Rust implementation contains a bug.</p>
+<p>Then, we wrote the Rust implementation, added the necessary input and output types to our protobuf schema, created an exported function in turborepo-ffi, and called that function in ffi.go. And of course, we made sure to write tests! If you want to check out the full process, you can find the pull request here.</p>
+<p>With all of this setup, we were able to port more and more pieces of run and prune to Rust in a relatively straightforward process. However, when it came to shipping the Go sandwich, we ran into some release issues. Here’s how we solved them with an unlikely ally.</p>
+<p>Turborepo is distributed as a native binary on Windows, Linux, and macOS for both x86-64 and aarch64, the two predominant CPU architectures. Doing the math, that's 6 targets to build and support—not an easy task. As we detailed in our post about why we’re moving from Go to Rust, it’s quite difficult to write code that handles low-level features like file systems and processes in a cross-platform manner. However, what’s more challenging is building and releasing this cross-platform code for 6 different targets, especially when you’re using two different languages with two different toolchains.</p>
+<p>Generally, when you write code and build it, you are doing a native compilation. You're building the code for the operating system and architecture of the computer that you're currently using. This works just fine for local development; you build and immediately run it on your computer. But for releases, this process needs to change. We can’t spin up 6 different machines for each of the targets we support. It would take a really long time, and waste compute resources, and our release pipeline is on GitHub Actions which does not support aarch64 anyway.</p>
+<p>Instead, we do what’s called a cross-compilation. Cross-compilation involves building your code for an operating system and/or architecture that is not the same as the computer you're currently using. For instance, you can cross-compile an x86-64 Linux binary on an aarch64 macOS computer.</p>
+<p>To handle cross-compilation for our Go code, we use a tool called Go Releaser. As the name indicates, Go Releaser releases Go code by building binaries for multiple targets, then releases them (in our case to npm).</p>
+<p>With the Go sandwich, we had a new problem: how can we release a hybrid Go-Rust binary?</p>
+<p>We had designed our Go sandwich to use a Rust crate, turborepo-ffi, compiled to a staticlib, a native C library, which we then linked to our Go code via CGO. This worked just fine locally. However, when it came to releasing, we ran into a few issues.</p>
+<p>As you may recall from the last post, there are two main toolchains with Windows: Microsoft Visual C++ (MSVC) and Minimalist GNU for Windows (MinGW). The former, MSVC, is written and maintained by Microsoft with a specific Application Binary Interface (ABI), while the latter, MinGW, ports the GNU software suite to Windows. MinGW has its own ABI meaning things compiled for MSVC and for MinGW are not interoperable.</p>
+<p>Unfortunately, Go only uses MinGW, while Rust only has support for MSVC on ARM. This meant that we could not link the two languages. Fortunately, Windows on ARM comes with x86-64 emulation, so we could release an x86-64 binary for Windows and let the operating system work its magic to have it run on ARM. There is a performance impact associated, but only until we reach a full Rust binary, or Rust releases a MinGW ARM target.</p>
+<p>The second challenge arose when using C dependencies within our Rust code. The process of native compilation typically involves compilers creating object files, which are then linked—or combined—together to form a binary. However, in our case, turborepo-ffi is compiled into an object file, not a binary. As a result, it can't directly link its own C dependencies.</p>
+<p>Let's take zlib as an example. If turborepo-ffi uses zlib as a C dependency, it doesn't directly link zlib within its own object file. Instead, it expects that when you integrate turborepo-ffi into a binary (in this case, the Go binary) you'll also supply it with an object file containing the compiled version of zlib. This expectation arises from the fact that C static libraries are not standalone entities but are designed to be inputs to a linker, serving as building blocks in the creation of a binary.</p>
+<p>Okay, understood, don’t use C dependencies in turborepo-ffi. Well, that’s not so easy. Many libraries such as git2 and openssl use C dependencies. Even Rust itself uses C dependencies! To handle stack unwinding after a panic, Rust uses a library called libunwind. There’s no escaping C no matter how hard you try.</p>
+<p>As we’ve emphasized before, this is all much simpler with native compilation. Either the pre-built libraries are already installed on your computer, or they’re easily installable with your system package manager (apt-get, brew, apk, etc.).</p>
+<p>With cross-compilation, this all goes out the window. You can’t easily install pre-built libraries for different platforms than your native one. You can build from source (more cross-compilation!) but C compilers are not usually the greatest at statically linked cross-compilation.</p>
+<p>You may have heard of Zig, a new systems programming language that’s been gaining some adoption recently. It’s fast, simple, and most importantly, has great interoperability with C. So much so, that it actually comes with its own C compiler, zig cc.</p>
+<p>But zig cc is no ordinary C compiler. It’s a C compiler that has easy, out-of-the-box support for cross-compilation. As we just saw, cross-compilation in C is quite painful, requiring installing a compiler for a specific target (or building it from source), finding versions of libraries for the target platform, and writing a whole lot of compiler flag magic.</p>
+<p>Erasing all of these concerns practically made us jump with joy. zig cc even comes with a nice long list of targets that it handles out of the box, with bundled libraries—including, you guessed it, all of the targets that we need to build!</p>
+<p>I’ll admit, there was some skepticism about using Zig to build our codebase. Would using Zig and Go and Rust be too much programmer hipsterism? Would Hacker News and developer Twitter judge us too harshly?</p>
+<p>But the ultimate test is whether the code works. And indeed it worked! Zig allowed us to build our Go sandwich for all our supported platforms, including the C dependencies. Zig is even smart enough to bundle a platform-specific version of libunwind, so all you have to do is pass the flag -lunwind and it’ll just work.</p>
+<p>On the Go side, we had to pass some flags to indicate that instead of Go linking everything, we wanted to rely on an external linker, i.e. Zig. The magic combination here was linkmode external -extldflags="-static".</p>
+<p>With the help of just one more language toolchain, we were able to ship our Go sandwich to our users and continue on our porting journey. The first version of turbo shipped with the Go sandwich was version 1.8.6.</p>
+<p>This may seem like a lot of complexity to accommodate a port—an entire new toolchain along with protobuf is nothing to sneeze at—but it allowed us to fulfill our top-line goal: keep shipping code to users. A complete rewrite would have stalled the release of new features for months and risked accumulating unused code. No matter how much testing, no matter how rigorous your type system, code that is not used is code that is ripe for bugs. The Go sandwich ensured that as we ported code, each new piece was actively used and validated.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-we-continued-porting-turborepo-to-rust" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3899. Bun install is now supported with zero configuration</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/bun-install-is-now-supported-with-zero-configuration" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7tWQ0xTNNXf5KTmcrG4Lmt/2b52a43df754fe8564b6838e9812b78d/Bun_Dark.png" alt="Bun install is now supported with zero configuration" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7tWQ0xTNNXf5KTmcrG4Lmt/2b52a43df754fe8564b6838e9812b78d/Bun_Dark.png" alt="Bun install is now supported with zero configuration" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Projects using Bun as a package manager can now be deployed to Vercel with zero configuration.</p>
+<p>Like yarn, npm, and pnpm, Bun acts as a package manager focused on saving disk space and boosting installation speed. Starting today, Projects that contain a bun.lockb file will automatically run bun install as the default Install Command using bun@1.</p>
+<p>This change impacts the build phase but not runtime. Therefore, Serverless Functions will not use the Bun runtime yet.</p>
+<p>Check out the documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/bun-install-is-now-supported-with-zero-configuration" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3898. How the at-home workout sensation, Hydrow, cut authoring times from weeks to minutes</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/hydrow" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/73JzpQXkFPBPlzlHk8IBoG/aff524d582486725b1ff83f0a8752051/Hydrow.png" alt="How the at-home workout sensation, Hydrow, cut authoring times from weeks to minutes" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/73JzpQXkFPBPlzlHk8IBoG/aff524d582486725b1ff83f0a8752051/Hydrow.png" alt="How the at-home workout sensation, Hydrow, cut authoring times from weeks to minutes" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Learn how this team succeeded in their mission to create the ultimate composable ecommerce workflow.</p>
+<p>In 2022, Hydrow, celebrated for its personal rowing machines and immersive workout content, was in search of a seamless digital experience for its users.</p>
+<p>Shopify Liquid and WordPress offer robust capabilities, but Hydrow required more custom, dynamic content capabilities.</p>
+<p>Having solidified their presence in the competitive ecommerce landscape, Hydrow now faced other digital challenges. Hydrow, along with their solutions partner VML, were intent on delivering an evolved digital experience internally and for their end users, encompassing real-time content updates, streamlined collaboration, and an unparalleled user interface.</p>
+<p>The absence of integration in Hydrow's original setup introduced delays, making every content update or site change a drawn-out process that required development support.</p>
+<p>The dream was simple yet ambitious: to create an ecosystem where content authors, designers, and marketers operated seamlessly. They aimed to:</p>
+<p>Offer their creative teams a flexible design system beyond the confinements of templating languages like Liquid, allowing for rapid idea development and implementation.</p>
+<p>Provide instant feedback mechanisms, enabling authors to see content modifications in realtime.</p>
+<p>Free developer time up from needing to constantly support authors in content development.</p>
+<p>Implement a one-and-done solution that wouldn’t need so much recurring inter-team support.</p>
+<p>In ecommerce, ​improving_ _the speed of implementation by refactoring a tech stack can be double edged sword. Hydrow aspired to swiftness, but having worked diligently to achieve their ecommerce standing, they also recognized the stakes. Any system overhaul couldn't jeopardize what they'd built.</p>
+<p>Hydrow needed to uphold fundamental tenets like SEO optimization, consistent brand representation, and top site speed. They needed to ensure site resilience, regardless of any alterations made by non-devs. While also creating a better developer **and **user experience without limiting creative freedom.</p>
+<p>Ideally, team members should be able to quickly implement bigger ideas than what the Wordpress and Shopify solution allowed—all without breaking anything.</p>
+<p>Hydrow wasn't content with matching industry benchmarks; they wanted to go beyond them. In order to do this they needed to enhance website load times, lifting user conversion and elevating their position in search engine rankings, reduce build and content update timeframes, transfer numerous operational facets away from a developer-centric model.</p>
+<p>In other words, Hydrow wanted to get to where they already were instantly upon migration and use the new headroom to push the boundaries of performance.</p>
+<p>In the highly competitive stakes of ecommerce, Hydrow remained laser focused on their tenets as they chose the best tools for increased agility, seamless DX and UX, and improved performance.</p>
+<p>Hydrow decoupled their storefront from their commerce backend to get the best of both worlds: Shopify continues to power commerce-critical functionality, while a modern Next.js storefront on Vercel gives the team the performance, flexibility, and iteration speed they needed.</p>
+<p>Hydrow’s architecture is built on three pillars:</p>
+<p>Keeps checkout and commerce operations stable and reliable.</p>
+<p>Unlocks frontend performance, flexibility, and a faster iteration loop for teams.</p>
+<p>Gives authors a structured way to ship content changes quickly without bottlenecking on developers.</p>
+<p>The team chose Contentful as the headless CMS because it offers Hydrow numerous key benefits, starting with a straightforward content migration path away from Wordpress and Shopify. Additionally it is, highly scalable and extensible, provides creative design freedom beyond traditional templating, has a managed integration with Vercel and Next.js that developers would not have to upkeep on their own, and also has Webhooks to integrate directly with Next.js Incremental Static Regeneration (ISR) for realtime content updates.</p>
+<p>Reach out to a Vercel expert to learn how you can improve your developer and user experience while increasing conversions every day of the year.</p>
+<p>Vercel's infrastructure is designed to provide a seamless and efficient hosting solution for its customers. The platform stores static assets, such as HTML, JavaScript, and CSS, on AWS S3, while non-static assets, such as Serverless Functions, are created and run on AWS Lambda. Vercel takes care of managing all these assets automatically, ensuring a hassle-free experience for its users. Additionally, Vercel operates a global edge network and cache that routes and caches requests to the relevant assets on AWS S3 or AWS Lambda, ensuring fast and reliable delivery of content to end-users.</p>
+<p>Next.js offers Hydrow a separate frontend architecture that can easily query Contentful data via APIs. This means that developers can hook up Contentful in the frontend code wherever needed, iterating on frontend features without entangling backend data processes.</p>
+<p>Crucially, Next.js also provides Incremental Static Regeneration (ISR), which combines the best of static-site generation (SSG) and server side rendering (SSR) to optimize both build times and end-user content delivery:</p>
+<p>Because Contentful content is server-rendered, it does not have to be generated on build. This means that Hydrow can scale up dynamic content without affecting build times.</p>
+<p>The “static” part of ISR means that users visiting dynamic Contentful content on Hydrow’s website encounter cached static pages—the fastest possible page served on the web.</p>
+<p>Additionally, because ISR inside of Next.js is so customizable, Hydrow has been able to build their dream authoring system: when authors press publish in Contentful, the Contentful webhook tells the Next.js frontend to re-cache the content by path. Both authors and users can see content delivered in realtime.</p>
+<p>Hydrow has also made some further tweaks to ensure that the Contentful webhook would only tell Next.js to revalidate content at the page level, to further improve performance.</p>
+<p>There was still a problem, though: how could authors see content updates in the CMS that weren’t yet published?</p>
+<p>Vercel allows for unlimited deployment environments on paid plans, each with their own unique environment variables (.env files). This means that Hydrow could create a separate Preview Environment just for authors, away from the endless clutter of developers but also a step below their production environment, showing them their unpublished Contentful content changes in realtime.</p>
+<p>When combined with Vercel’s feature-rich collaboration tools, such as per-deploy preview URLs and Figma-like commenting, authors now have a complete publishing suite at their fingertips. No more guessing at how the content will look when they hit publish.</p>
+<p>And no more constant reliance on developers.</p>
+<p>Vercel enables Hydrow to move away from managing their own hefty architecture. By harnessing Vercel’s Frontend Cloud, they achieved elastic scalability, especially during high-traffic scenarios. Vercel’s Edge Network, the most optimized for Next.js of any provider, serves their dynamic content instantly around the globe.</p>
+<p>Furthermore, Vercel’s Routing Middleware—code that executes before a user request is processed on the site—helps Hydrow to experiment deeply and make on-the-fly adjustments with their customer base.</p>
+<p>Routing Middleware is an ecommerce game changer, since it allows companies like Hydrow to use the results of customer data to dynamically serve each customer the most personalized-to-them digital experience. Routing Middleware can also be used for latency-free A/B testing to bring in more data about users.</p>
+<p>Talk to a Next.js expert about reshaping your team's workflow.</p>
+<p>When it comes to driving change in the digital sphere, results speak louder than intentions. The transformative steps Hydrow undertook are a testament to that. Their migration from Wordpress and Shopify to Contentful, Next.js, and Vercel brought forth several wins:</p>
+<p>**Peak web performance: **In an industry as competitive as ecommerce, performance metrics make or break a brand.</p>
+<p>Hydrow transformed their Core Web Vitals, catapulting from the bottom 25% to the top 25% of ecommerce sites.</p>
+<p>Authoring time has been drastically cut, from weeks to minutes, mostly due to reduced cross-team dependencies.</p>
+<p>**Content updates became truly realtime. **Publishing became an “it just works” experience, and authors and customers both didn’t need to wait to visualize changes.</p>
+<p>Thanks to Edge Network caching ISR, dynamic content delivery is as fast as static content, resulting in a speed-focused experience for customers, who are guaranteed to receive the latest changes.</p>
+<p>**Seamless collaboration: **The introduction of new tools paved the way for a more collaborative workspace.</p>
+<p>**Authors can focus solely on content creation **without worrying about the intricacies of the revalidation system.</p>
+<p>Teams can prepare content updates in advance, previewing exactly how it will look in production—on any device.</p>
+<p>Developers have their time back to work on value-added features instead of maintaining current infrastructure. Adding new types of content to existing revalidation is templated and simple to implement.</p>
+<p>Teams have the liberty to test various layouts and experiments in a production-like environment—all without the risk of actual production interference.</p>
+<p>**Infrastructure stability: **From an engineering perspective, the transformations were no less significant.</p>
+<p>Hydrow now owns no physical architectural failure points of their own and can achieve</p>
+<p>incredibly elastic scalability, especially for high-volume events and traffic.</p>
+<p>Routing Middleware allows Hydrow to optimize their site for individual user profiles, driving more revenue.</p>
+<p>ISR caching has made serving fast pages to users a process that requires fewer server resources, driving down infrastructure costs.</p>
+<p>Build times are down significantly, since they are no longer correlated to the amount of dynamic content served.</p>
+<p>A headless Shopify, Contentful, and Next.js setup on Vercel fits right alongside Hydrow's mission of moving seamlessly together as one.</p>
+<p>With developers now having more freedom to concentrate on the codebase, and authors having a much clearer and more scalable workflow, Hydrow now has plenty of headroom to keep growing and quickly developing the kinds of ideas that got them here in the first place.</p>
+<p>Want to add Vercel to your composable stack?</p>
+<p>Talk to an expert to learn how you can get started with Vercel today.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/hydrow" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3897. Vercel has now achieved the ISO 27001:2013 certification</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-has-now-achieved-the-iso-27001-2013-certification" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/366vqD09wbFRH6XwJW6NOY/004ba43f6da8e3578c110a414298d751/ISO_27001.png" alt="Vercel has now achieved the ISO 27001:2013 certification" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/366vqD09wbFRH6XwJW6NOY/004ba43f6da8e3578c110a414298d751/ISO_27001.png" alt="Vercel has now achieved the ISO 27001:2013 certification" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We have achieved the ISO 27001:2013 certification to further strengthen our commitment to security at Vercel.</p>
+<p>We're committed to keeping your data safe: ISO 27001 provides a framework for establishing, implementing, operating, monitoring, reviewing, and maintaining information security controls.</p>
+<p>You can verify Vercel’s security practices: You have additional validation to assess Vercel with this globally recognized certification, along with our SOC 2 Type 2 attestation.</p>
+<p>We're committed to compliance: As part of our adherence to ISO 27001, we’ll continue with ongoing surveillance audits.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-has-now-achieved-the-iso-27001-2013-certification" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3896. Improved error messages for failed or canceled builds</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/improved-error-messages-for-failed-or-canceled-builds" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6GZVQD9eLAGc8vd7kJj5SZ/68e7ea8c42d803568ff7705aed760d8e/Better_Build_Feedback_Dark__1_.png" alt="Improved error messages for failed or canceled builds" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6GZVQD9eLAGc8vd7kJj5SZ/68e7ea8c42d803568ff7705aed760d8e/Better_Build_Feedback_Dark__1_.png" alt="Improved error messages for failed or canceled builds" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Failed or canceled builds now have better feedback clearly displayed on the Vercel dashboard in the deployment details page.</p>
+<p>The following build failures now have more helpful error messages:</p>
+<p>Canceled builds due to the ignore build step</p>
+<p>A newer commit in the branch triggering a more up-to-date deployment</p>
+<p>Check out our documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/improved-error-messages-for-failed-or-canceled-builds" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3895. How to create an optimal developer workflow</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/improving-developer-workflow" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4BBtmj57Ebu4EkUkI7488M/ef1ca2197e03e423d8ea98b18b85fca7/Frame_427319609__2_.png" alt="How to create an optimal developer workflow" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4BBtmj57Ebu4EkUkI7488M/ef1ca2197e03e423d8ea98b18b85fca7/Frame_427319609__2_.png" alt="How to create an optimal developer workflow" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The way your team builds software matters.</p>
+<p>Software engineers strive to build experiences that delight and engage customers, but there are plenty of workflow roadblocks that can stand in the way of shipping great software quickly.</p>
+<p>In this blog, we'll break down the costs of poor developer experience and share some tactics that can help promote a healthy development workflow.</p>
+<p>The developer experience (DX) at your organization directly impacts your bottom line. When that experience is lacking—from tedious configuration and inefficient workflows—morale and iteration speed suffer.</p>
+<p>Here are four ways poor DX will cost you:</p>
+<p>Our stakeholders need us to quickly ship and gather feedback.</p>
+<p>The tech giants release thousands of production deployments daily, and those companies know that build speed matters in order to keep up with the competition.</p>
+<p>In addition to slow builds, it’s imperative to minimize the refresh time between making a change and seeing the result when a developer is working locally. Even small lags here can significantly harm productivity for teams and individuals, removing developers and their collaborators from their flow state and causing context switches.</p>
+<p>But there are also hidden costs to slow builds, including the culture it creates. When developers are faced with slow builds, they become hesitant to ship and take extra time out of their day to make iterative changes. They create larger and larger pull requests (PRs), feel disconnected, and become frustrated.</p>
+<p>If I had a friend who had lost their paycheck gambling, I wouldn’t tell them to keep trying—I’d tell them to step away from the blackjack table.</p>
+<p>The same is true with technical debt. In this case, the blackjack table is your outdated tech stack. While the sunk costs of outdated infrastructure can be a tough pill to swallow, accumulated tech debt means that new tech can’t be implemented and adopted efficiently, blocking teams across your organization from moving quickly. In fact, developers lose two days a week on average to managing tech debt, according to a 2018 report by Stripe.</p>
+<p>Tech debt is a nebulous concept, but here are a few common causes and effects:</p>
+<p>Complex dependencies make simple changes too complex.</p>
+<p>Missing test coverage makes it hard to move quickly because errors and regressions are more easily introduced from each change.</p>
+<p>A lack of monitoring or debugging tools makes it hard to see and catch mistakes.</p>
+<p>Your business doesn’t need to be a software infrastructure company.</p>
+<p>From setting up staging and pre-production environments, to entire DevOps teams managing CI/CD and pipeline management, a bespoke, customized system will bog down your workflow, costing you time and money.</p>
+<p>There are so many solutions in today’s market that allow you to leverage cost-efficient and robust solutions, instead of building that infra in-house.</p>
+<p>Your framework controls your global infrastructure, not the other way around.</p>
+<p>Siloed communication is a devastating blocker of fast iteration and hurts your DX in the process.</p>
+<p>When your organization is giving design feedback in one tool, copy suggestions in another, and code changes somewhere else, you’ll ship more slowly.</p>
+<p>At smaller organizations, dev teams might be able to modify any part of the codebase themselves. But when a business expands, collaboration becomes essential in order to understand different parts of the codebase, which includes documentation, discerning correct points of contact, and overall communication.</p>
+<p>A powerful and seamless front-end workflow with a rich developer experience is possible.</p>
+<p>When you focus on the goal of fast iteration, everything else will fall into place. Here are some tips on how to overcome these roadblocks:</p>
+<p>When you give your team the right tools to build, merge, and deploy, slow builds become a thing of the past.</p>
+<p>Your software delivery is only as fast as the slowest part of your toolchain. As you and your teams work towards optimizing your deployment pipelines, CI automations can keep pace with your developers, instead of holding them back.</p>
+<p>For example, our entire engineering organization recently saved 2,600 hours in a week when we used Turborepo, an open-source incremental bundler and build system.</p>
+<p>Fast and lightweight testing infrastructure can also speed up iteration cycles, as developers can ship with confidence, knowing that their changes won’t break anything.</p>
+<p>Finally, refresh time should be measured in milliseconds, not minutes. In the web world, for example, hot module reload (HMR) enables React developers to refresh the results of their code nearly instantly, allowing them quick feedback loops to the updates they are making to their user interfaces.</p>
+<p>Opt for tools your developers love, without extra configuration or custom tooling. This will become your biggest weapon against tech debt.</p>
+<p>Thanks to the breadth of modern software offerings, infrastructure that was previously only feasible for enterprises and the tech giants is now accessible to anyone. In other words, companies no longer have to settle when it comes to the best monitoring, alerting, and analytics solutions.</p>
+<p>Open-source and zero-configuration tools with strong communities allow new employees to easily get up to speed and leverage the larger community for improvements. You also won’t need to worry about maintaining custom, in-house solutions when there’s turnover.</p>
+<p>Open-source has quickly become a differentiator for leading organizations. 90% percent of Fortune 500 companies use open-source software—with libraries like React, Webpack, and Vercel-owned Next.js among them.</p>
+<p>Having a compelling frontend requires craft and care—it’s your differentiator in a crowded market. Make sure you’re investing in making it a delightful experience for your customers by giving devs time to innovate and code, instead of focusing on tech debt and infrastructure management.</p>
+<p>Our CTO, Malte Ubl, often says, “Iteration velocity is the answer to all software problems.” We’ve tried to create an engineering organization that empowers our developers to embrace that philosophy by making it easy to fail fast. We prioritize experimentation at Vercel, but that means having the tools to roll back instantly, track across versions, and make fast, data-driven decisions.</p>
+<p>Choose front-end tools that enable collaboration across teams, so that you can speed up review cycles, eliminate bottlenecks, and ensure that staging and production infrastructure is always aligned.</p>
+<p>Identifying the right points of contact, having good documentation, and communicating are all vital to fast feedback cycles. Don’t forget about your teammates outside of the engineering team either. Other parts of the business like design, marketing, and legal must be accounted for in feedback loops.</p>
+<p>Additionally, choose tools that make staging and pre-production environment creation a breeze. Developers should have a staging environment automatically set up for every PR, so they can share their work with others around the company, receive prompt feedback, and see their work in the product.</p>
+<p>Our teams prioritize a culture of efficiency and iteration. We know that the best developer experience is one where your tools enhance your work, not slow it down. It's been interesting to watch our developers build for developers, and we’ve learned these important lessons along the way. Remove bad workflows and let your developers be creative through code.</p>
+<p>Now you can go and break down workflow roadblocks and give your team the time to focus on what makes your product unique.</p>
+<p>Reach out to learn more about how you can improve your frontend workflow and empower your team to ship better web experiences with Vercel.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/improving-developer-workflow" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3894. Vercel achieves ISO 27001:2013 certification to further strengthen commitment to security</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/vercel-iso-27001-security" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/366vqD09wbFRH6XwJW6NOY/004ba43f6da8e3578c110a414298d751/ISO_27001.png" alt="Vercel achieves ISO 27001:2013 certification to further strengthen commitment to security" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/366vqD09wbFRH6XwJW6NOY/004ba43f6da8e3578c110a414298d751/ISO_27001.png" alt="Vercel achieves ISO 27001:2013 certification to further strengthen commitment to security" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today, we’re excited to announce our achievement of the ISO 27001:2013 (ISO 27001) certification. This further strengthens our commitments to security in Vercel’s Frontend Cloud.</p>
+<p>We're committed to keeping your data safe: ISO 27001 provides a framework for establishing, implementing, operating, monitoring, reviewing, and maintaining information security controls.</p>
+<p>You can verify Vercel’s security practices: You have additional validation to assess Vercel with this globally recognized certification, along with our SOC 2 Type 2 attestation.</p>
+<p>We're committed to compliance: As part of our adherence to ISO 27001, we’ll continue with ongoing surveillance audits.</p>
+<p>To obtain the certification, we underwent rigorous audits performed by an independent third-party auditor, Schellman and Company LLC, who evaluated the effectiveness of our Information Security Management System (ISMS) implementation across various domains. These domains included risk assessment, asset management, access control measures, incident response procedures, and continuous improvement processes. The successful completion of these assessments validates that our information security practices adhere to globally accepted standards.</p>
+<p>ISO 27001 is an internationally recognized standard for ISMS, developed by the International Organization for Standardization (ISO) and International Electrotechnical Commission (IEC). It provides organizations with a systematic approach to securing confidential company and customer information. By achieving this certification, we continue to demonstrate our ongoing commitment to industry leading security standards and robust information security controls throughout all aspects of our business operations.</p>
+<p>Our experts can help you navigate Vercel for your team's unique needs.</p>
+<p>Security is fundamental in successful Frontend Cloud adoption. We continue to be dedicated to providing robust solutions that empower your organization to build and deploy anything with confidence. As we continue to innovate and expand our product offerings, we remain committed to helping you create secure, performant, and resilient web applications that deliver exceptional experiences to your end users.</p>
+<p>With our SOC 2 Type 2 Attestation (Security, Availability, and Confidentiality) and ISO 27001 certification, Vercel’s global customer base can rest assured that their assets are handled with utmost care. This latest accreditation further solidifies the company's position as a trusted partner in providing innovative tech solutions for industries ranging from finance,  healthcare, AI, ecommerce, and more.</p>
+<p>As we envision the future of the Frontend Cloud, security remains at the forefront. To continue offering and optimizing frontend toolkits and positive digital experiences, we look forward to maintaining our security certifications and expanding our compliance certifications. By securing every step, we bring that security mindset to how we work—always building safeguards that make experimenting more fun and less risky over time.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/vercel-iso-27001-security" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3893. New project access controls for Enterprise customers</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/new-project-access-controls-for-enterprise-customers" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5Q0ZID3ualnC5LmmA3qVaD/b3bcda879b56642a4dfa3ad9488017ed/RBAC_GA_-_DARK.jpg" alt="New project access controls for Enterprise customers" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5Q0ZID3ualnC5LmmA3qVaD/b3bcda879b56642a4dfa3ad9488017ed/RBAC_GA_-_DARK.jpg" alt="New project access controls for Enterprise customers" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today, we’re introducing more ways for Enterprise customers to have control over which members of their Vercel team have access to certain projects for increased security.</p>
+<p>The new team level role Contributor, has restricted access to make changes at the project level, and only has access to the projects to which they’ve been assigned. This role can be useful for agencies and contractors working on a limited project basis.</p>
+<p>Additionally, we’ve introduced new Project level roles: Project Admin, Project Developer, and Project Viewer. Project level roles are assigned to a team member on a project level and are only valid for the project they are assigned to.</p>
+<p>Check out the documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/new-project-access-controls-for-enterprise-customers" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3892. Vercel Blob is now in public beta for Hobby and Pro customers</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-blob-is-now-in-public-beta-for-hobby-and-pro-customers" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5MaasIaOQYNLhC6hEi9BvI/ac943393d0b1b8b4fb2a4e68b9fa69f3/BlobDark.png" alt="Vercel Blob is now in public beta for Hobby and Pro customers" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5MaasIaOQYNLhC6hEi9BvI/ac943393d0b1b8b4fb2a4e68b9fa69f3/BlobDark.png" alt="Vercel Blob is now in public beta for Hobby and Pro customers" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Blob is a fast, easy, and efficient solution for storing files in the cloud, perfect for large files, like videos.</p>
+<p>The Vercel Blob works with any framework. It can be securely called from Edge and Serverless Functions and returns an immutable URL that can be exposed to visitors or put into storage.</p>
+<p>This feature is now in public beta and available for all Hobby and Pro customers.</p>
+<p>Check out our documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-blob-is-now-in-public-beta-for-hobby-and-pro-customers" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3891. Create search presets for your Runtime Logs</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/create-search-presets-for-your-runtime-logs" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5pUAlx9p0rKLj91bjKFbqN/c7823812e79001a9d2251ae5036096f5/image_70.png" alt="Create search presets for your Runtime Logs" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5pUAlx9p0rKLj91bjKFbqN/c7823812e79001a9d2251ae5036096f5/image_70.png" alt="Create search presets for your Runtime Logs" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now create and save presets of your commonly used filters for all of your Runtime Logs searches. You can save presets to either My Project Presets (related to your personal account) or Team Project Presets. Personal presets can only be viewed and edited by the user who created them.</p>
+<p>This feature is available to users on all plans.</p>
+<p>Check out our documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/create-search-presets-for-your-runtime-logs" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3890. Support for Remix v2</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/support-for-remix-v2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3klkonOfUsAKTjijvT9xFU/ee54e2bd021d0bc0dde859bdfad358d8/remix_light.png" alt="Support for Remix v2" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3klkonOfUsAKTjijvT9xFU/ee54e2bd021d0bc0dde859bdfad358d8/remix_light.png" alt="Support for Remix v2" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Note: This changelog entry is historical. Edge Functions are deprecated for new projects. Use Vercel Functions with the Node.js runtime and Fluid compute. Use Routing Middleware for request-time routing before a response completes.</p>
+<p>Vercel now supports Remix v2. Deploy your Remix application on Vercel with advanced support for:</p>
+<p>**Streaming SSR: **Dynamically stream content with both Node.js and Edge runtimes</p>
+<p>**API Routes: **Easily build your serverless API with Remix and a route loader</p>
+<p>**Advanced Caching: **Use powerful caching headers like stale-while-revalidate</p>
+<p>**Data Mutations: **Run actions inside Vercel Functions</p>
+<p>Deploy our Remix template to get started.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/support-for-remix-v2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3889. Serverless Functions can now run up to 5 minutes</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/serverless-functions-can-now-run-up-to-5-minutes" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1aUNq3AOU7lcCeYYXFH58R/79b006f281e1a97dda2b4b62ff7dda87/maxDuration_-_Dark__1_.png" alt="Serverless Functions can now run up to 5 minutes" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1aUNq3AOU7lcCeYYXFH58R/79b006f281e1a97dda2b4b62ff7dda87/maxDuration_-_Dark__1_.png" alt="Serverless Functions can now run up to 5 minutes" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Based on your feedback, we’re improving Serverless Functions as follows:</p>
+<p>Pro customers can now run longer functions for up to 5 minutes.</p>
+<p>Pro customers default function timeout will be reduced to 15 seconds on October 1st.</p>
+<p>These changes help prevent unintentional function usage, unless explicitly opted into the longer function duration.</p>
+<p>Beginning October 1st, all new projects will receive a default timeout of 15 seconds. In addition, any projects that have not had functions run for more than 15 seconds will have their default timeouts reduced to 15 seconds.</p>
+<p>To avoid unexpected timeouts, any projects that have had functions running for longer than 15 seconds (less than 1% of traffic) will not have their defaults changed.</p>
+<p>Existing defaults still apply for Hobby and Enterprise customers.</p>
+<p>Check out our documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/serverless-functions-can-now-run-up-to-5-minutes" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3888. Why Vercel and Next.js are the perfect fit for this global fashion media group</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/why-vercel-and-next-js-are-the-perfect-fit-for-this-global-fashion-media" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1YoWJ5RHrgKn7zhUASeEH3/543048a02dcfd7a90ab364ae125a7660/l-officel.png" alt="Why Vercel and Next.js are the perfect fit for this global fashion media group" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1YoWJ5RHrgKn7zhUASeEH3/543048a02dcfd7a90ab364ae125a7660/l-officel.png" alt="Why Vercel and Next.js are the perfect fit for this global fashion media group" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>How L’Officiel Inc. migrated from a Ruby on Rails stack to get improved developer and end user experience on Vercel.</p>
+<p>L’Officiel Inc. is a century-old fashion media group representing 10 renowned publications in more than 80 countries. Despite its global reach, the brand has a small team that maintains its 30 web properties, while also developing new features and working on special projects sold to clients.</p>
+<p>They migrated to Vercel to achieve two primary goals:</p>
+<p>SEO optimization to increase site traffic</p>
+<p>Reduce burden of infrastructure management</p>
+<p>After a zero-downtime migration and 60% increase in site traffic, l’Officiel is calling Vercel and Next.js “a perfect fit” for their business.</p>
+<p>After migrating to Next.js and Vercel, L’Officiel observed a striking improvement in web traffic, including a 60% boost in countries including Italy, the United States, Brazil, and more. This achievement can be attributed to SEO optimizations provided by Next.js and Vercel:</p>
+<p>User experience: L’Officiel’s faster website keeps users engaged with content for longer, improving the search ranking. Google considers site speed as a strong ranking factor in their algorithms. Because of this, faster websites will always rank higher in results.</p>
+<p>Font optimization: The L’officiel brand’s custom fonts are rendered fast, at any weight. Next.js has built-in Automatic Webfont Optimization, which eliminates extraneous data fetches and ensures your font always renders on time.</p>
+<p>Image optimization: The plug-and-play next/image component appropriately formats images based on their end-user’s device—with minimal additional JavaScript.</p>
+<p>Next.js prioritizes SEO and offers developers tools and guidance for seamless implementation of effective SEO practices. The framework includes integrated analytics for straightforward performance monitoring. When used with Vercel's Edge Network, you gain automated, deployment-specific performance data for better decision-making.</p>
+<p>To accomplish their second goal of reduced infrastructure management, L’Officiel orchestrated a flawless headless tech stack migration to Vercel and Next.js.</p>
+<p>Their previous stack consisted of a custom-built monolithic multi-tenant application developed with Ruby on Rails and deployed to a physical server. It made it too difficult for the sole developer, L’Officiel’s head of digital product Giuseppe de Martino Norante, to manage. So they switched to Vercel and Next.js and went headless.</p>
+<p>Martino Norante faced a key pain with his previous Ruby on Rails stack: it was unreliable. It would often go completely offline due to server maintenance issues or traffic spikes. Plus, manually reviewing SSL certificates for over 30 domains was time-consuming when he needed to focus on bigger issues.</p>
+<p>With Vercel's Managed Infrastructure, L'Officiel only needs to worry about their Frontend Next.js code, not configuring their backend infrastructure. With Vercel's Framework Defined Infrastructure, the team can focus on user and brand experiences, instead of pre-provisioning, maintenance, or worrying about additional overhead from the L'Officiel team.</p>
+<p>While Martino Norante considered other frameworks for his headless stack overhaul, he went with Vercel and Next.js because of the out-of-the-box features, simple updates, and lightning-fast ISR—a necessity with tens of thousands articles to manage.</p>
+<p>The most impressive part: the team achieved the headless migration with zero-downtime.</p>
+<p>After experiencing almost two years of success with Vercel, Martino Norante says, “I’ll stick with Next.js and Vercel for many years to come. All our internal platforms and tools are developed with this stack as well, so there’s no need to look elsewhere at all.”</p>
+<p>With everything running smoothly, we’re excited to see what the next century will bring for this time-honored fashion and lifestyle publication.</p>
+<p>Want to add Vercel to your composable stack?</p>
+<p>Talk to an expert to learn how you can get started with Vercel today.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/why-vercel-and-next-js-are-the-perfect-fit-for-this-global-fashion-media" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3887. How Whop improved their Real Experience Score by 200% with the Next.js App Router</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-whop-improved-their-real-experience-score-by-200-with-the-next-js-app" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/bwhH6ySJ9WoVgZ7V1aukK/5545442049fb1f9c0f900d25ae764eb8/whop.png" alt="How Whop improved their Real Experience Score by 200% with the Next.js App Router" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/bwhH6ySJ9WoVgZ7V1aukK/5545442049fb1f9c0f900d25ae764eb8/whop.png" alt="How Whop improved their Real Experience Score by 200% with the Next.js App Router" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Whop, an online marketplace for digital products, recognized the importance of having a seamless developer and end-user experience and aimed to transform their platform with a modern tech stack.</p>
+<p>To achieve this, they focused on migrating from Ruby on Rails to Next.js, quickly followed by the incremental adoption of App Router for even better page speed and developer experience.</p>
+<p>Whop's journey with Next.js and Vercel began with a desire to accelerate their dev process while boosting SEO and performance.</p>
+<p>Previously, they were using a full-stack Ruby on Rails application but wanted to explore React for its better developer experience (DX). After extensive research, they decided that Next.js was the ideal choice for their frontend needs, thanks to its strong focus on SEO and speed.</p>
+<p>Next.js offers Incremental Static Regeneration (ISR), which allows updates on specific pages as needed—while maintaining page load speeds as fast as statically generated sites. This functionality would give Whop faster pages and better search engine ranking.</p>
+<p>They split their tech stack, with Next.js powering the frontend and their existing Rails API handling the backend. This migration to Next.js took just three months of work, and the results were unveiled in a single release.</p>
+<p>Brainstorm with our team about your unique use case of Next.js.</p>
+<p>Whop initially started with Next.js using the Pages Router, and they continue to use it for certain parts of their application. They also incrementally migrated much of the Pages Router to App Router, which offers enhanced speed and support for React Server Components.</p>
+<p>In order to incrementally migrate, they used Edge Middleware to route traffic between an App Router project and their existing pages project on whop.com. The strategic use of Edge Middleware allowed them to gradually roll out significant site changes while still supporting legacy components.</p>
+<p>Whop's decision to move to App Router was motivated by their commitment to DX, citing solutions like React Server Components. This transition allowed them to bridge the gap between frontend and backend within a single framework.</p>
+<p>While Whop was aware of React Server Components before the migration, they were pleasantly surprised by the power they brought to their development workflow. The ability to fetch and mutate data directly alongside JSX code means writing less overall code and having a central location for managing and rendering data.</p>
+<p>The transition to App Router has transformed Whop's development process by combining frontend and backend functionalities into a unified platform with reusable patterns—making Next.js feel more like a full-stack framework than just a frontend framework—without the complexities of having to know the backend language.</p>
+<p>A remarkable increase in their Real Experience Score (RES), soaring from the 30s to the high 90s. Like Lighthouse scores, Vercel's RES gives you performance insights. But unlike Lighthouse, RES is generated from real data points collected from your users' devices, resulting in an authentic evaluation of your users' actual experiences with your application.</p>
+<p>Whop's percentage of Good URLs increasing from 13% to 47%, meaning they showed good Core Web Vitals and contributed to an overall positive user experience.</p>
+<p>The team also saw less Cumulative Layout Shift and better Core Web Vitals overall.</p>
+<p>Whop's journey from a monolithic Ruby on Rails application to a Next.js-powered frontend with App Router integration showcases the power of modern, open-source web development tools. Their commitment to speed, scalability, and DX has paid off with impressive performance gains and a more streamlined development process.</p>
+<p>Want to add Vercel to your composable stack?</p>
+<p>Talk to an expert to learn how you can improve your site’s performance and UX.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-whop-improved-their-real-experience-score-by-200-with-the-next-js-app" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3886. @vercel/toolbar available to use collaboration features in production</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-toolbar-now-available-to-use-collaboration-features-in-production" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/kdf3fHdLN54RAquV13TgL/53eaa56598d9e93704fbc1bee00d8d7f/npmtoolbar.png" alt="@vercel/toolbar available to use collaboration features in production" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/kdf3fHdLN54RAquV13TgL/53eaa56598d9e93704fbc1bee00d8d7f/npmtoolbar.png" alt="@vercel/toolbar available to use collaboration features in production" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Comments and other collaboration features are available in all Preview Deployments on Vercel. Now, you can enable them in Production Deployments and localhost by injecting the Vercel toolbar on any site with our @vercel/toolbar package.</p>
+<p>By using the @vercel/toolbar npm package you and your team can leave feedback with Comments, take advantage of Draft Mode to view unpublished CMS content, or use Visual Editing on your production application.</p>
+<p>This package is available to users on all plans and is our first step in bringing the Vercel Toolbar into your production sites.</p>
+<p>Check out the documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-toolbar-now-available-to-use-collaboration-features-in-production" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3885. Optimizing web fonts</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/optimizing-web-fonts" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1Z8DimoywOFsOuqi8QDlNZ/01ec70930901051551966eac66c6bcbd/optimizing-web-fonts.png" alt="Optimizing web fonts" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1Z8DimoywOFsOuqi8QDlNZ/01ec70930901051551966eac66c6bcbd/optimizing-web-fonts.png" alt="Optimizing web fonts" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Learn how to optimize web fonts using resource hints, font-face descriptors, and the next/font module.</p>
+<p>Web fonts are vital to branding and user experience. However, the inconsistent rendering of these fonts while they're being fetched from the server can cause unintended shifts in layout.</p>
+<p>Luckily, there are solutions to minimize unexpected shifts and enhance the user experience when working with web fonts.</p>
+<p>Ever noticed a split-second change in the font while a page loads? Or even no text at all for a short moment?</p>
+<p>These flashes of invisible and unstyled text happen because the browser is still fetching the web font from the server that hosts the fonts.</p>
+<p>Luckily, the font-display property gives developers control over this behavior by setting it to either block, swap, fallback, optional, or auto.</p>
+<p>block can be used to prioritize visual consistency by keeping text invisible for a couple seconds. If the custom font hasn't loaded within that time, it shows a fallback until the custom font is available.</p>
+<p>You can use swap to make the content visible immediately by rendering a fallback font first, which is then switched to the custom font once loaded.</p>
+<p>fallback provides a balance between block and swap. It briefly renders invisible text, and defaults to the fallback font. If the web font still hasn’t loaded after 3 seconds, the fallback font remains even if the custom font loads later. Future navigations will display the custom font.</p>
+<p>optional lets the browser to decide whether to use the web font based on factors like network speed. If the font is cached and loads within 100ms, the custom font is displayed. Otherwise, the fallback font remains.</p>
+<p>auto lets the browser decide which strategy to use, typically defaulting to swap.</p>
+<p>If you choose to display a fallback font, it is important to ensure that this fallback font closely matches the intended web font. However, this can be tricky because fonts have different measurements. Even if the fallback font and the web font have the same font-size, layout shift can still occur.</p>
+<p>One way to address this issue is by using the size-adjust font-face descriptor.</p>
+<p>size-adjust scales all metrics associated with the font by a specified percentage. By adjusting the size to match the web font, the text size will remain (roughly) the same even if the font is swapped from the fallback to the web font. This can help prevent unexpected changes in the page layout.</p>
+<p>If you want even more control, you can use other CSS descriptors such as ascent-override, descent-override, and line-gap-override to define the ascent metric, descent metric, and line gap.</p>
+<p>By using the appropriate fallback font and setting the necessary overrides, you can ensure that your users experience minimal layout shift when the custom font eventually loads in.</p>
+<p>The time it takes to request a web font from the server can be an issue. To speed up this process, we can utilize the preconnect and preload resource hints.</p>
+<p>By using preconnect, we instruct the browser to establish a connection to the server hosting the font as soon as the page starts loading. This can significantly improve the speed at which the font is downloaded and displayed.</p>
+<p>With preload, we direct the browser to begin fetching the font as early as possible, usually before the browser starts rendering the page. This prevents any potential issues with the font rendering incorrectly or changing while the page is loading, resulting in a seamless user experience.</p>
+<p>Adding preconnect and font-face descriptors can improve the performance of fonts on your website. It speeds up their loading time and defines their characteristics. However, manually adding these optimizations can be time-consuming and it's easy to forget something.</p>
+<p>Ideally, we want our fonts to be optimized automatically. If you're using Next.js, you can use the next/font module to easily add local and Google fonts to your website without worrying about optimization details.</p>
+<p>This module handles many tasks for you, including:</p>
+<p>Downloading the web font at build time and serving it locally.</p>
+<p>Adding a fallback font that closely resembles your web font.</p>
+<p>At build time, the next/font module downloads the font stylesheet and font files, making them available locally. This eliminates the need for external requests.</p>
+<p>The module also provides a custom fallback font that closely matches the intended web font. It even calculates necessary measurements such as size-adjust, ascent-override, descent-override, and line-gap-override at build time.</p>
+<p>Lastly, the module preloads fonts when a subset has been defined. This improves both performance and user experience. Preloaded fonts are downloaded as soon as possible, often before the browser renders the page.</p>
+<p>By using this module, you can use web fonts worry-free. Your users will likely experience minimal or no layout shift, and no additional developer effort is required.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/optimizing-web-fonts" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3884. First Input Delay (FID) vs. Interaction to Next Paint (INP)</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/first-input-delay-vs-interaction-to-next-paint" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6xULaWbmOFf35wMUScJpPS/c6151f097a5d7d44289fb34cae36078c/fid-vs-inp.png" alt="First Input Delay (FID) vs. Interaction to Next Paint (INP)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6xULaWbmOFf35wMUScJpPS/c6151f097a5d7d44289fb34cae36078c/fid-vs-inp.png" alt="First Input Delay (FID) vs. Interaction to Next Paint (INP)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Learn about the differences between FID and INP and how to optimize your website's INP score.</p>
+<p>As of March 2024, Interaction to Next Paint (INP) will replace the First Input Delay (FID) as a new Core Web Vital.</p>
+<p>First Input Delay is a web performance metric that measures the time between a user's very first interaction with a web page and the time when the browser's main thread is able to start processing that interaction event.</p>
+<p>When a user interacts with a web page, an event is added to a queue to be processed by the browser's main thread. However, if the main thread is already busy doing other tasks like parsing HTML, executing JavaScript, or handling other event listeners, the new event has to wait in the queue.</p>
+<p>The FID metric captures the duration of this waiting time, which tells us how long it takes for the browser to respond to the user's first input while the main thread is busy.</p>
+<p>However, the First Input Delay (FID) metric has some shortcomings:</p>
+<p>FID only considers the delay of the first input event, ignoring subsequent interactions that may also be slow or even slower.</p>
+<p>Other factors can contribute to a longer visual feedback delay between user interactions, which FID doesn't measure. This includes the time it takes to process event handlers and recalculate the layout before providing visual feedback to the user.</p>
+<p>To address these limitations, the Interaction to Next Paint (INP) metric will replace First Input Delay.</p>
+<p>While FID only measured the input delay, which is the time between user input and the browser starting to execute the event handler, INP measures:</p>
+<p>Input Delay: the time between user interaction and the time the browser is able to process the event, similar to FID.</p>
+<p>Processing Delay: the time it takes the browser to process the event handlers</p>
+<p>Presentational Delay: the time it takes the browser to recalculate the layout and paint the pixels to the screen.</p>
+<p>Additionally, whereas FID only measured the very first user interaction, the INP score is measured when the user leaves the page by aggregating all interactions the user made with the page throughout the page’s lifetime and returning the worst-measured score.</p>
+<p>With INP, we no longer have to focus solely on optimizing event queuing times and main thread availability, as was the case with FID. Now, it is also crucial to address the entire lifecycle of a user interaction. This includes processing event handlers, recalculating layouts, and painting updates to the screen, all of which are critical components of the INP metric.</p>
+<p>For FID, the primary goal was to reduce the time between a user's initial interaction and when the browser's main thread starts processing it. This typically involved optimizing JavaScript execution times, breaking down long tasks, and ensuring the main thread remains as free as possible during user interactions.</p>
+<p>However, with INP, we need to consider a broader range of performance factors.</p>
+<p>The processing delay emphasizes the importance of not only starting the event handler quickly but also executing it efficiently. We can optimize the processing delay by:</p>
+<p>Profiling code and identifying performance bottlenecks.</p>
+<p>Using techniques like debounce or throttle for frequently firing event handlers.</p>
+<p>Code splitting and tree shaking to reduce unnecessary JavaScript. Load only what is necessary, when it is necessary.</p>
+<p>Breaking down long JavaScript tasks into smaller chunks. The longer a task takes on the main thread, the longer it will block user interactions.</p>
+<p>After processing an event, the browser may need to recalculate styles, reflow layouts, and repaint the screen. We can optimize the presentational delay by:</p>
+<p>Using the will-change property judiciously to inform the browser about properties and elements likely to be animated.</p>
+<p>Opting for transform and opacity changes for animations as they are less likely to cause layout recalculations.</p>
+<p>Using properties like content-visibility to render and update content only when necessary.</p>
+<p>Reducing forced synchronous layouts. Avoid reading layout properties immediately after writing them, as this can trigger the browser to synchronize and recalculate styles and layouts.</p>
+<p>Using web forkers for non-urgent and non-UI tasks. By offloading these tasks to background threads, you can keep the main thread free and responsive to user interactions.</p>
+<p>Event handlers should be executed efficiently and effectively. We can do this by:</p>
+<p>Deferring non-critical events until the main thread is less busy.</p>
+<p>Using passive event listeners for events like scroll and touch. This informs the browser that the event listener will not prevent a scroll or touch event, allowing the browser to continue smooth scrolling without waiting for the listener.</p>
+<p>Delegating events by, instead of attaching event listeners to individual elements, attaching them to a common parent and using event properties to determine which child element was interacted with. This reduces the number of active event listeners and potential slowdowns.</p>
+<p>To maintain an optimized and responsive website, Real User Monitoring (RUM) tools can be used to regularly collect performance data from actual users, which is crucial for measuring INP.</p>
+<p>While the metric is not yet officially stable, we can already measure INP using tools like:</p>
+<p>The INP metric provides a broader perspective by recognizing the significance of not just the time it takes for the browser to start processing an event, but also the total time needed to respond to the user's interactions visually.</p>
+<p>Optimizing for INP will not only result in more responsive and seamless interactions but also greatly enhance the overall user experience.</p>
+<p>If you're using Next.js, using React 18's concurrent features can also help improve your INP score. Learn more in this blog post.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/first-input-delay-vs-interaction-to-next-paint" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3883. Hints now available when creating Environment Variables</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/hints-now-available-when-creating-environment-variables" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4ERpd1iFLMBlCmSYJ0PyoT/30a71bdecc898093b80e916145333411/env_var_value_validation_Dark__2_.png" alt="Hints now available when creating Environment Variables" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4ERpd1iFLMBlCmSYJ0PyoT/30a71bdecc898093b80e916145333411/env_var_value_validation_Dark__2_.png" alt="Hints now available when creating Environment Variables" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>When creating and editing Environment Variables on Vercel, you can now see hints that will warn you of potential typos in the name. This includes issues like:</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/hints-now-available-when-creating-environment-variables" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3882. Comments are now visible in your dashboard notifications</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/comments-are-now-visible-in-your-dashboard-notifications" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4oI4DZpOYYDbfMhTnFUm28/13b5a2be9b23545a9e14dcde5db0fe80/Changelog.png" alt="Comments are now visible in your dashboard notifications" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4oI4DZpOYYDbfMhTnFUm28/13b5a2be9b23545a9e14dcde5db0fe80/Changelog.png" alt="Comments are now visible in your dashboard notifications" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now receive and view Comment notifications in the Vercel dashboard.</p>
+<p>﻿Notifications for new Comments are shown in the dashboard with a counter on the bell icon. You can quickly resolve Comments there or filter by specific pages, branches, or authors.</p>
+<p>﻿Check out our documentation to learn more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/comments-are-now-visible-in-your-dashboard-notifications" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html" class="active">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

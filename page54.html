@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 54</title>
+<meta name="description" content="Page 54">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page54.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 54</h1>
+<article class="article-card">
+    <h2>#3281. CVE-2025-55173</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/cve-2025-55173" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=CVE-2025-55173&amp;format=changelog" alt="CVE-2025-55173" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=CVE-2025-55173&format=changelog" alt="CVE-2025-55173" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A vulnerability affecting Next.js Image Optimization has been addressed. It impacted versions prior to v15.4.5 and v14.2.31, and involved a scenario where attacker-controlled external image servers could serve crafted responses that result in arbitrary file downloads with attacker-defined filenames and content.</p>
+<p>Your Vercel deployments are safe by default. A patch applied on July 29th, 2025 eliminated exposure for all Vercel-hosted customers. Self-hosted deployments should upgrade to v15.4.5 or v14.2.31 to remediate the issue.</p>
+<p>Under certain configurations (images.domains or permissive images.remotePatterns), a malicious actor could:</p>
+<p>Trigger the download of a file from a Next.js app with attacker-controlled content and filename</p>
+<p>Exploit this behavior for phishing, drive-by downloads, or social engineering scenarios</p>
+<p>The target app has external image domains or patterns configured</p>
+<p>The remote server is attacker-controlled or attacker-influenced</p>
+<p>A user is tricked into clicking a crafted URL</p>
+<p>The issue was resolved by updating the image optimizer logic to avoid falling back to the upstream’s Content-Type header when magic number detection fails. This ensures that responses are only cached when confidently identified as image content and do not mistakenly reuse cache keys for user-specific responses.</p>
+<p>Thanks to kristianmagas for the responsible disclosure.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/cve-2025-55173" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3280. CVE-2025-57822</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/cve-2025-57822" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=CVE-2025-57822&amp;format=changelog" alt="CVE-2025-57822" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=CVE-2025-57822&format=changelog" alt="CVE-2025-57822" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A vulnerability affecting Next.js Middleware has been addressed. It impacted versions prior to v14.2.32 and v15.4.7, and involved a Server-Side Request Forgery (SSRF) risk introduced by misconfigured usage of the NextResponse.next() function within middleware. Applications that reflected a user's request headers in this function, rather than passing them through the request object, could unintentionally allow the server to issue requests to attacker-controlled destinations.</p>
+<p>A patch applied on August 25th, 2025 eliminated exposure for Vercel customers running the affected versions.</p>
+<p>In affected configurations, an attacker could:</p>
+<p>Influence the destination of internal requests triggered by middleware routing logic</p>
+<p>Perform SSRF against internal infrastructure if user-controlled headers (e.g.,</p>
+<p>Location) were forwarded or interpreted without validation</p>
+<p>Potentially access sensitive internal resources or services unintentionally exposed via internal redirect behavior</p>
+<p>This issue is exploitable in self-hosted deployments where developers use custom middleware logic and do not adhere to documented usage of NextResponse.next({ request }). It is not exploitable on Vercel infrastructure, which isolates and protects internal request behavior.</p>
+<p>The issue was resolved by updating the internal middleware logic to prevent unsafe fallback behavior when request is omitted from the next() call. This ensures the origin server behavior cannot be unintentionally altered by user-supplied headers or misrouted requests.</p>
+<p>For users who cannot upgrade immediately:</p>
+<p>Ensure middleware follows official guidance: Use NextResponse.next({ request })to explicitly pass the request object</p>
+<p>Avoid forwarding user-controlled headers to downstream systems without validation</p>
+<p>Ensure headers that should never be sent from client to server are not reflected back to the client via NextResponse.next, such as Location.</p>
+<p>Thanks to Dominik Prodinger at RootSys, and Nicolas Lamoureux and the Latacora team for their responsible disclosure.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/cve-2025-57822" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3279. Open SDK strategy</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/open-sdk-strategy" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7iwKUXEfzZQ2HeUdXqXdWg/26f6107a24933624da0bb215c5fc8c69/image__35_.png" alt="Open SDK strategy" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7iwKUXEfzZQ2HeUdXqXdWg/26f6107a24933624da0bb215c5fc8c69/image__35_.png" alt="Open SDK strategy" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>At Vercel, our relationship with open source is foundational. We do not build open source software to make money. Rather, we’re building an enduring business that enables us to continue developing great open source software. We believe in improving the default quality of software for everyone, everywhere, whether they are Vercel customers or not. A rising tide lifts all boats.</p>
+<p>We built Next.js at Vercel, and we’ve learned a lot by doing so.</p>
+<p>We’ve seen the way that building open source and managed infrastructure in tandem can create an incredible developer experience and have massive impact. But coupling a project too tightly to one platform can raise questions about openness and control, even if it also accelerates quality and adoption.</p>
+<p>That’s true even when lock-in is unintended.</p>
+<p>We believe in open source, community, portability, and freedom of choice, so we want to take some time right now to articulate this commitment as a new ‘Open SDK’ strategy. Here’s what we commit to:</p>
+<p>Open by default: We commit to building our frameworks, SDKs, and tools in the open, wherever possible, and will default to the most permissive open source licenses in all cases</p>
+<p>Loose coupling, high cohesion: We want what we build to work extremely well on Vercel, but not at the cost of lock-in. We commit to building frameworks, SDKs, and tools that are open, portable, and usable on any platform</p>
+<p>Innovation, then generalization: We will build first on Vercel, where we can iterate fastest to ensure the best end-to-end developer and user experience. And as we become confident projects are mature, we’ll invest in ensuring our SDKs and tools are deployable to any platform</p>
+<p>This is a commitment we want you to hold us to. In the long run, we believe this openness means you’ll be more likely to stay with Vercel. Not because you have to, but because you choose to.</p>
+<p>This strategy emerged from a series of real world observations and product decisions:</p>
+<p>The ubiquity of React: One compelling reason many developers choose React is that it is unopinionated about how and where you deploy it</p>
+<p>Next.js as a standalone choice: Developers wanted to use Next.js to its full potential on other managed platforms. That desire has become a north star for our open strategy</p>
+<p>The AI SDK: When Vercel acquired the ai npm package name, we knew we had a responsibility to make it platform, and framework-agnostic. That was non-negotiable</p>
+<p>Nuxt and NuxtLabs: With NuxtLabs joining Vercel and core members of the Nuxt and Nitro teams now working alongside us, we have to be crystal clear. We want Vercel to be the place open source creators aspire to be as they build for the open web</p>
+<p>This isn’t about any single framework, whether Next.js or the AI SDK. And it won’t necessarily apply to Vercel’s commercial products, but we're actively applying this strategy across a growing family of libraries and frameworks:</p>
+<p>Nuxt: Bringing the same design principles to the Vue ecosystem</p>
+<p>Svelte: Enabling high-performance apps with flexible deployment options</p>
+<p>Flags: A portable feature flag system that doesn’t require a specific flag provider</p>
+<p>We believe the best way to build the future of the internet is to invest in open tools, empower developers with freedom and confidence, and to continue raising the bar for what’s possible without being locked in to any single platform.</p>
+<p>Business follows quality. Quality follows mission.</p>
+<p>Our mission is to build a better web, for everyone.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/open-sdk-strategy" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3278. Moonshot AI&#x27;s Kimi K2 0905 model is now supported in Vercel AI Gateway</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/moonshot-ais-kimi-k2-0905-model-is-now-supported-in-vercel-ai-gateway" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5FdsV0faOv7NBJL2lOQBqn/525c8bdc45f8bd6d3e518204dd7e668a/kimi-k2-0905.png" alt="Moonshot AI&#x27;s Kimi K2 0905 model is now supported in Vercel AI Gateway" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5FdsV0faOv7NBJL2lOQBqn/525c8bdc45f8bd6d3e518204dd7e668a/kimi-k2-0905.png" alt="Moonshot AI's Kimi K2 0905 model is now supported in Vercel AI Gateway" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now access Kimi K2 0905, a new model from Moonshot AI focused on agentic coding with a 256K context window, using Vercel AI Gateway with no other provider accounts required.</p>
+<p>AI Gateway lets you call the model with a consistent unified API and just a single string update, track usage and cost, and configure performance optimizations, retries, and failover for higher than provider-average uptime.</p>
+<p>To use it with the AI SDK v5, start by installing the package:</p>
+<p>Then set the model to moonshotai/kimi-k2-0905:</p>
+<p>Includes built-in observability, Bring Your Own Key support, and intelligent provider routing with automatic retries.</p>
+<p>To deliver high performance to Kimi K2, AI Gateway leverages multiple model providers under the hood, including direct to Moonshot AI, Groq, and Fireworks AI.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/moonshot-ais-kimi-k2-0905-model-is-now-supported-in-vercel-ai-gateway" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3277. Stress testing Biome&#x27;s noFloatingPromises lint rule</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/stress-testing-biomes-nofloatingpromises-lint-rule" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2Ui99WNimq9itkzRZEplVw/13539396cf0b9d7518388582a961525a/image.png" alt="Stress testing Biome&#x27;s noFloatingPromises lint rule" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2Ui99WNimq9itkzRZEplVw/13539396cf0b9d7518388582a961525a/image.png" alt="Stress testing Biome's noFloatingPromises lint rule" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Recently we partnered with the Biome team to strengthen their noFloatingPromises lint rule to catch more subtle edge cases. This rule prevents unhandled Promises, which can cause silent errors and unpredictable behavior. Once Biome had an early version ready, they asked if we could help stress test it with some test cases.</p>
+<p>At Vercel, we know good tests require creativity just as much as attention to detail. To ensure strong coverage, we wanted to stretch the rule to its limits and so we thought it would be fun to turn this into a friendly internal competition. Who could come up with the trickiest examples that would still break the updated lint rule?</p>
+<p>Part of the fun was learning together, but before we dive into the snippets, let’s revisit what makes a Promise “float”.</p>
+<p>A Promise is “floating” when it’s created in a way that its errors can never be handled or observed. A Promise is not considered floating if it’s awaited, assigned to a variable, returned from an async function, called with the void operator, or has .then(...).catch(...) handlers.</p>
+<p>This lint rule is important because broken control flow and unhandled errors resulting from floating Promises are notoriously hard to catch. Many engineers have campfire stories of floating Promises taking down production.</p>
+<p>With that in mind, let’s look at some of the edge cases our engineers came up with.</p>
+<p>Let’s kick it off with a great example of “smarter not harder”. This snippet was taken directly from typescript-eslint’s docs for their floating Promises rule.</p>
+<p>It might look harmless, but it's tricky because the array of Promises is never stored or awaited, leaving all inner Promises floating.</p>
+<p>Normally, TypeScript knows that if you return a Promise, a linter can catch it when it floats:</p>
+<p>But if you return a PromiseLike (PromiseLike is a TypeScript built-in), it’s only structurally similar, not the real thing:</p>
+<p>Since PromiseLike is only a structural match, calling promiseLike() and ignoring its rejection leaves an unhandled async result floating in space.</p>
+<p>typescript-eslint handles this kind of case with a special configuration option for “Thenables” (another name for what PromiseLike represents)</p>
+<p>By copying the TypeScript structure for a Promise under a different name, you can sneak past naïve checks.</p>
+<p>You’ve made a new type called Duck that looks exactly like a Promise, just with a different name. Because TypeScript uses “structural” typing, Duck behaves like a Promise but slips past lint rules that only check names. The name itself is a nod to “duck typing”, referencing the old idiom “if it walks like a duck, and talks like a duck, then it's a duck”.</p>
+<p>Now we’re getting to the fun stuff: type-level trickery. Normally, TypeScript knows when you’re returning a Promise directly:</p>
+<p>But if you wrap the Promise inside a generic alias with a conditional, it doesn’t look like a plain Promise anymore.</p>
+<p>Although Cheating<T> always resolves to a Promise<string>, the conditional type and type parameter make that less obvious at the call site. If the lint rule only checks keys on the literal Promise name (instead of “thenables”), promiseLike(): Cheating<1> can slip past. The call to promiseLike() still returns a rejecting Promise, which is ignored and still floats.</p>
+<p>The JavaScript Proxy object is useful to those that absolutely need it and incomprehensibly complex to everyone else. So it’s no wonder that we got one submission that ran with the idea “I bet I can use Proxy objects to break this”. This is perhaps the submission least likely to occur in production, but hey, a type-level hole is a type-level hole.</p>
+<p>Normally, if you call methods on a Promise, the linter knows what’s going on:</p>
+<p>But with JavaScript’s Proxy, you can intercept property access and sneak in hidden async behavior:</p>
+<p>Here, accessing any non-Promise property on lazy secretly triggers an async side effect that floats unhandled. Even the lazy.then(...) call returns a Promise that goes unhandled, compounding the drift. It’s a contrived example, but it shows how flexible (and fragile) type inference can be.</p>
+<p>Freezing a Promise changes its type in ways that complicate detection.</p>
+<p>The type of this expression is Readonly<Promise<unknown>>. That’s because Object.freeze() prevents writing on any object you pass it. It’s tricky because you’re wrapping the type with the Readonly utility type which makes it harder for a linter to catch.</p>
+<p>Finally! A simple one. Wrapping a Promise in an object method hides it behind another layer.</p>
+<p>Instead of relying on some kind of trick, this submission wraps the Promise in a function, rejectSomething, that is itself a member of sneakyObject.</p>
+<p>JavaScript getters can also hide Promises behind property access.</p>
+<p>Similar to the last example, you can use JavaScript’s get syntax to hide the floating Promise. At a glance it looks like a simple property, but it’s actually returning an unhandled Promise.</p>
+<p>Normally, accessing an object property feels safe. But with a mapped type, even a getter can hide a Promise. This snippet disguises an async call as a harmless property getter.</p>
+<p>The mapped type manufactures get* methods that return Promises, but calling lazyThings.getThing() without await (or .then) leaves that Promise floating. It looks like a simple field read, yet the generic sleight of hand turns it into an unhandled async operation. Good luck ever catching this in code reviews!</p>
+<p>Logical operators return values, not effects, so they can leave Promises dangling.</p>
+<p>Classic short-circuit shenanigans: true && <Promise> evaluates to the right-hand side, yielding a Promise value in pure expression position. Since nothing awaits or .catches it, the rejection goes unhandled. It’s a reminder that && doesn’t run effects and wait. It actually returns a value, which here happens to be a volatile Promise.</p>
+<p>What if you only sometimes have a floating Promise? When randomness is involved, sometimes only part of the code returns a Promise.</p>
+<p>Maybe there’s some value that only exists at runtime, perhaps from user input or some API. In that case, it still should be a lint error. The type of this expression is Promise<unknown> | null - and that’s good enough to fit the bill!</p>
+<p>Optional chaining with fallbacks can produce Promises that go unhandled. Similar to the last two, you can trigger the “short circuiting” however you want, and this example uses optional chaining.</p>
+<p>The optional call returns undefined, so || eagerly evaluates the right-hand side which constructs a rejecting Promise. Because that Promise lives only in expression position (never assigned, awaited, or .catched), the rejection floats silently behind an innocent-looking fallback.</p>
+<p>There was once a time when every JavaScript developer had to be aware of the immediately invoked function expression (IIFE, pronounced “if-y”)</p>
+<p>Wrapping in a function call doesn’t change the fact that the Promise is unhandled.</p>
+<p>Last up, we have the obscure comma operator. If you’ve ever looked at minified JavaScript you’ve likely seen this in action.</p>
+<p>The result of the expression is the Promise, which is ignored and left floating. It’s a syntactically tight way to discard the left expression and return whatever’s on the right. It once had niche uses, but today it’s mostly syntactic trivia. Still, it’s one more case a linter has to catch.</p>
+<p>After consideration from an esteemed panel of judges, it was decided that the Proxy Promise submission was the winner. It was the least practical, most convoluted, and most obscure example. But that's exactly what we were looking for. The goal was never to find real-world bugs, but to stress test the implementation with any trick we could imagine.</p>
+<p>These snippets helped the Biome maintainers quickly fix issues, many of which are now resolved today. Like any software, linters need to prioritize the cases most likely to affect users. If you have an edge case of your own that isn't fixed, consider sending Biome a PR!</p>
+<p>This competition was just as much about culture as it was about improving the lint rule. It gave us the chance to collaborate, get creative, support open source, and share in some friendly mischief. That reflects the culture we're building at Vercel: solving hard problems together while having fun along the way.</p>
+<p>Our engineers care deeply about improving the developer experience, building fast and reliable systems, and giving back to the open source community. We thrive on curiosity, creativity, and collaboration, whether that’s designing scalable infrastructure, pushing the boundaries of web performance, or inventing new ways to make developers more productive.</p>
+<p>If that sounds like you, we’d love to work together. Explore open roles at Vercel.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/stress-testing-biomes-nofloatingpromises-lint-rule" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3276. Zero-configuration Express backends</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/zero-configuration-express-backends" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2F44itpd7WOKfT4ugwZLeT/fb5971cb8fb63ade0a035dadf6dce30e/Flagsmith_Dark__3_.png" alt="Zero-configuration Express backends" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2F44itpd7WOKfT4ugwZLeT/fb5971cb8fb63ade0a035dadf6dce30e/Flagsmith_Dark__3_.png" alt="Zero-configuration Express backends" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Express, a fast, unopinionated, minimalist web framework for Node.js, is now supported with zero-configuration.</p>
+<p>Vercel's framework-defined infrastructure now recognizes and deeply understands Express applications. This update removes the need for redirects in vercel.json or using the /api folder.</p>
+<p>Deploy Express on Vercel or visit the Express on Vercel documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/zero-configuration-express-backends" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3275. Export traces, web analytics events, and speed insights datapoints to any destination</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/export-more-data-with-vercel-drains" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5k541qdRD3T44VPh34RWWE/f3b927684cbf5c0760787b53aac6c2aa/Vercel_Drains_-_Light.png" alt="Export traces, web analytics events, and speed insights datapoints to any destination" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5k541qdRD3T44VPh34RWWE/f3b927684cbf5c0760787b53aac6c2aa/Vercel_Drains_-_Light.png" alt="Export traces, web analytics events, and speed insights datapoints to any destination" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Users can export OpenTelemetry traces, Web Analytics events, and Speed Insights data points from Vercel to any third-party tool. We’ve expanded our Log Drains infrastructure, enabling users to stream more raw data out of Vercel and into external systems.</p>
+<p>With Vercel Drains, users can configure custom HTTP endpoints to receive data in multiple encodings — JSON, NDJSON, or Protobuf.</p>
+<p>Pro and Enterprise teams can export data to external systems at the same $0.50 per GB rate.</p>
+<p>Try it out or learn more about Vercel Drains.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/export-more-data-with-vercel-drains" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3274. Vercel Functions now support graceful shutdown</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-functions-now-support-graceful-shutdown" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Vercel%20Functions%20now%20support%20graceful%20shutdown&amp;format=changelog" alt="Vercel Functions now support graceful shutdown" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Vercel%20Functions%20now%20support%20graceful%20shutdown&format=changelog" alt="Vercel Functions now support graceful shutdown" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Functions running on Node.js and Python runtimes now support graceful shutdown, giving you up to 500 milliseconds to run cleanup tasks before termination.</p>
+<p>When a function is terminated, such as during scale-down, the runtime receives a SIGTERM signal. You can now use this signal to run cleanup tasks like closing database connections or flushing external logs.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-functions-now-support-graceful-shutdown" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3273. Bulk enable on-demand concurrent builds across projects</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/bulk-enable-on-demand-concurrent-builds-across-projects" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7c9dQkTmpmY3yqo3rjJui6/cd43680242a90cd5fd21562dfebacea9/Anthony_Playground_Frame__1_.png" alt="Bulk enable on-demand concurrent builds across projects" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7c9dQkTmpmY3yqo3rjJui6/cd43680242a90cd5fd21562dfebacea9/Anthony_Playground_Frame__1_.png" alt="Bulk enable on-demand concurrent builds across projects" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Pro teams can now remove build queues across all projects with just one click by bulk enabling on-demand concurrent builds.</p>
+<p>On-demand concurrency scales build compute capacity dynamically, so all builds for a project start as soon as they are requested, except when multiple builds target the same Git branch.</p>
+<p>To get started, visit your Pro team's billing settings to:</p>
+<p>Enable or disable for all existing projects</p>
+<p>Search and pick specific projects where it should be active</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/bulk-enable-on-demand-concurrent-builds-across-projects" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3272. AI SDK and AI Gateway now integrated in GitHub Actions</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/ai-sdk-and-ai-gateway-now-integrated-in-github-actions" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3raWpUlyUThh25Fgit86f8/78e89c7a5ca04e1943088091bb66b405/image.png" alt="AI SDK and AI Gateway now integrated in GitHub Actions" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3raWpUlyUThh25Fgit86f8/78e89c7a5ca04e1943088091bb66b405/image.png" alt="AI SDK and AI Gateway now integrated in GitHub Actions" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now use the vercel/ai-action@v2 GitHub Action to access the AI SDK and AI Gateway, generating text or  structured JSON directly in your workflows by specifying a prompt, model, and api-key.</p>
+<p>This integration enables new AI-powered use cases for GitHub Actions, such as summarizing what made it into a release, providing a light PR code review, moderating comments, or finding duplicate or relevant issues.</p>
+<p>Learn more and see examples in the Github Actions marketplace, view the source code, or read the walkthrough guide.</p>
+<p>Unify access to hundreds of AI models through one endpoint with automatic failover, simplified authentication, and no key management.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/ai-sdk-and-ai-gateway-now-integrated-in-github-actions" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3271. Package installation for v0 builds is now ~70% faster.</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/package-installation-for-v0-builds-is-now-70-faster" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Package%20installation%20for%20v0%20builds%20is%20now%20~70%25%20faster.&amp;format=changelog" alt="Package installation for v0 builds is now ~70% faster." loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Package%20installation%20for%20v0%20builds%20is%20now%20~70%25%20faster.&format=changelog" alt="Package installation for v0 builds is now ~70% faster." style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Average npm install time for v0 builds dropped from 5s to 1.5s by optimizing how dependencies are resolved and cached during build execution.</p>
+<p>This is in addition to a recent improvement to time-to-start for v0 builds, with more improvements in progress to further reduce installation and overall build time.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/package-installation-for-v0-builds-is-now-70-faster" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3270. Streamdown 2.2 - animated streaming and better support for custom HTML</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/streamdown-2-2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/17rjZOEJkgrruoh7oJ87sc/2ceb5ceb5cbc2c061816317099b9ac6d/streamdown_22_adds_animated_streaming_and_custom_h_og_card.png" alt="Streamdown 2.2 - animated streaming and better support for custom HTML" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/17rjZOEJkgrruoh7oJ87sc/2ceb5ceb5cbc2c061816317099b9ac6d/streamdown_22_adds_animated_streaming_and_custom_h_og_card.png" alt="Streamdown 2.2 - animated streaming and better support for custom HTML" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Streamdown 2.2 delivers animated per-word text streaming, improved custom HTML handling, and drop-in compatibility with ReactMarkdown - making it easier to adopt Streamdown in existing projects.</p>
+<p>By importing the Streamdown stylesheet and enabling the new animated prop, streaming content renders with smooth per-word text animation. This provides a polished experience for AI chat interfaces and other real-time text applications.</p>
+<p>The components prop now accepts custom HTML attributes by adding elements to allowedTags. The Remend engine has also been improved to strip incomplete HTML tags during streaming, preventing visual glitches from partial markup.</p>
+<p>Streamdown now supports the remaining ReactMarkdown props, making migration a one-line replacement. Projects using ReactMarkdown can swap to Streamdown without refactoring component configurations.</p>
+<p>This release also removes CommonJS builds, adds bundled-language aliases for common JavaScript, TypeScript, and shell labels, and includes numerous rendering and security fixes across tables, code blocks, LaTeX, and Mermaid diagrams.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/streamdown-2-2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3269. Critical npm supply chain attack response – September 8, 2025</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/critical-npm-supply-chain-attack-response-september-8-2025" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4WIWSk5XQG6t9lCsffgPhC/0f7edea564503c00753200fbd48448e5/npm_supply_chain_attack_blog_1_.jpg" alt="Critical npm supply chain attack response – September 8, 2025" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4WIWSk5XQG6t9lCsffgPhC/0f7edea564503c00753200fbd48448e5/npm_supply_chain_attack_blog_1_.jpg" alt="Critical npm supply chain attack response – September 8, 2025" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>On September 9, 2025, the campaign extended to DuckDB-related packages after the duckdb_admin account was breached. These releases contained the same wallet-drainer malware, confirming this was part of a coordinated effort targeting prominent npm maintainers.</p>
+<p>While Vercel customers were not impacted by the DuckDB incident, we continue to track activity across the npm ecosystem with our partners to ensure deployments on Vercel remain secure by default.</p>
+<p>On September 8, 2025, a supply chain attack compromised 18 popular npm packages including chalk, debug, and ansi-styles. The injected code was designed to intercept cryptocurrency transactions in browsers.</p>
+<p>Our security and engineering teams identified all affected Vercel projects in the initial compromise and purged build caches. Impacted customers were notified with specific guidance. No Vercel customers were affected in the DuckDB incident.</p>
+<p>The malicious code injected into these packages:</p>
+<p>Executed in client-side browsers when bundled into web applications</p>
+<p>Intercepted cryptocurrency and web3 wallet interactions</p>
+<p>Redirected payment destinations to attacker-controlled addresses</p>
+<p>Analysis identified 70 Vercel teams with builds containing the compromised package versions across 76 unique projects.</p>
+<p>Identified all affected projects through our deployment dependency tracking system</p>
+<p>Purged build caches for all 76 unique affected projects to prevent serving malicious code</p>
+<p>Notified affected customers with specific project lists requiring rebuilds</p>
+<p>The malicious package versions have been removed from npm. Projects rebuilt after our cache purge use clean package versions.</p>
+<p>Initial reports of malicious activity in npm packages</p>
+<p>17:39 UTC - Vercel incident response activated</p>
+<p>22:19 UTC - Build caches purged for affected projects</p>
+<p>The attack originated from a phishing campaign targeting npm package maintainers. The attacker used the domain npmjs.help (now taken down) to harvest credentials through a convincing two-factor authentication update email:</p>
+<p>The email created false urgency with a 48-hour deadline, claiming accounts would be locked starting September 10, 2025. We strongly encourage npm package authors to look out for this attack pattern and verify any security-related emails by navigating directly to npmjs.com rather than clicking email links.</p>
+<p>Rebuild projects listed in our notification email</p>
+<p>Consider implementing package version pinning</p>
+<p>Use npm audit to check for known vulnerabilities</p>
+<p>Implement dependency scanning in CI/CD pipelines</p>
+<p>Consider using npm ci with lockfiles in production builds</p>
+<p>Enable npm package provenance where available</p>
+<p>We continue to strengthen our supply chain security posture:</p>
+<p>Enhanced monitoring for suspicious package updates</p>
+<p>Improved tooling for rapid cache invalidation during incidents</p>
+<p>This incident reinforces the importance of defense-in-depth strategies for supply chain security. While we cannot prevent all upstream compromises, we can minimize impact through rapid detection and response.</p>
+<p>Thanks to Aikido Security for early detection and the npm community's rapid response in addressing the compromised packages.</p>
+<p>For questions about this incident, please contact security@vercel.com</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/critical-npm-supply-chain-attack-response-september-8-2025" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3268. Included Pro usage is now credit-based</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/included-pro-usage-is-now-credit-based" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/793Vqs13I4ytByBLa0VQ4/d278ed0aabef06478e2d7826451bd407/Pro_-_Light.png" alt="Included Pro usage is now credit-based" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/793Vqs13I4ytByBLa0VQ4/d278ed0aabef06478e2d7826451bd407/Pro_-_Light.png" alt="Included Pro usage is now credit-based" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Pro plan now includes $20 in monthly usage credit instead of fixed allocations across metrics like data transfer, compute, caching, and more. This plan update replaces static usage buckets with a more flexible system that adapts to your workload.</p>
+<p>In addition to the above, the new Pro pricing model includes:</p>
+<p>Self-serve enterprise features like SAML SSO and HIPAA BAA</p>
+<p>Better Spend Management, enabled by default</p>
+<p>Read more about the updates to Pro and switch to the new Pro pricing.</p>
+<p>Start building with the new Pro plan today. Flexible credits, free viewer seats, and enterprise-grade features now available.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/included-pro-usage-is-now-credit-based" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3267. Free Viewer seats now available on Pro</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/free-viewer-seats-now-available-on-pro" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/9bcVesZBYu6DAfG305qby/15a16cd37a03e4c8436c3862e6a98f85/Viewer_-_Light.png" alt="Free Viewer seats now available on Pro" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/9bcVesZBYu6DAfG305qby/15a16cd37a03e4c8436c3862e6a98f85/Viewer_-_Light.png" alt="Free Viewer seats now available on Pro" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Pro teams can now add unlimited Viewer seats at no additional charge so team members can collaborate more flexibly and cost-efficiently.</p>
+<p>Viewers can access project dashboards, deployments, analytics, and more, but can’t see sensitive data, deploy, or change production settings. This is ideal for any team members looking to collaborate via access to the dashboard and preview deployments.</p>
+<p>Previously, all seats on Pro were paid. Moving forward, you can add two main types of seats:</p>
+<p>Developer seats (Owner, Member): Team members that deploy, debug, and configure. These seats remain $20.</p>
+<p>Viewer seats: Team members that do not deploy. These seats are free.</p>
+<p>Viewers can easily request an upgrade from team owners directly in the dashboard.</p>
+<p>Read more about the updates to Pro and switch to the new Pro pricing.</p>
+<p>Start building with the new Pro plan today. Flexible credits, free viewer seats, and enterprise-grade features now available.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/free-viewer-seats-now-available-on-pro" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3266. Spend Management now enabled by default on Pro</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/spend-management-now-enabled-by-default-on-pro" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/76Maem2mIRSCEHR7GIOdpS/92f06bdeec3d4409aeaef31d6a67ceaa/New_Pro_Spend_Management_-_Light.png" alt="Spend Management now enabled by default on Pro" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/76Maem2mIRSCEHR7GIOdpS/92f06bdeec3d4409aeaef31d6a67ceaa/New_Pro_Spend_Management_-_Light.png" alt="Spend Management now enabled by default on Pro" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Spend Management is now enabled for new Pro teams, and will be enabled by default for existing teams when they switch to the new pricing model.</p>
+<p>All Pro teams will have a budget set by default based on any previous usage, if any, and any teams with existing budgets will be unaffected. This can be changed at any time in spend management settings.</p>
+<p>Email alerts will be sent when nearing the spend threshold based on your on-demand spend. This can be changed at any time here.</p>
+<p>This new default ensures you receive proactive cost signals to manage your spend. Your deployments will continue without interruption unless a hard limit is manually configured.</p>
+<p>Read more about the updates to Pro and switch to the new Pro pricing.</p>
+<p>Start building with the new Pro plan today. Flexible credits, free viewer seats, and enterprise-grade features now available.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/spend-management-now-enabled-by-default-on-pro" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3265. No build queues: On-demand concurrent builds now on by default</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/no-build-queues-on-demand-concurrent-builds-now-on-by-default" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4Nxg5PgWmiKcg2CgTEd0ak/8a6b3e2559d2cf4a0eb89ef30396dece/New_Pro_On-Demand_Concurrent_Builds_-_Light.png" alt="No build queues: On-demand concurrent builds now on by default" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4Nxg5PgWmiKcg2CgTEd0ak/8a6b3e2559d2cf4a0eb89ef30396dece/New_Pro_On-Demand_Concurrent_Builds_-_Light.png" alt="No build queues: On-demand concurrent builds now on by default" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Teams on the new Pro pricing model will now have on-demand concurrent builds enabled by default. This ensures builds across projects start immediately without waiting in a queue, except when multiple builds target the same Git branch.</p>
+<p>You can manage this setting at any time using the new bulk enable feature, even if your team is not yet on the new Pro pricing model.</p>
+<p>Learn more in the documentation read more about the updates to Pro, and switch to the new Pro pricing.</p>
+<p>Start building with the new Pro plan today. Flexible credits, free viewer seats, and enterprise-grade features now available.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/no-build-queues-on-demand-concurrent-builds-now-on-by-default" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3264. HIPAA BAAs are now available to Pro teams</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/hipaa-baas-are-now-available-to-pro-teams" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4wqRQujZHlvfz2A64TLbZm/959a7ef61f00b24747dec61294d298c7/New_Pro_HIPAA_-_Light.png" alt="HIPAA BAAs are now available to Pro teams" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4wqRQujZHlvfz2A64TLbZm/959a7ef61f00b24747dec61294d298c7/New_Pro_HIPAA_-_Light.png" alt="HIPAA BAAs are now available to Pro teams" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Pro teams can now enter into a Business Associate Agreement (BAA) to support HIPAA-compliant workloads on Vercel. The BAA is available self-serve through the dashboard with no Enterprise contract required.</p>
+<p>Vercel supports HIPAA compliance as a business associate by implementing technical and organizational safeguards, conducting annual audits, and offering breach notification in line with HIPAA requirements. Compliance is a shared responsibility between you and Vercel. Teams are responsible for configuring security features, managing access, and validating third-party services.</p>
+<p>This update makes it easier for healthcare-focused applications to meet regulatory obligations without upgrading to Enterprise.</p>
+<p>The HIPAA BAA is available via Vercel's all customers who are covered entities or business associates under HIPAA. Contact Vercel support to review BAA terms and ensure proper coverage.</p>
+<p>The HIPAA BAA is available self service as a paid add on. You simply need to agree to the terms of the Vercel Business Associate Agreement.</p>
+<p>No. By offering a BAA, Vercel helps support your HIPAA compliance, but using Vercel doesn't automatically ensure compliance. Your organization is responsible for ensuring adequate compliance programs, internal processes, and that your use of Vercel aligns with HIPAA requirements.</p>
+<p>No. If you're a SaaS provider with a healthcare solution on Vercel, your customers can sign a BAA directly with you. They don't need a separate BAA with Vercel unless they also directly use Vercel services independently.</p>
+<p>Generally, no. Vercel's services typically involve creating, receiving, maintaining, or transmitting PHI, which qualifies Vercel as a business associate. The conduit exception is very limited and applies only to pure transmission services with temporary storage incident to transmission.</p>
+<p>Vercel will report security incidents according to BAA terms and will provide breach notification if required by HIPAA. The response depends on the nature of the incident and whether it constitutes a breach of unsecured PHI.</p>
+<p>Yes, HIPAA permits international data storage with proper BAAs and safeguards. However, you must conduct a risk assessment considering geographic and geopolitical risks and implement appropriate additional safeguards if needed.</p>
+<p>No. You must be on an Enterprise plan for any redlines to the standard agreement.</p>
+<p>Read more about other updates to Pro and switch to the new Pro pricing.</p>
+<p>Start building with the new Pro plan today. Flexible credits, free viewer seats, and enterprise-grade features now available.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/hipaa-baas-are-now-available-to-pro-teams" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3263. A more flexible Pro plan for modern teams</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/new-pro-pricing-plan" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3cqvqgzdIJklVuqtNZThBi/9a8370486636f62d693990d52e6746fd/Pro_OG.png" alt="A more flexible Pro plan for modern teams" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3cqvqgzdIJklVuqtNZThBi/9a8370486636f62d693990d52e6746fd/Pro_OG.png" alt="A more flexible Pro plan for modern teams" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We’re updating Vercel’s Pro plan to better align with how modern teams collaborate, how applications consume infrastructure, and how workloads are evolving with AI. Concretely, we’re making the following changes:</p>
+<p>A flexible spending model: Instead of discrete included allotments across 20+ infra products, we’re transitioning to a flexible usage balance.</p>
+<p>Free Viewer seats: Teammates can access previews, analytics, and more without needing to pay for a seat.</p>
+<p>Self-serve Enterprise features: SAML SSO, HIPAA BAAs, and more are now available to everyone on the Pro plan. No need to contact sales.</p>
+<p>Better Spend Management: Spend Management is now enabled by default, to provide peace of mind against rare runaway usage.</p>
+<p>We’ve been iterating on this new Pro plan for a while now, based on feedback from thousands of customers, to better support the way modern teams build.</p>
+<p>With this transition, around 7% of teams with diverse usage across Vercel products will likely see their bills go up, the majority of which will see only a modest increase. The remainder of paying teams, over 100,000, will see either a decrease or no change in their bill.</p>
+<p>Either way, we’re here to help with recommendations and optimizations to ensure you’re happy with the value you get from Vercel for the price you pay.</p>
+<p>You shouldn’t have to worry about keeping track of allocations and on-demand rates for 20+ different usage metrics while you’re building.</p>
+<p>Pro now uses a simpler credit-based usage model. Each month starts with $20 in flexible credit that can be used across your team’s projects in any configuration. Additionally, the new Pro plan includes $150+ dedicated to Fast Data Transfer, and $20+ for Edge Requests.</p>
+<p>Teams on Vercel come in all shapes and sizes and are made up of both developers and non-developers. One piece of recurring feedback we’ve heard is that you want to be able to collaborate with teammates, friends, and clients who do not deploy code, and that it feels unfair to have to pay for seats for them.</p>
+<p>Pro now offers free Viewer seats for those who need access to your team’s projects, previews, and dashboards, but who do not need to build, deploy, or update settings.</p>
+<p>We've also heard overwhelming feedback that teams don’t want to have to contact sales or sign a contract in order to access the features they need.</p>
+<p>Pro now offers the ability to purchase features that have historically only been available on our Enterprise plan including SAML SSO and access to HIPAA BAAs. In the coming months, we’ll be making additional features available including PrivateLink, Static IPs, and more.</p>
+<p>You shouldn’t have to monitor your costs every day to avoid surprises, or worry about runaway bills on Vercel, ever.</p>
+<p>Pro now includes improved Spend Management that’s enabled by default for all projects. Two sets of alerts will be configured automatically for all teams:</p>
+<p>Alerts will trigger before you incur on-demand usage if you had no on-demand usage during the previous billing cycle.</p>
+<p>Additional alerts will trigger when you’re approaching a default on-demand spend limit, initially set to $200 for new teams.</p>
+<p>You can customize your spend limits and optionally configure Spend Management to pause deployments automatically when the limit you set is reached.</p>
+<p>We’ve also enabled our latest improvements to the platform, like on-demand concurrent builds and our new transform-based Image Optimization pricing by default on the Pro plan.</p>
+<p>Whether you’re scaling production apps or getting started with your first AI app, these updates are designed to support the way modern teams build. We’ll be rolling them out to all users in the coming months, but you can also opt into them starting today.</p>
+<p>These changes lay the foundation for a platform that grows with your team, whether you’re just starting out or operating at a global scale.</p>
+<p>Flexible credit-based usage allows teams to allocate resources according to their actual workload rather than being locked into rigid usage buckets they may not fully use. This is intended to allow more usage of the platform before incurring on-demand charges</p>
+<p>Most customers will see either a decrease or no change to their bill. Some high-usage teams or those using many Vercel services will incur on demand charges sooner.</p>
+<p>Yes. The new pricing plan will start rolling out automatically in October, but you can opt in at any time starting today.</p>
+<p>You can now self-serve purchase SAML SSO and HIPAA BAA, with Private Link, static IPs, and more coming soon.</p>
+<p>These are in addition to existing add-ons like Web Analytics Plus and Observability Plus.</p>
+<p>Spend Management is now enabled by default</p>
+<p>Soft alerts and overage notifications help prevent surprises</p>
+<p>You can monitor usage and adjust as needed</p>
+<p>Ensure you're taking advantage of any pricing changes, including Fluid compute with Active CPU pricing and new Image Optimization pricing</p>
+<p>You'll begin to incur on-demand charges. Alerts will notify you before this happens. You remain in control of your spend.</p>
+<p>If your bill is expected to increase, you can get ahead of it by reviewing this guide on switching to the new Pro pricing model and:</p>
+<p>Enabling the new Image Optimization pricing</p>
+<p>Converting non-developers to free Viewer seats</p>
+<p>Setting up Spend Management with thresholds</p>
+<p>Some of these optimizations will be enabled automatically once you switch, while others may require a quick review of your settings.</p>
+<p>You can ask questions directly in our Vercel Community thread.</p>
+<p>Get flexible credits, free Viewer seats, and self-serve access to Enterprise-level features when you need them. Pricing adapts to the way your team builds and scales.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/new-pro-pricing-plan" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3262. The second wave of MCP: Building for LLMs, not developers</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/the-second-wave-of-mcp-building-for-llms-not-developers" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6U5QB3nGgsw7w6jkqiF2NU/1ca5c0947bdd9fa83e26531b153d4d25/SecondWave_MCP__1_.png" alt="The second wave of MCP: Building for LLMs, not developers" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6U5QB3nGgsw7w6jkqiF2NU/1ca5c0947bdd9fa83e26531b153d4d25/SecondWave_MCP__1_.png" alt="The second wave of MCP: Building for LLMs, not developers" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>When the MCP standard first launched, many teams rushed to ship something. Many servers ended up as thin wrappers around existing APIs with minimal changes. A quick way to say "we support MCP".</p>
+<p>At the time, this made sense. MCP was new, teams wanted to get something out quickly, and the obvious approach was mirroring existing API structures. Why reinvent when you could repackage?</p>
+<p>But the problem with this approach is LLMs don’t work like developers. They don’t reuse past code or keep long term state. Each conversation starts fresh. LLMs have to rediscover which tools exist, how to use them, and in what order. With low level API wrappers, this leads to repeated orchestration, inconsistent behavior, and wasted effort as LLMs repeatedly solve the same puzzles.</p>
+<p>MCP works best when tools handle complete user intentions rather than exposing individual API operations. One tool that deploys a project end-to-end works better than four tools that each handle a piece of the deployment pipeline.</p>
+<p>The key difference is context and state management. When you write code, you keep track of information between API calls. You store the project ID from the create call, check deployment status before adding the domain, and wrap error handling around each step so failures don't break the entire process.</p>
+<p>LLMs work differently. Each conversation starts fresh with no memory of previous conversations. While they can see tool results within the current conversation, they have to figure out the right sequence of tools to use based on what's available. When those tools are low-level API wrappers, the LLM has to orchestrate multiple calls and manage the complexity of chaining them together each time.</p>
+<p>For example, take deploying a project with the Vercel API. A developer might write code like this:</p>
+<p>This approach involves nested configurations, ID management across calls, and parsing repository URLs. A developer will solve for this once and re-use. But an LLM faces this puzzle fresh each time, often getting the nesting wrong or forgetting required fields.</p>
+<p>The solution is building tools around complete user goals rather than API capabilities. Instead of four separate tools, create one deploy_project tool that handles the entire workflow internally.</p>
+<p>This changes everything about tool design:</p>
+<p>create_project, add_env, deploy, add_domain</p>
+<p>Consider the difference in practice. An API-shaped MCP server might expose these tools:</p>
+<p>The LLM has to call each tool in sequence, pass IDs between calls, and handle potential failures at each step.</p>
+<p>This single tool handles the complete workflow internally and returns a conversational response. Instead of { status: 200, data: { id: "proj_123" } }, the LLM can respond with "Project deployed at example.com. Build completed in 45s. All systems running normally."</p>
+<p>Start by testing the workflow manually before writing any code. Take a real user request like "set up my project with authentication and a database" and walk through it step by step using your existing APIs. The parts that feel tedious or repetitive are good candidates for a single MCP tool.</p>
+<p>Think of MCP tools as tailored toolkits that help an AI achieve a particular task, not as API mirrors. There may be multiple APIs and business logic behind a single MCP tool. If users think of something as one workflow, design it as one tool.</p>
+<p>Here's how to structure a complete workflow tool:</p>
+<p>Use plain code for the deterministic parts. Things like API sequencing, error recovery, and state management are better suited for regular programming. Only involve the LLM for parts that truly need reasoning or natural language processing.</p>
+<p>Test with real scenarios. Run actual user workflows through your tools. When you see the LLM making multiple attempts or asking for clarification, that's feedback about your tool design. The goal is for complex workflows to succeed on the first try.</p>
+<p>Teams that have shifted from API shaped tools to workflow shaped tools have seen meaningful improvements in reliability and efficiency.</p>
+<p>The common thread is how these tools are designed:</p>
+<p>They focus on user intentions rather than API coverage</p>
+<p>They handle complete workflows rather than exposing single operations</p>
+<p>They respond in a conversational way rather than returning technical codes</p>
+<p>MCP works best when tools reflect complete user goals. LLMs do not manage state the way developers do, so building tools around workflows produces better results.</p>
+<p>Give this approach a try. The MCP handler makes it straightforward to expose your application logic as workflow based MCP tools. Get started with the Next.js MCP template or explore the documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/the-second-wave-of-mcp-building-for-llms-not-developers" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html" class="active">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

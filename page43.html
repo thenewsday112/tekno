@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 43</title>
+<meta name="description" content="Page 43">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page43.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 43</h1>
+<article class="article-card">
+    <h2>#3501. How Fluid compute works on Vercel</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Health</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-fluid-compute-works-on-vercel" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1HvoLwsPFvIOpnUvVtiARq/0fe305c15cbc35aee8881ad2cc795532/OG_Card__6_.png" alt="How Fluid compute works on Vercel" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1HvoLwsPFvIOpnUvVtiARq/0fe305c15cbc35aee8881ad2cc795532/OG_Card__6_.png" alt="How Fluid compute works on Vercel" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Fluid compute is Vercel’s next-generation compute model designed to handle modern workloads with real-time scaling, cost efficiency, and minimal overhead. Traditional serverless architectures optimize for fast execution, but struggle with requests that spend significant time waiting on external models or APIs, leading to wasted compute.</p>
+<p>To address these inefficiencies, Fluid compute dynamically adjusts to traffic demands, reusing existing resources before provisioning new ones. At the center of Fluid is Vercel Functions router, which orchestrates function execution to minimize cold starts, maximize concurrency, and optimize resource usage. It dynamically routes invocations to pre-warmed or active instances, ensuring low-latency execution.</p>
+<p>By efficiently managing compute allocation, the router prevents unnecessary cold starts and scales capacity only when needed. Let's look at how it intelligently manages function execution.</p>
+<p>Vercel Functions router applies Fluid principals to optimize execution. It dynamically assigns requests to instances based on real-time metrics such as load, availability, and type.</p>
+<p>In turn, Fluid instances process multiple concurrent requests, reducing idle compute cycles and ensuring efficient workload distribution. This interplay between routing intelligence and flexible execution allows Fluid compute to scale responsively, maintaining low-latency performance while preventing over-provisioning and performance degradation.</p>
+<p>This optimization is achieved through a secure infrastructure design where instances communicate exclusively through the router via persistent TCP tunnels. Rather than accepting direct traffic, instances establish bidirectional connections with the function router, enabling them to receive incoming invocation data while simultaneously streaming response data back.</p>
+<p>This architectural pattern enhances security and enables Vercel Functions router to maintain precise control over workload distribution and scaling decisions.</p>
+<p>The router optimizes every request in real time—routing efficiently, selecting the best compute, and scaling dynamically with the following process:</p>
+<p>1. Routing, security, and cachingThe moment a user presses enter, their request is routed to the nearest Vercel Point of Presence (PoP) via Anycast for the lowest possible latency. Before moving forward:</p>
+<p>The Vercel Firewall inspects traffic, blocking threats like DDoS attacks and suspicious patterns</p>
+<p>If cached at the edge, the response is served instantly</p>
+<p>If execution is required, the request moves to the router</p>
+<p>2. Compute selection and executionVercel Functions router determines the optimal execution region based on proximity, load, and availability. It then selects the best compute instance:</p>
+<p>In-flight instances (active) are prioritized for efficiency</p>
+<p>Proactively spawned, pre-warmed instances (currently idle) minimizes cold starts, while bytecode caching reduces their start time</p>
+<p>3. Processing and response optimizationWith an instance assigned, the function begins execution—running logic, querying databases, or calling APIs. If streaming is enabled, responses start flowing immediately as data becomes available, improving Time to First Byte (TTFB).</p>
+<p>4. Adaptive scaling and resource efficiencyTo maintain performance and avoid wasting compute, Fluid continuously:</p>
+<p>Monitors traffic patterns, instance health, and workload fluctuations in real time</p>
+<p>Proactively scales new instances during surges</p>
+<p>Gracefully scales down idle instances to optimize resource use</p>
+<p>From keystroke to response, Fluid dynamically optimizes execution, intelligently handling every request with speed and efficiency.</p>
+<p>Because Fluid prioritizes existing resources with idle capacity, projects with Fluid enabled have cut compute costs by up to 85%.</p>
+<p>Fluid compute is not just about better scaling, it is about smarter resource usage. By dynamically adjusting to traffic and eliminating idle compute time, Fluid compute ensures you only pay for the compute you actually use.</p>
+<p>Enable Fluid compute in your Project Settings today—no migrations needed. Available on all plans.</p>
+<p>Fluid is our fast, cost-efficient compute, available today.</p>
+<p>Once enabled, visit your Observability tab to track function performance and compute savings.</p>
+<p>Learn more about Fluid in the changelog and documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-fluid-compute-works-on-vercel" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3500. Vercel Firewall rule builder now supports `OR` for rule condition groups</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-firewall-rule-builder-now-supports-or-for-rule-condition-groups" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6AWlc34iLxQ5DmJy6ZFiVc/730e3577c82cb78959e4742d20f392ae/Firewall_OR_-_Light.png" alt="Vercel Firewall rule builder now supports `OR` for rule condition groups" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6AWlc34iLxQ5DmJy6ZFiVc/730e3577c82cb78959e4742d20f392ae/Firewall_OR_-_Light.png" alt="Vercel Firewall rule builder now supports `OR` for rule condition groups" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Vercel Firewall now supports using an OR operator to link condition groups within a custom WAF rule.</p>
+<p>Previously, customers could only use an AND operator to join condition groups. This update now supports AND or OR , allowing customers to create more complex WAF actions.</p>
+<p>Learn more about the Vercel Firewall or navigate to your Firewall tab to customize rules.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-firewall-rule-builder-now-supports-or-for-rule-condition-groups" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3499. Overview page in Observability</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/overview-page-in-observability" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7su5hUsgUbYgtNP1q1NS1P/d0f134ff3ce0b4bb71735391e4600531/Observability_Overview_-_Light.png" alt="Overview page in Observability" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7su5hUsgUbYgtNP1q1NS1P/d0f134ff3ce0b4bb71735391e4600531/Observability_Overview_-_Light.png" alt="Overview page in Observability" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Observability now includes an overview page that provides a high-level view of your application's performance.</p>
+<p>This new dashboard aggregates key metrics from Edge Requests, Fast Data Transfer, and Vercel Functions, giving you instant insights into request and data transfer volumes, as well as function performance.</p>
+<p>Each metric also serves as a starting point for deeper analysis, with one-click access to their dedicated dashboards for more detailed insights.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/overview-page-in-observability" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3498. Increased Hobby usage limits for Image Optimization</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/increased-hobby-usage-limits-for-image-optimization" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Increased%20Hobby%20usage%20limits%20for%20Image%20Optimization&amp;format=changelog" alt="Increased Hobby usage limits for Image Optimization" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Increased%20Hobby%20usage%20limits%20for%20Image%20Optimization&format=changelog" alt="Increased Hobby usage limits for Image Optimization" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We've increased Image Optimization included usage for Hobby teams:</p>
+<p>Image Transformations: from 3K to 5K per month</p>
+<p>Image Cache Reads: from 180K to 300K per month</p>
+<p>Image Cache Writes: from 60K to 100K  per month</p>
+<p>Learn more about Image Optimization pricing and its recent recent price reduction.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/increased-hobby-usage-limits-for-image-optimization" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3497. Personalization strategies that power ecommerce growth</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/personalization-strategies-that-power-ecommerce-growth" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7GAQMCrUezAAt81XhIhWnM/4a284246d5b50ad4216983e4d43be2bb/OG_Card__8_.png" alt="Personalization strategies that power ecommerce growth" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7GAQMCrUezAAt81XhIhWnM/4a284246d5b50ad4216983e4d43be2bb/OG_Card__8_.png" alt="Personalization strategies that power ecommerce growth" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Personalization works best when it’s intentional. Rushing into it without the right approach can lead to higher costs, slower performance, and poor user experience. The key is to implement incrementally, with the right tools, while maintaining performance.</p>
+<p>When personalization is implemented effectively, it drives real business results, returning $20 for every $1 spent and driving 40% more revenue.</p>
+<p>Let's look at what personalization is, how to implement it correctly, and why Next.js and Vercel achieve optimal outcomes.</p>
+<p>Next.js and Vercel: Built for personalization</p>
+<p>The bottom line: Why personalization matters for your business</p>
+<p>Taking the next steps with personalization</p>
+<p>Personalization falls into two main categories and each plays a key role in delivering relevant experiences.</p>
+<p>Architectural personalization involves tailoring how the structure and experience of a site functions based on a user’s identity or preferences. This could mean presenting different navigation options, dynamically altering page layouts, or even routing users to completely distinct experiences.</p>
+<p>Adjusting content for logged-in vs. guest users</p>
+<p>Requires a balance between speed and flexibility</p>
+<p>Excessive architectural shifts can introduce inconsistencies in user experience</p>
+<p>Tools like Partial Prerendering (PPR), Edge Middleware, and feature flags enable high-performance architectural personalization.</p>
+<p>Content personalization focuses on what is displayed to the user, rather than how the site is structured. This method ensures users see content or products specifically tailored to their preferences, behavior, or past interactions.</p>
+<p>AI-driven promotions based on past behavior</p>
+<p>Infrastructure capable of handling dynamic content</p>
+<p>Strategies leveraging Server-Side Rendering (SSR), dynamic content injection, and third-party integrations, enable real-time personalization without compromising performance.</p>
+<p>Poorly executed personalization can increase costs, hurt user experience, and reduce conversions.</p>
+<p>Configuration and experimentation tools should not be used to manage content. Using them for content creates inefficiencies and complex content workflows</p>
+<p>Over-use of client-side personalization delays content and slows page loads. When too much happens after the page loads, users experience layout shifts and delayed interactions</p>
+<p>Not all personalization needs to be rendered in real time. Overusing dynamic rendering uses more resources and increases costs without always improving user experience</p>
+<p>Personalization done wrong can be costly. Poor user experiences lead to churn and inefficient resources usage drive resource spend. To be effective, it must be implemented incrementally with the right tools, without slowing down performance or creating inconsistencies.</p>
+<p>Next.js and Vercel provide the tools needed for implementing personalization effectively. By combining hybrid rendering capabilities, Edge Middleware, and integrations with third-party tools, they allow businesses to deliver dynamic experiences without sacrificing performance.</p>
+<p>Next.js Middleware enables personalization at the network level, allowing for geo-based targeting, A/B testing, and real-time content adjustments. Static and dynamic rendering strategies offer pre-rendered variants for speed and performance while Middleware serves the right content</p>
+<p>The Flags SDK provides a structured approach to feature flagging, allowing teams to test and roll out personalization strategies effectively</p>
+<p>Optimize performance and development with Vercel Speed Insights, caching, and lazy loading to maintain fast, SEO-friendly pages, while preview deployments and real-time collaboration enable iteration velocity</p>
+<p>The Vercel Marketplace integrates with third-party personalization engines, recommendation systems, and customer data platforms</p>
+<p>With these features, Next.js and Vercel provide an integrated and performance-focused approach to personalization, making them ideal for enterprise ecommerce brands looking to enhance user engagement and drive conversions.</p>
+<p>Personalization isn’t just about engagement—it drives measurable business growth.</p>
+<p>88% of marketers report positive ROI from personalization</p>
+<p>Personalization can cut customer acquisition costs by 50% and increase marketing efficiency by 30%</p>
+<p>Personalization techniques return $20 for every $1 spent</p>
+<p>High-growth brands generate 40% more of their revenue from personalization</p>
+<p>65% of consumers expect brands to adapt to their individual needs and expectations.</p>
+<p>Teams that implement successful personalization are 48% more likely to exceed their revenue goals</p>
+<p>Beyond the numbers, personalization makes shopping effortless. When done right, it reduces friction, builds loyalty, and keeps businesses competitive in a digital-first world.</p>
+<p>The following table outlines four key personalization approaches, detailing how they function, where they’re most effective, and the best rendering method for performance.</p>
+<p>Predefined versions of homepage and category pages, tailored to user segments</p>
+<p>Faster page loads, improved SEO, and more relevant first impressions for users</p>
+<p>Reordering results based on user behavior or preferences</p>
+<p>Increased product visibility, improved engagement, and higher conversion rates</p>
+<p>Showing related items based on user history</p>
+<p>Hybrid (static base + dynamic below-the-fold updates)</p>
+<p>Higher average order value (AOV), increased cross-sell and upsell opportunities, and more relevant shopping experiences</p>
+<p>Increased cart value, higher conversion rates, and smoother checkout experiences</p>
+<p>By understanding these four types of personalization, ecommerce brands can implement the right strategies to drive engagement, increase conversions, and optimize performance.</p>
+<p>For enterprise ecommerce brands, personalization should be a measured, scalable process. Start by auditing site performance and user behavior to identify opportunities. Then, implement a hybrid approach—pre-rendering high-traffic pages for speed while injecting dynamic elements where necessary.</p>
+<p>From there, refine and optimize personalization efforts:</p>
+<p>Use A/B testing with Edge Middleware to measure impact</p>
+<p>Decide between in-house solutions vs. third-party integrations to balance flexibility and efficiency</p>
+<p>Implement real-time and contextual personalization while ensuring performance remains a priority</p>
+<p>Effective personalization should not slow down performance or disrupt user experience. With Next.js and Vercel, teams can incrementally integrate personalization to deliver experiences that drive business value.</p>
+<p>The key to successful personalization is balance—ensuring speed, scalability, and relevance at every touchpoint. We've helped retailers see a $10M increase in sales and improve their Core Web Vitals by up to 93%. Let us help make personalization work for you.</p>
+<p>Ready discuss your personalization roadmap?</p>
+<p>Vercel helps ecommerce teams implement personalization effectively, enabling a high-performance approach that integrates our dynamic capabilities without slowing down your user experience.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/personalization-strategies-that-power-ecommerce-growth" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3496. Jeanne DeWitt Grosser joins Vercel as COO</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/jeanne-dewitt-grosser-joins-vercel-as-coo" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7ISkQb1w80XrqIQKyf8xkr/21387e42040f98cb5f8ffca6ef33abba/Jeanne_DeWitt_Grosser_joins_Vercel_as_COO_-_LinkedIn__1_.png" alt="Jeanne DeWitt Grosser joins Vercel as COO" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7ISkQb1w80XrqIQKyf8xkr/21387e42040f98cb5f8ffca6ef33abba/Jeanne_DeWitt_Grosser_joins_Vercel_as_COO_-_LinkedIn__1_.png" alt="Jeanne DeWitt Grosser joins Vercel as COO" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>When I started Vercel, my vision was simple: make building for the web more accessible and more powerful. That belief has fueled Vercel’s growth, empowering developers to bring their biggest ideas to life.</p>
+<p>Today, we’re welcoming Jeanne DeWitt Grosser, former Chief Business Officer at Stripe, as Vercel’s Chief Operating Officer to help further this mission. Vercel is building the foundation to power the next billion developers. Achieving this vision requires strong leadership and operational excellence. As COO, Jeanne will lead our go-to-market function.</p>
+<p>Vercel holds a high bar—not just for what we build, but for how we work together. We roll up our sleeves and operate on what I like to call "recursive founder mode," moving fast and pushing boundaries. Jeanne embodies this approach.</p>
+<p>Jeanne knows how to scale developer-first companies. At Stripe, she helped grow revenue from $100M to billions, pioneered usage-based go-to-market strategies, and built key partnerships. Before that, she shaped Google Workspace’s growth model before product-led growth was widely recognized.</p>
+<p>To introduce Jeanne, I sat down with her for a conversation about her experience, leadership philosophy, and what’s ahead for Vercel.</p>
+<p>Jeanne: I’m all about making big bets. When I think about the most exciting moments in my career, they’ve always been at companies that are changing how people build. That’s exactly what Vercel is doing for AI and the web.</p>
+<p>As an advisor to Vercel over the past 18 months, I’ve seen the team's talent and ambition firsthand. There’s an energy here—a belief that the future of the open web can be improved, and developers should have the best tools to build it. That’s what drew me in.</p>
+<p>Jeanne: Vercel has a deeply loved product. The challenge is scaling in a way that serves indie developers to the world's largest enterprises, without losing what makes Vercel special.</p>
+<p>The playbook for go-to-market strategies in today’s AI-driven, consumption-based businesses is still being written. I’m focused on pushing those boundaries, starting with Vercel’s platform as "customer zero" for products like v0, which is changing how developer-adjacent teams build for the web.</p>
+<p>Jeanne: Vercel is redefining how developers build with AI, by making AI more accessible and building a platform to meet the demands of modern web applications. Most companies focus on one or the other. Vercel does both, which unlocks new possibilities.</p>
+<p>Great companies don't just follow industry shifts, they shape them. That’s exactly what Vercel is doing with AI.</p>
+<p>Jeanne: The team. Vercel is filled with people who are wildly ambitious, intensely customer-focused, and truly care about making the web better.</p>
+<p>Scaling a company is not just about operational rigor. It’s about ensuring the culture, energy, and standards stay just as high as they were in the early days. I’m excited to help Vercel grow while staying true to what makes it great.</p>
+<p>From v0, the AI SDK, to Next.js, we’re building tools that power the next generation of AI-driven applications while staying committed to our open source roots. Jeanne’s leadership will strengthen our foundation, ensuring anyone—from solo creators to the world’s largest enterprises—can just ship things.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/jeanne-dewitt-grosser-joins-vercel-as-coo" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3495. Faster domain aliasing for large-scale multi-tenant applications</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/faster-domain-aliasing-for-large-scale-multi-tenant-applications" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Faster%20domain%20aliasing%20for%20large-scale%20multi-tenant%20applications&amp;format=changelog" alt="Faster domain aliasing for large-scale multi-tenant applications" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Faster%20domain%20aliasing%20for%20large-scale%20multi-tenant%20applications&format=changelog" alt="Faster domain aliasing for large-scale multi-tenant applications" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Bulk aliasing for multi-tenant applications now runs significantly faster, reducing total aliasing time by up to 95%.</p>
+<p>Multi-tenant applications on Vercel let a single project serve many customers behind the scenes. These applications are often fronted by hundreds or thousands of domains. Previously, aliasing—the process of pointing a domain to a different deployment—was a slow process that added significant overhead to deployments.</p>
+<p>This optimization is now live for all customers and has led to dramatic improvements, like:</p>
+<p>App with 13,254 domains: ~10min → 28 seconds</p>
+<p>App with 23,743 domains: 8min 37secs → 26 seconds</p>
+<p>Learn more about multi-tenant applications on Vercel.</p>
+<p>How to build a multi-tenant app with custom domains using Next.js</p>
+<p>Create a full-stack application with multi-tenancy and custom domain support using Next.js App Router, Vercel Postgres, and the Vercel Domains API.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/faster-domain-aliasing-for-large-scale-multi-tenant-applications" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3494. Vercel Marketplace integrations now available in v0</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-marketplace-integrations-now-available-in-v0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/30mZEWIGuDXJhgBvLaoY92/2ea7bb06d8e99a765fa60198b9adebb9/v0_integrations_-_Light.png" alt="Vercel Marketplace integrations now available in v0" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/30mZEWIGuDXJhgBvLaoY92/2ea7bb06d8e99a765fa60198b9adebb9/v0_integrations_-_Light.png" alt="Vercel Marketplace integrations now available in v0" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Users of v0—our collaborative AI assistant used to design, iterate, and scale full-stack applications—can now leverage integrations from the Vercel Marketplace, starting with Upstash, Neon, and Supabase.</p>
+<p>Install directly from the project sidebar or within v0’s chat interface. When added, these integrations redirect you to the Vercel Marketplace where you can configure environment variables, available to both Vercel and v0.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-marketplace-integrations-now-available-in-v0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3493. Reduced Log Drains costs with smaller billable increments</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/reduced-log-drains-costs-with-smaller-billable-increments" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Reduced%20Log%20Drains%20costs%20with%20smaller%20billable%20increments&amp;format=changelog" alt="Reduced Log Drains costs with smaller billable increments" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Reduced%20Log%20Drains%20costs%20with%20smaller%20billable%20increments&format=changelog" alt="Reduced Log Drains costs with smaller billable increments" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We’ve updated Log Drains pricing on all Pro and Enterprise plans, reducing the charge increments.</p>
+<p>Data transferred for Log Drains will be billed at $0.50 per 1GB, instead of the previous $10 per 20GB, providing more precise usage tracking and better cost efficiency.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/reduced-log-drains-costs-with-smaller-billable-increments" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3492. Groq, fal, and DeepInfra join the Vercel Marketplace</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/groq-fal-and-deepinfra-join-the-vercel-marketplace" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2amccWgGCLl06RHjbSUALF/9755731018fa7c89a8e9637dfaedba77/AI_Providers_-_Dark.png" alt="Groq, fal, and DeepInfra join the Vercel Marketplace" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2amccWgGCLl06RHjbSUALF/9755731018fa7c89a8e9637dfaedba77/AI_Providers_-_Dark.png" alt="Groq, fal, and DeepInfra join the Vercel Marketplace" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Vercel Marketplace now has an AI category for tools to integrate AI models and services directly into Vercel projects.</p>
+<p>Groq, fal, and DeepInfra are available as first-party integrations, allowing users to:</p>
+<p>Seamlessly connect and experiment with various AI models to power generative applications, embeddings, and more</p>
+<p>Deploy and run inference with high-performance AI models, optimized for speed and efficiency</p>
+<p>Leverage single sign-on and integrated billing through Vercel, including new prepaid options for better cost control</p>
+<p>With prepaid plan options, users can now manage AI costs more predictably by purchasing credits upfront from a model provider. These credits can be used across any model offered by that provider.</p>
+<p>Explore the new AI category, read the docs, and get started with Groq, fal, and DeepInfra on the Vercel Marketplace, available to users on all plans.</p>
+<p>You can also explore the most popular models from each provider in the AI SDK playground.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/groq-fal-and-deepinfra-join-the-vercel-marketplace" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3491. Vercel Firewall protects against the SAMLStorm vulnerability</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-firewall-protects-against-the-samlstorm-vulnerability" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Vercel%20Firewall%20protects%20against%20the%20SAMLStorm%20vulnerability&amp;format=changelog" alt="Vercel Firewall protects against the SAMLStorm vulnerability" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Vercel%20Firewall%20protects%20against%20the%20SAMLStorm%20vulnerability&format=changelog" alt="Vercel Firewall protects against the SAMLStorm vulnerability" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We have deployed a proactive security update to the Vercel Firewall, protecting against a recently disclosed vulnerability in the xml-crypto package, dubbed SAMLStorm (CVE-2025-29774 and CVE-2025-29775). This vulnerability, which affects various SAML implementations, could allow attackers to bypass authentication mechanisms.</p>
+<p>Automatic protection with the Vercel Firewall: Vercel Firewall automatically mitigates this risk for you, but updating xml-crypto is still recommended</p>
+<p>Update xml-crypto: If you're using xml-crypto package 6.0.0 and earlier, or a package that depends on xml-crypto, update to 6.0.1, 3.2.1, or 2.1.6 for the patched versions</p>
+<p>We'll continue to monitor for new developments and provide updates as necessary</p>
+<p>See the SAMLStorm report for more details on the vulnerability, and reach out to Vercel Support if you have questions.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-firewall-protects-against-the-samlstorm-vulnerability" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3490. Lockfile-aware deployment skipping for monorepos</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/lockfile-aware-deployment-skipping-for-monorepos" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/52UObaUMn2IxfSoAcoY1Mt/1e5f793f2c51db36d5ffd72ef2ac4dbc/Root_directory_-_Light.png" alt="Lockfile-aware deployment skipping for monorepos" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/52UObaUMn2IxfSoAcoY1Mt/1e5f793f2c51db36d5ffd72ef2ac4dbc/Root_directory_-_Light.png" alt="Lockfile-aware deployment skipping for monorepos" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel now maps dependencies in your package manager’s lockfile to applications in your monorepo. Deployments only occur for applications using updated dependencies.</p>
+<p>This feature is based on Turborepo's lockfile analysis, supporting the package managers listed as stable in Turborepo's Support Policy.</p>
+<p>Previously, any change to the lockfile would redeploy all applications in the monorepo since it was treated as a shared input. Now, Vercel inspects the lockfile’s contents to determine which applications have dependency changes, further reducing potential queue times.</p>
+<p>Learn more about skipping unaffected projects in monorepos.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/lockfile-aware-deployment-skipping-for-monorepos" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3489. xAI joins the Vercel Marketplace</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/xai-joins-the-vercel-marketplace" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7LLjQvzTiCwUGT8ny775ZZ/40c84dd2e8605d76b701d3a53fc90c01/xAI_-_Light.png" alt="xAI joins the Vercel Marketplace" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7LLjQvzTiCwUGT8ny775ZZ/40c84dd2e8605d76b701d3a53fc90c01/xAI_-_Light.png" alt="xAI joins the Vercel Marketplace" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>xAI's Grok models are now available in the Vercel Marketplace, making it easy to integrate conversational AI into your Vercel projects.</p>
+<p>Get started with xAI's free plan—no additional signup through the Marketplace</p>
+<p>Access Grok's large language models (LLMs) directly from your Vercel projects</p>
+<p>Simplify authentication and API key management through automatically configured environment variables</p>
+<p>Pay only for what you use with integrated billing through Vercel</p>
+<p>To get started, you can use the AI SDK xAI provider in your project:</p>
+<p>Then, install the xAI Marketplace Integration with Vercel CLI (or from the dashboard):</p>
+<p>Once you've accepted the terms, you'll be able to use Grok models from within your project, with no additional steps necessary.</p>
+<p>To help you get started, we've also made a ready-to-deploy Next.js xAI starter template. To learn more about xAI on Vercel, read our announcement and the documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/xai-joins-the-vercel-marketplace" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3488. xAI and Vercel partner to bring zero-friction AI to developers</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/xai-and-vercel-partner-to-bring-zero-friction-ai-to-developers" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6NirCoakt2x3J8MnagoCKz/95cd22e785d0633513c516c2c2cd9e7f/OG_Card__28_.png" alt="xAI and Vercel partner to bring zero-friction AI to developers" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6NirCoakt2x3J8MnagoCKz/95cd22e785d0633513c516c2c2cd9e7f/OG_Card__28_.png" alt="xAI and Vercel partner to bring zero-friction AI to developers" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Use xAI's Grok models across Vercel, the AI SDK, and v0</p>
+<p>Vercel provides the tools and infrastructure to build AI-native web applications. We're partnering with xAI to bring their powerful Grok models directly to Vercel projects through the Vercel Marketplace—and soon v0—with no additional signup required.</p>
+<p>To help you get started, xAI is introducing a new free tier through Vercel to enable quick prototyping and experimentation. These Grok models now power our official Next.js AI chatbot template with the AI SDK.</p>
+<p>This is a part of our ongoing effort to make using AI frictionless on Vercel.</p>
+<p>With Grok models now available from the Vercel Marketplace, developers can build with xAI’s conversational models quickly.</p>
+<p>Get started with xAI's free plan—no additional signup through the Marketplace</p>
+<p>Access Grok's large language models (LLMs) directly from your Vercel projects</p>
+<p>Simplify authentication and API key management through automatically configured environment variables</p>
+<p>Pay only for what you use with integrated billing through Vercel</p>
+<p>If you're already working in a Vercel project, you can also install xAI through the Marketplace from the Vercel CLI:</p>
+<p>Play, test, and integrate with a wide range of AI model types, sizes, and specializations in the Vercel Marketplace.</p>
+<p>We've streamlined AI experimentation and development through the AI SDK, ready-to-use templates, and our model playground.</p>
+<p>The Next.js AI Chatbot is a free open-source chatbot template built by the creators of Next.js, AI SDK, and shadcn/ui. It features tool calling, retrieval, code execution, artifacts, and genUI examples—the UI infrastructure you need to build your own ChatGPT or grok.com.</p>
+<p>The AI SDK is a free open-source library that gives you the tools you need to build AI-powered products and agents. It offers a unified API for integrating almost any language model, so you can experiment, test, and change models and providers with just one or two lines of code.</p>
+<p>The AI SDK also has a playground where you can compare output from different models and providers. xAI is the default provider and you can compare xAI’s Grok models against others from Anthropic, Google, OpenAI, and many more.</p>
+<p>When you’re vibe coding with v0, you'll soon be able to leverage the xAI Vercel Marketplace integration right in v0's chat interface (which is currently possible with Vercel Marketplace storage integrations).</p>
+<p>Soon, we'll be adding more AI integrations in the Vercel Marketplace. If you're a service provider interested in joining, you can reach out to us at integrations@vercel.com.</p>
+<p>With xAI now in the Vercel Marketplace, developers have more flexibility to build AI-powered applications with industry-leading models. Whether you're integrating Grok into your chatbot, experimenting with new AI workflows and agents, or scaling existing workloads, Vercel makes it easy to start shipping.</p>
+<p>Vercel offers everything you need to get started with AI.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/xai-and-vercel-partner-to-bring-zero-friction-ai-to-developers" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3487. Flags SDK now supports OpenFeature</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/flags-sdk-now-supports-openfeature" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3ct3t5QfoUD6Rd2cItBgc7/62bb79042a1d580bd7254be55dd6e597/Flags___OpenFeature_-_Light.png" alt="Flags SDK now supports OpenFeature" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3ct3t5QfoUD6Rd2cItBgc7/62bb79042a1d580bd7254be55dd6e597/Flags___OpenFeature_-_Light.png" alt="Flags SDK now supports OpenFeature" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Flags SDK adapter for OpenFeature allows using any Node.js OpenFeature provider with the Flags SDK. Pick from a wide range of flag providers, while benefiting from the Flag SDK's tight integration into Next.js and SvelteKit.</p>
+<p>Declare a feature flag using the Flags SDK and OpenFeature adapter</p>
+<p>OpenFeature is an open specification that provides a vendor-agnostic, community-driven API for feature flagging that works with your favorite feature flag management tool or in-house solution. OpenFeature exposes various providers through a unified API.</p>
+<p>The Flags SDK sits between your application and the source of your flags, helping you follow best practices and keep your website fast. Use the Flags SDK OpenFeature adapter in your application to load feature flags from all compatible Node.js OpenFeature providers, including:</p>
+<p>View the OpenFeature adapter or clone the template to get started.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/flags-sdk-now-supports-openfeature" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3486. AI SDK 4.2</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/ai-sdk-4-2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3kqV0XaDhGPmBCAowLJH23/4e8d400f17fee4a858ee2a2ca32112ad/ai-sdk-4-2.png" alt="AI SDK 4.2" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3kqV0XaDhGPmBCAowLJH23/4e8d400f17fee4a858ee2a2ca32112ad/ai-sdk-4-2.png" alt="AI SDK 4.2" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Introducing MCP clients, reasoning, sources and more.</p>
+<p>The AI SDK is an open-source toolkit for building AI applications with JavaScript and TypeScript. Its unified provider API allows you to use any language model and enables powerful UI integrations into leading web frameworks such as Next.js and Svelte.</p>
+<p>With over 1 million weekly downloads, developers are using the SDK to create incredible applications like Otto, an AI-powered research tool:</p>
+<p>Today, we're announcing the release of AI SDK 4.2, which introduces:</p>
+<p>Let’s explore these new features and improvements.</p>
+<p>Reasoning models—like Anthropic Sonnet 3.7 and DeepSeek R1—dedicate computational resources at inference-time to work through problems methodically, much like a human showing their chain-of-thought. This approach produces more accurate and reliable results than traditional models, especially for tasks involving logic or multi-step analysis.</p>
+<p>The AI SDK now supports reasoning models across major providers. You can use a reasoning model like Anthropic’s Claude 3.7 Sonnet with the AI SDK just like any other model. You can access the model’s reasoning tokens with the reasoning property:</p>
+<p>You can experiment with different models to find the best fit for your application. You can easily switch between providers by changing just two lines of code:</p>
+<p>For providers that include reasoning as part of their text output rather than as separate tokens, you can use the extractReasoningMiddleware that automatically pulls reasoning content from formatted responses. This ensures a consistent experience across OpenAI, Anthropic, Groq, Together AI, Azure OpenAI, and other providers—without changing your application code.</p>
+<p>To see reasoning in action, check out the AI SDK Reasoning template. To learn more, check out our reasoning documentation.</p>
+<p>The AI SDK now supports the Model Context Protocol (MCP), an open standard that connects your applications to a growing ecosystem of tools and integrations. With MCP support, you can access hundreds of pre-built tools (”servers”) that add powerful functionality to your application. Some popular MCP servers include:</p>
+<p>GitHub - manage repositories, issues, and pull requests</p>
+<p>Slack - send messages and interact with workspaces</p>
+<p>Filesystem - Secure file operations with configurable access controls</p>
+<p>As MCP is an open-protocol, your users can also build and connect their own custom MCP servers to extend your applications functionality as needed. MCP has many use cases, but is particularly powerful for local code automation.</p>
+<p>The SDK supports connecting to MCP servers via either stdio (for local tools) or SSE (for remote servers). Once connected, you can use MCP tools directly with the AI SDK:</p>
+<p>To learn more about implementing MCP in your projects, check out our MCP tools documentation and our step-by-step MCP recipe.</p>
+<p>Language models produce more than just text -- they combine reasoning, sources, tool calls, and text responses, all in one message. With multi-step agentic use cases, these different types of outputs are frequently mixed together in a single response.</p>
+<p>AI SDK 4.2 introduces message parts to useChat, a new way to handle these different types of outputs that preserve their exact sequence.</p>
+<p>We plan to add more part types in future 4.2.x releases. To learn more, check out our 4.2 migration guide.</p>
+<p>Google's Gemini 2.0 Flash is the first language model capable of producing images directly as part of the response. The AI SDK supports this feature, enabling multi-modal chatbots that can generate and understand both text and images.</p>
+<p>On the client, you can access images generated by the language model with the file message part with useChat:</p>
+<p>When images are generated, they become part of your chat history just like text messages. You can reference, iterate on, or "edit" previously generated images through natural conversation - asking the model to modify colors, adjust styles, or create variations while maintaining context of the visual conversation.</p>
+<p>To learn more, check out our file generation documentation.</p>
+<p>Many providers like OpenAI and Google can include search results in their responses, but each implements their own unique way of exposing and accessing these sources. The AI SDK standardizes URL sources (i.e. websites), allowing you to build AI applications that use source attribution.</p>
+<p>For example, here's how to use and send sources with Gemini Flash:</p>
+<p>Here's how to display the sources in your client-side component using useChat:</p>
+<p>The AI SDK supports URL sources across compatible models with OpenAI Respones, Google, Vertex, and Perplexity.  To see sources in action, check out the sources template.</p>
+<p>OpenAI recently released the Responses API, a brand new way to build applications on OpenAI's platform. The new API offers a way to persist chat history, a web search tool for grounding LLM responses, and tools like file-search and computer use that will be coming in a future update.</p>
+<p>With day one support from the AI SDK, migrating to the new Responses API from the existing Completions API is simple:</p>
+<p>The new web search tool enables models to access the internet for relevant information, improving response quality for factual queries:</p>
+<p>The Responses API also simplifies managing conversation history. Instead of sending the full conversation with each request, you can reference previous interactions by ID, reducing complexity in your applications.</p>
+<p>To learn more about these features, check out the OpenAI Responses API guide.</p>
+<p>With AI SDK 4.2, the @ai-sdk/svelte package has been completely rewritten by the Svelte team to support Svelte 5 and properly leverage native patterns.</p>
+<p>This new implementation replaces React's hook-based approach with a Svelte-native class-based pattern:</p>
+<p>To learn more check out the Svelte quickstart guide or check out the open-source Svelte chatbot template with these patterns implemented.</p>
+<p>Language model middleware, now stable, is a way to enhance the behavior of language models by intercepting and modifying the calls to the language model. This pattern enables features like guardrails, caching, and logging while maintaining provider flexibility. Middleware is applied with a simple wrapping function that preserves the standard model interface.</p>
+<p>The SDK now includes three production-ready middleware options:</p>
+<p>extractReasoningMiddleware extracts reasoning steps from text with special tags like <think>.</p>
+<p>simulateStreamingMiddleware simulates streaming behavior with responses from non-streaming language models.</p>
+<p>defaultSettingsMiddleware applies consistent configurations across model calls, working seamlessly with any model including custom providers. Simply specify defaults for parameters like temperature and use providerMetadata for provider-specific options.</p>
+<p>These middleware options can be combined to create powerful, composable functionality that work across any supported language model. Check out our middleware documentation to learn more.</p>
+<p>We have recently made several experimental features stable, meaning they are now production-ready and well-tested. These features include:</p>
+<p>Custom Provider: map ids to any model allowing you to set up custom model configurations, alias names, and more.</p>
+<p>Middleware Improvements: apply multiple middlewares simultaneously for enhanced request processing and transformation. Middleware moved to stable.</p>
+<p>Tool Call Streaming: stream partial tool calls as part of the data stream. Moved to stable.</p>
+<p>Response Body Access: access the original response body directly via response.body property when using generateText or generateObject.</p>
+<p>Data Stream Enhancements: send start/finish events for streamText and use write/writeSource methods for more control over stream data.</p>
+<p>Error Handling: utilize onError callback for streamText/streamObject to manage errors gracefully.</p>
+<p>Object Generation: leverage generateObject repairText functionality to fix and improve generated content.</p>
+<p>Provider Options: configure provider-specific request options (e.g. reasoningEffort with OpenAI). Details depend on the provider. Moved to stable.</p>
+<p>Provider Metadata: access provider-specific response metadata. Details depend on the provider. Moved to stable.</p>
+<p>The AI SDK provider ecosystem continues to grow with new and improved providers:</p>
+<p>Amazon Bedrock: integrated more closely into AI SDK standard features with abort, fetch and error handling. Added support for cache point support, image generation for Amazon Nova Canvas, budget token support, and reasoning support.</p>
+<p>Anthropic: Added reasoning support, model setting adjustments for reasoning content, tool updates (bash, text editor, computer), and image URL support.</p>
+<p>Cohere: Improved tool handling with fixes for parameters and tool plan content.</p>
+<p>DeepInfra: Added image generation support.</p>
+<p>Google: Enhanced schema support, resilience against undefined parts, seed support, dynamic retrieval, empty content handling, reasoning support, and model ID updates.</p>
+<p>Google Vertex AI: Added new Gemini models, support for public file URLs in messages, and prompt caching for Anthropic Claude models.</p>
+<p>Mistral: Improved content handling with fixes for undefined content, complex content types, PDF support, and multiple text content parts.</p>
+<p>OpenAI: Added support for gpt-4.5, o3-mini, responses API, and PDF input.</p>
+<p>OpenAI Compatible: Added support for providerOptions in generateText/streamText.</p>
+<p>Replicate: Added support for versioned models.</p>
+<p>Together AI: Added image generation support and extended provider V1 specification.</p>
+<p>With powerful new features like MCP support, image generation with language models, and reasoning, there's never been a better time to start building AI applications with the AI SDK.</p>
+<p>Start a new AI project: Ready to build something new? Check out our latest guides</p>
+<p>Explore our templates: Visit our Template Gallery to see the AI SDK in action</p>
+<p>Join the community: Share what you're building in our GitHub Discussions</p>
+<p>Since our 4.1 release, we've seen some incredible products powered by the AI SDK that we wanted to highlight:</p>
+<p>Otto is an agentic spreadsheet that automates repetitive knowledge work.</p>
+<p>Payload is an open-source Next.js fullstack framework that transforms your configuration into a complete backend with admin UI, APIs, and database management in one seamless package.</p>
+<p>AI SDK 4.2 is the result of the combined work of our core team at Vercel (Lars, Jeremy, Walter, and Nico) and many community contributors. Thanks for contributing merged pull requests:</p>
+<p>Xiang-CH, d3lm, dreamorosi, MrunmayS, valstu, BrianHung, jstjoe, rmarescu, lasley, shaneporter, FinnWoelm, threepointone, minpeter, UrielCh, Younis-Ahmed, edukure, O1af, abhishekpatil4, sandonl, NVolcz, nihaocami, yudistiraashadi, mattlgroff, gianpaj, habeebmoosa, KABBOUCHI, franklin007ban2, yoshinorisano, jcppman, gravelBridge, peetzweg, patelvivekdev, ggallon, zeke, epoyraz, IObert, KitBurgess, marwhyte, niranjan94, asishupadhyay, SalmanK81099.</p>
+<p>elliott-with-the-longest-name-on-github for Svelte 5 support</p>
+<p>Und3rf10w for Amazon Bedrock reasoning support</p>
+<p>Your feedback and contributions continue to shape the AI SDK. We're excited to see what you'll build with these new capabilities.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/ai-sdk-4-2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3485. Protection against Next.js CVE-2025-29927</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-firewall-proactively-protects-against-vulnerability-with-middleware" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Protection%20against%20Next.js%20CVE-2025-29927&amp;format=changelog" alt="Protection against Next.js CVE-2025-29927" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Protection%20against%20Next.js%20CVE-2025-29927&format=changelog" alt="Protection against Next.js CVE-2025-29927" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A security vulnerability in Next.js was responsibly disclosed, which allows malicious actors to bypass authorization in Middleware when targeting the x-middleware-subrequest header.</p>
+<p>Vercel customers are not affected. We still recommend updating to the patched versions. Learn more about CVE-2025-29927.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-firewall-proactively-protects-against-vulnerability-with-middleware" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3484. Custom reporting now available on AI Gateway</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/custom-reporting-ai-gateway" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Custom%20reporting%20now%20available%20on%20AI%20Gateway&amp;format=changelog" alt="Custom reporting now available on AI Gateway" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Custom%20reporting%20now%20available%20on%20AI%20Gateway&format=changelog" alt="Custom reporting now available on AI Gateway" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Custom Reporting for AI Gateway is now available in beta for Pro and Enterprise users. Slice your AI spend by any dimension: model, provider, user, custom tags, or credential type. A single place for all your AI cost and usage data, including BYOK.</p>
+<p>All your inference already runs through AI Gateway, which means cost, token, and request data across every model, provider, and credential type is already there. The Custom Reporting API makes it queryable, so you're not logging into separate provider consoles or maintaining a third-party proxy for cost tracking.</p>
+<p>Tag your requests with `user` and `tags` to attribute costs by customer, feature, team, or environment:</p>
+<p>Tagging works with the AI SDK, Chat Completions API, Responses API, OpenResponses API, and Anthropic Messages API.</p>
+<p>Group by time, tag, user, model, provider, and all the other AI parameters.</p>
+<p>Use the custom reporting endpoint to get all your customer costs by use case.</p>
+<p>$0.075 per 1,000 unique tag or user ID values written per request</p>
+<p>$5 per 1,000 queries to the reporting endpoint</p>
+<p>To learn more, read the AI Gateway custom reporting docs.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/custom-reporting-ai-gateway" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3483. Postmortem on Next.js Middleware bypass</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/postmortem-on-next-js-middleware-bypass" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3Ai9F8b3S4uV5hOYigpOFN/21326ca1d04e95a91d0f6fa8c6cb557c/OG_Card.png" alt="Postmortem on Next.js Middleware bypass" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3Ai9F8b3S4uV5hOYigpOFN/21326ca1d04e95a91d0f6fa8c6cb557c/OG_Card.png" alt="Postmortem on Next.js Middleware bypass" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Last week, we published CVE-2025-29927 and patched a critical severity vulnerability in Next.js. Here’s our post-incident analysis and next steps.</p>
+<p>On 27 Feb 2025 06:03:00 GMT, the vulnerability was disclosed to the Next.js team through GitHub private reporting. The researchers also emailed security@vercel.com.</p>
+<p>The initial report disclosed the vulnerability in older versions of Next.js (12.x). Due to the old version range, this was given lower priority in our triage queue.</p>
+<p>An additional email was sent at 01 Mar 2025 02:00:00 GMT in a new thread, which extended the affected scope to more recent versions.</p>
+<p>Due to multiple reports submitted and internal conversations, triaging was delayed.</p>
+<p>We began investigating the report to understand the validity and potential impact.</p>
+<p>Our security team responded at 05 Mar 2025 10:38:00 GMT outlining our plans to release an LTS policy (now published) which would place Next.js 11.x and 12.x out of support for security patches.</p>
+<p>Our security team raised the report to the Next.js team to begin researching impact and remediation options at 14 Mar 2025 17:18:00 GMT. The Next.js engineering team confirmed the vulnerability as valid.</p>
+<p>Since Next.js can be hosted in multiple ways, all paths needed to be examined.</p>
+<p>Static exports were immediately ruled out due to Middleware not being available without a server runtime.</p>
+<p>We then confirmed self-hosted Next.js applications using next start and output: 'standalone' were impacted.</p>
+<p>We then investigated impact on Vercel. The Next.js routing logic is decoupled and runs in a separate system, distributed globally. This made Vercel incidentally invulnerable.</p>
+<p>Our team then examined open-source Next.js adapters for deploying to other infrastructure platforms. Netlify and Cloudflare Workers were confirmed to never have been affected, for the same decoupling of application routing.</p>
+<p>On Friday, we determined the best solution for fixing forward was to add validation when the x-middleware-subrequest header was passed—then, filter it out if the validation failed. We also listed a workaround for applications unable to upgrade by filtering out the header before it hit the Next.js server. The team began preparing patches for Next.js 15.x and 14.x.</p>
+<p>On Monday, a pull request containing the patch was opened on the Next.js GitHub repository on 17 Mar 2025 17:54:00 GMT.</p>
+<p>It was then merged at 17 Mar 2025 20:56:00 GMT.</p>
+<p>A patch was released for Next.js 14.2.25 at 17 Mar 2025 22:44:00 GMT and Next.js 15.2.3 at 18 Mar 2025 00:23:00 GMT.</p>
+<p>CVE-2025-29927 was issued by GitHub at 18 Mar 2025 18:03:00 GMT.</p>
+<p>CVE-2025-29927 was made public at 21 Mar 2025 10:17:00 GMT.</p>
+<p>At this time, the only public details available were on the published CVE, which did not cover enough detail to understand the impact of the issue.</p>
+<p>While we did verify Netlify and Cloudflare Workers were not impacted, we should have communicated this with their team. Further, we could have done a better job of proactive communication with other infrastructure providers and auth partners.</p>
+<p>Because the CVE did not state immediately whether Vercel applications were impacted (it was later updated), we quickly published a changelog on Vercel stating customers were protected.</p>
+<p>The changelog used the same template from our last resolution, which mentioned our Firewall. This was confusing and did not provide appropriate level of detail on the vulnerability itself.</p>
+<p>We published a blog post on the Next.js site explaining the CVE in preparation for the full postmortem to come later, as well as sharing to official social channels.</p>
+<p>Later that day, we published a backport for Next.js 13.5.9 at 22 Mar 2025 21:21:00 GMT. While this is outside of our now published LTS policy, we made an exception based on community feedback.</p>
+<p>We published an additional backport for Next.js 12.3.5 at 23 Mar 2025 06:44:00 GMT.</p>
+<p>Middleware allows you to redirect, rewrite, or modify the incoming request before producing a response. Because of this, Middleware runs before caching and routing happens.</p>
+<p>Next.js uses an internal x-middleware-subrequest header to detect and prevent recursion—and bypass the execution of Middleware. Middleware happens separately from the rendering process of a page. Because of the Middleware running in a separate process, we had to leverage an internal header to signal to the routing process that the Middleware had already run when doing a fetch to the app from inside the Middleware.</p>
+<p>Read more about the vulnerability details from the reporter.</p>
+<p>Partner mailing list: To help us more proactively work with partners depending on Next.js, and other infrastructure providers, we are opening a partner mailing list. Please reach out to partners@nextjs.org to be included.</p>
+<p>Simplify how issues get reported: We have consolidated security@vercel.com and responsible.disclosure@vercel.com to only use GitHub’s private vulnerability reporting for Next.js. This will help us triage incoming reports more effectively.</p>
+<p>Improved process: We are improving how our teams can respond to disclosures and enhancing our run books for Next.js vulnerabilities. Specifically, how we triage reports from open-source to frameworks like Next.js, and the working relationship between our security engineers and the Next.js team.</p>
+<p>Long Term Support (LTS) policy: We have published an LTS policy to outline which versions are actively supported with patches.</p>
+<p>Deployment adapters: This vulnerability relied on an internal header that was undocumented. As we work on implementing an official deployment adapters API with partners like Netlify and Cloudflare, we will ensure we document those internal headers or replace them with an appropriate API.</p>
+<p>Security assessment: We are further investigating if there are additional places to improve the security of Middleware. All subsequent issues uncovered will follow the new CVE process.</p>
+<p>Thank you to security researchers Rachid Allam (zhero) and Yassir Alam (inzo_) for responsibly disclosing this issue to our team. These researchers were awarded payouts as part of our bug bounty program.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/postmortem-on-next-js-middleware-bypass" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3482. Flags SDK 3.2</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/flags-sdk-3-2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4Kba9ODBIA6Yz3yc4lR3mQ/56e3d60d10dc1b23b29611ddd51370b4/Flags___SvelteKit_-_Dark__1_.png" alt="Flags SDK 3.2" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4Kba9ODBIA6Yz3yc4lR3mQ/56e3d60d10dc1b23b29611ddd51370b4/Flags___SvelteKit_-_Dark__1_.png" alt="Flags SDK 3.2" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Flags SDK 3.2 release adds support for precomputed feature flags in SvelteKit, making it easier to experiment on marketing pages while keeping them fast and avoiding layout shift.</p>
+<p>Precomputed flags evaluate in Edge Middleware to decide which variant of a page to show. This keeps pages static, resulting in low global latency as static variants can be served through the Edge Network.</p>
+<p>Precompute handles the combinatory explosion when using multiple feature flags statically. Generate different variants of a page at build time, rely on Incremental Static Regeneration to only build a specific combinations on demand, and more.</p>
+<p>We also improved the Flags SDK documentation by splitting it across different frameworks and explicitly listing all providers that have adapters for the Flags SDK.</p>
+<p>Learn more about the Flags SDK with SvelteKit and the precompute pattern.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/flags-sdk-3-2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html" class="active">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>
