@@ -1,0 +1,2572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 167</title>
+<meta name="description" content="Page 167">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page167.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 167</h1>
+<article class="article-card">
+    <h2>#1693. Flutter Authorization with RLS</h2>
+    <div class="article-meta">
+        📅 Nov 22, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/flutter-authorization-with-rls" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/flutter-chat-auth/supabase-flutter-auth.jpg" alt="Flutter Authorization with RLS" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/flutter-chat-auth/supabase-flutter-auth.jpg" alt="Flutter Authorization with RLS" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This article is the second part of the Flutter tutorial series. During the series, you will learn how to build cross-platform apps without worrying about the backend.</p>
+<p>In this article, I will show you how you can make a secure chat application by introducing authorization to the basic chat app that we created previously.</p>
+<p>We will store the chat data on Supabase.
+Supabase utilizes the built in authorization mechanism of PostgreSQL called Row Level Security or RLS to prevent unauthorized access from accessing or writing data to your database.
+RLS allows developers to define row-by-row conditions that evaluate to either true or false to either allow the access or deny it.
+We will take a look at more specific examples of authorization using RLS throughout this article.</p>
+<p>Before we jump in, let's go over what we built in the previous article, because we will be building on top of it. If you have not gone through it, I recommend you to go check it out.</p>
+<p>In the previous article, we created a basic real-time chat application. Users will register or sign in using an email address and password. Once they are signed in, they are taken to a chat page, where they can view and send messages to everyone in the app. There are no Chat rooms, and everyone's messages were sent to the same chat room.</p>
+<p>You can also find a complete code example here to follow along.</p>
+<p>The app will allow us to have 1 on 1 chat with other users in the app. To enable this, we will introduce a new rooms page. The rooms page serves two purposes here, one is to initiate a conversation with other users, and the other is to display existing chat rooms. At the top of the app, we see a list of other users' icons. A user can tap the icon to start a 1 on 1 conversation. Below the icons, there is a list of rooms that the user is a part of.</p>
+<p>We will install flutter_bloc for state management.
+Introducing a state management solution will allow us to handle the shared message and profile data efficiently between the rooms page and the chats page.
+We can use any state management solution for this, but we are going with bloc in this example.
+Add the following in your pubspec.yaml file to install flutter_bloc in your app.</p>
+<p>Since the app has evolved, we also need to update our table schema. In order to store rooms data, we will add a rooms table. We will also modify the messages table to add a foreign key constraint to the rooms table so that we can tell which message belongs to which room.</p>
+<p>We will also introduce a create_new_room function, which is a database function that handles chat room creation. It knows to create a new room if a chat room with the two users does not exist yet, or to just return the room ID if it already exists.</p>
+<p>Something we skipped in the previous article was sending confirmation emails to users when they signup. Since today is about security, let's properly send confirmation emails to people who signup.</p>
+<p>When we send confirmation emails, the users need to be brought back to the app somehow.
+Since supabase_flutter has a mechanism to detect and handle deep links, we will register a io.supabase.chat://login as our deep link for the app and bring the users back after confirming their email address.</p>
+<p>For iOS we edit the info.plist file to register the deep link.</p>
+<p>For Android we edit the AndroidManifest.xml to register the deep link.</p>
+<p>We also need to set the deep link in our Supabase dashboard. Go to Authentication > URL Configuration in your dashboard and add io.supabase.chat://login as one of the redirect URLs.</p>
+<p>And that is it for deep link configuration.</p>
+<p>The rooms page will load two types of data, recently added users and a list of rooms that the user belongs to. We will be using bloc to load these two types of data and display them on the rooms page.</p>
+<p>Let's start out by creating states for the rooms page.
+The rooms page would have four different states, loading, loaded, empty, and error. We will display different UI on the rooms page depending on what state it is.
+Satrt by defining the Room model. Create a lib/models/room.dart file and add the following code.</p>
+<p>We will proceed with defining the states for the rooms page. Create lib/cubit/rooms/rooms_state.dart file and paste the following code.
+You may see some errors, but we will take care of them in the next step.</p>
+<p>Now that we have the states defined, we will create rooms_cubit.
+A cubit is a class within the flutter_bloc library where we will make requests to Supabase to get the data and transform them into states and emit them to the UI widgets.
+Let's create a lib/cubit/rooms/rooms_cubit.dart file and complete the cubit.</p>
+<p>Now that we have the states and cubit to power our rooms page, it's time to create the RoomsPage.</p>
+<p>We have two list views, one horizontal list view to display other users, and one vertical list views with list tiles representing each room that the user is a part of.
+We will create a lib/pages/rooms_page.dart file with the following content.</p>
+<p>You may see some errors, but they will go away once we edit the chat page!</p>
+<p>Our ChatPage will have a similar layout as the previous one, but will only display messages sent to a single room. We will start by creating MessagesState. The messages page will also have four different states, loading, loaded, empty, and error.
+Create a lib/cubits/chat/chat_state.dart file with the following code.</p>
+<p>Now let's create chat cubit to retrieve the data from our database and emit it as states.
+Create a lib/cubits/chat/chat_cubit.dart file and paste the following.</p>
+<p>Chat cubit is pretty simple. It sets a real-time listener to the database using the stream method and emits an empty state if there are no messages in the room, or emits a loaded state if there are messages.</p>
+<p>Because we are using cubit, we need to modify the MessagesPage widget as well.
+Open lib/pages/chat_page.dart and let's update it.</p>
+<p>Because we have modified the setting of our Supabase to send a confirmation email, we need to make some modifications to the register page and login page as well.</p>
+<p>The main change is how we handle navigation.
+Previously, we were able to navigate the user to ChatPage right after sign-in was complete.
+This would no longer work, as we now have to wait for the user to confirm their email address.
+In this case, we would want to listen to auth state of the user and navigate when the user is signed in with a session.
+This allows us to react when the user confirmed their email addresses.</p>
+<p>Login page becomes simpler.
+All it is doing is taking a user's email and password and logging them in.
+It is not doing any navigation whatsoever.
+This is because LoginPage is navigated on top of RegisterPage, the auth state listener on RegisterPage is still active, and therefore can take care of the navigation.</p>
+<p>Notice that I have not used bloc anywhere on the register or login page.
+I try to only use state management libraries for pages that have some complexity.
+Since both register and login pages are relatively simple, I am going with the good old setState.</p>
+<p>We should also modify the splash page to redirect signed-in users to the RoomsPage by default.</p>
+<p>Finally we implement those ProfilesCubit that you saw here and there throughout the code.
+This cubit will act as in memory cache of all the profiles data so that the app does not have to go fetch the same profiles every single time it needs it.
+Create profiles_state.dart and profiles_cubit.dart under lib/cubits/ and add the following code.</p>
+<p>We will make the ProfilesCubit accessible from anywhere in the app with the following code in main.dart file.</p>
+<p>At this point, we seemingly have a complete app. But if we open the app right now, we will see every users' room along with all the messages that have ever been sent.
+This is because we have not set up Row Level Security to prevent users from accessing rooms that don't belong to them.
+There are two ways we can define Row Level Security policies in Supabase: with the GUI or through SQL. Today we will use SQL.
+Let's run the following SQL to set the security policy.</p>
+<p>Notice that we have created a handy is_room_participant function that will return whether a particular user is a participant or not in a specific room.</p>
+<p>With the Row Level Security policies set up, our application is complete. We now have a real-time chat application with proper authentication and authorization in place.</p>
+<p>Continuing from our previous article, we added proper authorization to our chat application using Row Level Security, which enabled us to add 1 on 1 chat feature.
+We used bloc for our state management solution. One thing we could have done differently if we were to write test codes was to pass the supabase instance as a parameter of the cubit so that we could write tests using the bloc_test package.</p>
+<p>We could also explore some cool feature improvement.
+At the top of the rooms page, we are loading the newest created users to start a conversation. This is fine, but it only allows users to start a conversation with new users.
+We can for example update this to a list of users that are online at the same time. We can implement this using the presence feature of Supabase.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/flutter-authorization-with-rls" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1540. Run npm and Deno anywhere</h2>
+    <div class="article-meta">
+        📅 Nov 18, 2022 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/npm-and-deno-anywhere" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/npm-and-deno-anywhere/day5-ogp.png" alt="Run npm and Deno anywhere" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/npm-and-deno-anywhere/day5-ogp.png" alt="Run npm and Deno anywhere" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We made it to the end of our first Launch Week! Aside from announcing that
+npm compatibility is stabilized in 1.28, we showed how to
+use persistent data npm modules,
+build with frameworks, and
+how Deno’s secure-by-default model helps mitigate against dependency vulnerabilities.
+We even hosted a
+special live stream where we
+answered your questions and demo’d variety of ways you can use npm specifiers
+with Deno.</p>
+<p>Today, we want to highlight that you can run your npm and Deno code on any
+virtual private server.</p>
+<p>Yes, Deno Deploy is an excellent choice to host your Deno code,
+especially if you want it to be executed close to your users on
+the edge. Deploying to
+our V8 isolate cloud takes seconds and can be
+accessed around the world within seconds. Also, npm specifiers aren’t currently
+supported in Deploy, but will be soon.</p>
+<p>But there are many virtual private servers where you can host Deno code and
+setup CI/CD with. This blog post will show you how to deploy Deno to these
+platforms:</p>
+<p>Note that all of these guides require you to have
+docker CLI since
+we’ll be using Docker for deployment.</p>
+<p>Check out our Manual for more How To guides on deploying Deno code and setting up automatic deployment with GitHub Actions.</p>
+<p>Before we deploy anything, all three examples will use basically the same
+main.ts, a Dockerfile built with
+our Docker image, and
+docker-compose.yml files. We’ll show them here so we don’t have to repeat them
+later.</p>
+<p>In your main.ts (the examples below may change the “Hello from Deno and AWS
+Lightsail” line to something specific to that platform, e.g. “Hello from Deno
+and Digital Ocean!”):</p>
+<p>Let’s test this locally by running docker compose -f docker-compose.yml build,
+then docker compose up, and going to localhost:8000.</p>
+<p>Each section below will focus on building those images and deploying them to
+their respective platforms.</p>
+<p>Amazon Lightsail is the easiest and
+cheapest way to get started with Amazon Web Services. It allows you to host
+virtual machines and even entire container services.</p>
+<p>This section will show you how to deploy a Deno app to Lightsail using Docker,
+Docker Hub, and GitHub Actions.</p>
+<p>First, let’s sign into Docker Hub and
+create a repository. Let’s name it deno-on-aws-lightsail.</p>
+<p>Then, let’s tag and push our new image, replacing username with yours:</p>
+<p>Then, let’s build the image locally. Note our docker-compose.yml file will
+name the build deno-image.</p>
+<p>Let’s tag the local
+image with {{ username }}/deno-on-aws-lightsail:</p>
+<p>After that succeeds, you should be able to see the new image on your Docker Hub
+repository:</p>
+<p>Let’s head over to
+the Amazon Lightsail console.</p>
+<p>Then click “Containers” and “Create container service”. Half way down the page,
+click “Setup your first Deployment” and select “Specify a custom deployment”.</p>
+<p>You can write whatever container name you’d like.</p>
+<p>In Image, be sure to use {{ username }}/{{ image }} that you have set in
+your Docker Hub. For this example, it is lambtron/deno-on-aws-lightsail.</p>
+<p>Finally, under PUBLIC ENDPOINT, select the container name that you just
+created.</p>
+<p>When you’re ready, click “Create container service”.</p>
+<p>After a few moments, your new container should be deployed. Click on the public
+address and you should see your Deno app:</p>
+<p>Learn more about automating this deployment using GitHub Actions in our Manual.</p>
+<p>Digital Ocean is a popular cloud infrastructure
+provider offering a variety of hosting services ranging from networking, to
+compute, to storage.</p>
+<p>This section assumes you have setup your main.ts, Dockerfile, and
+docker-compose.yml (if you haven’t, please refer to
+Using Docker).</p>
+<p>Digital Ocean has its own private Container Registry, with which we can push and
+pull Docker images. In order to use this registry, let’s
+install and authenticate doctl on the command line.</p>
+<p>After that, we’ll create a new private registry named deno-on-digital-ocean:</p>
+<p>Using our Dockerfile and docker-compose.yml, we’ll build a new image, tag it,
+and push it to the registry. Note that docker-compose.yml will name the build
+locally as deno-image.</p>
+<p>You should see your new deno-image with the new tag in your
+Digital Ocean container registry:</p>
+<p>Once our deno-image is in the registry, we can run it anywhere using
+docker run. In this case, we’ll run it while in our
+Digital Ocean Droplet, their
+hosted virtual machine.</p>
+<p>While on your Droplet page, click on
+your Droplet and then console to SSH into the virtual machine. (Or you can
+ssh directly from your command line.)</p>
+<p>To pull down the deno-image image and run it, let’s run:</p>
+<p>Using our browser to go to the Digital Ocean address, we now see:</p>
+<p>Learn more about automating deployments to Digital Ocean with GitHub Actions.</p>
+<p>Google Cloud Run is a managed compute platform
+that lets you run containers on Google’s scalable infrastructure.</p>
+<p>This section assumes you have setup your main.ts, Dockerfile, and
+docker-compose.yml (if you haven’t, please refer to
+Using Docker).</p>
+<p>Artifact Registry is GCP’s private registry of Docker images.</p>
+<p>Before we can use it, go to GCP’s
+Artifact Registry and click
+“Create repository”. You’ll be asked for a name (deno-repository) and a region
+(us-central1). Then click “Create”.</p>
+<p>Once we’ve created a repository, we can start pushing images to it.</p>
+<p>First, let’s add the registry’s address to gcloud:</p>
+<p>Then, let’s build your Docker image. (Note that the image name is defined in our
+docker-compose.yml file.)</p>
+<p>Then, tag it with
+the new Google Artifact Registry address, repository, and name. The image name
+should follow this structure:
+{{ location }}-docker.pkg.dev/{{ google_cloudrun_project_name }}/{{ repository }}/{{ image }}.</p>
+<p>If you don’t specify a tag, it’ll use :latest by default.</p>
+<p>More info on how to push and pull images to Google Artifact Registry.</p>
+<p>Your image should now appear in your Google Artifact Registry!</p>
+<p>We need an instance where we can build these images, so let’s go to
+Google Cloud Run and click “Create
+Service”.</p>
+<p>Select “Deploy one revision from an existing container image”. Use the drop down
+to select the image from the deno-repository Artifact Registry.</p>
+<p>Select “allow unauthenticated requests” and then click “Create service”. Make
+sure the port is 8000.</p>
+<p>When it’s done, your app should now be live:</p>
+<p>Now that it’s created, we’ll be able to deploy to this service from the gcloud
+CLI. The command follows this structure:
+gcloud run deploy {{ service_name }} --image={{ image }} --region={{ region }} --allow-unauthenticated.
+Note that the image name follows the structure from above.</p>
+<p>Learn more about automating deployments to Google Cloud Run with GitHub Actions.</p>
+<p>While stabilizing npm compatibility is a huge milestone for Deno, we’ve got
+plenty of work in the upcoming months to fix bugs, increase coverage with more
+npm modules, and to optimize performance.</p>
+<p>In order to help us make using npm with Deno a breeze, we’d love for you to try
+npm with Deno. And if you come across any problems,
+please open up an issue.</p>
+<p>Are you building with Deno and npm? Let us know on
+Twitter or Discord!</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/npm-and-deno-anywhere" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1546. Build a More Secure Web using npm with Deno</h2>
+    <div class="article-meta">
+        📅 Nov 17, 2022 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/a-more-secure-npm" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/a-more-secure-npm/day4-ogp.png" alt="Build a More Secure Web using npm with Deno" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/a-more-secure-npm/day4-ogp.png" alt="Build a More Secure Web using npm with Deno" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>npm has made software easily accessible and usable, growing and enriching the
+JavaScript community. However, since Node installs and runs dependencies by
+granting full access to the filesystem, environment, the internet, etc., Node
+programs are more susceptible to supply chain attacks.</p>
+<p>Supply chain attacks are nothing new. But given that the npm registry is the
+largest in the world, with more and more JavaScript developers using it to build
+apps and websites, npm is a constant target for these dependency attacks.</p>
+<p>Deno makes npm better and building with it is more secure, since Deno’s
+secure-by-default and unique sandboxed architecture help mitigates dependency
+based attacks.</p>
+<p>Malicious npm modules have been reported to
+steal user data from forms,
+perform shell injection attacks,
+and
+install malware onto your machine.
+These attacks are more likely in Node because Node apps (and its dependencies)
+all have unfettered access to everything—the filesystem, the internet,
+environment variables, etc.</p>
+<p>Below is a demo of a particularly sinister shell injection attack using bin
+script confusion:</p>
+<p>Deno runs code in a sandbox and uses an “opt-in” permission model. That means
+unless you specifically enable it, a program run with Deno has no file, network,
+or environment access. Access requires permissions granted through command line
+flags or a runtime permission prompt:</p>
+<p>For a full list of permissions, see here.</p>
+<p>When you run a script with Deno, you are aware of what access it needs.</p>
+<p>Deno’s permission model succeeds since the program is executed in a sandbox,
+which has a narrow entrypoint with few APIs to external systems. This makes it
+easy to manage all the data going to and from the code.</p>
+<p>Deno’s security system is borrowed from the privacy model of modern browsers.</p>
+<p>Whenever your browser requires access to your webcam, microphone, even
+geolocation API, it prompts you for permission. This means (theoretically) you
+are fully aware of the access the website you’re visiting has of your computer.</p>
+<p>Deno is similar, in that it puts the control in your hands. When executing third
+party, untrusted code, or a random dependency, you are aware of what it needs
+access to.</p>
+<p>Being able to browse the web safely is critical to its growth and usage.
+Building a more secure web with npm is easier with Deno, with its sandboxed,
+opt-in permissions approach helping to mitigate supply chain attacks.</p>
+<p>What are you building with Deno? Let us know on
+Twitter or Discord!</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/a-more-secure-npm" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1697. Fetching and caching Supabase data in Next.js 13 Server Components</h2>
+    <div class="article-meta">
+        📅 Nov 17, 2022 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/fetching-and-caching-supabase-data-in-next-js-server-components" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2022-11-17-supabase-nextjs-13/nextjs-supabase.jpg" alt="Fetching and caching Supabase data in Next.js 13 Server Components" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2022-11-17-supabase-nextjs-13/nextjs-supabase.jpg" alt="Fetching and caching Supabase data in Next.js 13 Server Components" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The biggest announcement from Next.js Conf 2022 was the release of Next.js 13, which introduces a collection of improvements, most exciting of which is Server Components. The combination of Server Components and Suspense allow for a more streamlined, reimagined way to fetch and cache data in Next.js applications. This provides excellent DX improvements — such as async components — and aligns the Next framework even closer with the future of React.</p>
+<p>This article is going to look at how we can use these brand new async components to simplify fetching and caching data from Supabase. We will look all things auth in a separate article. Check out the Server Components example in the Auth Helpers repo if you just can't wait!</p>
+<p>To learn more about any of the concepts covered in this article, check out the Next.js beta docs.</p>
+<p>A good distinction to understand at this point, is that Next.js 13 is stable and ready for production, however, the app directory is still in beta and likely to change. This article will be focusing on the app directory, Server Components and Suspense so let's get experimental!</p>
+<p>For an example of the code covered in this tutorial, check out this repo.</p>
+<p>If you prefer video, check out our recent live stream where we stepped through a similar example.</p>
+<p>Let’s get started by creating a brand new Next.js 13 app using the create-next-app package:</p>
+<p>Now we can run our app in development mode:</p>
+<p>This should look pretty familiar, and scanning the folder structure for the app, it should look almost identical to Next.js 12, but with a new folder called app. This is where the new data fetching and caching magic takes place. 🪄</p>
+<p>Each folder within the app directory represents a route in our application. Each folder must have a page component, which is rendered when the user navigates to the route, and optional layout, loading and error components.</p>
+<p>Learn more about Page, Layout, Loading and Error components in the Next.js beta docs.</p>
+<p>Before we jump into fetching data, we need some data to fetch. Let’s create a new Supabase project.</p>
+<p>Once your instance is up and running, head over to the SQL Editor, paste in the following snippet and click RUN.</p>
+<p>This will create a table called posts, and populate it with some example data.</p>
+<p>Let’s install the supabase-js library to fetch our posts.</p>
+<p>And add a .env.local file with the following environment variables:</p>
+<p>The values for these can be found in your project’s API settings.</p>
+<p>Lastly, we need to create a Supabase client. Create a file at utils/supabase.ts with the following content:</p>
+<p>For automatically adding types to the Supabase client, check out how to generate types.</p>
+<p>Okay, let’s look at some different data fetching and caching strategies.</p>
+<p>By default any page component in the app folder is a Server Component, and its data is fetched and cached by Next.js every time we build a new version of our application. This is equivalent to exporting a getStaticProps function from a component in the pages directory.</p>
+<p>Let’s create a new file at app/static/page.tsx and populate with the following:</p>
+<p>Server Components support async/await by default, and suspend the rendering of the component until the data has been fetched. This means we don’t need to handle error or loading states in our component, keeping our rendering logic clean.</p>
+<p>To learn more about displaying loading and error states, check out the documentation.</p>
+<p>Let’s modify this component to render out a collection of <Link /> components, that navigate to a dedicated page for each post.</p>
+<p>Since we are only using id and title in our component, we can scope our query down to only return these two columns for each post.</p>
+<p>Let’s create a dynamic route to handle displaying an individual post. Create a new file at app/static/[id]/page.tsx and populate with the following:</p>
+<p>Currently, this page is generated on-demand and then cached. This means the first person who visits the page will need to wait for the server to get the post data from Supabase. This won’t take long at all, because Supabase is Supa awesome! But, we can still make this slightly more efficient by telling Next.js a finite collection of paths that we want to generate at build time.</p>
+<p>We do this by exporting out a generateStaticParams function from our dynamic page.</p>
+<p>This is similar to getStaticPaths in a pages component. Learn more here.</p>
+<p>The full component should look something like this:</p>
+<p>Awesome! We now have a Supa snappy blog! The user never needs to wait for data to be fetched. All pages are statically generated at build time, and cached at CDN nodes close to our users! 🎉</p>
+<p>Unfortunately, this means any changes we make in Supabase — adding, updating or deleting posts etc — will not be reflected in our blog. If we want to refresh this data on a regular basis, we need to tell Next.js when to revalidate.</p>
+<p>By exporting a revalidate variable from our component, we can specify how many seconds we consider this data to be “fresh”.</p>
+<p>This is similar to returning a revalidate key from the getStaticProps function in a component from the pages directory.</p>
+<p>So, for 60 seconds Next.js will continue to respond with the static version of our page. After 60 seconds, it will fetch fresh data from Supabase and generate a new static page. However, there is no downtime while this happens, as the previous static page will continue to be served until the “fresh” one has been successfully generated.</p>
+<p>The Posts component should now look like this:</p>
+<p>And the Post component should look like this:</p>
+<p>We now get all the benefits of static — users not waiting around while data is fetched at request time — but we also get the benefits of dynamic data, as it is being refreshed on a regular basis.</p>
+<p>If we want fresh data to be fetched on every single request, we can simply set our revalidate value to 0.</p>
+<p>This is similar to exporting a getServerSideProps function from a component in the pages directory.</p>
+<p>All this server stuff is great, but what if you want to use Supabase client-side? 🤔</p>
+<p>There are many use-cases where you need to use Supabase client-side:</p>
+<p>Supabase Auth does a bunch of stuff behind the scenes — handling 3rd party OAuth flows, for example. This will break if you try to sign users in and out on the server.</p>
+<p>Supabase manages the awesome power of websockets on your behalf — something that is not yet solved in this serverless world.</p>
+<p>There is nothing wrong with this! You do you!</p>
+<p>To use Supabase client-side, we need to tell Next.js that this is a Client Component. We do this by specifying the use client directive at the top of our component. This opts into a similar flow to the pages directory — the component is rendered on the server and hydrated client-side.</p>
+<p>The React team is working on an awesome new hook called "use", which will drastically simplify fetching data client-side, but for now, we still need to rely on the combination of useState and useEffect.</p>
+<p>Let’s implement client-side data fetching.</p>
+<p>Again, check out how to generate types to add proper typing for Post.</p>
+<p>This is a great pattern for fetching initial data server-side and subscribing to realtime changes client-side. This will likely be replaced by the use hook once it is stable with Next.js — it also uses suspense to suspend the rendering of a component while fetching data, and cleans up those loading and error states.</p>
+<p>Next.js 13 Server Components are awesome! Suspense is awesome! Async components are awesome!</p>
+<p>The combination of these concepts allow us to think about data fetching and caching as separate concerns, rather than specifying completely different data fetching functions like getStaticProps and getServerSideProps. If our caching requirements for a component change, we simply update the caching value, rather than refactoring our data fetching logic.</p>
+<p>Additionally, by allowing any component in the tree to be either a server or client component — that is responsible for its own data and suspends rendering until it is ready — drastically simplifies our code, and provides much more flexible patterns for creating maintainable applications as complexity grows.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/fetching-and-caching-supabase-data-in-next-js-server-components" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1551. Build Apps in Deno with Frameworks such as React, Vue, Express, and more.</h2>
+    <div class="article-meta">
+        📅 Nov 16, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/frameworks-with-npm" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/frameworks-with-npm/day3-ogp.png" alt="Build Apps in Deno with Frameworks such as React, Vue, Express, and more." loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/frameworks-with-npm/day3-ogp.png" alt="Build Apps in Deno with Frameworks such as React, Vue, Express, and more." style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>There is no shortage of frameworks to build websites and apps in JavaScript. (In
+fact, as you are reading this, a new one just came out.) Since npm has become
+the main distribution platform for many things JavaScript, most require npm to
+use.</p>
+<p>With Deno 1.28, you can
+now build with these JavaScript frameworks, such as
+Express, React,
+Vue, and more.</p>
+<p>This blog post will show you how to get started with these JavaScript frameworks
+in Deno:</p>
+<p>Check out our Manual for more How To guides on using JavaScript frameworks with npm.</p>
+<p>Building with these frameworks will be faster, require less configuration, and
+use less boilerplate with Deno:</p>
+<p>In the examples below, we’ll show how easy it is to get started using npm with
+Deno.</p>
+<p>Express is a popular web framework known for being
+simple and unopinionated with a large ecosystem of middleware.</p>
+<p>Let’s create a simple API using Express and Deno.</p>
+<p>In main.ts, let’s create a simple server:</p>
+<p>And point our browser to localhost:8000. You should see:</p>
+<p>The next step here is to add some data. We’ll use this Dinosaur data that we
+found from this article.
+Feel free to
+copy it from here.</p>
+<p>Next, let’s import that data into main.ts. Let’s add this line at the top of
+the file:</p>
+<p>Then, we can create the routes to access that data. To keep it simple, let’s
+just define GET handlers for /api/ and /api/:dinosaur. Add the below after
+the const app = express(); line:</p>
+<p>Let’s run the server with deno run --allow-net main.ts and check out
+localhost:8000/api. You should see a list of dinosaurs:</p>
+<p>And when we go to localhost:8000/api/aardonyx:</p>
+<p>While Express is great for APIs and services, React is
+meant for user interfaces. It popularized a declarative approach towards
+designing interfaces, with a reactive data model. And due to its popularity,
+it’s not surprising that it’s the most requested framework when it comes to
+building web apps with Deno.</p>
+<p>Let’s create an app that’ll display a list of dinosaurs. When you click on one,
+it’ll take you to a dinosaur page with more details.</p>
+<p>View the source or
+follow the video guide.</p>
+<p>Let’s use Vite to quickly scaffold a Deno and React app:</p>
+<p>We’ll name our project “dinosaur-react-app”. Then, cd into the newly created
+project folder.</p>
+<p>The next step is to add a backend API. We’ll create a very simple API that
+returns information about dinosaurs.</p>
+<p>In the directory, let’s create an api folder. In that folder, we’ll create a
+main.ts file, which will run the server, and a data.json, which is the hard
+coded data.</p>
+<p>Copy and paste
+this json file
+into your api/data.json.</p>
+<p>This is a very simple API server using oak that
+will return dinosaur information based on the route. Let’s start the API server:</p>
+<p>Our app will have two routes: / and /:dinosaur.</p>
+<p>We’ll use react-router-dom for our routing
+logic. Let’s add that to our dependencies in vite.config.mjs:</p>
+<p>Once we add the dependencies there, we can import them without npm: specifier
+throughout our React app.</p>
+<p>Next, let’s go to src/App.jsx and add our routing logic:</p>
+<p>Next, let’s add the <Index> and <Dinosaur> pages.</p>
+<p>We’ll create a src/pages folder and create the .jsx files:</p>
+<p>Let’s start with <Index>. This page will fetch at localhost:8000/api and
+render that through JSX.</p>
+<p>Next, in <Dinosaur>, we’ll do the same except for
+localhost:8000/api/${dinosaur}:</p>
+<p>For more information using React,
+please refer to their documentation.</p>
+<p>Vue is a progressive front-end JavaScript framework, built
+for performance and versatility.</p>
+<p>Let’s create the exact same app we did with React, but now in Vue.</p>
+<p>View the source or
+follow the video guide.</p>
+<p>Name your project, then select “deno-vue”.</p>
+<p>You should now be able to view your default Deno and Vue app in your browser:</p>
+<p>The next step is to add a backend API. We’ll create a very simple API that
+returns information about dinosaurs.</p>
+<p>In the directory, let’s create an api folder. In that folder, we’ll create a
+main.ts file, which will run the server, and a data.json, which is the hard
+coded data.</p>
+<p>Copy and paste
+this json file
+into your api/data.json.</p>
+<p>This is a very simple API server using oak that
+will return dinosaur information based on the route. Let’s start the API server:</p>
+<p>Let’s update src/components. We’ll add the following files:</p>
+<p>Before we create the components, let’s add some state management.</p>
+<p>In order to maintain state across our <Dinosaur> and <Dinosaurs> components,
+we’ll use Vue store.
+Note for more complex state management, check out the Vue-endorsed
+Pinia library.</p>
+<p>We’ll import store into both Dinosaurs.vue and Dinosaur.vue to set and
+retrieve dinosaur name and description.</p>
+<p>Next, we’ll update HomePage.vue. Since the Dinosaurs component needs to
+fetch the data from the API, we’ll use
+<Suspense>, which manages
+async dependencies in a component tree.</p>
+<p>Tying it all together, let’s update src/App.vue:</p>
+<p>You’ll notice that we have used <router-link> and <router-view>. These
+components are part of the vue-router library,
+which we’ll have to setup and configure in another file.</p>
+<p>First, let’s import vue-router in our vite.config.mjs file:</p>
+<p>Next, let’s create a folder named router. In it, let’s create index.ts:</p>
+<p>In router/index.ts, we’ll create router, which contains information about
+each route and their component, and export it. For more information on using
+vue-router, check out their guide.</p>
+<p>Next, in our src/main.ts file, which contains all of the logic for the
+frontend app, we’ll have to import and use router:</p>
+<p>Hopefully, these examples showed how easy it is to get up and running with Deno
+and a JavaScript web framework. They are also starting points for building an
+app. From there, you could
+add proper data persistence, add additional routes,
+implement authentication, etc. Lastly, we plan to continue adding How To guides
+in our
+Manual.</p>
+<p>We’re also excited to announce that we are hosting
+a livestream on our YouTube channel tomorrow, Thursday, November 17th, at 9am PT,
+where we’ll</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/frameworks-with-npm" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1558. Persist Data in Deno with npm using Prisma, Mongoose, Apollo, and more.</h2>
+    <div class="article-meta">
+        📅 Nov 15, 2022 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/persistent-data-npm" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/persistent-data-npm/day2-ogp.png" alt="Persist Data in Deno with npm using Prisma, Mongoose, Apollo, and more." loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/persistent-data-npm/day2-ogp.png" alt="Persist Data in Deno with npm using Prisma, Mongoose, Apollo, and more." style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Persistent data is essential to building modern web apps. We need it to save
+user information, bill customers, and more. Now you can use your favorite data
+storage technologies—Prisma, Mongoose, MySQL, and more—with npm and Deno.</p>
+<p>This blog post will show you how to quickly get started with these npm modules
+with Deno:</p>
+<p>Check out our Manual for more How To guides on getting started with data persistence npm modules.</p>
+<p>Supply chain attacks are a known security issue on npm. Node installs and runs
+npm modules with access to everything by default, making it easier for a single
+malicious dependency to quietly compromise millions of end users.</p>
+<p>Data storage is at even greater risk to supply chain attacks, as production data
+is sensitive, necessary to run a business, and can be accessed through
+environment variables.</p>
+<p>Deno’s opt-in permission model
+ensures you know what your dependencies require access to. The permission system
+is granular enough for you to grant access to environment variables, the
+filesystem, and even FFI.</p>
+<p>Prisma, a modern ORM with best-in-class developer
+experience, has been one of our top requested modules. Here’s a quick guide to
+getting started with Prisma and Deno.</p>
+<p>This next section will show you how to quickly connect Prisma with Deno.</p>
+<p>View source here
+or follow
+the video guide on our YouTube channel!</p>
+<p>Let’s create the folder deno-prisma and navigate there.</p>
+<p>This will generate
+prisma/schema.prisma.
+Let’s update it with the following:</p>
+<p>Prisma should also have generated a .env file with DATABASE_URL. Let’s
+assign DATABASE_URL to a PostreSQL connection string. In this example, we’ll
+use a free PostgreSQL database from Supabase.</p>
+<p>After you have updated your .env file, let’s create the database schema in
+Prisma:</p>
+<p>After that’s complete, we’ll need to generate a Prisma client for Data Proxy:</p>
+<p>In order to use Prisma Data Platform, we’ll have to create and connect a GitHub
+repo. So let’s initialize the repository, create a new GitHub repo, add the
+remote origin, and push the repo.</p>
+<p>After you’ve done that, sign up for a free
+Prisma Data Platform account.</p>
+<p>Click New Project and select Import a Prisma Repository.</p>
+<p>It’ll ask for a PostgreSQL connection string, which you have in your .env.
+Paste it here. Then click Create Project.</p>
+<p>You’ll receive a new connection string that begins with prisma://. Let’s grab
+that and assign it to DATABASE_URL in your .env file, replacing your
+PostgreSQL string from Supabase.</p>
+<p>Now, you’ll be able to import Prisma and PrismaClient into your Deno
+project:</p>
+<p>From here, you can
+seed your database,
+query your data,
+and more.</p>
+<p>Check out our more in-depth How To guide with Prisma
+or
+learn how to deploy Prisma on Deno Deploy.</p>
+<p>Mongoose is a popular, schema-based library that models data for MongoDB. Here
+is a quick guide to getting started.</p>
+<p>View source here
+or follow our video guide on YouTube.</p>
+<p>Let’s define a model in Mongoose. In a new file Dinosaur.ts, let’s add:</p>
+<p>Let’s create a new file, main.ts, that will:</p>
+<p>Check out our more in-depth How To guide with Mongoose.</p>
+<p>Apollo is a GraphQL server you can setup in
+minutes and use with your existing data source (or REST API). You can connect
+any GraphQL client to it to access the data and take advantage of typechecking
+and efficient fetching.</p>
+<p>Let’s get a simple Apollo server up and running that will allow us to query some
+local data. We’re only going to need three files for this:</p>
+<p>Our schema.ts file describes our data. In this case, our data is a list of
+dinosaurs. We want our users to be able to get the name and a short description
+of each dino. In GraphQL language, this means that Dinosaur is our type,
+and name and description are our fields. We can also define the data
+type for each field. In this case, both are strings.</p>
+<p>This is also where we describe the queries we allow for our data, using the
+special Query type in GraphQL. We have two queries:</p>
+<p>We’re going to export all this within our typeDefs type definitions, variable:</p>
+<p>If we wanted to write data, this is also where we would describe the
+Mutation to do so. Mutations are how you write data with GraphQL. Because we
+are using a static dataset here, we won’t be writing anything.</p>
+<p>A resolver is responsible for populating the data for each query. Here we have
+our list of dinosaurs and all the resolver is going to do is either a) pass that
+entire list to the client if the user requests the dinosaurs query, or pass
+just one if the user requests the dinosaur query.</p>
+<p>With the later, we pass the arguments from the client into a function to match
+the name to a name in our dataset.</p>
+<p>In our main.ts we’re going to import the ApolloServer as well as graphql
+and our typeDefs from the schema and our resolvers:</p>
+<p>We pass our typeDefs and resolvers to ApolloServer to spool up a new
+server. Finally, startStandaloneServer is a helper function to get the server
+up and running quickly.</p>
+<p>All that is left to do now is run the server:</p>
+<p>You should see Server running on: 127.0.0.1:8000 in your terminal. If you go
+to that address you will see the Apollo sandbox where we can enter our
+dinosaurs query:</p>
+<p>Check out our more in-depth How To guide with Apollo.</p>
+<p>This blog post showed how to get started with Prisma, Mongoose, and Apollo. We
+also have How To guides for other data persistence npm modules such as
+PlanetScale,
+Redis,
+and
+MySQL2,
+and will continue to add more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/persistent-data-npm" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1307. Node.js 19.1.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Nov 14, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v19.1.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2019.1.0%20(Current)" alt="Node.js 19.1.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2019.1.0%20(Current)" alt="Node.js 19.1.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The node:test module supports mocking during testing via a top-level mock
+object.</p>
+<p>fs.watch supports recursive watch using the recursive: true option.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v19.1.0/node-v19.1.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v19.1.0/node-v19.1.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v19.1.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v19.1.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v19.1.0/node-v19.1.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v19.1.0/node-v19.1.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v19.1.0/node-v19.1.0.tar.gz 
+Other release files: https://nodejs.org/dist/v19.1.0/ 
+Documentation: https://nodejs.org/docs/v19.1.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v19.1.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1563. Deno 1.28: Featuring 1.3 Million New Modules</h2>
+    <div class="article-meta">
+        📅 Nov 14, 2022 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v1.28" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v1.28/ogp.png" alt="Deno 1.28: Featuring 1.3 Million New Modules" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v1.28/ogp.png" alt="Deno 1.28: Featuring 1.3 Million New Modules" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We’re excited to announce that
+Deno 1.28 stabilizes
+npm compatibility, which means you can now import over 1.3 million npm modules
+in Deno. Building apps will be easier and more secure than ever, now that you
+can use your favorite persistent data modules such as Prisma, Mongoose, and
+MySQL, as well as frontend frameworks such as React, Vue, etc.</p>
+<p>Using npm is easier and safer with Deno. Deno’s built-in toolchain, first-class
+std library, and robust IDE support means you can be productive, faster. And
+Deno’s secure-by-default, opt-in permissions model means spending less time
+worrying about suspicious packages and more time shipping product.</p>
+<p>Deno maintains that modern JavaScript should be built with ES Modules and web
+standard APIs. This release does not change that. Importing npm modules is done
+through URLs in a standard compliant fashion - we continue to move towards a
+browser-compatible future, where you’re using web APIs such as fetch,
+Request, and Response. Now, Deno is taking npm a step forward by allowing
+you to access your favorite modules in a modern, secure programming environment.</p>
+<p>If you already have Deno installed, you can upgrade to 1.28 by running:</p>
+<p>If you are installing Deno for the first time:</p>
+<p>Click here for more installation
+options.</p>
+<p>You can use npm packages by importing an npm: specifier.</p>
+<p>Or map a bare specifier to an npm specifier in an
+import map:</p>
+<p>You can also run npm scripts or CLIs using Deno:</p>
+<p>You can even execute npm packages with subcommands like this:</p>
+<p>For example, the equivalent of npx prisma init in Deno is:</p>
+<p>While npm has made software easily usable and shareable, the unchecked approach
+to installing and running dependencies has made Node and npm susceptible to
+supply chain attacks.
+Through
+typosquatting,
+social engineering,
+and other exploits, malicious modules can be uploaded and then installed into
+production Node applications, compromising millions of users and their sensitive
+data.</p>
+<p>Instead of allowing untrusted, third-party code to have access to your entire
+system, Deno’s secure-by-default approach can inform and restrict you when your
+dependencies attempt to access the system.</p>
+<p>Learn more about Deno’s opt-in permissions system.</p>
+<p>Be productive immediately with Deno. With a
+built-in toolchain (including
+tester, formatter, linter, and more) and native TypeScript support, you can skip
+installing and configuring dependencies and dive right into the code.</p>
+<p>Our aim is to make as many npm modules compatible with Deno as possible. Some
+modules may not be compatible (yet) due to some edge cases we haven’t come
+across, post-install scripts, or assumptions a few packages make about executing
+in a folder with a typical Node setup (e.g. assuming a package.json exists in
+the current working directory).</p>
+<p>We’ll be working hard over the next few months to address these issues and
+improve our compatibility. For example, we’ve currently repurposed some of
+Node’s test suites to ensure our Node compatibility layer (e.g. modules like
+fs) works the same as Node’s and we’ll be expanding this coverage. We’re also
+actively fixing any edge cases surfaced by our community.</p>
+<p>Some subcommands in Deno like deno compile do not yet work with npm modules.
+This work is being tracked in
+deno#15960.</p>
+<p>To help us increase compatibility with npm, if you run into any problems using
+npm with Deno, please open an issue.
+We’re confident that with more usage, we’ll close most of the remaining
+compatibility gaps.</p>
+<p>Deno has had support for lock files since v1.0, however the experience of using
+them left much to be desired - it was always a user’s responsibility to provide
+the --lock=<filename> flag to use a lockfile. We recognize that this situation
+led to many users not using a lock file at all.</p>
+<p>Starting with Deno v1.28, the lock file will be automatically discovered and
+used if a configuration file (deno.json(c)) is discovered. In such case, a
+lock file will automatically be created (if one doesn’t exist yet), next to the
+configuration file, with the deno.lock name. The lock file will be
+automatically and additively updated if new dependencies become part of the
+module graph.</p>
+<p>As a consequence, the --lock-write flag’s behavior has expanded for this
+auto-discovery scenario - instead of needing to pass this flag to update the
+lock file, it now can be used to force the generation of the lock file from
+scratch.</p>
+<p>If you wish to disable automatic discovery of the lock file, you can use the
+--no-lock flag.</p>
+<p>Additionally, the --lock flag no longer requires an argument by default
+anymore - if it is omitted, then Deno will default to ./deno.lock.</p>
+<p>The following APIs have been stabilized in this release and no longer require
+the --unstable flag to be used.</p>
+<p>This release adds a new unified Deno.Command API to supersede the unstable
+Deno.spawn, Deno.spawnSync, and Deno.spawnChild APIs.</p>
+<p>This release upgrades to the latest release of V8 (10.9, previously 10.8).
+Mostly these are internal improvements but also includes a few public facing API
+changes:</p>
+<p>A full list of changes between 10.8 and 10.9 is
+here.</p>
+<p>As Deno has grown, so too has
+the Manual. We continuously added things
+here and there; overtime this has led it to become a bit untidy. In this
+release, we’ve done a full refactoring of the table of contents and prose to be
+simpler and more organized. We’ve even added
+an entire section dedicated to using npm.</p>
+<p>There’s always room for improvement in documentation - if you see an area that
+could be improved please submit a PR to
+denoland/manual.</p>
+<p>To demonstrate what you can now build with npm and Deno, we will be releasing
+tutorials, how-to guides, video walkthroughs on our YouTube, and other helpful
+resources every day this week.</p>
+<p>And if you’re using Deno in a commercial setting and have any technical
+questions,
+please sign up for Office Hours,
+where you can have access to our engineers, who’ll help unblock you for 30
+minutes.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v1.28" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1567. Introducing Fresh WordPress Themes</h2>
+    <div class="article-meta">
+        📅 Nov 10, 2022 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/introducing-fresh-wordpress-themes" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/introducing-fresh-wordpress-themes/ogp.png" alt="Introducing Fresh WordPress Themes" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/introducing-fresh-wordpress-themes/ogp.png" alt="Introducing Fresh WordPress Themes" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>WordPress is the most successful content management system (CMS),
+powering 65.2%
+of CMS-based websites and 43.2% of all websites (on the internet) in 2022—and
+continues to grow.</p>
+<p>But building on WordPress comes with some challenges. You can either modify an
+available theme based off old technologies (e.g. jQuery) or spend time setting
+up WordPress’s REST API (“headless” mode) with a modern
+web framework like React or Vue. We believe there’s an even better approach.</p>
+<p>Fresh is a modern web framework that embraces progressive enhancement
+through server-side rendering and islands architecture (it sends zero JavaScript
+to the client by default). Using a Fresh theme on headless WordPress not only
+allows for more productive development (native TypeScript support, no build
+step), but also
+provides a faster website experience for visitors.</p>
+<p>We’ve open sourced
+two WordPress Themes built on Fresh to show you how
+easy it is to get started.</p>
+<p>The above diagram shows the suggested site development workflow. Developers
+develop the frontend in Fresh, while site owners/content authors create and
+manage content in the WordPress dashboard. Note that there’s no need of
+additional development of WordPress dashboard, as it won’t be visible to
+visitors.</p>
+<p>We released the stable version of Fresh in June and also released
+v1.1 with a lot of improvements in September.</p>
+<p>Fresh is a good fit as a frontend of headless WordPress for the following
+reasons:</p>
+<p>Fresh doesn’t have a build step. Upon each request, Fresh compiles everything
+and sends it to the browser just-in-time. There’s no separate install step
+either - all dependencies are installed and cached when its run the first time.</p>
+<p>On the other hand, most Node.js based frameworks (such as Next.js, Nuxt, Remix,
+etc.) require you to first install the dependencies of your app, and then to
+build the assets before deploying.</p>
+<p>The required mental model for developing the site is very similar between Fresh
+and PHP/WordPress, so existing PHP/WordPress developers can quickly adapt to
+Fresh dev environment.</p>
+<p>TypeScript is very important for developing apps efficiently, since it catches
+lots of errors before running any code. However, when using other JavaScript
+frameworks, setting up and configurating TypeScript can be tedious.</p>
+<p>Because Fresh is based on Deno, Fresh supports TypeScript out of the box. It
+allows you to quickly start using TypeScript without any configuration.
+Especially with our robust VS Code support, you can start writing
+TypeScript immediately.</p>
+<p>Fresh integrates Preact, a lightweight version of React. You can write the
+interaction of webpage in a reactive style. Fresh also has official
+twind plugin, which allows you to write
+Tailwind classes for styling in your code.</p>
+<p>You can also import npm modules for frontend development via CDNs such as
+https://esm.sh/. These modules come with type annotation by default thanks to
+X-TypeScript-Types
+custom HTTP header. For examples of which modules can be used with Fresh, check
+out our Fresh Showcase page.</p>
+<p>We have open sourced two WordPress themes built on Fresh, powered by headless
+WordPress. These themes allow you to start developing a website using Fresh and
+WordPress.</p>
+<p>Source Code: https://github.com/denoland/fresh-wordpress-themes</p>
+<p>Blog live demo: https://wp-blog-example.deno.dev/</p>
+<p>Shop live demo: https://wp-sweets-co.deno.dev/</p>
+<p>You can try these themes on your own machine with the following steps:</p>
+<p>Then open another terminal in the same directory:</p>
+<p>Then visit http://localhost:8000/. You can manage its contents via the WordPress
+dashboard at http://localhost/wp-admin (username: user, password: password).</p>
+<p>Then open another terminal in the same directory:</p>
+<p>Then visit http://localhost:8000/. You can manage its contents via the WordPress
+dashboard at http://localhost/wp-admin (username: user, password: password).</p>
+<p>Note that Blog and Shop themes use different setups for WordPress server.
+Make sure you run deno task docker command in the right directory.</p>
+<p>There are a lot of options for hosting WordPress on the internet. Many cloud
+providers
+have
+special
+guides
+and
+templates
+dedicated to WordPress. There are also dedicated hosting services for WordPress,
+such as Bluehost,
+DreamHost,
+SiteGround, etc. You can choose which is the best
+fit for your needs from these options.</p>
+<p>There are also many resources on the internet about how to scale your WordPress
+instances.</p>
+<p>We plan to develop more themes based on this architecture, which cover more
+wider ranges of websites, such as e-commerce, reservation platforms, etc.</p>
+<p>If you’re interested building with Fresh + WordPress, please try
+Fresh WordPress themes and give us any feedback on
+GitHub issues,
+Discord, or Twitter.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/introducing-fresh-wordpress-themes" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1702. Authentication in Ionic Angular with Supabase</h2>
+    <div class="article-meta">
+        📅 Nov 08, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/authentication-in-ionic-angular" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/simmon-grim-ionic-angular-authentication/ionic-angular-supabase.jpg" alt="Authentication in Ionic Angular with Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/simmon-grim-ionic-angular-authentication/ionic-angular-supabase.jpg" alt="Authentication in Ionic Angular with Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Authentication of your apps is one of the most important topics, and by combining Angular logic with Supabase authentication functionality we can build powerful and secure applications in no time.</p>
+<p>In this tutorial, we will create an Ionic Angular application with Supabase backend to build a simple realtime messaging app.</p>
+<p>After going through this tutorial you will be able to create your own user authentication and secure your Ionic Angular app.</p>
+<p>If you are not yet familiar with Ionic you can check out the Ionic Quickstart guide of the Ionic Academy or check out the Ionic Supabase integration video if you prefer video.</p>
+<p>However, most of the logic is Angular based and therefore applies to any Angular web project as well.</p>
+<p>You can find the full code of this tutorial on GitHub where you just need to insert your own Supabase instance and then create the tables with the included SQL file.</p>
+<p>But before we dive into the app, let's set up our Supabase project!</p>
+<p>First of all, we need a new Supabase project. If you don't have a Supabase account yet, you can get started for free!</p>
+<p>In your dashboard, click "New Project" and leave it to the default settings, but make sure you keep a copy of your database password!</p>
+<p>By default Supabase has the standard email/password authentication enabled, which you can find under the menu element Authentication and by scrolling down to the Auth Provider section.</p>
+<p>Need to add another provider in the future? No problem!</p>
+<p>Supabase offers a ton of providers that you can easily integrate so your users can sign up with their favorite provider.</p>
+<p>On top of that, you can customize the auth settings and also the email templates that users see when they need to confirm their account, get a magic link or want to reset their password.</p>
+<p>Feel free to play around with the settings, and once you're done let's continue with our database.</p>
+<p>Supabase uses Postgres for the database, so we need to write some SQL to define our tables upfront (although you can easily change them later through the Supabase Web UI as well!)</p>
+<p>We want to build a simple messaging app, so what we need is:</p>
+<p>To create the tables, simply navigate to the SQL Editor menu item and click on + New query, paste in the SQL and hit RUN which hopefully executes without issues:</p>
+<p>After creating the tables we need to define policies to prevent unauthorized access to some of our data.</p>
+<p>In this scenario we allow unauthenticated users to read group data - everything else like creating a group, or anything related to messages is only allowed for authenticated users.</p>
+<p>Go ahead and also run the following query in the editor:</p>
+<p>Now we also add a cool function that will automatically add user data after registration into our table. This is necessary if you want to keep track of some user information, because the Supabase auth table is an internal table that we can't access that easily.</p>
+<p>Go ahead and run another SQL query in the editor now to create our trigger:</p>
+<p>To wrap this up we want to enable realtime functionality of our database so we can get new messages instantly without another query.</p>
+<p>For this we can activate the publication for our messages table by running one last query:</p>
+<p>If you now open the Table Editor menu item you should see your three tables, and you can also check their RLS policies right from the web!</p>
+<p>But enough SQL for today, let's write some Angular code.</p>
+<p>To get started with our Ionic app we can create a blank app without any additional pages and then install the Supabase Javascript client.</p>
+<p>Besides that, we need some pages in our app for the different views, and services to keep our logic separated from the views. Finally we can also already generate a guard which we will use to protect internal pages later.</p>
+<p>Go ahead now and run the following on your command line:</p>
+<p>Ionic (or the Angular CLI under the hood) will now create the routing entries for us, but we gonna fine tune them a bit.</p>
+<p>First of all we want to pass a groupid to our messages page, and we also want to make sure that page is protected by the guard we created before.</p>
+<p>Therefore bring up the src/app/app-routing.module.ts and change it to:</p>
+<p>Now all paths are correct and the app starts on the login page, and the messages page can only be activated if that guard returns true - which it does by default, so we will take care of its implementation later.</p>
+<p>To connect our app properly to Supabase we now need to grab the project URL and the public anon key from the settings page of your Supabase project.</p>
+<p>You can find those values in your Supabase project by clicking on the Settings icon and then navigating to API where it shows your Project API keys.</p>
+<p>This information now goes straight into the src/environments/environment.ts of our Ionic project:</p>
+<p>By the way: The anon key is safe to use in a frontend project since we have enabled RLS on our database tables!</p>
+<p>The big first step is to create the "outside" pages which allow a user to perform different operations:</p>
+<p>Before we dive into the UI of these pages we should define all the required logic in a service to easily inject it into our pages.</p>
+<p>Our service should call expose all the functions for registration and login but also handle the state of the current user with a BehaviorSubject so we can easily emit new values later when the user session changes.</p>
+<p>We are also loading the session once "by hand" using getUser() since the onAuthStateChange event is usually not broadcasted when the app loads, and we want to load a stored session right when the app starts.</p>
+<p>The relevant functions for our user authentication are all part of the supabase.auth object, which makes it easy to find all relevant (and even some unknown) features.</p>
+<p>Additionally, we expose our current user as an Observable to the outside and add some helper functions to get the current user ID synchronously.</p>
+<p>Now move on by changing the src/app/services/auth.service.ts to this:</p>
+<p>That's enough logic for our pages, so let's put that code to use.</p>
+<p>Although we first need to register a user, we begin with the login page. We can even "register" a user from here since we will offer the easiest sign-in option with magic link authentication that only requires an email, and a user entry will be added to our users table thanks to our trigger function.</p>
+<p>To create a decent UX we will add a reactive form with Angular, for which we first need to import the ReactiveFormsModule into the src/app/pages/login/login.module.ts:</p>
+<p>Now we can define the form from code and add all required functions to our page, which becomes super easy thanks to our previous implementation of the service.</p>
+<p>On login, we now only need to show some loading spinner and call the according function of our service, and since we already listen to the user in our constructor we don't even need to add any more logic for routing at this point and only show an alert in case something goes wrong.</p>
+<p>Go ahead by changing the src/app/pages/login/login.page.ts to this now:</p>
+<p>Additionally, we need a function to reset the password and trigger the magic link authentication.</p>
+<p>In both cases, we can use an Ionic alert with one input field. This field can be accessed inside the handler of a button, and so we pass the value to the according function of our service and show another message after successfully submitting the request.</p>
+<p>Go ahead with our login page and now also add these two functions:</p>
+<p>That's enough to handle everything, so now we just need a simple UI for our form and buttons.</p>
+<p>Since recent Ionic versions, we can use the new error slot of the Ionic item, which we can use to present specific error messages in case one field of our reactive form is invalid.</p>
+<p>We can easily access the email and password control since we exposed them with their own get function in our class before!</p>
+<p>Below the form, we simply stack all of our buttons to trigger the actions and give them different colors.</p>
+<p>Bring up the src/app/pages/login/login.page.html now and change it to:</p>
+<p>To give our login a bit nicer touch, let's also add a background image and some additional padding by adding the following to the src/app/pages/login/login.page.scss:</p>
+<p>At this point you can already try our authentication by using the magic link button, so run the Ionic app with ionic serve for the web preview and then enter your email.</p>
+<p>Make sure you use a valid email since you do need to click on the link in the email. If everything works correctly you should receive an email like this quickly:</p>
+<p>Keep in mind that you can easily change those email templates inside the settings of your Supabase project.</p>
+<p>If you now inspect the link and copy the URL, you should see an URL that points to your Supabase project and after some tokens there is a query param &redirect_to=http://localhost:8100 which directly brings a user back into our local running app!</p>
+<p>This will be even more important later when we implement magic link authentication for native apps so stick around until the end.</p>
+<p>Some users will still prefer the good old registration, so let's provide them with a decent page for that.</p>
+<p>The setup is almost the same as for the login, so we start again by adding the ReactiveFormsModule to the src/app/pages/register/register.module.ts:</p>
+<p>Now we define our form just like before, and in the createAccount() we use the functionality of our initially created service to sign up a user.</p>
+<p>Bring up the src/app/pages/register/register.page.ts and change it to:</p>
+<p>The view for that page follows the same structure as the login, so let's continue with the src/app/pages/register/register.page.html now:</p>
+<p>And just like before we want to have the background image so also bring in the same snippet for styling the page into the src/app/pages/register/register.page.scss:</p>
+<p>As a result, we have a clean registration page with decent error messages!</p>
+<p>Give the default registration process a try with another email, and you should see another user inside the Authentication area of your Supabase project as well as inside the users table inside the Table Editor.</p>
+<p>Before we make the magic link authentication work on mobile devices, let's focus on the internal pages and functionality of our app.</p>
+<p>The groups screen is the first "inside" screen, but it's not protected by default: On the login page we have the option to start without an account, so unauthorized users can enter this page - but they should only be allowed to see the chat groups, nothing more.</p>
+<p>Authenticated users should have controls to create a new group and to sign out, but before we get to the UI we need a way to interact with our Supabase tables.</p>
+<p>We already generated a service in the beginning, and here we can add the logic to create a connection to Supabase and a first function to create a new row in our groups table and to load all groups.</p>
+<p>Creating a group requires just a title, and we can gather the user ID from our authentication service to then call the insert() function from the Supabase client to create a new record that we then return to the caller.</p>
+<p>When we want to get a list of groups, we can use select() but since we have a foreign key that references the users table, we need to join that information so instead of just having the creator field we end up getting the actual email for that ID instead!</p>
+<p>Go ahead now and start the src/app/services/data.service.ts like this:</p>
+<p>Nothing fancy, so let's move on to the UI of the groups page.</p>
+<p>When we enter our page, we first load all groups through our service using the ionViewWillEnter Ionic lifecycle event.</p>
+<p>The function to create a group follows the same logic as our alerts before where we have one input field that can be accessed in the handler of a button.</p>
+<p>At that point, we will create a new group with the information, but also reload our list of groups and then navigate a user directly into the new group by using the ID of that created record.</p>
+<p>This will then bring a user to the messages page since we defined the route "/groups/:groupid" initially in our routing!</p>
+<p>Now go ahead and bring up the src/app/pages/groups/groups.page.ts and change it to:</p>
+<p>The UI of that page is rather simple since we can iterate those groups in a list and create an item with their title and the creator email easily.</p>
+<p>Because unauthenticated users can enter this page as well we add checks to the user Observable to the buttons so only authenticated users see the FAB at the bottom and have the option to sign out!</p>
+<p>Remember that protecting the UI of our page is just one piece of the puzzle, real security is implemented at the server level!</p>
+<p>In our case, we did this through the RLS we defined in the beginning.</p>
+<p>Continue with the src/app/pages/groups/groups.page.html now and change it to:</p>
+<p>At this point, you should be able to create your own chat groups, and you should be brought to the page automatically or also enter it from the list manually afterward.</p>
+<p>Inside the ULR you should see the ID of that group - and that's all we need to retrieve information about it and build a powerful chat view now!</p>
+<p>We left out realtime features on the groups page so we manually need to load the lists again, but only to keep the tutorial a bit shorter.</p>
+<p>Because now on our messages page we want to have that functionality, and because we enabled the publication for the messages table through SQL in the beginning we are already prepared.</p>
+<p>To get started we need some more functions in our service, and we add another realtimeChannel variable.</p>
+<p>Additionally, we now want to retrieve group information by ID (from the URL!), add messages to the messages table and retrieve the last 25 messages.</p>
+<p>All of that is pretty straightforward, and the only fancy function is listenToGroup() which returns an Observable of changes.</p>
+<p>We can create this on our own by handling postgres_changes events on the messages table. Inside the callback function, we can handle all CRUD events, but in our case, we will (for simplicity) only handle the case of an added record.</p>
+<p>For all of that bring up the src/app/services/data.service.ts and change it to:</p>
+<p>By handling the realtime logic here and only returning an Observable we make it super easy for our view.</p>
+<p>The next step is to load the group information by accessing the groupid from the URL, then getting the last 25 messages and finally subscribing to listenToGroup() and pushing every new message into our local messages array.</p>
+<p>After the view is initialized we can also scroll to the bottom of our ion-content to show the latest message.</p>
+<p>Finally, we need to make sure we end our realtime listening when we leave the page or the page is destroyed.</p>
+<p>Bring up the src/app/pages/messages/messages.page.ts and change it to:</p>
+<p>That's all we need to handle realtime logic and add new messages to our Supabase table!</p>
+<p>For the view of that page, we need to distinguish between messages we sent, and messages sent from other users.</p>
+<p>We can achieve this by comparing the user ID of a message with our currently authenticated user id, and we position our messages with an offset of 2 so they appear on the right hand side of the screen with a slightly different styling.</p>
+<p>For this, open up the src/app/pages/messages/messages.page.html and change it to:</p>
+<p>For an even more advanced chat UI chat out the examples of Built with Ionic!</p>
+<p>Now we can add the finishing touches to that screen with some CSS to give the page a background pattern image and styling for the messages inside the src/app/pages/messages/messages.page.scss:</p>
+<p>You can find the full code of this tutorial on GitHub including the file for that pattern so your page looks almost like WhatsApp!</p>
+<p>Now we have a well-working Ionic app with Supabase authentication and database integration, but there are two small but important additions we still need to make.</p>
+<p>Right now everyone could access the messages page, but we wanted to make this page only available for authenticated users.</p>
+<p>To protect the page (and all other pages you might want to protect) we now implement the guard that we generated in the beginning.</p>
+<p>That guard will check the Observable of our service, filter out the initial state and then see if a user is allowed to access a page or not.</p>
+<p>Bring up our src/app/guards/auth.guard.ts and change it to this:</p>
+<p>In case the user is not allowed to activate a page, we display a toast and at the same time route to the groups page since that page is visible to everyone. Normally you might even bring users simply back to the login screen if you wanted to protect all internal pages of your Ionic app.</p>
+<p>We already applied this guard to our routing in the beginning, but now it finally serves the real purpose!</p>
+<p>At last, we come to a challenging topic, which is handling the magic link on a mobile phone.</p>
+<p>The problem is, that the link that a user receives has a callback to a URL, but if you open that link in your email client on a phone it's not opening your native app!</p>
+<p>But we can change this by defining a custom URL scheme for our app like "supachat://", and then use that URL as the callback URL for magic link authentication.</p>
+<p>First, make sure you add the native platforms with Capacitor to your project:</p>
+<p>Inside the new native projects we need to define the URL scheme, so for iOS bring up the ios/App/App/Info.plist and insert another block:</p>
+<p>For Android, we first define a new string inside the android/app/src/main/res/values/strings.xml:</p>
+<p>Now we can update the android/app/src/main/AndroidManifest.xml and add an intent-filter inside which uses the custom_url_scheme value:</p>
+<p>By default, Supabase will use the host for the redirect URL, which works great if the request comes from a website.</p>
+<p>That means we only want to change the behavior for native apps, so we can use the isPlatform() check in our app and use "supachat://login"as the redirect URL instead.</p>
+<p>For this, bring up the src/app/services/auth.service.ts and update our signInWithEmail and add another new function:</p>
+<p>This second function is required since we need to manually set our session based on the other tokens of the magic link URL.</p>
+<p>If we now click on the link in an email, it will open the browser the first time but then asks if we want to open our native app.</p>
+<p>This is cool, but it's not loading the user information correctly, but we can easily do this manually!</p>
+<p>Eventually, our app is opened with an URL that looks like this:</p>
+<p>To set our session we now simply need to extract the access_token and refresh_token from that URL, and we can do this by adding a listener to the appUrlOpen event of the Capacitor app plugin.</p>
+<p>Once we got that information we can call the setSession function that we just added to our service, and then route the user forward to the groups page!</p>
+<p>To achieve this, bring up the src/app/app.component.ts and change it to:</p>
+<p>If you would run the app now it still wouldn't work, because we haven't added our custom URL scheme as an allowed URL for redirecting to!</p>
+<p>To finish this open your Supabase project again and go to the Settings of the Authentication menu entry where you can add a domain under Redirect URLs:</p>
+<p>This was the last missing piece, and now you even got seamless Supabase authentication with magic links working inside your iOS and Android app!</p>
+<p>We've come a long way and covered everything from setting up tables, to defining policies to protect data, and handling authentication in Ionic Angular applications.</p>
+<p>You can find the full code of this tutorial on GitHub where you just need to insert your own Supabase instance and then create the tables with the included SQL file, plus updating the authentication settings as we did in the tutorial</p>
+<p>Although we can now use magic link auth, something probably even better fitting for native apps would be phone auth with Twilio that's also easily possible with Supabase - just like tons of other authentication providers!</p>
+<p>Protecting your Ionic Angular app with Supabase is a breeze, and through the security rules, you can make sure your data and tables are protected in the best possible way.</p>
+<p>If you enjoyed the tutorial, you can find many more tutorials on my YouTube channel where I help web developers build awesome mobile apps.</p>
+<p>Until next time and happy coding with Supabase!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/authentication-in-ionic-angular" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1309. Node.js 18.12.1 (LTS)</h2>
+    <div class="article-meta">
+        📅 Nov 04, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v18.12.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2018.12.1%20(LTS)" alt="Node.js 18.12.1 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2018.12.1%20(LTS)" alt="Node.js 18.12.1 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The following CVEs are fixed in this release:</p>
+<p>More detailed information on each of the vulnerabilities can be found in November 2022 Security Releases blog post.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v18.12.1/node-v18.12.1-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v18.12.1/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v18.12.1/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v18.12.1/node-v18.12.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v18.12.1/node-v18.12.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v18.12.1/node-v18.12.1.tar.gz 
+Other release files: https://nodejs.org/dist/v18.12.1/ 
+Documentation: https://nodejs.org/docs/v18.12.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v18.12.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1312. Node.js 19.0.1 (Current)</h2>
+    <div class="article-meta">
+        📅 Nov 04, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v19.0.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2019.0.1%20(Current)" alt="Node.js 19.0.1 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2019.0.1%20(Current)" alt="Node.js 19.0.1 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The following CVEs are fixed in this release:</p>
+<p>More detailed information on each of the vulnerabilities can be found in November 2022 Security Releases blog post.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v19.0.1/node-v19.0.1-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v19.0.1/node-v19.0.1-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v19.0.1/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v19.0.1/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v19.0.1/node-v19.0.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v19.0.1/node-v19.0.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v19.0.1/node-v19.0.1.tar.gz 
+Other release files: https://nodejs.org/dist/v19.0.1/ 
+Documentation: https://nodejs.org/docs/v19.0.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v19.0.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1315. Node.js 16.18.1 (LTS)</h2>
+    <div class="article-meta">
+        📅 Nov 04, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v16.18.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2016.18.1%20(LTS)" alt="Node.js 16.18.1 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2016.18.1%20(LTS)" alt="Node.js 16.18.1 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The following CVEs are fixed in this release:</p>
+<p>More detailed information on each of the vulnerabilities can be found in November 2022 Security Releases blog post.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v16.18.1/node-v16.18.1-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v16.18.1/node-v16.18.1-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v16.18.1/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v16.18.1/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v16.18.1/node-v16.18.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v16.18.1/node-v16.18.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v16.18.1/node-v16.18.1.tar.gz 
+Other release files: https://nodejs.org/dist/v16.18.1/ 
+Documentation: https://nodejs.org/docs/v16.18.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v16.18.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1319. Node.js 14.21.1 (LTS)</h2>
+    <div class="article-meta">
+        📅 Nov 04, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v14.21.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.21.1%20(LTS)" alt="Node.js 14.21.1 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.21.1%20(LTS)" alt="Node.js 14.21.1 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The following CVEs are fixed in this release:</p>
+<p>More detailed information on each of the vulnerabilities can be found in November 2022 Security Releases blog post.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v14.21.1/node-v14.21.1-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v14.21.1/node-v14.21.1-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v14.21.1/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v14.21.1/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v14.21.1/node-v14.21.1.pkg 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v14.21.1/node-v14.21.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v14.21.1/node-v14.21.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v14.21.1/node-v14.21.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v14.21.1/node-v14.21.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v14.21.1/node-v14.21.1-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v14.21.1/node-v14.21.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v14.21.1/node-v14.21.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v14.21.1/node-v14.21.1.tar.gz 
+Other release files: https://nodejs.org/dist/v14.21.1/ 
+Documentation: https://nodejs.org/docs/v14.21.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v14.21.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1574. How to Setup Auth with Fresh</h2>
+    <div class="article-meta">
+        📅 Nov 04, 2022 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/setup-auth-with-fresh" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/setup-auth-with-fresh/og-image.png" alt="How to Setup Auth with Fresh" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/setup-auth-with-fresh/og-image.png" alt="How to Setup Auth with Fresh" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Authentication and session management are one of the most fundamental aspects of
+building a modern web app. It’s necessary for hiding premium content or creating
+admin-only sections like dashboards.</p>
+<p>Fresh is an edge-native web framework that embraces
+progressive enhancement
+through server-side rendering and islands architecture, while optimizing for
+latency and performance. As a result, Fresh apps tend
+to see higher Lighthouse scores
+and can function in areas with low internet bandwidth.</p>
+<p>Here’s a simple guide to adding authentication into your Fresh app. Follow along
+below or view source here.</p>
+<p>To keep things simple, let’s remove a bunch of things:</p>
+<p>First, let’s update our import_map.json to include
+std lib:</p>
+<p>Next, let’s update /routes/index.tsx to show your logged in status.</p>
+<p>Next, let’s create the login form as a component called <Login>.</p>
+<p>We can create this component right in index.tsx:</p>
+<p>This component will POST the username and password to /api/login, which
+we’ll define later. Note that the form uses multipart/form-data (as opposed to
+json), which relies on native browser features where possible and minimizes
+the need for any client-side JavaScript.</p>
+<p>Next, let’s create the actual authentication logic at the /api/login endpoint.</p>
+<p>Under /routes/api/, let’s create login.ts:</p>
+<p>All of the authentication logic for this endpoint will be contained in the
+custom handler function.</p>
+<p>For simplicity, our username and password will be hardcoded as “deno” and
+“land”. (In most production situations, you would use authentication strategies,
+tokens from persistent data storage, etc.)</p>
+<p>When a POST request is made to /api/login, the custom handler function will
+perform the following:</p>
+<p>Let’s also create an endpoint for logging out: /routes/logout.ts:</p>
+<p>Now, let’s tie everything together by going back to /routes/index.tsx and
+adding our login and logout components.</p>
+<p>In the <Home> component of our routes/index.tsx page, let’s add the
+<Login> component, as well as a button to logout (which sends a request to
+/logout):</p>
+<p>Checking localhost, now we have login and logout buttons that work:</p>
+<p>A lot of paywall sites will automatically redirect a user if they’re not logged
+in.</p>
+<p>We can add this functionality by adding redirect logic in the custom handler:</p>
+<p>Or, if you don’t want to redirect the user and just show a secret only when the
+user is authenticated:</p>
+<p>This is a bare bones guide to add authentication to your Fresh app. There are
+plenty of ways to make this more production ready that we plan to explore in
+future posts:</p>
+<p>Stuck? Ask questions about Fresh and Deno on
+Twitter or in
+our Discord.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/setup-auth-with-fresh" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1706. Supabase Beta October 2022</h2>
+    <div class="article-meta">
+        📅 Nov 02, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-beta-update-october-2022" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2022-october/monthly-update-october-2022.jpg" alt="Supabase Beta October 2022" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2022-october/monthly-update-october-2022.jpg" alt="Supabase Beta October 2022" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>During October, we shipped something for everybody: new SDKs, quickstarts, Functions tricks, and more. All are listed here just for you. But, more importantly, Launch Week 6️⃣ has a date!</p>
+<p>The new versions of our two most popular SDKs have been fully released. It couldn’t have happened without our amazing community, thanks to everyone involved. Now, it’s time to build 🛠</p>
+<p>Try supabase-js V2
+Try flutter-supabase V1</p>
+<p>Next.js Conf raised the bar for dev conferences. We had the honor of being a Gold Sponsor, so we revamped our Next.js Quickstart guide to include our pre-built Auth UI and Auth Helpers.</p>
+<p>And Next.js 13 was announced! Making it extremely easy to fetch and cache data from our Serverless API. So we put together an example to try it out.</p>
+<p>The Auth team published an in-depth doc explaining how Supabase Auth supports server-side rendering. Includes an explanation of the authentication flow and answers to some of the more common questions.</p>
+<p>Do you have 100% code coverage? Probably not, because that’s usually the last thing you think of, but definitely not if you don’t have database tests. We just shipped a framework for Database Tests which makes it incredibly easy to test your database using pgTAP and pg_prove.</p>
+<p>Functions now support GET requests! Other HTTP verbs such as PUT, PATCH, and DELETE are supported too.</p>
+<p>There were so many amazing apps Made with Supabase this month that we couldn’t choose just one… so here are three:</p>
+<p>🚰 Remote Water Feeder by Somangshu Goswami 
+📊 Decile App by Krishna 
+📑 Explainpaper by Aman Jha and Jade</p>
+<p>If you want to see +100 other apps, check the replies.</p>
+<p>We are ending 2022 on a high note ✊. Mark your calendars: Launch Week 6 is happening on December 12-16.</p>
+<p>Come join one of the fastest-growing open source projects ever 🤗</p>
+<p>If you made it this far in the blog post you deserve a treat. Follow us on Twitter for more.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-beta-update-october-2022" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1322. Node.js 14.21.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 Nov 01, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v14.21.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.21.0%20(LTS)" alt="Node.js 14.21.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.21.0%20(LTS)" alt="Node.js 14.21.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v14.21.0/node-v14.21.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v14.21.0/node-v14.21.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v14.21.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v14.21.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v14.21.0/node-v14.21.0.pkg 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v14.21.0/node-v14.21.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v14.21.0/node-v14.21.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v14.21.0/node-v14.21.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v14.21.0/node-v14.21.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v14.21.0/node-v14.21.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v14.21.0/node-v14.21.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v14.21.0/node-v14.21.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v14.21.0/node-v14.21.0.tar.gz 
+Other release files: https://nodejs.org/dist/v14.21.0/ 
+Documentation: https://nodejs.org/docs/v14.21.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v14.21.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1323. Nov 3 2022 Security Releases</h2>
+    <div class="article-meta">
+        📅 Nov 01, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/vulnerability/november-2022-security-releases" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20Nov%203%202022%20Security%20Releases" alt="Nov 3 2022 Security Releases" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20Nov%203%202022%20Security%20Releases" alt="Nov 3 2022 Security Releases" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Updates are now available for v14,x, v16.x, v18.x and v19.x Node.js
+release lines for the following issues.</p>
+<p>A buffer overrun can be triggered in X.509 certificate verification,
+specifically in name constraint checking. Note that this occurs
+after certificate chain signature verification and requires either a
+CA to have signed the malicious certificate or for the application to
+continue certificate verification despite failure to construct a path
+to a trusted issuer. An attacker can craft a malicious email address
+to overflow four attacker-controlled bytes on the stack. This buffer
+overflow could result in a crash (causing a denial of service) or
+potentially remote code execution.</p>
+<p>A buffer overrun can be triggered in X.509 certificate verification,
+specifically in name constraint checking. Note that this occurs after
+certificate chain signature verification and requires either a CA to
+have signed a malicious certificate or for an application to continue
+certificate verification despite failure to construct a path to a trusted
+issuer. An attacker can craft a malicious email address in a certificate
+to overflow an arbitrary number of bytes containing the . character
+(decimal 46) on the stack. This buffer overflow could result in a crash
+(causing a denial of service).</p>
+<p>In a TLS client, this can be triggered by connecting to a malicious
+server. In a TLS server, this can be triggered if the server requests
+client authentication and a malicious client connects.</p>
+<p>OpenSSL versions 3.0.0 to 3.0.6 are vulnerable to this issue.</p>
+<p>The Node.js rebinding protector for --inspect still allows invalid IP address,
+specifically, the octal format. An example of an octal IP address is 1.09.0.0,
+the 09 octet is invalid because 9 is not a number in the base 8 number system.
+Browsers such as Firefox (tested on latest version m105) will still attempt to
+resolve this invalid octal address via DNS. When combined with an active
+--inspect session, such as when using VSCode, an attacker can perform DNS
+rebinding and execute arbitrary code</p>
+<p>Thank you to @haxatron1 for reporting this vulnerability.</p>
+<p>It's taking us a bit longer than originally expected and the Node.js Security Releases
+will be available on, or shortly after, Friday, November 4th, 2022.</p>
+<p>The Node.js project will release new versions of the 14.x, 16.x, 18.x, 19.x
+releases lines on or shortly after Thursday, November 3, 2022 in order to address:</p>
+<p>These security releases are driven by the OpenSSL security release as announced in OpenSSL November Security Release as well as an additional vulnerability that affects all supported release lines.</p>
+<p>The 19.x release line of Node.js is vulnerable to one medium severity issue and two high severity issues.</p>
+<p>The 18.x release line of Node.js is vulnerable to one medium severity issue and two high severity issues.</p>
+<p>The 16.x release line of Node.js is vulnerable to one medium severity issue.</p>
+<p>The 14.x release line of Node.js is vulnerable to one medium severity issue.</p>
+<p>Releases will be available on, or shortly after, Thursday, November 3rd, 2022.</p>
+<p>The current Node.js security policy can be found at /security/. Please follow the process outlined in https://github.com/nodejs/node/security/policy if you wish to report a vulnerability in Node.js.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/vulnerability/november-2022-security-releases" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1327. OpenSSL November Security Release</h2>
+    <div class="article-meta">
+        📅 Oct 28, 2022 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/vulnerability/openssl-november-2022" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20OpenSSL%20November%20Security%20Release" alt="OpenSSL November Security Release" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20OpenSSL%20November%20Security%20Release" alt="OpenSSL November Security Release" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Node.js project may be releasing new versions across all of its supported
+release lines in the first week of November to incorporate upstream patches
+from OpenSSL. Please read on for full details.</p>
+<p>The OpenSSL project
+announced
+will release OpenSSL 3.0.7 on the 1th of
+November 2022 between 1300-1700 UTC. The release will fix security defects on which
+the highest severity issue is HIGH.</p>
+<p>Node.js v17.x, v18.x, and v19.x use OpenSSL v3.</p>
+<p>Node.js v18.x and v19.x will be updated to address this issue.</p>
+<p>Support for Node.js v17.x ended in June 2022. It will not be updated. Please migrate to a supported version of Node.js.</p>
+<p>Node.js 14.x and v16.x are not affected by this OpenSSL update.</p>
+<p>At this stage, due to embargo, the exact nature of these defects is uncertain
+as well as the impact they will have on Node.js users.</p>
+<p>After assessing the impact on Node.js, it will be decided whether the issues
+fixed require immediate security releases of Node.js, or whether they can be
+included in the normally scheduled updates.</p>
+<p>Please monitor the nodejs-sec Google Group for updates, including a
+decision within 24 hours after the OpenSSL release regarding release timing,
+and full details of the defects upon eventual release:
+https://groups.google.com/forum/#!forum/nodejs-sec</p>
+<p>The current Node.js security policy can be found at
+https://github.com/nodejs/node/security/policy#security,
+including information on how to report a vulnerability in Node.js.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/vulnerability/openssl-november-2022" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1578. Deno 1.27: Major IDE Improvements</h2>
+    <div class="article-meta">
+        📅 Oct 27, 2022 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v1.27" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v1.27/ogp.png" alt="Deno 1.27: Major IDE Improvements" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v1.27/ogp.png" alt="Deno 1.27: Major IDE Improvements" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Deno 1.27 has been
+tagged and released with the following new features and changes:</p>
+<p>If you already have Deno installed, you can upgrade to 1.27 by running:</p>
+<p>If you are installing Deno for the first time:</p>
+<p>Click here for more installation
+options.</p>
+<p>TypeScript added support for inlay hints in version
+4.4;
+this release of Deno exposes this functionality to the LSP. Inlay hints are
+small snippets of information that are added inline into your code, displaying
+information about your code. In a lot of ways it is an “inline hover”.</p>
+<p>Inlay hints can make code a lot more readable, filling in gaps of information
+that isn’t present in code. Especially with type inference being common when
+working with TypeScript or type checked JavaScript, it can be really useful to
+“see” the hidden inferred types without having to hover over a variable to
+discover what it is, as well as reducing the number of explicit type annotations
+in the code while not decreasing the readability.</p>
+<p>There are several options to configure the support for inlay hints which allow
+for customization of how inlay hints work:</p>
+<p>Visual Studio Code supports inlay hints and the latest release of the
+Deno VS Code extension
+supports the configuration options. You will need to check with out editors and
+plugins to see if they support inlay hints and how to set the configuration
+options.</p>
+<p>While not tied specifically to the release, we recently improved registry
+completions in editors that support it. Now when typing a third party module
+name from deno.land/x in an intelligent editor, the search engine which powers
+the module search on deno.land is used, as well as providing a module
+description and popularity information.</p>
+<p>There are also improvements when completing the import path, where documentation
+information is integrated into the display text and is also available on
+hovering over an import. Third party module authors can use the @module JSDoc
+tag in the first JSDoc block at the top of the module to provide this
+information all the way through to the editor.</p>
+<p>In Visual Studio Code, registry completions for deno.land/x are enabled by
+default. Check how to configure deno.suggest.imports.hosts in other editors to
+make sure that https://deno.land is enabled to get the completions.</p>
+<p>Take a peek at the video to see it in action:</p>
+<p>There are several bug fixes in this release related to the language server.
+Specifically the language server was not properly handling “snippet” strings
+which is now fixed. There were several issues when performing auto-imports and
+code completion in JSX that caused odd behaviors which are now fixed.</p>
+<p>This release continues the steady improvement of using npm packages in Deno.</p>
+<p>Deno will now automatically pull in TypeScript types from npm packages that
+distribute types.</p>
+<p>For packages that don’t distribute types, you can use a @deno-types directive
+above the import in order to specify the corresponding
+@types package
+if one exists:</p>
+<p>For packages that require @types/node, you can specify a triple-slash
+reference-types directive to pull in Node types:</p>
+<p>Note that by doing this, Deno will use Node’s global types (ex.
+setTimeout(...): NodeJS.Timeout) instead of a browser compatible types (ex.
+setTimeout(...): number) in the types for npm packages. These globals will be
+isolated to the npm packages and shouldn’t affect the types of your Deno code.</p>
+<p>Deno now supports Node-API
+(formerly N-API) when used within npm packages. Node-API is a way to use native
+code in Node.js. It means that packages like parcel, sqlite3, usb or
+fs-xattr can now be used with Deno.</p>
+<p>Note that this feature requires the --allow-ffi flag.</p>
+<p>npm package resolution and integrities are now stored when using a lockfile.</p>
+<p>Note that in the 1.28 release we are planning to write a lockfile by default if
+you are using a deno.json file. Follow issue
+#11971 for updates.</p>
+<p>The npm registry allows tagging versions with a name. For example,
+express has a “next”
+tag which, at the time of writing this, has tagged version 5.0.0-beta.1.</p>
+<p>You can now specify these dist tags in version requirements for npm specifiers.</p>
+<p>Note that dist tags are still not supported if they appear in a package’s
+package.json. This is a bug and will be resolved soon. Follow issue
+#16321 for updates.</p>
+<p>deno cache now supports providing npm specifiers on the command line:</p>
+<p>This will download the package information and resolved versions of those
+packages to Deno’s global npm cache.</p>
+<p>Deno v1.27 adds the
+navigator.language
+API. It’s a read-only property that returns a string representing the user’s
+system preferred language.</p>
+<p>The returned string that represents the language is
+a BCP 47 tag.</p>
+<p>The value returned by this API can be influenced by environment variables that
+set the system locale, for example LC_ALL.</p>
+<p>Additionally,
+navigator.languages
+API is supported as well. It returns an array of preferred locales with first
+value being identical to navigator.language.</p>
+<p>Thanks to Luca Matei Pintilie for
+contributing this feature.</p>
+<p>The warning stating “deno task is unstable and may drastically change in the
+future” has been removed. deno task has proven useful and won’t drastically
+change going forward. That said, we may introduce some changes in its
+environment to make things easier going forward such as new cross platform
+commands or environment variables.</p>
+<p>When a task is executed, it will have the same current working directory as the
+deno.json the task is defined in. This may not be desired in certain
+scenarios, or you may want to know what directory the user ran the task in. This
+is now possible by using the INIT_CWD environment variable, which will be set
+with the full path to the directory the task was run in, if not already set.
+This aligns with the same behavior as
+npm run.</p>
+<p>For example, the following task will change the current working directory of the
+task to be in the same directory the user ran the task from and then output the
+current working directory which is now that directory (remember, this works on
+Windows too because deno task is cross platform).</p>
+<p>You may have used deno task to start multiple commands at once, by using an
+async command:</p>
+<p>Previously, if the async command failed, the other would continue running and
+you might not notice. This was in line with how most shells work, but it’s not
+practical for the purposes of deno task.</p>
+<p>Starting in this release, if an async command fails then it will also fail the
+entire task. Note that if you want the previous behavior, you can opt out by
+adding || true to the end of a command, which will force a 0 exit code:</p>
+<p>The sleep command in deno task now supports providing a suffix to the time
+argument as specified in the
+linux man pages for sleep.</p>
+<p>Thanks to @sigmaSd for contributing this feature.</p>
+<p>Deno ships with the deno upgrade subcommand that allows you to easily get the
+latest version of Deno. Starting with this release, Deno will now automatically
+check for new versions and prompt you if one is available.</p>
+<p>We took special care to ensure that these checks don’t impact the performance of
+your applications - they only happen in the background at most once a day. This
+feature can be disabled entirely by setting the environment variable:
+DENO_NO_UPDATE_CHECK=1</p>
+<p>The following APIs have been stabilized in this release and no longer require
+the --unstable flag to be used.</p>
+<p>Deno.kill() no longer requires an argument, it will default to sending a
+SIGTERM signal if argument is omitted.</p>
+<p>Deno.getGid() was renamed to Deno.gid(), in preparation for stabilization
+of this API</p>
+<p>Deno.getUid() was renamed to Deno.uid(), in preparation for stabilization
+of this API</p>
+<p>TcpListenOptions.reusePort option was added. It allows multiple processes to
+listen on the same address and port. This option requires the --unstable
+flag and is supported only on Linux.</p>
+<p>The built-in linter got a new “compact” report format, that might be familiar to
+users of ESLint. You can use this format by providing the --compact flag to
+the deno lint subcommand.</p>
+<p>Additionally you can specify which report type you prefer inside your
+deno.json file:</p>
+<p>Thanks to Brenley Dueck for contributing this
+feature.</p>
+<p>This release upgrades to the latest release of V8 (10.8, previously 10.7).</p>
+<p>The most notable new feature in this release is support for the
+Change Array by copy proposal</p>
+<p>On October 25, Node.js 18 entered Long Term Support (LTS) with version 18.12.0.
+In Deno v1.27, the Node.js compatibility layer’s test suite has been updated to
+match Node.js v18.12.0, meaning that Deno is capable of running the latest
+Node.js LTS release.</p>
+<p>Please note that the entire Node.js compatibility layer still requires the use
+of the --unstable flag.</p>
+<p>The readline/promises module has been implemented. This module provides a
+Promises based API for the readline module. Thanks to
+@PolarETech for contributing this feature.</p>
+<p>'base64url' encoding is now supported by hash.digest() in the crypto
+module. Thanks to Deniz Akşimşek for contributing
+this feature.</p>
+<p>.node modules can now be loaded. See also (Node-API support)[#node-api].</p>
+<p>Better Windows support has been added for fs.access().</p>
+<p>The windowsVerbatimArguments option has been added to the child_process
+module’s APIs.</p>
+<p>In this release, several deprecated APIs have been removed:</p>
+<p>The hash module has been removed. The functionality of this module is
+available via the crypto module.</p>
+<p>BSNode has been removed from the collections module in favor of
+BinarySearchNode.</p>
+<p>BSTree has been removed from the collections module in favor of
+BinarySearchTree.</p>
+<p>RBNode has been removed from the collections module in favor of
+RedBlackNode.</p>
+<p>RBTree has been removed from the collections module in favor of
+RedBlackTree.</p>
+<p>direction has been removed from the collections module in favor of
+Direction.</p>
+<p>CSVStream has been removed from the encoding module in favor of
+CsvStream.</p>
+<p>The CSVStreamOptions type has been removed from the encoding module in
+favor of the CsvStreamOptions type.</p>
+<p>The encoding/csv_stringify.ts file has been removed in favor of the
+encoding/csv.ts file and other APIs.</p>
+<p>JSONValue has been removed from the encoding module in favor of
+JsonValue.</p>
+<p>JSONParseStream has been removed from the encoding module in favor of
+JsonParseStream.</p>
+<p>JSONStringifyStream has been removed from encoding module in favor of
+JsonStringifyStream.</p>
+<p>ConcatenatedJSONParseStream has been removed from the encoding module in
+favor of ConcatenatedJsonParseStream.</p>
+<p>The listenAndServe() and listenAndServeTls() functions have been removed
+from the http module in favor of serve() and serveTls(), respectively.</p>
+<p>The streaming functionality in the io module has been removed in favor of
+the streams module.</p>
+<p>The functionality in the bufio.ts file of the io module has been removed
+in favor of the buffer.ts file.</p>
+<p>The functionality in the ioutil.ts file of the io module has been removed
+in favor of the util.ts file.</p>
+<p>The LineStream class has been removed from the streams module in favor of
+TextLineStream.</p>
+<p>All benchmarking APIs have been removed from the testing module in favor of
+Deno.bench().</p>
+<p>The assertThrows() and assertRejects() functions that take a callback
+function have been removed from the testing module in favor of their other
+signatures.</p>
+<p>The generate() function has been removed from the uuid module in favor of
+the WebCrypto randomUUID() function.</p>
+<p>Thanks to Asher Gomez for contributing these
+changes.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v1.27" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html" class="active">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

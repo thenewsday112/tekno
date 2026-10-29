@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Science - News Portal Indonesia</title>
+<meta name="description" content="Latest science news">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/science.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html" class="active">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">Science - News Portal Indonesia</h1>
+<article class="article-card">
+    <h2>#4117. Curve fitting for charts: better visualizations for Vercel Analytics</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Science</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/curve-fitting-for-charts-better-visualizations-for-vercel-analytics" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6En4ss7uAlsn9idSozYDkE/aeae470b9a809713531504e4bbd3b218/OG_Image__2_.png" alt="Curve fitting for charts: better visualizations for Vercel Analytics" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6En4ss7uAlsn9idSozYDkE/aeae470b9a809713531504e4bbd3b218/OG_Image__2_.png" alt="Curve fitting for charts: better visualizations for Vercel Analytics" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Last month, we released improved accuracy for Vercel Analytics charts—making it easier to visualize trends over time. This initially began as a side project I worked on during Vercel's Design Your Friday program (on the first Friday of every month, we work on a project of our choice). The goal: improving the data visualization of our Analytics charts.</p>
+<p>Previously, all the data points were visualized by simply connecting them as a line.</p>
+<p>It’s hard to read the trend from that chart because it’s too noisy. And the delta showed a -0.15 decrease which felt wrong. With the improvement I made, it now uses a smooth curve to visualize the trend and measures the delta more accurately.</p>
+<p>There are two main challenges in the old visualization.</p>
+<p>It displays all data points on the chart and this makes the chart noisy.</p>
+<p>The delta shown was calculated by subtracting the last and first sampled data—which is unreasonable for this dataset.</p>
+<p>While the chart says -0.15, all the data in between was completely ignored. As long as the most recent data point shows improvement, the chart will conclude that my website is performing better. The difference between the first and final endpoints of the chart could be two users who happen to have very different network connections—but that doesn't tell the whole story about our site performance.</p>
+<p>We want the insights that you receive from these charts to be accurate, easy to parse, and actionable. What can we do to make this chart tell a more authentic story?</p>
+<p>After some research, I found that curve fitting is a simple way to solve both problems. We use a curve to represent the overall trend of our data in a time series—with as little noise as possible.</p>
+<p>To demonstrate, I built an example that uses the palmerpenguins dataset to visualize the relationship between the bill length and depth of sampled penguins. It’s a bit noisy just like our previous Analytics chart.</p>
+<p>If you already know the type of curve that you are looking for, there are many existing algorithms to calculate the fitting curve for a given set of data points. The easiest way is to do a linear regression—finding a straight line to describe the data.</p>
+<p>Linear regression is just a special case of polynomial regression where the order is 1. You can drag the slider above to see how different polynomial orders affect the fitting curve. When the order is N, the polynomial function will have a degree of N, and the curve will have N-1 turning points (so 1 is a straight line).</p>
+<p>The Mean Squared Error (MSE) value (Σ(value - predictedValue)^2 / dataNum) measures the "goodness" of the fit of the curve to the data. The smaller the error is, the better the curve describes the given data.</p>
+<p>Usually, the easy solution would be manually choosing a reasonable order and hardcoding it in our visualization. That’s what a lot of people do and, in most cases, it should be okay. However, when we don’t know the behavior of the data (is it constantly increasing or decreasing? is it periodic?), it’s hard to choose a good order.</p>
+<p>As you might notice, a higher order will result in a more “accurate” curve with a lower error in general—but it also results in a more noisy curve. It can turn the curve too many times to follow our data because of all the noise. This is called overfitting.</p>
+<p>You can play with the example below on Observable: it generates fake data points with some normal distributed randomness and then calculates the regression curve for it. For the “Constant” dataset, it’s better to just use a straight line to fit (order = 1). However, for the “Quadratic” dataset, selecting order = 2 will result in a more stable, better fitting curve.</p>
+<p>All the examples so far show a “bad fit” or an “overfit” curve. It might describe the current dataset well, but, when you regenerate the data, it will not describe the new data accurately.</p>
+<p>This is a very foundational concept in Machine Learning and Data Science—to split the data into a training set and a test set. The training set (the current data) is used to train the model and calculate the regression curve, and the test set (newly generated data) is used to evaluate how well the model works. A good fit for the training set should have a low error on the test set, too.</p>
+<p>In our real-world problem, we don’t actually have a training set and a test set (we don’t generate random data) and all we have are the numbers collected from production. But we can choose some data points as the training set, and the remaining ones become the test set. To make the algorithm deterministic, I split our data points by odd and even indexes.</p>
+<p>As shown in the example above, we use the training set to calculate the fitting curve and measure the error for both the training set and  test set. If you increase the order, the curve tries to follow the  points, but the gray lines show the error for points.</p>
+<p>Ideally, a good fit should have a low error for both datasets. We will use a simple but intuitive equation error = max(MSE(training set), MSE(test set)) to measure the “overall goodness” of the fit for the entire dataset. Usually, when we increase the order of the polynomial regression, the error will decrease (underfitting), hit a good fit, then increase again (overfitting).</p>
+<p>This chart shows the overall error max(MSE(training set), MSE(test set)) when the polynomial regression order increases. It’s clear that when the order is 2, we have the best fit for the data—which is what we can feel intuitively from the interactive example.</p>
+<p>Finally, we can use that regression curve for the actual visualization and estimation. This adaptive approach is simple, easy to implement, and turned out to work really well for our case.</p>
+<p>To try out this new change, enable Vercel Analytics today by visiting the Analytics tab in your project dashboard or try it free with a team on Vercel Pro.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/curve-fitting-for-charts-better-visualizations-for-vercel-analytics" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#4071. From idea to 100 million views: Building a viral application for your personal music festival</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Science</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/from-idea-to-100-million-views-instafest-music-festival-application" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4QmqOZdVQi0GXTxyWTmTAu/e4402cc29e17770fdba65da3fc749da2/OG_Card-Conf_speakers2.png" alt="From idea to 100 million views: Building a viral application for your personal music festival" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4QmqOZdVQi0GXTxyWTmTAu/e4402cc29e17770fdba65da3fc749da2/OG_Card-Conf_speakers2.png" alt="From idea to 100 million views: Building a viral application for your personal music festival" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Instafest allows users to quickly create a festival poster from their top Spotify, Apple Music, and Last.fm artists. Anshay Saboo, a Computer Science student at USC, used Next.js and Vercel to launch Instafest fast and scale to 500,000 new users per hour, gaining millions of users and going viral on Twitter, TikTok, and more.</p>
+<p>Instafest launched on November 22nd, 2022. It started small, with only 100-150 users per hour on the first day. It grew quickly from there, reaching 500 users per hour on the second day and 2,000 on the third. By the following Sunday, the app was gaining 70,000 users per hour.</p>
+<p>The site continued to gain popularity, with new features being added daily. After being shared on social media by celebrities like QuestLove, rapper 24KGoldn, director Edgar Wright, and YouTuber Matt King, the site continued to grow. At it’s peak, Instafest was serving 500,000 new users per hour and saw over 100 million page views in that week.</p>
+<p>Anshay knew he wanted to use React, so he picked Next.js to “make the application snappy and responsive”. The Instafest website needed to handle loading custom web fonts and displaying fast-loading images of the festival posters. By using Next.js, Anshay was able to use the built-in font optimization and image component to keep the site performance fast and prevent layout shift.</p>
+<p>By using the image component, Next.js automatically optimizes and serves images in modern formats (like .avif and .webp) to reduce the size of images. This helps pages load faster and provide a better user experience for Instafest viewers. Additionally, Next.js automatically generates responsive images, which means that it creates multiple versions of each image at different sizes. This allowed Instafest to serve the most appropriate sized image for each user's device, further improving performance.</p>
+<p>Anshay needed to quickly get his Next.js site online fast, so he turned to Vercel to go from idea to global application in seconds.</p>
+<p>Thanks to Vercel Functions, the Next.js application was able to scale automatically, without needing to provision additional servers, add load balancers, or pay for more expensive hardware. Instafest was highly available, everywhere around the world, visualized below with Vercel Monitoring broken down by Edge Network regions.</p>
+<p>Instead, Anshay was able to take advantage of Vercel’s global Edge Network to easily cache both static assets and Function responses. Peaking at 6 million users per day, Instafest never had downtime or showed any increase in latency under load. Using Vercel Analytics, Anshay could visualize the real user performance of Instafest visitors.</p>
+<p>Learn more about Next.js on Vercel or get started today using one of our Next.js templates.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/from-idea-to-100-million-views-instafest-music-festival-application" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#87. I am a creative.</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Science</strong> &nbsp;|&nbsp; 
+        <a href="https://alistapart.com/article/i-am-a-creative/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p><!-- wp:paragraph -->
+<p>I am a creative. What I do is alchemy. It is a mystery. I do not so much do it, as let it be done through me.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. Not all creative people like this label. Not all see themselves this way. Some creative people see science in what they do. That is their truth, and I respect it. Maybe I even envy them, a little. But my process is different—my being is different.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Apologizing and qualifying in advance is a distraction. That’s what my brain does to sabotage me. I set it aside for now. I can come back later to apologize and qualify. After I’ve said what I came to say. Which is hard enough.&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>Except when it is easy and flows like a river of wine.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sometimes it <em>does</em> come that way. Sometimes what I need to create comes in an instant. I have learned not to say it at that moment, because if you admit that sometimes the idea just comes and it is the best idea and you know it is the best idea, they think you don’t work hard enough.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sometimes I work and work and work until the idea comes. Sometimes it comes instantly and I don’t tell anyone for three days. Sometimes I’m so excited by the idea that came instantly that I blurt it out, can’t help myself. Like a boy who found a prize in his Cracker Jacks. Sometimes I get away with this. Sometimes other people agree: yes, that <em>is</em> the best idea. Most times they don’t and I regret having&nbsp; given way to enthusiasm.&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Enthusiasm is best saved for the meeting where it will make a difference. Not the casual get-together that precedes that meeting by two other meetings. Nobody knows why we have all these meetings. We keep saying we’re doing away with them, but then just finding other ways to have them. Sometimes they are even good. But other times they are a distraction from the actual work. The proportion between when meetings are useful, and when they are a pitiful distraction, varies, depending on what you do and where you do it. And who you are and how you do it. Again I digress. I am a creative. <em>That</em> is the theme.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sometimes many hours of hard and patient work produce something that is barely serviceable. Sometimes I have to accept that and move on to the next project.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Don’t ask about process. I am a creative. </h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. I don’t control my dreams. And I don’t control my best ideas. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I can hammer away, surround myself with facts or images, and sometimes that works. I can go for a walk, and sometimes that works. I can be making dinner and there’s a Eureka having nothing to do with sizzling oil and bubbling pots. Often I know what to do the instant I wake up. And then, almost as often, as I become conscious and part of the world again, the idea that would have saved me turns to vanishing dust in a mindless wind of oblivion. For creativity, I believe, comes from that other world. The one we enter in dreams, and perhaps, before birth and after death. But that’s for poets to wonder, and I am not a poet. I am a creative. And it’s for theologians to mass armies about in their creative world that they insist is real. But that is another digression. And a depressing one. Maybe on a much more important topic than whether I am a creative or not. But still a digression from what I came here to say.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Sometimes the process is avoidance. And agony. You know the cliché about the tortured artist? It’s true, even when the artist (and let’s put that noun in quotes) is trying to write a soft drink jingle, a callback in a tired sitcom, a budget request.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Some people who hate being called creative may be closeted creatives, but that’s between them and their gods. No offense meant. Your truth is true, too. But mine is for me. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Creatives recognize creatives.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Creatives recognize creatives like queers recognize queers, like real rappers recognize real rappers, like cons know cons. Creatives feel massive respect for creatives. We love, honor, emulate, and practically deify the great ones. To deify any human is, of course, a tragic mistake. We have been warned. We know better. We know people are just people. They squabble, they are lonely, they regret their most important decisions, they are poor and hungry, they can be cruel, they can be just as stupid as we can, because, like us, they are clay. But. But. But they make this amazing thing. They birth something that did not exist before them, and could not exist without them. They are the mothers of ideas. And I suppose, since it’s just lying there, I have to add that they are the mothers of invention. <em>Ba dum bum! </em>OK, that’s done. Continue. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Creatives belittle our own small achievements, because we compare them to those of the great ones. Beautiful animation! Well, I’m no Miyazaki. Now THAT is greatness. That is greatness straight from the mind of God. This half-starved little thing that <em>I</em> made? It more or less fell off the back of the turnip truck. And the turnips weren’t even fresh.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Creatives knows that, at best, they are <a href="https://www.wikiwand.com/en/Antonio_Salieri">Salieri</a>. Even the creatives who are Mozart believe that.&nbsp;</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. I haven’t worked in advertising in 30 years, but in my nightmares, it’s my former creative directors who judge me. And they are right to do so. I am too lazy, too facile, and when it really counts, my mind goes blank. There is no pill for creative dysfunction.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. Every deadline I make is an adventure that makes Indiana Jones look like a pensioner snoring in a deck chair. The longer I remain a creative, the faster I am when I do my work and the longer I brood and walk in circles and stare blankly before I do that work. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am still 10 times faster than people who are not creative, or people who have only been creative a short while, or people who have only been professionally creative a short while. It’s just that, before I work 10 times as fast as they do, I spend twice as long as they do putting the work off. I am that confident in my ability to do a great job when I put my mind to it. I am that addicted to the adrenaline rush of postponement. I am still that afraid of the jump.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">I am not an artist.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. Not an artist. Though I dreamed, as a lad, of someday being that. Some of us belittle our gifts and dislike ourselves because we are not Michelangelos and Warhols. That is narcissism—but at least we aren’t in politics.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. Though I believe in reason and science, I decide by intuition and impulse. And live with what follows—the catastrophes as well as the triumphs. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. Every word I’ve said here will annoy other creatives, who see things differently. Ask two creatives a question, get three opinions. Our disagreement, our passion about it, and our commitment to our own truth are, at least to me, the proofs that we are creatives, no matter how we may feel about it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. I lament my lack of taste in the areas about which I know very little, which is to say almost all areas of human knowledge. And I trust my taste above all other things in the areas closest to my heart, or perhaps, more accurately, to my obsessions. Without my obsessions, I would probably have to spend my time looking life in the eye, and almost none of us can do that for long. Not honestly. Not really. Because much in life, if you really look at it, is unbearable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. I believe, as a parent believes, that when I am gone, some small good part of me will carry on in the mind of at least one other person.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Working saves me from worrying about work.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. I live in dread of my small gift suddenly going away.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. I am too busy making the next thing to spend too much time deeply considering that almost nothing I make will come anywhere near the greatness I comically aspire to.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I am a creative. I believe in the ultimate mystery of process. I believe in it so much, I am even fool enough to publish an essay I dictated into a tiny machine and didn’t take time to review or revise. I won’t do this often, I promise. But I did it just now, because, as afraid as I might be of your seeing through my pitiful gestures toward the beautiful, I was even more afraid of forgetting what I came to say. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>There. I think I’ve said it.&nbsp;</p>
+<!-- /wp:paragraph --></p>
+                <p style="margin-top: 25px;">
+                    <a href="https://alistapart.com/article/i-am-a-creative/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#529. Exploring Art with TypeScript, Jupyter, Polars, and Observable Plot</h2>
+    <div class="article-meta">
+        📅 Apr 01, 2025 &nbsp;|&nbsp; Category: <strong>Science</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/exploring-art-with-typescript-and-jupyter" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/exploring-art-with-typescript-and-jupyter/og.png" alt="Exploring Art with TypeScript, Jupyter, Polars, and Observable Plot" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/exploring-art-with-typescript-and-jupyter/og.png" alt="Exploring Art with TypeScript, Jupyter, Polars, and Observable Plot" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Jupyter notebooks have become the de facto standard for interactive computing
+and data analysis, combining code, prose, and visualizations in a single
+document.</p>
+<p>In fact, this blog post was written in a notebook!</p>
+<p>Since v1.37, Deno comes with a
+built-in Jupyter kernel,
+bringing JavaScript and TypeScript to data science and machine learning. Having
+worked extensively with computational notebooks (mainly in Python), I find this
+exciting for these reasons:</p>
+<p>Simple setup – The kernel is built into the Deno CLI, so there’s no need
+for additional installation. Just install Deno.</p>
+<p>Improved dependency management – Notebooks run like standalone scripts,
+and Deno’s support for importing dependencies in the code itself improves
+dependency management and reproducibility.</p>
+<p>A unified ecosystem for interactive data analysis – Jupyter supports rich
+HTML/CSS/JS outputs, and the JavaScript ecosystem is ideal for interactive
+UIs. Deno connects the kernel and frontend, making notebooks more powerful and
+flexible.</p>
+<p>In this post, we’ll explore the National Gallery of Art’s Open Access dataset in
+Jupyter with Deno. We’ll clean and analyze the data, looking at public domain
+works, artists, origins, and patterns. Along the way, we’ll introduce
+Deno-compatible tools like
+npm:nodejs-polars and
+npm:@observablehq/plot, and wrap up by
+adding widgets and custom displays for a more interactive experience.</p>
+<p>The National Gallery of Art (NGA)
+Open Data Program
+provides access to over 130,000 artworks and their creators, available
+on GitHub.
+This dataset includes valuable metadata such as titles, dates, artists, and
+classifications, all under a
+Creative Commons 0 (CC0) license,
+meaning it’s free to use and share.</p>
+<p>The collection spans a wide variety of artworks, from sculptures to paintings,
+by famous artists like Mary Cassatt, M.C. Escher, Vincent van Gogh, Pablo
+Picasso, and Georgia O’Keeffe.</p>
+<p>However, navigating this resource is challenging. The National Gallery’s website
+is not very user-friendly, making it difficult to make sense of what is actually
+in the dataset. It’s nearly impossible to get any high-level insights, like the
+number of paintings, which time periods are most represented, or which artists
+are most prevalent–let alone make specific queries.</p>
+<p>Fortunately,
+the dataset is available on GitHub
+as a collection of related tables, exported as CSV files. For our analysis,
+we’ll focus on three key tables:</p>
+<p>We’ll clean and join these tables to create a unified dataset.</p>
+<p>But wait! While these NGA tables are free to use, they only include
+metadata. The actual artwork images have separate licensing, with only about
+half being CC0-licensed. We’ll gather this info separately to identify freely
+available images.</p>
+<p>Our goal is to unify the data to identify public domain images, explore subsets,
+and view available artworks. Maybe you’ll even find an upgrade for that default
+OS wallpaper.</p>
+<p>To get started, we first need to download the data. If you’ve worked with CSVs
+in JavaScript before, this typically looks like a fetch request followed by
+some parsing. Here, we’re using jsr:@std/csv to
+stream the data, which gives us an array of objects.</p>
+<p>If we were just plotting the data, this would work fine. But an array of objects
+isn’t ideal for building our dataset. The NGA data is relational and needs
+merging, cleaning, and restructuring. A DataFrame is better suited for our
+use case, offering higher-level, efficient APIs that eliminate the need to write
+manipulation functions by hand.</p>
+<p>Let’s see how we can load the same dataset using a DataFrame from
+npm:nodejs-polars:</p>
+<p>Here, we fetch the dataset as before, but instead of parsing the CSV
+ourselves, we read the text response directly with Polars to create a
+pl.DataFrame.</p>
+<p>We then chain a .select expression to choose and rename the columns we want.
+Notice how, rather than operating on each row in a loop, with Polars we work
+directly with columns. This API allows us to express complex, efficient
+operations (in Rust) without materializing JavaScript objects.</p>
+<p>Let’s load our other two datasets as pl.DataFrames as well:</p>
+<p>The constituents.csv table contains information about any person or entity
+associated with a piece of art, such as artists, curators, or collectors.</p>
+<p>The published_images.csv table contains additional information about the
+artwork’s image, including a URL for the thumbnail and mapping the objectid to
+the IIIF (International Image Interoperability Framework)
+for the image.</p>
+<p>The final table, objects_constituents.csv, represents a many-to-many
+relationship between artworks and the people or entities associated with them.
+Each artwork may have multiple people linked to it.</p>
+<p>For our analysis, we’re interested in selecting the “primary” constituent (i.e.,
+the artist). We define the primary artist as the one with the highest
+displayorder for each object.</p>
+<p>This is a much more advanced usage of Polars, so let’s break down what’s going
+on:</p>
+<p>Writing this logic by hand in JavaScript would be tedius, but with Polars it’s
+declarative and reads like a sentence. This type of chaining is common when
+working with relational data.</p>
+<p>We’ve loaded the relevant tables from the Open Access dataset, but they do
+not indicate whether images associated with an artwork are in the public
+domain. While CC0 images can be freely downloaded, shared, and repurposed, not
+all art with the CC0 license are legally in the public domain everywhere due
+to local copyright laws and edge cases.</p>
+<p>Let’s find a way to add public domain information to our data set.</p>
+<p>That information is available on the NGA website, but only through the search
+user interface. Extracting it manually would be impractical, so I
+reverse-engineered an API call to retrieve the IDs of artworks with public
+domain images.</p>
+<p>We only need the IDs, not the full data, but the query is slow. Since this isn’t
+an official API, I’ve saved the results separately.</p>
+<p>There are about 50k IDs identifying public domain images in our dataset.</p>
+<p>Now that we have all our data cleaned and loaded, we’ll perform a large join to
+combine all these tables into a single unified table.</p>
+<p>Again, this challenging to do manually, but with Polars, we can nicely express
+these complex join operations. Finally, we use a .isIn expression to derive a
+new column that indicates whether a piece of art is public domain.</p>
+<p>With our unified dataset finally loaded, let’s move on to some plotting.</p>
+<p>The NGA portal allows some exploration of these data but focuses on specific
+artworks. We’re more interested in broader insights — where most art comes
+from, who created it, when it was made, and whether it’s public domain.</p>
+<p>As a JavaScript/TypeScript runtime, Deno gives us access to many visualization
+libraries to ask these kinds of questions. We’ll use
+npm:@observablehq/plot (Observable Plot) to
+create plots, spot patterns, and better understand the collection.</p>
+<p>Note this post is not a tutorial on Observable Plot, so don’t worry if some of
+the code below is not immediately clear. The goal is to demonstrate how to use
+Observable Plot in Jupyter with Deno to extract insights from our data. I’ll
+highlight any Deno-specific details or useful tips along the way.</p>
+<p>Let’s start by examining the distribution of artworks across different “types”
+in the NGA collection.</p>
+<p>For the code above, the key things to keep in mind are:</p>
+<p>For specifics on the Plot API, see the
+documentation and
+examples avaiable.</p>
+<p>Right away, we can see that prints, drawings, and photographs make up most of
+the collection. Each category varies in how many images are public domain —
+images of prints, drawings, sculptures, and paintings are mostly public domain,
+while images of photographs and portfolios are largely copyrighted.</p>
+<p>We can get more granular in our plot very easily with Observable Plot, which is
+composable and expressive. With just a few tweaks, you can completely change
+how the data is represented. For example, starting from the plot above, we can
+modify marks and some encoding fields and produce an entirely different chart,
+allowing for quick exploration and iteration – like this “waffle” bar chart.</p>
+<p>With both Polars and Plot, we can ask more specific questions about the data,
+such as “Which artists have the most artwork in the collection?” Here, we
+first use Polars to group the data by artist (name) and whether the artwork is
+public domain (public), counting the number of works for each. Then, we use
+Plot to visualize the top 25 artists.</p>
+<p>Again, we can draw some high-level takeaways from this plot: The photographer
+Robert Frank has nearly twice as
+many works as the next highest artist. Some entries, like “American 20th
+Century” and “German 15th Century,” represent groups rather than
+individuals. Additionally, an artist’s work is typically either entirely
+public domain or not at all — likely because public domain status is
+determined at the collection level, with institutions clearing entire groups
+of works at once rather than evaluating individual pieces separately.</p>
+<p>With our tidy and clean dataset, we can quickly iterate in Deno to ask both
+broad questions (“What even is in this collection?”) and very specific ones
+(“Who created this artwork in a given year?”).</p>
+<p>So far, we’ve used static plots to explore our data, but Jupyter notebooks
+support rich, interactive outputs using HTML, CSS, and JavaScript.</p>
+<p>With Deno, we can add more interactivity to our data exploration by either using
+off-the-shelf interactive anywidgets
+by quickly building custom components for visualizing subsets in ways
+prebuilt tools don’t support. Deno provides direct access to the full web
+ecosystem, making custom visualizations seamless.</p>
+<p>In Jupyter, “widgets” extend notebook outputs with interactive views and
+controls for objects in the kernel (i.e., backend). Unlike standard outputs,
+they consist of both kernel-side and front-end code, communicating directly via
+custom messages. While the Jupyter Widget ecosystem is largely Python-centric,
+the anywidget project provides a
+kernel-agnostic way to create and share these components.</p>
+<p>With anywidget, widgets can be published to JSR and used in
+the Deno Jupyter kernel. For example,
+jsr:@manzt/jupyter-helper provides
+some off-the-shelf anywidgets for interactively viewing Polars data frames.</p>
+<p>The agGrid export renders the pl.DataFrame using the popular
+AG Grid library, allowing for interactive sorting,
+filtering, and pagination. This default view is minimal but can be easily
+extended with AG Grid’s many features.</p>
+<p>The quak export renders the pl.DataFrame with the
+quak data table viewer. Like agGrid, it
+supports sorting, but it also provides summary visualizations above each column,
+showing 1D distributions. These visualizations are interactive, allowing for
+cross-filtering. For example, selecting public domain paintings created
+between specific years.</p>
+<p>Deno gives us direct access to the web ecosystem, making it easy to build small,
+useful UIs for exploring our data in ways that off-the-shelf tools don’t
+support.</p>
+<p>For example, it would be helpful to actually see a set of artwork in a “gallery
+view” to provide intuition about what’s in that subset. We can do that since the
+dataset contains image URLs.</p>
+<p>Let’s create a custom JSX component that server-renders (SSR) a gallery view
+for any dataset subset using the render export from
+jsr:@manzt/jupyter-helper. This helper simply converts JSX to an HTML string,
+which we display using the Deno.jupyter.Displayable interface.</p>
+<p>Gallery is a custom component that displays a grid of artwork thumbnails from
+a given dataset. Each image links to its NGA collection page, and public
+domain works are marked with a CC0 icon.</p>
+<p>We can SSR Gallery with our data to better understand a smaller subset, making
+it easier to explore specific artists, time periods, or categories visually. For
+example, a random sample from all the collection:</p>
+<p>It’s worth taking a moment to appreciate that in just a few lines of code, we’ve
+built a domain-specific utility that makes our data more intuitive to
+explore. This kind of flexibility is powerful and unique to Deno, letting us
+quickly craft custom utilities that provide deeper insights.</p>
+<p>With our toolkit, let’s take a closer look at the NGA dataset:</p>
+<p>So far, our data exploration has focused on high-level summaries of the NGA
+collection by artist and artwork type using static plots. Now, let’s drill down
+into something potentially more interesting using both our complete toolkit:
+when these works were created.</p>
+<p>We’ll start with a stacked histogram to see the overall distribution of artwork
+types over time, then facet by public domain status to uncover any patterns.</p>
+<p>The distribution of artworks with copyrighted and public domain images
+are noticeably different. Nearly all copyrighted works appear after 1850,
+while public domain artworks are more evenly spread over time—except for a
+sharp spike in public domain drawings from the 1940s, with over 15k artworks
+added.</p>
+<p>This is a striking anomaly. Are they all from the same artist? Why only
+drawings? Let’s take a closer look.</p>
+<p>We’ll filter down the public domain data to this span.</p>
+<p>Zooming into the 1925–1955 range, we see that almost all the data falls
+within a much narrower window. Interestingly, the spike is highly concentrated
+between 1935 and 1942, with very little artwork outside this period.</p>
+<p>Narrowing in closer, we can see that in this window there are ~18k individual
+drawings:</p>
+<p>This gets even more interesting! The artwork is not from just one specific
+source — there was a surge of public works between 1935 and 1942.</p>
+<p>Let’s use our custom <Gallery /> view to explore a subset of these works —
+maybe seeing them will give us some insight.</p>
+<p>So all these artworks, despite being from different individuals, have a very
+similar style and medium. That’s something worth digging into — what might
+explain this pattern?</p>
+<p>Thanks to our custom <Gallery /> component, we can click on artworks and view
+their metadata. Sampling a few, we see that they all belong to the
+“Index of American Design”
+collection.</p>
+<p>Conceived as an effort to document and preserve American folk and decorative
+arts, the Index of American Design consists of 18,257 watercolor renderings
+created between 1935 and 1942 as part of a Federal Art Project (FAP)
+work-relief program. Around 400 artists meticulously recreated textiles,
+woodcarvings, weathervanes, and other objects from across the U.S., aiming to
+establish a distinct American visual lineage. The project was ultimately
+housed at the National Gallery of Art, becoming a widely exhibited visual
+archive.</p>
+<p>That’s it! We’re seeing a collection of public works funded by a federal
+program during the Great Depression — clear in both the data and historical
+context.</p>
+<p>Using Deno’s Jupyter kernel, we explored the NGA Open Access dataset, combining
+static plots, interactive widgets, and custom JSX components to uncover patterns
+in the data. This led us to a historical insight—the Index of American Design, a
+public art project from the 1930s.</p>
+<p>With Deno, JSX, and anywidget, we seamlessly bridged data analysis with
+web-based visualization, making it easy to build domain-specific tools for
+deeper exploration.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/exploring-art-with-typescript-and-jupyter" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1402. Offline-first React Native Apps with Expo, WatermelonDB, and Supabase</h2>
+    <div class="article-meta">
+        📅 Oct 08, 2023 &nbsp;|&nbsp; Category: <strong>Science</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/react-native-offline-first-watermelon-db" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2023-10-08-react-native-offline-first-watermelon-db/expo-watermelondb-supabase.jpg" alt="Offline-first React Native Apps with Expo, WatermelonDB, and Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2023-10-08-react-native-offline-first-watermelon-db/expo-watermelondb-supabase.jpg" alt="Offline-first React Native Apps with Expo, WatermelonDB, and Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Using the Supabase JavaScript Client in a React Native app, it's super easy to fetch data from a Supabase backend by simply calling functions like supabase.from('countries').select() wherever the data is needed. However, another approach to handling data in mobile apps recently gained a lot of popularity: Offline-first - meaning an app works primarily offline and synchronizes data whenever possible.</p>
+<p>This has multiple advantages, the obvious being that the app can be used offline. But even when the app is used online, the user experience still profits from this approach as reading and updating data feels instantaneous as it happens on the device first and is then synced in the background. The approach also has drawbacks: Data can become stale, and if it is changed in multiple places while offline, data conflicts can occur.</p>
+<p>There are sophisticated database technologies like CRDT (conflict-free replicated data type), which are also making their way into mobile apps. For our example, we will not reach for a CRDT and instead use WatermelonDB, an open-source solution built on SQLite that includes a sync engine and applies the simple strategy of just letting the latest change of a record win. Follow along to build a React Native/Expo app that uses WatermelonDB as the offline-first data store and syncs to a Supabase backend using Remote Procedure Calls and Supabase Realtime to trigger sync on other devices.</p>
+<p>The approach described in this blog post was developed while building Share My Stack. This mobile app allows people to curate and share their personal productivity stack as well as their favorite development stack. The app is available on the App Store, and the complete source code is available on GitHub for educational purposes. Here is a little demo of what the result looks like when using the app on two separate devices:</p>
+<p>For this tutorial, we'll be implementing a small part of the Share My Stack data model, namely the ability to have a "profile," which belongs to a "user" (stored in auth.users) and can have multiple "stacks" associated with it (see the output from the Supabase Schema Visualizer below for illustration). With that said, let's dive into building our local-first app ...</p>
+<p>The first step is to add the required dependencies to your React Native project: WatermelonDB, Supabase, and expo-build-properties, which we'll use in the next step to customize the React Native app build.</p>
+<p>WatermelonDB is depending on simdjson, which needs to be added to the Podfile of the React Native project. Using expo-build-properties, this can be done with a simple configuration change without touching native iOS project files.</p>
+<p>WatermelonDB requires models to be created for the data that is stored and synced through it. Take a look at their docs for the details; here is an excerpt of the model used in Share My Stack, which represents a "profile" that has multiple "stacks" associated with it:</p>
+<p>The WatermelonDB docs outline how to set up a sync function that talks with the backend server. In our case, the backend is a Postgres database hosted on Supabase. As indicated earlier, we'll implement the sync via two Postgres functions called via Supabase RPC. This way, each sync is only two database calls (one push, one pull), and most of the logic is carried out directly within the database.</p>
+<p>For the local synchronize function to be able to call Postgres functions (pull and push) via supabase.rpc(), those functions have to be created via migrations before. The specific implementation of those functions will be based on the schema of the data. The push function basically receives a set of data changes as a JSON object and writes them to the database, while the pull function receives the timestamp of the last sync and compiles a JSON object containing all changes the database has accumulated since this timestamps and returns it to the client.</p>
+<p>Here is an example of a push function. This function implements the creation, deletion, and updating of profiles and would need to be extended for every additional object in the data model.</p>
+<p>And here is how the pull function might look like:</p>
+<p>To convert between timestamp formats used by WatermelonDB and Supabase/Postgres, the push and pull functions use the following utility functions in Supabase:</p>
+<p>I'm convinced local-first will be an increasingly important paradigm in the future - not for all apps, but at least for some. It can greatly enhance user experience with regards to reliability and performance and as we've seen in this tutorial, it doesn't need to be rocket science.</p>
+<p>It does, however, come with its own set of trade-offs. One of the biggest drawbacks of the demonstrated approach, in my opinion, is the amount of friction it adds to changing the data model. Usually, when just adding the Supabase SDK, I add a new migration, re-generate the types, and use the data wherever I need to.</p>
+<p>With the approach described above, I need to maintain the database schema in Supabase, and the local schema in WatermelonDB, and keep the sync functions up to date. In the end, for an app where the data model is not expected to change much and where very performant user interactions are key to adoption, this is still a very viable approach from my perspective.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/react-native-offline-first-watermelon-db" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1825. Python data loading with Supabase</h2>
+    <div class="article-meta">
+        📅 Jun 17, 2022 &nbsp;|&nbsp; Category: <strong>Science</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/loading-data-supabase-python" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/python-1/python.jpg" alt="Python data loading with Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/python-1/python.jpg" alt="Python data loading with Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Python is an excellent choice when it comes to data science. With a wide selection of libraries and built-in analytics tools, you can crunch data with ease, analyze even the most complex datasets, and visualize your results in beautiful charts and graphs.</p>
+<p>Supabase is backend-as-a-service built on top of PostgreSQL. It's an excellent choice for building modern data-intensive apps and tooling.</p>
+<p>Thanks to our incredible community, Supabase now has a powerful and open source Python SDK. With Supabase and Python, you can automate tasks such as CRUD operations with only a few lines of code. This guide will first create a simple schema in Supabase, then we'll use the Supabase Python SDK to show how you can load sample data.</p>
+<p>Before we dive in, let's look at some prerequisites you'll need:</p>
+<p>Supabase is built for developers, and you can get started for free using your existing GitHub account. Once your Supabase account is set up, you will access the Supabase dashboard. From here, go to All Project > New Project.</p>
+<p>Give your project a name and set the database password. You can also choose the region and adjust the pricing plan based on the requirements of your project.</p>
+<p>Your project will spin up within 2 minutes.</p>
+<p>In this example, we'll be creating 2 tables in Supabase:</p>
+<p>The database schema will look like the following:</p>
+<p>Let us now begin creating the tables. Once you create a project, you will need to go to Table Editor > New Table</p>
+<p>Now, you can create a table according to the defined schema.</p>
+<p>Click on Save to create your vendor table. Similarly, create the product table.</p>
+<p>Before you click Save, you need to set up the foreign key relationship between the Product and Vendor table. To do this, select the button next to “vendor_id”</p>
+<p>Select the vendor_id primary key from the “Vendor” table.</p>
+<p>Click on Save and you are good to go. You should now see the 2 tables under Table Editor.</p>
+<p>Once you have set up the tables and installed the prerequisites, you can now start playing around with the Python SDK. To install the SDK, run the following command:</p>
+<p>Ensure that you are running this inside your python virtual environment. This will take a few minutes to complete.</p>
+<p>The SDK authentication uses API keys pointing to a project URL. To find out your project URL and APIs, go to Settings > API.</p>
+<p>API credentials and project URL can be stored in environment variables. Setting the environment variables in bash/zsh is very simple. All we need to do is run:</p>
+<p>So for our example we will set them up like this:</p>
+<p>Here is a snippet of the code we will be using to insert random data into our tables:</p>
+<p>To summarize what we have done using this code snippet:</p>
+<p>Data can also be viewed directly from the Supabase dashboard. To do this, go to Table Editor > All tables</p>
+<p>Note: In case you cannot see any of the data, you should hit the Refresh button.</p>
+<p>With Python, data loading into Supabase is easy. It just takes a few easy steps to get started with the Python SDK and Supabase. In the next part of this blog series, we will learn how to visualize the data that we just loaded into Supabase using Metabase. Stay tuned!</p>
+<p>If you have any questions please reach out via Twitter or join our Discord.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/loading-data-supabase-python" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

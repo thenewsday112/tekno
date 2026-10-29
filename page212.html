@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 212</title>
+<meta name="description" content="Page 212">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page212.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 212</h1>
+<article class="article-card">
+    <h2>#2973. Node.js 0.10.0 (Stable)</h2>
+    <div class="article-meta">
+        📅 Mar 11, 2013 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.10.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.10.0%20(Stable)" alt="Node.js 0.10.0 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.10.0%20(Stable)" alt="Node.js 0.10.0 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>I am pleased to announce a new stable version of Node.</p>
+<p>This branch brings significant improvements to many areas, with a
+focus on API polish, ease of use, and backwards compatibility.</p>
+<p>For a very brief overview of the relevant API changes since v0.8,
+please see the API changes wiki
+page.</p>
+<p>In a previous post, we
+introduced the
+"Streams2" API changes.
+If you haven't reviewed the changes, please go read that now (at least
+the tl;dr section).</p>
+<p>The changes to the stream interface have been a long time in the
+making. Even from the earliest days of Node, we've all sort of known
+that this whole "data events come right away" and "pause() is
+advisory" stuff was unnecessarily awful. In v0.10, we finally bit the
+bullet and committed to making drastic changes in order to make these
+things better.</p>
+<p>More importantly, all streams in Node-core are built using the same
+set of easily-extended base classes, so their behavior is much more
+consistent, and it's easier than ever to create streaming interfaces
+in your own userland programs.</p>
+<p>In fact, the Streams2 API was developed while using it for modules in
+the npm registry. At the time of this writing, 37 published Node
+modules already
+are using the
+readable-stream library
+as a dependency. The readable-stream npm package allows you to use
+the new Stream interface in your legacy v0.8 codebase.</p>
+<p>The domain module has been elevated from "Experimental" to
+"Unstable" status. It's been given more of a first-class treatment
+internally, making it easier to handle some of the edge cases that we
+found using Domains for error handling in v0.8. Specifically, domain
+error handler no longer relies on process.on('uncaughtException')
+being raised, and the C++ code in Node is domain-aware.</p>
+<p>If you're not already using Domains to catch errors in your programs,
+and you've found yourself wishing that you could get better debugging
+information when errors are thrown (especially in the midst of lots of
+requests and asynchronous calls), then definitely check it out.</p>
+<p>In v0.8 (and before), the process.nextTick() function scheduled its
+callback using a spinner on the event loop. This usually caused the
+callback to be fired before any other I/O. However, it was not
+guaranteed.</p>
+<p>As a result, a lot of programs (including some parts of Node's
+internals) began using process.nextTick as a "do later, but before
+any actual I/O is performed" interface. Since it usually works that
+way, it seemed fine.</p>
+<p>However, under load, it's possible for a server to have a lot of I/O
+scheduled, to the point where the nextTick gets preempted for
+something else. This led to some odd errors and race conditions,
+which could not be fixed without changing the semantics of nextTick.</p>
+<p>So, that's what we did. In v0.10, nextTick handlers are run right
+after each call from C++ into JavaScript. That means that, if your
+JavaScript code calls process.nextTick, then the callback will fire
+as soon as the code runs to completion, but before going back to
+the event loop. The race is over, and all is good.</p>
+<p>However, there are programs out in the wild that use recursive calls
+to process.nextTick to avoid pre-empting the I/O event loop for
+long-running jobs. In order to avoid breaking horribly right away,
+Node will now print a deprecation warning, and ask you to use
+setImmediate for these kinds of tasks instead.</p>
+<p>One of the toughest things to get right in a garbage collected
+language is garbage collection. In order to try to avoid excessive
+memory usage, Node used to try to tell V8 to collect some garbage
+whenever the event loop was idle.</p>
+<p>However, knowing exactly when to do this is extremely difficult.
+There are different degrees of "idleness", and if you get it wrong,
+you can easily end up spending massive amounts of time collecting
+garbage when you'd least expect. In practice, disabling the
+IdleNotification call yields better performance without any
+excessive memory usage, because V8 is pretty good at knowing when it's
+the best time to run GC.</p>
+<p>So, in v0.10, we just ripped that feature out. (According to another
+point of view, we fixed the bug that it was ever there in the first
+place.) As a result, latency is much more predictable and stable.
+You won't see a difference in the benchmarks as a result of this, but
+you'll probably find that your app's response times are more reliable.</p>
+<p>When the Streams2 feature first landed in master, it disrupted a lot
+of things. We focused first on correctness rather than speed, and as
+a result of that, we got a correct implementation that was
+significantly slower.</p>
+<p>We have a consistent rule in Node, that it cannot be allowed to get
+slower for our main use cases. It took a lot of work, but over the
+last few months, we've managed to get v0.10 to an appropriate level of
+performance, without sacrificing the API goals that we had in mind.</p>
+<p>Benchmarks are complicated beasts. Until this release, we've gotten
+by with a pretty ad-hoc approach to running benchmarks. However, as
+we started actually having to track down regressions, the need for a
+more comprehensive approach was obvious.</p>
+<p>Work is underway to figure out the optimum way to get statistically
+significant benchmark results in an automated way. As it is, we're
+still seeing significant jitter in some of the data, so take the red
+and green colors with a grain of salt.</p>
+<p>The benchmarks below were run on an Apple 13-inch, Late 2011 MacBook
+Pro with a 2.8 GHz Intel Core i7 processor, 8GB of 1333MHz DDR3 RAM,
+running OS X Lion 10.7.5 (11G63b). The numbers are slightly different
+on Linux and SmartOS, but the conclusions are the same. The raw data
+is available, as well.</p>
+<p>Node is for websites, and websites run over HTTP, so this is the one
+that people usually care the most about:</p>
+<p>What we see here is that, overall, HTTP is faster. It's just slightly
+slower (1-5%) when sending extremely large string messages (i.e.
+type=bytes rather than type=buffer). But otherwise, things are
+about the same, or slightly faster.</p>
+<p>The fs.ReadStream throughput is massively improved, and less affected
+by the chunk size argument:</p>
+<p>The fs.WriteStream throughput increases considerably, for most
+workloads. As the size of the chunk goes up, the speed is limited by
+the underlying system and the cost of string conversion, so v0.8 and
+v0.10 converge. But for smaller chunk sizes (like you'd be more
+likely to see in real applications), v0.10 is a significant
+improvement.</p>
+<p>We switched to a newer version of OpenSSL, and the CryptoStream
+implementation was significantly changed to support the Stream2
+interface.</p>
+<p>The throughput of TLS connections is massively improved:</p>
+<p>However, the speed at which we can make connections is somewhat
+reduced:</p>
+<p>At this point, it seems like the connection speed is related to the
+new version of OpenSSL, but we'll be tracking that further.</p>
+<p>TLS still has more room for improvement, but this throughput increase
+is a huge step.</p>
+<p>The net throughput tests tell an interesting story. When sending
+ascii messages, they're much faster.</p>
+<p>When sending Buffer messages, they're just slightly slower. (This
+difference is less than the typical variability of the test, but they
+were run 20 times and outliers were factored out for this post.)</p>
+<p>When sending utf-8 messages, they're a bit slower than that:</p>
+<p>You might suspect that this is a result of the new Streams
+implementation. However, running the same benchmarks without using
+any of the code in Node's lib/ folder, just calling into the C++
+bindings directly, yields consistently similar results.</p>
+<p>This slight regression comes along with significant improvements in
+everything that sits on top of TCP (that is, TLS and HTTP).</p>
+<p>Keep an eye out for more work in this area. Fast is never fast
+enough!</p>
+<p>To support a higher degree of stability, and hopefully catch issues
+sooner, we have a Jenkins instance running every commit through the
+test suite, on each operating system we support. You can watch the
+action at the Node Jenkins web portal.</p>
+<p>Coming soon, we'll have automatically generated nightly builds every
+day, and eventually, the entire release process will be automated.</p>
+<p>While we're pretty rigorous about running tests and benchmarks, it's
+easy for things to slip by, and our ad-hoc methods are not cutting it
+any longer. This promises a much lower incidence of the sort of
+regressions that delayed the release of v0.10 for several months.</p>
+<p>A year ago, we said that the innovation in the Node universe would be
+happening in userland modules. Now, we've finally taken that to its
+logical conclusion, and moved our iteration on core modules into
+userland as well. Things like readable-stream and tlsnappy allow
+us to get much more user-testing, experimentation, and contributions
+to a feature.</p>
+<p>The userland module can live on as a compatibility layer so that
+libraries can use the new features, even if they need to support older
+versions of Node. This is a remarkably effective way to do node-core
+development. Future developments will continue to be iterated in
+userland modules.</p>
+<p>The question comes up pretty often whether Node is "ready for prime
+time" yet. I usually answer that it depends on your requirements for
+"prime time", but Node has been powering some high profile sites, and
+the options for "real" companies using Node for The Business are
+better than ever.</p>
+<p>It would be out of scope to try to provide an exhaustive list of all
+the companies using Node, and all of the options for support and
+training. However, here are a few resources that are quickly
+expanding to fill the "Enterprise Node" space.</p>
+<p>For those looking for commercial support,
+StrongLoop (Ben Noordhuis & Bert Belder's
+company) has released a distribution containing node v0.10 that they
+will support on Windows, Mac, Red Hat/Fedora, Debian/Ubuntu and
+multiple cloud platforms. You can download their Node distribution
+here.</p>
+<p>The Node Firm is a worldwide network of key
+Node contributors and community members that help organizations
+succeed with Node. Through corporate training, consulting,
+architectural guidance, and ongoing consulting
+subscriptions,
+they have helped Skype, Qualcomm, and others quickly and effectively
+embrace Node.</p>
+<p>Node would not be what it is without npm, and
+npm would not be what it is without the registry of published modules.
+However, relying on the public registry is problematic for many
+enterprise use-cases. Iris npm is a fully
+managed private npm registry, from Iris
+Couch, the team that runs the public npm
+registry in production.</p>
+<p>Joyent, the company you probably know as the
+custodian of the Node project, provides high performance cloud
+infrastructure specializing in real-time web and mobile applications.
+Joyent uses Node extensively throughout their stack, and provides
+impressive post-mortem debugging and real-time performance analysis
+tools
+for Node.js applications. They are also my employer, so I'd probably
+have to get a "real" job if they weren't sponsoring Node :)</p>
+<p>The focus of Node v0.12 will be to make HTTP better. Node's current
+HTTP implementation is pretty good, and clearly sufficient to do a lot
+of interesting things with. However:</p>
+<p>There is some experimentation going on in the
+tlsnappy module, which may make
+its way back into the core TLS implementation and speed things up
+considerably.</p>
+<p>After 0.12, the next major stable release will be 1.0. At that point,
+very little will change in terms of the day-to-day operation of the
+project, but it will mark a significant milestone in terms of our
+stability and willingness to add new features. However, we've already
+gotten strict about maintaining backwards compatibility, so this won't
+really be so much of a shift.</p>
+<p>New versions will still come out, especially to pull in new versions
+of our dependencies, and bugs will continue to be fixed. There's been
+talk of pinning our release cycles to V8, and automating the release
+process in some interesting ways.</p>
+<p>The goal of Node has always been to eventually be "finished" with the
+core program. Of course, that's a rather lofty goal, perhaps even
+impossible. But as we take Node to more places, and use it in more
+ways, we're getting closer to the day when the relevant innovation
+happens outside of the core Node program.</p>
+<p>Stability in the platform enables growth on top of it.</p>
+<p>core: Append filename properly in dlopen on windows (isaacs)</p>
+<p>zlib: Manage flush flags appropriately (isaacs)</p>
+<p>domains: Handle errors thrown in nested error handlers (isaacs)</p>
+<p>buffer: Strip high bits when converting to ascii (Ben Noordhuis)</p>
+<p>win/msi: Enable modify and repair (Bert Belder)</p>
+<p>win/msi: Add feature selection for various Node parts (Bert Belder)</p>
+<p>win/msi: use consistent registry key paths (Bert Belder)</p>
+<p>child_process: support sending dgram socket (Andreas Madsen)</p>
+<p>fs: Raise EISDIR on Windows when calling fs.read/write on a dir (isaacs)</p>
+<p>unix: fix strict aliasing warnings, macro-ify functions (Ben Noordhuis)</p>
+<p>unix: honor UV_THREADPOOL_SIZE environment var (Ben Noordhuis)</p>
+<p>win/tty: fix typo in color attributes enumeration (Bert Belder)</p>
+<p>win/tty: don't touch insert mode or quick edit mode (Bert Belder)</p>
+<p>Source Code: https://nodejs.org/dist/v0.10.0/node-v0.10.0.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.10.0/node-v0.10.0.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.10.0/node-v0.10.0-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.10.0/x64/node-v0.10.0-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.10.0/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.10.0/node-v0.10.0-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.10.0/node-v0.10.0-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.10.0/node-v0.10.0-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.10.0/node-v0.10.0-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.10.0/</p>
+<p>Website: https://nodejs.org/docs/v0.10.0/</p>
+<p>Documentation: https://nodejs.org/docs/v0.10.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.10.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2975. Node.js 0.8.22 (Stable)</h2>
+    <div class="article-meta">
+        📅 Mar 07, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.22" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.22%20(Stable)" alt="Node.js 0.8.22 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.22%20(Stable)" alt="Node.js 0.8.22 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>cluster: propagate bind errors (Ben Noordhuis)</p>
+<p>crypto: don't assert when calling Cipher#final() twice (Ben Noordhuis)</p>
+<p>build, windows: disable SEH (Ben Noordhuis)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.22/node-v0.8.22.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.22/node-v0.8.22.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.22/node-v0.8.22-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.22/x64/node-v0.8.22-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.22/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.22/node-v0.8.22-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.22/node-v0.8.22-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.22/node-v0.8.22-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.22/node-v0.8.22-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.22/</p>
+<p>Website: https://nodejs.org/docs/v0.8.22/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.22/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.22" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2977. Node.js 0.9.12 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Mar 06, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.12" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.12%20(Unstable)" alt="Node.js 0.9.12 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.12%20(Unstable)" alt="Node.js 0.9.12 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>As of this release, Node v0.9 is finally performing faster than v0.8
+on HTTP, file system, and TLS benchmarks.</p>
+<p>Unless there are serious problems found, v0.10.0 will be released on
+Monday, 2013.03.11, along with more details about the benchmark
+results and the plans for what comes next.</p>
+<p>Please consider this a v0.10 Release Candidate. Use it in your
+programs. It is as stable as 0.9 is going to get.</p>
+<p>stream: Allow strings in Readable.push/unshift (isaacs)</p>
+<p>stream: Remove bufferSize option (isaacs)</p>
+<p>stream: Increase highWaterMark on large reads (isaacs)</p>
+<p>stream: _write: takes an encoding argument (isaacs)</p>
+<p>stream: _transform: remove output() method, provide encoding (isaacs)</p>
+<p>stream: Don't require read(0) to emit 'readable' event (isaacs)</p>
+<p>http: fix multiple timeout events (Eugene Girshov)</p>
+<p>http: More useful setTimeout API on server (isaacs)</p>
+<p>net: use close callback, not process.nextTick (Ben Noordhuis)</p>
+<p>net: Provide better error when writing after FIN (isaacs)</p>
+<p>dns: fix ReferenceError in resolve() error path (Xidorn Quan)</p>
+<p>child_process: handle ENOENT correctly on Windows (Scott Blomquist)</p>
+<p>cluster: Rename destroy() to kill(signal=SIGTERM) (isaacs)</p>
+<p>build: define nightly tag external to build system (Timothy J Fontaine)</p>
+<p>build: make msi build work when spaces are present in the path (Bert Belder)</p>
+<p>build: fix msi build issue with WiX 3.7/3.8 (Raymond Feng)</p>
+<p>repl: make compatible with domains (Dave Olszewski)</p>
+<p>events: Code cleanup and performance improvements (Trevor Norris)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.12/node-v0.9.12.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.12/node-v0.9.12.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.12/node-v0.9.12-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.12/x64/node-v0.9.12-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.12/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.12/node-v0.9.12-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.12/node-v0.9.12-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.12/node-v0.9.12-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.12/node-v0.9.12-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.12/</p>
+<p>Website: https://nodejs.org/docs/v0.9.12/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.12/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.12" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2979. Node.js 0.9.11 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Mar 01, 2013 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.11" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.11%20(Unstable)" alt="Node.js 0.9.11 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.11%20(Unstable)" alt="Node.js 0.9.11 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>darwin: Make process.title work properly (Ben Noordhuis)</p>
+<p>fs: Support mode/flag options to read/append/writeFile (isaacs)</p>
+<p>stream: _read() no longer takes a callback (isaacs)</p>
+<p>stream: Add stream.unshift(chunk) (isaacs)</p>
+<p>stream: remove lowWaterMark feature (isaacs)</p>
+<p>net: omit superfluous 'connect' event (Ben Noordhuis)</p>
+<p>build, windows: disable SEH (Ben Noordhuis)</p>
+<p>core: remove errno global (Ben Noordhuis)</p>
+<p>core: Remove the nextTick for running the main file (isaacs)</p>
+<p>core: Mark exit() calls with status codes (isaacs)</p>
+<p>core: Fix debug signal handler race condition lock (isaacs)</p>
+<p>crypto: clear error stack (Ben Noordhuis)</p>
+<p>test: optionally set common.PORT via env variable (Timothy J Fontaine)</p>
+<p>path: Throw TypeError on non-string args to path.resolve/join (isaacs, Arianit Uka)</p>
+<p>crypto: fix uninitialized memory access in openssl (Ben Noordhuis)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.11/node-v0.9.11.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.11/node-v0.9.11.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.11/node-v0.9.11-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.11/x64/node-v0.9.11-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.11/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.11/node-v0.9.11-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.11/node-v0.9.11-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.11/node-v0.9.11-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.11/node-v0.9.11-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.11/</p>
+<p>Website: https://nodejs.org/docs/v0.9.11/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.11/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.11" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2981. Node.js 0.8.21 (Stable)</h2>
+    <div class="article-meta">
+        📅 Feb 25, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.21" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.21%20(Stable)" alt="Node.js 0.8.21 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.21%20(Stable)" alt="Node.js 0.8.21 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>http: Do not free the wrong parser on socket close (isaacs)</p>
+<p>http: Handle hangup writes more gently (isaacs)</p>
+<p>zlib: fix assert on bad input (Ben Noordhuis)</p>
+<p>test: add TAP output to the test runner (Timothy J Fontaine)</p>
+<p>unix: Handle EINPROGRESS from domain sockets (Ben Noordhuis)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.21/node-v0.8.21.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.21/node-v0.8.21.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.21/node-v0.8.21-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.21/x64/node-v0.8.21-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.21/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.21/node-v0.8.21-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.21/node-v0.8.21-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.21/node-v0.8.21-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.21/node-v0.8.21-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.21/</p>
+<p>Website: https://nodejs.org/docs/v0.8.21/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.21/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.21" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2983. Node.js 0.9.10 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Feb 19, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.10" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.10%20(Unstable)" alt="Node.js 0.9.10 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.10%20(Unstable)" alt="Node.js 0.9.10 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>fs: Change default WriteStream config, increase perf (isaacs)</p>
+<p>process: streamlining tick callback logic (Trevor Norris)</p>
+<p>stream_wrap, udp_wrap: add read-only fd property (Ben Noordhuis)</p>
+<p>buffer: accept negative indices in Buffer#slice() (Ben Noordhuis)</p>
+<p>tls: Cycle data when underlying socket drains (isaacs)</p>
+<p>stream: read(0) should not always trigger _read(n,cb) (isaacs)</p>
+<p>stream: Empty strings/buffers do not signal EOF any longer (isaacs)</p>
+<p>crypto: improve cipher/decipher error messages (Ben Noordhuis)</p>
+<p>net: Respect the 'readable' flag on sockets (isaacs)</p>
+<p>net: don't suppress ECONNRESET (Ben Noordhuis)</p>
+<p>typed arrays: copy Buffer in typed array constructor (Ben Noordhuis)</p>
+<p>typed arrays: make DataView throw on non-ArrayBuffer (Ben Noordhuis)</p>
+<p>windows: MSI installer enhancements (Scott Blomquist, Jim Schubert)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.10/node-v0.9.10.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.10/node-v0.9.10.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.10/node-v0.9.10-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.10/x64/node-v0.9.10-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.10/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.10/node-v0.9.10-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.10/node-v0.9.10-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.10/node-v0.9.10-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.10/node-v0.9.10-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.10/</p>
+<p>Website: https://nodejs.org/docs/v0.9.10/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.10/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.10" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2985. Node.js 0.8.20 (Stable)</h2>
+    <div class="article-meta">
+        📅 Feb 15, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.20" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.20%20(Stable)" alt="Node.js 0.8.20 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.20%20(Stable)" alt="Node.js 0.8.20 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>http: Do not let Agent hand out destroyed sockets (isaacs)</p>
+<p>http: Raise hangup error on destroyed socket write (isaacs)</p>
+<p>http: protect against response splitting attacks (Bert Belder)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.20/node-v0.8.20.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.20/node-v0.8.20.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.20/node-v0.8.20-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.20/x64/node-v0.8.20-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.20/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.20/node-v0.8.20-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.20/node-v0.8.20-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.20/node-v0.8.20-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.20/node-v0.8.20-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.20/</p>
+<p>Website: https://nodejs.org/docs/v0.8.20/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.20/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.20" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2987. Peer Dependencies</h2>
+    <div class="article-meta">
+        📅 Feb 08, 2013 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/npm/peer-dependencies" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/npm/Node.js%20%E2%80%94%20Peer%20Dependencies" alt="Peer Dependencies" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/npm/Node.js%20%E2%80%94%20Peer%20Dependencies" alt="Peer Dependencies" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Reposted from Domenic's blog with permission. Thanks!</p>
+<p>npm is awesome as a package manager. In particular, it handles sub-dependencies very well: if my package depends on
+request version 2 and some-other-library, but some-other-library depends on request version 1, the resulting
+dependency graph looks like:</p>
+<p>This is, generally, great: now some-other-library has its own copy of request v1 that it can use, while not
+interfering with my package's v2 copy. Everyone's code works!</p>
+<p>There's one use case where this falls down, however: plugins. A plugin package is meant to be used with another "host"
+package, even though it does not always directly use the host package. There are many examples of this pattern in the
+Node.js package ecosystem already:</p>
+<p>Even if you're not familiar with any of those use cases, surely you recall "jQuery plugins" from back when you were a
+client-side developer: little <script>s you would drop into your page that would attach things to jQuery.prototype
+for your later convenience.</p>
+<p>In essence, plugins are designed to be used with host packages. But more importantly, they're designed to be used with
+particular versions of host packages. For example, versions 1.x and 2.x of my chai-as-promised plugin work with
+chai version 0.5, whereas versions 3.x work with chai 1.x. Or, in the faster-paced and less-semver–friendly world of
+Grunt plugins, version 0.3.1 of grunt-contrib-stylus works with grunt 0.4.0rc4, but breaks when used with grunt
+0.4.0rc5 due to removed APIs.</p>
+<p>As a package manager, a large part of npm's job when installing your dependencies is managing their versions. But its
+usual model, with a "dependencies" hash in package.json, clearly falls down for plugins. Most plugins never actually
+depend on their host package, i.e. grunt plugins never do require("grunt"), so even if plugins did put down their host
+package as a dependency, the downloaded copy would never be used. So we'd be back to square one, with your application
+possibly plugging in the plugin to a host package that it's incompatible with.</p>
+<p>Even for plugins that do have such direct dependencies, probably due to the host package supplying utility APIs,
+specifying the dependency in the plugin's package.json would result in a dependency tree with multiple copies of the
+host package—not what you want. For example, let's pretend that winston-mail 0.2.3 specified "winston": "0.5.x" in
+its "dependencies" hash, since that's the latest version it was tested against. As an app developer, you want the
+latest and greatest stuff, so you look up the latest versions of winston and of winston-mail, putting them in your
+package.json as</p>
+<p>But now, running npm install results in the unexpected dependency graph of</p>
+<p>I'll leave the subtle failures that come from the plugin using a different Winston API than the main application to
+your imagination.</p>
+<p>What we need is a way of expressing these "dependencies" between plugins and their host package. Some way of saying, "I
+only work when plugged in to version 1.2.x of my host package, so if you install me, be sure that it's alongside a
+compatible host." We call this relationship a peer dependency.</p>
+<p>The peer dependency idea has been kicked around for literally
+years. After
+volunteering to get this done "over the weekend" nine
+months ago, I finally found a free weekend, and now peer dependencies are in npm!</p>
+<p>Specifically, they were introduced in a rudimentary form in npm 1.2.0, and refined over the next few releases into
+something I'm actually happy with. Today Isaac packaged up npm 1.2.10 into
+Node.js 0.8.19, so if you've installed the latest version of
+Node, you should be ready to use peer dependencies!</p>
+<p>As proof, I present you the results of trying to install jitsu 0.11.6 with npm
+1.2.10:</p>
+<p>As you can see, jitsu depends on two Flatiron-related packages, which themselves peer-depend on conflicting versions
+of Flatiron. Good thing npm was around to help us figure out this conflict, so it could be fixed in version 0.11.7!</p>
+<p>Peer dependencies are pretty simple to use. When writing a plugin, figure out what version of the host package you
+peer-depend on, and add it to your package.json:</p>
+<p>Now, when installing chai-as-promised, the chai package will come along with it. And if later you try to install
+another Chai plugin that only works with 0.x versions of Chai, you'll get an error. Nice!</p>
+<p>UPDATE: npm versions 1, 2, and 7 will automatically install
+peerDependencies if they are not explicitly depended upon higher in the
+dependency tree. For npm versions 3 through 6, you will receive a warning that
+the peerDependency is not installed instead.</p>
+<p>One piece of advice: peer dependency requirements, unlike those for regular dependencies, should be lenient. You
+should not lock your peer dependencies down to specific patch versions. It would be really annoying if one Chai plugin
+peer-depended on Chai 1.4.1, while another depended on Chai 1.5.0, simply because the authors were lazy and didn't spend
+the time figuring out the actual minimum version of Chai they are compatible with.</p>
+<p>The best way to determine what your peer dependency requirements should be is to actually follow
+semver. Assume that only changes in the host package's major version will break your plugin. Thus,
+if you've worked with every 1.x version of the host package, use "~1.0" or "1.x" to express this. If you depend on
+features introduced in 1.5.2, use ">= 1.5.2 < 2".</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/npm/peer-dependencies" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2988. Node.js 0.8.19 (Stable)</h2>
+    <div class="article-meta">
+        📅 Feb 06, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.19" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.19%20(Stable)" alt="Node.js 0.8.19 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.19%20(Stable)" alt="Node.js 0.8.19 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>zlib: pass object size hint to V8 (Ben Noordhuis)</p>
+<p>zlib: reduce memory consumption, release early (Ben Noordhuis)</p>
+<p>buffer: slow buffer copy compatibility fix (Trevor Norris)</p>
+<p>zlib: don't assert on malformed dictionary (Ben Noordhuis)</p>
+<p>zlib: don't assert on missing dictionary (Ben Noordhuis)</p>
+<p>windows: better ipv6 support (Bert Belder)</p>
+<p>windows: add error mappings related to unsupported protocols (Bert Belder)</p>
+<p>windows: map ERROR_DIRECTORY to UV_ENOENT (Bert Belder)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.19/node-v0.8.19.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.19/node-v0.8.19.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.19/node-v0.8.19-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.19/x64/node-v0.8.19-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.19/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.19/node-v0.8.19-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.19/node-v0.8.19-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.19/node-v0.8.19-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.19/node-v0.8.19-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.19/</p>
+<p>Website: https://nodejs.org/docs/v0.8.19/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.19/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.19" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2990. Node.js 0.9.8 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Jan 24, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.8" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.8%20(Unstable)" alt="Node.js 0.9.8 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.8%20(Unstable)" alt="Node.js 0.9.8 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>streams: Support objects other than Buffers (Jake Verbaten)</p>
+<p>buffer: remove float write range checks (Trevor Norris)</p>
+<p>http: close connection on 304/204 responses with chunked encoding (Ben Noordhuis)</p>
+<p>build: fix build with dtrace support on FreeBSD (Fedor Indutny)</p>
+<p>console: Support formatting options in trace() (isaacs)</p>
+<p>domain: empty stack on all exceptions (Dave Olszewski)</p>
+<p>unix, windows: make uv_*_bind() error codes consistent (Andrius Bentkus)</p>
+<p>linux: add futimes() fallback (Ben Noordhuis)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.8/node-v0.9.8.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.8/node-v0.9.8.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.8/node-v0.9.8-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.8/x64/node-v0.9.8-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.8/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.8/node-v0.9.8-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.8/node-v0.9.8-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.8/node-v0.9.8-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.8/node-v0.9.8-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.8/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.8/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.8" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2992. Node.js 0.8.18 (Stable)</h2>
+    <div class="article-meta">
+        📅 Jan 18, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.18" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.18%20(Stable)" alt="Node.js 0.8.18 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.18%20(Stable)" alt="Node.js 0.8.18 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>dns: make error message match errno (Dan Milon)</p>
+<p>tls: follow RFC6125 more stricly (Fedor Indutny)</p>
+<p>buffer: reject negative SlowBuffer offsets (Ben Noordhuis)</p>
+<p>install: add simplejson fallback (Chris Dent)</p>
+<p>http: fix "Cannot call method 'emit' of null" (Ben Noordhuis)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.18/node-v0.8.18.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.18/node-v0.8.18.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.18/node-v0.8.18-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.18/x64/node-v0.8.18-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.18/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.18/node-v0.8.18-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.18/node-v0.8.18-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.18/node-v0.8.18-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.18/node-v0.8.18-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.18/</p>
+<p>Website: https://nodejs.org/docs/v0.8.18/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.18/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.18" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2994. Node.js 0.9.7 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Jan 18, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.7" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.7%20(Unstable)" alt="Node.js 0.9.7 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.7%20(Unstable)" alt="Node.js 0.9.7 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>punycode: Upgrade to 1.2.0 (Mathias Bynens)</p>
+<p>repl: make built-in modules available by default (Felix Böhm)</p>
+<p>windows: add support for '_Total' perf counters (Scott Blomquist)</p>
+<p>cluster: make --prof work for workers (Ben Noordhuis)</p>
+<p>child_process: do not keep list of sent sockets (Fedor Indutny)</p>
+<p>tls: Follow RFC6125 more strictly (Fedor Indutny)</p>
+<p>buffer: floating point read/write improvements (Trevor Norris)</p>
+<p>TypedArrays: Improve dataview perf without endian param (Dean McNamee)</p>
+<p>module: assert require() called with a non-empty string (Felix Böhm, James Campos)</p>
+<p>stdio: Set readable/writable flags properly (isaacs)</p>
+<p>stream: Properly handle large reads from push-streams (isaacs)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.7/node-v0.9.7.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.7/node-v0.9.7.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.7/node-v0.9.7-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.7/x64/node-v0.9.7-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.7/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.7/node-v0.9.7-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.7/node-v0.9.7-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.7/node-v0.9.7-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.7/node-v0.9.7-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.7/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.7/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.7" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2996. Node.js 0.9.6 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Jan 11, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.6" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.6%20(Unstable)" alt="Node.js 0.9.6 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.6%20(Unstable)" alt="Node.js 0.9.6 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>path: make basename and extname ignore trailing slashes (Bert Belder)</p>
+<p>typed arrays: fix sunos signed/unsigned char issue (Ben Noordhuis)</p>
+<p>child_process: Fix {stdio:'inherit'} regression (Ben Noordhuis)</p>
+<p>child_process: Fix pipe() from child stdio streams (Maciej Małecki)</p>
+<p>child_process: make fork() execPath configurable (Bradley Meck)</p>
+<p>stream: Add readable.push(chunk) method (isaacs)</p>
+<p>dtrace: x64 ustack helper (Fedor Indutny)</p>
+<p>repl: fix floating point number parsing (Nirk Niggler)</p>
+<p>repl: allow overriding builtins (Ben Noordhuis)</p>
+<p>net: add localAddress and localPort to Socket (James Hight)</p>
+<p>fs: make pool size coincide with ReadStream bufferSize (Shigeki Ohtsu)</p>
+<p>typed arrays: implement load and store swizzling (Dean McNamee)</p>
+<p>windows: fix perfctr crash on XP and 2003 (Scott Blomquist)</p>
+<p>dgram: fix double implicit bind error (Ben Noordhuis)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.6/node-v0.9.6.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.6/node-v0.9.6.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.6/node-v0.9.6-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.6/x64/node-v0.9.6-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.6/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.6/node-v0.9.6-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.6/node-v0.9.6-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.6/node-v0.9.6-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.6/node-v0.9.6-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.6/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.6/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.6" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2998. Node.js 0.8.17 (Stable)</h2>
+    <div class="article-meta">
+        📅 Jan 10, 2013 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.17" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.17%20(Stable)" alt="Node.js 0.8.17 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.17%20(Stable)" alt="Node.js 0.8.17 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This release addresses a potential security vulnerability.</p>
+<p>If you do not use TypedArrays, then you're fine (but should still
+upgrade for other reasons, like better performance and npm
+peerDependencies.)</p>
+<p>If you use TypedArrays, you should upgrade to v0.8.17 as soon as
+possible. If user input can affect the size parameter in a
+TypedArray, an integer overflow vulnerability could allow an attacker
+to write to areas of memory outside the intended buffer. Please
+upgrade ASAP.</p>
+<p>typed arrays: fix 32 bit size/index overflow (Ben Noordhuis)</p>
+<p>http: Improve performance of single-packet responses (Ben Noordhuis)</p>
+<p>install: fix openbsd man page location (Ben Noordhuis)</p>
+<p>http: bubble up parser errors to ClientRequest (Brian White)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.17/node-v0.8.17.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.17/node-v0.8.17.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.17/node-v0.8.17-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.17/x64/node-v0.8.17-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.17/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.17/node-v0.8.17-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.17/node-v0.8.17-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.17/node-v0.8.17-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.17/node-v0.8.17-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.17/</p>
+<p>Website: https://nodejs.org/docs/v0.8.17/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.17/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.17" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3000. Node.js 0.9.5 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Dec 30, 2012 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.5" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.5%20(Unstable)" alt="Node.js 0.9.5 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.5%20(Unstable)" alt="Node.js 0.9.5 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>assert: improve support for new execution contexts (lukebayes)</p>
+<p>domain: use camelCase instead of snake_case (isaacs)</p>
+<p>domain: Do not use uncaughtException handler (isaacs)</p>
+<p>fs: make 'end' work with ReadStream without 'start' (Ben Noordhuis)</p>
+<p>https: optimize createConnection() (Ryunosuke SATO)</p>
+<p>buffer: speed up base64 encoding by 20% (Ben Noordhuis)</p>
+<p>doc: Colorize API stabilitity index headers in docs (Luke Arduini)</p>
+<p>net: socket.readyState corrections (bentaber)</p>
+<p>http: Performance enhancements for http under streams2 (isaacs)</p>
+<p>stream: fix to emit end event on http.ClientResponse (Shigeki Ohtsu)</p>
+<p>stream: fix event handler leak in readstream pipe and unpipe (Andreas Madsen)</p>
+<p>build: Support ./configure --tag switch (Maciej Małecki)</p>
+<p>repl: don't touch require.cache (Nathan Rajlich)</p>
+<p>node: Emit 'exit' event when exiting for an uncaught exception (isaacs)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.5/node-v0.9.5.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.5/node-v0.9.5.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.5/node-v0.9.5-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.5/x64/node-v0.9.5-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.5/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.5/node-v0.9.5-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.5/node-v0.9.5-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.5/node-v0.9.5-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.5/node-v0.9.5-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.5/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.5/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.5" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3002. Node.js 0.9.4 (Unstable)</h2>
+    <div class="article-meta">
+        📅 Dec 21, 2012 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.9.4" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.4%20(Unstable)" alt="Node.js 0.9.4 (Unstable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.9.4%20(Unstable)" alt="Node.js 0.9.4 (Unstable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>streams: Update all streaming interfaces to use new classes (isaacs)</p>
+<p>http: protect against response splitting attacks (Bert Belder)</p>
+<p>fs: Raise error when null bytes detected in paths (isaacs)</p>
+<p>fs: fix 'object is not a function' callback errors (Ben Noordhuis)</p>
+<p>fs: add autoClose=true option to fs.createReadStream (Farid Neshat)</p>
+<p>process: add getgroups(), setgroups(), initgroups() (Ben Noordhuis)</p>
+<p>openssl: optimized asm code on x86 and x64 (Bert Belder)</p>
+<p>crypto: fix leak in GetPeerCertificate (Fedor Indutny)</p>
+<p>windows: add ETW and PerfCounters support (Scott Blomquist)</p>
+<p>windows: fix normalization of UNC paths (Bert Belder)</p>
+<p>crypto: fix ssl error handling (Sergey Kholodilov)</p>
+<p>os: add os.endianness() function (Nathan Rajlich)</p>
+<p>readline: don't emit "line" events with a trailing 'n' char (Nathan Rajlich)</p>
+<p>build: add configure option to generate xcode build files (Timothy J Fontaine)</p>
+<p>build: allow linking against system libuv, cares, http_parser (Stephen Gallagher)</p>
+<p>typed arrays: add slice() support to ArrayBuffer (Anthony Pesch)</p>
+<p>debugger: exit and kill child on SIGTERM or SIGHUP (Fedor Indutny)</p>
+<p>url: url.format escapes delimiters in path and query (J. Lee Coltrane)</p>
+<p>Source Code: https://nodejs.org/dist/v0.9.4/node-v0.9.4.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.9.4/node-v0.9.4.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.9.4/node-v0.9.4-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.9.4/x64/node-v0.9.4-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.9.4/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.9.4/node-v0.9.4-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.9.4/node-v0.9.4-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.9.4/node-v0.9.4-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.9.4/node-v0.9.4-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.9.4/</p>
+<p>Documentation: https://nodejs.org/docs/v0.9.4/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.9.4" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3004. A New Streaming API for Node v0.10</h2>
+    <div class="article-meta">
+        📅 Dec 21, 2012 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/feature/streams2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/feature/Node.js%20%E2%80%94%20A%20New%20Streaming%20API%20for%20Node%20v0.10" alt="A New Streaming API for Node v0.10" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/feature/Node.js%20%E2%80%94%20A%20New%20Streaming%20API%20for%20Node%20v0.10" alt="A New Streaming API for Node v0.10" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Throughout the life of Node, we've been gradually iterating on the
+ideal event-based API for handling data. Over time, this developed
+into the "Stream" interface that you see throughout Node's core
+modules and many of the modules in npm.</p>
+<p>Consistent interfaces increase the portability and reliability of our
+programs and libraries. Overall, the move from domain-specific events
+and methods towards a unified stream interface was a huge win.
+However, there are still several problems with Node's streams as of
+v0.8. In a nutshell:</p>
+<p>Common simple tasks should be easy, or we aren't doing our job.
+People often say that Node is better than most other platforms at this
+stuff, but in my opinion, that is less of a compliment and more of an
+indictment of the current state of software. Being better than the
+next guy isn't enough; we have to be the best imaginable. While they
+were a big step in the right direction, the Streams in Node up until
+now leave a lot wanting.</p>
+<p>Well, we are sitting on the results of several years of explosive
+growth in the Node community, so any changes have to be made very
+carefully. If we break all the Node programs in 0.10, then no one
+will ever want to upgrade to 0.10, and it's all pointless. We had
+this conversation around 0.4, then again around 0.6, then again around
+0.8. Every time, the conclusion has been "Too much work, too hard to
+make backwards-compatible", and we always had more pressing problems
+to solve.</p>
+<p>In 0.10, we cannot put it off any longer. We've bitten the bullet and
+are making a significant change to the Stream implementation. You may
+have seen conversations on twitter or IRC or the mailing list about
+"streams2". I also gave a talk in
+November
+about this subject. A lot of node module authors have been involved
+with the development of streams2 (and of course the node core team).</p>
+<p>The feature is described pretty thoroughly in the documentation, so
+I'm including it below. Please read it, especially the section on
+"compatibility". There's a caveat there that is unfortunately
+unavoidable, but hopefully enough of an edge case that it's easily
+worked around.</p>
+<p>The first preview release with this change will be 0.9.4. I highly
+recommend trying this release and providing feedback before it lands
+in a stable version.</p>
+<p>As of writing this post, there are some known performance regressions,
+especially in the http module. We are fanatical about maintaining
+performance in Node.js, so of course this will have to be fixed before
+the v0.10 stable release. (Watch for a future blog post on the tools
+and techniques that have been useful in tracking down these issues.)</p>
+<p>There may be minor changes as necessary to fix bugs and improve
+performance, but the API at this point should be considered feature
+complete. It correctly does all the things we need it to do, it just
+doesn't do them quite well enough yet. As always, be wary of running
+unstable releases in production, of course, but I encourage you to try
+it out and see what you think. Especially, if you have tests that you
+can run on your modules and libraries, that would be extremely useful
+feedback.</p>
+<p>A stream is an abstract interface implemented by various objects in
+Node. For example a request to an HTTP server is a stream, as is
+stdout. Streams are readable, writable, or both. All streams are
+instances of EventEmitter</p>
+<p>You can load the Stream base classes by doing require('stream').
+There are base classes provided for Readable streams, Writable
+streams, Duplex streams, and Transform streams.</p>
+<p>In earlier versions of Node, the Readable stream interface was
+simpler, but also less powerful and less useful.</p>
+<p>In Node v0.10, the Readable class described below was added. For
+backwards compatibility with older Node programs, Readable streams
+switch into "old mode" when a 'data' event handler is added, or when
+the pause() or resume() methods are called. The effect is that,
+even if you are not using the new read() method and 'readable'
+event, you no longer have to worry about losing 'data' chunks.</p>
+<p>Most programs will continue to function normally. However, this
+introduces an edge case in the following conditions:</p>
+<p>For example, consider the following code:</p>
+<p>In versions of node prior to v0.10, the incoming message data would be
+simply discarded. However, in Node v0.10 and beyond, the socket will
+remain paused forever.</p>
+<p>The workaround in this situation is to call the resume() method to
+trigger "old mode" behavior:</p>
+<p>In addition to new Readable streams switching into old-mode, pre-v0.10
+style streams can be wrapped in a Readable class using the wrap()
+method.</p>
+<p>A Readable Stream has the following methods, members, and events.</p>
+<p>Note that stream.Readable is an abstract class designed to be
+extended with an underlying implementation of the _read(size)
+method. (See below.)</p>
+<p>In classes that extend the Readable class, make sure to call the
+constructor so that the buffering settings can be properly
+initialized.</p>
+<p>Note: This function should NOT be called directly. It should be
+implemented by child classes, and called by the internal Readable
+class methods only.</p>
+<p>All Readable stream implementations must provide a _read method
+to fetch data from the underlying resource.</p>
+<p>This method is prefixed with an underscore because it is internal to
+the class that defines it, and should not be called directly by user
+programs. However, you are expected to override this method in
+your own extension classes.</p>
+<p>When data is available, put it into the read queue by calling
+readable.push(chunk). If push returns false, then you should stop
+reading. When _read is called again, you should start pushing more
+data.</p>
+<p>The size argument is advisory. Implementations where a "read" is a
+single call that returns data can use this to know how much data to
+fetch. Implementations where that is not relevant, such as TCP or
+TLS, may ignore this argument, and simply provide data whenever it
+becomes available. There is no need, for example to "wait" until
+size bytes are available before calling stream.push(chunk).</p>
+<p>Note: This function should be called by Readable implementors, NOT
+by consumers of Readable subclasses. The _read() function will not
+be called again until at least one push(chunk) call is made. If no
+data is available, then you MAY call push('') (an empty string) to
+allow a future _read call, without adding any data to the queue.</p>
+<p>The Readable class works by putting data into a read queue to be
+pulled out later by calling the read() method when the 'readable'
+event fires.</p>
+<p>The push() method will explicitly insert some data into the read
+queue. If it is called with null then it will signal the end of the
+data.</p>
+<p>In some cases, you may be wrapping a lower-level source which has some
+sort of pause/resume mechanism, and a data callback. In those cases,
+you could wrap the low-level source object by doing something like
+this:</p>
+<p>This is the corollary of readable.push(chunk). Rather than putting
+the data at the end of the read queue, it puts it at the front of
+the read queue.</p>
+<p>This is useful in certain use-cases where a stream is being consumed
+by a parser, which needs to "un-consume" some data that it has
+optimistically pulled out of the source.</p>
+<p>If you are using an older Node library that emits 'data' events and
+has a pause() method that is advisory only, then you can use the
+wrap() method to create a Readable stream that uses the old stream
+as its data source.</p>
+<p>When there is data ready to be consumed, this event will fire.</p>
+<p>When this event emits, call the read() method to consume the data.</p>
+<p>Emitted when the stream has received an EOF (FIN in TCP terminology).
+Indicates that no more 'data' events will happen. If the stream is
+also writable, it may be possible to continue writing.</p>
+<p>The 'data' event emits either a Buffer (by default) or a string if
+setEncoding() was used.</p>
+<p>Note that adding a 'data' event listener will switch the Readable
+stream into "old mode", where data is emitted as soon as it is
+available, rather than waiting for you to call read() to consume it.</p>
+<p>Emitted if there was an error receiving data.</p>
+<p>Emitted when the underlying resource (for example, the backing file
+descriptor) has been closed. Not all streams will emit this.</p>
+<p>Makes the 'data' event emit a string instead of a Buffer. encoding
+can be 'utf8', 'utf16le' ('ucs2'), 'ascii', or 'hex'.</p>
+<p>The encoding can also be set by specifying an encoding field to the
+constructor.</p>
+<p>Note: This function SHOULD be called by Readable stream users.</p>
+<p>Call this method to consume data once the 'readable' event is
+emitted.</p>
+<p>The size argument will set a minimum number of bytes that you are
+interested in. If not set, then the entire content of the internal
+buffer is returned.</p>
+<p>If there is no data to consume, or if there are fewer bytes in the
+internal buffer than the size argument, then null is returned, and
+a future 'readable' event will be emitted when more is available.</p>
+<p>Calling stream.read(0) will always return null, and will trigger a
+refresh of the internal buffer, but otherwise be a no-op.</p>
+<p>Connects this readable stream to destination WriteStream. Incoming
+data on this stream gets written to destination. Properly manages
+back-pressure so that a slow destination will not be overwhelmed by a
+fast readable stream.</p>
+<p>This function returns the destination stream.</p>
+<p>For example, emulating the Unix cat command:</p>
+<p>By default end() is called on the destination when the source stream
+emits end, so that destination is no longer writable. Pass { end: false } as options to keep the destination stream open.</p>
+<p>This keeps writer open so that "Goodbye" can be written at the
+end.</p>
+<p>Note that process.stderr and process.stdout are never closed until
+the process exits, regardless of the specified options.</p>
+<p>Undo a previously established pipe(). If no destination is
+provided, then all previously established pipes are removed.</p>
+<p>Switches the readable stream into "old mode", where data is emitted
+using a 'data' event rather than being buffered for consumption via
+the read() method.</p>
+<p>Ceases the flow of data. No 'data' events are emitted while the
+stream is in a paused state.</p>
+<p>Switches the readable stream into "old mode", where data is emitted
+using a 'data' event rather than being buffered for consumption via
+the read() method.</p>
+<p>Resumes the incoming 'data' events after a pause().</p>
+<p>A Writable Stream has the following methods, members, and events.</p>
+<p>Note that stream.Writable is an abstract class designed to be
+extended with an underlying implementation of the
+_write(chunk, encoding, cb) method. (See below.)</p>
+<p>In classes that extend the Writable class, make sure to call the
+constructor so that the buffering settings can be properly
+initialized.</p>
+<p>All Writable stream implementations must provide a _write method to
+send data to the underlying resource.</p>
+<p>Note: This function MUST NOT be called directly. It should be
+implemented by child classes, and called by the internal Writable
+class methods only.</p>
+<p>Call the callback using the standard callback(error) pattern to
+signal that the write completed successfully or with an error.</p>
+<p>If the decodeStrings flag is set in the constructor options, then
+chunk may be a string rather than a Buffer, and encoding will
+indicate the sort of string that it is. This is to support
+implementations that have an optimized handling for certain string
+data encodings. If you do not explicitly set the decodeStrings
+option to false, then you can safely ignore the encoding argument,
+and assume that chunk will always be a Buffer.</p>
+<p>This method is prefixed with an underscore because it is internal to
+the class that defines it, and should not be called directly by user
+programs. However, you are expected to override this method in
+your own extension classes.</p>
+<p>Writes chunk to the stream. Returns true if the data has been
+flushed to the underlying resource. Returns false to indicate that
+the buffer is full, and the data will be sent out in the future. The
+'drain' event will indicate when the buffer is empty again.</p>
+<p>The specifics of when write() will return false, is determined by
+the highWaterMark option provided to the constructor.</p>
+<p>Call this method to signal the end of the data being written to the
+stream.</p>
+<p>Emitted when the stream's write queue empties and it's safe to write
+without buffering again. Listen for it when stream.write() returns
+false.</p>
+<p>Emitted when the underlying resource (for example, the backing file
+descriptor) has been closed. Not all streams will emit this.</p>
+<p>When end() is called and there are no more chunks to write, this
+event is emitted.</p>
+<p>Emitted when the stream is passed to a readable stream's pipe method.</p>
+<p>Emitted when a previously established pipe() is removed using the
+source Readable stream's unpipe() method.</p>
+<p>A "duplex" stream is one that is both Readable and Writable, such as a
+TCP socket connection.</p>
+<p>Note that stream.Duplex is an abstract class designed to be
+extended with an underlying implementation of the _read(size)
+and _write(chunk, encoding, callback) methods as you would with a Readable or
+Writable stream class.</p>
+<p>Since JavaScript doesn't have multiple prototypal inheritance, this
+class prototypally inherits from Readable, and then parasitically from
+Writable. It is thus up to the user to implement both the lowlevel
+_read(n) method as well as the lowlevel _write(chunk, encoding, cb) method
+on extension duplex classes.</p>
+<p>In classes that extend the Duplex class, make sure to call the
+constructor so that the buffering settings can be properly
+initialized.</p>
+<p>A "transform" stream is a duplex stream where the output is causally
+connected in some way to the input, such as a zlib stream or a crypto
+stream.</p>
+<p>There is no requirement that the output be the same size as the input,
+the same number of chunks, or arrive at the same time. For example, a
+Hash stream will only ever have a single chunk of output which is
+provided when the input is ended. A zlib stream will either produce
+much smaller or much larger than its input.</p>
+<p>Rather than implement the _read() and _write() methods, Transform
+classes must implement the _transform() method, and may optionally
+also implement the _flush() method. (See below.)</p>
+<p>In classes that extend the Transform class, make sure to call the
+constructor so that the buffering settings can be properly
+initialized.</p>
+<p>Note: This function MUST NOT be called directly. It should be
+implemented by child classes, and called by the internal Transform
+class methods only.</p>
+<p>All Transform stream implementations must provide a _transform
+method to accept input and produce output.</p>
+<p>_transform should do whatever has to be done in this specific
+Transform class, to handle the bytes being written, and pass them off
+to the readable portion of the interface. Do asynchronous I/O,
+process things, and so on.</p>
+<p>Call transform.push(outputChunk) 0 or more times to generate output
+from this input chunk, depending on how much data you want to output
+as a result of this chunk.</p>
+<p>Call the callback function only when the current chunk is completely
+consumed. Note that there may or may not be output as a result of any
+particular input chunk.</p>
+<p>This method is prefixed with an underscore because it is internal to
+the class that defines it, and should not be called directly by user
+programs. However, you are expected to override this method in
+your own extension classes.</p>
+<p>Note: This function MUST NOT be called directly. It MAY be implemented
+by child classes, and if so, will be called by the internal Transform
+class methods only.</p>
+<p>In some cases, your transform operation may need to emit a bit more
+data at the end of the stream. For example, a Zlib compression
+stream will store up some internal state so that it can optimally
+compress the output. At the end, however, it needs to do the best it
+can with what is left, so that the data will be complete.</p>
+<p>In those cases, you can implement a _flush method, which will be
+called at the very end, after all the written data is consumed, but
+before emitting end to signal the end of the readable side. Just
+like with _transform, call transform.push(chunk) zero or more
+times, as appropriate, and call callback when the flush operation is
+complete.</p>
+<p>This method is prefixed with an underscore because it is internal to
+the class that defines it, and should not be called directly by user
+programs. However, you are expected to override this method in
+your own extension classes.</p>
+<p>The example above of a simple protocol parser can be implemented much
+more simply by using the higher level Transform stream class.</p>
+<p>In this example, rather than providing the input as an argument, it
+would be piped into the parser, which is a more idiomatic Node stream
+approach.</p>
+<p>This is a trivial implementation of a Transform stream that simply
+passes the input bytes across to the output. Its purpose is mainly
+for examples and testing, but there are occasionally use cases where
+it can come in handy.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/feature/streams2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3006. Node.js 0.8.16 (Stable)</h2>
+    <div class="article-meta">
+        📅 Dec 13, 2012 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.16" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.16%20(Stable)" alt="Node.js 0.8.16 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.16%20(Stable)" alt="Node.js 0.8.16 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>fs: fix WriteStream/ReadStream fd leaks (Ben Noordhuis)</p>
+<p>crypto: fix leak in GetPeerCertificate (Fedor Indutny)</p>
+<p>buffer: Don't double-negate numeric buffer arg (Trevor Norris)</p>
+<p>net: More accurate IP address validation and IPv6 dotted notation. (Joshua Erickson)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.16/node-v0.8.16.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.16/node-v0.8.16.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.16/node-v0.8.16-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.16/x64/node-v0.8.16-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.16/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.16/node-v0.8.16-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.16/node-v0.8.16-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.16/node-v0.8.16-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.16/node-v0.8.16-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.16/</p>
+<p>Website: https://nodejs.org/docs/v0.8.16/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.16/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.16" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3008. Node.js 0.8.15 (Stable)</h2>
+    <div class="article-meta">
+        📅 Nov 26, 2012 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.15" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.15%20(Stable)" alt="Node.js 0.8.15 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.15%20(Stable)" alt="Node.js 0.8.15 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>linux: use /proc/cpuinfo for CPU frequency (Ben Noordhuis)</p>
+<p>windows: map WSAESHUTDOWN to UV_EPIPE (Ben Noordhuis)</p>
+<p>windows: map ERROR_GEN_FAILURE to UV_EIO (Bert Belder)</p>
+<p>unix: do not set environ unless one is provided (Charlie McConnell)</p>
+<p>domains: don't crash if domain is set to null (Bert Belder)</p>
+<p>windows: fix the x64 debug build (Bert Belder)</p>
+<p>net, tls: fix connect() resource leak (Ben Noordhuis)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.15/node-v0.8.15.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.15/node-v0.8.15.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.15/node-v0.8.15-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.15/x64/node-v0.8.15-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.15/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.15/node-v0.8.15-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.15/node-v0.8.15-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.15/node-v0.8.15-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.15/node-v0.8.15-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.15/</p>
+<p>Website: https://nodejs.org/docs/v0.8.15/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.15/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.15" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#3010. Node.js 0.8.14 (Stable)</h2>
+    <div class="article-meta">
+        📅 Oct 25, 2012 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v0.8.14" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.14%20(Stable)" alt="Node.js 0.8.14 (Stable)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%200.8.14%20(Stable)" alt="Node.js 0.8.14 (Stable)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Note: v0.8.13 contains a regression in the EventEmitter class. This
+is a bugfix release, but contains no new features. Most of the
+release notes are copied from v0.8.13, since it didn't live long.</p>
+<p>events: Don't clobber pre-existing _events obj in EE ctor (isaacs)</p>
+<p>url: parse hostnames that start with - or _ (Ben Noordhuis)</p>
+<p>repl: Fix Windows 8 terminal issue (Bert Belder)</p>
+<p>typed arrays: use signed char for signed int8s (Aaron Jacobs)</p>
+<p>crypto: fix bugs in DiffieHellman (Ben Noordhuis)</p>
+<p>configure: turn on VFPv3 on ARMv7 (Ben Noordhuis)</p>
+<p>Re-enable OpenSSL UI for entering passphrases via tty (Ben Noordhuis)</p>
+<p>repl: ensure each REPL instance gets its own "context" (Nathan Rajlich)</p>
+<p>Source Code: https://nodejs.org/dist/v0.8.14/node-v0.8.14.tar.gz</p>
+<p>Macintosh Installer (Universal): https://nodejs.org/dist/v0.8.14/node-v0.8.14.pkg</p>
+<p>Windows Installer: https://nodejs.org/dist/v0.8.14/node-v0.8.14-x86.msi</p>
+<p>Windows x64 Installer: https://nodejs.org/dist/v0.8.14/x64/node-v0.8.14-x64.msi</p>
+<p>Windows x64 Files: https://nodejs.org/dist/v0.8.14/x64/</p>
+<p>Linux 32-bit Binary: https://nodejs.org/dist/v0.8.14/node-v0.8.14-linux-x86.tar.gz</p>
+<p>Linux 64-bit Binary: https://nodejs.org/dist/v0.8.14/node-v0.8.14-linux-x64.tar.gz</p>
+<p>Solaris 32-bit Binary: https://nodejs.org/dist/v0.8.14/node-v0.8.14-sunos-x86.tar.gz</p>
+<p>Solaris 64-bit Binary: https://nodejs.org/dist/v0.8.14/node-v0.8.14-sunos-x64.tar.gz</p>
+<p>Other release files: https://nodejs.org/dist/v0.8.14/</p>
+<p>Website: https://nodejs.org/docs/v0.8.14/</p>
+<p>Documentation: https://nodejs.org/docs/v0.8.14/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v0.8.14" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html" class="active">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

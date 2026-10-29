@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 186</title>
+<meta name="description" content="Page 186">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page186.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 186</h1>
+<article class="article-card">
+    <h2>#2118. Alpha Launch Postmortem</h2>
+    <div class="article-meta">
+        📅 Jul 10, 2020 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/alpha-launch-postmortem" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>On May 27 Supabase hit the top of Hacker News and stayed on the front page for more than 24 hours.</p>
+<p>Since then, Supabase has been featured on the Stack Overflow podcast, hit the trending page on GitHub, and scaled to over 1000 databases.</p>
+<p>Here is everything that went wrong along the way.</p>
+<p>Before we get into the details, here are some high-level numbers for the week following the launch.</p>
+<p>We had 30,000 new website visitors to supabase.io:</p>
+<p>GitHub stars rocketed for our two main repos, supabase and realtime.</p>
+<p>This was the most surprising survivor. Our middleware was served from a single Ubuntu server with 4 CPUs and 8GB of RAM. This server was running our middleware using docker compose up:</p>
+<p>In case you're wondering why any sane company would use that in production, it's because we weren't planning to launch - the HackerNews post was created by an early GitHub follower, while we were alpha testing, and it was too scary to migrate the middleware while it was servicing the thundering herd. All Supabase projects use the same middleware stack (without docker compose), so I guess this counts as a successful load test.</p>
+<p>We have since migrated our middleware to multiple ECS clusters, globally load-balanced using AWS's Global Accelerator.</p>
+<p>We serve our marketing site (supabase.io) from Netlify. It's a static-build Docusaurus (v2) site, so it had no problems (apart from one developer in Russia who couldn't access the site - it looks like some of Netlify's IP addresses are blocked there).</p>
+<p>We serve our app (supabase.com/dashboard) using Vercel, and the login system uses Auth0. These were both rock-solid. Before the launch we noticed that Vercel was extremely slow on their Free Plan, and once we upgraded to their Pro Plan for multi-region deploys it solved performance issues. It looks like they are changing their plans again so buyer beware.</p>
+<p>In May we were using Digital Ocean to serve all of our customer databases. We hit the first server limit (400 servers) in the space of a few hours. They bumped our limit up to 1000 and we hit that again a few hours later.</p>
+<p>Digital Ocean were very responsive when we asked for increases, each time responding in 30 minutes or less.</p>
+<p>Each Supabase project gets a unique URL for their API and database. This is set up using Cloudflare's API. This was a seamless process until we hit the 1000-subdomain limit, at 4am in the morning. My cofounder was awake, managed to identify the problem early, and reached out to the support to increase the limit.</p>
+<p>Cloudflare support advised him to upgrade the account to increase the limit, but the upgrade could only be done by the owner (me). Unfortunately my phone was on silent, so for 3 hours our systems were down. Ideally any one of our team could have upgraded our account, but I imagine that Cloudflare have their reasons for this restriction.</p>
+<p>Let me start by saying that Digital Ocean have been great for getting up and running. The experience was simple to start with, but ended painfully.</p>
+<p>The first sign of problems were the frequent production errors. This is a screenshot of emails from Digital ocean for the month of June.</p>
+<p>Each of these emails represents one or more servers that has a critical issue:</p>
+<p>We have identified an issue on the physical machine hosting one or more of your Droplets. In the event that we are not able to perform a live migration of a Droplet, we will perform an offline migration during which the Droplet will be powered off and migrated offline during the window.</p>
+<p>Luckily we are in alpha, and our community has been extremely patient.</p>
+<p>Most of our frustration was due to their internal policy around credits program. We were generously granted $10,000 Digital Ocean credits in February through Stripe Atlas, and so they became our primary cloud provider.</p>
+<p>Digital Ocean have another (more generous) credits package for YC companies. Unfortunately when we applied for this we were told we weren't eligible because it was a "Partner switch" from Stripe to YC. This was frustrating because a "Partner switch" is completely arbitrary to us as a customer.</p>
+<p>Also we had conveniently just run out of credits. We don’t expect cloud providers to fund our inefficiencies, but we needed time to optimize our infrastructure after our surprise launch. We had assumed that the more generous credits package was guaranteed - an assumption which cost us several thousand dollars. After swift deliberation, we decided to migrate away from Digital Ocean.</p>
+<p>In the past 3 weeks we have migrated 1800 servers over to AWS.</p>
+<p>We are on the AWS "Activate" program, which grants us $100,000 credits. Since Firebase has a very generous free-tier, and we want to be able to offer Supabase developers a similar experience, this is ultimately a huge benefit to our community.</p>
+<p>The AWS team were helpful, suggesting their new t3a instances. We're already seeing improvements, with database startup times almost halved from ~90s to ~50s. From our research, this is the fastest Postgres setup in the market.</p>
+<p>We will release a detailed write-up on these instances in the next few weeks. Sign up to our newsletter if you want to be notified when we release the post.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/alpha-launch-postmortem" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2121. What are PostgreSQL Templates?</h2>
+    <div class="article-meta">
+        📅 Jul 09, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/postgresql-templates" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Whenever you create a new database in Postgres, you are actually basing it off an already present database in your cluster.</p>
+<p>This database, template1, and another, called template0, are standard system databases that exist in every newly created database cluster. Don't believe me? Why not quickly spin up a database and see it for yourself with this query:</p>
+<p>In this post, we'll explore these template databases and see how we can make full use of their potential. We'll even look into creating a template database of our own.</p>
+<p>simply copies everything from the database template1. We can modify this template database in any way: add a table, insert some data, create new extensions, or install procedural languages. Any of these actions would be propagated to subsequently created databases.</p>
+<p>This, however, is not advisable. Removing any one of these modifications would need you to manually uninstall or drop these changes from template1. You do have the option to drop and recreate the entire template1 database altogether. This unfortunately comes at the risk of committing a mistake along the way, effectively breaking CREATE DATABASE. It would be better to leave template1 alone and create a template database of your own.</p>
+<p>To set an existing database as a template database:</p>
+<p>Doing this allows any user or role with the CREATEDB privilege to utilize it as a template. If not, only superusers or owners of the database would be allowed to do so.</p>
+<p>To create a new database with this template:</p>
+<p>template0 contains the same data as template1. We could think of this template database as a fallback if anything irreversible happens to template1. As such, this template database should never be modified in any way as soon as the database cluster has been initialized. To create a database with template0 as the template database:</p>
+<p>To quickly sum things up, we found out that new databases are, by default, created from a template database called template1. template1 can be modified in any way we please and the changes would be present in any database created afterward. We can also create custom template databases and base new databases from them instead. If things go awry, template0 is always there to help.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/postgresql-templates" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2126. Physical vs Logical Backups in PostgreSQL</h2>
+    <div class="article-meta">
+        📅 Jul 07, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/postgresql-physical-logical-backups" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>PostgreSQL backups can be categorized into two types: logical and physical. This post briefly covers each type and discusses the situations where you would use either one.</p>
+<p>We'll cover some of the many tools you can use for Postgres backups in future posts.</p>
+<p>This form of backup is typically achieved by translating all the data into a set of SQL commands and writing it into a single file. This can then be fed to any database cluster to recreate everything. In your CLI, performing logical backups can be as easy as:</p>
+<p>for an entire database cluster. Both the pg_dump and pg_dumpall utilities have their respective additional options for you to choose from and set up your desired logical backup setting. Recovering from them is comparably as simple:</p>
+<p>As shown above, a single command is enough to perform a logical backup and another to recover from it. As a novice with databases, this would be an ideal and non-intimidating ensure that your database is backed up at all times.</p>
+<p>If you are planning to migrate to a different major version of Postgres (for example, from Postgres 11 to Postgres 12), logical backups via pg_dumpall would surely be your tool of choice. This is mainly because internal data storage formats may differ between major versions. This is the basis of physical backups, eliminating it as an option when upgrading. We'll go deeper into migrations and how to perform them in another post.</p>
+<p>With pg_dump, you can constantly back up a single, targeted database.</p>
+<p>Physical backups pertain to the actual set of files or file systems where your database data is stored. One option for physical backups involves taking a snapshot of your data files by making a copy of them.</p>
+<p>As your database grows to the size of a few gigabytes, backing it up through physical backups is more ideal than through logical backups. As explained here, over time, performing logical backups in large databases could lead to degraded performance for other queries. Given the long run time as well to successfully perform a logical backup on a large database, errors have a higher chance of occurring, making the eventual backup unusable.</p>
+<p>Postgres also generates Write Ahead Log (WAL) files, which can be used together with a backed-up file system to recover a database up to any chosen point in time. When disaster strikes, this is one of the best options for recreating your database up to the point right before the unfortunate happens. This greatly minimizes Recovery Point Objective (RPO) along the way. Even better, tools such as WAL-G are readily available to simplify the steps involved in setting this up.</p>
+<p>All in all, logical and physical backups are generated differently from one another. Neither has an advantage over the other. Depending on your needs, each brings unique uses to the table:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/postgresql-physical-logical-backups" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2129. Supabase Alpha June 2020</h2>
+    <div class="article-meta">
+        📅 Jul 01, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-alpha-june-2020" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're now 4 months into building Supabase, which means another major update. Here's a few things we think you'll love in this release.</p>
+<p>We're sometimes asked how we will make Postgres as simple as Firebase, since Postgres is a relational database. This month we're making our first steps to prove that relational databases can be even easier to use than document stores. We're releasing an excel-like editing interface which can drill down into your relational data.</p>
+<p>Postgres is an amazing database, giving the flexibility of a document store with the power of a RDBMS. If you use JSON data in Postgres, then we want to make that easy too. Supabase detects when your column is JSON or JSONB, and provides an easy way to edit and view your data. More improvements coming soon for this feature!</p>
+<p>If you noticed a bit of latency on Supabase, it's because your projects were previously set up in Singapore. It was always our intention that you'd be able to choose your database region, and this month we've delivered it. In the next releases we'll even allow you to go multi-region, instantly replicating your database close to your customers.</p>
+<p>A guiding principle at Supabase is zero lock-in. So this month we are exposing your daily database backups on the dashboard, giving you a simple way to migrate off Supabase. We have a lot more to build in this space (WAL-G!), so watch this space.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-alpha-june-2020" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1895. Node.js 14.5.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Jun 30, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v14.5.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.5.0%20(Current)" alt="Node.js 14.5.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.5.0%20(Current)" alt="Node.js 14.5.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This version includes performance improvements and now allows WebAssembly
+modules to request memories up to 4GB in size.</p>
+<p>For more information, have a look at the official V8 blog post.</p>
+<p>Contributed by Matheus Marchini and Michaël Zasso - #33376.</p>
+<p>This version introduces an new experimental API EventTarget, which provides a DOM interface implemented by objects that can receive events and may have listeners for them.</p>
+<p>It is an adaptation of the Web API EventTarget.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v14.5.0/node-v14.5.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v14.5.0/node-v14.5.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v14.5.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v14.5.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v14.5.0/node-v14.5.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v14.5.0/node-v14.5.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v14.5.0/node-v14.5.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v14.5.0/node-v14.5.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v14.5.0/node-v14.5.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v14.5.0/node-v14.5.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v14.5.0/node-v14.5.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v14.5.0/node-v14.5.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v14.5.0/node-v14.5.0.tar.gz 
+Other release files: https://nodejs.org/dist/v14.5.0/ 
+Documentation: https://nodejs.org/docs/v14.5.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v14.5.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1899. Node.js 12.18.2 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jun 30, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v12.18.2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.18.2%20(LTS)" alt="Node.js 12.18.2 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.18.2%20(LTS)" alt="Node.js 12.18.2 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v12.18.2/node-v12.18.2-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v12.18.2/node-v12.18.2-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v12.18.2/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v12.18.2/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v12.18.2/node-v12.18.2.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-aix-ppc64.tar.gz 
+SmartOS 64-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-sunos-x64.tar.xz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v12.18.2/node-v12.18.2-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v12.18.2/node-v12.18.2.tar.gz 
+Other release files: https://nodejs.org/dist/v12.18.2/ 
+Documentation: https://nodejs.org/docs/v12.18.2/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v12.18.2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1902. Node.js 12.18.1 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jun 17, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v12.18.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.18.1%20(LTS)" alt="Node.js 12.18.1 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.18.1%20(LTS)" alt="Node.js 12.18.1 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v12.18.1/node-v12.18.1-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v12.18.1/node-v12.18.1-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v12.18.1/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v12.18.1/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v12.18.1/node-v12.18.1.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-aix-ppc64.tar.gz 
+SmartOS 64-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-sunos-x64.tar.xz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v12.18.1/node-v12.18.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v12.18.1/node-v12.18.1.tar.gz 
+Other release files: https://nodejs.org/dist/v12.18.1/ 
+Documentation: https://nodejs.org/docs/v12.18.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v12.18.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2132. Steve Chavez has joined Supabase</h2>
+    <div class="article-meta">
+        📅 Jun 15, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-steve-chavez" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This month we welcome Steve Chavez to the team. Steve is a maintainer of PostgREST, one of the core tools which makes Supabase possible.</p>
+<p>Steve and I have been in contact since he added one of my old blog posts to the PostgREST docs. He has a rich history in open source and we're excited to have him in our team.</p>
+<p>Steve is helping us build one of our most demanded features - our Auth system. We will support him to build some exciting features which he has planned for PostgREST, including enhanced PostGIS support.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-steve-chavez" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1908. Node.js 10.21.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jun 02, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v10.21.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2010.21.0%20(LTS)" alt="Node.js 10.21.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2010.21.0%20(LTS)" alt="Node.js 10.21.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v10.21.0/node-v10.21.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v10.21.0/node-v10.21.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v10.21.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v10.21.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v10.21.0/node-v10.21.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-aix-ppc64.tar.gz 
+SmartOS 64-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-sunos-x64.tar.xz 
+ARMv6 32-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-linux-armv6l.tar.xz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v10.21.0/node-v10.21.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v10.21.0/node-v10.21.0.tar.gz 
+Other release files: https://nodejs.org/dist/v10.21.0/ 
+Documentation: https://nodejs.org/docs/v10.21.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v10.21.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1911. Node.js 12.18.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jun 02, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v12.18.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.18.0%20(LTS)" alt="Node.js 12.18.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.18.0%20(LTS)" alt="Node.js 12.18.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v12.18.0/node-v12.18.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v12.18.0/node-v12.18.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v12.18.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v12.18.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v12.18.0/node-v12.18.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-aix-ppc64.tar.gz 
+SmartOS 64-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-sunos-x64.tar.xz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v12.18.0/node-v12.18.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v12.18.0/node-v12.18.0.tar.gz 
+Other release files: https://nodejs.org/dist/v12.18.0/ 
+Documentation: https://nodejs.org/docs/v12.18.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v12.18.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1915. Node.js 14.4.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Jun 02, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v14.4.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.4.0%20(Current)" alt="Node.js 14.4.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.4.0%20(Current)" alt="Node.js 14.4.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v14.4.0/node-v14.4.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v14.4.0/node-v14.4.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v14.4.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v14.4.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v14.4.0/node-v14.4.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v14.4.0/node-v14.4.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v14.4.0/node-v14.4.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v14.4.0/node-v14.4.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v14.4.0/node-v14.4.0.tar.gz 
+Other release files: https://nodejs.org/dist/v14.4.0/ 
+Documentation: https://nodejs.org/docs/v14.4.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v14.4.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1917. June 2020 Security Releases</h2>
+    <div class="article-meta">
+        📅 Jun 02, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/vulnerability/june-2020-security-releases" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20June%202020%20Security%20Releases" alt="June 2020 Security Releases" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20June%202020%20Security%20Releases" alt="June 2020 Security Releases" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Updates are now available for all supported Node.js release lines for the following
+issues.</p>
+<p>The 'session' event could be emitted before the 'secureConnect' event. It should not be, because the connection may fail to be authorized. If it was saved an authorized connection could be established later with the session ticket. Note that the https agent caches sessions, so is vulnerable to this.</p>
+<p>The 'session' event will now only be emitted after the 'secureConnect' event, and only for authorized connections.</p>
+<p>Affects Node.js 12.x, and 14.x. Does not affect Node.js 10.x.</p>
+<p>Receiving unreasonably large HTTP/2 SETTINGS frames can consume 100% CPU to process all the settings, blocking all other activities until complete.</p>
+<p>The HTTP/2 session frame is limited to 32 settings by default. This can be configured if necessary using the maxSettings option.</p>
+<p>Thank you to Jordan Zebor and Adam Cabrey of F5 Networks for reporting this.</p>
+<p>Calling napi_get_value_string_latin1(), napi_get_value_string_utf8(), or napi_get_value_string_utf16() with a non-NULL buf, and a bufsize of 0 will cause the entire string value to be written to buf, probably overrunning the length of the buffer.</p>
+<p>A exploit has not been reported and it may be difficult but the following is suggested:</p>
+<p>Affects https://www.npmjs.com/package/node-addon-api 1.x, 2.x when a native add-on is/was built using a version of Node.js that did not support N-API internally. The N-API version matrix shows which versions of Node.js in which this support was added.</p>
+<p>An issue was discovered in International Components for Unicode (ICU) for C/C++
+through 66.1. An integer overflow, leading to a heap-based buffer overflow,
+exists in the UnicodeString::doAppend() function in common/unistr.cpp.</p>
+<p>Fix was applied to 10.x in an abundance of caution, even though there is no
+known way to trigger the overflow in 10.x.</p>
+<p>Does not affect 12.x or 14.x, they do not include an affected version of ICU.</p>
+<p>The Node.js project will release security updates to all supported release lines on or shortly after Tuesday, June 2nd, 2020.</p>
+<p>All supported versions (10.x, 12.x, and 14.x) of Node.js are vulnerable. Note that 13.x will be end-of-life on June 1st, before the security release date, and according to policy it will not receive any more updates.</p>
+<p>Releases will be available on or shortly after Tuesday, June 2nd, 2020.</p>
+<p>The current Node.js security policy can be found at https://github.com/nodejs/node/security/policy#security. Please follow the process outlined in https://github.com/nodejs/node/security/policy if you wish to report a vulnerability in Node.js.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/vulnerability/june-2020-security-releases" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2135. Supabase Alpha May 2020</h2>
+    <div class="article-meta">
+        📅 Jun 01, 2020 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-alpha-may-2020" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>It has been a monster month at Supabase and we're back with a video update. It's a longer video this month because we have a couple of housekeeping items.</p>
+<p>We got into Y Combinator :tada:. The cohort has just started and it's fully remote so it will be a unique experience, even by normal YC standards.</p>
+<p>Normally we wouldn't mention this until our official YC launch in September but the cat's out of the bag since @vira28 posted about us on Hacker News.</p>
+<p>We've seen a huge response from the tech community. We're still 'very alpha' so the attention may have been better in September but everyone has been patient with the bugs and instability. It just goes to show: ship early and often because nobody knows when you might get picked up.</p>
+<p>OK now for the important part - as promised, we will continue to release our updates here in the DEV community first. Skip to 1m18s in the video if you just want to see what we've been up to.</p>
+<p>We've revamped the UI to fit in some more features that we're building.</p>
+<p>This one is still very unstable, but we wanted to ship it anyway. It's a little hidden away so you'll have to hunt for it :). Give us a couple of months and we promise this will be as good as (better than?) Airtable.</p>
+<p>Start using Supabase today: supabase.com/dashboard</p>
+<p>Make sure to star us on github! github.com/supabase/supabase</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-alpha-may-2020" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1921. Node.js 12.17.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 May 26, 2020 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v12.17.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.17.0%20(LTS)" alt="Node.js 12.17.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2012.17.0%20(LTS)" alt="Node.js 12.17.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>As of Node.js 12.17.0, the --experimental-modules flag is no longer necessary
+to use ECMAScript modules (ESM). However, the ESM implementation in Node.js
+remains experimental. As per our stability index: “The feature is not subject
+to Semantic Versioning rules. Non-backward compatible changes or removal may
+occur in any future release.” Users should be cautious when using the feature
+in production environments.</p>
+<p>Unlike Node.js 14, using ESM will still emit a runtime experimental warning,
+either when a module is used a the application's entrypoint or the first time
+dynamic import() is called.</p>
+<p>Please keep in mind that the implementation of ESM in Node.js differs from the
+developer experience you might be familiar with. Most transpilation workflows
+support features such as named exports from CommonJS module imports, optional
+file extensions or JSON modules that the Node.js ESM implementation does not
+support. It is highly likely that modules from transpiled environments will
+require a certain degree of refactoring to work in Node.js. It is worth
+mentioning that many of our design decisions were made with two primary goals.
+Spec compliance and Web Compatibility. It is our belief that the current
+implementation offers a future proof model to authoring ESM modules that paves
+the path to Universal JavaScript. Please read more in our documentation.</p>
+<p>The ESM implementation in Node.js is still experimental but we do believe that
+we are getting very close to being able to call ESM in Node.js “stable”.
+Removing the flag is a huge step in that direction.</p>
+<p>We expect to remove the warning Node.js 12 later this year, possibly in late
+October, when Node.js 14 will become LTS.</p>
+<p>The AsyncLocalStorage class has been introduced in the Async Hooks module.</p>
+<p>This API allows keeping a context across asynchronous operations. For instance,
+if a sequence id is stored within an instance of AsyncLocalStorage for each
+HTTP request entering in a server, it will be possible to retrieve this id
+without having access the current HTTP request:</p>
+<p>In this example, the logWithId function will always know what the current
+request id is, even when there are multiple requests in parallel.</p>
+<p>Note: This API is still experimental and some methods might change in future releases of Node.js</p>
+<p>Contributed by Vladimir de Turckheim - #26540.</p>
+<p>If further input is predicable, a suggestion is inserted as preview.</p>
+<p>The REPL now supports previews similar to the Chrome DevTools console. An input
+suggestion is inserted as preview in case further input is predicable. The
+suggestion may be accepted by either pressing <TAB> or <RIGHT> at the end of
+the input.
+On top of that, output is previewed when entering variable names or function
+calls that have no side effect.</p>
+<p>Check the preview in action
+and try it out on your own. Just access the REPL on your terminal by starting
+the Node.js executable without any further command.</p>
+<p>Contributed by Ruben Bridgewater - #30907, #30811.</p>
+<p>The REPL supports bi-directional reverse-i-search similar to
+ZSH. It is triggered with <ctrl> + R
+to search backwards and <ctrl> + S to search forwards.</p>
+<p>Entries are accepted as soon as any button is pressed that doesn't correspond
+with the reverse search. Cancelling is possible by pressing escape or
+<ctrl> + C.</p>
+<p>Changing the direction immediately searches for the next entry in the expected
+direction from the current position on.</p>
+<p>Contributed by Ruben Bridgewater - #31006.</p>
+<p>It is now possible to access former history entries very fast by writing the
+first characters of the formerly entered code you are looking for. Then push
+<UP> or <DOWN> to go through the history entries that start with those
+characters.</p>
+<p>It works similar to the Fish Shell substring-based
+history search.</p>
+<p>Contributed by Ruben Bridgewater - #31112.</p>
+<p>It is now possible to monitor 'error' events on an EventEmitter without
+consuming the emitted error by installing a listener using the symbol
+EventEmitter.errorMonitor:</p>
+<p>Contributed by Gerhard Stoebich - #30932.</p>
+<p>It is now possible to monitor 'uncaughtException' events without overriding
+the default behavior that exits the process by installing an
+'uncaughtExceptionMonitor' listener:</p>
+<p>Contributed by Gerhard Stoebich - #31257.</p>
+<p>This new function (along with its sync and promisified versions) takes an array
+of ArrayBufferView elements and will write the data it reads sequentially to
+the buffers.</p>
+<p>Contributed by Sk Sajidul Kadir - #32356.</p>
+<p>A new overload is available for fs.read (along with its sync and promisified
+versions), which allows to optionally pass any of the offset, length and
+position parameters.</p>
+<p>The Console constructor (require('console').Console) now supports different group indentations.</p>
+<p>This is useful in case you want different grouping width than 2 spaces.</p>
+<p>It is now possible to limit the length of strings while inspecting objects.
+This is possible by passing through the maxStringLength option similar to:</p>
+<p>The following N-API features are now stable as part of the N-API 6 release:</p>
+<p>The Diagnostic Report
+feature is now stable and supports a new --report-compact flag to write the
+reports in a compact, single-line JSON format, more easily consumable by log
+processing systems than the default multi-line format designed for human
+consumption.</p>
+<p>The default value of server.headersTimeout for http and https servers was
+increased from 40000 to 60000 (60 seconds). This to accommodate for systems
+like AWS ELB that have a timeout of 60 seconds.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v12.17.0/node-v12.17.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v12.17.0/node-v12.17.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v12.17.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v12.17.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v12.17.0/node-v12.17.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-aix-ppc64.tar.gz 
+SmartOS 64-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-sunos-x64.tar.xz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v12.17.0/node-v12.17.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v12.17.0/node-v12.17.0.tar.gz 
+Other release files: https://nodejs.org/dist/v12.17.0/ 
+Documentation: https://nodejs.org/docs/v12.17.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v12.17.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1925. Node.js 14.3.0 (Current)</h2>
+    <div class="article-meta">
+        📅 May 19, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v14.3.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.3.0%20(Current)" alt="Node.js 14.3.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.3.0%20(Current)" alt="Node.js 14.3.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The output preview is changed to generate previews for autocompleted input
+instead of the actual input.</p>
+<p>Pressing <enter> during a preview is now going to evaluate the whole string
+including the autocompleted part. Pressing <escape> cancels that behavior.</p>
+<p>It's now possible to use the await keyword outside of async functions, with the --experimental-top-level-await flag.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v14.3.0/node-v14.3.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v14.3.0/node-v14.3.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v14.3.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v14.3.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v14.3.0/node-v14.3.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v14.3.0/node-v14.3.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v14.3.0/node-v14.3.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v14.3.0/node-v14.3.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v14.3.0/node-v14.3.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v14.3.0/node-v14.3.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v14.3.0/node-v14.3.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v14.3.0/node-v14.3.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v14.3.0/node-v14.3.0.tar.gz 
+Other release files: https://nodejs.org/dist/v14.3.0/ 
+Documentation: https://nodejs.org/docs/v14.3.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v14.3.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1932. Deno 1.0</h2>
+    <div class="article-meta">
+        📅 May 13, 2020 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v1/cover_wide.png" alt="Deno 1.0" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v1/cover_wide.png" alt="Deno 1.0" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Dynamic languages are useful tools. Scripting allows users to rapidly and
+succinctly tie together complex systems and express ideas without worrying about
+details like memory management or build systems. In recent years programming
+languages like Rust and Go have made it much easier to produce sophisticated
+native machine code; these projects are incredibly important developments in
+computer infrastructure. However, we claim it is still important to have a
+powerful scripting environment that can address a wide range of problem domains.</p>
+<p>JavaScript is the most widely used dynamic language, operating on every device
+with a web browser. Vast numbers of programmers are fluent in JavaScript and
+much effort has been put into optimizing its execution. Through standards
+organizations like ECMA International, the language has been carefully and
+continuously improved. We believe JavaScript is the natural choice for dynamic
+language tooling; whether in a browser environment or as standalone processes.</p>
+<p>Our original undertaking in this area, Node.js, proved to be a very successful
+software platform. People have found it useful for building web development
+tooling, building standalone web servers, and for a myriad of other use-cases.
+Node, however, was designed in 2009 when JavaScript was a much different
+language. Out of necessity, Node had to invent concepts which were later taken
+up by the standards organizations and added to the language differently. In the
+presentation
+Design Mistakes in Node, this is
+discussed in more detail. Due to the large number of users that Node has, it is
+difficult and slow to evolve the system.</p>
+<p>With the changing JavaScript language, and new additions like TypeScript,
+building Node projects can become an arduous endeavor, involving managing build
+systems and other heavy handed tooling that takes away from the fun of dynamic
+language scripting. Furthermore the mechanism for linking to external libraries
+is fundamentally centralized through the NPM repository, which is not inline
+with the ideals of the web.</p>
+<p>We feel that the landscape of JavaScript and the surrounding software
+infrastructure has changed enough that it was worthwhile to simplify. We seek a
+fun and productive scripting environment that can be used for a wide range of
+tasks.</p>
+<p>Deno is a new runtime for executing JavaScript and TypeScript outside of the web
+browser.</p>
+<p>Deno attempts to provide a standalone tool for quickly scripting complex
+functionality. Deno is (and always will be) a single executable file. Like a web
+browser, it knows how to fetch external code. In Deno, a single file can define
+arbitrarily complex behavior without any other tooling.</p>
+<p>Here a complete HTTP server module is added as a dependency in a single line.
+There are no additional configuration files, there is no install to do
+beforehand, just deno run example.js.</p>
+<p>Also like browsers, code is executed in a secure sandbox by default. Scripts
+cannot access the hard drive, open network connections, or make any other
+potentially malicious actions without permission. The browser provides APIs for
+accessing cameras and microphones, but users must first give permission. Deno
+provides analogous behaviour in the terminal. The above example will fail unless
+the --allow-net command-line flag is provided.</p>
+<p>Deno is careful to not deviate from standardized browser JavaScript APIs. Of
+course, not every browser API is relevant for Deno, but where they are, Deno
+does not deviate from the standard.</p>
+<p>We want Deno to be applicable to a wide range of problem domains: from small
+one-line scripts, to complex server-side business logic. As programs become more
+complex, having some form of type checking becomes increasingly important.
+TypeScript is an extension of the JavaScript language that allows users to
+optionally provide type information.</p>
+<p>Deno supports TypeScript without additional tooling. The runtime is designed
+with TypeScript in mind. The deno types command provides type declarations for
+everything provided by Deno. Deno’s standard modules are all written in
+TypeScript.</p>
+<p>Node was designed before JavaScript had the concept of Promises or async/await.
+Node’s counterpart to promises was the EventEmitter, which important APIs are
+based around, namely sockets and HTTP. Setting aside the ergonomic benefits of
+async/await, the EventEmitter pattern has an issue with back-pressure. Take a
+TCP socket, for example. The socket would emit “data” events when it received
+incoming packets. These “data” callbacks would be emitted in an unconstrained
+manner, flooding the process with events. Because Node continues to receive new
+data events, the underlying TCP socket does not have proper back-pressure, the
+remote sender has no idea the server is overloaded and continues to send data.
+To mitigate this problem, a pause() method was added. This could solve the
+problem, but it required extra code; and since the flooding issue only presents
+itself when the process is very busy, many Node programs can be flooded with
+data. The result is a system with bad tail latency.</p>
+<p>In Deno, sockets are still asynchronous, but receiving new data requires users
+to explicitly read(). No extra pause semantics are necessary to properly
+structure a receiving socket. This is not unique to TCP sockets. The lowest
+level binding layer to the system is fundamentally tied to promises - we call
+these bindings “ops”. All callbacks in Deno in some form or another arise from
+promises.</p>
+<p>Rust has its own promise-like abstraction, called Futures. Through the “op”
+abstraction, Deno makes it easy to bind Rust future-based APIs into JavaScript
+promises.</p>
+<p>The primary component that we ship is the Deno command-line interface (CLI). The
+CLI is the thing that is version 1.0 today. But Deno is not a monolithic
+program, but designed as a collection of Rust crates to allow integration at
+different layers.</p>
+<p>The deno_core crate is a very bare bones
+version of Deno. It does not have dependencies on TypeScript nor on
+Tokio. It simply provides our Op and Resource
+infrastructure. That is, it provides an organized way of binding Rust futures to
+JavaScript promises. The CLI is of course built entirely on top of deno_core.</p>
+<p>The rusty_v8 crate provides high quality
+Rust bindings to V8’s C++ API. The API tries to match the original C++ API as
+closely as possible. It’s a zero-cost binding - the objects that are exposed in
+Rust are exactly the object you manipulate in C++. (Previous attempts at Rust V8
+bindings forced the use of Persistent handles, for example.) The crate provides
+binaries that are built in Github Actions CI, but it also allows users to
+compile V8 from scratch and adjust its many build configurations. All of the V8
+source code is distributed in the crate itself. Finally rusty_v8 attempts to be
+a safe interface. It’s not yet 100% safe, but we’re getting close. Being able to
+interact with a VM as complex as V8 in a safe way is quite amazing and has
+allowed us to discover many difficult bugs in Deno itself.</p>
+<p>We promise to maintain a stable API in Deno. Deno has a lot of interfaces and
+components, so it’s important to be transparent about what we mean by “stable”.
+The JavaScript APIs that we have invented to interact with the operating system
+are all found inside the “Deno” namespace (e.g. Deno.open()). These have been
+carefully examined and we will not be making backwards incompatible changes to
+them.</p>
+<p>All functionality which is not yet ready for stabilization has been hidden
+behind the --unstable command-line flag. You can see the documentation for the
+unstable interfaces
+here.
+In subsequent releases, some of these APIs will be stabilized as well.</p>
+<p>In the global namespace you’ll find all sorts of other objects (e.g.
+setTimeout() and fetch()). We’ve tried very hard to keep these interfaces
+identical to those in the browser; but we will issue corrections if we discover
+inadvertent incompatibilities. The browser standards define these interfaces,
+not us. Any corrections issued by us are bug fixes, not interface changes. If
+there is an incompatibility with a browser standard API, that incompatibility
+may be corrected before a major release.</p>
+<p>Deno also has many Rust APIs, namely the deno_core and rusty_v8 crates. None of
+these APIs are at 1.0 yet. We will continue to iterate on them.</p>
+<p>It’s important to understand that Deno is not a fork of Node - it’s a completely
+new implementation. Deno has been under development for just two years, while
+Node has been under development for over a decade. Given the amount of interest
+in Deno, we expect it to continue to evolve and mature.</p>
+<p>For some applications Deno may be a good choice today, for others not yet. It
+will depend on the requirements. We want to be transparent about these
+limitations to help people make informed decisions when considering to use Deno.</p>
+<p>Unfortunately, many users will find a frustrating lack of compatibility with
+existing JavaScript tooling. Deno is not compatible, in general, with Node (NPM)
+packages. There is a nascent compatibility layer being built at
+https://deno.land/std/node/ but it is far from complete.</p>
+<p>Although Deno has taken a hardline approach to simplifying the module system,
+ultimately Deno and Node are pretty similar systems with similar goals. Over
+time, we expect Deno to be able to run more and more Node programs
+out-of-the-box.</p>
+<p>We continuously track the performance of Deno’s HTTP
+server. A hello-world Deno HTTP server does about
+25k requests per second with a max latency of 1.3 milliseconds. A comparable
+Node program does 34k requests per second with a rather erratic max latency
+between 2 and 300 milliseconds.</p>
+<p>Deno’s HTTP server is implemented in TypeScript on top of native TCP sockets.
+Node’s HTTP server is written in C and exposed as high-level bindings to
+JavaScript. We have resisted the urge to add native HTTP server bindings to
+Deno, because we want to optimize the TCP socket layer, and more generally the
+op interface.</p>
+<p>Deno is a proper asynchronous server and 25k requests per second is quite enough
+for most purposes. (If it’s not, probably JavaScript is not the best choice.)
+Furthermore, we expect Deno to generally exhibit better tail latency due to the
+ubiquitous use of promises (discussed above). All that said, we do believe there
+are more performance wins to be had in the system, and we hope to achieve that
+in future releases.</p>
+<p>Internally Deno uses Microsoft’s TypeScript compiler to check types and produce
+JavaScript. Compared to the time it takes V8 to parse JavaScript, it is very
+slow. Early on in the project we had hoped that “V8 Snapshots” would provide
+significant improvements here. Snapshots have certainly helped but it’s still
+unsatisfyingly slow. We certainly think there are improvements that can be done
+here on top of the existing TypeScript compiler, but it’s clear to us that
+ultimately the type checking needs to be implemented in Rust. This will be a
+massive undertaking and will not happen any time soon; but it would provide
+order of magnitude performance improvements in a critical path experienced by
+developers. TSC must be ported to Rust. If you’re interested in collaborating on
+this problem, please get in touch.</p>
+<p>We have a nascent plugin system for extending the Deno runtime with custom ops.
+However this interface is still under development and has been marked as
+unstable. Therefore, accessing native systems beyond that which is provided by
+Deno is difficult.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1929. Node.js 14.2.0 (Current)</h2>
+    <div class="article-meta">
+        📅 May 05, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v14.2.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.2.0%20(Current)" alt="Node.js 14.2.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.2.0%20(Current)" alt="Node.js 14.2.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>assert.CallTracker is a new experimental API that allows to track and later
+verify the number of times a function was called. This works by creating a
+CallTracker object and using its calls method to create wrapper functions
+that will count each time they are called. Then the verify method can be used
+to assert that the expected number of calls happened:</p>
+<p>Additionally, tracker.report() will return an array which contains information
+about the errors, if there are any:</p>
+<p>The Console constructor (require('console').Console) now supports different group indentations.</p>
+<p>This is useful in case you want different grouping width than 2 spaces.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v14.2.0/node-v14.2.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v14.2.0/node-v14.2.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v14.2.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v14.2.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v14.2.0/node-v14.2.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v14.2.0/node-v14.2.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v14.2.0/node-v14.2.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v14.2.0/node-v14.2.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v14.2.0/node-v14.2.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v14.2.0/node-v14.2.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v14.2.0/node-v14.2.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v14.2.0/node-v14.2.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v14.2.0/node-v14.2.0.tar.gz 
+Other release files: https://nodejs.org/dist/v14.2.0/ 
+Documentation: https://nodejs.org/docs/v14.2.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v14.2.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2138. Supabase Alpha April 2020</h2>
+    <div class="article-meta">
+        📅 May 01, 2020 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-alpha-april-2020" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>1/ Supabase is NOT production ready. Have a play around and let us know what you think. We don't track ANYTHING (although we do store your github name and email). We'd like to keep it that way, so we rely on your direct feedback to steer our product roadmap.</p>
+<p>2/ We are free to use while we're in alpha thanks to the generosity of Digital Ocean's startup program. But the funds aren't unlimited - please shut down the database when you're done :pray:.</p>
+<p>3/ The database takes about 2 minutes to build. It's worth it, we promise. If you've ever wanted use Postgres, we're the easiest in the market.</p>
+<p>At Supabase, we're building some amazing tools that make Postgres as easy to use as Firebase. Some of the things we're working on:</p>
+<p>Why are database interfaces so hard to use? The Supabase team has built products for 70-year-olds, so we're confident we can make something easier for developers:</p>
+<p>Send realtime database changes to other systems, like queues or webhooks (Slack notifications!):</p>
+<p>Start using Supabase today: supabase.com/dashboard</p>
+<p>Make sure to star us on github! github.com/supabase/supabase</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-alpha-april-2020" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1934. Node.js 13.14.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Apr 30, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v13.14.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2013.14.0%20(Current)" alt="Node.js 13.14.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2013.14.0%20(Current)" alt="Node.js 13.14.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>With this release, we welcome two new Node.js core collaborators:</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v13.14.0/node-v13.14.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v13.14.0/node-v13.14.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v13.14.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v13.14.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v13.14.0/node-v13.14.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-aix-ppc64.tar.gz 
+SmartOS 64-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-sunos-x64.tar.xz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v13.14.0/node-v13.14.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v13.14.0/node-v13.14.0.tar.gz 
+Other release files: https://nodejs.org/dist/v13.14.0/ 
+Documentation: https://nodejs.org/docs/v13.14.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v13.14.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1937. Node.js 14.1.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Apr 29, 2020 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v14.1.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.1.0%20(Current)" alt="Node.js 14.1.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2014.1.0%20(Current)" alt="Node.js 14.1.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v14.1.0/node-v14.1.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v14.1.0/node-v14.1.0-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v14.1.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v14.1.0/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v14.1.0/node-v14.1.0.pkg 
+macOS 64-bit Binary: https://nodejs.org/dist/v14.1.0/node-v14.1.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v14.1.0/node-v14.1.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v14.1.0/node-v14.1.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v14.1.0/node-v14.1.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v14.1.0/node-v14.1.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v14.1.0/node-v14.1.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v14.1.0/node-v14.1.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v14.1.0/node-v14.1.0.tar.gz 
+Other release files: https://nodejs.org/dist/v14.1.0/ 
+Documentation: https://nodejs.org/docs/v14.1.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v14.1.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html" class="active">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

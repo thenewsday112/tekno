@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 151</title>
+<meta name="description" content="Page 151">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page151.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 151</h1>
+<article class="article-card">
+    <h2>#1193. Postgres Bloat Minimization</h2>
+    <div class="article-meta">
+        📅 Apr 26, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/postgres-bloat" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/postgres-bloat.png" alt="Postgres Bloat Minimization" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/postgres-bloat.png" alt="Postgres Bloat Minimization" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>By default, all table data in Postgres are physically stored using the “heap” method. So every database is a set of 1Gb files (”segments”) and each file is logically split into 8Kb pages. Actual table rows are put into any page with enough free space.</p>
+<p>When the row data is updated, a new version of a whole row is constructed and written (to any free space). The old one remains because, at the time of the update, the transaction is not completed and can be rolled back in the future. When the transaction is completed we’ll have two or several versions of the same row in the table. Cleaning old ones is by an asynchronous process called vacuum (and autovacuum).</p>
+<p>Vacuum goes through all table files looking for row versions that were updated or deleted by already completed transactions and frees the space on the pages.</p>
+<p>Then it updates the table’s free-space-map to reflect that some page has a certain amount of free space for row inserts.</p>
+<p>It also updates the visibility map for a page. It marks that all remaining rows are visible. So index scans can skip visibility checks, which is not so for the modified page before vacuuming. This significantly increases the speed of queries using indexes.</p>
+<p>In many cases vacuum runs automatically, cleans everything, and requires little care. But in some scenarios, we need to go deeper and tune the autovacuum parameters or run the vacuum manually.</p>
+<p>Vacuum marks space in a relation file as free to use for future row inserts or updates. And it’s not a problem unless we insert many rows, delete many rows at once, and then don’t make any inserts or updates. Space remains reserved in a file but we don’t use it.</p>
+<p>In this case, we could free actual filesystem space by running more aggressive mode:</p>
+<p>It will rebuild the table from live rows and they will be placed compactly so that filesystem space will be freed. The downside is that it needs an exclusive lock and you won’t be able to modify the table while VACUUM FULL does it's work. It’s wise to execute that process when the database is least accessed e.g. at night.</p>
+<p>An alternative way that doesn’t need full locks is using pg_repack extension:</p>
+<p>pg_repack operates similarly to VACUUM FULL for database test and table mytable.</p>
+<p>To see database bloat via the Supabase CLI run:</p>
+<p>If the numbers differ by more than 2x, chances are that the autovacuum didn’t start or hasn’t completed for a table. There could be several legitimate reasons for this.</p>
+<p>You can see information for the last successful autovacuum by running:</p>
+<p>Let’s turn on autovacuum logging so that all autovacuum events land in the log:</p>
+<p>There are two ways we can encounter this situation:</p>
+<p>Autovacuum starts based on several configuration parameters like timeout and pattern of access to a particular table. Maybe it’s even legitimate that it hasn’t started.</p>
+<p>With all these parameters set, the autovacuum will start if the number of rows updated or deleted exceeds:</p>
+<p>The same logic applies for inserts. Default scale factors are 20% of a table, which could be too high for big tables. If we want autovacuum to occur on large tables more frequently and take less time each run, decrease the default values for these tables e.g.:</p>
+<p>To see global vacuum settings for your cluster let’s run:</p>
+<p>To see current settings for a table (that overrides global settings) run:</p>
+<p>The most common reason autovacuum doesn’t succeed is long-running open transactions that access old row versions. In that case, Postgres recognizes that the row versions are still needed so any row versions created after that point can’t be marked as dead. One common cause for this problem is interactive sessions that were left open on accident. When tuples can’t be marked as dead, the database begins to bloat.</p>
+<p>To close transactions found to be idling:</p>
+<p>For automatically closing idle transactions in a session:</p>
+<p>The same parameter could be set per role or database as needed.</p>
+<p>Another, less likely, possibility is that autovacuum can’t succeed due to locks. If some of your processes take the SHARE UPDATE EXCLUSIVE lock e.g. ALTER TABLE clause, this lock will prevent vacuum from processing a table. Lock conflicts in your ordinary transactions could cause SHARE UPDATE EXCLUSIVE to be taken for a long time. A good recipe when this happens is to cancel all the open transactions and run VACUUM for a table manually (or wait until the next autovacuum comes for it).</p>
+<p>There could be too few autovacuum workers or each worker could operate slowly due to the low setting of autovacuum_work_mem.</p>
+<p>Vacuum and autovacuum are efficient ways to maintain the tables without bloat. They have several parameters that allow efficient tuning. Some insight into what database does can help prevent the cases where autovacuum becomes problematic and bloat increases i.e.:</p>
+<p>For more information about bloat and vacuuming, here are some direct references to resources:</p>
+<p>Global autovacuum parameters (most of them need modifying postgresql.conf, but could be overridden by per-table parameters)</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/postgres-bloat" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#359. Llamafile’s progress, four months in</h2>
+    <div class="article-meta">
+        📅 Apr 25, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://hacks.mozilla.org/2024/04/llamafiles-progress-four-months-in/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://hacks.mozilla.org/wp-content/uploads/2023/11/image-3.png" alt="Llamafile’s progress, four months in" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://hacks.mozilla.org/wp-content/uploads/2023/11/image-3.png" alt="Llamafile’s progress, four months in" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>When Mozilla’s Innovation group first launched the llamafile project late last year, we were thrilled by the immediate positive response from open source AI developers. It’s become one of Mozilla’s top three most-favorited repositories on GitHub, attracting a number of contributors, some excellent PRs, and a growing community on our Discord server.</p>
+<p>Through it all, lead developer and project visionary Justine Tunney has remained hard at work on a wide variety of fundamental improvements to the project. Just last night, Justine shipped the v0.8 release of llamafile, which includes not only support for the very latest open models, but also a number of big performance improvements for CPU inference.</p>
+<p>As a result of Justine’s work, today llamafile is both the easiest and fastest way to run a wide range of open large language models on your own hardware. See for yourself: with llamafile, you can run Meta’s just-released LLaMA 3 model–which rivals the very best models available in its size class–on an everyday Macbook.</p>
+<p>How did we do it? To explain that, let’s take a step back and tell you about everything that’s changed since v0.1.</p>
+<p>tinyBLAS: democratizing GPU support for NVIDIA and AMD</p>
+<p>llamafile is built atop the now-legendary llama.cpp project. llama.cpp supports GPU-accelerated inference for NVIDIA processors via the cuBLAS linear algebra library, but that requires users to install NVIDIA’s CUDA SDK. We felt uncomfortable with that fact, because it conflicts with our project goal of building a fully open-source and transparent AI stack that anyone can run on commodity hardware. And besides, getting CUDA set up correctly can be a bear on some systems. There had to be a better way.</p>
+<p>With the community’s help (here’s looking at you, @ahgamut and @mrdomino!), we created our own solution: it’s called tinyBLAS, and it’s llamafile’s brand-new and highly efficient linear algebra library. tinyBLAS makes NVIDIA acceleration simple and seamless for llamafile users. On Windows, you don’t even need to install CUDA at all; all you need is the display driver you’ve probably already installed.</p>
+<p>But tinyBLAS is about more than just NVIDIA: it supports AMD GPUs, as well. This is no small feat. While AMD commands a respectable 20% of today’s GPU market, poor software and driver support have historically made them a secondary player in the machine learning space. That’s a shame, given that AMD’s GPUs offer high performance, are price competitive, and are widely available.</p>
+<p>One of llamafile’s goals is to democratize access to open source AI technology, and that means getting AMD a seat at the table. That’s exactly what we’ve done: with llamafile’s tinyBLAS, you can now easily make full use of your AMD GPU to accelerate local inference. And, as with CUDA, if you’re a Windows user you don’t even have to install AMD’s ROCm SDK.</p>
+<p>All of this means that, for many users, llamafile will automatically use your GPU right out of the box, with little to no effort on your part.</p>
+<p>CPU performance gains for faster local AI</p>
+<p>Here at Mozilla, we are keenly interested in the promise of “local AI,” in which AI models and applications run directly on end-user hardware instead of in the cloud. Local AI is exciting because it opens up the possibility of more user control over these systems and greater privacy and security for users.</p>
+<p>But many consumer devices lack the high-end GPUs that are often required for inference tasks. llama.cpp has been a game-changer in this regard because it makes local inference both possible and usably performant on CPUs instead of just GPUs.</p>
+<p>Justine’s recent work on llamafile has now pushed the state of the art even further. As documented in her detailed blog post on the subject, by writing 84 new matrix multiplication kernels she was able to increase llamafile’s prompt evaluation performance by an astonishing 10x compared to our previous release. This is a substantial and impactful step forward in the quest to make local AI viable on consumer hardware.</p>
+<p>This work is also a great example of our commitment to the open source AI community. After completing this work we immediately submitted a PR to upstream these performance improvements to llama.cpp. This was just the latest of a number of enhancements we’ve contributed back to llama.cpp, a practice we plan to continue.</p>
+<p>Speaking of consumer hardware, there are few examples that are both more interesting and more humble than the beloved Raspberry Pi. For a bargain basement price, you get a full-featured computer running Linux with plenty of computing power for typical desktop uses. It’s an impressive package, but historically it hasn’t been considered a viable platform for AI applications.</p>
+<p>Not any more. llamafile has now been optimized for the latest model (the Raspberry Pi 5), and the result is that a number of small LLMs–such as Rocket-3B (download), TinyLLaMA-1.5B (download), and Phi-2 (download)–run at usable speeds on one of the least expensive computers available today. We’ve seen prompt evaluation speeds of up to 80 tokens/sec in some cases!</p>
+<p>The pace of progress in the open model space has been stunningly fast. Over the past few months, hundreds of models have been released or updated via fine-tuning. Along the way, there has been a clear trend of ever-increasing model performance and ever-smaller model sizes.</p>
+<p>The llama.cpp project has been doing an excellent job of keeping up with all of these new models, frequently rolling-out support for new architectures and model features within days of their release.</p>
+<p>For our part we’ve been keeping llamafile closely synced with llama.cpp so that we can support all the same models. Given the complexity of both projects, this has been no small feat, so we’re lucky to have Justine on the case.</p>
+<p>Today, you can today use the very latest and most capable open models with llamafile thanks to her hard work. For example, we were able to roll-out llamafiles for Meta’s newest LLaMA 3 models–8B-Instruct and 70B-Instruct–within a day of their release. With yesterday’s 0.8 release, llamafile can also run Grok, Mixtral 8x22B, and Command-R.</p>
+<p>Since the day that llamafile shipped people have wanted to create their own llamafiles. Previously, this required a number of steps, but today you can do it with a single command, e.g.:</p>
+<p>In just moments, this will produce a “model.llamafile” file that is ready for immediate use. Our thanks to community member @chan1012 for contributing this helpful improvement.</p>
+<p>In a related development, Hugging Face recently added official support for llamafile within their model hub. This means you can now search and filter Hugging Face specifically for llamafiles created and distributed by other people in the open source community.</p>
+<p>Since it’s built on top of llama.cpp, llamafile inherits that project’s server component, which provides OpenAI-compatible API endpoints. This enables developers who are building on top of OpenAI to switch to using open models instead. At Mozilla we very much want to support this kind of future: one where open-source AI is a viable alternative to centralized, closed, commercial offerings.</p>
+<p>While open models do not yet fully rival the capabilities of closed models, they’re making rapid progress. We believe that making it easier to pivot existing code over to executing against open models will increase demand and further fuel this progress.</p>
+<p>Over the past few months, we’ve invested effort in extending these endpoints, both to increase functionality and improve compatibility. Today, llamafile can serve as a drop-in replacement for OpenAI in a wide variety of use cases.</p>
+<p>We want to further extend our API server’s capabilities, and we’re eager to hear what developers want and need. What’s holding you back from using open models? What features, capabilities, or tools do you need? Let us know!</p>
+<p>Integrations with other open source AI projects</p>
+<p>Finally, it’s been a delight to see llamafile adopted by independent developers and integrated into leading open source AI projects (like Open Interpreter). Kudos in particular to our own Kate Silverstein who landed PRs that add llamafile support to LangChain and LlamaIndex (with AutoGPT coming soon).</p>
+<p>If you’re a maintainer or contributor to an open source AI project that you feel would benefit from llamafile integration, let us know how we can help.</p>
+<p>The llamafile project is just getting started, and it’s also only the first step in a major new initiative on Mozilla’s part to contribute to and participate in the open source AI community. We’ll have more to share about that soon, but for now: I invite you to join us on the llamafile project!</p>
+<p>The best place to connect with both the llamafile team at Mozilla and the overall llamafile community is over at our Discord server, which has a dedicated channel just for llamafile. And of course, your enhancement requests, issues, and PRs are always welcome over at our GitHub repo.</p>
+<p>I hope you’ll join us. The next few months are going to be even more interesting and unexpected than the last, both for llamafile and for open source AI itself.</p>
+<p>Stephen leads open source AI projects (including llamafile) in Mozilla Builders. He previously managed social bookmarking pioneer del.icio.us; co-founded Storium, Blockboard, and FairSpin; and worked on Yahoo Search and BEA WebLogic.</p>
+<p>Sign up for the Mozilla Developer Newsletter:</p>
+<p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.</p>
+<p>Except where otherwise noted, content on this site is licensed
+          under the
+          Creative Commons Attribution Share-Alike License v3.0
+          or any later version.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://hacks.mozilla.org/2024/04/llamafiles-progress-four-months-in/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1197. Exploring Support Tooling at Supabase: A Dive into SLA Buddy</h2>
+    <div class="article-meta">
+        📅 Apr 25, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/exploring-support-tooling" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2024-04-25-exploring-support-tooling/slabuddy-og.png" alt="Exploring Support Tooling at Supabase: A Dive into SLA Buddy" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2024-04-25-exploring-support-tooling/slabuddy-og.png" alt="Exploring Support Tooling at Supabase: A Dive into SLA Buddy" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>In database management and support operations, ensuring Service Level Agreement (SLA) compliance is paramount. Supabase, known for its innovative approach to database management and support, introduces SLA Buddy, a robust support tool aimed at efficient SLA enforcement. This blog post delves into the intricacies of SLA Buddy, shedding light on its functions, operations, and interactions within the Supabase ecosystem.</p>
+<p>Supabase's commitment to innovation extends beyond database solutions; it encompasses robust support operations. SLA Buddy stands as a testament to Supabase's dedication to streamlining support processes and ensuring timely resolution of user queries.</p>
+<p>Supabase firmly believes in dogfooding a philosophy that entails using one's own products internally. This approach played a pivotal role in the creation of SLA Buddy. Leveraging Supabase's suite of tools, including Edge Functions and Database functionalities, SLA Buddy was meticulously developed to meet the stringent demands of support operations.</p>
+<p>SLA Buddy's core function revolves around enforcing SLAs effectively. Let's delve into its primary functions:</p>
+<p>SLA Buddy ensures SLA compliance through a series of intricate processes. This includes:</p>
+<p>To gain a deeper understanding of SLA Buddy's operations, let's take a look on the main diagram of operations:</p>
+<p>SLA Buddy actively monitors Slack channels using PostgreSQL functions like process_channels. This function scans Slack channels, handles new messages, and adds tasks to the queue for each new ticket that comes to the platform. Once the channel is scanned through the scan_channel edge function it adds rows to the slack_watcher table. There is a trigger function on that table that creates tasks for each ticket according to the SLA which depends on which channel that the message came from. Tickets have different SLAs, depending on both severity and the subscription level of the user opening the ticket.</p>
+<p>The core function check_due_tasks_and_update() plays a pivotal role in task verification and status updating. It ensures that tasks are duly acknowledged, thereby facilitating timely resolution.</p>
+<p>SLA Buddy employs the Edge Function post_ticket_escalation to post SLA enforcement messages on Slack. This integration with PostgreSQL functions ensures streamlined execution and effective communication with support engineers.</p>
+<p>SLA Buddy fosters seamless interactions between support engineers and the tool itself. Through Slack threads, support members can postpone the next steps in the escalation process by 30 min by @mentioning the bot in the thread. We also pushed a guide on how to interact with mentions in Slack as part of the bot's development.</p>
+<p>The bot won't get disarmed until a response is sent in the ticket because we believe that even if the Support Engineer is unable to help the user, they can at least triage and set expectations for the next steps in the ticket like escalating to a specific team.</p>
+<p>Another crucial aspect of SLA Buddy is its ability to monitor support events seamlessly. At Supabase we have the concept of Embedded Support when a member of the support team will work on more advanced tickets related to a specific Supabase product such as Edge Functions, Dashboard, Storage, Auth, Realtime, etc.</p>
+<p>The shift information about Support Engineers is hosted in a Google Calendar. This information is retrieved using the following function:</p>
+<p>SLA Buddy's escalation logic is defined in 4 steps of escalation going from a more narrow set of Support Engineers to the Head of Success. Here's the progression:</p>
+<p>SLA Buddy is a core operational component for Supabase support operations, keeping the whole team informed and engaged, and assisting with prioritizing tickets by their SLA restrictions.</p>
+<p>We are firm believers in letting technology streamline operational work and allowing humans to focus on solving real problems, and SLA Buddy is a great example of that.</p>
+<p>SLA Buddy started a passion project, born from a need to ensure that we're providing top-quality support to Supabase's users. We're big fans of personal exploration and kaizen incremental change.</p>
+<p>And we're not done with SLA Buddy. It'll grow and evolve as Supabase grows, and our needs and the needs of our users change. Because it's built on Supabase features, it'll be easy to update and maintain, and it'll provide more and more value to our internal operations, we hope it might provide some value to you, too. We're also big believers in the Open Source community, and welcome any feedback or ideas you might have to make SLA Buddy even better for everyone.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/exploring-support-tooling" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#124. React 19 Upgrade Guide</h2>
+    <div class="article-meta">
+        📅 Apr 25, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://react.dev/blog/2024/04/25/react-19-upgrade-guide" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://react.dev/images/og/blog-2024-04-25-react-19-upgrade-guide.png" alt="React 19 Upgrade Guide" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://react.dev/images/og/blog-2024-04-25-react-19-upgrade-guide.png" alt="React 19 Upgrade Guide" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The improvements added to React 19 require some breaking changes, but we’ve worked to make the upgrade as smooth as possible, and we don’t expect the changes to impact most apps.</p>
+<p>To help make the upgrade to React 19 easier, we’ve published a react@18.3 release that is identical to 18.2 but adds warnings for deprecated APIs and other changes that are needed for React 19.</p>
+<p>We recommend upgrading to React 18.3 first to help identify any issues before upgrading to React 19.</p>
+<p>For a list of changes in 18.3 see the Release Notes.</p>
+<p>In this post, we will guide you through the steps for upgrading to React 19:</p>
+<p>If you’d like to help us test React 19, follow the steps in this upgrade guide and report any issues you encounter. For a list of new features added to React 19, see the React 19 release post.</p>
+<p>We introduced a new JSX transform in 2020 to improve bundle size and use JSX without importing React. In React 19, we’re adding additional improvements like using ref as a prop and JSX speed improvements that require the new transform.</p>
+<p>If the new transform is not enabled, you will see this warning:</p>
+<p>We expect most apps will not be affected since the transform is enabled in most environments already. For manual instructions on how to upgrade, please see the announcement post.</p>
+<p>To install the latest version of React and React DOM:</p>
+<p>If you’re using TypeScript, you also need to update the types.</p>
+<p>We’re also including a codemod for the most common replacements. See TypeScript changes below.</p>
+<p>To help with the upgrade, we’ve worked with the team at codemod.com to publish codemods that will automatically update your code to many of the new APIs and patterns in React 19.</p>
+<p>All codemods are available in the react-codemod repo and the Codemod team have joined in helping maintain the codemods. To run these codemods, we recommend using the codemod command instead of the react-codemod because it runs faster, handles more complex code migrations, and provides better support for TypeScript.</p>
+<p>Run all codemods listed in this guide with the React 19 codemod recipe:</p>
+<p>This will run the following codemods from react-codemod:</p>
+<p>This does not include the TypeScript changes. See TypeScript changes below.</p>
+<p>Changes that include a codemod include the command below.</p>
+<p>For a list of all available codemods, see the react-codemod repo.</p>
+<p>In previous versions of React, errors thrown during render were caught and rethrown. In DEV, we would also log to console.error, resulting in duplicate error logs.</p>
+<p>In React 19, we’ve improved how errors are handled to reduce duplication by not re-throwing:</p>
+<p>This change should not impact most apps, but if your production error reporting relies on errors being re-thrown, you may need to update your error handling. To support this, we’ve added new methods to createRoot and hydrateRoot for custom error handling:</p>
+<p>For more info, see the docs for createRoot and hydrateRoot.</p>
+<p>PropTypes were deprecated in April 2017 (v15.5.0).</p>
+<p>In React 19, we’re removing the propType checks from the React package, and using them will be silently ignored. If you’re using propTypes, we recommend migrating to TypeScript or another type-checking solution.</p>
+<p>We’re also removing defaultProps from function components in place of ES6 default parameters. Class components will continue to support defaultProps since there is no ES6 alternative.</p>
+<p>Legacy Context was deprecated in October 2018 (v16.6.0).</p>
+<p>Legacy Context was only available in class components using the APIs contextTypes and getChildContext, and was replaced with contextType due to subtle bugs that were easy to miss. In React 19, we’re removing Legacy Context to make React slightly smaller and faster.</p>
+<p>If you’re still using Legacy Context in class components, you’ll need to migrate to the new contextType API:</p>
+<p>String refs were deprecated in March, 2018 (v16.3.0).</p>
+<p>Class components supported string refs before being replaced by ref callbacks due to multiple downsides. In React 19, we’re removing string refs to make React simpler and easier to understand.</p>
+<p>If you’re still using string refs in class components, you’ll need to migrate to ref callbacks:</p>
+<p>Module pattern factories were deprecated in August 2019 (v16.9.0).</p>
+<p>This pattern was rarely used and supporting it causes React to be slightly larger and slower than necessary. In React 19, we’re removing support for module pattern factories, and you’ll need to migrate to regular functions:</p>
+<p>createFactory was deprecated in February 2020 (v16.13.0).</p>
+<p>Using createFactory was common before broad support for JSX, but it’s rarely used today and can be replaced with JSX. In React 19, we’re removing createFactory and you’ll need to migrate to JSX:</p>
+<p>In React 18, we updated react-test-renderer/shallow to re-export react-shallow-renderer. In React 19, we’re removing react-test-render/shallow to prefer installing the package directly:</p>
+<p>Shallow rendering depends on React internals and can block you from future upgrades. We recommend migrating your tests to @testing-library/react or @testing-library/react-native.</p>
+<p>We’ve moved act from react-dom/test-utils to the react package:</p>
+<p>To fix this warning, you can import act from react:</p>
+<p>All other test-utils functions have been removed. These utilities were uncommon, and made it too easy to depend on low level implementation details of your components and React. In React 19, these functions will error when called and their exports will be removed in a future version.</p>
+<p>Codemod ReactDOMTestUtils.act to React.act:</p>
+<p>ReactDOM.render was deprecated in March 2022 (v18.0.0). In React 19, we’re removing ReactDOM.render and you’ll need to migrate to using ReactDOM.createRoot:</p>
+<p>Codemod ReactDOM.render to ReactDOMClient.createRoot:</p>
+<p>ReactDOM.hydrate was deprecated in March 2022 (v18.0.0). In React 19, we’re removing ReactDOM.hydrate you’ll need to migrate to using ReactDOM.hydrateRoot,</p>
+<p>Codemod ReactDOM.hydrate to ReactDOMClient.hydrateRoot:</p>
+<p>ReactDOM.unmountComponentAtNode was deprecated in March 2022 (v18.0.0). In React 19, you’ll need to migrate to using root.unmount().</p>
+<p>For more see root.unmount() for createRoot and hydrateRoot.</p>
+<p>Codemod unmountComponentAtNode to root.unmount:</p>
+<p>ReactDOM.findDOMNode was deprecated in October 2018 (v16.6.0).</p>
+<p>We’re removing findDOMNode because it was a legacy escape hatch that was slow to execute, fragile to refactoring, only returned the first child, and broke abstraction levels (see more here). You can replace ReactDOM.findDOMNode with DOM refs:</p>
+<p>React 19 supports ref as a prop, so we’re deprecating the element.ref in place of element.props.ref.</p>
+<p>We are deprecating react-test-renderer because it implements its own renderer environment that doesn’t match the environment users use, promotes testing implementation details, and relies on introspection of React’s internals.</p>
+<p>The test renderer was created before there were more viable testing strategies available like React Testing Library, and we now recommend using a modern testing library instead.</p>
+<p>In React 19, react-test-renderer logs a deprecation warning, and has switched to concurrent rendering. We recommend migrating your tests to @testing-library/react or @testing-library/react-native for a modern and well supported testing experience.</p>
+<p>React 19 includes several fixes and improvements to Strict Mode.</p>
+<p>When double rendering in Strict Mode in development, useMemo and useCallback will reuse the memoized results from the first render during the second render. Components that are already Strict Mode compatible should not notice a difference in behavior.</p>
+<p>As with all Strict Mode behaviors, these features are designed to proactively surface bugs in your components during development so you can fix them before they are shipped to production. For example, during development, Strict Mode will double-invoke ref callback functions on initial mount, to simulate what happens when a mounted component is replaced by a Suspense fallback.</p>
+<p>In React 19, when a component suspends, React will immediately commit the fallback of the nearest Suspense boundary without waiting for the entire sibling tree to render. After the fallback commits, React schedules another render for the suspended siblings to “pre-warm” lazy requests in the rest of the tree:</p>
+<p>Previously, when a component suspended, the suspended siblings were rendered and then the fallback was committed.</p>
+<p>In React 19, when a component suspends, the fallback is committed and then the suspended siblings are rendered.</p>
+<p>This change means Suspense fallbacks display faster, while still warming lazy requests in the suspended tree.</p>
+<p>UMD was widely used in the past as a convenient way to load React without a build step. Now, there are modern alternatives for loading modules as scripts in HTML documents. Starting with React 19, React will no longer produce UMD builds to reduce the complexity of its testing and release process.</p>
+<p>To load React 19 with a script tag, we recommend using an ESM-based CDN such as esm.sh.</p>
+<p>This release includes changes to React internals that may impact libraries that ignore our pleas to not use internals like SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED. These changes are necessary to land improvements in React 19, and will not break libraries that follow our guidelines.</p>
+<p>Based on our Versioning Policy, these updates are not listed as breaking changes, and we are not including docs for how to upgrade them. The recommendation is to remove any code that depends on internals.</p>
+<p>To reflect the impact of using internals, we have renamed the SECRET_INTERNALS suffix to:</p>
+<p>_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE</p>
+<p>In the future we will more aggressively block accessing internals from React to discourage usage and ensure users are not blocked from upgrading.</p>
+<p>We’ve cleaned up the TypeScript types based on the removed APIs in React 19. Some of the removed have types been moved to more relevant packages, and others are no longer needed to describe React’s behavior.</p>
+<p>We’ve published types-react-codemod to migrate most type related breaking changes:</p>
+<p>If you have a lot of unsound access to element.props, you can run this additional codemod:</p>
+<p>Check out types-react-codemod for a list of supported replacements. If you feel a codemod is missing, it can be tracked in the list of missing React 19 codemods.</p>
+<p>This change is included in the react-19 codemod preset as no-implicit-ref-callback-return .</p>
+<p>Due to the introduction of ref cleanup functions, returning anything else from a ref callback will now be rejected by TypeScript. The fix is usually to stop using implicit returns:</p>
+<p>The original code returned the instance of the HTMLDivElement and TypeScript wouldn’t know if this was supposed to be a cleanup function or not.</p>
+<p>This change is included in the react-19 codemod preset as refobject-defaults.</p>
+<p>A long-time complaint of how TypeScript and React work has been useRef. We’ve changed the types so that useRef now requires an argument. This significantly simplifies its type signature. It’ll now behave more like createContext.</p>
+<p>This now also means that all refs are mutable. You’ll no longer hit the issue where you can’t mutate a ref because you initialised it with null:</p>
+<p>MutableRef is now deprecated in favor of a single RefObject type which useRef will always return:</p>
+<p>useRef still has a convenience overload for useRef<T>(null) that automatically returns RefObject<T | null>. To ease migration due to the required argument for useRef, a convenience overload for useRef(undefined) was added that automatically returns RefObject<T | undefined>.</p>
+<p>Check out [RFC] Make all refs mutable for prior discussions about this change.</p>
+<p>This change is included in the react-element-default-any-props codemod.</p>
+<p>The props of React elements now default to unknown instead of any if the element is typed as ReactElement. This does not affect you if you pass a type argument to ReactElement:</p>
+<p>But if you relied on the default, you now have to handle unknown:</p>
+<p>You should only need it if you have a lot of legacy code relying on unsound access of element props. Element introspection only exists as an escape hatch, and you should make it explicit that your props access is unsound via an explicit any.</p>
+<p>This change is included in the react-19 codemod preset as scoped-jsx</p>
+<p>A long-time request is to remove the global JSX namespace from our types in favor of React.JSX. This helps prevent pollution of global types which prevents conflicts between different UI libraries that leverage JSX.</p>
+<p>You’ll now need to wrap module augmentation of the JSX namespace in `declare module ”…”:</p>
+<p>The exact module specifier depends on the JSX runtime you specified in the compilerOptions of your tsconfig.json:</p>
+<p>useReducer now has improved type inference thanks to @mfp22.</p>
+<p>However, this required a breaking change where useReducer doesn’t accept the full reducer type as a type parameter but instead either needs none (and rely on contextual typing) or needs both the state and action type.</p>
+<p>The new best practice is not to pass type arguments to useReducer.</p>
+<p>This may not work in edge cases where you can explicitly type the state and action, by passing in the Action in a tuple:</p>
+<p>If you define the reducer inline, we encourage to annotate the function parameters instead:</p>
+<p>This is also what you’d also have to do if you move the reducer outside of the useReducer call:</p>
+<p>For a full list of changes, please see the Changelog.</p>
+<p>Thanks to Andrew Clark, Eli White, Jack Pope, Jan Kassens, Josh Story, Matt Carroll, Noah Lemen, Sophie Alpert, and Sebastian Silbermann for reviewing and editing this post.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://react.dev/blog/2024/04/25/react-19-upgrade-guide" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1048. Node.js 22.0.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Apr 24, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v22.0.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.0.0%20(Current)" alt="Node.js 22.0.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.0.0%20(Current)" alt="Node.js 22.0.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're excited to announce the release of Node.js 22!
+Highlights include require()ing ESM graphs, WebSocket client, updates of the V8 JavaScript engine, and more!
+As a reminder, Node.js 22 will enter long-term support (LTS) in October, but until then, it will be the "Current" release for the next six months.
+We encourage you to explore the new features and benefits offered by this latest release and evaluate their potential impact on your applications.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v22.0.0/node-v22.0.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v22.0.0/node-v22.0.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v22.0.0/node-v22.0.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v22.0.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v22.0.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v22.0.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v22.0.0/node-v22.0.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v22.0.0/node-v22.0.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v22.0.0/node-v22.0.0.tar.gz 
+Other release files: https://nodejs.org/dist/v22.0.0/ 
+Documentation: https://nodejs.org/docs/v22.0.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v22.0.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1052. Node.js 22 is now available!</h2>
+    <div class="article-meta">
+        📅 Apr 24, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/announcements/v22-release-announce" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/announcements/Node.js%20%E2%80%94%20Node.js%2022%20is%20now%20available!" alt="Node.js 22 is now available!" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/announcements/Node.js%20%E2%80%94%20Node.js%2022%20is%20now%20available!" alt="Node.js 22 is now available!" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're excited to announce the release of Node.js 22!
+Highlights include require()ing ES modules, a WebSocket client, updates of the V8 JavaScript engine, and more!</p>
+<p>Node.js 22 will enter long-term support (LTS) in October, but until then, it will be the "Current" release for the next six months.
+We encourage you to explore the new features and benefits offered by this latest release and evaluate their potential impact on your applications.</p>
+<p>The project continues to make progress across a number of areas, with many new features and fixes flowing into existing LTS releases.
+For that reason, the changes outlined in the changelog for Node.js 22 only represent a small subset of the features and
+work since the last major release. This blog post will add some additional context on the larger body of work in relation to those changes.</p>
+<p>You can read more about our release policy at https://github.com/nodejs/release.</p>
+<p>To download Node.js 22.0.0, visit: https://nodejs.org/download/current/. You can find the release post at https://nodejs.org/blog/release/v22.0.0,
+which contains the full list of commits included in this release.</p>
+<p>The V8 release 12.4 includes new features like WebAssembly Garbage Collection, Array.fromAsync, Set methods and iterator helpers.</p>
+<p>V8's Maglev Compiler is now enabled by default on supported architectures (https://v8.dev/blog/maglev).
+Maglev improves performance for short-lived CLI programs.</p>
+<p>This release adds require() support for synchronous ESM graphs under
+the flag --experimental-require-module.</p>
+<p>If --experimental-require-module is enabled, and the ECMAScript
+module being loaded by require() meets the following requirements:</p>
+<p>require() will load the requested module as an ES Module, and return
+the module name space object. In this case it is similar to dynamic
+import() but is run synchronously and returns the name space object
+directly.
+We intend to eventually enable require(esm) by default in the future, without
+the flag.</p>
+<p>Node.js 22 includes a new experimental feature for the execution of scripts from the package.json with the cli flag node --run <script-in-package-json>.
+It also supports node --run test which executes the test command inside package.json scripts.</p>
+<p>Increased the default High Water Mark for streams from 16KiB to 64KiB.
+This provides a performance boost across the board at the cost of slightly higher memory usage.
+Users in memory sensitive environments are encouraged to explicitly set setDefaultHighWaterMark.</p>
+<p>From this release Watch Mode is considered stable.
+When in watch mode, changes in the watched files cause the Node.js process to restart.</p>
+<p>The browser-compatible implementation of WebSocket, previously behind the flag --experimental-websocket, will be enabled by default.
+This provides a WebSocket client to Node.js without external dependencies.</p>
+<p>Contributed by the Undici team and Aras Abbasi in #51594</p>
+<p>This release adds to the node:fsmodule the functions glob and globSync for pattern matching.
+Developers can now utilize these functions for matching file paths based on specified patterns.</p>
+<p>This release enhances the efficiency of creating AbortSignal instances, leading to significantly improved performance in fetch and the test runner.</p>
+<p>Try out the new Node.js 22 release! We’re always happy to hear your feedback. Testing your applications and modules with Node.js 22 helps to ensure the future compatibility of your project with the latest Node.js changes and features.</p>
+<p>Also of note is that Node.js 18 will go End-of-Life in April 2025, so we advise you to start planning to upgrade to Node.js 20 (LTS) or Node.js 22 (soon to be LTS).</p>
+<p>Looking to the future, the Next-10 team is running a survey to gather info from the ecosystem. Help shape the future of Node.js by participating. Submit your feedback here.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/announcements/v22-release-announce" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#981. JSR Is Not Another Package Manager</h2>
+    <div class="article-meta">
+        📅 Apr 24, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/jsr-is-not-another-package-manager" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/jsr-is-not-another-package-manager/og-image.webp" alt="JSR Is Not Another Package Manager" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/jsr-is-not-another-package-manager/og-image.webp" alt="JSR Is Not Another Package Manager" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Over the past years, new package managers like yarn and pnpm have emerged,
+enhancing how packages are downloaded. However, the npm package registry, a
+cornerstone of the JavaScript ecosystem, has barely evolved. Its last notable
+update was a “files” tab added years ago. The JavaScript language, known for its
+vibrant evolution, seems paradoxically mired in a distribution model that hasn’t
+kept pace.</p>
+<p>Back when I created Node, there was no standard module system for JavaScript. As
+a result, the npm registry and Node defaulted to CommonJS (require), a system
+with fundamental flaws that made it unworkable in browsers. So, almost a decade
+ago, in 2015, the language adopted syntax for ES modules (import). Today, most
+JavaScript is written using ES modules, yet the pathways for distributing these
+modules remain convoluted, especially when TypeScript is involved. This clear
+gap in the ecosystem prompted the creation of JSR, not as
+another package manager but as a transformative registry designed to
+revolutionize how JavaScript and TypeScript are shared across server-side
+runtimes, browsers, and various tools.</p>
+<p>JSR fundamentally improves the code distribution process by streamlining
+complexities that have long plagued developers. By being ESM-only and
+TypeScript-first, JSR eradicates the frustrating juggling of package.json
+configurations and the labyrinthine tsconfig compiler options. Through
+a package scoring system, JSR motivates best
+practices in code distribution—higher scores are awarded to packages that
+include comprehensive JSDoc documentation on each exported symbol, akin to what
+the Dart community has in pub.dev. As seen in other modern
+programming ecosystems like Go and Rust, JSR provides automatic documentation
+generation right out of the box.</p>
+<p>JSR is a registry, not another client for the npm registry. But that doesn’t
+mean you need to give up everything from npm, or make a hard switch to a
+disjoint ecosystem of JavaScript modules.
+JSR is designed to complement the npm registry,
+not replace it. JSR packages are allowed to depend on npm packages -
+see, for example, this package.
+Moreover, JSR packages can be used in existing npm-first software because JSR
+itself acts as an npm registry (accessible at npm.jsr.io) that distributes
+npm-compatible tarballs. This allows JSR packages to be included in any software
+using npm, yarn, or pnpm, as well as to integrate with
+private registries. The npm tarballs
+that JSR distributes are optimal.</p>
+<p>At Deno, we prioritize security as a paramount concern in JavaScript
+development. While no registry can comprehensively police all published code,
+JSR provides transparency about its publishers and secures the publishing
+process. By integrating OIDC tokens with GitHub Actions, JSR creates advanced,
+verifiable provenance attestations using the
+Supply Chain Levels for Software Artifacts and stores them
+in Sigstore. This not only ensures the authenticity
+of the code but also establishes trust and accountability in what developers are
+implementing.</p>
+<p>JavaScript is the common language of many programmers, making it both universal
+and accessible. The language merits a central hub—a town square—where developers
+can share their work without undue complexity. We believe JavaScript will remain
+central to software development for many years, and JSR aims to support this
+enduring relevance. While JSR is not a package manager, it offers a new approach
+to how we manage and secure code, aspiring to be a stable, forward-looking
+platform that enhances and safeguards JavaScript development. In this way, JSR
+represents not just another tool in the ecosystem but a fundamental shift in how
+we think about distributing JavaScript and TypeScript.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/jsr-is-not-another-package-manager" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#988. Announcing the Hookdeck SDK on JSR</h2>
+    <div class="article-meta">
+        📅 Apr 23, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/hookdeck-on-jsr" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/hookdeck-on-jsr/og-image.png" alt="Announcing the Hookdeck SDK on JSR" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/hookdeck-on-jsr/og-image.png" alt="Announcing the Hookdeck SDK on JSR" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>JSR is a modern JavaScript registry intended to simplify
+publishing and consuming JavaScript and TypeScript modules, while also moving
+the ecosystem forward by supporting and promoting web standards.
+Since our launch, over 7.5k users have signed up to JSR.</p>
+<p>Today, we’re thrilled to announce that the
+Hookdeck SDK is now available on JSR.</p>
+<p>Hookdeck is an event gateway that simplifies managing
+events across a distributed and asynchronous architecture. You can reliably
+receive and send webhooks, route and transform event payloads between cloud
+services, and queue events all without managing infrastructure.</p>
+<p>Using Hookdeck via JSR provides a better developer experience with
+auto-generated documentation and type definitions right in your text editor.</p>
+<p>You can get started with the Hookdeck SDK using the deno add command:</p>
+<p>The above command will generate a deno.json file, listing all your project
+dependencies:</p>
+<p>You can then import the Hookdeck SDK to your main.ts file:</p>
+<p>Finally, you can run the following command to execute:</p>
+<p>Hookdeck, which simplifies managing events across a distributed asynchronous
+architecture, is now easier to use in multiple environments via JSR.
+Additionally, using Hookdeck via JSR provides type definitions and documentation
+in your text editor, making it easier to use.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/hookdeck-on-jsr" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#994. Announcing the Neon Serverless Driver on JSR</h2>
+    <div class="article-meta">
+        📅 Apr 18, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/neon-on-jsr" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/neon-on-jsr/og-image.webp" alt="Announcing the Neon Serverless Driver on JSR" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/neon-on-jsr/og-image.webp" alt="Announcing the Neon Serverless Driver on JSR" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>JSR is a modern JavaScript registry intended to simplify
+publishing and consuming JavaScript and TypeScript modules, while also moving
+the ecosystem forward by supporting and promoting web standards.
+Since our launch, over 7.5k users have signed up to JSR.</p>
+<p>Today, we’re thrilled to announce that the
+Neon Serverless Driver is now available on
+JSR.</p>
+<p>Neon is a fully managed, serverless, scalable Postgres
+driver that simplifies adding a persistent relational database to your projects.</p>
+<p>Using Neon via JSR not only offers a better developer experience than npm, but
+also provides faster query latencies. This serverless driver allows V8 isolate
+runtimes like Deno and Cloudflare Workers to connect to the database via
+protocols other than TCP, which minimizes the number of required round trips and
+allows for sub-10ms first query latencies.</p>
+<p>Read on for more information on how to install and use Neon with JSR.</p>
+<p>You can get started with the Neon serverless driver using the deno add
+command:</p>
+<p>The above command will generate a deno.json file, listing all your project
+dependencies:</p>
+<p>You can then import the serverless driver to your main.ts file:</p>
+<p>Finally, you can run the following command to execute:</p>
+<p>With Neon’s serverless driver on JSR, you can quickly add Postgres to your
+project and achieve sub-10ms queries, regardless of which JavaScript runtime
+you’re using.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/neon-on-jsr" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1210. Supabase Security Advisor &amp; Performance Advisor</h2>
+    <div class="article-meta">
+        📅 Apr 18, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/security-performance-advisor" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/security-peformance-advisor/og.png?v=3" alt="Supabase Security Advisor &amp; Performance Advisor" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/security-peformance-advisor/og.png?v=3" alt="Supabase Security Advisor & Performance Advisor" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're dropping some handy tools in Supabase Studio this week to help with security and performance:</p>
+<p>We announced General Availability this week, reaching a point where we feel confident our organization can support all types of customers and help them become successful, regardless of their demands. It's a big milestone after four years of building.</p>
+<p>As we've grown up as a company, so too have our customers. Many of you have been with us since the start and have seen your projects grow from 0 to literally millions of users, scaling from the Free Plan up to the largest size servers we offer.</p>
+<p>Along with this growth, we've learned many lessons about the types of issues developers encounter using Postgres, especially as they start to get traction. We've built tooling, documentation, and support processes around common issues related to security, performance, resource usage, and slow queries.</p>
+<p>As we've helped hundreds of thousands of customers through issues like these, a trend emerged: developers want their problems resolved quickly, but they also want to know what happened and why. This is the typical profile of a Supabase developer - thoughtful, curious, and hungry to learn more about the inner workings of Postgres.</p>
+<p>This week, we're adding features into Supabase Studio to address common issues as you scale up. These are powered by tools that we have open sourced this week: index_advisor and splinter (“Supabase Postgres linter").</p>
+<p>This week we're adding a Security Advisor to Supabase Studio. This is a new interface for exploring security issues with your database because, well, sometimes even Postgres veterans get it wrong. The Security Advisor runs a set queries on your database to identify configuration issues.</p>
+<p>The Security Advisor is helpful in pointing out security issues that you might have forgotten or not yet be aware: some lints are general purpose for Postgres projects, while others are specific to Supabase.</p>
+<p>As with all of our tooling, it's designed to both help and to teach. The suggestions are well-documented with a rationale, descriptions, examples and remediation steps. Did you know, for example, that views don't respect RLS policies unless you've set security_invoker=on? Now you do!</p>
+<p>While database tuning is a speciality on its own, many projects have simple optimizations to improve performance. We're releasing a new Performance Advisor in Supabase Studio to surface the low-hanging fruit.</p>
+<p>The Performance Advisor checks for misconfigurations, like tables with unindexed foreign key columns, inefficient RLS policies, or columns with duplicate indexes. As a project grows, issues like this can sneak in and slow your projects down (and fill up your disks).</p>
+<p>If you're looking for ways to speed up your database, this is the place to start.</p>
+<p>Speaking of performance, we have another treat for you. Last week, we announced PostgreSQL index advisor on Hacker News. This is a Postgres extension that can determine if a given query should have an index. It's already proving useful:</p>
+<p>Awesome, the Index Advisor sped my slowest query 4x!</p>
+<p>The Supabase Index Advisor is now available inside Supabase Studio. We've integrated the Index Advisor into our existing Query Performance tool so that you can find your slowest queries and check recommendations. As its name suggests, this analyzes your queries and make recommendations to add or remove table indexes.</p>
+<p>Not sure what an index is? Imagine having to look up a person's name in a phonebook where the
+entries are not alphabetical. This is what your database tables look like by default. Finding a
+number from a randomly sorted list of records would take a long time. When you add an index, the
+database stores the sorted values, allowing it to quickly locate a row without having to search
+through every record sequentially.</p>
+<p>This is just the beginning of our plan to make automated data analysis tooling available to all developers. Even if you're experienced with databases, this will be a huge help with the optimization work you have already planned to do. If you're new to databases, the Index Advisor will help you level-up, surfacing issues and showing you how to fix them.</p>
+<p>We plan to expand the set of suggestions available in Studio to cover more areas of potential improvement for security and performance. Some of the ideas we have in mind for the future include:</p>
+<p>Community feedback plays a key role in helping us determine where to invest time developing future lints. We encourage contributions by suggesting new lints or enhancements.</p>
+<p>If you have ideas for new lints or wish to report problems you can open an issue on our GitHub repository splinter or index_advisor.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/security-performance-advisor" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1206. Top 10 Launches from Supabase GA Week</h2>
+    <div class="article-meta">
+        📅 Apr 18, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/ga-week-summary" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/ga-week-summary/og.png" alt="Top 10 Launches from Supabase GA Week" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/ga-week-summary/og.png" alt="Top 10 Launches from Supabase GA Week" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>There's always a lot to cover in Launch Weeks. Here are a few highlights:</p>
+<p>Supabase Bootstrap is the fastest way to spin up a new hosted Supabase project from existing starter templates. Just run supabase bootstrap with our CLI and we'll help you launch a new application and attach a remote database to get you started.</p>
+<p>Supabase Branching is now in open beta. You can enable it on any project that's Pro Plan or above. Branching is a seamless integration of Git with your development workflow, extending beyond your local environment to a remote database.</p>
+<p>We shipped a Postgres extension for recommending indexes to improve query performance. It leans heavily on HypoPG, an excellent extension to determine if Postgres will use a given index without spending resources to create them.</p>
+<p>The Supabase Swift libraries are now officially supported by Supabase. This makes it simple to interact with Supabase from applications on Apple's platforms, including iOS, macOS, watchOS, tvOS, and visionOS.</p>
+<p>We're dropping some handy tools in Supabase Studio this week to help with security and performance: a Security Advisor for detecting insecure database configuration, and a Performance Advisor for suggesting database optimizations.</p>
+<p>We're making it super easy to run AI models within Supabase Edge Functions. We have a new API to generate embeddings and upcoming support for Large Language Models like llama3 and mistral.</p>
+<p>Supabase Storage is now officially an S3-Compatible Storage Provider. With the support of the S3 protocol, you can now connect Supabase Storage to thousands of 3rd-party tools and services, and make it even easier to use Supabase for data engineering.</p>
+<p>Anonymous sign-ins can be used to create temporary users who haven't signed up for your application yet. This lowers the friction for new users to try out your product since they don't have to provide any signup credentials. One of our most-requested features by the community!</p>
+<p>Oriole is a table storage extension for Postgres. It is designed to be a drop-in replacement for Postgres' existing storage engine, and benchmarks show that it's significantly faster. Over time we hope that it can become available for any Postgres installation and we will continue to work with Oriole and the Postgres community to make this happen.</p>
+<p>Supabase is now GA. During the first year of Supabase we set ourselves a goal: build a managed platform capable of securely running 1 million databases. Today we've proven that metric and we're announcing the General Availability of the platform that will serve the next 99 million.</p>
+<p>There's been a few other highlights this week:</p>
+<p>In the previous Launch Week we started working on Fly Postgres, a managed offering from Supabase. We've received a lot of feedback from early testers, and we're working hard to make the service available and as resilient for production workloads.</p>
+<p>Today we're opening up access to everyone for testing. Testers can also try Branching, an opt-in feature which creates an ephemeral test environment for your git branches. These instances automatically pause when you aren't using them.</p>
+<p>The service is in public alpha. We don't recommend using it for production.</p>
+<p>We started GA Week with 10 confirmed community meetups. Over the week, more community members volunteered to host meetups in their own cities. With 25 meetups across the world, some with just 3 people and some with over 50, the Supabase community has truly made our team feel thankful. A huges shout out to these organizers:</p>
+<p>Rita & Ann (New York), Mansueli & Guilherme (Maringá), Florian (Seoul), Jose & Aile (Miami), Philippe (Berlin), Tyler (Tokyo), Ivan (Tenerife), Thor (Singapore), Jack (London), Fatuma (Nairobi), Emilio (Milan), Jay Raj Mishra (Kathmandu), Bharat (New Delhi), Abdulhakeem Adams (Ilorin, Nigeria), Kyle Rummens (Utah, USA), Laksh (Nagpur, India), Cam Blackwood (Edinburgh, Scotland), Harry (Central Manchester), Guilleume (Dubai), Kristian (Bergen, Norway), Andrei (Zagreb, Croatia), Misel (Serbia), Matthew (Toronto, Canada), Charlie Coppinger (Wellington, NZ), Nicolas Montone (Buenos Aires, Argentina), Ryan Griffin (Melbourne, Australia), Isheanesu (Cape Town, SA), Aileen (Monterrey, Mexico), Martin (Hong Kong), Bilal Aamer (Hyderabad, India), Gabriel Pan Gantes (Barcelona, Spain).</p>
+<p>We're also hosting a bigger meeting in San Fransisco in June, with a few friends like Fly.io, Ollama, and Tigris. If you want to hang out with Ant & I, sign up for a full day of hacking at the a16z office:</p>
+<p>The 10-day hackathon is still going! If you want a chance to win a set of Apple AirPods along with extremely limited edition Supabase swag check out all the details here.</p>
+<p>Until next Launch Week, keep building cool stuff.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/ga-week-summary" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1203. Supabase Storage: now supports the S3 protocol</h2>
+    <div class="article-meta">
+        📅 Apr 18, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/s3-compatible-storage" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/s3-compatible-storage/og.png?v=2" alt="Supabase Storage: now supports the S3 protocol" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/s3-compatible-storage/og.png?v=2" alt="Supabase Storage: now supports the S3 protocol" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Supabase Storage is now officially an S3-Compatible Storage Provider. This is one of the most-requested features and is available today in public alpha. Resumable Uploads are also transitioning from Beta to Generally Available.</p>
+<p>The Supabase Storage Engine is fully open source and is one of the few storage solutions that offer 3 interoperable protocols to manage your files:</p>
+<p>We always strive to adopt industry standards at Supabase. Supporting standards makes workloads portable, a key product principle. The S3 API is undoubtedly a storage standard, and we're making it accessible to developers of various experience-levels.</p>
+<p>The S3 protocol is backwards compatible with our other APIs. If you are already using Storage via our REST or TUS APIs, today you can use any S3 client to interact with your buckets and files: upload with TUS, serve them with REST, and manage them with the S3 protocol.</p>
+<p>The protocol works on the cloud, local development, and self-hosting. Check out the API compatibility in our docs</p>
+<p>To authenticate with Supabase S3 you have 2 options:</p>
+<p>The standard access_key and secret_key credentials. You can generate these from the storage settings page. This authentication method is widely compatible with tools supporting the S3 protocol. It is also meant to be used exclusively serverside since it provides full access to your Storage resources.</p>
+<p>We will add scoped access key credentials in the near future which can have access to specific buckets.</p>
+<p>User-scoped credentials with RLS. This takes advantage of a well-adopted concept across all Supabase services, Row Level Security. It allows you to interact with the S3 protocol by scoping storage operations to a particular authenticated user or role, respecting your existing RLS policies. This method is made possible by using the Session token header which the S3 protocol supports. You can find more information on how to use the Session token mechanism in the doc.</p>
+<p>With the support of the S3 protocol, you can now connect Supabase Storage to many 3rd-party tools and services by providing a pair of credentials which can be revoked at any time.</p>
+<p>You can use popular tools for backups and migrations, such as:</p>
+<p>S3 compatibility provides a nice primitive for Data Engineers. You can use it with many popular tools:</p>
+<p>In this example our incredible data analyst, Tyler, demonstrates how to store Parquet files in Supabase Storage and query them directly using DuckDB:</p>
+<p>In addition to the standard uploads and resumable uploads, we now support multipart uploads via the S3 protocol.
+This allows you to maximize upload throughput by uploading chunks in parallel, which are then concatenated at the end.</p>
+<p>Along with the platform GA announcement, we are also thrilled to announce that resumable uploads are also generally available.</p>
+<p>Resumable uploads are powered by the TUS protocol. The journey to get here was immensely rewarding, working closely with the TUS team. A big shoutout to the maintainers of the TUS protocol, @murderlon and @acconut, for their collaborative approach to open source.</p>
+<p>Supabase contributed some advanced features from the Node implementation of TUS Spec including distributed locks, max file size, expiration extension and numerous bug fixes:</p>
+<p>These features were essential for Supabase, and since the TUS node server is open source, they are also available for you to use. This is another core principle: wherever possible, we use and support existing tools rather than developing from scratch.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/s3-compatible-storage" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1000. An intro to TSConfig for JavaScript Developers</h2>
+    <div class="article-meta">
+        📅 Apr 17, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/intro-to-tsconfig" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/intro-to-tsconfig/og-image.png" alt="An intro to TSConfig for JavaScript Developers" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/intro-to-tsconfig/og-image.png" alt="An intro to TSConfig for JavaScript Developers" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>JavaScript is constantly evolving, from its roots as a simple scripting language
+into a robust, modern tool for building complex applications. To manage larger,
+complicated code bases, JavaScript developers are constantly looking for ways to
+improve their workflows, their code quality and productivity. TypeScript is a
+major innovation towards improving code quality and maintenance by adding types,
+so it’s no surprise that
+it’s one of the fastest growing languages.</p>
+<p>TypeScript can feel scary if you’ve never used a compiled language or a compiler
+before. Or maybe you have, and you encountered a complex tsconfig.json file
+that you didn’t completely understand. This blog post is an introduction to
+TypeScript (TS) and how to configure your project to use TypeScript with ease:</p>
+<p>🚨️ Want to write and run TypeScript without any config? 🚨️</p>
+<p>Deno natively supports TypeScript.
+Simply create a .ts file and run deno run yourfile.ts.</p>
+<p>TypeScript is built on top of JavaScript. It’s a superset — any valid JavaScript
+is valid TypeScript. If you’re new to TypeScript, it’s easy to think of it as a
+“super powered linter”, adding new features to the language to help you write
+JavaScript safely. It is designed to be strictly additive — TypeScript with the
+types stripped out is just JavaScript, but with types present, you get a much
+improved tooling, debugging and general developer experience.</p>
+<p>Because the JavaScript ecosystem has grown organically over time, TypeScript
+aims to fit in with your existing tooling. Modern editors, build tools, package
+managers, testing frameworks and CI/CD tools all integrate with TypeScript. In
+order to adopt TypeScript, and tailor it to your specific project requirements
+and tools, you will need to configure the TypeScript compiler. This can be done
+using a file called tsconfig.json.</p>
+<p>If you’re doing TypeScript for the first time in a new codebase, you will
+probably leave most of the options in tsconfig.json as default. For projects
+with tooling that needs interop, or has particular quirks, tsconfig.json
+offers all the leavers you may need to pull to interact with your ecosystem.</p>
+<p>The tsconfig.json file allows you to configure how the TypeScript compiler
+processes your TypeScript code. The tsconfig.json file is just a JSON object
+with properties that define your compiler options and project settings. We’ll go
+through some of the properties you’re likely to need when setting up your own
+tsconfig.json file.</p>
+<p>The first property to take a look at is compilerOptions, where you specify
+compiler settings.</p>
+<p>The compilerOptions property is where you define TypeScript compiler settings.
+These options include -</p>
+<p>target - Specifies the ECMAScript target version for the emitted JavaScript.
+Defaults to ES3. To ensure maximum compatibility, set this to the lowest version
+that your code requires to run. ESNext setting allows you to target the
+latest supported proposed features.</p>
+<p>module - Defines the module system to use (CommonJS, AMD, ES6, etc.).
+Usage depends on your project’s requirements and the environment that your code
+will run in. Most modern projects will use ES6 or ESNext.</p>
+<p>outDir - Specifies the output directory for compiled JavaScript files. Usually
+set to dist to create a dist directory for your compiled files.</p>
+<p>strict - Enables strict type-checking options to help catch errors in your
+code. Set to true for strict type checking.</p>
+<p>alwaysStrict - Automatically set to true if strict is enabled, this parses
+the code in JavaScript strict mode and emits use strict for each source file.</p>
+<p>esModuleInterop - In JavaScript, there are two main module systems: ECMAScript
+modules (ESM) and CommonJS modules (CJS). They have different syntax and
+semantics for imports and exports. When working in a TypeScript project that
+uses both ESM and CJS modules, setting esModuleInterop to true ensures that
+TypeScript handles imports and exports in a way that is compatible with both
+module systems. This is recommended if you are working with third party
+libraries that use both CJS and ESM.</p>
+<p>lib - Specifies the libraries to include when type-checking. TypeScript
+includes type declarations (type definitions) for JavaScript built-in objects,
+such as Array, String, Promise, etc. These declarations define the shape and
+behavior of these objects, allowing TypeScript to provide accurate type checking
+and IntelliSense support. By default, TypeScript includes a standard set of
+library declarations (dom, es5, es6, etc.) based on the ECMAScript version
+targeted by your project. However, you can customize the included libraries
+using the “lib” option to match your project’s environment more precisely. For
+example, if you’re targeting only Node.js, you might exclude browser-specific
+declarations like dom.</p>
+<p>sourceMap - Generates source map files (.map) to aid debugging. Source maps
+are files that map the generated JavaScript code back to its original TypeScript
+source code. When using debugging tools, source maps allow you to set
+breakpoints, inspect variables, and step through your TypeScript code as if you
+were debugging the original TypeScript source. Set to true to enable the use
+of source maps.</p>
+<p>jsx - If you are using JSX (for example with React), this setting determines
+how your JSX files should be treated
+(preserve, react, react-native, etc.).</p>
+<p>removeComments - Strips comments from your compiled code. Helpful if minifying
+your compiled code.</p>
+<p>sourceRoot - Specifies the location where your debugger should locate
+TypeScript files instead of source locations. Use this flag if the sources
+located at run-time are in a different location than that at design-time. The
+location specified will be embedded in the source map to direct your debugger.</p>
+<p>include - specifies an array of file paths or glob patterns that TypeScript
+should include in the compilation process. Only files matching the specified
+patterns will be considered for compilation. You can use glob patterns (e.g.,
+“src/**/*.ts”) to include files from specific directories or with specific file
+extensions. If include is not specified, TypeScript includes all .ts, .tsx,
+and .d.ts files in the project directory by default.</p>
+<p>exclude - This setting specifies an array of file paths or glob patterns that
+TypeScript should exclude from the compilation process (even if they match the
+patterns specified in the include setting). You can use exclude to
+ignore files or directories that you don’t want to be compiled, such as test
+files, build artifacts, or third-party libraries. Usually you will want to
+exclude your node_modules folder.</p>
+<p>Declaration Maps - TypeScript can generate declaration map files
+(.d.ts.map) alongside declaration files (.d.ts) if declarationMap is set
+to true in your tsconfig.json. Declaration maps serve a similar purpose to
+source maps but are specific to TypeScript declaration files. These declaration
+maps provide mappings between the generated declaration files and their
+corresponding source map files, aiding in debugging and providing better tooling
+support.</p>
+<p>Watch Mode - TypeScript’s watch mode tsc --watch monitors changes to your
+TypeScript files and automatically recompiles them whenever they’re modified.
+This is useful during development, as it speeds up the feedback loop and
+eliminates the need to manually trigger compilation after each change.</p>
+<p>Incremental Builds - TypeScript’s incremental builds feature keeps track of
+changes to your project’s files and dependencies, allowing it to only rebuild
+the parts of your project that have changed since the last compilation. This can
+improve compilation times for large projects.</p>
+<p>Override Options - You can override specific compiler options for individual
+files or sets of files using comment directives in your TypeScript source files.
+For example, you can disable certain strict checks with // @ts-ignore or
+specify custom compiler options with// @ts-nocheck for specific sections of
+code.</p>
+<p>Use your tsconfig.json tile as a gateway to unlock the full potential of
+TypeScript in your projects. By understanding its purpose and leveraging its
+capabilities, you can embrace TypeScript with confidence, and gain a more
+reliable, efficient, and enjoyable development experience.</p>
+<p>To get you started there is a
+community owned repository of TSConfig base files
+for your chosen runtime, then all you need to focus on is the unique choices
+for your project.</p>
+<p>More and more developers are using TypeScript to build higher quality code bases
+and be more productive. Hopefully, this post demystifies setting up a new
+TypeScript project using tsconfig.json.</p>
+<p>However, if you’re interested in diving into TypeScript without having to do any
+configuration,
+Deno supports TypeScript natively.
+Simply create a .ts file, write some types, and run it immediately with
+deno run your_file.ts.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/intro-to-tsconfig" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1215. Supabase Auth now supports Anonymous Sign-ins</h2>
+    <div class="article-meta">
+        📅 Apr 17, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/anonymous-sign-ins" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/anonymous-sign-ins/og.png" alt="Supabase Auth now supports Anonymous Sign-ins" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/anonymous-sign-ins/og.png" alt="Supabase Auth now supports Anonymous Sign-ins" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Supabase Auth now supports anonymous sign-ins, one of our most-requested features by the community.</p>
+<p>Anonymous sign-ins can be used to create temporary users who haven’t signed up for your application yet. This lowers the friction for new users to try out your product since they don’t have to provide any signup credentials.</p>
+<p>You can enable anonymous sign-ins for your project today from the dashboard:</p>
+<p>For local development, upgrade your Supabase CLI and add the config to the config.toml file:</p>
+<p>You can create an anonymous user through the Javascript, Flutter or Swift SDKs today. Here’s how you can create an anonymous user using supabase-js .</p>
+<p>Profiles created with anonymous sign-ins are also authenticated!</p>
+<p>Once you call .signInAnonymously() you have moved the user into an authentication flow, and we treat them like a signed in user:</p>
+<p>Like a permanent user, anonymous users are persisted in the auth.users table:</p>
+<p>An anonymous user can be identified by the is_anonymous claim returned in the user’s JWT, which is accessible from your Row Level Security policies (RLS). This is helpful if you want to limit access to certain features in your application.</p>
+<p>For example, let’s say that we have an online forum where users can create and read posts.</p>
+<p>If we only want to allow permanent users to create posts, we can check if the user is anonymous by inspecting the JWT select auth.jwt() ->> 'is_anonymous'.</p>
+<p>RLS gives us full flexibility to create a variety of rules.</p>
+<p>For example, to allow read access for permanent users for all posts and limit anonymous users to posts created today:</p>
+<p>At some point, an anonymous user may decide they want to create a post. This is where we prompt them to sign up for an account which converts them to a permanent user.</p>
+<p>An anonymous user is considered a permanent user when they have an identity associated to them.</p>
+<p>After they have been converted, the user id remains the same, which means that any data associated with the user’s id would be carried over.</p>
+<p>Supabase Auth provides 2 ways to achieve this:</p>
+<p>To link an OAuth identity to an anonymous user, you need to enable manual linking for your project. Learn about how identity linking works with Supabase Auth.</p>
+<p>Once enabled, you can call the linkIdentity() method:</p>
+<p>When creating RLS policies to differentiate access for an anonymous user, you can leverage the user impersonation feature in the SQL editor to test out your policies:</p>
+<p>The user management screen provides an option to filter by anonymous users, which can help to know how many anonymous users have been created.</p>
+<p>Managing anonymous users can be tricky, especially when you have a lot of visitors to your site. We’re working on an “automatic clean-up” option to delete anonymous users that have been inactive for more than 30 days. In the meantime, since anonymous users are stored in the auth schema in your database, you can clean up orphaned anonymous users by running the following query:</p>
+<p>We are also working on a linter to check your RLS policies and highlight those that allow anonymous users access - stay tuned for updates later this month!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/anonymous-sign-ins" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1219. AI Inference now available in Supabase Edge Functions</h2>
+    <div class="article-meta">
+        📅 Apr 16, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/ai-inference-now-available-in-supabase-edge-functions" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/ai-inference-now-available-in-supabase-edge-functions/og.jpg" alt="AI Inference now available in Supabase Edge Functions" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/ai-inference-now-available-in-supabase-edge-functions/og.jpg" alt="AI Inference now available in Supabase Edge Functions" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're making it super easy to run AI models within Supabase Edge Functions. A new built-in API is available within the Edge Runtime to run inference workloads in just a few lines of code:</p>
+<p>In our previous Launch Week we announced support for AI inference via Transformers.js. This was a good start but had some shortcomings: it takes time to “boot” because it needs to instantiate a WASM runtime and build the inference pipeline. We increased CPU limits to mitigate this, but we knew we wanted a better Developer Experience.</p>
+<p>In this post we'll cover some of the improvements to remove cold starts using Ort and how we're adding LLM support using Ollama.</p>
+<p>Embeddings capture the "relatedness" of text, images, video, or other types of information. Embeddings are stored in the database as an array of floating point numbers, known as vectors. Since we released pgvector on the platform, Postgres has become a popular vector database.</p>
+<p>Today's release solves a few technical challenges for developers who want to generate embeddings from the content in their database, giving them the ability to offload this compute-intensive task to background workers.</p>
+<p>You can now utilize database webhooks to automatically generate embeddings whenever a new row is inserted into a database table.</p>
+<p>Because embedding creation is a compute-intensive task, it makes sense to offload the work from your database. Edge Functions are the perfect “background worker”. We've created a simple example to show how you can generate embeddings in Edge Functions: Semantic Search with pgvector and Supabase Edge Functions.</p>
+<p>Embedding generation uses the ONNX runtime under the hood. This is a cross-platform inferencing library that supports multiple execution providers from CPU to specialized GPUs.</p>
+<p>Libraries like transformers.js also use ONNX runtime which, in the context of Edge Functions, runs as a WASM module, which can be slow during the instantiation process.</p>
+<p>To solve this, we built a native extension in Edge Runtime that enables using ONNX runtime via the Rust interface. This was made possible thanks to an excellent Rust wrapper called Ort:</p>
+<p>Embedding generation is fairly lightweight compared to LLM workloads, so it can run on a CPU without hardware acceleration.</p>
+<p>Embeddings models are available on Edge Functions today. We currently support gte-small and we'll add more embeddings models based on user feedback.</p>
+<p>Embedding generation via Supabase.ai API is available today for all Edge Functions users in both local, hosted, and self-hosted platforms.</p>
+<p>Generating embeddings in an Edge Function doesn't cost anything extra: we still charge on CPU usage. A typical embedding generation request should run in less than a 1s, even from a cold start. Typically it won't use more than 100-200ms of CPU time.</p>
+<p>Proprietary LLMs like OpenAI and Claude provide APIs to generate text embeddings, charging per token. For example, OpenAI's text-embedding-3-small cost $0.02/1M tokens at the time of writing this post.</p>
+<p>Open source text embedding models provide similar performance to OpenAI's paid models. For example, the gte-small model, which operates on 384 dimensions, has an average of 61.36 compared to OpenAI's text-embedding-3-small, which is at 62.26 on the MTEB leaderboard, and they perform search faster with fewer dimensions.</p>
+<p>With Supabase Edge Functions, you can generate text embeddings 10x cheaper than OpenAI embeddings APIs.</p>
+<p>Embedding generation only a part of the solution. Typically you need an LLM (like OpenAI's GPT-3.5) to generate human-like interactions. We're working with Ollama to make this possible with Supabase: local development, self-hosted, and on the platform.</p>
+<p>We are excited to announce experimental support for Llama & Mistral with Supabase.ai API.</p>
+<p>The API is simple to use, with support for streaming responses:</p>
+<p>LLM models are challenging to run directly via ONNX runtime on CPU. For these, we are using a GPU-accelerated Ollama server under the hood:</p>
+<p>We think this is a great match: the Ollama team have worked hard to ensure that the local development experience is great, and we love development environments that can be run without internet access (for those who enjoy programming on planes).</p>
+<p>As a Supabase developer, you don't have to worry about deploying models and managing GPU instances - simply use a serverless API to get your job done.</p>
+<p>Access to open-source LLMs is currently invite-only while we manage demand for the GPU instances. Please get in touch if you need early access.</p>
+<p>We plan to extend support for more models. Let us know which models you want next. We're looking to support fine-tuned models too!</p>
+<p>Check out the Supabase docs today to get started with the AI models:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/ai-inference-now-available-in-supabase-edge-functions" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1237. Supabase Swift</h2>
+    <div class="article-meta">
+        📅 Apr 15, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-swift" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/launch-week-11/swift/og.png" alt="Supabase Swift" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/launch-week-11/swift/og.png" alt="Supabase Swift" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We are excited to announce that Supabase Swift libraries are now officially supported by Supabase.</p>
+<p>This makes it simple to interact with Supabase from applications on Apple's platforms, including iOS, macOS, watchOS, tvOS, and visionOS:</p>
+<p>This release includes the following new features:</p>
+<p>Swift developers can now integrate Supabase services seamlessly with official support. This means:</p>
+<p>We want to give a shout out to the community members who have contributed to the development of the Supabase Swift libraries:</p>
+<p>grdsdev, satishbabariya, AngCosmin, thecoolwinter, maail, gentilijuanmanuel, mbarnach, mdloucks, mpross512, SaurabhJamadagni, theolampert, tyirenkyi, tmn, multimokia, zunda-pixel, iamlouislab, jxhug, james-william-r, jknlsn, jknlsn, Colgates, ChristophePRAT, brianmichel, junjielu.</p>
+<p>We've released a new guide to help you get started with the key features available in Supabase Swift.</p>
+<p>Or you can jump into our deep dive to use iOS Swift with Postgres & Supabase Auth:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-swift" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1233. Supabase Bootstrap: the fastest way to launch a new project</h2>
+    <div class="article-meta">
+        📅 Apr 15, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-bootstrap" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/bootstrap/og.png" alt="Supabase Bootstrap: the fastest way to launch a new project" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/bootstrap/og.png" alt="Supabase Bootstrap: the fastest way to launch a new project" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Supabase bootstrap is the fastest to spin up a new hosted Supabase project from existing starter templates:</p>
+<p>This brings a “shadcn”-like experience to Supabase, creating a project locally and launching a remote database ready for deployment.</p>
+<p>From any local directory, run supabase bootstrap and you will be prompted to choose a starter template. And the best thing is, you don't even need to install the CLI to get started! As long as you have npm or bun installed, you're ready to go!</p>
+<p>The list of starter templates is published on GitHub as samples.json. Whenever we (and in the future the community) add a new starter, it will automatically become available to all Supabase users.</p>
+<p>The template repository typically includes the full frontend code, following the file structure below:</p>
+<p>After selecting a starter, the Supabase CLI downloads all files from the template repository to your chosen local directory.</p>
+<p>You may run into GitHub rate limit when downloading too frequently from template repository. This can be avoided by setting GITHUB_TOKEN environment variable locally to your GitHub personal access token.</p>
+<p>This model is very similar to the popular shadcn workflow. After files are creating in your local repo, you can modify them and check them into source control.</p>
+<p>During the supabase bootstrap process, a new project will be created on the Supabase platform and linked to your local environment. This command will run you through the account creation flow if you don't already have one.</p>
+<p>Linking to your new hosted project may take a short while as it needs to spin up a new database in the cloud.</p>
+<p>Once the linking is completed, you will be prompted to push any template migration files to your new hosted project. These migration files will setup your remote database with the necessary schemas to support the starter application.</p>
+<p>After pushing the migrations, your project credentials will be exported to a .env file for you to connect from any frontend or backend code. The default environment variables include:</p>
+<p>Other custom variables from .env.example file defined by your chosen template will also be merged to your local .env file.</p>
+<p>It is important to store these credentials securely as anyone can connect to your remote database using the POSTGRES_URL.</p>
+<p>Finally, the CLI will suggest a start command to launch your application locally. Starting the local app will use credentials defined in .env file to connect to your new hosted project.</p>
+<p>And that's it, with a single command, you can get a new project up and running end to end.</p>
+<p>Supabase Bootstrap makes it even easier to get started with Supabase, mobile app tools, and web development frameworks like Next.js, Expo React Native, Flutter, Swift iOS.</p>
+<p>We have many many more templates coming soon, and we'll be opening it up to community contributions. Stay tuned!</p>
+<p>Visit the Supabase CLI docs to get started with supabase bootstrap.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-bootstrap" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1230. Supabase on the AWS Marketplace</h2>
+    <div class="article-meta">
+        📅 Apr 15, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-aws-marketplace" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/aws-marketplace/og.png" alt="Supabase on the AWS Marketplace" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/aws-marketplace/og.png" alt="Supabase on the AWS Marketplace" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Supabase is now available on the AWS Marketplace, Simplifying Procurement for Enterprise customers.</p>
+<p>AWS Marketplace purchasing options have expanded</p>
+<p>Pro and Team plans are now available as self-serve purchases. Enterprise is available through a
+private offer. Review the current options on the Supabase AWS Marketplace
+page.</p>
+<p>With this week's announcement of Supabase entering General Availability (GA), we are making it easier than ever for large development teams to deploy Supabase into their organization. In support of that goal, we're happy to share that Supabase is now available for purchase through the Amazon Web Services (AWS) Marketplace. Whether your company is looking for a quick way to deploy a vector database with Amazon Bedrock or looking for a scalable solution to migrate from Firebase, Supabase is bringing the ability to “build in a weekend, scale to millions” to customers of all sizes.</p>
+<p>The AWS Marketplace is a catalogue of thousands of third-party software listings, data, and services that run on AWS and are managed from a centralised location. By purchasing Supabase subscription through the AWS Marketplace, customers can benefit from a simplified billing and procurement process through their AWS account. Additionally, Supabase purchases made through the AWS Marketplace will count towards any spend commitment customers have with AWS, making it easy to meet those commitments faster.</p>
+<p>Are you an AWS customer and ready to deploy Supabase into your organization? Review the available plans and purchasing paths on the Supabase AWS Marketplace page.</p>
+<p>Pro and Team plans are available as self-serve purchases. Enterprise is available through an AWS Marketplace private offer. Customers can sign up for the Free Plan directly from Supabase.</p>
+<p>Supabase on the AWS Marketplace is a SaaS solution and requires no provisioning of additional AWS resources.</p>
+<p>All billing through the AWS Marketplace will be charged through your AWS bill. Check the billing console from your cloud provider.</p>
+<p>Customers interested in trying out Supabase can use the free tier offering directly available from Supabase.</p>
+<p>Yes. Manage the subscription plan through AWS Marketplace. See the AWS Marketplace subscription guide for details.</p>
+<p>Yes. After purchasing through AWS Marketplace, you can link an eligible existing Supabase organization. Review the account setup requirements before purchasing.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-aws-marketplace" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1226. Oriole joins Supabase</h2>
+    <div class="article-meta">
+        📅 Apr 15, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-acquires-oriole" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/launch-week-11/oriole/og.png" alt="Oriole joins Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/launch-week-11/oriole/og.png" alt="Oriole joins Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Oriole is a table storage extension for Postgres. It is designed to be a drop-in replacement for Postgres' existing storage engine.</p>
+<p>Oriole acts as a drop-in replacement for the default Postgres storage engine using the Table Access Method APIs:</p>
+<p>The using clause might look familiar if you have used other storage engines in Postgres like Citus columnar, Hydra, ParadeDB, or zheap. These all use the Table Access Method API - a set of methods that provide pluggable storage.</p>
+<p>The orioledb storage engine changes the representation of table data on disk. Its architecture is designed to take advantage of modern hardware like SSDs and NVRAM.</p>
+<p>It implements MVCC, the feature that allows multiple connected users to see different versions of the data depending on when their transaction started, via an UNDO log rather than tuple versioning. Orioles architecture prevents bloat and provides several features and benefits:</p>
+<p>Reads and writes are significantly faster with Oriole</p>
+<p>We've written previously about Pluggable Storage: it gives developers the ability to use different storage engines for different tables within the same database. This system is available in MySQL, which uses the InnoDB as the default storage engine since MySQL 5.5 (replacing MyISAM).</p>
+<p>Oriole aims to be a drop-in replacement for Postgres' default storage engine and supports similar use-cases with improved performance. Other storage engines, to name a few possibilities, could implement columnar storage for OLAP workloads, highly compressed timeseries storage for event data, or compressed storage for minimizing disk usage.</p>
+<p>In version 12, PostgreSQL introduced support for pluggable storage with the goal of adding ZHeap - a previous effort to solve some shortcomings of Postgres' default storage format. We hope to contribute towards these efforts.</p>
+<p>OrioleDB currently requires a set of patches to Postgres to expand on the type of features external storage engines extensions can implement. We remain committed to open source we'll work with the Oriole team and Postgres community with the goal of upstreaming patches so that Oriole can be used with any Postgres installation. We have no timeline for this, but it's safe to expect that it could be a few major Postgres versions away.</p>
+<p>The Oriole storage engine's reduction in disk IO is significant enough that it unlocks performant databases backed by S3 compatible blob storage.</p>
+<p>We've been working with the Oriole team for a few months to develop experimental support decoupled storage and compute:</p>
+<p>Local storage implements caching of the data most often accessed, ensuring good performance, and then synced with S3 asynchronously.</p>
+<p>You can connect an empty Postgres instance to an s3 bucket (using an S3 loader utility). The Oriole roadmap includes the ability to connect multiple read-replicas to the same S3 bucket as leader.</p>
+<p>Portability is a core principle at Supabase. Because Oriole requires a few minimal patch sets on top of Postgres, we will roll it out as an option for developers in the future. Over time we hope that it can become available for any Postgres installation and we will continue to work with Oriole and the Postgres community to make this happen.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-acquires-oriole" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1223. Branching now Publicly Available</h2>
+    <div class="article-meta">
+        📅 Apr 15, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/branching-publicly-available" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/ga-week/branching-publicly-available/og.png" alt="Branching now Publicly Available" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/ga-week/branching-publicly-available/og.png" alt="Branching now Publicly Available" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>tl;dr: Supabase Branching is now in open beta! You can enable it on any project that's Pro Plan or above.</p>
+<p>Branching is a seamless integration of Git with your development workflow, extending beyond your local environment to a remote database. Leveraging Git, particularly focusing on GitHub initially, each time a Pull Request is opened, a corresponding "Preview Environment" is spawned.</p>
+<p>Preview Branches are essentially full Supabase instances. Every push triggers migrations from the ./supabase/migrations folder, ensuring team synchronization and a shared source of truth. When you merge a Pull Request, your migrations are applied to the Production database.</p>
+<p>We announced Branching a few months ago in our previous Launch Week, with a deep dive on a few of the features like data seeding, integrations with Vercel, and seamless handling of environment variables. Since launching Branching for early-access we've worked with early users of all sizes. Today we're making Branching available to everyone.</p>
+<p>Our open Beta introduces a number of requested features:</p>
+<p>Branching now deploys your Edge Functions along with your migrations. Any Functions added or changed in your ./supabase/functions will automatically be deployed without any extra configuration.</p>
+<p>You can now set a custom Supabase directory path which allows for monorepo support. You can also choose to only spin up new branches when there are changes inside your Supabase directory. See all the configuration settings in your projects here.</p>
+<p>We had quite a few users of branching request for long-running branches so we added the concept of persistent branches. In persistent mode, a branch will remain active even after the underlying PR merges or closes.</p>
+<p>Please note that branches should still be treated as replaceable at any time. Persistent or ephemeral Branches should not be used for production data.</p>
+<p>A special thank you to all our early-access branching users who provided lots of actionable feedback. Our feature development was largely driven by the direct feedback from our users.</p>
+<p>We still have many features to add to branching before 1.0, so please continue sending us your feedback!</p>
+<p>You can easily get started with Branching by following our Getting Started Guide.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/branching-publicly-available" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html" class="active">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

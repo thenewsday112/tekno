@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 154</title>
+<meta name="description" content="Page 154">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page154.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 154</h1>
+<article class="article-card">
+    <h2>#1082. Using Deno Subhosting vs. AWS Lambda to Run Untrusted User Code</h2>
+    <div class="article-meta">
+        📅 Jan 31, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/subhosting-vs-lambda" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/subhosting-vs-lambda/og-image.png" alt="Using Deno Subhosting vs. AWS Lambda to Run Untrusted User Code" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/subhosting-vs-lambda/og-image.png" alt="Using Deno Subhosting vs. AWS Lambda to Run Untrusted User Code" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Deno Subhosting is the easiest way to run your users’ untrusted
+code on the web. Since it’s built on Deno Deploy v8 multi-tenant
+isolate cloud, it’s optimized to deploy and run JavaScript with minimal overhead
+and maximum security.</p>
+<p>While many users like the simplicity of programmatically deploying JavaScript
+via the Deno Subhosting REST API, others have asked
+why they couldn’t build the same thing with AWS Lambda. The short answer is: you
+absolutely can! Since AWS Lambda is a smaller “building block”, it can be a
+great choice if you have specific needs that cannot be handled with Deno
+Subhosting and have the time to implement many key features, like code and
+deployment management, security and maximum tenant isolation, and automatic
+scaling up and down of deployments.</p>
+<p>In this blog post, we’ll go over key differences — such as features,
+performance, and billing model — for building a deployment platform using Deno
+Subhosting or AWS Lambda.</p>
+<p>When building a platform where users can deploy and run their code on the web,
+there are two critical aspects to get right:</p>
+<p>While these two are critical, we’ve laid out other dimensions in which we
+believe are pertinent to someone evaluating solutions with which to integrate a
+deployment platform:</p>
+<p>While AWS Lambda supports many more languages compared to Deno Subhosting, our
+choice to only support JavaScript and TypeScript allows us to
+optimize the entire experience for maximum deployment and cold start performance.
+However, if your developers have a strong preference to use a language that
+isn’t JavaScript or TypeScript, it makes sense to build our solution using AWS
+Lambda.</p>
+<p>Since AWS Lambda is a serverless function, it’s far more flexible than Deno
+Subhosting, but that comes as the cost of needing to re-implement critical
+pieces of infrastructure such as:</p>
+<p>Programmatically putting code into a lambda and deploying it is only a small
+part of building a deployment platform. Building this with AWS Lambda would
+require figuring out optimal ways to transport code via HTTP, zipping and
+unzipping code to load into a lambda, how to store and retrieve code, and more.
+With Deno Subhosting, these steps are not only solved and implemented, but also
+optimized for speed to ensure a seamless user experience.</p>
+<p>Additionally, when building with AWS Lambda, you would need to create processes
+to detect when end user code fails or hangs and terminate them, as a way to
+prevent resources from racking up a bill. With Deno Subhosting, these edge
+scenarios have been solved for, so you only need to focus on delivering a good
+user experience.</p>
+<p>Any platform that can run untrusted code in the cloud must hold security as an
+utmost concern. How do we prevent someone from running malicious code that
+attempts to access other users’ code, or even your internal systems?</p>
+<p>Building this from scratch with AWS Lambda requires implementing processes that
+isolate lambdas from accessing one another, as well as any other systems in the
+underlying AWS account. With Deno Subhosting, on the other hand, was
+designed from the ground up to be as secure as possible,
+with maximum tenant isolation and processes to detect misuse of resources.</p>
+<p>These components, key to building a deployment platform that runs third party
+untrusted user code, would need to be implemented from scratch if building with
+AWS Lambda. However, if you’re seeking a solution that requires minimal
+development and ongoing maintenance, Deno Subhosting is simpler since it’s
+designed to securely run untrusted code and supports the baseline features.</p>
+<p>Another key consideration when evaluating any technology is pricing. While it’s
+difficult to compare overall pricing between Subhosting and AWS Lambda since the
+lambda price would exclude costs associated with other cloud services (e.g. data
+storage) that are
+otherwise included in Subhosting, the key
+difference is the billing model.</p>
+<p>Deno Subhosting (and Deno Deploy) uses a compute based billing model, whereas
+AWS Lambda uses a real-time (or “wall clock”) billing model. This means in Deno
+Subhosting, you’re billed when your server is computing and not when it’s
+waiting for a response from an external system. Compare this to AWS Lambda,
+where your are billed when the lambda receives a request until it handles that
+request, even if it spends most of that time waiting for an HTTP response from a
+third party.</p>
+<p>In this above flow, “real time” (also called “wall clock time”) billing begins
+when the application receives the POST request until the application responds to
+the client. In contrast, “CPU time” only elapses when the function is actually
+processing, denoted by the blue line. In this sense, CPU time charges based on
+the work performed and is “more serverless” as in you don’t pay for idle time.</p>
+<p>If you want a more out-of-the-box solution that handles JavaScript and
+TypeScript with a simpler setup, we encourage you to check out Deno Subhosting.
+It’s optimized to run untrusted code, so it’s designed with tenant isolation,
+scaling up and down of deployments, routing traffic, and generating subdomains,
+so you don’t have to implement these baseline features yourself. Plus, by only
+supporting JavaScript, it’s optimized for performance with fast deployments and
+faster cold start times.</p>
+<p>However, if you have the time to implement baseline features and want to build a
+more customized deployment platform that suits your product’s specific needs, or
+want to support languages like Go, Python, and Java, then AWS Lambda is a great
+choice.</p>
+<p>Got more questions about how Deno Subhosting can unlock growth for your
+product?</p>
+<p>Get in touch with a Deno Subhosting product specialist today.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/subhosting-vs-lambda" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1267. NoSQL Postgres: Add MongoDB compatibility to your Supabase projects with FerretDB</h2>
+    <div class="article-meta">
+        📅 Jan 31, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/nosql-mongodb-compatibility-with-ferretdb-and-flydotio" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/getting-started/ferretdb/ferretdb.jpg" alt="NoSQL Postgres: Add MongoDB compatibility to your Supabase projects with FerretDB" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/getting-started/ferretdb/ferretdb.jpg" alt="NoSQL Postgres: Add MongoDB compatibility to your Supabase projects with FerretDB" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>FerretDB is an open source document database that adds MongoDB compatibility to other database backends, such as Postgres and SQLite.
+By using FerretDB, developers can access familiar MongoDB features and tools using the same syntax and commands for many of their use cases.</p>
+<p>In this post, we'll start from scratch, running FerretDB locally via Docker, trying out the connection with mongosh and the MongoDB Node.js client, and finally deploy FerretDB to Fly.io for a production ready set up.</p>
+<p>FerretDB provides a Docker image allowing us to run it locally, for example via Orbstack, with a couple simple commands.</p>
+<p>FerretDB only requires the Postgres database URI to be provided as the FERRETDB_POSTGRESQL_URL environment variable. Every Supabase project comes with a full Postgres database. You can find the connection URI string in your Supabase Dashboard.</p>
+<p>Make sure Use connection pooling is checked and Session mode is selected. Then copy the URI. Replace the password placeholder with your saved database password.</p>
+<p>If your network supports IPv6 connections, you can also use the direct connection string. Uncheck Use connection pooling and copy the new URI.</p>
+<p>FerretDB runs on the default MongoDB port 27017 and also spins up some monitoring tools on port 8080. Once up and running you can access these at localhost:8080.</p>
+<p>Once up and running, constructing the MongoDB URI is easil:</p>
+<p>If you have MongoDB installed locally on your machine, you can test via mongosh, the MongoDB shell.</p>
+<p>If you don't have MongoDB installed locally, you can run the shell via a Docker container:</p>
+<p>With mongosh running, let's try to insert some documents into our FerretDB instance.
+You are going to insert two footballer data into a players collection.</p>
+<p>Great!
+Now when you run db.players.find(), it should return all the documents stored in the collection.</p>
+<p>Next, you need to update "Giggs" record to reflect his current position as a CM.
+To do this, we can just run an updateOne command to target just that particular player:</p>
+<p>Let's query the collection to see if the changes have been made:</p>
+<p>You can run many MongoDB operations on FerretDB. See the list of supported commands in the FerretDB documentation for more.</p>
+<p>FerretDB stores each collection in a table on the ferretdb schema, each document represented by a JSONB entry. You can inspect this in the Table Editor in your Supabase Dashboard.</p>
+<p>For production use cases, you can easily deploy FerretDB on Fly. Simply create a fly.toml file (make sure to update primary_region)</p>
+<p>Now simply replace 127.0.0.1 in the MONGODB_URL with your dedicated IPv4 address and you're ready to roll!</p>
+<p>FerretDB allows you to run MongoDB workloads on Postgres and SQLite. This flexibility means you can easily add MongoDB compatibility to your Supabase projects, while avoiding vendor lock-in and retaining control of your data architecture.</p>
+<p>To get started with FerretDB, check out the FerretDB quickstart guide.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/nosql-mongodb-compatibility-with-ferretdb-and-flydotio" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1272. pgvector 0.6.0: 30x faster with parallel index builds</h2>
+    <div class="article-meta">
+        📅 Jan 30, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/pgvector-fast-builds" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2024-01-30-pgvector-fast-builds/pgvector6.png" alt="pgvector 0.6.0: 30x faster with parallel index builds" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2024-01-30-pgvector-fast-builds/pgvector6.png" alt="pgvector 0.6.0: 30x faster with parallel index builds" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>pgvector 0.6.0 was released today, with a significant improvement: parallel builds for HNSW indexes. Building an HNSW index is now up to 30x faster for unlogged tables.</p>
+<p>This release is a huge step forward for pgvector, making it easier to tune HNSW build parameters and increase search accuracy and performance.</p>
+<p>We explored how HNSW works in an earlier post, so as a quick recap: HNSW is an algorithm for approximate nearest neighbor search. It uses proximity graphs and consists of two parts: hierarchical and navigatable small world. It operates over multiple layers with different densities or distances between nodes, where layers represent different connection lengths between nodes. Thus allowing HNSW to search, insert, and delete in linearithmic time.</p>
+<p>Prior to 0.6.0, pgvector only supported building indexes using a single thread - a big bottleneck for large datasets. For example, building an index for 1 million vectors of 1536 dimensions would take around 1 hour and 27 minutes (with 'm'=16, 'ef_construction'=200).</p>
+<p>With parallel index builds you can build an index for the same dataset in 9.5 minutes - 9 times faster:</p>
+<p>We tested index build time with the dbpedia-entities-openai-1M dataset (1 million vectors, 1536 dimensions) to compare the performance of parallel and single-threaded index HNSW builds. At the same time, we verified that the resulting indexes are the same in terms of accuracy and queries per second (QPS).</p>
+<p>We ran benchmarks on various database sizes to see the impact of parallel builds:</p>
+<p>This benchmark used the following parameters:</p>
+<p>max_parallel_maintenance_workers controls how many parallel threads are used to build an index. In further sections we will refer to the total number of workers, including the leader.</p>
+<p>The index build time is 7-9 times faster for 0.6.0, while queries per second and accuracy stay the same for both versions:</p>
+<p>You can further improve index build performance using a more powerful instance (up to 13.5x for these parameters).</p>
+<p>The index build time is not linearly proportional to the number of cores used. A sensible default for max_parallel_maintenance_workers is CPU count / 2 , the default we set on the Supabase platform. Accuracy and QPS are not affected by max_parallel_maintenance_workers.</p>
+<p>The trick is to use a large database while you build the index and then switch back to a cheaper instance after the index is built.</p>
+<p>Building time can be reduced even further using unlogged tables.</p>
+<p>An unlogged table in Postgres is a table whose modifications are not recorded in the write-ahead log (trading performance for data reliability). Unlogged tables are a great option for embeddings because the raw data is often stored separately and the embeddings can be recreated from the source data at any time.</p>
+<p>One of the steps of index creation is the final scan and WAL writing. This is generally short but not parallelizable. Using unlogged tables allows you to skip the WAL, with an impressive impact:</p>
+<p>pgvector 0.6.0 was just released and will be available on Supabase projects soon. Again, a special shout out to Andrew Kane and everyone else who worked on parallel index builds.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/pgvector-fast-builds" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1274. Getting started with Ruby on Rails and Postgres on Supabase</h2>
+    <div class="article-meta">
+        📅 Jan 29, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/ruby-on-rails-postgres" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/getting-started/rails/rails.jpg" alt="Getting started with Ruby on Rails and Postgres on Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/getting-started/rails/rails.jpg" alt="Getting started with Ruby on Rails and Postgres on Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Every Supabase project comes with a full Postgres database, a free and open source database which is considered one of the world's most stable and advanced databases.</p>
+<p>Postgres is an ideal choice for your Ruby on Rails applications as Rails ships with a built-in Postgres adapter!</p>
+<p>In this post we'll start from scratch, creating a new Rails project, connecting it to our Supabase Postgres database, and interacting with the database using the Rails Console.</p>
+<p>Supabase is one of the best free alternatives to Heroku Postgres. See this guide to learn how to migrate from Heroku to Supabase.</p>
+<p>There's also a Heroku to Supabase migration tool available to migrate in just a few clicks.</p>
+<p>Make sure your Ruby and Rails versions are up to date, then use rails new to scaffold a new Rails project. Use the -d=postgresql flag to set it up for Postgres.</p>
+<p>Go to database.new and create a new Supabase project. Save your database password securely.</p>
+<p>When your project is up and running, navigate to the project connect page to find the URI connection string.</p>
+<p>Rails ships with a Postgres adapter included, you can simply configure it via the environment variables. You can find the database URL in your Supabase Dashboard.</p>
+<p>Rails includes Active Record as the ORM as well as database migration tooling which generates the SQL migration files for you.</p>
+<p>Create an example Article model and generate the migration files.</p>
+<p>You can use the included Rails console to interact with the database. For example, you can create new entries or list all entries in a Model's table.</p>
+<p>Run the development server. Go to http://127.0.0.1:3000 in a browser to see your application running.</p>
+<p>Currently the app shows a nice development splash screen, let's update this to show our articles from the database:</p>
+<p>In order to start working with Fly.io, you will need flyctl, our CLI app for managing apps. If you've already installed it, carry on. If not, hop over to the installation guide. Once that's installed you'll want to log in to Fly.</p>
+<p>To configure and launch the app, you can use fly launch and follow the wizard.</p>
+<p>When asked "Do you want to tweak these settings before proceeding?" select y and set Postgres to none as we will be providing the Supabase database URL as a secret.</p>
+<p>Use the Fly.io CLI to set the Supabase database connection URI from above as a sevret which is exposed as an environment variable to the Rails app.</p>
+<p>Deploying your application is done with the following command:</p>
+<p>This will take a few seconds as it uploads your application, builds a machine image, deploys the images, and then monitors to ensure it starts successfully. Once complete visit your app with the following command:</p>
+<p>That's it! You're Rails app is up and running with Supabase Postgres and Fly.io!</p>
+<p>Supabase is the ideal platform for powering your Postgres database for your Ruby on Rails applications! Every Supabase project comes with a full Postgres database and a good number of useful extensions!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/ruby-on-rails-postgres" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1278. Create a Figma Clone app with Flutter and Supabase Realtime</h2>
+    <div class="article-meta">
+        📅 Jan 26, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/flutter-figma-clone" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/flutter-figma-clone/figma-clone-og.jpg" alt="Create a Figma Clone app with Flutter and Supabase Realtime" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/flutter-figma-clone/figma-clone-og.jpg" alt="Create a Figma Clone app with Flutter and Supabase Realtime" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Supabase has a low latency real-time communication feature called Broadcast. With it, you can have your clients communicate with other clients with low latencies. This is useful for creating apps with connected experiences. Flutter has a CustomPainter class, which allows developers to interact with the low-level canvas API allowing us to render virtually anything on the app. Combining these two tools allows us to create interactive apps.</p>
+<p>In this article, I am combining the Supabase Realtime Broadcast with Flutter’s CustomPainter to create a collaborative design board app like Figma.</p>
+<p>We are building an interactive design canvas app where multiple users can collaborate in real time. We will add the following features to the app:</p>
+<p>Okay, Figma clone might be an overstatement. However, the point of this article is to demonstrate how to build a collaborative app with all the fundamental elements of a collaborative design canvas. You can take the concepts of this app, add features, refine it, and make it as sophisticated as Figma.</p>
+<p>Let’s start by creating a blank Flutter app.</p>
+<p>--empty flag creates a blank Flutter project without the initial counter template. --platforms specify which platform to support with this Flutter application. Because we are working on an app that involves cursors, we are going to focus on the web for this example, but you can certainly run the same code on other platforms as well.</p>
+<p>We will use two dependencies for this app.</p>
+<p>Run the following command to add the dependencies to your app.</p>
+<p>In this example, we will be using a remote Supabase instance, but if you would like to follow along with a local Supabase instance, that is fine too.</p>
+<p>You can head to database.new to create a new Supabase project for free. It will only take a minute or two to set up your project with a fully-fledged Postgres database.</p>
+<p>Once your project is ready, run the following SQL from the SQL editor of your dashboard to set up the table and RLS policies for this app. To keep this article simple, we will not implement auth, so the policies you see are fairly simple.</p>
+<p>The app that we will build will have the following structure.</p>
+<p>Open the lib/main.dart file and add the following. You should replace the credentials with your own from the Supabase dashboard under settings > API. You should see an error with the import of the canvas_page.dart file, but we will create it momentarily.</p>
+<p>It is nice to organize the app’s constants in a file. Create lib/utils/constants.dart file and add the following. These values will later be used when we are setting up Supabase Realtime listeners.</p>
+<p>We will need to create data models for each of the following:</p>
+<p>Create lib/canvas/canvas_object.dart file. The file is a bit long, so I will break it down in each component below. Add all of the code into the canvas_object.dart file as we step through them.</p>
+<p>At the top of the file, we have an extension method to generate random colors. One of the methods generates a random color, which will be used to set the color of a newly created object, and the other generates a random with a seed of a UUID, which will be used to determine the user’s cursor color.</p>
+<p>We then have the SyncedObject class. SyncedObject class is the base class for anything that will be synced in real time, this includes both the cursor and the objects. It has an id property, which will be UUID, and it has toJson method, which is required to pass the object information over Supabase’s broadcast feature.</p>
+<p>Now to sync the user’s cursor with other clients, we have the UserCursor class. It inherits the SyncedObject class and has JSON parsing implemented.</p>
+<p>There is an additional set of data that we want to sync in real-time, and that is the individual shapes within the canvas. We create the CanvasObject abstract class, which is the base class for any shapes within the canvas. This class extends the SyncedObject because we want to sync it to other clients. In addition to the id property, we have a color property, because every shape needs a color. We also have a few methods.</p>
+<p>Now that we have the base class for the canvas objects, let’s define the actual shapes we will support in this application. Each object will inherit CanvasObject and will have additional properties like center and radius for the circle.</p>
+<p>In this article, we are only supporting circles and rectangles, but you can easily expand this and add support for other shapes.</p>
+<p>That is it for the canvas_object.dart file.</p>
+<p>CustomPainter is a low-level API to interact with the canvas within a Flutter application. We will create our own CustomPainter that takes the cursor positions and the objects within the app and draws them on a canvas.</p>
+<p>Create lib/canvas/canvas_painter.dart file and add the following.</p>
+<p>userCursors and canvasObjects represent the cursors and the objects within the canvas respectively. The key of the Map is the UUID unique identifiers.</p>
+<p>The paint() method is where the drawing on the canvas happens. It first loops through the objects and draws them on the canvas. Each shape has its drawing method, so we will check the type of the object in each loop and apply the respective drawing method.</p>
+<p>Once we have all the objects drawn, we draw the cursors. The reason why we draw the cursors after the objects is because within a custom painter, whatever is drawn later draws over the previously drawn objects. Because we do not want the cursors to be hidden behind the objects, we draw all the cursors after all of the objects are done being drawn.</p>
+<p>shouldRepaint() defines whether we want the canvas to be repainted when the CustomPainter receives a new set of properties. In our case, we want to redraw the painter whenever we receive a new set of properties, so we always return true.</p>
+<p>Now that we have the data models and our custom painter ready, it is time to put everything together. We will create a canvas page, the only page of this app, which allows users to draw shapes and move those shapes around while keeping the states in sync with other users.</p>
+<p>Create lib/canvas/canvas_page.dart file. Add all of the code shown within this step into canvas_page.dart. Start by adding all the necessary imports for this app.</p>
+<p>We can then create an enum to represent the three different actions we can perform in this app, pointer for moving objects around, circle for drawing circles, and rectangle for drawing rectangles.</p>
+<p>Finally, we can get to the meat of the app, creating the CanvasPage widget. Create an empty StatefulWidget with a blank Scaffold. We will be adding properties, methods, and widgets to it.</p>
+<p>First, we can define all of the properties we need for this widget. _userCursors and _canvasObjects will hold the cursors and canvas objects the app receives from the real-time listener. _canvasChanel is the gateway for the client to communicate with other clients using Supabase Realtime. We will later implement the logic to send and receive information about the canvas. Then there are a few states that will be used when we implement the drawing on the canvas.</p>
+<p>Now that we have the properties defined, we can run some initialization code to set up the scene. There are a few things we are doing in this initialization step.</p>
+<p>One, assigning a randomly generated UUID to the user. Two, setting up the real-time listener for Supabase. We are listening to Realtime Broadcast events, which are low-latency real-time communication mechanisms that Supabase offers. Within the callback of the broadcast event, we obtain the cursor and object information sent from other clients and set the state accordingly. And three, we load the initial state of the canvas from the database and set it as the initial state of the widget.</p>
+<p>Now that the app has been initialized, we are ready to implement the logic of the user drawing and interacting with the canvas.</p>
+<p>We have three methods triggered by user actions, _onPanDown(), _onPanUpdate(), and _onPanEnd(), and a method to sync the user action with other clients _syncCanvasObject().</p>
+<p>What the three pan methods do could be two things, either to draw the object or to move the object.</p>
+<p>When drawing an object, on pan down it will add the object to the canvas with size 0, essentially a point. As the user drags the mouse, the pan update method is called which gives the object some size while syncing the object to other clients along the way.</p>
+<p>When the user is in pointer mode, the pan-down method first determines if there is an object under where the user’s pointer currently is located. If there is an object, it holds the object’s id as the widget’s state. As the user drags the screen, the position of the object is moved the same amount the user’s cursor moves, while syncing the object’s information through broadcast along the way.</p>
+<p>In both cases, when the user is done dragging, the pan end is called which does some clean-ups of the local state and stores the object information in the database to store the canvas data permanently.</p>
+<p>With all the properties and methods defined, we can proceed to add content to the build method. The entire region is covered in MouseRegion, which is used to get the cursor position and share it with other clients. Within the mouse region, we have the GestureDetector and the three buttons representing each action. Because the heavy lifting was done in the methods we have already defined, the build method is fairly simple.</p>
+<p>At this point, we have implemented everything we need to create a collaborative design canvas. Run the app with flutter run and run it in your browser. There is currently a bug in Flutter where MouseRegion cannot detect the position of a cursor in two different Chrome windows at the same time, so open it in two different browsers like Chrome and Safari, and enjoy interacting with your design elements in real time.</p>
+<p>In this article, we learned how we can combine the Supabase Realtime Broadcast feature with Flutter’s CustomPainter to create a collaborative design app. We learned how to implement real-time communication between multiple clients using the Broadcast feature, and how we can broadcast the shape and cursor data to other connected clients in real-time.</p>
+<p>This article only used circles and rectangles to keep things simple, but you can easily add support for other types of objects like texts or arrows just by extending the CanvasObject class to make the app more like Figma. Another fun way to expand this app would be to add authentication using Supabase Auth so that we can add proper authorizations. Adding an image upload feature using Supabase Storage would certainly open up more creative options for the app.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/flutter-figma-clone" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1090. Deno 1.40: Temporal API</h2>
+    <div class="article-meta">
+        📅 Jan 25, 2024 &nbsp;|&nbsp; Category: <strong>Health</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v1.40" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v1.40/ogp.png" alt="Deno 1.40: Temporal API" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v1.40/ogp.png" alt="Deno 1.40: Temporal API" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We are excited to announce the release of Deno 1.40, a significant step forward
+in the evolution of Deno. This new version is packed with features that enhance
+the Deno experience, introducing the powerful Temporal API for
+advanced date and time operations, and embracing the latest
+decorator syntax for more expressive code. Alongside these
+advancements, we’ve implemented a series of
+deprecations, stabilizations,
+and removals aimed at streamlining
+Deno’s capabilities and preparing for Deno 2.</p>
+<p>If you already have Deno installed, upgrade to version 1.40 in your terminal
+with:</p>
+<p>If you don’t yet have Deno installed, you can install it with one of the
+following commands, or
+many other ways.</p>
+<p>Here’s an overview of what’s new in Deno 1.40:</p>
+<p>The Temporal API is designed to
+address some of the shortcomings and complexities associated with the existing
+Date object in JavaScript.</p>
+<p>Temporal proposal is actively implemented by all major JavaScript engines and
+we’re happy to announce it’s now available in Deno with the
+--unstable-temporal flag.</p>
+<p>It’s unlikely that Temporal API will be changed and we aim to stabilize it in
+Deno 2. We encourage you to explore the
+Temporal API docs.</p>
+<p>Deno now supports import.meta.filename and import.meta.dirname properties.</p>
+<p>These properties mirror __filename and __dirname properties from the
+CommonJS module system:</p>
+<p>Both of these properties are aware of the OS specific path separator and provide
+proper separators for the current platform:</p>
+<p>These properties are available only for local modules (ie. modules loaded from
+the file system) and are undefined for remote modules (modules imported from
+http:// or https://).</p>
+<p>Deno now supports the TC39 stage 3
+Decorators proposal, which will
+soon be implemented in all browsers.</p>
+<p>Decorators are a proposal for extending JavaScript classes which is widely
+adopted among developers in transpiler environments, with broad interest in
+standardization. TC39 has been iterating on decorators proposals for over five
+years. This document describes a new proposal for decorators based on elements
+from all past proposals.</p>
+<p>This feature is available in .ts, .jsx and .tsx files. Support in pure
+JavaScript is waiting on implementation in V8.</p>
+<p>Here is an example of an @trace decorator that logs out whenever a function is
+called, and when it returns:</p>
+<p>If you rely on the legacy “experimental TypeScript decorators”, you can still
+use them with the following configuration:</p>
+<p>Note: There was a bug discovered after v1.40.0 was cut that TypeScript’s
+experimentalDecorators was still turned on in the LSP. Please upgrade to
+v1.40.1.</p>
+<p>The imports field in deno.json now supports a simpler syntax for specifying
+dependencies that have subpath exports. Previously, when wanting to use preact
+from npm, you had to add this to your imports object in your deno.json:</p>
+<p>This allowed you to import both preact, and subpath exports, like
+preact/hooks.</p>
+<p>In this release we have simplified this, so that you can now just do:</p>
+<p>In Deno 1.40.0, this will allow you to import both preact and preact/hooks
+from npm.</p>
+<p>Previously Deno considered the imports field in deno.json to just be a
+regular
+import map.
+Now, we pre-process the imports field in deno.json and expand any entries
+with a npm: prefix on the right hand side into two entries in an internal
+import map that we use for resolution.</p>
+<p>As we gear up for Deno 2, we’re committed to refining the runtime while ensuring
+a smooth transition from Deno 1. While most Deno 1 code will remain compatible,
+we’re streamlining certain APIs for the platform’s long-term health.</p>
+<p>We’re introducing deprecations to phase out older APIs, alongside warnings to
+assist your migration:</p>
+<p>window – The global variable window is used often across the
+JavaScript ecosystem to test if code is running in a browser. It is an easy
+fix to use globalThis or self instead. There is no runtime warning for
+this deprecation yet, but it will show up in deno lint in starting this
+release.</p>
+<p>Deno.run() – This is the old and error-prone subprocess API. We have
+since introduced the much more versatile
+Deno.Command API which
+was stabilized a year ago.</p>
+<p>Deno.serveHttp() – Replaced by the faster and simpler Deno.serve().
+Documentation here.</p>
+<p>Deno.metrics() – To focus on performance, we’re shifting towards more
+targeted command-line flags and APIs. Custom metrics implementations are
+available via
+op_metrics_factory_fn
+and a new --strace-ops flag for runtime ops tracing.</p>
+<p>Stream-related Functions: Transitioning to Web Streams, we’re deprecating
+several Deno.Reader/ Deno.Writer stream functions. The deprecated
+functions are still accessible via the Deno standard library:</p>
+<p>Deno.FsWatcher.return() – To align with other async iterators, we’re
+deprecating this in favor of explicit close methods.</p>
+<p>Deno.customInspect – To encourage browser-compatible code, we’ve
+switched to Symbol.for("Deno.customInspect").</p>
+<p>In Deno 2, we are removing the concept of “resource ids”. Resource ids are
+integer references to sockets, files, or other resources managed outside of
+JavaScript. They’re analogous to file descriptors. However most users do not
+touch these directly, and we’d like to start introducing resources reference by
+native JavaScript objects. For this reason we’re deprecating these APIs:</p>
+<p>Deno.isatty() – instead use the isTerminal() method, for example
+Deno.stdout.isTerminal().</p>
+<p>Deno.close() – this API also operates on rid. Users are encouraged to
+use .close() method on relevant objects instead. For example, file.close()
+rather than Deno.close(file.rid).</p>
+<p>Deno.resources() – This API also exposes resource ids and has little
+utility.</p>
+<p>Deno.ftruncate() and Deno.ftruncateSync() – These function are now
+avaiable on Deno.FsFile as truncate() and truncateSync().</p>
+<p>All rid properties are now deprecated and will be removed in Deno 2.0:</p>
+<p>Loading certificates from files is now deprecated, read them yourself instead:</p>
+<p>Following Deno APIs have been stabilized and un-flagged:</p>
+<p>Finally, the unstable API Deno.upgradeHttp has been removed. This API was
+error prone and easy to misuse. We encourage everyone to use
+Deno.serve() and
+Deno.upgradeWebsocket().</p>
+<p>We’ve added support for the
+rejectionhandled event,
+which is emitted anytime a .catch() handler is attached to a promise that has
+already been rejected. Also, this event will only emitted if you have a
+unhandledrejection event listener that calls event.preventDefault()
+(otherwise the promise will be rejected and the process will exit with an
+error).</p>
+<p>We’re introducing a new unstable Deno.UnsafeWindowSurface API to address
+windowing in Deno. Our goal is to provide a windowing solution for WebGPU
+without linking to native windowing systems like X11.</p>
+<p>This is a low level API that can be used by FFI windowing libraries like
+sdl2, glfw,
+raylib, winit and more to
+create a WebGPU surface using native window and display handles.</p>
+<p>Here’s an example using deno.land/x/sdl2:</p>
+<p>Running with deno run --allow-ffi --unstable-webgpu --unstable-ffi:</p>
+<p>Here’s a demo music player app built using this API:
+https://github.com/littledivy/wgui</p>
+<p>For more details on low level use, check out the PR:
+https://github.com/denoland/deno/pull/21835</p>
+<p>The following built-in Node APIs are now available:</p>
+<p>Additionally we fixed several bugs in already supported Node.js APIs:</p>
+<p>Since v1.39.0, we’ve strengthened integration with our embedded instance of
+TypeScript’s
+Language Service API
+to achieve significant performance boosts and some bug fixes. Data is exchanged
+between Rust and the TypeScript isolate more efficiently and less frequently,
+owing to smarter project-state synchronization and caching.</p>
+<p>Quality-of-life improvement for users of the jsxImportSource compiler option:
+The specified remote resource will be cached automatically when the containing
+deno.json file is saved. This was necessary because unlike an uncached import,
+the diagnostics resulting from this missing resource were vague and did not
+point to the cause of the problem (neither from the perspective of the user nor
+the language server’s quick-fix generator).</p>
+<p>Auto-import completions will work more consistently. Some cases where the
+completion resolution would silently error are fixed, due to better state
+preservation in the TypeScript isolate. Import-mapped NPM specifiers with
+subpaths are correctly substituted with the expected alias.</p>
+<p>There is a new diagnostic printer in for deno lint and deno doc. We’ll be
+expanding this to other subcommands in the coming release.</p>
+<p>Three new rules are available in deno lint:</p>
+<p>The no-window rule is enabled by default, while the other two are opt-in and
+you need to enable them in your configuration file:</p>
+<p>Maintaining code quality is paramount to the success of your project and we all
+found ourselves in a situation where we need to suppress a warning from a
+linter.</p>
+<p>In most instances we just ignore a warning and move on, but this approach
+doesn’t help out team members or future self in understanding why a particular
+warning was suppressed.</p>
+<p>deno lint now supports additional explanation in // deno-lint-ignore and
+// deno-lint-ignore-file directives:</p>
+<p>We’re evolving our approach to managing unstable features. The --unstable
+flag, while useful, has been somewhat imprecise, activating all unstable
+features simultaneously. In Deno 1.38, we introduced more
+granular flags to give you finer
+control over specific unstable features, for example --unstable-webgpu enables
+the new WebGPU API. Building on this, Deno 1.40 marks the beginning of the
+deprecation phase for the broad --unstable flag, setting the stage for its
+removal in Deno 2.</p>
+<p>Additionally, we’ve improved type checking with respect to unstable APIs in
+deno check and the LSP. Now, type definitions for both stable and unstable
+APIs are automatically included during type checking. This eliminates the need
+to specify --unstable for accessing unstable API type definitions. However,
+remember to enable the specific unstable feature flags when running your
+program. Omitting these flags will still lead to errors, ensuring you’re aware
+of the unstable features in use.</p>
+<p>This change streamlines development, offering more clarity and control over the
+use of Deno’s feature set.</p>
+<p>We couldn’t build Deno without the help of our community! Whether by answering
+questions in our community Discord server or
+reporting bugs, we are incredibly
+grateful for your support. In particular, we’d like to thank the following
+people for their contributions to Deno 1.40: Anwesh, Dean Srebnik, Joel Walker,
+Jovi De Croock, Julien Cayzac, Jérôme Benoit, Kenta Moriuchi, Kitson Kelly, Lino
+Le Van, Raashid Anwar, cions, king8fisher, nokazn, 林炳权.</p>
+<p>Would you like to join the ranks of Deno contributors?
+Check out our contribution docs here,
+and we’ll see you on the list next time.</p>
+<p>Believe it or not, the changes listed above still don’t tell you everything that
+got better in 1.40. You can view the full list of pull requests merged in Deno
+1.40 on GitHub here.</p>
+<p>Thank you for catching up with our 1.40 release, and we hope you love building
+with Deno!</p>
+<p>Fresh v1.6 apps have expanded plugin APIs, faster route
+matching, and official Tailwind CSS support.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v1.40" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1281. How pg_graphql works</h2>
+    <div class="article-meta">
+        📅 Jan 24, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/how-pg-graphql-works" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/how-pg-graphql-works/og.png" alt="How pg_graphql works" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/how-pg-graphql-works/og.png" alt="How pg_graphql works" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Supabase’s GraphQL API is powered by pg_graphql. In this post, we will look at the internal workings of pg_graphql. Since it is an extension written in the Rust programming language, familiar with Rust will help - although it’s not a requirement to understand this post.</p>
+<p>This article will give you a deeper understanding of pg_graphql , helping you to:</p>
+<p>pg_graphql is a Postgres extension that reads the SQL schema in a database and exposes it as a GraphQL schema. The GraphQL interface is made available through a SQL function graphql.resolve(...) which allows any programming language to use GraphQL without any additional servers, processes, or libraries. It is also possible to call the graphql.resolve(...) function from PostgREST, or any other HTTP proxy, to safely expose the GraphQL API via HTTP/S.</p>
+<p>When a client sends a GraphQL request to pg_graphql it gets a response back. But do you know what happens inside pg_graphql to serve that request? Let’s take a look at the life of a GraphQL request.</p>
+<p>The entry point of a request is the graphql.resolve(query, ..) function. This function calls the graphql._internal_resolve(query) function which is written in Rust and where the real magic starts. The first line in that function uses the graphql-parser crate to parse the GraphQL query into a tree structure. Let’s see how that works.</p>
+<p>Parsing converts a query string into an abstract syntax tree (AST). This is a two-step process, first, a tokenizer converts the input string into tokens, and then a parser organizes the tokens into nodes of the AST.</p>
+<p>A tokenizer (aka a lexer) reads the query string and spits out tokens in the language. For example, take a look at the following query:</p>
+<p>It will be turned into the following tokens by the tokenizer: query, {, bookCollection, {, edges, {, node, {, id, }, }, } and }. How does the tokenizer know where a token starts and ends? The tokenizer relies on lexical grammar to figure out token boundaries. It looks at the next character in the text to first find the kind of token to expect and then uses the grammar rules for that token to find where it ends. For example, the first character in our example is q which means it must be a Name because its grammar looks like this:</p>
+<p>The grammar tells the tokenizer that if the next character is a Letter or an underscore then it is the start of a Name. And when the tokenizer finds a character that is not a NameContinue it ends the token. In our example, the Name token ends before the first whitespace after query.</p>
+<p>Note that the tokenizer’s job is to just produce valid lexical tokens, even if those tokens do not make a valid GraphQL query. For example, the tokenizer will happily produce the tokens }, query, and { for an input string } query {. It is the parser’s job to reject these sequences of tokens as invalid.</p>
+<p>There are also tokens that the tokenizer ignores. There’s good reason, for example, to ignore whitespace because it allows you to format your code as you please. But a quirk of the lexical structure of GraphQL is that it also ignores commas. This means, you can stick a comma just about anywhere and the query would still be valid. E.g. the last example can also be rewritten as:</p>
+<p>It’s possible you haven’t heard that before. We suggest not abusing the comma; use it thoughtfully to write queries that are easy to read.</p>
+<p>The list of tokens produced by the tokenizer are consumed by the parser to generate the AST. The parsing grammar dictates how the parser makes sense of the tokens. Since pg_graphql needs to execute the query, it expects an ExecutableDocument. So the parser tries to parse an ExecutableDocument which is defined in the grammar like this:</p>
+<p>An ExecutableDocument contains a list of ExecutableDefinitions which is defined like this:</p>
+<p>An ExecutableDefinition can be either an OperationDefinition or a FragmentDefinition. Which one should the parser try to parse? Similar to how the tokenizer looks at the next character, the parser can look at the next token to know which definition lies next. The next token in our example is query. Can query appear at the beginning of OperationDefinition? Let’s check its definition:</p>
+<p>The parser again has two choices since OperationDefinition can either be an OperationType Name(opt) VariableDefinitions(opt) Directives(opt) SelectionSet or a SelectionSet. So which of those two can start with query? The first one starts with OperationType which is defined like this:</p>
+<p>Et voilà! The query token can start an OperationType, which means the parser now knows that it has to parse the first arm of the OperationDefinition. Which in turn means that it is going to parse an OperationDefinition arm of the ExecutableDefinition. Can’t the other arm of the definition also start with query? No, the language designers designed the grammar to avoid such ambiguities.</p>
+<p>💡 This technique of looking at the next token (or the next few tokens) to find what to parse is called lookahead. The fewer the lookahead, the faster the parser. Fortunately, GraphQL has at most a few tokens of lookahead.</p>
+<p>Now that the parser knows it will parse OperationType Name(opt) VariableDefinitions(opt) Directives(opt) SelectionSet, it skips the query token and looks at the next token, which is {. A { It can’t appear in the beginning of Name(opt), VariableDefinitions(opt) or Directives(opt), but it can start a SelectionSet:</p>
+<p>So the parser skips past the { token and then tries to parse a list of Selections. The parser parses the rest of the input string using the same process. It rejects an invalid list of tokens like }, query and { because no grammar rule starts with an }. For our example query, the parser generates the following AST:</p>
+<p>An AST in graphql-parser is just Rust structs and enums. For example, the Document is a struct:</p>
+<p>However, it is not enough to parse the query into an AST. Why? Similar to how a valid list of tokens produced by the tokenizer doesn’t mean it will produce a valid AST, a valid AST doesn’t mean that the AST can be executed by pg_graphql. So before execution, pg_graphql validates the AST.</p>
+<p>To understand why a valid AST doesn’t mean that the query can be executed take the following example. Here the query produced a valid AST but it is still invalid because there can't be a named operation together with an anonymous operation in a GraphQL query:</p>
+<p>The above was just one example of the kind of validations performed. The GraphQL spec defines many other types of validations like:</p>
+<p>pg_graphql performs these validations and returns errors if they fail. For example:</p>
+<p>💡 If you are familiar with compiler theory, you can think of the validation step as the semantic analysis phase of a compiler.</p>
+<p>Some of the validations need to know the types in the reflected GraphQL schema. For example, for the field selection validation, the validation code must know which fields are defined on a GraphQL object. This information is contained in the reflected GraphQL schema.</p>
+<p>pg_graphql builds GraphQL schema by reading information from many system catalogs. The load_sql_context function reads this information into a Context object by running the query in the load_sql_context.sql file. load_sql_context.sql loads information about enums, composite and non-composite types, foreign keys, schemas, tables and functions.</p>
+<p>It might look like the context is loaded for each GraphQL query, but this function is memoized for performance by the cached attribute. This means it will only be called again if its input argument _config of type Config changes from the last time it was called.Config has three parts:</p>
+<p>It makes sense to reload the schema if any Config fields change because they can potentially alter the results of running transpiled SQL statements.</p>
+<p>The Context object is wrapped in a __Schema object which is used to not only serve introspection queries but also provide information to run validations and for transpilation to SQL. For example, take a look at how tables are converted into<table_name>Collections. This code adds Collection objects to the QueryType object by iterating over tables and adding a <table_name>Collectionfield. Notice howQueryType's schema field is used extensively throughout this code snippet.</p>
+<p>Transpilation is a two-step process. First, builder objects are constructed from the AST and __Schema, and then the builder objects are converted into SQL. A builder object contains all the information needed to produce a SQL query.</p>
+<p>For example, when a table is added as a collection object to the QueryType object, its type_ field is set to __Type::Connection(_). This type is then checked in the resolve_selection_set function and converted to an appropriate builder type. A builder implements the QueryEntrypoint trait. QueryEntrypoint has only one required method named to_sql_entrypoint which the ConnectionBuilder implements by calling its to_sql method. The to_sql method contains the meat of the logic to generate SQL.</p>
+<p>💡 There’s also a MutationEntrypoint trait for mutation queries with a similar execute method.</p>
+<p>An important aspect of the SQL generation code is how it calls quote_ident and quote_literal functions to avoid SQL injection. Without them, a caller could potentially send a specially crafted input to execute arbitrary SQL code.</p>
+<p>The generated SQL code is then run in the execute method of QueryEntrypoint trait. The transpiled queries return a jsonb object which is deserialized into a pgrx::JsonB object. Since pgrx::JsonB is a wrapper over a serde_json::Value object, it is trivial for the code to unwrap it and return this as a JSON response to the client.</p>
+<p>In this post, we looked at how pg_graphql processes a GraphQL request. A request goes through the steps of tokenization, parsing, validation, transpilation, and execution. We looked in detail at the actions pg_graphql performs in each step. This knowledge should equip you to understand how pg_graphql works internally and help you make more informed decisions about how you can better use GraphQL APIs. If you feel ambitious, you can also start contributing to pg_graphql which we always welcome.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/how-pg-graphql-works" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1106. Node.js 21.6.1 (Current)</h2>
+    <div class="article-meta">
+        📅 Jan 22, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v21.6.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2021.6.1%20(Current)" alt="Node.js 21.6.1 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2021.6.1%20(Current)" alt="Node.js 21.6.1 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This release fixes a bug in undici using WebStreams</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v21.6.1/node-v21.6.1-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v21.6.1/node-v21.6.1-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v21.6.1/node-v21.6.1-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v21.6.1/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v21.6.1/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v21.6.1/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v21.6.1/node-v21.6.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v21.6.1/node-v21.6.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v21.6.1/node-v21.6.1.tar.gz 
+Other release files: https://nodejs.org/dist/v21.6.1/ 
+Documentation: https://nodejs.org/docs/v21.6.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v21.6.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1284. Getting started with Laravel and Postgres</h2>
+    <div class="article-meta">
+        📅 Jan 22, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/laravel-postgres" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/getting-started/laravel/laravel.jpg" alt="Getting started with Laravel and Postgres" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/getting-started/laravel/laravel.jpg" alt="Getting started with Laravel and Postgres" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Every Supabase project comes with a full Postgres database, a free and open source database which is considered one of the world's most stable and advanced databases.</p>
+<p>Postgres is an ideal choice for your Laravel PHP applications as Laravel ships with a Postgres adapter built in!</p>
+<p>In this post we'll start from scratch, creating a new Laravel application, setting up the Laravel Breeze starter kit for user authentication, and connecting it to our Supabase Postgres database.</p>
+<p>Supabase is one of the best free alternatives to Heroku Postgres. See this guide to learn how to migrate from Heroku to Supabase.</p>
+<p>There's also a Heroku to Supabase migration tool available to migrate in just a few clicks.</p>
+<p>Make sure your PHP and Composer versions are up to date, then use composer create-project to scaffold a new Laravel project.</p>
+<p>Install Laravel Breeze, a simple implementation of all of Laravel's authentication features.</p>
+<p>Note: this template does not use Supabase Auth but rather Laravel's built in Auth system. This means that Supabase Auth pricing does not apply. You'd only be billed for Database resources used in this case.</p>
+<p>Go to database.new and create a new Supabase project. Save your database password securely.</p>
+<p>When your project is up and running, navigate to the project connect page to find the URI connection string.</p>
+<p>Laravel ships with a Postgres adapter out of the box, you can simply configure it via the environment variables. You can find the database URL in your Supabase Dashboard.</p>
+<p>By default Laravel uses the public schema. We recommend changing this as supabase exposes the public schema as a data API.</p>
+<p>You can change the schema of your Laravel application by modifying the search_path variable config/database.php:</p>
+<p>Laravel ships with database migration files that set up the required tables for Laravel Authentication and User Management.</p>
+<p>Run the development server. Go to http://127.0.0.1:8000 in a browser to see your application. You can also navigate to http://127.0.0.1:8000/register and http://127.0.0.1:8000/login to register and log in users.</p>
+<p>Supabase is the ideal platform for powering your Postgres database for your Laravel applications! Every Supabase project comes with a full Postgres database and a good number of useful extension!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/laravel-postgres" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1287. What is SAML? A practical guide to the authentication protocol</h2>
+    <div class="article-meta">
+        📅 Jan 17, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/what-is-saml-authentication" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/what-is-saml/what-is-saml-og.png" alt="What is SAML? A practical guide to the authentication protocol" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/what-is-saml/what-is-saml-og.png" alt="What is SAML? A practical guide to the authentication protocol" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>In the digital landscape, ensuring secure access is paramount, and that's where Security Assertion Markup Language (SAML) steps in. In this post, we'll explore how SAML simplifies the complex process of verifying identities across different platforms.</p>
+<p>As organizations scale, their HR and IT departments struggle to keep employee and identity records across various applications. Typically they use an identity provider, like GSuite, Microsoft Active Directory, or Okta, to consolidate all of their employee data and permissions in one place.</p>
+<p>Using an identity provider allows them to easily automate the on-boarding and off-boarding processes for employees. Without an identity provider, adding or removing (typically called provisioning) access to 3rd-party applications for each employee can quickly turn into an administrative nightmare.</p>
+<p>These 3rd-party applications, also known as service providers, have Single Sign On (SSO) integrated to allow users to sign into the app. For an identity provider to authenticate with a service provider, an authentication protocol needs to be established first. SAML (Security Assertion Markup Language) is one such protocol that helps to facilitate SSO between an identity provider and a service provider.</p>
+<p>The SAML protocol uses the XML format to store encrypted data related to the authenticated user, also known as SAML assertions. Before the identity provider and the service provider can establish a successful SAML authorization flow, both providers need to exchange their public keys, which come in the form of an X.509 certificate. This allows the identity provider to verify the incoming SAML request and allows the service provider to verify the SAML response returned by the identity provider.</p>
+<p>SAML and Single Sign-On (SSO) are integral components in the realm of authentication and access management, but each plays a distinct role.</p>
+<p>SSO is a broader concept centered around simplifying user experiences by allowing access to multiple applications or services with a single set of credentials. Unlike SAML, SSO is not a protocol but a versatile approach that can be realized through various protocols, including SAML, OAuth, or OpenID Connect. Its scope extends beyond specific data exchange formats, aiming to streamline user logins across diverse systems. For example, a user signing into their Google account experiences SSO as they effortlessly access various Google services without the hassle of repeated logins. In essence, while SAML addresses secure data exchange for authentication, SSO encompasses a broader vision of user convenience and access management.</p>
+<p>Here’s a story about how SAML is enabled between an application (Supabase) and its users (ACME Inc.).</p>
+<p>Alice is a software engineer at ACME Inc. a Fortune 500 company that loves Postgres and Supabase. Recently, she joined the Innovation department to discover new avenues for growth. She sees this as an opportunity to build rapid prototypes with Supabase and persuades the management team to allow her team to use Supabase.</p>
+<p>Management gives the green light and Alice reaches out to Supabase’s sales department and strikes a deal.</p>
+<p>However, ACME Inc. has 1000 developers on payroll and a very demanding security team that mandates either SAML or OIDC Single Sign-On for all 3rd-party applications. They also use GSuite as their identity provider.</p>
+<p>So Alice asks Supabase for this, and they help her set up SAML for ACME. But first, Supabase needs Alice to send over information about their identity provider. Alice chases down Bob, who’s in ACME’s IT department, and asks for help to enable Supabase.</p>
+<p>Supabase and Bob need to exchange some information to establish a SAML Connection between Supabase and ACME’s GSuite system.</p>
+<p>The list of employees that should be able to access Supabase - so that Bob can get Supabase to show up to the correct people.</p>
+<p>Both parties need to exchange almost the same information:</p>
+<p>Since much of this information is tricky to communicate and requires manual input, there exists the SAML Metadata XML document which exposes most but not all of the information. Both systems, the Identity Provider (GSuite) and the Service Provider (Supabase) each have their own SAML Metadata that needs to be exchanged.</p>
+<p>Often this document is available publicly at a URL. Note though, that sometimes Identity Providers (typically Microsoft Active Directory) may not be accessible over the internet (as they’re behind a VPN) so a URL can’t be used and a file needs to be exchanged in that case. Service Providers may also be isolated in their network, so a file exchange is necessary here too, albeit uncommon.</p>
+<p>Inside this XML document, you can find most of the information required by Bob and Supabase:</p>
+<p>However, both parties still need to agree over email about the email domains of ACME, and about the attributes that they have in their system.</p>
+<p>First, Supabase and Bob exchange some of the information over email. Then Bob goes to GSuite and creates a new SAML Application.</p>
+<p>Finally, once Bob registers ACME’s Identity Provider (GSuite), the connection is established and ACME employees can access Supabase — directly by visiting Supabase’s site (SP-initiated) or by picking it in the GSuite Applications menu (IdP-initiated).</p>
+<p>This is how the SAML SP-initiated authorization flow looks like when Alice visits Supabase and enters her email to sign in with SAML SSO.</p>
+<p>In the IdP-initiated flow, the employee signs into GSuite first and selects the application to sign into from a list of allowed 3rd-party applications instead of being redirected from the service provider.</p>
+<p>At Supabase, you can easily enable SAML for your project and use the signInWithSSO method to start the authentication flow. Both IdP-initiated and SP-initiated flows are supported. When a user signs in with SAML SSO, the JWT issued contains a unique ID to identify the identity provider. If you are already using Postgres on Supabase, this also ties in nicely with your existing row-level security (RLS) policies, since you can use that ID to restrict access to the data.</p>
+<p>Combining SAML with Row-Level Security (RLS) allows for fine-grained control over data access, ensuring that users only interact with the specific data rows aligned with their roles or attributes. This improves security and helps meet regulatory requirements while allowing flexible adjustments to access permissions over time.</p>
+<p>Since Supabase is “just Postgres”™, it enables us to easily leverage the power of RLS policies to restrict access to the data. You can access the user’s JWT claims by invoking the auth.jwt() function in your RLS policy. In the scenario provided above, this allows Supabase to restrict developers from ACME Inc. from inviting someone else outside of the company to join their Supabase organization.</p>
+<p>For example, assuming we have a table to store all invited users in a Supabase organization:</p>
+<p>We can create an RLS policy to enforce that a developer in ACME Inc. can only invite someone who is also a developer in the same company:</p>
+<p>In this post, we took a deep dive into SAML, from understanding how organizations centralize employee data using identity providers to illustrating SAML integration through a real-world use case and a practical implementation of SAML in conjunction with Row-Level Security (RLS).</p>
+<p>Supabase Auth currently supports authenticating with SAML easily, setting it up takes less than an hour, so you can focus on shipping the core features of your product.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/what-is-saml-authentication" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1098. Build Your Own Cloud IDE with the Subhosting API</h2>
+    <div class="article-meta">
+        📅 Jan 16, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/build-cloud-ide-subhosting" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/build-cloud-ide-subhosting/og-image.png" alt="Build Your Own Cloud IDE with the Subhosting API" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/build-cloud-ide-subhosting/og-image.png" alt="Build Your Own Cloud IDE with the Subhosting API" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>More and more SaaS platforms are allowing their users to customize their product
+with code, such as creating bespoke workflows or via an app/integrations
+marketplace. And a popular approach to enabling code-level customization with
+minimal friction is through a cloud IDE directly in their product.</p>
+<p>In this post, we’ll show you how to build your own cloud IDE using the
+Deno Subhosting API, which
+allows you to programmatically deploy and run code within seconds on
+Deno Deploy’s global v8 isolate cloud. We’ll walk through our
+Subhosting IDE Starter template,
+built on Hono, Ace Editor, and Deno.</p>
+<p>Before we get started, we’ll need the following things:</p>
+<p>Create the following project structure in a new folder:</p>
+<p>Next, you have to create the following environmental variables:</p>
+<p>Once you have these values, add them to your .env file:</p>
+<p>Let’s setup our deno.json to include a command to run the server and an import
+map to import Hono:</p>
+<p>The main logic of our cloud IDE will be in main.tsx, which creates the server
+and the following routes for our application:</p>
+<p>And we need to be able to serve static assets from the ./static folder, which
+contains client-side JavaScript and CSS necessary such as
+Ace.js:</p>
+<p>Next, let’s fill in the logic for each route handler. To simplify this for now,
+we’ll import a wrapper library around the Subhosting API that we’ll create
+later:</p>
+<p>Using our shc wrapper library, we can add the logic for each route handler:</p>
+<p>Before we move on, let’s dig into the payload we’re sending to create a
+deployment:</p>
+<p>To learn more about creating a deployment with the Subhosting API,
+check out our documentation.</p>
+<p>Next, let’s create our Subhosting client in subhosting.ts.</p>
+<p>Let’s create a new subhosting.ts file to the root of the project, which will
+serve as a wrapper around the Subhosting API. In this file, we’ll define an
+interface for ClientOptions, as well as a Client class, which will have
+these fields accessToken, orgId, and clientOptions, in addition to a
+constructor that initializes the instance variables for the class with simple
+error handling:</p>
+<p>Next, let’s create the functions that we’ve imported and are using in
+main.tsx. Before we do that, let’s import the following helper functions,
+urlJoin and normalize at the top of the file:</p>
+<p>Note in
+our GitHub repo,
+we’ve inlined both functions since they were pretty simple.</p>
+<p>Let’s define a convenience getter, orgUrl , which returns the org URL
+fragment:</p>
+<p>Once we’ve done that, we can define the functions that we’ve imported and are
+using in main.tsx:</p>
+<p>With the additional functions, your Client will look like this:</p>
+<p>For the full subhosting.ts code, which includes TSDoc style comments,
+please refer to the GitHub repo.
+If you’re interested in digging into the Subhosting API endpoints,
+check out our API reference.</p>
+<p>The logic for our server’s route handlers should finally be complete. The next
+step is to define our frontend components.</p>
+<p>Let’s create the App JSX component, which we import in main.tsx.</p>
+<p>This is a simple server-side rendered JSX component. A few things to point out:</p>
+<p>The only props passed into this component are projects, which is an array
+of objects representing your Subhosting projects. We’ll use map to return a
+list of <option> elements, which is added to a <select> element:</p>
+<p>Note that the <div id="deployments"> is the parent element of the list of
+deployments. We’ll use vanilla JavaScript in app.js to continuously set its
+the innerHTML .</p>
+<p>Your App.tsx should look something like this:</p>
+<p>Next, let’s create our client-side JavaScript.</p>
+<p>Let’s create a new directory, static, in which we’ll add:</p>
+<p>Let’s start with app.js. When the window loads, we’ll need to initialize the
+editor, bind event handlers to the #deploy-button and #project-list, and
+call pollData() (which we’ll define shortly) every five seconds to get a list
+of deployments for the current projectId:</p>
+<p>Next, let’s define the following functions:</p>
+<p>With all of that, your app should be complete. To start the server, run the
+command deno task dev.</p>
+<p>As of January 2024,
+active deployments are capped at
+50 per day on the free Subhosting plan. This may cause problems during your
+testing, as each time you save your code in the browser, a new deployment is
+created. We are working on changes to our billing structure to avoid this
+problem, but if you run into any problems with this limit, please reach out to
+support@deno.com.</p>
+<p>Cloud IDEs are becoming more common as a frictionless way to edit, write, and
+deploy code. They can improve the developer experience in situations where your
+developer would need to build and setup a server in their own workflow outside
+of your product. While you could build your own infrastructure to deploy and run
+third party code, you would also have to maintain and scale it, as well as
+consider the security implications of running untrusted code.</p>
+<p>Building a cloud IDE to deploy and run third party code is made simple with
+Deno Subhosting, which is designed for maximum security and can
+initiate deployments programmatically via a REST API. We hope this tutorial and
+starter template is a good foundation to build your advanced cloud IDEs or
+integrate a cloud IDE into your product.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/build-cloud-ide-subhosting" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1108. Node.js 21.6.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Jan 15, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v21.6.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2021.6.0%20(Current)" alt="Node.js 21.6.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2021.6.0%20(Current)" alt="Node.js 21.6.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Three new events were added in the net.createConnection flow:</p>
+<p>Additionally, a previous bug has been fixed where a new connection attempt could have been started after a previous one failed and after the connection was destroyed by the user.
+This led to a failed assertion.</p>
+<p>Node.js 21.6.0 comes with several fixes for the experimental permission model and two new semver-minor commits.
+We're adding a new flag --allow-addons to enable addon usage when using the Permission Model.</p>
+<p>And relative paths are now supported through the --allow-fs-* flags.
+Therefore, with this release one can use:</p>
+<p>To give only read access to the entrypoint of the application.</p>
+<p>Contributed by Rafael Gonzaga and Carlos Espa in #50758</p>
+<p>We are adding a new flag --build-snapshot-config to configure snapshots through a custom JSON configuration file.</p>
+<p>When using this flag, additional script files provided on the command line will
+not be executed and instead be interpreted as regular command line arguments.</p>
+<p>These changes were contributed by Joyee Cheung and Anna Henningsen in #50453</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v21.6.0/node-v21.6.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v21.6.0/node-v21.6.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v21.6.0/node-v21.6.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v21.6.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v21.6.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v21.6.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v21.6.0/node-v21.6.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v21.6.0/node-v21.6.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v21.6.0/node-v21.6.0.tar.gz 
+Other release files: https://nodejs.org/dist/v21.6.0/ 
+Documentation: https://nodejs.org/docs/v21.6.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v21.6.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1295. Brace yourself, IPv6 is coming</h2>
+    <div class="article-meta">
+        📅 Jan 12, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/ipv6" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2024/ipv6/ipv4-ipv6.png" alt="Brace yourself, IPv6 is coming" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2024/ipv6/ipv4-ipv6.png" alt="Brace yourself, IPv6 is coming" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>On February 1st 2024, AWS will start charging for IPv4 addresses. This will cost $0.005 per hour - around $4 month.</p>
+<p>A more accurate title for this post would be “Brace yourself, IPv4 is leaving”, because I can't imagine many companies will pay to keep using the IPv4 address. While $4 is relatively small for an individual, my hypothesis is that AWS is a foundational layer to many infrastructure companies, like Supabase - we offer a full EC2 instance for every Postgres database, so this would add millions to our AWS bill.</p>
+<p>Infrastructure companies on AWS have a few choices:</p>
+<p>As a quick primer, an IPv4 looks like this: 93.184.216.34. It is the “address” of a server, similar to a phone number - it tells your computer where to find something on the internet. The problem is there are only ~4.3 billion IPv4 addresses, and we're running out.</p>
+<p>An IPv6 looks like this: 2607:f8b0:4006:819::200e. It functions the same as an IPv4, except that there are 340 undecillion of them - that's more than the grains of sand on the planet (by many orders of magnitude). We won't run out any time soon.</p>
+<p>IPv6 is clearly a good thing, so what's the challenge? It mostly comes down to:</p>
+<p>The biggest challenge to global adoptions is ISP support. Does your Internet Service Provider support IPv6? Probably not.</p>
+<p>When you type a website's domain name, it's translated into an IP address. Traditionally, these addresses have been IPv4:</p>
+<p>These domain names will eventually be translated into IPv6:</p>
+<p>After your ISP receives this address, it is responsible for routing all traffic to the correct destination. Unfortunately many ISPs simply aren't ready for this - they require newer switches, newer software, and interoperability with IPv4. All of this costs money, and for the past 10 years this investment hasn't been worthwhile.</p>
+<p>Here are some of the ways that you will be affected when domains/servers start resolving to IPv6 instead of IPv4, if your ISP doesn't support IPv6:</p>
+<p>A lot of developer tools simply aren't set up for IPv6 yet. We can use Supabase as an example - our data team needed to make the following changes to support IPv6 with their toolchain:</p>
+<p>These seem small, so to really convey what a PITA this can be, here were the steps for Docker:</p>
+<p>3/ Create a temporary IPv6 net and test it:</p>
+<p>5/ Add IPv6 network config to the compose config file docker-compose.yaml</p>
+<p>6/ Check if it is working from a container</p>
+<p>That's … a lot more complicated than it should be for a tool as ubiquitous as Docker.</p>
+<p>I suspect that the next few months there is going to be a lot of talk about IPv6.</p>
+<p>The fallout from AWS's changes will likely start slow. AWS will simply start charging their customers rather than revoking the IPv4 address. Once that happens, infrastructure companies will notice their bills increasing and start removing IPv4, or providing proxies. Providers might even require some downtime to implement kernel-level changes to support IPv6.</p>
+<p>If you want to ensure your company continues to run smoothly, start making as many changes as possible now before the start of February.</p>
+<p>If you are a Supabase customer, we have 3 simple solutions:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/ipv6" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1292. Using React Query with Next.js App Router and Supabase Cache Helpers</h2>
+    <div class="article-meta">
+        📅 Jan 12, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/react-query-nextjs-app-router-cache-helpers" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2024-01-12-react-query/react-query-nextjs-supabase.png" alt="Using React Query with Next.js App Router and Supabase Cache Helpers" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2024-01-12-react-query/react-query-nextjs-supabase.png" alt="Using React Query with Next.js App Router and Supabase Cache Helpers" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>TanStack Query, also known as React Query, is an open source state management library for React which handles caching, background updates and stale data out of the box with zero-configuration, which makes it an ideal tool to pair with supabase-js and our auto-generated REST API!</p>
+<p>If you prefer video guides, we've got a three-part video series for you!</p>
+<p>If you learn better by just jumping into a demo application, you can find one in our examples on GitHub.</p>
+<p>Note: this blogpost is inspired by Giancarlo's original blogpost on using React Query with Supabase in Remix.io!</p>
+<p>This article assumes that your have some basic kowledge of building React applications with Next.js. No prior knowledge of React Query or Supabase is required.</p>
+<p>After you have created your Next.js project, e.g. with npx create-next-app@latest, you can install the required dependencies using the following command:</p>
+<p>Create a React Query client in the root of your component tree. In Next.js app router applications, this is the layout.tsx file in the app folder.</p>
+<p>The QueryClientProvider can only be used in client components and can't be directly embedded in the layout.tsx file. Therefore make sure to create a client component first, e.g.</p>
+<p>For this example, we'll use a simple countries table where we store the id and name of countries. In your Supabase Dashboard SQL editor create the countries table and add some values:</p>
+<p>Once you've created your schema, you can use the Supabase CLI to automatically generate TypeScript types for you:</p>
+<p>These generated types will allow us to get typed data returned from React Query.</p>
+<p>To help you utilize the full power of supabase-js, including Supabase Auth and Row Level Security (RLS) policies, we provide the Supabase SSR helper library that allows you to conveniently create both browser Supabase clients for client components and server Supabase clients for server components.</p>
+<p>Further reading: detailed documentation for Supabase SSR in Next.js</p>
+<p>To make sure we have the proper typing available in all our components, we can create a TypedSupabaseClient type that we can hand to React Query:</p>
+<p>Now we've got everything in place to get started fetching and caching data with React Query!</p>
+<p>React Query manages query caching based on query keys. Needing to manage query keys is somewhat burdensome, luckily this is where the Supabase Cache Helpers come into play.</p>
+<p>Initially built during the Launch Week 5 Hackathon by Philipp Steinrötter, it has become a full blown open source project that automatically generates cache keys from your supabase-js queries, amongst many other awesome features!</p>
+<p>The most convenient way to use your queries across both server and client component is to define them in a central place, e.g. a queries folder:</p>
+<p>This is a simple query function that takes in either the browser or the server Supabase client and the id of a country, and returns a supabase-js query.</p>
+<p>In server components, we can now use this query with the prefetchQuery method:</p>
+<p>Our query will be executed and fetch the data on the server. This means when using our query in the corresponding Country client component, the data will be immediately available upon render:</p>
+<p>Since our query has them same generated cache key, React Query knows that the data was pre-fetched server side and therefore can render immediately without any loading state.</p>
+<p>Of course you can still combine this with fetching data client side. React Query will check if a given query was pre-fetched server side, but if it wasn't it will then go ahead and fetch the data client side side using the browser Supabase client:</p>
+<p>React Query and the Supabase Cache Helpers are fantastic tools to help you manage data fetching and caching in your Next.js applications.</p>
+<p>Using React Query with Server Components makes most sense if:</p>
+<p>It's hard to give general advice on when it makes sense to pair React Query with Server Components and not. If you are just starting out with a new Server Components app, we suggest you start out with any tools for data fetching your framework provides you with and avoid bringing in React Query until you actually need it. This might be never, and that's fine, as always: use the right tool for the job!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/react-query-nextjs-app-router-cache-helpers" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1111. Node.js 20.11.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jan 10, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v20.11.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.11.0%20(LTS)" alt="Node.js 20.11.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.11.0%20(LTS)" alt="Node.js 20.11.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v20.11.0/node-v20.11.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v20.11.0/node-v20.11.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v20.11.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v20.11.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v20.11.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v20.11.0/node-v20.11.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v20.11.0/node-v20.11.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v20.11.0/node-v20.11.0.tar.gz 
+Other release files: https://nodejs.org/dist/v20.11.0/ 
+Documentation: https://nodejs.org/docs/v20.11.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v20.11.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1104. Build a Cloud IDE for the Deno Subhosting Hackathon</h2>
+    <div class="article-meta">
+        📅 Jan 09, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/subhosting-hackathon" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/subhosting-hackathon/og-image.png" alt="Build a Cloud IDE for the Deno Subhosting Hackathon" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/subhosting-hackathon/og-image.png" alt="Build a Cloud IDE for the Deno Subhosting Hackathon" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>UPDATE 2024/01/19: The hackathon is over and
+winners have been determined. Thanks everyone who
+participated!</p>
+<p>As the skills of software development become
+more accessible,
+and code is making its way into the hands of more and more
+team members,
+it is increasingly popular to include development environments directly in your
+web applications.</p>
+<p>There’s a great chance that your customers could benefit from code-level
+customization in your platform, and that you might want to build features like
+those listed above. Building a cloud IDE can be daunting, but the Deno
+Subhosting API simplifies that process by allowing you to programmatically
+deploy and run code within seconds on Deno Deploy’s globally distributed V8
+isolate cloud.</p>
+<p>Today, we invite you to learn more about the capabilities of Deno Subhosting by
+participating in our Deno Subhosting Hackathon, where you will be challenged
+to either build your own cloud IDE or integrate a cloud IDE into your existing
+product.</p>
+<p>To submit a project for the hackathon, you must build a browser-based IDE that
+executes JavaScript or TypeScript code using the
+Subhosting API. Your project
+can be either:</p>
+<p>When you have built an application that matches this description,
+please submit it here
+and include the following key information:</p>
+<p>Note that all projects must successfully run code on Deno Subhosting
+infrastructure. For existing projects that have added a cloud IDE, we will also
+accept a video demo in lieu of a demoable URL.</p>
+<p>We will accept submissions until 12pm noon Pacific Time on Thursday, January
+18th. We’ll announce winners Friday, January 19th.</p>
+<p>There are plenty of great cloud based IDEs out there, some meant for specific
+purposes such as CodePen for frontends and
+Val.town for serverless JavaScript functions, to more general
+ones like Repl.it or GitPod. Then
+there are IDEs built into SaaS products like
+Salesforce’s code builder
+that allows developers to extend its features. Regardless of their purpose, the
+streamlined development experience of these IDEs enables you to skip
+configuration and dive right into prototyping.</p>
+<p>Here are some examples that we believe can be built within the scope of this
+hackathon.</p>
+<p>Whatever you build, it will need to take code from a browser and run it with the
+Subhosting API. We can’t wait
+to see how creative you can get with this prompt.</p>
+<p>Here are links and resources to help you get started.</p>
+<p>Additionally, we are hosting a
+live code stream on Thursday, January 11th, at
+11am PT, where we’ll show you
+the first steps to building your own Cloud IDE with the
+Subhosting IDE template.
+We plan to transcribe this into a written tutorial for the blog shortly
+afterwards.</p>
+<p>Over the coming days, we’ll announce more resources to share some tips and
+tricks. Join our Discord and update your role to
+include events to stay in the loop!</p>
+<p>We’ll reward prizes based on the following categories.</p>
+<p>All winners will receive $100 gift card for
+Deno Merch.</p>
+<p>Thank you all for participating and congratulations to the winners below! Here
+are the winners for each category.</p>
+<p>Deno Blocks is a visual code editor in your browser
+that allows you to drag and drop pieces to write code. It’s built with Fresh and
+Blockly.
+Check out their video demo here.</p>
+<p>DenoCode is a cloud editor that gives you the option of
+using ChatGPT to generate code on your behalf. It’s built with Firebase auth,
+OpenAI, SvelteKit, and Monaco.
+View their video demo here.</p>
+<p>deco.play, aside
+from being a CMS that uses a robust in-browser code editor, uses AI to create a
+Preact component based off a screenshot of a website that you can upload. This
+app was built with Fresh, Tailwind, and GPT Assistant.
+View their video demo here.</p>
+<p>Ryan reviewed the submissions and said his favorite is
+Deno Blocks.</p>
+<p>Congratulations and the Deno team will be in touch with prize information!</p>
+<p>There will be more! Stay in the loop by
+following our Twitter or
+joining our Discord.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/subhosting-hackathon" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1299. Elixir clustering using Postgres</h2>
+    <div class="article-meta">
+        📅 Jan 09, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/elixir-clustering-using-postgres" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/elixir-clustering-using-postgres/elixir-clustering-OG.jpg" alt="Elixir clustering using Postgres" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/elixir-clustering-using-postgres/elixir-clustering-OG.jpg" alt="Elixir clustering using Postgres" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Elixir offers a powerful feature by allowing multiple nodes to communicate between them without extra services in the middle, reducing the overall complexity of your system.</p>
+<p>However, when it comes to connecting the servers, there seems to be a barrier of entry that many people encounter, including ourselves, on how to provide the name discovery required to connect said servers. We have released our approach to solving this problem by open-sourcing libcluster Postgres Strategy and today, we explore the motivations behind its creation and the methodologies employed in its development.</p>
+<p>At Supabase, we use clustering in all of our Elixir projects which include Logflare, Supavisor and Realtime. With multiple servers connected, we can load shed, create globally distributed services, and provide the best service to our customers so we’re closer to them geographically and to their instances, reducing overall latency.</p>
+<p>To achieve a connected cluster, we wanted to be as cloud-agnostic as possible. This makes our self-hosting options more accessible. We don’t want to introduce extra services to solve this single issue - Postgres is the logical way to achieve it.</p>
+<p>The other piece of the puzzle was already built by the Erlang community being the defacto library to facilitate the creation of connected Elixir servers: libcluster.</p>
+<p>libcluster is the go-to package for connecting multiple BEAM instances and setting up healing strategies. libcluster provides out-of-the-box strategies and it allows users to define their own strategies by implementing a simple behavior that defines cluster formation and healing according to the supporting service you want to use.</p>
+<p>Postgres provides an event system using two commands: NOTIFY and LISTEN so we can use them to propagate events within our Postgres instance.</p>
+<p>To use these features, you can use psql itself or any other Postgres client. Start by listening on a specific channel, and then notify to receive a payload.</p>
+<p>Now we can replicate the same behavior in Elixir and Postgrex within IEx (Elixir's interactive shell).</p>
+<p>Using the libcluster Strategy behavior, inspired by this GitHub repository and knowing how NOTIFY/LISTEN works, implementing a strategy becomes straightforward:</p>
+<p>These three simple steps allow us to connect as many nodes as needed, regardless of the cloud provider, by utilizing something that most projects already have: a Postgres connection.</p>
+<p>In this post, we have described our approach to connecting multiple nodes in Elixir using Postgres. We have also made this strategy available for anyone to use. Please check the code at github.com/supabase/libcluster_postgres</p>
+<p>A special thank you to @gotbones for creating libcluster and @kevinbuch_ for the original inspiration for this strategy.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/elixir-clustering-using-postgres" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1303. Supabase Beta December 2023</h2>
+    <div class="article-meta">
+        📅 Jan 05, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/beta-update-december-2023" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/beta-update-december-2023/monthly-update-december-2023.jpg" alt="Supabase Beta December 2023" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/beta-update-december-2023/monthly-update-december-2023.jpg" alt="Supabase Beta December 2023" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Happy New Year! We concluded 2023 with Launch Week X. Here's a rundown of all the fantastic goodies we shipped... now, let the building commence!</p>
+<p>Supabase Studio received a major update that reflects our commitment to a SQL-first approach and user-centric development. Awesome features like easy RLS policies with an AI assistant, Postgres Roles, User Impersonation, and much more.</p>
+<p>Day 2 - Edge Functions: Node and native npm compatibility</p>
+<p>Edge Functions now natively supports npm modules and Node built-in APIs. You can directly import millions of popular, commonly used npm modules into your Edge Functions.</p>
+<p>A Postgres database for every GitHub branch 🤝. Database branching means you can have separate database instances for each feature of your application.</p>
+<p>We announced several new features for Supabase Auth: Identity Linking, Session Control, Leaked Password Protection, and Auth Hooks with Postgres functions.</p>
+<p>This is a huge one for anyone wanting to serve data closer to the users or distribute loads across multiple databases. Learn how we implemented Read Replicas and how to use them in your projects.</p>
+<p>Going through all 64 projects was cool, the most submissions we've ever had. Picking a winner was a bit tricky though, the quality was impressive.</p>
+<p>In the end, we chose Supafork as the winner of the Best Overall project 👏. Created by Christo, SupaFork is inspired by Vercel's Deploy button and it allows an easier setup for self-hosted apps using Supabase.</p>
+<p>Full list of winners | All the submissions</p>
+<p>As if all that wasn't enough, we shipped even more cool stuff:</p>
+<p>Come join one of the fastest-growing open source projects ever 🤗</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/beta-update-december-2023" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1306. Launch Week X Hackathon Winners</h2>
+    <div class="article-meta">
+        📅 Jan 04, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/launch-week-x-hackathon-winners" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/lwx-hackathon-winners/lwx-hackathon-winners.png" alt="Launch Week X Hackathon Winners" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/lwx-hackathon-winners/lwx-hackathon-winners.png" alt="Launch Week X Hackathon Winners" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We ended 2023 shipping tons of features in Launch Week X, but the fun hasn’t ended yet, because we get to announce the winners of our LWX Hackathon!</p>
+<p>We enjoyed looking at all 64 projects, the most submissions we ever had. You can view all the submissions on madewithsupabase.com.</p>
+<p>Now, without further ado, here are the winners of the LWX Hackathon!</p>
+<p>Supafork is an open-source project that allows you to easily clone Supabase projects. Inspired by Vercel's Deploy button it provides a similar experience for Supabase projects, allowing for easier setup of self-hosted apps using Supabase.</p>
+<p>A Fastify plugin to use authenticated Supabase clients in your API.</p>
+<p>AI Video Search Engine (AVSE) - by @yoeven</p>
+<p>AVSE is a search engine for videos. It converts the video transcriptions into embeddings and a search is performed against them making it a unique search engine where you can perform search based on the video content.</p>
+<p>Voice-Activated RAG System is a voice conversational agent, taking on the role of an IT Architect, marking a significant advancement in AI-driven dialog systems. Programmed for voice interaction, it provides an intuitive and natural user experience, mirroring the consultation one would expect from a human IT professional.</p>
+<p>DocQuiz is a quiz generator based on web documents. It helps to test how much you know before reading a text or how much you understand after reading it.</p>
+<p>Wordbuzz is a two-player online game powered by supabase realtime that allows you to match words from over 100K most used words. Practicing vocabulary has never been this easy.</p>
+<p>Supabase CLI for Visual Studio Code by @anas_araid</p>
+<p>Supabase CLI for Visual Studio Code makes working with your local database instance much easier. You can create migrations, inspect tables, views, and functions, and run some common Supabase commands directly from your editor.</p>
+<p>Rethink how you do web development with pg_render, a PostgreSQL extension crafted with Rust and pgrx. Enter the realm of Database-centric development, where your database schema is the sole source of truth—from data model to UI views.</p>
+<p>Mirror of Loss is a WebGL experience and a Baldur's Gate 3 / Forgotten Realms fan project. It's powered by AI: all the sprites, textures, and imagery were generated via Stable Diffusion (some with the help of OpenAI & GPT-4), and background music by Stable Audio.</p>
+<p>The year is 1982. You're a computer programmer working for an agency that has access to all the world's secrets. Your terminal is the single most important terminal in the world. You must protect it from anyone.</p>
+<p>The winners in each category will receive a Launch Week X Keyboard, while the runners-up will be awarded a limited edition swag kit.</p>
+<p>If you're inspired to build, check out some of the latest resources:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/launch-week-x-hackathon-winners" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#17. Announcing Vue 3.4</h2>
+    <div class="article-meta">
+        📅 Dec 28, 2023 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://blog.vuejs.org/posts/vue-3-4" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today we're excited to announce the release of Vue 3.4 "🏀 Slam Dunk"!</p>
+<p>This release includes some substantial internal improvements - most notably a rewritten template parser that is 2x faster, and a refactored reactivity system that makes effect triggering more accurate and efficient. It also packs a number of quality-of-life API improvements, including the stabilization of defineModel and a new same-name shorthand when binding props.</p>
+<p>This post provides an overview of the highlighted features in 3.4. For the full list of changes, please consult the full changelog on GitHub.</p>
+<p>To fully leverage new features in 3.4, it is recommended to also update the following dependencies when upgrading to 3.4:</p>
+<p>If using TSX with Vue, check actions needed in Removed: Global JSX Namespace.</p>
+<p>Make sure you are no longer using any deprecated features (if you are, you should have warnings in the console telling you so). They may have been removed in 3.4.</p>
+<p>In 3.4, we completely rewrote the template parser. Previously, Vue used a recursive descent parser that relied on many regular expressions and look-ahead searches. The new parser uses a state-machine tokenizer based on the tokenizer in htmlparser2, which iterates through the entire template string only once. The result is a parser that is consistently twice as fast for templates of all sizes. Thanks to our extensive test cases and ecosystem-ci, it is also 100% backwards compatible for Vue end users.</p>
+<p>While integrating the new parser with other parts of the system, we also discovered a few opportunities to further improve the overall SFC compilation performance. The benchmarks show a ~44% improvement when compiling the script and template parts of a Vue SFC while generating source maps, so 3.4 should result in faster builds for most projects using Vue SFCs. However, do note that Vue SFC compilation is only one part of the entire build process in real world projects. The final gain in end-to-end build time will likely be much smaller compared to the isolated benchmarks.</p>
+<p>Outside of Vue core, the new parser will also benefit the performance of Volar / vue-tsc, and community plugins that need to parse Vue SFCs or templates, e.g. Vue Macros.</p>
+<p>3.4 also ships a substantial refactor of the reactivity system, with the goal of improving re-compute efficiency of computed properties.</p>
+<p>To illustrate what is being improved, let's consider the following scenario:</p>
+<p>Before 3.4, the callback of watchEffect will fire every time count.value is changed, even if the computed result remains the same. With the post-3.4 optimizations, the callback now only fires if the computed result has actually changed.</p>
+<p>In addition to the gains shown in the benchmarks, this should reduce unnecessary component re-renders in many scenarios while retaining full backwards compatibility.</p>
+<p>defineModel is a new <script setup> macro that aims to simplify the implementation of components that support v-model. It was previously shipped in 3.3 as an experimental feature, and has graduated to stable status in 3.4. It now also provides better support for usage with v-model modifiers.</p>
+<p>This feature has been frequently requested in the past. Originally, we had concerns about its usage being confused with boolean attributes. However, after revisiting the feature, we now think it makes sense for v-bind to behave a bit more like JavaScript than native attributes, considering its dynamic nature.</p>
+<p>3.4 ships a number of improvements to hydration mismatch error messages:</p>
+<p>In addition, 3.4 also adds a new compile-time flag, __VUE_PROD_HYDRATION_MISMATCH_DETAILS__, which can be used to force hydration mismatch errors to include full details even in production.</p>
+<p>To reduce bundle size, Vue drops long error message strings in production builds. However, this means errors caught by error handlers in production will receive short error codes that are difficult to decipher without diving into Vue's source code.</p>
+<p>To improve this, we have added a Production Error Reference Page to the documentation. The error codes are automatically generated from the latest version of Vue stable release.</p>
+<p>We have also added a Compile-Time Flags Reference with instructions on how to configure these flags for different build tools.</p>
+<p>Starting in 3.4, Vue no longer registers the global JSX namespace by default. This is necessary to avoid global namespace collision with React so that TSX of both libs can co-exist in the same project. This should not affect SFC-only users with latest version of Volar.</p>
+<p>If you are using TSX, there are two options:</p>
+<p>Explicitly set jsxImportSource to 'vue' in tsconfig.json before upgrading to 3.4. You can also opt-in per file by adding a /* @jsxImportSource vue */ comment at the top of the file.</p>
+<p>If you have code that depends on the presence of the global JSX namespace, e.g. usage of types like JSX.Element etc., you can retain the exact pre-3.4 global behavior by explicitly referencing vue/jsx, which registers the global JSX namespace.</p>
+<p>Note that this is a type-only breaking change in a minor release, which adheres to our release policy.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://blog.vuejs.org/posts/vue-3-4" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html" class="active">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

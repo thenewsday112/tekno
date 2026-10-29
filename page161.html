@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 161</title>
+<meta name="description" content="Page 161">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page161.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 161</h1>
+<article class="article-card">
+    <h2>#1367. How to Build a CRUD API with Oak and Deno KV</h2>
+    <div class="article-meta">
+        📅 Jun 01, 2023 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/build-crud-api-oak-denokv" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/build-crud-api-oak-denokv/og-image.png" alt="How to Build a CRUD API with Oak and Deno KV" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/build-crud-api-oak-denokv/og-image.png" alt="How to Build a CRUD API with Oak and Deno KV" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Deno KV is one of the first databases that is built right
+into the runtime. This means you don’t need to do any extra steps such as
+provisioning a database or copying and pasting API keys to build stateful
+applications. To open a connection to a data store, you can simply write:</p>
+<p>In addition to being a key-value store with
+a simple, yet flexible API,
+it’s a production-ready database with
+atomic transactions,
+consistency control,
+and cutting edge performance.</p>
+<p>Through this introductory tutorial, you’ll learn how to use Deno KV to build a
+simple stateful CRUD API written in Oak. We’ll cover:</p>
+<p>Before we get started, Deno KV is currently available with the --unstable flag
+in Deno 1.33 and up. If you’re interested in using Deno KV on
+Deno Deploy, please join the waitlist as it’s still in closed beta.</p>
+<p>Follow along below or
+check out the source code.</p>
+<p>This API is fairly simple and use two models, where each user will have an
+optional address.</p>
+<p>In a new repo, create a db.ts file, which will contain all the information and
+logic for the database. Let’s start with type definitions:</p>
+<p>Next, let’s create API routes with the following functions:</p>
+<p>We can do this easily with Oak (inspired by Koa) which comes with its own
+Router.</p>
+<p>Let’s create a new file main.ts and add the following routes. We’ll keep some
+of the logic in the route handlers blank for now:</p>
+<p>Next, let’s dive into Deno KV by writing database functions.</p>
+<p>Back to our db.ts file, let’s start adding the database helper functions
+beneath the type definitions.</p>
+<p>This is relatively simple and we use the key prefix "user" and an id with
+kv.get().</p>
+<p>A
+secondary index
+is an index that’s not a primary index and may contain duplicates. In this case,
+our secondary index is email.</p>
+<p>Since Deno KV is a simple key value store, we’ll create a second key prefix,
+"user_by_email", which uses email to create the key and returns the
+associated user id. Here’s an example:</p>
+<p>Then, in order to grab the user, we’ll perform a separate kv.get() on the
+first index.</p>
+<p>With both these indexes, we can now write getUserByEmail:</p>
+<p>Now, when we upsertUser, we’ll have to update the user in the "user"
+primary key prefix. If email is different, then we’ll also have to update the
+secondary key prefix, "user_by_email".</p>
+<p>But how do we ensure that our data doesn’t fall out of sync when both update
+transactions happen at the same time?</p>
+<p>We’ll use
+kv.atomic(),
+which guarantee that either all operations within the transaction are
+successfully completed, or the transaction is rolled back to its initial state
+in the event of a failure, leaving the database unchanged.</p>
+<p>We first get oldUser to check whether it exists. If not, .set() the key
+prefixes "user" and "user_by_email" with user and user.id. Otherwise,
+since the user.email may have changed, we remove the value at the
+"user_by_email" by deleting the value at key
+["user_by_email", oldUser.value.email].</p>
+<p>We do all of this with .check(oldUser) to ensure another client hasn’t changed
+the values. Otherwise, we are susceptible to a race condition where the wrong
+record could be updated. If the .check() passes and the values remain
+unchanged, we can then complete the transaction with .set() and .delete().</p>
+<p>kv.atomic() is a great way to ensure correctness when multiple clients are
+sending write transactions, such as in banking/finance and other data
+sensitive applications.</p>
+<p>Next, let’s define getAllUsers. We can do this with
+kv.list(),
+which returns a key iterator that we can enumerate to get the values, which we
+.push() into users array:</p>
+<p>Note that this simple function iterates through and returns the entirety of the
+KV store. If this API were interacting with a frontend, we could pass a
+{ limit: 50 } option to retrieve the first 50 items:</p>
+<p>And when the user wants more data, retrieve the next batch using iter.cursor:</p>
+<p>Let’s add the second model, Address, to our database. We’ll use a new key
+prefix, "user_address" followed by the identifier user_id
+(["user_address", user_id]) to serve as a “join” between these two KV
+subspaces.</p>
+<p>Now, let’s write our getAddressByUser function:</p>
+<p>And we can write our updateUserAndAddress function. Note that we’ll need to
+use kv.atomic() since we want to update three KV entries with key prefixes of
+"user", "user_by_email", and "user_address".</p>
+<p>Finally, in order to round out the CRUD functionality of our app, let’s define
+deleteByUserId.</p>
+<p>Similar to the other mutation functions, we’ll retrieve userRes and use
+.atomic().check(userRes) before .delete()-ing the three keys:</p>
+<p>Now that we’ve defined the database functions, let’s import them in main.ts
+and fill out the rest of the functionality in our route handlers. Here’s the
+full main.ts file:</p>
+<p>Let’s run our application and test it. To run it:</p>
+<p>We can test out our application with CURLs. Let’s add a new user:</p>
+<p>When we point our browser to localhost:8000/users, we should see:</p>
+<p>Let’s see if we can retrieve the user by email by pointing our browser to
+localhost:8000/users/email/andy@deno.com:</p>
+<p>Let’s send a POST request to add an address to this user:</p>
+<p>And let’s see if that worked by going to localhost:8000/users/1/address:</p>
+<p>Let’s update the same user with id 1 with a new name:</p>
+<p>And we can see that change reflected in our browser at localhost:8000/users/1:</p>
+<p>When we point our browser to localhost:8000/users, we should see nothing:</p>
+<p>This is just an introduction to building stateful APIs with Deno KV, but
+hopefully you can see how quick and easy it is to get started.</p>
+<p>With this CRUD API, you can create a simple frontend client to interact with the
+data.</p>
+<p>Don’t miss any updates —
+follow us on Twitter.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/build-crud-api-oak-denokv" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1508. Supabase Vecs: a vector client for Postgres</h2>
+    <div class="article-meta">
+        📅 May 29, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/vecs" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2023-06-01-vecs/og-image.jpg" alt="Supabase Vecs: a vector client for Postgres" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2023-06-01-vecs/og-image.jpg" alt="Supabase Vecs: a vector client for Postgres" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vecs is a new Python library for managing embeddings in your Postgres database with the pgvector extension.</p>
+<p>Our goal for vecs is to provide an interface that lets Postgres + pgvector look and feel like a dedicated vector store. It works with any Postgres database (or platform) that supports pgvector.
+It was designed with ease-of-use, interactivity, and exploratory data analysis in mind, but works equally well as a search workhorse.</p>
+<p>If you're interested in the nuts and bolts of what's going on, it's trivial to drop into the SQL layer and see what's happening.
+Alternatively, folks who don't want to know what's happening in the database, don't need to care.</p>
+<p>Vecs makes it easy to create a collection (table) and insert a few records - just 5 lines of code.</p>
+<p>The get_or_create_collection call sets up a table in the Postgres database specified by DB_CONNECTION in a schema named vecs with the user defined name docs.</p>
+<p>We can insert a few records in that new SQL table/vecs collection using Collection.upsert.</p>
+<p>which will add the records to our table if the id "vec0" does not exist, or updates the existing record if it does exist.</p>
+<p>You can query a vecs collection at any time without an index, but it's a best practices to create an index on your collection after inserting
+data.</p>
+<p>Where index optionally takes an argument for the distance measure to index.</p>
+<p>Finally, we can search the collection for similar vectors using the query method:</p>
+<p>Since all metadata is stored in a jsonb column, there's a lightweight but flexible DSL wrapped around it for filtering.</p>
+<p>And 90% of the time, that minimal interface is all you'll need to touch.</p>
+<p>For more in-depth information about vecs, checkout the API Quickstart,
+celebrity look-alike demo,
+or OpenAI integration example</p>
+<p>As usual, if you combine supabase/vecs with the rest of Supabase, you get more than the sum of the parts.
+Once you're happy with your vecs collection, you can make it accessible to your front-end through a supabase client library by exposing the collection as a view
+in your public schema.</p>
+<p>And then access it with the supabase-js client library within your applications:</p>
+<p>For more deployment options, including enterprise scalable architecture, check out the engineering for scale guide.</p>
+<p>Currently, vecs is unopinionated about where vectors come from or how they're produced. While there will always be a need for generic vector
+storage and querying, it's becoming clear that text and image vectorization make up +95% of usage. That gives us the opportunity to
+streamline those workflows for users.</p>
+<p>One option we're exploring is to optionally assign transformation pipelines to collections along the lines of:</p>
+<p>so users can choose to work with their preferred media type without ever thinking about vectors.</p>
+<p>Another direction we're considering is adding an async client to avoid blocking when waiting on the database or network i.e.</p>
+<p>Both possibilities are still up for debate. If you have view on either, feel free to weigh in on the
+Feature Request: Preprocessing Transform
+and Feature Request: Async Client GitHub issues.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/vecs" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1504. Flutter Hackathon Winners</h2>
+    <div class="article-meta">
+        📅 May 29, 2023 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/flutter-hackathon-winners" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/flutter-hackathon-winners/flutter-hackathon-winners.png" alt="Flutter Hackathon Winners" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/flutter-hackathon-winners/flutter-hackathon-winners.png" alt="Flutter Hackathon Winners" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Last week we wrapped up the Flutter Hackathon, and we were blown away by the results. Today, I have the honor of announcing the winners, along with our good friends Majid from Invertase and Pooja from FlutterFlow.</p>
+<p>Now, without further ado, let's look at some of our favorites in more detail:</p>
+<p>Syno changes the way you consume video content. Say goodbye to lengthy videos and say hello to concise, accurate summaries that capture the essence of each video. Experience the future of video summarization with Syno.</p>
+<p>Study Genius is a mobile application that build a personalized learning experience for students. It provides a comprehensive platform for effective study, collaboration and personalized support for students.</p>
+<p>Lord of the Memes is a fun interactive game to be played with friends where you have to react to various situations with meme gifs and compete to be crowned as the ultimate Meme Lord.</p>
+<p>Colabity is an app that matches creative minds with each other to work on similar interest-based projects.</p>
+<p>ChatGlobe an application that allows you to chat with people around the world in your own language. It translates the messages into multiple languages using Dart Edge and OpenAI API as they are sent.</p>
+<p>Adventure Kingdom - by @anujeshd, @rishikhatri47, and @Harshit_1320</p>
+<p>Adventure Kingdom is an app for theme park in which you can check different park attraction informations.</p>
+<p>Accident Detection is an app for detecting road accidents using machine learning techniques and utilizing inputs from a variety of sensors, such as accelerometers and GPS to detect and analyze data related to accidents, such as changes in speed, direction, and impact force.</p>
+<p>IntelliTask is a simple semi-automated todo app where the AI decides how important the task is and when it should be due.</p>
+<p>Caffeio an app for coffee aficionados. Explore a variety of coffee brewing methods like V60, AeroPress, and Chemex, with comprehensive guides and assistance to elevate your coffee experience. Uncover the captivating stories behind each method, deepening your appreciation for your favorites.</p>
+<p>Decision Tales is an app that let's you follow your own path through fascinating stories. Each story has many possible outcomes, which you untangle with your decisions.</p>
+<p>@samuelP09301972, the creator of Syno will receive a limited Flutter-themed Supabase keyboard.</p>
+<p>Each member of the winning and runner-up projects will receive a limited edition Flutter Hackathon swag pack including a t-shirt as proof of winning in the Flutter Hackathon.</p>
+<p>If you missed the hackathon, but still want to build awesome apps using Flutter and Supabase, here are some resources to get you started:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/flutter-hackathon-winners" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1372. Node.js built-ins on Deno Deploy</h2>
+    <div class="article-meta">
+        📅 May 26, 2023 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/node-builtins-on-deploy" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/node-builtins-on-deploy/header.png" alt="Node.js built-ins on Deno Deploy" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/node-builtins-on-deploy/header.png" alt="Node.js built-ins on Deno Deploy" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We’re excited to announce that starting today, Deno Deploy supports importing
+Node.js built-in modules such as http, fs, and path. You can now run
+existing Node.js apps at the edge.</p>
+<p>Deno Deploy is a
+next-generation cloud platform
+built on JavaScript isolates. It runs your JavaScript, TypeScript, and
+WebAssembly at the edge,
+in our 35 global regions, close to your
+users. It scales automatically, from zero to thousands of requests per second.
+Deno Deploy comes built in with super speedy deployments from GitHub, and
+a global database.</p>
+<p>Starting today, you can use Node.js built-in modules in your Deno Deploy
+applications. Modules such as fs, path, crypto, or http now work out
+of the box, enabling you to run existing Node.js apps at the edge, without
+hassle.</p>
+<p>See this example live: https://dash.deno.com/playground/node-specifiers</p>
+<p>This means that you can now run Express applications
+on Deno Deploy:</p>
+<p>See this example live: https://dash.deno.com/playground/express-demo</p>
+<p>Importing of all 47 Node.js built-in modules is supported. However, as all
+applications running on Deno Deploy are sandboxed, some modules such as
+child_process do not provide any useful functionality. For a full list of
+supported modules and limitations, refer to the documentation:
+https://deno.com/deploy/docs/runtime-node</p>
+<p>While the Node.js built-in modules behave identically to their native Node.js
+counterparts, there are cases where our implemenation is not yet perfect. If you
+encounter any issues,
+please file an issue.</p>
+<p>This is just the humble beginning of our Node.js compatibility story in Deno
+Deploy. In the above express example, esm.sh is used to load the npm module
+express. We are working to bring
+npm specifiers
+support natively to Deno Deploy. Stay tuned for updates on this soon.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/node-builtins-on-deploy" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1379. Deno 1.34: deno compile supports npm packages</h2>
+    <div class="article-meta">
+        📅 May 25, 2023 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v1.34" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v1.34/ogp.png" alt="Deno 1.34: deno compile supports npm packages" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v1.34/ogp.png" alt="Deno 1.34: deno compile supports npm packages" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>As we continue our development journey towards Deno 2, this minor release is
+primarily focused on boosting compatibility with npm and Node.js, enhancing the
+overall quality of life and developer experience, and establishing the
+foundation for future performance enhancements.</p>
+<p>The most significant updates in this release include three highly anticipated
+features:</p>
+<p>Besides the aforementioned features, there are many other improvements and bug
+fixes worth mentioning:</p>
+<p>Ever since v1.6, deno compile has
+allowed you to compile your project into a single binary executable. This
+development has proven to be substantial for a multitude of reasons, as it
+enables developers to:</p>
+<p>Since then, we’ve continued to make deno compile more useful, by
+adding support for web workers and dynamic imports,
+and today, by supporting npm packages.</p>
+<p>Here’s an example creating a single binary executable with cowsay:</p>
+<p>cowsay is a simple example, but you can use deno compile with much more
+complex projects. Let’s try vite:</p>
+<p>The difference between using deno compile to create an eslint binary and
+npm install -g eslint is that Deno packages eslint with all of its
+dependencies and configurations alongside the actual deno executable. This
+means that the produced executable ensures its dependencies will not be changed
+by accident and continue working the same way without interference from other
+dependencies on your system. Additionally, our testing suggests the binaries
+from deno compile tend to start up faster than executing the same program with
+dependencies cached locally.</p>
+<p>There’s more work to improve deno compile, including minimizing total binary
+size, which we intend to address in upcoming releases.</p>
+<p>Do you specific feedback on deno compile?
+Let us know.</p>
+<p>Globs are now supported in
+the configuration file deno.json, deno task, and CLI arguments for
+specifying files. The glob syntax is cross platform, so you can confidently use
+it on Windows, macOS, and Linux.</p>
+<p>In deno.json, you can use * to match any number of characters in a path,
+? to match a single character, and ** to match any number of directories:</p>
+<p>You can also use glob patterns as CLI arguments. Here’s the above example,
+but using deno fmt:</p>
+<p>⚠️ Notice that we put the glob in quotes to prevent the shell from expanding
+it.</p>
+<p>With deno task, in addition to the glob syntax above, you can also use
+square brackets to match a range of characters:</p>
+<p>One of the most wanted features is finally here. You can now use TLS
+certificates that contain IP addresses.</p>
+<p>This is useful for things like Kubernetes pods, which often use IP addresses
+instead of domain names, and for DNS over HTTPS/TLS which needs an IP address
+for the server to avoid circular dependency on name resolution.</p>
+<p>With Deno v1.34 any API that uses TLS will work with IP addresses. For example:</p>
+<p>Previously, if you wanted Deno to ignore a file or folder for every sub command,
+you would have to specify it repetitively:</p>
+<p>Starting in this release, you can use a top level exclude property:</p>
+<p>Thank you to @scarf005 for implementing this
+feature.</p>
+<p>A nodeModulesDir property can now be specified in the deno.json file for
+explicitly enabling or disabling Deno’s use of the node_modules directory.</p>
+<p>If you are using Deno with a package.json and node_modules directory, it is
+recommended to enable this setting as it will provide a better experience. For
+example, with it enabled, Deno’s language server will use the local
+node_modules directory for caching and resolving packages.</p>
+<p>Deno 1.33 introduced document preloading
+in the language server, which pre-loads modules in the workspace on initialize
+so Deno knows about them and their contents.</p>
+<p>In some cases, the default 1000 file system entry limit was either too little or
+too much, so it’s now configurable by setting the deno.documentPreloadLimit
+property.</p>
+<p>Additionally, the language server’s internal TypeScript isolate’s default max
+memory limit was increased to 3GB to match TypeScript in VS Code’s default.
+Lastly, this limit can be configured in the VSCode extension via
+deno.maxTsServerMemory:</p>
+<p>Last month, we hinted that we planned to stabilize the Deno.serve() API. After
+much deliberation, however, we decided to postpone the stabilization by another
+month in order to make this API more forward compatible.</p>
+<p>The signature of Deno.serve() has been changed to return an instance of
+Deno.Server instead of Promise<void>. Deno.Server has a finished
+property that’s a Promise, which resolves when the server shuts down (using an
+AbortSignal). This gives more flexibility in controlling the server
+programmatically.</p>
+<p>Additionally, Deno.Server has ref() and unref() methods. You can use these
+methods to control whether the server should keep the process alive or not.</p>
+<p>This unstable API now exposes a few more options that allow greater control over
+the created client:</p>
+<p>The Deno.FileInfo interface now includes the following new fields:</p>
+<p>The fields are available on Linux and macOS. On Windows, they are always null.</p>
+<p>Thank you to Hirotaka Tagawa for the
+contribution.</p>
+<p>There are a couple other notable improvements to npm support:</p>
+<p>We also polyfilled a few more built-in Node.js APIs:</p>
+<p>Additionally, the following N-API symbols now work properly:</p>
+<p>Finally, Deno v1.34 ships with V8 11.5 and TypeScript 5.0.4.</p>
+<p>Take a look at Deno KV, our globally distributed database for
+Deno Deploy, now in beta</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v1.34" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1512. ChatGPT plugins now support Postgres &amp; Supabase</h2>
+    <div class="article-meta">
+        📅 May 25, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/chatgpt-plugins-support-postgres" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2023-05-25-chatgpt-plugins-support-postgres/chatgpt-plugins-support-postgres.jpeg" alt="ChatGPT plugins now support Postgres &amp; Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2023-05-25-chatgpt-plugins-support-postgres/chatgpt-plugins-support-postgres.jpeg" alt="ChatGPT plugins now support Postgres & Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>One of the challenges that ChatGPT faces is being able to answer questions from a private dataset. We can solve this with “retrieval plugins”, which allow ChatGPT to access information from a database.</p>
+<p>Supabase recently contributed to the OpenAI repo with a Postgres and a Supabase implementation to help developers build plugins using pgvector.</p>
+<p>Let’s dig into the specifics of Retrieval plugins, then we can implement an example - we’ll ingest all of the Postgres docs into a Supabase database, then get ChatGPT to answer questions. It’s a contrived example since ChatGPT already knows about Postgres, but what other data source would Supabase want to use?</p>
+<p>ChatGPT recently released Plugins which help ChatGPT access up-to-date information, run computations, or use third-party services.</p>
+<p>A Retrieval Plugin is a Python project designed to inject external data into the ChatGPT. It allows ChatGPT to dynamically pull relevant information into conversations from your data sources. This could be PDF documents, Confluence, or Notion knowledge bases.</p>
+<p>You can choose your preferred vector database provider from a list of supported options.</p>
+<p>We've implemented two vector provider options: one for Postgres and one for Supabase. The main differences are:</p>
+<p>The Postgres implementation is great to start with because there are now a large number of providers supporting pgvector.</p>
+<p>Both have the same schema so you can easily switch between them:</p>
+<p>When you create the retrieval store inside your database, a stored function is implemented to query and find relevant information for your question to ChatGPT:</p>
+<p>We apply filters based on the source, author, document, and date, and find the closest embeddings using the inner product distance function. This function offers the best performance when the embeddings are normalized, which is the case for OpenAI embeddings. The similarity is calculated as: (documents.embedding <#> in_embedding) * -1 as similarity. And that’s it, you can now seamlessly use the Retrieval Plugin with a Postgres Database underneath, eliminating the need for any manual implementation on your end.</p>
+<p>Let’s build an example where we can “ask ChatGPT questions” about the Postgres documentation.</p>
+<p>Fork the ChatGPT Retrieval Plugin repository to your GitHub account and clone it to your local machine. Read through the README.md file to understand the project structure.</p>
+<p>Choose your desired datastore provider and remove unused dependencies from pyproject.toml. For this example, we'll use Supabase. And install dependencies with Poetry:</p>
+<p>Create a Supabase project and database by following the instructions here. Export the environment variables required for the retrieval plugin to work:</p>
+<p>For Postgres datastore, you'll need to export these environment variables instead:</p>
+<p>To start quicker you may use Supabase CLI to spin everything up locally as it already includes pgvector from the start. Install supabase-cli, go to the examples/providers folder in the repo and run:</p>
+<p>This will pull all docker images and run supabase stack in docker on your local machine. It will also apply all the necessary migrations to set the whole thing up. You can then use your local setup the same way, just export the environment variables and follow to the next steps.</p>
+<p>Using supabase-cli is not required and you can use any other docker image or hosted version of PostgresDB that includes pgvector. Just make sure you run migrations from examples/providers/supabase/migrations/20230414142107_init_pg_vector.sql.</p>
+<p>To create embeddings Plugin uses OpenAI API and text-embedding-ada-002 model. Each time we add some data to our datastore, or try to query relevant information from it, embedding will be created either for inserted data chunk, or for the query itself. To make it work we need to export OPENAI_API_KEY. If you already have an account in OpenAI, you just need to go to User Settings - API keys and Create new secret key.</p>
+<p>Execute the following command to run the plugin:</p>
+<p>The plugin will start on your localhost - port :3333 by default.</p>
+<p>For this example, we'll upload Postgres documentation to the datastore. Download the Postgres documentation and use the /upsert-file endpoint to upload it:</p>
+<p>The plugin will split your data and documents into smaller chunks automatically. You can view the chunks using the Supabase dashboard or any other SQL client you prefer. For the whole Postgres Documentation I got 7,904 records in my documents table, which is not a lot, but we can try to add index for embedding column to speed things up by a little. To do so, you should run the following SQL command:</p>
+<p>This will create an index for the inner product distance function. Important to note that it is an approximate index. It will change the logic from performing the exact nearest neighbor search to the approximate nearest neighbor search.</p>
+<p>We are using lists = 10, because as a general guideline, you should start looking for optimal lists constant value with the formula: rows / 1000 when you have less than 1 million records in your table.</p>
+<p>Now, it is time to add our plugin to ChatGPT.</p>
+<p>To integrate our plugin with ChatGPT, register it in the ChatGPT dashboard. Assuming you have access to ChatGPT Plugins and plugin development, select the Plugins model in a new chat, then choose "Plugin store" and "Develop your own plugin." Enter localhost:3333 into the domain input, and your plugin is now part of ChatGPT.</p>
+<p>You can now ask questions about Postgres and receive answers derived from the documentation!</p>
+<p>Let's try it out: ask ChatGPT to find out when to use check and when to use using. You will be able to see what queries were sent to our plugin and what it responded to.</p>
+<p>And after ChatGPT receives a response from the plugin it will answer your question with the data from the documentation.</p>
+<p>It's easy to bring any context into the datastore and utilize it with ChatGPT. Simply export your knowledge base from platforms like Notion or Confluence, upload it to the datastore, and you're good to go. You can also use any other datastore provider you prefer.</p>
+<p>And the good news is that you’re not limited by using it with ChatGPT, you can embed it in your website or documentation, and build a Slack bot or telegram bot to answer questions about your company or product. For that, you will only need to add a single call to OpenAI API to create a summary of data retrieved from the Plugin. You can find some inspiration on how to do that in our blog post about building Supabase Clippy assistant.</p>
+<p>Let us know on Twitter if you are building ChatGPT Plugins. We can’t wait to see what you will build!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/chatgpt-plugins-support-postgres" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1384. May 23rd, 2023 Deno Deploy Postmortem</h2>
+    <div class="article-meta">
+        📅 May 24, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/2023-05-23-outage-post-mortem" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/og/image.jpg" alt="May 23rd, 2023 Deno Deploy Postmortem" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/og/image.jpg" alt="May 23rd, 2023 Deno Deploy Postmortem" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>On May 23rd, 2023, starting at 20:42 UTC, we experienced an unexpected outage
+across all Deno Deploy services hosted on GCP, including deno.com and deno.land.
+The services were inaccessible for approximately 45 minutes due to a surge in
+CPU capacity caused by a logging roll-out.</p>
+<p>Our commitment to providing a stable and robust platform to our users is our
+topmost priority. We deeply regret this incident and sincerely apologize for any
+disruption caused. This report provides an overview of the event, the cause of
+the outage, and measures we plan to take to prevent such instances in the
+future.</p>
+<p>During a 45-minute period, users experienced a service disruption and could not
+access key Deno web properties and deployments on Deno Deploy, including
+deno.com and deno.land. All Deno Deploy hosted deployments were impacted by this
+incident.</p>
+<p>We estimate a downtime of approximately 45 minutes from when our systems first
+started failing until full recovery was achieved.</p>
+<p>The unexpected outage was triggered by a logging update to our production
+clusters. This update introduced a new service which inadvertently increased our
+CPU load beyond the maximum set capacity, preventing our isolate hypervisors
+from being scheduled and causing deployments to fail.</p>
+<p>During testing in a staging environment, this change was inadvertently bundled
+with another update, which masked the CPU limit problems and prevented
+pre-deployment detection.</p>
+<p>In light of this incident and other recent less critical issues, we recognize
+that our current “one-shot” deployment method is insufficient. We are planning
+to implement canary-style deployments, allowing us to deploy changes to canary
+regions first before a general roll-out, specifically for significant
+cluster-level changes that require lengthy rollout and rollback procedures.</p>
+<p>Moving forward, we will enforce a policy of testing one change at a time in our
+staging environment to prevent masking potential issues.</p>
+<p>Lastly, we are working on establishing clearer error budgets and internal
+service level objectives (SLOs) to guide our engineering teams on the
+decision-making process regarding potentially risky changes.</p>
+<p>Have questions, suggestions or other thoughts?
+Feel free to drop us a line.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/2023-05-23-outage-post-mortem" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1388. How immutable scripts in Deno allow Windmill.dev (YC S22) to build production-grade ops</h2>
+    <div class="article-meta">
+        📅 May 18, 2023 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/immutable-scripts-windmill-production-grade-ops" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/immutable-scripts-windmill-production-grade-ops/og-image.png" alt="How immutable scripts in Deno allow Windmill.dev (YC S22) to build production-grade ops" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/immutable-scripts-windmill-production-grade-ops/og-image.png" alt="How immutable scripts in Deno allow Windmill.dev (YC S22) to build production-grade ops" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This is a guest blog written by Ruben Fiszel,
+Founder & CEO at Windmill.dev.</p>
+<p>Windmill.dev is an
+open-source developer platform
+where companies can build internal workflows and UIs from scripts. Over 300
+companies, including enterprise clients such as
+PhotoRoom, use Windmill as a core part of their
+production infrastructure for various operations, such as ETL pipelines,
+stitching together internal and external APIs, and more.</p>
+<p>Since companies rely on Windmill for mission critical workflows composed from
+scripts, our technology must be performant, secure, and flexible:</p>
+<p>Windmill can run Python, Typescript, Bash and Go code. For TypeScript, we chose
+Deno for its performance, security, and ability to create self-contained
+scripts.</p>
+<p>Scripts are the smallest “unit” for building workflows and UIs, due to their
+flexibility and control. Windmill workflows are composed of various scripts.</p>
+<p>Example of a simple single-branch flow to publish on Slack whenever a
+HackerNews message contains a mention, with sentiment analyzed.</p>
+<p>The example above shows that the workflow is not only made of off-the-shelf
+scripts, but also uses scripts in different languages with all kinds of inputs
+and resources.</p>
+<p>Since scripts are used in all sorts of workflows, their shareability and
+consistency are important. Also, Windmill is community-driven: scripts are
+shared on the Hub and all approved scripts are integrated into the product.</p>
+<p>With those requirements, the scripts must be reliable, secure and performant.
+Only Deno offers all of this in one.</p>
+<p>Windmill expects each script to expose a main function and declare their
+dependencies in the same file. The main function’s arguments are parsed to infer
+the corresponding JSON schema of the payload to trigger such scripts. This model
+is perfect with Deno.</p>
+<p>Deno’s dependency requirements can be stated in the same files where they are
+used. Furthermore, the import statements can specify the precise version being
+used, even for npm imports:</p>
+<p>When dependency versions are specified, we can guarantee the reproducibility of
+the execution of the script regardless of environment. On top of that, sharing
+Deno scripts is as easy as sharing a single file — there’s no need for a
+separate dependency manifest, e.g. package.json.</p>
+<p>Once a script is created or updated, a new version of it is associated with an
+immutable and perpetual hash, then stored in Postgres with relevant metadata.</p>
+<p>With Deno, scripts on Windmill are immutable and a first class primitive — a
+shareable, composable building block for the entire community.</p>
+<p>Windmill runs user generated code in a multi-tenant environment, so it’s
+imperative that the execution of each script is isolated (for self-hosted
+installations, for convenience those securities can be disabled). Deno’s
+opt-in permission model
+gives us the granularity to control access for each execution.</p>
+<p>For Windmill’s scripts in other languages, the sandboxing goes through
+NSJail, which has a big performance overhead
+and is complex to use and configure. Deno, due to its secure by default
+nature, has an edge in performance for multi-tenant environments.</p>
+<p>We’ve been able to achieve 15ms cold start times with Deno, thanks to its
+integration with V8 and
+immutable caching of dependencies</p>
+<p>The dependencies that are cached are also propagated across workers of a cluster
+with a sync system backed by S3, so any Deno script that references a cached
+dependency won’t need to download it and reap performance benefits.</p>
+<p>The cold start of executing a Deno script is around 15ms, which means that
+most lightweight scripts run 30ms end-to-end.</p>
+<p>We’ve been happy using Deno in production at Windmill — it’s simplified
+development, added a layer of security, and ensured optimal performance for our
+enterprise clients.</p>
+<p>In the future, we aim to match serverless / AWS lambda performance by
+integrating more deeply with Deno and running it in process.</p>
+<p>Don’t miss an update — follow us on Twitter.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/immutable-scripts-windmill-production-grade-ops" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1217. Node.js 20.2.0 (Current)</h2>
+    <div class="article-meta">
+        📅 May 16, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v20.2.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.2.0%20(Current)" alt="Node.js 20.2.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.2.0%20(Current)" alt="Node.js 20.2.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v20.2.0/node-v20.2.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v20.2.0/node-v20.2.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v20.2.0/node-v20.2.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v20.2.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v20.2.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v20.2.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v20.2.0/node-v20.2.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v20.2.0/node-v20.2.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v20.2.0/node-v20.2.0.tar.gz 
+Other release files: https://nodejs.org/dist/v20.2.0/ 
+Documentation: https://nodejs.org/docs/v20.2.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v20.2.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1516. Building ChatGPT Plugins with Supabase Edge Runtime</h2>
+    <div class="article-meta">
+        📅 May 15, 2023 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/building-chatgpt-plugins-template" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2023-05-15-chatgpt-plugin-temnplate-deno/chatgpt_plugin_template_deno.jpeg" alt="Building ChatGPT Plugins with Supabase Edge Runtime" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2023-05-15-chatgpt-plugin-temnplate-deno/chatgpt_plugin_template_deno.jpeg" alt="Building ChatGPT Plugins with Supabase Edge Runtime" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>ChatGPT Plugins support is rolling out in beta this week! To help you get up and running quickly, we're releasing a plugin template written in TypeScript and running on Supabase Edge Runtime!</p>
+<p>Want to get started right away? Fork the template on GitHub!</p>
+<p>The ai-plugin.json manifest file is required for ChatGPT to identify our plugin, know what kind of authentication mechanism is used, understand where to find the OpenAPI definition, and some other details about our plugin. You can find the full list of supported parameters in the OpenAI docs.</p>
+<p>Supabase Edge Runtime does currently not support hosting/serving of static files, however, we can import JSON files in our function and serve them as a JSON response. As this needs to be at the root of our domain, we add this to our main function handler:</p>
+<p>Now, when running Edge Runtime locally via Docker, our plugin manifest will be available at http://localhost:8000/.well-known/ai-plugin.json</p>
+<p>The OpenAPI definition is required for ChatGPT to know how to underact with our API. Only endpoints included in there will be exposed to ChatGPT, which allows you to selectively make our endpoints available, or add specific endpoints for ChatGPT.</p>
+<p>The OpenAPI definition can be either in YAML or JSON format. We’ll be using JSON and the same approach as above to serve it. Writing an OpenAPI definition is not something we will want to do by hand, luckily there is an open source tool called swagger-jsdoc which we can use to annotate our endpoints with JSDoc comments and generate the OpenAPI definition with a little script.</p>
+<p>Since this script is run outside of the function execution, e.g. as a GitHub Action, we can use npm specifiers to import swagger-jsdoc.</p>
+<p>Next, we create our /functions/chatgpt-plugin/index.ts file where we use the Deno oak router to build our API and annotate it with JSDOC comments.</p>
+<p>With our JSDoc annotation in place, we can now run the generation script in the terminal:</p>
+<p>Lastly, we need to add some CORS headers to make the browser happy. We define them in a /functions/_shared/cors.ts file so we can easily reuse them across our main and chatgpt-plugins function.</p>
+<p>Now we can easily add them to all our chatgpt-plugin routes a middleware for our oak application.</p>
+<p>Now that we’ve got all the pieces in place, let’s spin up Edge Runtime locally and test things out. For this, we need a Dockerfile and for convenience, we can add a docker-compose file also.</p>
+<p>This will pull down Edge Runtime v1.2.18 (you can check the latest release here) and start up the main service (our /functions/main/index.ts function).</p>
+<p>Edge Runtime will serve requests on port 9000, so we’re creating a mapping from [localhost:8000](http://localhost:8000) where we want to serve our requests locally (of course you can adapt this to your needs) to port 9000 of our Docker container.</p>
+<p>Furthermore, we’re using bind mounts to mount our functions directory into the container. This allows us to make modifications to our functions without needing to rebuild the container after, making for a great local developer experience.</p>
+<p>That’s it, now we can build and spin up our container from the terminal:</p>
+<p>You can conveniently test your plugin while running it on localhost using the ChatGPT UI:</p>
+<p>That’s it, now go ahead and ask some questions, e.g. you can start with “Do I have any todos?”</p>
+<p>There you are, now go ahead and build your own plugin as it says on your todo list ;)</p>
+<p>Once you’re happy with the functionality of your plugin, go ahead and deploy it to Fly.io. After installing the flyctl cli, it only takes a couple of steps:</p>
+<p>There you go, now you’re ready to release your plugin to the world \o/</p>
+<p>ChatGPT is a powerful new interface and its usage is growing rapidly. With ChatGPT Plugins you can allow your users to access your service directly from ChatGPT, using cutting edge technologies like TypeScript and Deno.</p>
+<p>In a next step you can add authentication to your plugin, let us know on Twitter if you’d be interested in a tutorial for that. We can’t wait to see what you will build!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/building-chatgpt-plugins-template" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1519. Flutter Hackathon</h2>
+    <div class="article-meta">
+        📅 May 12, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/flutter-hackathon" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/flutter-hackathon/thumbnail.jpg" alt="Flutter Hackathon" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/flutter-hackathon/thumbnail.jpg" alt="Flutter Hackathon" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>As new Flutter updates are announced at Google I/O, we are excited to kick off the Flutter hackathon with the help of our partners, FlutterFlow and Invertase. The rules are simple: build beautiful apps using our favorite hybrid framework, Flutter!</p>
+<p>There are 5 categories, there will be prizes for:</p>
+<p>There will be a winner and a runner-up prize for each category. Every team member on winning/runner-up teams gets a swag kit.</p>
+<p>Please include an easily accessible demo, or a demo video so that the judges can take a look at the app. For Flutter apps, Zapp is a great tool to generate an easily shareable demo link for your app. For a FlutterFlow project, please share a publicly shareable link so that the judges can take a look at the actual app.</p>
+<p>You should submit your project using this form before 11:59 pm Sunday midnight PT May 21st, 2023.</p>
+<p>Pooja from FlutterFlow, Majid from Invertase, and Tyler, myself from Supabase will do the honors of judging the winners.
+We will be looking for:</p>
+<p>The Supabase Team will be taking part in the Hackathon and you'll find us live to build in our discord all week. Please join us by building in public:</p>
+<p>If you need help or advice when building, find other people to join your team, or if you just want to chill and watch people build, come and join us!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/flutter-hackathon" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1393. Build your own ChatGPT-style doc search with Fresh, OpenAI, and Supabase</h2>
+    <div class="article-meta">
+        📅 May 11, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/build-chatgpt-doc-search-with-supabase-fresh" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/build-chatgpt-doc-search-with-supabase-fresh/og-image.png" alt="Build your own ChatGPT-style doc search with Fresh, OpenAI, and Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/build-chatgpt-doc-search-with-supabase-fresh/og-image.png" alt="Build your own ChatGPT-style doc search with Fresh, OpenAI, and Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>After such positive reception of our SaasKit last
+month, we’ve teamed up with Supabase to bring you yet
+another Deno Fresh starter. This time, we’ve created a custom ChatGPT-style doc
+search using the
+OpenAI Text Completion API.</p>
+<p>A screenshot of the
+demo hosted on Deno Deploy,
+based off Supabase’s docs.</p>
+<p>Supabase’s free, hosted PostgresDB is perfect to use with OpenAI’s GPT-3, since
+the database comes with the extension
+pgvector, allowing you to store
+embeddings and
+perform vector similarity search.
+Both of those are required for building GPT-3 apps.</p>
+<p>If you want to dive into more details, check out
+this blogpost. Or
+you can dive right in and
+start building
+your own custom ChatGPT doc search.</p>
+<p>Building your own custom ChatGPT involves four steps:</p>
+<p>Step 1. and 2. happen via
+a GitHub Action anytime
+we make changes to the main branch.</p>
+<p>When main is merged, this
+generate-embeddings
+script is executed, which performs the following tasks:</p>
+<p>Here’s a workflow diagram of what happens:</p>
+<p>We can use the
+setup-deno GitHub Action to
+execute TypScript scripts via Deno in GitHub Actions. This action allows us to
+also use
+npm specifiers.</p>
+<p>In addition to storing the embeddings, this script generates a checksum for each
+of your .mdx files and stores this in another database table to make sure the
+embeddings are only regenerated when the file has changed.</p>
+<p>Step 3. and 4. happen at runtime, anytime the user submits a question. When this
+happens, the following sequence of tasks is performed:</p>
+<p>Here’s a workflow diagram describing the steps in further detail:</p>
+<p>In the code, the user prompt begins with the
+SearchDialog island.</p>
+<p>Then, the
+vector-search API endpoint
+generates the embedding, then performs the vector search on Supabase. When it
+gets the response with relevant docs, it assembles the prompt for OpenAI:</p>
+<p>Finally, the SearchDialog island uses the
+EventSource web API
+to process
+server-sent events
+that are returned from the OpenAI API. This is what allows us to stream the
+response to the client as it is being generated from OpenAI:</p>
+<p>This is the full power of open source and the modern web coming together right
+here at your fingertips.
+Try it out now,
+we can’t wait to see what you will build!</p>
+<p>Here are additional resources to learn about building with OpenAI and ChatGPT.</p>
+<p>Finally, we’d like to thank Asher Gomez for his
+contribution on this project.</p>
+<p>Don’t miss any updates - follow us on
+Twitter!</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/build-chatgpt-doc-search-with-supabase-fresh" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#33. Announcing Vue 3.3</h2>
+    <div class="article-meta">
+        📅 May 11, 2023 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://blog.vuejs.org/posts/vue-3-3" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today we're excited to announce the release of Vue 3.3 "Rurouni Kenshin"!</p>
+<p>This release is focused on developer experience improvements - in particular, SFC <script setup> usage with TypeScript. Together with the 1.6 release of Vue Language Tools (previously known as Volar), we have resolved many long-standing pain points when using Vue with TypeScript.</p>
+<p>This post provides an overview of the highlighted features in 3.3. For the full list of changes, please consult the full changelog on GitHub.</p>
+<p>When upgrading to 3.3, it is recommended to also update the following dependencies:</p>
+<p>Previously, types used in the type parameter position of defineProps and defineEmits were limited to local types, and only supported type literals and interfaces. This is because Vue needs to be able to analyze the properties on the props interface in order to generate corresponding runtime options.</p>
+<p>This limitation is now resolved in 3.3. The compiler can now resolve imported types, and supports a limited set of complex types:</p>
+<p>Do note that complex types support is AST-based and therefore not 100% comprehensive. Some complex types that require actual type analysis, e.g. conditional types, are not supported. You can use conditional types for the type of a single prop, but not the entire props object.</p>
+<p>Components using <script setup> can now accept generic type parameters via the generic attribute:</p>
+<p>The value of generic works exactly the same as the parameter list between <...> in TypeScript. For example, you can use multiple parameters, extends constraints, default types, and reference imported types:</p>
+<p>This feature previously required explicit opt-in, but is now enabled by default in the latest version of volar / vue-tsc.</p>
+<p>Previously, the type parameter for defineEmits only supports the call signature syntax:</p>
+<p>The type matches the return type for emit, but is a bit verbose and awkward to write. 3.3 introduces a more ergonomic way of declaring emits with types:</p>
+<p>In the type literal, the key is the event name and the value is an array type specifying the additional arguments. Although not required, you can use the labeled tuple elements for explicitness, like in the example above.</p>
+<p>The call signature syntax is still supported.</p>
+<p>The new defineSlots macro can be used to declare expected slots and their respective expected slot props:</p>
+<p>defineSlots() only accepts a type parameter and no runtime arguments. The type parameter should be a type literal where the property key is the slot name, and the value is a slot function. The first argument of the function is the props the slot expects to receive, and its type will be used for slot props in the template. The returning value of defineSlots is the same slots object returned from useSlots.</p>
+<p>There is also a corresponding slots option for defineComponent usage. Both APIs have no runtime implications and serve purely as type hints for IDEs and vue-tsc.</p>
+<p>Previously part of the now-dropped Reactivity Transform, reactive props destructure has been split into a separate feature.</p>
+<p>The feature allows destructured props to retain reactivity, and provides a more ergonomic way to declare props default values:</p>
+<p>This feature is experimental and requires explicit opt-in.</p>
+<p>Previously, for a component to support two-way binding with v-model, it needs to (1) declare a prop and (2) emit a corresponding update:propName event when it intends to update the prop:</p>
+<p>3.3 simplifies the usage with the new defineModel macro. The macro automatically registers a prop, and returns a ref that can be directly mutated:</p>
+<p>This feature is experimental and requires explicit opt-in.</p>
+<p>The new defineOptions macro allows declaring component options directly in <script setup>, without requiring a separate <script> block:</p>
+<p>toRef has been enhanced to support normalizing values / getters / existing refs into refs:</p>
+<p>Calling toRef with a getter is similar to computed, but can be more efficient when the getter is just performing property access with no expensive computations.</p>
+<p>The new toValue utility method provides the opposite, normalizing values / getters / refs into values:</p>
+<p>toValue can be used in composables in place of unref so that your composable can accept getters as reactive data sources:</p>
+<p>The relationship between toRef and toValue is similar to that between ref and unref, with the main difference being the special handling of getter functions.</p>
+<p>Currently, Vue's types automatically registers global JSX typing. This may cause conflict with used together with other libraries that needs JSX type inference, in particular React.</p>
+<p>Starting in 3.3, Vue supports specifying JSX namespace via TypeScript's jsxImportSource option. This allows the users to choose global or per-file opt-in based on their use case.</p>
+<p>For backwards compatibility, 3.3 still registers JSX namespace globally. We plan to remove the default global registration in 3.4. If you are using TSX with Vue, you should add explicit jsxImportSource to your tsconfig.json after upgrading to 3.3 to avoid breakage in 3.4.</p>
+<p>This release builds upon many maintenance infrastructure improvements that allow us to move faster with more confidence:</p>
+<p>As planned, we aim to start making smaller and more frequent feature releases in 2023. Stay tuned!</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://blog.vuejs.org/posts/vue-3-3" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1523. Supabase Beta April 2023</h2>
+    <div class="article-meta">
+        📅 May 09, 2023 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-beta-update-april-2023" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2023-05-09-beta-update-april/monthly-update-april-2023.jpg" alt="Supabase Beta April 2023" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2023-05-09-beta-update-april/monthly-update-april-2023.jpg" alt="Supabase Beta April 2023" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Brace yourself, this is one of the most feature-packed Beta Updates we've published so far.</p>
+<p>Launch Week 7 was a massive success with great feedback from the community. We also gave away lots of mechanical keyboards, including the Hackathon winner which we announce here!</p>
+<p>Logflare is the hub of analytics streams for Supabase. We are open sourcing it so that you can self-host your own Logging infrastructure.</p>
+<p>You can now self-host Edge Functions and run them in local development using our new Edge Runtime. We published a guide showing how to self-host Edge Functions with Fly and what more is coming️</p>
+<p>Supabase Storage received many of the most requested features from our users: Resumable Uploads, Quality Filters, Next.js support, and WebP support.</p>
+<p>On day 4, we introduced SSO with SAML 2.0, PKCE, and Sign in with Apple for iOS. It felt like acronym day, but it was actually Auth day!</p>
+<p>Supabase Studio got a major upgrade that goes from redesigns to improved developer experience, and new tools. We have the features people have been asking for and new capabilities that will change the way you work.</p>
+<p>Our community defines us. We're honored to work with, sponsor, and support incredible people and tools 💜. Our CEO wrote a highlight of the last 3 months.</p>
+<p>database.dev fills the same role for PostgreSQL as npm for JavaScript or pip for Python, it enables publishing libraries and applications for repeatable deployment. Our goal is to create an open ecosystem for packaging and discovering SQL.</p>
+<p>The community is loving pgvector to build AI apps so we decided to make it part of the traditional Launch Week Hackathon. The quality of the apps was out of this world, it wasn't easy, but in the end, we selected Page Assist - by @n4ze3m as the winner of the Best Overall Project.</p>
+<p>With Supabase's pg_vector, Firecrawl could build a more cost-effective solution that is just as performant - if not more performant - than other vector databases.</p>
+<p>As always, one of our favorite memes from last month. Follow us on Twitter for more.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-beta-update-april-2023" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1400. Roll your own JavaScript runtime, pt. 3</h2>
+    <div class="article-meta">
+        📅 May 04, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/roll-your-own-javascript-runtime-pt3" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/roll-your-own-javascript-runtime-pt3/og-image.png" alt="Roll your own JavaScript runtime, pt. 3" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/roll-your-own-javascript-runtime-pt3/og-image.png" alt="Roll your own JavaScript runtime, pt. 3" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This post is a continuation of
+Roll your own JavaScript runtime and
+Roll your own JavaScript runtime, pt. 2.</p>
+<p>Update 2024-09-26: updated the code samples to the latest version of
+deno_core</p>
+<p>We’ve been delighted by the positive response to this series on rolling your own
+custom JavaScript runtime. One area that
+some expressed interest in is
+how to use snapshots to get faster startup times. Snapshots can provide improved
+performance at a (typically) negligible increase in filesize.</p>
+<p>In this blog post, we’ll build on the
+first and
+second part by creating a snapshot
+of runtime.js in a build script, then loading that snapshot in main.rs to
+speed up start time for our custom runtime.</p>
+<p>Watch the video demo or
+view source code here.</p>
+<p>If you followed the first and
+second blog post, your project
+should have three files:</p>
+<p>Let’s write a build.rs file that will create a snapshot of the custom runtime,
+runjs.</p>
+<p>Before create a build.rs file, let’s first add deno_core as a build
+dependency in Cargo.toml:</p>
+<p>Next, let’s create a build.rs file in the root of your project. In this file,
+we’ll have to do the following steps:</p>
+<p>Putting the above steps into code, your build.rs script should look like:</p>
+<p>The main function is create_snapshot, which accepts several options. Let’s go
+over them in the next section.</p>
+<p>The create_snapshot function is a nice abstraction layer that uses an options
+struct to determine how the snapshot is created. We will use the following
+options to configure it:</p>
+<p>Currently, the main.rs file’s run_js function loads the runjs extension.
+We’ll modify this function to instead load the snapshot we created in
+build.rs:</p>
+<p>We’ll remove the esm and esm_entry_point declarations, since that was moved
+to build.rs script. Then, we’ll add a line to load the snapshot.</p>
+<p>Finally, to load the snapshot, we’ll add startup_snapshot in RuntimeOptions
+that points to the RUNTIME_SNAPSHOT, which is defined above run_js as a
+static slice of bytes of the snapshot we created in build.rs.</p>
+<p>Snapshotting is an excellent tool to help improve startup speeds for a custom
+runtime. This is an extremely simple example, but we hope that it sheds some
+light into how Deno uses snapshots to optimize performance.</p>
+<p>Through this series, we’ve shown how to build your own custom JavaScript
+runtime, add APIs like fetch, and now speed up startup times via snapshotting.
+We love hearing from you so if there’s anything you want us to cover, please let
+us know on Twitter,
+YouTube, or
+Discord.</p>
+<p>Don’t miss any updates — follow us on
+Twitter.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/roll-your-own-javascript-runtime-pt3" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1526. Securing your Flutter apps with Multi-Factor Authentication</h2>
+    <div class="article-meta">
+        📅 May 04, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/flutter-multi-factor-authentication" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/flutter-mfa/flutter-mfa-thumb.jpg" alt="Securing your Flutter apps with Multi-Factor Authentication" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/flutter-mfa/flutter-mfa-thumb.jpg" alt="Securing your Flutter apps with Multi-Factor Authentication" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Multi-factor authentication or MFA is an essential part of security for any kind of app.</p>
+<p>We will take a look at an example app where a user has to sign in via MFA in order to view the contents of the app to demonstrate how easy it is to get started with MFA on Flutter.</p>
+<p>Multi-factor authentication (MFA), sometimes called two-factor authentication (2FA), is an additional security layer on top of traditional login methods such as email and password login.</p>
+<p>There are several forms of MFA, such as with an SMS or through using an authenticator app such as Google Authenticator. It is considered a best practice to use MFA whenever possible because it protects users against weak passwords or compromised social accounts.</p>
+<p>In the context of Flutter apps, MFA is important because it helps protect sensitive user data and prevent unauthorized access to user accounts. By requiring users to provide an additional factor, MFA adds an extra layer of security that makes it harder for attackers to gain access to user accounts.</p>
+<p>Given how Flutter is widely used MFA might be a requirement rather than a nice-to-have. Implementing MFA in a Flutter app can improve overall security and give users peace of mind knowing that their data is better protected.</p>
+<p>We are building a simple app where users register with an email and password. After completing the registration process, the users will be asked to set up MFA using an authenticator app. Once verifying the identity via the authenticator app, the user can go to the home page where they can view the main content.</p>
+<p>Login works similarly, where after an email and password login, they are asked to enter the verification code to complete the login process.</p>
+<p>The app will have the following directory structure, where auth contains any basic auth-related pages, mfa contains enrolling and verifying the MFA, and we have some additional pages for us to see that MFA is working correctly.</p>
+<p>You can find the complete code created in this article here.</p>
+<p>Let’s start with the flutter create command.</p>
+<p>Also, if you do not have a Supabase project yet, create one by heading to database.new. Within a few minutes, you will have a new Supabase project.</p>
+<p>Install the supabase_flutter package by running the following command in your terminal.</p>
+<p>Then update your lib/main.dart file to initialize Supabase in the main function. You should be able to find your Supabase URL and AnonKey from the settings -> api section of your dashboard. We will also extract the SupabaseClient for easy access to our Supabase instance.</p>
+<p>Also, add go_router to handle our routing and redirects.</p>
+<p>We will set up the routes towards the end when we have created all the pages we need. With this, we are ready to jump into creating the app.</p>
+<p>Also, if we want to support iOS and Android, we need to set up deep links so that a session can be obtained upon clicking on the confirmation link sent to the user’s email address.</p>
+<p>We will configure it so that we can open the app by redirecting to mfa-app://callback .</p>
+<p>For iOS, open ios/Runner/info.plist file and add the following deep link configuration.</p>
+<p>For Android, open android/app/src/main/AndroidManifest.xml file and add the following deep link configuration.</p>
+<p>After, we will add the deep link as one of the redirect URLs in our Supabase dashboard.</p>
+<p>Go to Authentication > URL Configuration and add mfa-app://callback/* as a redirect URL. Make sure you don’t add any extra slashes or anything because if you do, deep linking will not work properly.</p>
+<p>Lastly, we will add the flutter_svg package. This package will later be used to display a QR code to scan with their authentication app.</p>
+<p>That is all the dependencies that we need. Let’s dive into coding!</p>
+<p>Let’s first create a signup flow. Again, the user will register with the app using email and password, and after confirming their email address, they will enroll in MFA using an authenticator app.</p>
+<p>The register page contains a form with an email and password field for the user to create a new account. We are just calling the .signUp() method with it.
+As you can see in the code below at emailRedirectTo option of the .signUp()method, upon clicking on the confirmation link sent to the user, they will be taken to MFA enrollment page, which we will implement later.</p>
+<p>Create a lib/pages/auth/signup_page.dart file and add the following. There will be some errors, but that is because we haven’t created some of the files yet. The errors will go away as we move on, so ignore them for now.</p>
+<p>We can then create the enrollment page for MFA. This page is taking care of the following.</p>
+<p>The QR code and the secret will be displayed automatically when the page loads. When the user enters the correct 6-digit TOTP, they will be automatically redirected to the home page.</p>
+<p>Create lib/pages/mfa/enroll_page.dart file and add the following.</p>
+<p>Now that we have created a registration flow, we can get to the login flow for returning existing users. Again, the login page has nothing fancy going. We are just collecting the user’s email and password, and calling the good old .signInWithPassword() method. Upon signing in, the user will be taken to a verify page where the user will then enter their verification code from their authenticator app.</p>
+<p>Create lib/pages/auth/login_page.dart and add the following.</p>
+<p>Once a returning user logs in, they are taken to the verification page where they are asked to enter the TOTP from their authenticator app.</p>
+<p>This verification page has the same text field as the enrollment page, and upon entering the code, they are taken to the home page.</p>
+<p>Create a lib/pages/mfa/verify_page.dart file and add the following.</p>
+<p>The home page is where the “secure” contents are displayed. We will create a dummy table with some dummy secure contents for demonstration purposes.</p>
+<p>First, we create dummy content. Run the following SQL to create the table and add some content.</p>
+<p>Now, we can add some row security policy to lock those data down so that only users who have signed in using MFA can view them.</p>
+<p>Run the following SQL to secure our data from malicious users.</p>
+<p>aal here stands for Authenticator Assurance Level, and it will be aal1 for users who have only signed in with 1 sign-in method, and aal2 for users who have completed the MFA flow. Checking the aal inside RLS policy ensures that the data cannot be viewed by users unless they complete the entire MFA flow.</p>
+<p>The nice thing about RLS is that it gives us the flexibility to control how users can interact with the data. In this particular example, we are mandating MFA to view the data, but you could easily create layered permissions where for example a user can view the data with 1 factor, but can edit the data when signed in with MFA. You can see more examples in our official MFA guide here.</p>
+<p>Now that we have the secure data in our Supabase instance, all we need to do is to display them in the HomePage. We can simply query the table and display it using a FutureBuilder.</p>
+<p>Create a lib/pages/home_page.dart file and add the following.</p>
+<p>Because we have set the RLS policy, any user without going through the MFA flow will not see anything on this page.</p>
+<p>One final page to add here is the unenrollment page. On this page, users can remove any factors that they have added. Once a user removes the factor, the user’s account will no longer be associated with the authenticator app, and they would have to go through the enrollment steps again.</p>
+<p>Create lib/pages/list_mfa_page.dart file and add the following.</p>
+<p>Now that we have all the pages, it’s time to put it all together with the help of go_router.</p>
+<p>go_router, as you may know, is a routing package for Flutter, and its redirect feature is particularly helpful for implementing the complex requirement this app had. Particularly, we wanted to make sure that a user who has not yet set up MFA is redirected to the MFA setup page, and only users who have signed in land on the home page.</p>
+<p>Another helpful feature of go_router comes when using deep links, and it automatically redirects the users to the correct path of the deep link. Because of this, we can ensure that user lands on the MFA setup page upon confirming their email address.</p>
+<p>We will add the router in our lib/main.dart file. Your main.dart file should now look like this.</p>
+<p>We looked at how to incorporate Multi-Factor Authentication into a Flutter app with a complete enrollment and verification flow for new and existing users. We saw how we are able to control how the users can interact with the data using their MFA status.</p>
+<p>Another common use case is to make MFA optional and allow the user to opt-in whenever they are ready. Optionally enrolling in MFA will require some tweaks in the code, but might be a fun one to try out.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/flutter-multi-factor-authentication" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1222. Node.js 20.1.0 (Current)</h2>
+    <div class="article-meta">
+        📅 May 03, 2023 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v20.1.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.1.0%20(Current)" alt="Node.js 20.1.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.1.0%20(Current)" alt="Node.js 20.1.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v20.1.0/node-v20.1.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v20.1.0/node-v20.1.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v20.1.0/node-v20.1.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v20.1.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v20.1.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v20.1.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v20.1.0/node-v20.1.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v20.1.0/node-v20.1.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v20.1.0/node-v20.1.0.tar.gz 
+Other release files: https://nodejs.org/dist/v20.1.0/ 
+Documentation: https://nodejs.org/docs/v20.1.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v20.1.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#146. React Canaries: Enabling Incremental Feature Rollout Outside Meta</h2>
+    <div class="article-meta">
+        📅 May 03, 2023 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://react.dev/blog/2023/05/03/react-canaries" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://react.dev/images/og/blog-2023-05-03-react-canaries.png" alt="React Canaries: Enabling Incremental Feature Rollout Outside Meta" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://react.dev/images/og/blog-2023-05-03-react-canaries.png" alt="React Canaries: Enabling Incremental Feature Rollout Outside Meta" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>May 3, 2023 by Dan Abramov, Sophie Alpert, Rick Hanlon, Sebastian Markbåge, and Andrew Clark</p>
+<p>We’d like to offer the React community an option to adopt individual new features as soon as their design is close to final, before they’re released in a stable version—similar to how Meta has long used bleeding-edge versions of React internally. We are introducing a new officially supported Canary release channel. It lets curated setups like frameworks decouple adoption of individual React features from the React release schedule.</p>
+<p>Typically, every React feature has gone through the same stages:</p>
+<p>This playbook works well for most features we’ve released so far. However, there can be a significant gap between when the feature is generally ready to use (step 3) and when it is released in open source (step 5).</p>
+<p>We’d like to offer the React community an option to follow the same approach as Meta, and adopt individual new features earlier (as they become available) without having to wait for the next release cycle of React.</p>
+<p>As always, all React features will eventually make it into a Stable release.</p>
+<p>Generally, we do use minor releases for introducing new features.</p>
+<p>However, this isn’t always possible. Sometimes, new features are interconnected with other new features which have not yet been fully completed and that we’re still actively iterating on. We can’t release them separately because their implementations are related. We can’t version them separately because they affect the same packages (for example, react and react-dom). And we need to keep the ability to iterate on the pieces that aren’t ready without a flurry of major version releases, which semver would require us to do.</p>
+<p>At Meta, we’ve solved this problem by building React from the main branch, and manually updating it to a specific pinned commit every week. This is also the approach that React Native releases have been following for the last several years. Every stable release of React Native is pinned to a specific commit from the main branch of the React repository. This lets React Native include important bugfixes and incrementally adopt new React features at the framework level without getting coupled to the global React release schedule.</p>
+<p>We would like to make this workflow available to other frameworks and curated setups. For example, it lets a framework on top of React include a React-related breaking change before this breaking change gets included into a stable React release. This is particularly useful because some breaking changes only affect framework integrations. This lets a framework release such a change in its own minor version without breaking semver.</p>
+<p>Rolling releases with the Canaries channel will allow us to have a tighter feedback loop and ensure that new features get comprehensive testing in the community. This workflow is closer to how TC39, the JavaScript standards committee, handles changes in numbered stages. New React features may be available in frameworks built on React before they are in a React stable release, just as new JavaScript features ship in browsers before they are officially ratified as part of the specification.</p>
+<p>Although you can technically use Experimental releases, we recommend against using them in production because experimental APIs can undergo significant breaking changes on their way to stabilization (or can even be removed entirely). While Canaries can also contain mistakes (as with any release), going forward we plan to announce any significant breaking changes in Canaries on our blog. Canaries are the closest to the code Meta runs internally, so you can generally expect them to be relatively stable. However, you do need to keep the version pinned and manually scan the GitHub commit log when updating between the pinned commits.</p>
+<p>We expect that most people using React outside a curated setup (like a framework) will want to continue using the Stable releases. However, if you’re building a framework, you might want to consider bundling a Canary version of React pinned to a particular commit, and update it at your own pace. The benefit of that is that it lets you ship individual completed React features and bugfixes earlier for your users and at your own release schedule, similar to how React Native has been doing it for the last few years. The downside is that you would take on additional responsibility to review which React commits are being pulled in and communicate to your users which React changes are included with your releases.</p>
+<p>If you’re a framework author and want to try this approach, please get in touch with us.</p>
+<p>Canary releases represent our best guess of what will go into the next stable React release at any given time.</p>
+<p>Traditionally, we’ve only announced breaking changes at the end of the release cycle (when doing a major release). Now that Canary releases are an officially supported way to consume React, we plan to shift towards announcing breaking changes and significant new features as they land in Canaries. For example, if we merge a breaking change that will go out in a Canary, we will write a post about it on the React blog, including codemods and migration instructions if necessary. Then, if you’re a framework author cutting a major release that updates the pinned React canary to include that change, you can link to our blog post from your release notes. Finally, when a stable major version of React is ready, we will link to those already published blog posts, which we hope will help our team make progress faster.</p>
+<p>We plan to document APIs as they land in Canaries—even if these APIs are not yet available outside of them. APIs that are only available in Canaries will be marked with a special note on the corresponding pages. This will include APIs like use, and some others (like cache and createServerContext) which we’ll send RFCs for.</p>
+<p>If you decide to adopt the Canary workflow for your app or framework, make sure you always pin the exact version of the Canary you’re using. Since Canaries are pre-releases, they may still include breaking changes.</p>
+<p>As we announced in March, the React Server Components conventions have been finalized, and we do not expect significant breaking changes related to their user-facing API contract. However, we can’t release support for React Server Components in a stable version of React yet because we are still working on several intertwined framework-only features (such as asset loading) and expect more breaking changes there.</p>
+<p>This means that React Server Components are ready to be adopted by frameworks. However, until the next major React release, the only way for a framework to adopt them is to ship a pinned Canary version of React. (To avoid bundling two copies of React, frameworks that wish to do this would need to enforce resolution of react and react-dom to the pinned Canary they ship with their framework, and explain that to their users. As an example, this is what Next.js App Router does.)</p>
+<p>We do not expect library authors to test every single Canary release since it would be prohibitively difficult. However, just as when we originally introduced the different React pre-release channels three years ago, we encourage libraries to run tests against both the latest Stable and latest Canary versions. If you see a change in behavior that wasn’t announced, please file a bug in the React repository so that we can help diagnose it. We expect that as this practice becomes widely adopted, it will reduce the amount of effort necessary to upgrade libraries to new major versions of React, since accidental regressions would be found as they land.</p>
+<p>Strictly speaking, Canary is not a new release channel—it used to be called Next. However, we’ve decided to rename it to avoid confusion with Next.js. We’re announcing it as a new release channel to communicate the new expectations, such as Canaries being an officially supported way to use React.</p>
+<p>We are not introducing any changes to stable React releases.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://react.dev/blog/2023/05/03/react-canaries" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1407. Announcing Deno KV</h2>
+    <div class="article-meta">
+        📅 May 01, 2023 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/kv" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/og/kv-og-image.png" alt="Announcing Deno KV" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/og/kv-og-image.png" alt="Announcing Deno KV" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We’re thrilled to introduce Deno KV, a strongly consistent key-value
+database, globally replicated for low-latency reads across
+35 worldwide regions.</p>
+<p>Deno Deploy aims to provide the simplest and fastest way to deploy
+and run JavaScript, TypeScript, and Wasm at the edge. However, creating stateful
+apps on Deno Deploy previously required connecting to external cloud databases,
+which involved additional configuration steps, local testing challenges, and
+potentially undermined the benefits of using the edge if the datastore wasn’t
+geographically replicated.</p>
+<p>With today’s announcement, we’re bringing a globally integrated database to Deno
+that allows you to effortlessly develop full-featured apps while overcoming
+these obstacles.</p>
+<p>In this post, we’ll discuss key aspects of Deno KV:</p>
+<p>If you’re interested in using Deno KV, please join the waitlist.</p>
+<p>Note: Deno KV is currently in beta, and long-term data durability is not
+guaranteed. Please keep this in mind when using Deno KV for production
+applications.</p>
+<p>Deno KV is seamlessly integrated into the open-source Deno runtime, allowing you
+to run it locally or deploy it as a managed service with zero configuration.</p>
+<p>When running locally, Deno KV is backed by SQLite, providing a lightweight and
+easy-to-use solution for local development, testing, or for single region
+production systems.</p>
+<p>When you deploy your application to Deno Deploy, the Deno KV database is
+automatically backed by FoundationDB. This
+managed solution is operated by the Deno company, ensuring high performance and
+reliability without the need for manual configuration or maintenance on your
+part.</p>
+<p>Deno KV is a first-class primitive and exposes only a handful of methods that
+you can use to store, retrieve, delete, and enumerate data. Designed for
+JavaScript, Deno KV can store any JavaScript
+structured serializable value,
+such as Objects, Arrays, BigInts, Dates, and more.</p>
+<p>Use the kv.list() operation to list all keys matching a specific selector. In
+the example below, all keys starting with a particular prefix are selected.</p>
+<p>The list operation retrieves data from the store in batches, defaulting to 500
+keys. To implement pagination, pass the iter.cursor property back into
+subsequent calls of kv.list().</p>
+<p>Learn more about the available methods in the documentation.</p>
+<p>For many applications, reliable database transactions are necessary. This is
+possible in Deno KV using kv.atomic() to create transactions with strong
+consistency across multiple keys that are immediately durable by default:</p>
+<p>Learn more about how we handle transactions.</p>
+<p>Deno KV is a strongly-consistent database, providing external consistency,
+which includes:</p>
+<p>You can relax consistency constraints with the consistency: "eventual" option
+for individual read operations:</p>
+<p>This option allows the system to serve the read from global replicas and caches
+for minimal latency.</p>
+<p>Here are average latency figures for the beta in our most popular regions.
+Improvements are expected for the public beta and GA release.</p>
+<p>Deno KV is a versatile solution for managing application state, making it ideal
+for various use cases. Here are some examples of applications showcasing the
+potential of Deno KV:</p>
+<p>As a basic example, explore
+this playground to
+see how simple it is to create a globally consistent, persistent counter using
+Deno KV:</p>
+<p>Here are some more advanced demo apps we have built to illustrate Deno KV’s
+capabilities:</p>
+<p>These examples provide a glimpse of what you can achieve with Deno KV. With its
+simplicity, scalability, and global replication, Deno KV is a powerful tool for
+developers looking to build stateful applications with ease.</p>
+<p>Our mission is to make Deno Deploy the go-to platform for deploying and running
+API servers, web apps, and edge functions. Providing globally replicated,
+persistent data storage is a major step towards that goal. In the coming months,
+we’ll be introducing features to further simplify the process of building and
+deploying applications with just a few lines of code.</p>
+<p>During the beta period, users can enjoy up to one gigabyte of storage for free.
+We will announce pricing details soon.</p>
+<p>If you’re interested in using Deno KV, please join waitlist.</p>
+<p>Don’t miss any updates —
+follow us on Twitter.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/kv" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1530. Next steps for Postgres pluggable storage</h2>
+    <div class="article-meta">
+        📅 May 01, 2023 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/postgres-pluggable-strorage" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/pluggable-storage/pluggable-storage-og.jpg" alt="Next steps for Postgres pluggable storage" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/pluggable-storage/pluggable-storage-og.jpg" alt="Next steps for Postgres pluggable storage" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You might have recently read “The Part of PostgreSQL We Hate the Most” which highlights some of the deficiencies with Postgres storage. Fortunately, there is ongoing work in the Postgres ecosystem to solve this using “pluggable storage”.</p>
+<p>This article explores the history of Postgres pluggable storage and the possibility of landing it in the Postgres core.</p>
+<p>Pluggable storage gives developers the ability to use different storage engines for different tables within the same database.</p>
+<p>Developers will be able to choose a storage method that is optimized for their specific needs. Some tables could be configured for high transactional loads, others for analytics workloads, and still others for archiving.</p>
+<p>Something like this is already available in MySQL, which uses the InnoDB as the default storage engine since MySQL 5.5. This replaced MyISAM which had it’s own set of problems.</p>
+<p>The “pluggable” part refers to the ability for developers to develop their own storage methods, similar to Postgres Extensions. While some databases offer multiple built-in storage methods by default, Postgres follows a core philosophy of flexibility and extensibility, and using a pluggable approach makes a lot of sense.</p>
+<p>In version 12, PostgreSQL introduced basic support for pluggable storage with the goal of adding ZHeap. Andres Freund and several contributors enabled that feature by refactoring and expanding a variety of table access method (TAM) APIs.</p>
+<p>ZHeap was released with promising results, providing an undo log and solving some long-term table bloat issues in Postgres.</p>
+<p>While it was a great start, unfortunately it appears that the work on ZHeap and the TAM API has stalled.
+This leaves a few holes in that need to be fixed before the community can use the TAM API for pluggable storage. In particular:</p>
+<p>Even without a full API for pluggable storage, there are a couple of solutions available on the market today:</p>
+<p>Right now, pluggable storage requires a fork of Postgres. But there are several initiatives in the Postgres community that we’re excited about.</p>
+<p>Alexander Korotkov, the maintainer of OrioleDB, will be talking at PGCON 23 about some of the changes they are making. They are solving many "wicked Postgres problems" with dual pointers instead of buffer mapping, row-level WAL instead of block-level WAL, undo logs instead of bloat-prone MVCC, and index-organized tables instead of heap.</p>
+<p>Ambitiously, many of the changes required for pluggable storage could land in Postgres 17. If that happens, new storage engines like OrioleDB would be available as a simple extension for developers to use in any Postgres instance. This paves the way for other Pluggable Storage Engines, just like MySQL’s support for multiple storage engines.</p>
+<p>As a community project, Postgres requires support for these initiatives. You can support pluggable storage by getting involved during Postgres Commitfests. Postgres is already one of the best database engines in the world, and pluggable storage would make it even more attractive and maintainable.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/postgres-pluggable-strorage" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html" class="active">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>
