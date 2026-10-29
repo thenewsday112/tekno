@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 83</title>
+<meta name="description" content="Page 83">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page83.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 83</h1>
+<article class="article-card">
+    <h2>#2157. Vercel CLI now supports verifying DNS configuration</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-cli-now-supports-verifying-dns-configuration" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7nyRu7xKKpsYbCwy3fjy1D/3c1939469fb75578e35531e1c9a3f236/dns-verification-cli.png" alt="Vercel CLI now supports verifying DNS configuration" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7nyRu7xKKpsYbCwy3fjy1D/3c1939469fb75578e35531e1c9a3f236/dns-verification-cli.png" alt="Vercel CLI now supports verifying DNS configuration" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now use the Vercel CLI to diagnose a domain's DNS configuration.</p>
+<p>Using the vercel domains verify command, you can check whether a domain is correctly configured, attached to the right project, and verified. If not, it returns the exact steps to fix it.</p>
+<p>vercel domains verify output showing an invalid DNS configuration.</p>
+<p>vercel domains verify inspects ownership, DNS records, nameservers, DNSSEC, conflicting records, and project attachment, and tells you precisely what to change. When the domain is correctly configured, you get a single line back:</p>
+<p>Output when the domain is correctly configured and verified.</p>
+<p>With --format json, the command returns the full diagnosis: status, reason, recommended records, detected conflicts, and suggested next commands. It exits non-zero when misconfigured or unverified, making it scriptable for CI and automation:</p>
+<p>Full JSON diagnosis including status, reason, recommended records, and suggested next commands.</p>
+<p>You can also scope to a project, enforce exact matching, or run non-interactively:</p>
+<p>Upgrade your Vercel CLI to version 54.15.1 to get started. Learn more in the vercel domains verify documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-cli-now-supports-verifying-dns-configuration" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2156. Deploy Node servers with zero configuration</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/deploy-node-servers-with-zero-configuration" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6IWftDk0mi0pcGFt7Zvxuj/7e91b7a51f4eaef14112e4b9217b7c76/deploy_node_servers_with_zero_configuration_og_card.jpg" alt="Deploy Node servers with zero configuration" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6IWftDk0mi0pcGFt7Zvxuj/7e91b7a51f4eaef14112e4b9217b7c76/deploy_node_servers_with_zero_configuration_og_card.jpg" alt="Deploy Node servers with zero configuration" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now deploy a Node.js server to Vercel with zero configuration.</p>
+<p>Vercel detects a server.ts file at the project root or at src/server.ts and deploys it as a Node.js application, in addition to existing zero-configuration backends like Express, Koa, and NestJS:</p>
+<p>Vercel CLI can handle local development and deployment:</p>
+<p>Both commands pick up server.ts automatically, with no configuration files required.</p>
+<p>Backends on Vercel are powered by Fluid compute with Active CPU pricing.</p>
+<p>Learn more about the Node.js runtime on Vercel.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/deploy-node-servers-with-zero-configuration" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2154. GLM 5.2 Fast via Wafer now available on AI Gateway</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/glm-5-2-fast-via-wafer-now-available-on-ai-gateway" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6QymsXvDxNNEPNYz13mvEB/d9e0aae5c1ebd78451ffc8bd7eacfe9c/image__60_.png" alt="GLM 5.2 Fast via Wafer now available on AI Gateway" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6QymsXvDxNNEPNYz13mvEB/d9e0aae5c1ebd78451ffc8bd7eacfe9c/image__60_.png" alt="GLM 5.2 Fast via Wafer now available on AI Gateway" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>GLM 5.2 Fast via Wafer is now available on AI Gateway.</p>
+<p>Based on our own benchmarking across small-context, large-context, and tool-call scenarios, Wafer delivers a 2x higher throughput than other providers serving GLM-5.2 on serverless, leading on decode and end-to-end speed for sustained generation in the small- and large-context cases.</p>
+<p>In our testing, GLM 5.2 Fast on Wafer measured:</p>
+<p>To use GLM 5.2 Fast, set model to zai/glm-5.2-fast in the AI SDK:</p>
+<p>AI Gateway provides a unified API for calling models, tracking usage and cost, and configuring retries, failover, and performance optimizations for higher-than-provider uptime. It includes built-in custom reporting, Zero Data Retention support, budgets for API keys, and more.</p>
+<p>AI Gateway reflects provider pricing with no markup and does not charge a platform fee on inference, including on Bring Your Own Key (BYOK) requests.</p>
+<p>Try GLM 5.2 Fast in the model playground.</p>
+<p>The AI Gateway model leaderboard tracks the most popular models over time, ranking them by the total volume of tokens processed across all Gateway traffic.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/glm-5-2-fast-via-wafer-now-available-on-ai-gateway" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2152. Pro teams can now run up to 500 concurrent builds</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/pro-teams-can-now-run-up-to-500-concurrent-builds" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4UVT5RAXuhlcYvlqCaDoHe/5cd68d3df3e942910cd5c53d43f789ae/image.png" alt="Pro teams can now run up to 500 concurrent builds" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4UVT5RAXuhlcYvlqCaDoHe/5cd68d3df3e942910cd5c53d43f789ae/image.png" alt="Pro teams can now run up to 500 concurrent builds" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Pro teams can run up to 500 concurrent builds, up from 12. Teams with large repos can ship faster without waiting on queued builds. On-demand concurrent builds are enabled by default for Pro and Enterprise, and you're billed only for the build minutes you use.</p>
+<p>Learn more about on-demand concurrent builds.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/pro-teams-can-now-run-up-to-500-concurrent-builds" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2150. Vercel Flags no longer requires SDK Keys for Vercel deployments</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/authenticate-vercel-flags-with-openid-connect-by-default" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/32KMpmWMjTmrRCwAxv5Pzj/ae350ba8c52013e3445275417af20b80/image.png" alt="Vercel Flags no longer requires SDK Keys for Vercel deployments" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/32KMpmWMjTmrRCwAxv5Pzj/ae350ba8c52013e3445275417af20b80/image.png" alt="Vercel Flags no longer requires SDK Keys for Vercel deployments" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>New projects using Vercel Flags no longer need to configure SDK Keys or the FLAGS environment variable when evaluating flags inside a Vercel deployment. At runtime, the Vercel adapter automatically receives a short-lived OIDC token, so authentication is handled for you with zero configuration.</p>
+<p>For local development, link your project with vercel link and pull credentials with vercel env pull. That's it.</p>
+<p>Existing projects and all SDK Keys are unaffected. This change only applies to new projects, and SDK Keys remain fully supported and are still required for:</p>
+<p>Read the Vercel Flags documentation to get started.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/authenticate-vercel-flags-with-openid-connect-by-default" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2147. Deep Agents and OpenCode are now available in the AI SDK Harness</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/deepagents-and-opencode-harness-adapters" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3AHwFbxwzfhp8zC9WcjRHl/5ae56b285de125b5b992e879e6a1ca89/deep_agents_and_opencode_available_in_ai_sdk_harne_og_card.jpg" alt="Deep Agents and OpenCode are now available in the AI SDK Harness" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3AHwFbxwzfhp8zC9WcjRHl/5ae56b285de125b5b992e879e6a1ca89/deep_agents_and_opencode_available_in_ai_sdk_harne_og_card.jpg" alt="Deep Agents and OpenCode are now available in the AI SDK Harness" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The AI SDK Harness lets you run established coding-agent runtimes through one unified interface, so you can switch runtimes without changing your application code. Today we're adding two new adapters, Deep Agents and OpenCode, both running inside a Vercel Sandbox.</p>
+<p>@ai-sdk/harness-deepagents adapts LangChain's deepagents runtime, with built-in file and shell tools, skills, host tools, multi-turn sessions, attach and resume, and built-in tool approvals.</p>
+<p>Basic example for using Deep Agents with HarnessAgent</p>
+<p>Read the Deep Agents harness documentation to get started.</p>
+<p>@ai-sdk/harness-opencode boots a real OpenCode server inside the sandbox via @opencode-ai/sdk and streams its session events through the harness. It exposes OpenCode's built-in tools, supports both built-in and host tool approvals, and lets you pick the model, provider, and reasoning variant.</p>
+<p>Basic example for using OpenCode with HarnessAgent</p>
+<p>Read the OpenCode harness documentation to get started.</p>
+<p>The full supported list of harnesses is now: Claude Code, Codex, Deep Agents, OpenCode, Pi, with more coming soon.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/deepagents-and-opencode-harness-adapters" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2145. AI SDK 7 is now available</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/ai-sdk-7" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=AI%20SDK%207%20is%20now%20available&amp;format=changelog" alt="AI SDK 7 is now available" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=AI%20SDK%207%20is%20now%20available&format=changelog" alt="AI SDK 7 is now available" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Give your application a faster way to decide what should happen next. Use Jev to route requests, flag content, and score priorities.</p>
+<p>AI SDK 7 is a major release for building production agents in TypeScript. The SDK has grown from model calls and chat primitives into a broader agent platform for developing, running, integrating, and observing agents across text, audio, realtime, image, and video. Every major provider is supported out of the box.</p>
+<p>Develop agents with reasoning control, tool and runtime context, provider files and skills support, MCP Apps, and a terminal UI.</p>
+<p>Run agents with tool approvals, durable WorkflowAgent execution, first-class timeouts, and sandbox support.</p>
+<p>Integrate any agent harness such as Codex, Claude Code, Deep Agents, OpenCode, or Pi.</p>
+<p>Observe agent behavior with redesigned telemetry, @ai-sdk/otel, Node.js tracing channel support, lifecycle callbacks, and step performance statistics.</p>
+<p>Build beyond text with stable speech/transcription APIs, richer file parts, image generation and editing, multimodal embeddings, reranking, realtime voice (experimental), and video generation (experimental).</p>
+<p>Upgrade with clearer APIs through the new migration skill, codemods, and migration paths for ESM, Node.js 22, instructions, telemetry, stream, finalStep, runtimeContext, and toolsContext.</p>
+<p>AI SDK 7 introduces two breaking requirements:</p>
+<p>Node.js 22 minimum: Node 22 is required because the SDK depends on APIs (including the native fetch implementation and improved AsyncLocalStorage semantics) that are not backported to earlier LTS lines.</p>
+<p>ESM imports required: AI SDK 7 requires ESM imports (import syntax or .mjs files). CommonJS require() is not supported. Update your package.json to include "type": "module" or migrate individual files to .mjs.</p>
+<p>Run the v7 codemods to automate most import and rename changes before manually reviewing semantic migration items. See the full v7 migration guide.</p>
+<p>Provider-agnostic reasoning control: generateText and streamText now support a top-level reasoning option that maps to provider-native settings across OpenAI, Anthropic, Google, Groq, xAI, Bedrock, Fireworks, DeepSeek, Open Responses, and OpenAI-compatible providers. Note that exact behavior and available parameters vary by provider.</p>
+<p>Typed runtime context: Shared orchestration state lives in runtimeContext and flows through prepareStep, approval functions, lifecycle callbacks, telemetry, ToolLoopAgent, and WorkflowAgent.</p>
+<p>Scoped tool context: Tools can declare a contextSchema, and callers provide per-tool values through toolsContext, so third-party tools only receive the secrets or config they need.</p>
+<p>Provider file uploads: uploadFile uploads large inputs once and reuses provider references in later calls, reducing redundant uploads in repeated PDF, dataset, image, and multi-step workflows.</p>
+<p>Provider skill uploads: uploadSkill brings the same pattern to provider-managed skill environments.</p>
+<p>MCP Apps: MCP support now includes model-visible versus app-only tools, app metadata, sandboxed iframe rendering, and JSON-RPC communication for tools, resources, logs, and display updates. Add an MCP app to your agentic app.</p>
+<p>Terminal agent development: @ai-sdk/tui runs AI SDK agents in an interactive terminal UI, letting you test reasoning, tools, and markdown output before building a full app. Learn how to build your own terminal agent.</p>
+<p>AI SDK 7 adds the primitives agents need once they leave local demos.</p>
+<p>Tool approvals: generateText, streamText, and ToolLoopAgent can define approval policies at the call or agent level. Policies can require user approval, auto-approve, auto-deny, or delegate to typed approval functions.</p>
+<p>Hardened approval replay: Higher-risk approval flows can revalidate tool inputs and policies before continuation, use WorkflowAgent approval validation, and opt into HMAC signing. HMAC signing cryptographically binds the original tool inputs to the approval token, preventing tampering with tool arguments between the approval request and resumption.</p>
+<p>Durable execution: @ai-sdk/workflow introduces WorkflowAgent for long-running agents. Execution state is persisted to durable storage between steps, so agents survive deploys, process restarts, interruptions, and delayed approvals. To learn more, see the WorkflowAgent migration guide.</p>
+<p>Workflow-aware agent features: WorkflowAgent supports streaming, tools, approvals, typed runtime and tool context, lifecycle callbacks, stable telemetry, provider-executed approval resumption, and tool result conversion.</p>
+<p>First-class timeouts: Text generation and agent APIs can define total, per-step, per-chunk, default tool, and per-tool timeout budgets. Timeout aborts use TimeoutError, and abort reasons flow through stream and UI protocols.</p>
+<p>Sandboxed execution: The sandbox abstractions support command execution, streaming output, working directories, environment variables, abort signals, and step-level sandbox overrides.</p>
+<p>AI SDK 7 introduces a harness layer for bringing established agents into the AI SDK ecosystem. Wrap harnesses such as Claude Code, Codex, Deep Agents, OpenCode, and Pi behind the same agent interface used by the rest of the SDK.</p>
+<p>HarnessAgent: Run external agent harnesses through the AI SDK Agent interface, with standard generate and stream results.</p>
+<p>Adapters for agents: Claude Code, Codex, Deep Agents, OpenCode, and Pi harness adapters let teams plug existing agent runtimes into AI SDK apps.</p>
+<p>Configurable harness runs: Harness agents can receive sandboxes, instructions, custom skills, and tools, so the same runtime can be shaped for different products and workflows.</p>
+<p>Durable, resumable sessions: Workflow utilities, session bridging, and APIs for interrupted-turn continuation make harness runs suitable for longer tasks.</p>
+<p>Gateway-ready authentication: Harness adapters support Vercel OIDC for AI Gateway, simplifying hosted and sandboxed agent execution.</p>
+<p>Global telemetry integrations: Register telemetry once and receive structured events across model calls, steps, tools, embeddings, reranking, and agent execution.</p>
+<p>Dedicated OpenTelemetry package: OpenTelemetry support now lives in @ai-sdk/otel, with GenAI-semantic convention spans and metrics, supplemental AI SDK attributes, and span-enrichment hooks. To learn more, see the @ai-sdk/otel docs.</p>
+<p>Sensitive context controls: Runtime and tool context can be deliberately included in telemetry, with controls to prevent secrets from being exposed by default.</p>
+<p>Lifecycle callbacks: Callbacks are more consistent across core functions, agents, tools, embeddings, reranking, structured output, and UI streams. Callback payloads carry richer data for step, usage, content, file, source, warning, tool, model-call, and error events.</p>
+<p>Performance statistics: Step results expose timing and throughput metrics, including response time, total step time, tool execution time, time to first output, and output tokens per second.</p>
+<p>AI SDK 7 expands the SDK across realtime, video, speech, transcription, images, files, embeddings, and structured output.</p>
+<p>Realtime (experimental): Browser-to-provider WebSocket sessions for OpenAI, Google, and xAI, with audio/text conversations, client-driven tool calls, and normalized routing through AI Gateway.</p>
+<p>Video generation (experimental): Video generation works across AI Gateway, Google AI Studio, Google Vertex, fal, Replicate, ByteDance Seedance, Kling AI, Prodia, and xAI, with support for long-running SSE responses and safer bounded downloads.</p>
+<p>Stable speech and transcription: generateSpeech, transcribe, SpeechResult, and TranscriptionResult are stable exports.</p>
+<p>Images as files: Image parts move toward the same canonical file model as other media. Tool outputs can use a single file shape for inline data, URLs, provider references, and text-backed content.</p>
+<p>Richer media and model support: Providers add image generation, image editing, multimodal embeddings, speech, transcription, reranking, file references, reasoning files, and provider-specific media metadata.</p>
+<p>Structured output reliability: JSON Schema post-processing is stricter for Zod and Standard Schema inputs, malformed JSON extraction and repair is available for structured outputs and tool calls, and array output mode preserves transforms, coercions, defaults, and pipes.</p>
+<p>The UI and streaming work in v7 focuses on making agent streams correct, composable, and reliable.</p>
+<p>Direct agent transport: DirectChatTransport can call an Agent directly from UI code.</p>
+<p>Tool approval in UI flows: UI messages support automatic approval responses and improved approval replay behavior.</p>
+<p>Framework improvements: React useChat callbacks update with current props/state; sendAutomaticallyWhen supports async conditions; Vue gains an idiomatic useChat composable; and Angular APIs are aligned with current AI SDK patterns.</p>
+<p>More reliable streams: Provider streams that end before a finish chunk are treated as errors, tool execution errors are emitted and cleaned up predictably, and streaming reasoning edge cases are handled more consistently.</p>
+<p>Provider metadata preservation: Provider metadata is retained across text generation, UI streams, tool invocations, and multi-turn provider ID mapping.</p>
+<p>Multi-step results: Top-level content, tool calls/results, files, sources, warnings, and usage now represent the full run. Final-step-only details are available through finalStep.</p>
+<p>The MCP package grows from a tool transport layer into a richer integration surface for agent tools and app UIs.</p>
+<p>Protocol and metadata: MCP clients support protocol version 2025-11-25, server metadata, server instructions, ping responses, negotiated protocol headers, and public listTools().</p>
+<p>Typed tool outputs: MCP tools can expose outputSchema and structuredContent, and tool definitions can be separated from executable tools.</p>
+<p>Resource content: Tool results and prompt messages can include MCP resource_link content.</p>
+<p>App rendering: MCP Apps use tool metadata to render app-specific UI inside sandboxed iframes while keeping model-visible and app-only tools separate.</p>
+<p>Transport reliability: HTTP, SSE, and OAuth transports support custom fetch, redirect configuration, OAuth refresh deduplication, state validation, asynchronous client authentication, richer errors, and better SSE frame handling.</p>
+<p>Node.js 22 minimum: AI SDK packages require Node.js 22 or later.</p>
+<p>ESM imports required: AI SDK 7 requires ESM imports (import syntax or .mjs files). Update your package.json to include "type": "module" or migrate individual files to .mjs.</p>
+<p>Migration skill available: A dedicated migration skill is available that developers can install and ask their agent to use for AI SDK v6-to-v7 upgrades.</p>
+<p>Codemods available: The v7 codemods cover the majority of renames and cleanup migrations.</p>
+<p>Send this prompt to your AI coding agent to get started:</p>
+<p>The following highlights cover the most impactful promotions:</p>
+<p>experimental_customProvider becomes customProvider</p>
+<p>experimental_generateImage becomes generateImage</p>
+<p>experimental_prepareStep becomes prepareStep</p>
+<p>The following highlights cover the most impactful renames:</p>
+<p>System messages inside prompt or messages require allowSystemInMessages: true</p>
+<p>StreamTextResult.fullStream becomes stream</p>
+<p>CallSettings is split into model generation options and request/transport options</p>
+<p>The following highlights cover the most impactful deprecations:</p>
+<p>Tool approval: needsApproval on tool() and dynamicTool() is deprecated. Move approval logic to toolApproval on generateText, streamText, or ToolLoopAgent.</p>
+<p>Stream response helpers: Result methods like result.toUIMessageStreamResponse() and result.toTextStreamResponse() are deprecated. Use top-level helpers like createUIMessageStreamResponse and createTextStreamResponse.</p>
+<p>Vue chat: The Vue Chat class is deprecated. Use the useChat composable instead.</p>
+<p>Reasoning configuration is centralized: The top-level reasoning option replaces overlapping provider-specific reasoning settings unless a provider-specific override is intentional.</p>
+<p>OpenTelemetry moved to @ai-sdk/otel: OpenTelemetry span collection is no longer built into the ai package. Telemetry is registered globally, and custom tracers move into the OpenTelemetry constructor.</p>
+<p>Request and response body retention is opt-in: Text generation results exclude request and response bodies by default.</p>
+<p>Multi-step results now represent the full run: Top-level usage, content, tool calls/results, files, sources, and warnings accumulate across all steps; final-step-only data lives under finalStep.</p>
+<p>Message parts are more canonical: Legacy media and image-specific parts move toward file parts with media types.</p>
+<p>Package-specific behavior changed: MCP HTTP/SSE redirects are treated as errors, OpenAI Responses reasoning summaries default to detailed, and Anthropic cache creation token metadata moves into standard usage fields.</p>
+<p>Follow these steps to migrate an existing project to AI SDK 7:</p>
+<p>Update Node.js to 22+: Verify your runtime and CI environments meet the minimum requirement before upgrading packages.</p>
+<p>Update packages: Bump ai and all @ai-sdk/* packages to their v7 releases in your package.json.</p>
+<p>Run the v7 codemods: The codemods automate the majority of renames, import changes, and API moves. Review the diff before committing.</p>
+<p>Migrate OpenTelemetry: If you use tracing, move your setup to @ai-sdk/otel and register telemetry globally. Refer to the @ai-sdk/otel docs and the OpenTelemetry span schema for attribute details.</p>
+<p>Review semantic changes manually: Codemods cannot fully decide runtime requirements, ESM imports, instruction/message behavior, runtime/tool context separation, approval policy placement, stream helper usage, and multi-step result shapes. See the full v7 migration guide.</p>
+<p>For a guided migration, install the AI SDK v7 migration skill with npx skills add vercel/ai --skill migrate-ai-sdk-v6-to-v7.</p>
+<p>Use TypeSafe AI's Jev with AI SDK decisions to return typed answers and probabilities for your application's routing rules.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/ai-sdk-7" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2143. Teaching agents product design at Vercel</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/teaching-agents-product-design-at-vercel" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5QppV68SzRFSazpDzlIKT5/beac5779b3bd02e6d45ac9cc0509edf6/Teaching_Agents_Product_Design_at_Vercel__1_.png" alt="Teaching agents product design at Vercel" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5QppV68SzRFSazpDzlIKT5/beac5779b3bd02e6d45ac9cc0509edf6/Teaching_Agents_Product_Design_at_Vercel__1_.png" alt="Teaching agents product design at Vercel" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Coding agents can produce working UI fast, but what's harder is a different shape. They can copy your product's style, match its patterns, and try to follow its conventions. What they cannot do is understand why those patterns exist. Code shows agents what shipped, not why one component, phrase, or interaction became your standard. That reasoning lives in design reviews, PR comments, Slack threads, and with the people who were in the room. For an agent, context that isn't in the codebase doesn't exist.</p>
+<p>Vercel is an agent-native team. We treat accepted product decisions like code, keeping them in the repository, reviewing changes against them, and making them available to every agent working there.</p>
+<p>The way we do this is through product-design. It's a system with three parts:</p>
+<p>An agent skill that gives coding agents the context behind decisions that require product or codebase judgment.</p>
+<p>Linters that enforce clear rules automatically.</p>
+<p>A review loop that gathers evidence from Slack, Figma, and GitHub, then prepares guideline updates for review.</p>
+<p>Any team can build the same structure around their own standards.</p>
+<p>The skill lives inside the repository alongside the code it governs. Here's a simplified view of its structure:</p>
+<p>The product-design skill structure inside the repository.</p>
+<p>The repository AGENTS.md tells coding agents when to load the skill. The skill-local AGENTS.md defines load order, validation, and governance. SKILL.md owns the runtime workflow.</p>
+<p>references/ stores product-judgment, interface-quality, resilience, copy, canonical product names, interaction patterns, and surface-specific decisions.</p>
+<p>exemplars/ documents decisions worth repeating from shipped pull requests, along with mistakes to avoid. coverage-gaps.md lists areas where we do not have a standard yet.</p>
+<p>copywriting-eval/ tests copy and interface-language behavior. It does not evaluate the broader product-design workflow.</p>
+<p>SKILL.md resolves the request mode first: shape, implement, review, copy, or harden. This keeps audits from becoming edits and copy passes from expanding into redesigns. It skips backend-only work, telemetry, console errors, generated files, and tests with no shipped UI impact.</p>
+<p>The skill routes to canonical sources instead of duplicating them. Component APIs, design-system rules, accessibility criteria, and interaction guidance stay with their owners.</p>
+<p>Routing is specific to both task and surface. Material changes load product-judgment and interface-quality first. Copy, component, layout, interaction, accessibility, and resilience work each route to focused references. A modal loads destructive-action patterns and canonical verbs. A settings form loads labels, validation, progressive disclosure, and accessible-name guidance.</p>
+<p>You can use this simplified structure as a starting point and replace the paths and standards with your own:</p>
+<p>The product-design SKILL.md. Routing modes, operating contract, and governance.</p>
+<p>Routing is only part of what makes the skill useful. The other part is how findings stay traceable once the skill produces them.</p>
+<p>Copy rules have stable IDs and point to their canonical sources:</p>
+<p>Example rule format with stable ID and canonical source.</p>
+<p>When Vercel Agent proposes a patch, it validates the change in a secure Vercel Sandbox with the repository's builds, tests, and linters before posting the suggestion.</p>
+<p>We prefer deterministic checks when a linter can enforce a rule reliably. Linters are fast and cheap to run, so developers and coding agents get feedback while they work instead of waiting for a later review.</p>
+<p>Code can count two or three static options, so a linter can recommend radio buttons. Naming the right object and consequence for a destructive action requires product context, so the skill handles it.</p>
+<p>Examples in the codebase include rules that:</p>
+<p>Prevent nested modals, which break focus management, keyboard navigation, and layering.</p>
+<p>Recommend radio buttons instead of a select for two or three static options, so every choice stays visible.</p>
+<p>Require accessible names for icon buttons and form controls, and reject custom focus rings that bypass shared focus tokens.</p>
+<p>Prevent className from overriding a design-system component's color, radius, or shadow while still allowing layout classes.</p>
+<p>Require Modal.Body so long content scrolls correctly and headers and footers can remain sticky.</p>
+<p>Replace raw shadows with theme-aware Material classes and reject borders that duplicate a Material's built-in treatment.</p>
+<p>Flag arbitrary spacing that falls off the 4px grid and suggest a standard utility when one exists.</p>
+<p>Each rule explains why the pattern is a problem and suggests a concrete fix. Some rules autofix safe migrations, such as replacing deprecated Tailwind utility names.</p>
+<p>Accepted decisions can take several forms:</p>
+<p>Human-readable guidance next to the relevant Geist component, such as Checkbox best practices.</p>
+<p>Agent guidance in the product-design skill.</p>
+<p>A lint rule when code can check it reliably.</p>
+<p>The lint rule below shows how one product guideline is encoded as a deterministic check:</p>
+<p>Lint rule that recommends radio buttons over selects with 2 or 3 static options.</p>
+<p>Each of these catches a class of mistake automatically, freeing code review for the decisions that actually require judgment.</p>
+<p>Lint rules are deterministic, but agent behavior can vary, so we test the skill on interfaces it has not seen before.</p>
+<p>An agent edits a before state, then a judge checks the results against a rubric.</p>
+<p>Evals come from shipped examples documented in the skill. Holdouts hide their expected edits, testing whether the guidance generalizes. We also run fixtures without the skill to measure whether it changed the agent's behavior.</p>
+<p>We score rule correctness separately from similarity to the shipped result. Shipped code can contain a flaw that the agent should improve instead of reproduce.</p>
+<p>Product standards change as components, names, workflows, and failure states change, and every update needs evidence and human review.</p>
+<p>Our weekly evidence-intake workflow collects design feedback that may improve product-design. It searches Slack conversations and preserves links to Figma files, pull requests, review comments, and previews as evidence. When evidence is incomplete, it records the code or commit needed for verification.</p>
+<p>The workflow separates collection from judgment:</p>
+<p>A collector gathers messages, links, and nearby context without proposing rules.</p>
+<p>A separate judge groups the evidence, verifies sources, and records open questions.</p>
+<p>The job creates a review packet with candidates, rejected topics, follow-up requests, and coverage gaps.</p>
+<p>Every candidate links to its source and remains pending. A comment from an experienced reviewer can raise its priority, but every candidate still needs evidence.</p>
+<p>Automation ends with the review packet. A human decides whether a candidate becomes agent guidance, a lint rule, an example, an eval, or no change. Accepted changes go into the narrowest relevant file and pass the relevant checks before merging.</p>
+<p>Our setup reflects Vercel's product, components, and review history, but other teams can adapt the structure to their own standards.</p>
+<p>Choose one product surface where the same review comments keep appearing: destructive actions, error states, settings forms, empty states, or navigation. Collect examples from shipped code and real reviews, and write down the decision, why it matters, exceptions, and the source.</p>
+<p>Avoid starting with broad adjectives like clear, polished, or intuitive. Agents need observable decisions. Destructive actions use Verb + Noun is usable. Buttons should be clear is not.</p>
+<p>Fill in the fields specific to your surface before expanding to others.</p>
+<p>Tell agents when to load the skill in persistent repository instructions, and define the files and surfaces it covers along with the areas it must skip. In separate Next.js evals, agents failed to invoke an available skill in 56% of cases. Test the trigger separately from the guidance, because failing to load the skill and failing to follow a rule are different problems.</p>
+<p>AGENTS.md trigger and scope boundaries for the product-design skill.</p>
+<p>Ask the agent to report which surfaces and references it loaded, then verify that its findings cite those sources.</p>
+<p>Use a short entry point to identify the surface and load focused references. Organize the details around surfaces and decisions reviewers already discuss: forms, modals, navigation, product vocabulary, workflow states, and cross-surface patterns.</p>
+<p>Give rules stable IDs and link them to examples and sources. Record shipped examples with both useful decisions and known flaws, and keep missing guidance visible in a coverage-gap list.</p>
+<p>Rule reference template with stable ID, examples, and coverage gaps.</p>
+<p>A coverage-gap list makes missing guidance explicit.</p>
+<p>If a linter can identify a problem reliably, enforce the rule there. Use agent guidance when the decision needs product or codebase context. Keep new standards, policy choices, and unresolved product decisions with people.</p>
+<p>Build training fixtures from documented examples and holdouts from interfaces whose expected edits do not appear in the skill. Test retrieval and application separately, because whether the agent loaded the skill and whether it followed the rule are different questions.</p>
+<p>Decision tree for choosing between a linter and agent guidance.</p>
+<p>If a rule cannot stay reliable without many exceptions, move it back to agent guidance.</p>
+<p>Review new evidence regularly, but require human approval before changing the guidance or checks. Keep a decision log that records what changed, why, and which source supported it. Treat new rules as product changes, reviewing and testing each one, and removing those that stop helping.</p>
+<p>Evidence-review prompts for collector, judge, and human review.</p>
+<p>Start with one surface and the decisions your team already repeats. Put those decisions where code is written and reviewed, and keep people responsible for what becomes a standard.</p>
+<p>The hardest part is picking the first surface. Every team has decisions worth encoding. The question is whether they live in someone's head or somewhere agents can find them. If you build something using this pattern or have questions about how we set it up, let us know.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/teaching-agents-product-design-at-vercel" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2141. AI SDK 7</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/ai-sdk-7" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6VYAcpdshRWO13BWbyk59I/9b06cd0363925fa4fc69b6d57da697c8/og.png" alt="AI SDK 7" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6VYAcpdshRWO13BWbyk59I/9b06cd0363925fa4fc69b6d57da697c8/og.png" alt="AI SDK 7" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>AI SDK, with over 16 million weekly downloads, is the TypeScript SDK for building AI applications, features, frameworks, and agents across any model provider. It's the same layer eve, Vercel's open-source agent framework, is built on.</p>
+<p>AI SDK 7 adds production depth for agent work across five areas:</p>
+<p>Develop agents with reasoning control, tool and runtime context, provider files and skills support, MCP Apps, and a terminal UI.</p>
+<p>Run agents with tool approvals, durability (WorkflowAgent), timeouts, and sandbox support.</p>
+<p>Integrate any agent harness, such as Codex, Claude Code, Deep Agents, OpenCode, or Pi.</p>
+<p>Observe agents with telemetry, Node.js tracing channel, lifecycle events, and performance statistics.</p>
+<p>Go beyond text agents with provider-agnostic real-time voice support and video generation.</p>
+<p>Upgrading from AI SDK 6? Run npx @ai-sdk/codemod v7 to migrate automatically with minimal code changes, or use the migration skill: npx skills add vercel/ai --skill migrate-ai-sdk-v6-to-v7</p>
+<p>Building well-behaved agents requires fine-grained control over model reasoning, tool context, and file handling.</p>
+<p>Most frontier models support configurable reasoning, but every provider API exposes it differently.</p>
+<p>AI SDK 7 standardizes this with a reasoning option for generateText and streamText. It maps to provider-native reasoning settings, letting you control reasoning effort in a single line. You can also still fall back to provider options when you need more detailed provider-specific reasoning configuration.</p>
+<p>Setting reasoning effort with a single option</p>
+<p>Learn more in the reasoning documentation.</p>
+<p>Tools are increasingly developed independently of specific agents or applications. For example, third-party companies offer tools that enable agents to use their APIs. Therefore, tools require additional inputs that are not generated by LLMs, such as API keys or configuration settings.</p>
+<p>AI SDK 7 adds a fully typed tool context that can be specified for each tool via a schema. The context is limited to the tool to prevent 3rd-party tools from accessing context they do not need.</p>
+<p>Scoping an API key to the tool that needs it</p>
+<p>For more complex agentic loops, you often need variables that you can access and modify in prepareStep to adjust prompts, model selection, and more.</p>
+<p>AI SDK 7 introduces a typed runtime context available during step preparation and tool approval functions, with optional telemetry support. This enables you to encapsulate more logic in ToolLoopAgent and share those agents with that internal logic.</p>
+<p>Accessing and updating typed variables across steps</p>
+<p>Many agent workflows require handling large inputs, such as PDFs, images, datasets, or other artifacts. Sending those files inline is slow and wasteful, especially for stateless inference, where they get sent over and over again.</p>
+<p>AI SDK 7 adds a top-level uploadFile API that lets you upload a file once and then pass a lightweight reference into subsequent model calls. This avoids re-uploading the same bytes repeatedly, making inference faster and saving bandwidth during repeated or multi-step runs.</p>
+<p>uploadFile can be used with any providers that offer a file uploading endpoint. The function returns a provider reference object that is portable across providers.</p>
+<p>Upload a file once, pass a reference into subsequent model calls</p>
+<p>Sending skills inline on every request to provider-managed container environments has the same overhead problem as sending files inline.</p>
+<p>AI SDK 7 adds a top-level uploadSkill API that lets you upload a skill once and then use a reference to it in subsequent inference calls. Similar to uploadFile, the function returns a provider reference object.</p>
+<p>Upload a skill once, reference it across inference calls</p>
+<p>MCP has become a common way to connect agents to tools and resources. But not every tool should be model-visible, and some MCP servers need to expose specialized UI alongside their tools.</p>
+<p>AI SDK 7 adds support for MCP Apps. MCP servers can now separate model-visible tools from app-only tools, preserve app metadata, and render app UIs inside sandboxed iframes. A JSON-RPC bridge connects tools, resources, and display interactions.</p>
+<p>This lets you build richer agent experiences where the model can use the tools it needs, while the user sees an app-specific interface for review, configuration, or interaction.</p>
+<p>Rendering MCP app UIs alongside model output</p>
+<p>Start building your first MCP App with AI SDK today.</p>
+<p>When developing agents, you need to be able to quickly test them without writing a full app. AI SDK 7 adds a terminal UI (TUI) package that lets you run agents with just a few lines of code:</p>
+<p>The TUI is interactive, supports reasoning and tools, and renders markdown as formatted text.</p>
+<p>Learn more about creating your own terminal agent.</p>
+<p>As agents become more autonomous and longer running, the need for approvals, durability, sandboxing, and robustness increases.</p>
+<p>AI SDK 7 supports agent-level tool approvals that can be automatic or involve a human in the loop, with these approval types:</p>
+<p>Simple user-approval for particular tools.</p>
+<p>Tool approval function for a particular tool that can auto-approve, auto-deny, or forward to user approval.</p>
+<p>Generic catch-all tool approval functions.</p>
+<p>Tool approvals are defined on ToolLoopAgent, generateText, and streamText, because the usage scenario of a particular tool drives the need for approvals.</p>
+<p>Requiring user approval before a tool executes</p>
+<p>For higher-risk workflows, AI SDK 7 introduces opt-in HMAC-signed tool approvals to prevent forged approvals. The SDK also hardens replay behavior by revalidating tool inputs and policies before continuing execution.</p>
+<p>When an agent run spans multiple steps or waits for a human approval, a process restart or deployment in the middle of that run means starting over. AI SDK 7 introduces @ai-sdk/workflow and WorkflowAgent for durable, resumable agent execution that survives process restarts, deploys, interruptions, and delayed approvals.</p>
+<p>WorkflowAgent supports workflow-based streaming, tools, approvals, callbacks, prepareCall, and provider model serialization across workflow step boundaries. It also supports typed runtime context for shared agent state and stable telemetry.</p>
+<p>Callbacks now include richer execution data such as step numbers, previous results, duration, and success or failure information. Invalid tool calls are preserved without executing invalid tools, and tool toModelOutput conversion can preserve raw outputs for UI and callbacks.</p>
+<p>Learn how to build an agent with WorkflowAgent.</p>
+<p>Agents can stall in more ways than a simple request can: a provider can open a stream and stop sending chunks, a tool can hang, or a multi-step run can exceed its total budget.</p>
+<p>AI SDK 7 adds first-class timeout configuration across text generation and agent APIs, including total, per-step, per-chunk, and per-tool limits. Timeout aborts use TimeoutError, and abort reasons propagate through stream and UI protocols.</p>
+<p>Configuring total, per-step, and per-tool timeout limits</p>
+<p>Agents that run shell commands, read and write files, or execute generated code need a consistent execution environment, but the underlying sandbox often changes across local dev, CI, and production. AI SDK 7 adds a first-class SandboxSession abstraction for portable command execution in tools and agents. Tools can be developed independently of any particular sandbox, and you can use any sandbox-aware tool with any sandbox provider.</p>
+<p>Sandboxed environments, such as Vercel Sandbox, are ideal for this purpose.</p>
+<p>Agent runtimes are moving beyond a single application server. Teams want to run the same agent logic inside coding environments, hosted sandboxes, local sessions, and third-party harnesses.</p>
+<p>AI SDK 7 introduces experimental harness abstractions and HarnessAgent: one API to run fully configured, established agent harnesses such as Claude Code, Codex, and Pi. Harnesses are configurable with a sandbox to operate in, custom instructions, skills, and tools. Run established harnesses through a consistent interface, configure each one independently, and swap one out without changing your integration layer.</p>
+<p>Under the hood, the abstraction consists of a v1 adapter spec, bridge support, and expanded sandbox session primitives for creating and resuming sessions. Harness sessions can be parked and resumed, and even individual turns can be interrupted and resumed mid-flight.</p>
+<p>HarnessAgent implements AI SDK's Agent interface, so its generate and stream return values are fully compatible with existing AI SDK integrations, and useChat() and the new TUI work without any additional wiring.</p>
+<p>Configuring Claude Code as a HarnessAgent with a sandbox and custom skills</p>
+<p>Understanding how your agents behave in production is challenging. AI SDK 7 makes observability a first-class part of building agents.</p>
+<p>AI SDK 7 revamps telemetry around a single, extensible integration system. Instead of wiring lifecycle callbacks into every generateText or streamText call, register telemetry once at application startup:</p>
+<p>Registering OpenTelemetry once at application startup</p>
+<p>Dedicated telemetry interfaces for 3rd-party provider integration</p>
+<p>Global coverage of all AI SDK functions with a single registration</p>
+<p>Optional OpenTelemetry integration using the latest GenAI semantic conventions</p>
+<p>Observability integrations: Datadog, Langfuse, Braintrust, Raindrop, Sentry, Laminar, Langsmith.</p>
+<p>Traces now capture the full shape of an AI operation, including the root generation, each model call, individual steps, tool executions, embeddings, reranking, usage, errors, and selected runtime or tool context.</p>
+<p>You can find more details in the AI SDK Telemetry documentation.</p>
+<p>AI SDK 7 adds support for Node.js tracing channels via node:diagnostics_channel. The SDK emits structured telemetry events on the ai:telemetry channel for generateText, streamText, model calls, tool executions, embeddings, and reranking.</p>
+<p>Subscribing to AI SDK telemetry events via the Node.js tracing channel</p>
+<p>You can learn more in the tracing channel documentation.</p>
+<p>AI SDK 7 adds per-step performance statistics for model output, streaming behavior, and tool execution. You can answer questions like: How long did it take the model to start responding? How fast did tokens arrive? Which tool took the most time?</p>
+<p>Getting per-step latency and throughput from a streamed response</p>
+<p>Production agents need lifecycle hooks because recording state, billing, and debugging all depend on knowing exactly when runs, steps, and tools start and finish. AI SDK 7 makes callbacks fire consistently across model calls, agents, tools, and other functions, so you can observe when each started, which model ran, how many tokens it used, and how it finished.</p>
+<p>Observing when a request starts and finishes</p>
+<p>You can find more details in the Lifecycle Callbacks documentation.</p>
+<p>Realtime model APIs are powerful, but each provider exposes sessions, audio, tools, and browser authentication differently.</p>
+<p>AI SDK 7 adds experimental provider-agnostic realtime support for direct browser WebSocket sessions. The SDK supports server-created ephemeral tokens, provider implementations for OpenAI, Google, and xAI, and a React realtime hook that returns UIMessage[].</p>
+<p>Realtime sessions support audio transcription and client-driven tool calling, so you can build voice agents, collaborative copilots, and low-latency interactive interfaces without binding your UI to one provider's event format.</p>
+<p>AI Gateway also supports normalized realtime sessions through gateway.experimental_realtime(), including WebSocket subprotocol auth, model query selection, and validated provider options.</p>
+<p>Connecting to a realtime session from the browser</p>
+<p>AI applications are expanding beyond text and images. AI SDK 7 introduces experimental generateVideo support with provider implementations for fal, Google AI Studio, Google Vertex, and Replicate.</p>
+<p>Video generation in AI SDK 7 uses video-specific model resolution, supports string-based model lookup through the default provider, and includes safer bounded download handling with configurable size limits and abort support.</p>
+<p>Generating a video with a single API call</p>
+<p>AI SDK 7 is the result of the combined work of our core team at Vercel (Gregor, Lars, Felix, Aayush, Josh, Nico) and our amazing community of contributors:</p>
+<p>0xr3ngar, 31Carlton7, A-Vamshi, Abdulwadood-zawity, abhicris, adithya-tako, AhmadYasser1, ahmedrowaihi, allenzhou101, anaclumos, arnaugomez, auscaster, AVtheking, B-Step62, bb220, ben-vargas, benyebai, bittere, blurrah, bolaabanjo, boylec, BrianHung, BrianP8701, chenxin-yan, christian-bromann, Christian-Sidak, cipher416, CloudFaye, codewarnab, codicecustode, codylittle, cristiandrei1234, csidak, ctate, cyphercodes, defrex, dflynn15, dinmukhamedm, dnukumamras, DongSeonYoo, dukex, edawerd, EdwardIrby, edwardwc, ellis-driscoll, embedder-dev, etairl, EurFelux, eyueldk, fahe1em1, Falven, fran3cc, gdborton, genmin, geraint0923, Ghitahouir, GidianB, grant0417, gsdv, guillemwilly, hank9999, harpreetarora, haydenbleasel, he-yufeng, heiwen, hkd987, hntrl, http-samc, i5d6, ismaelrumzan, Jaaneek, jaderiverstokes, jakobhoeg, Jaksenc, jarod, jaydeep-pipaliya, jeremyphilemon, jerilynzheng, jerome-benoit, jferrettiboke, jlsandri, JoanLaRosa, joaopedroassad, JohnnyHBon, josh-williams, jovanwongzixi, JulesGuesnon, Kage18, kagura-agent, kairosci, kaizen403, karthik-idikuda, kimchnn, kkawamu1, kkdawkins, leog25, leothorp, liaoliaojun, lihuimingxs, Mahendradeokar, MarcACard, marcusschiesser, markmcd, max-programming, MaxwellCalkin, mclenhard, MehediH, Melkeydev, michael-han-dev, michaelcummings12, Mmartinrusso, monadoid, montyanderson, more-by-more, mrpaaradox, msullivan, muniter, muraliavarma, murataslan1, mvanhorn, myprototypewhat, Nezz, nicoloboschi, nielskaspers, Nutlope, nwalters512, ohansFavour, ousugo, pablof7z, Pash10g, patrikdevlin, paulelliotco, pavel-y-ivanov, PierreLeGuen, posva, Pranav-Wadhwa, privatenumber, quuu, R-Taneja, raphaeleidus, reynkonig, Ricardo-M-L, richardsolomou, robechun, rubdos, samjbobb, SamyPesse, seojcarlos, shaper, shrey150, shubham-021, shujanislam, ShyamSathish005, sleitor, Subr1ata, syeddhasnainn, sylviezhang37, szymonrybczak, t-mdo, techwraith, theQuert, thestonechat, timvucina-soniox, tomdale, tresorama, tsuzaki430, turisanapo, Und3rf10w, undo76, ushiromiya-lion, visyat, wong2, Xiang-CH, xlianghang, zapagenrevdale, Zawwarsami16, zirkelc, zxuhan.</p>
+<p>Your feedback, bug reports, and pull requests on GitHub have been instrumental in shaping this release. We're excited to see what you'll build with these new capabilities!</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/ai-sdk-7" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2139. Trace and debug eve agent sessions with Vercel Observability</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/eve-agent-observability" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1qbYYpslT2gOsHM2KDYydF/4e10b8302e8db1d9d8939464dd65a61c/Frame_1430106722__3_.png" alt="Trace and debug eve agent sessions with Vercel Observability" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1qbYYpslT2gOsHM2KDYydF/4e10b8302e8db1d9d8939464dd65a61c/Frame_1430106722__3_.png" alt="Trace and debug eve agent sessions with Vercel Observability" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now view Agent Runs in your Vercel dashboard for eve, the open-source agent framework.The Agent Runs tab appears automatically for every eve project, surfacing trigger, duration, and token usage for each session at a glance. Drill into any run to inspect every turn, model call, and tool call in the conversation. Runtime errors that previously vanished into function logs now correlate to the failing step.</p>
+<p>Developer mode shows raw tool names, input and output JSON, and per-step token counts for engineers debugging a failure.</p>
+<p>Business mode humanizes tool names, hides JSON, and generates a plain-English summary so a non-technical reviewer can audit what an agent did.</p>
+<p>Run data is encrypted by default. Retention scales with plan:</p>
+<p>Pro and Enterprise teams can extend retention to 30 days with Observability Plus.</p>
+<p>Teams using a custom OpenTelemetry backend can still export AI SDK spans from agent/instrumentation.ts to any destination, such as Braintrust or Datadog.</p>
+<p>Open Agent Runs in your project and read the documentation to get started.</p>
+<p>Pick a template, deploy in minutes, and debug every agent session in the Vercel dashboard from the first run.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/eve-agent-observability" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2136. Query Web Analytics from the Vercel CLI</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/query-web-analytics-from-the-vercel-cli" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/z1p2ZM45Aok0e477GP3C8/b9103bbf8d6830a903e8f6ca5f6f10eb/query_web_analytics_in_the_vercel_cli_og_card.jpg" alt="Query Web Analytics from the Vercel CLI" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/z1p2ZM45Aok0e477GP3C8/b9103bbf8d6830a903e8f6ca5f6f10eb/query_web_analytics_in_the_vercel_cli_og_card.jpg" alt="Query Web Analytics from the Vercel CLI" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now query Web Analytics datapoints directly through the Vercel CLI.</p>
+<p>Using the vercel metrics command, you can pull page views, visitors, and custom events for your Vercel projects to analyze traffic, compare trends, and answer questions about site performance.</p>
+<p>By providing a coding agent access to the CLI, an agent can answer questions such as:</p>
+<p>Which pages gained the most traffic this week?</p>
+<p>Which UTM campaigns drove the most signups this month?</p>
+<p>Compare conversion events between mobile and desktop users.</p>
+<p>For more details on how to use the CLI command and a complete list of supported metrics, dimensions, filters, and query options, explore the documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/query-web-analytics-from-the-vercel-cli" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2133. Realtime voice, speech, and transcription now supported on AI Gateway</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/realtime-voice-speech-and-transcription-now-supported-on-ai-gateway" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Realtime%20voice%2C%20speech%2C%20and%20transcription%20now%20supported%20on%20AI%20Gateway&amp;format=changelog" alt="Realtime voice, speech, and transcription now supported on AI Gateway" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Realtime%20voice%2C%20speech%2C%20and%20transcription%20now%20supported%20on%20AI%20Gateway&format=changelog" alt="Realtime voice, speech, and transcription now supported on AI Gateway" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>AI Gateway now supports voice and audio models. You can build realtime voice agents, generate speech from text, and transcribe audio to text. This provides the same observability, spend controls, and bring-your-own-key support as text, image, and video models in AI Gateway, with no markup or platform fees. These capabilities are in beta and available via AI SDK 7.</p>
+<p>With realtime support, a single model takes audio in and audio out, so a user can talk and hear a reply back in near real time instead of waiting on a chain of separate models.</p>
+<p>Model listens to the user, works out a response, and speaks it back in a live, low-latency conversation. It can call your tools mid-conversation to look something up or take an action. The useRealtime hook handles microphone capture and playback.</p>
+<p>Generate spoken audio from text, with a selectable voice and output format such as MP3. Use it for voiceovers, audio versions of written content, and spoken responses.</p>
+<p>Transcribe recordings into text, from a file buffer, base64 string, or URL. Use it for voice notes or other transcriptions.</p>
+<p>Follow the realtime example below or the realtime quickstart to add a voice agent to your app.</p>
+<p>Use the playground. Talk to a realtime model in the browser, no code required, in the AI Gateway Playground.</p>
+<p>A voice agent has two pieces: a server route that mints a short-lived token, so your API key never reaches the client, and a browser component that connects with it.</p>
+<p>Then connect from the browser. The useRealtime hook fetches that route and manages the WebSocket connection, microphone capture, and audio playback:</p>
+<p>You can also try audio models without writing any code. Open the models page, click into a model, and interact with it right in the browser:</p>
+<p>Talk to a realtime model to hold a voice conversation</p>
+<p>Send text and have a transcription model read it back</p>
+<p>Speak to an audio model and have it transcribe your words</p>
+<p>For more information on realtime voice, speech, and transcription models on AI Gateway, see the documentation. To view a list of all the supported realtime voice, speech, and transcription models on AI Gateway, check the full list here.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/realtime-voice-speech-and-transcription-now-supported-on-ai-gateway" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2130. xAI Grok audio models now available on Vercel AI Gateway</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/xai-grok-audio-models-now-available-on-vercel-ai-gateway" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3uPYJwKOF0WwcurlTBY2Ya/f08abe27da129f05364bd63f6883058e/Vercel_x_xAI.png" alt="xAI Grok audio models now available on Vercel AI Gateway" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3uPYJwKOF0WwcurlTBY2Ya/f08abe27da129f05364bd63f6883058e/Vercel_x_xAI.png" alt="xAI Grok audio models now available on Vercel AI Gateway" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>xAI's audio models are now live on AI Gateway. Realtime voice, text to speech, and speech to text are all available through the AI SDK with the same routing, observability, and spend controls as your other models.</p>
+<p>These capabilities are available on the AI SDK 7 release.</p>
+<p>A voice agent has two pieces: a server route that mints a short-lived token, so your API key never reaches the client, and a browser component that connects with it.</p>
+<p>Add the token route: this example sets model to xai/grok-voice-think-fast-1.0:</p>
+<p>Then connect from the browser. The useRealtimehook from @ai-sdk/react fetches that route and manages the WebSocket connection, microphone capture, and audio playback:</p>
+<p>Generate spoken audio from text with generateSpeech. Pass a voice and an output format, then write the result to a file with xai/grok-tts:</p>
+<p>Transcribe recordings into text with transcribe. This example uses xai/grok-stt:</p>
+<p>You can also try the xAI audio models directly in the AI Gateway playground. Open the models list and click into any of the models to use them directly in the browser. The xai/grok-voice-think-fast-1.0 playground here allows you to talk to the agent and see responses instantly:</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/xai-grok-audio-models-now-available-on-vercel-ai-gateway" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2127. Sandboxes now expire based on last use</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/sandboxes-now-expire-based-on-last-use" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5eoNt6NMzWd0X1gGQkcUbN/8047d22e38f2f37a54291e5ddf91b68b/image.png" alt="Sandboxes now expire based on last use" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5eoNt6NMzWd0X1gGQkcUbN/8047d22e38f2f37a54291e5ddf91b68b/image.png" alt="Sandboxes now expire based on last use" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Sandbox snapshots now expire based on when they were last used, not when they were created. Active snapshots stay alive as long as workflows depend on them, while unused snapshots expire on their retention policy.</p>
+<p>Every time a snapshot is used, its expiration timer resets. This lets you set shorter retention windows without worrying that a snapshot will disappear between sessions, making it safer to build long-running workflows on top of Sandbox persistence.</p>
+<p>Learn more about Sandbox snapshots in the documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/sandboxes-now-expire-based-on-last-use" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2124. Build realtime voice agents on AI Gateway</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/realtime-voice-agents-on-ai-gateway" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3mJ8KeEa6zs5AdvusO6PMC/bbb9898f546843fec6bf2e71000efbd8/Voice-agents-AI_gateway.png" alt="Build realtime voice agents on AI Gateway" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3mJ8KeEa6zs5AdvusO6PMC/bbb9898f546843fec6bf2e71000efbd8/Voice-agents-AI_gateway.png" alt="Build realtime voice agents on AI Gateway" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>AI Gateway now supports audio/voice. You can add realtime voice, text to speech, and speech to text with the same calls you already use for text, image, and video, routed through AI Gateway alongside every other modality.</p>
+<p>Audio launches with models from OpenAI and xAI. Each call gets the same provider routing, observability, spend controls, and bring-your-own-key support you already use for your other models.</p>
+<p>These capabilities are in beta and available in AI SDK 7.</p>
+<p>Live audio in and out, for streaming, low-latency session</p>
+<p>Two-way voice agents and live conversation</p>
+<p>Voiceovers, spoken responses, audio versions of written content</p>
+<p>Recorded audio in, text out, single request</p>
+<p>Transcribing voice notes, call recordings</p>
+<p>Realtime, speech, and transcription model are supported on AI SDK 7.</p>
+<p>Realtime turns your app into something a user can hold a conversation with. When they speak, the model responds right away. Because it replies in the moment instead of waiting for a full turn, users can interrupt and talk over it the way they would with a person. It fits voice assistants, customer support agents, hands-free tools, and anywhere a user would rather talk than type.</p>
+<p>What sets it apart from chaining models together is that a single realtime model hears audio and produces audio directly, instead of running a speech-to-text, then language model, then text-to-speech pipeline.</p>
+<p>In the browser, the useRealtime hook manages the WebSocket connection, microphone capture, and audio playback.</p>
+<p>The connection is authenticated with your AI Gateway credential, so you mint a short-lived token on the server and hand the browser only that token. Your API key never reaches the client. Add a route that mints the token:</p>
+<p>The hook captures the microphone, streams the audio to the model through AI Gateway, and plays back the spoken reply. Outside the browser, you can drive the session over a WebSocket yourself with getWebSocketConfig, serializeClientEvent, and parseServerEvent. See the realtime reference for that path.</p>
+<p>A realtime session works differently from a normal model call:</p>
+<p>Turn-taking and interruptions. turnDetection: { type: 'server-vad' } lets the server decide when the user has stopped speaking, and lets the user talk over the model to cut a reply short (barge-in), with no client-side silence timers.</p>
+<p>Tools mid-conversation. The model emits a tool call mid-reply, you run it and return the result as a client event, and it folds the answer into what it says next without ending the turn.</p>
+<p>Generate spoken audio from text with generateSpeech. Pass a voice and an output format, then write the result to a file:</p>
+<p>Transcribe recordings into text with transcribe. The audio can be a buffer, a base64 string, or a URL:</p>
+<p>Speech and transcription are complementary, so they compose. You can generate audio with one model and read it back with the other, which is a quick way to check both ends of an audio pipeline.</p>
+<p>You can also try audio models without writing any code. Open the models page, click into a model, and interact with it right in the browser. Talk to a realtime model to hold a voice conversation, or send text or audio to a speech or transcription model and read or play back the result.</p>
+<p>Audio calls behave like every other model call on AI Gateway. You use one API key across providers, see requests and usage in observability, apply the same budgets and spend limits, and bring your own provider keys when you need to. Adding speech to an app that already uses AI Gateway for text/images/videos can now all be done in the same place.</p>
+<p>Speech quickstart (text to speech and speech to text)</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/realtime-voice-agents-on-ai-gateway" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2122. Query Speed Insights from the Vercel CLI</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/query-speed-insights-from-the-vercel-cli" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4DbLCzu9sRRxsph8jwvKfO/e310d724758a933eadef82197578c9de/query_speed_insights_from_vercel_cli_og_card__1_.jpg" alt="Query Speed Insights from the Vercel CLI" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4DbLCzu9sRRxsph8jwvKfO/e310d724758a933eadef82197578c9de/query_speed_insights_from_vercel_cli_og_card__1_.jpg" alt="Query Speed Insights from the Vercel CLI" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now query Speed Insights datapoints directly through the Vercel CLI.</p>
+<p>Using the vercel metrics command, you can pull core Web Vitals (LCP, INP, CLS) and other page performance metrics (FCP, TTFB) based on client-side measurements from real user traffic.</p>
+<p>By providing a coding agent access to the CLI, an agent can answer questions such as:</p>
+<p>Which pages' INP have regressed since last week?</p>
+<p>How is the perceived speed of my home page in Asia?</p>
+<p>Compare the CLS of the dashboard between mobile and desktop.</p>
+<p>For more details on how to use the CLI command and a complete list of supported metrics, dimensions, filters, and query options, explore the documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/query-speed-insights-from-the-vercel-cli" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2119. Vercel Functions can now be up to 5GB in package size</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-functions-can-now-be-up-to-5-gb-in-package-size" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5EPfHjKljpHLiMIM8cuM7Z/f543e47c97ad1b864a68165596b1d050/vercel_functions_package_size_limit_increased_to_5_og_card.jpg" alt="Vercel Functions can now be up to 5GB in package size" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5EPfHjKljpHLiMIM8cuM7Z/f543e47c97ad1b864a68165596b1d050/vercel_functions_package_size_limit_increased_to_5_og_card.jpg" alt="Vercel Functions can now be up to 5GB in package size" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Functions now support Node.js and Python deployments up to 5GB in package size on Fluid compute, a 20x increase over the previous 250MB limit. Large Functions support is in public beta.</p>
+<p>This makes Vercel compatible with backend workloads that do not fit within the 250MB limit, such as Python data and AI libraries, large generated clients, browser automation dependencies, image and video processing packages, and routes with substantial shared application code.</p>
+<p>New projects are automatically enrolled in the beta. Existing projects can opt in by adding VERCEL_SUPPORT_LARGE_FUNCTIONS=1 as an Environment Variable, then redeploying, or you'll be asked to opt in if a Function ever crosses the 250MB limit. You can scope the variable to preview deployments first to test before enabling it in production.</p>
+<p>Vercel still keeps Functions under 250MB in package size on the standard path. In eligible projects, only Functions that exceed the standard 250MB limit use the beta; other Functions in the same deployment are unchanged. The dashboard surfaces when a deployment is using Large Functions, so you always know exactly what's running.</p>
+<p>Learn more in the Vercel Functions limits documentation.</p>
+<p>Large Functions require Fluid compute and are not currently supported with Secure Compute or Static IPs. Support for 10GB and larger Functions is coming soon.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-functions-can-now-be-up-to-5-gb-in-package-size" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2115. Vercel Open Source Program: Spring 2026 cohort</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/vercel-open-source-program-spring-2026-cohort" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6gbvj0YhHQLBbovblhKwCe/6834a246a18282161f089d581049c3fa/vercel_open_source_program_spring_2026_og_card.jpg" alt="Vercel Open Source Program: Spring 2026 cohort" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6gbvj0YhHQLBbovblhKwCe/6834a246a18282161f089d581049c3fa/vercel_open_source_program_spring_2026_og_card.jpg" alt="Vercel Open Source Program: Spring 2026 cohort" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The world runs on open source software. The frameworks, libraries, and tools we rely on are made possible by communities that share ideas and build in the open.</p>
+<p>At Vercel, we want to help those communities thrive. That’s why we run the Vercel Open Source Program: a developer initiative that gives maintainers the resources and support they need to keep shipping and growing their projects.</p>
+<p>Four times a year, we welcome a new cohort of open source projects into the program. Maintainers receive $3,600 in Vercel platform credits, a starter pack with credits from third-party services, and guidance from Vercel and the community.</p>
+<p>Today, we welcome a new cohort into the program.</p>
+<p>A browser-based tool that converts video frames in real time into precise ASCII representations using an optimized rendering pipeline. Users can adjust density, contrast, and character sets to produce customized ASCII animations.</p>
+<p>A free, open-source React UI library offering 125+ animated components, 13+ pre-built blocks, and 3 premium templates. Built with Material UI and Motion (motion/react), designed for design engineers building landing pages and Next.js projects.</p>
+<p>A TypeScript framework for building and deploying MCP (Model Context Protocol) servers, featuring file-system routing, hot reloading, middleware support, and flexible deployment options including zero-config Vercel support.</p>
+<p>An open-source collection of animated, interactive React UI components styled with Tailwind CSS and Framer Motion, designed to be copied and pasted into apps rather than installed as a dependency.</p>
+<p>A library of 281 animated SVG icons for React, built on motion/react with hover and imperative triggers plus configurable size, color, and duration. It can be installed as an npm package or copied directly via its CLI, shadcn, or MCP server for AI agents.</p>
+<p>A React component library paired with a matching Figma library, offering professionally crafted components for building beautiful products or starting your own design system. It also includes headless components and framework-agnostic utilities for teams building custom design systems.</p>
+<p>A web-based tool for exploring abstract syntax trees produced by various parsers across many different languages, including JavaScript/TypeScript, CSS, HTML, JSON, Markdown, YAML, Rust, and more. It features Monaco Editor integration, URL-based code sharing, customizable parser versions via CDN, and a GUI for setting parser options.</p>
+<p>An open-source badge service that generates README badges rendered as actual shadcn/ui Button components via Satori, serving as a free alternative to shields.io. It supports a wide range of providers (npm, GitHub, Discord, etc.), variants, sizes, icons, animations, and offers a CLI plus self-hosting via Docker.</p>
+<p>An unofficial SvelteKit port of Vercel AI Elements, built on shadcn-svelte, providing a component registry for AI-native interfaces like chat apps, reasoning UIs, and workflow builders.</p>
+<p>An open-source, MIT-licensed, TypeScript-first CMS and app framework for Next.js that lets you define content schemas directly in code or through a visual admin builder. It provides a typed REST and Direct API, a customizable admin dashboard, pluggable database and storage adapters, and built-in features like auth, RBAC, media, and hooks.</p>
+<p>A Rust-based terminal security tool that intercepts shell commands, pasted content, and files before execution to block threats like homograph URLs, pipe-to-shell attacks, ANSI injection, obfuscated payloads, and malicious AI agent configs. It functions as a pre-execution gate via shell hooks, an MCP server, and a CLI scanner, using 80+ detection rules plus a signed threat intelligence database covering known-malicious packages, IPs, and typosquats.</p>
+<p>An open-source lab documenting AI-assisted coding workflows, Agent experiments, tool evaluations, and failure cases for Chinese-speaking developers.</p>
+<p>An open-source library of customizable React chart and utility components, distributed as a shadcn registry. It also includes Studio, an interactive playground for tweaking charts and exporting the generated code or registry JSON.</p>
+<p>A Node.js module that converts Cucumber JSON output into interactive, customizable HTML reports with features like a dashboard, dark mode, multi-run consolidation, and rich metadata display.</p>
+<p>A unified open-source TypeScript SDK that simplifies payment processing across different providers with a consistent API.</p>
+<p>An open-source, MIT-licensed workspace that helps researchers discover and dive deep into papers using an AI assistant, with support for arXiv, uploaded documents, and website links such as technical blogs.</p>
+<p>A TypeScript library for CAD modeling in JavaScript that uses exact B-Rep (boundary representation) geometry rather than triangle meshes, enabling precise booleans, real measurements, and STEP file export. It targets parametric parts like enclosures and brackets, leveraging TypeScript's type system so that if it compiles, the geometry is valid.</p>
+<p>A component library offering shadcn/ui primitives you own, paired with subtle motion animations so developers can drop in components, adjust tokens, and ship quickly without boilerplate setup.</p>
+<p>An open-source fork of the shadcn/ui monorepo that lets users browse real shadcn/ui presets, preview them live, search in plain English, vote on favorites, and install them via the shadcn CLI. It layers a Next.js app onto the upstream CLI, registry, and customizer so preset pages stay synced with the v4 create experience.</p>
+<p>An open-source platform for interactive learning, built primarily with TypeScript and using technologies like Next.js, PostgreSQL, Prisma, and Tailwind CSS.</p>
+<p>A React-based slide framework designed for AI coding agents, where each deck renders to a fixed 1920×1080 canvas and agents generate the slide components from natural language prompts. It includes features like an in-browser inspector for commenting on elements, a presenter mode, an asset manager, and export to static HTML or PDF.</p>
+<p>An open-source tool for scheduling group meetings by creating simple polls to find the best possible date and time based on each of the participants' availability. Built with Next.js, Prisma, tRPC, and TailwindCSS, it helps users coordinate events without all the lengthy back-and-forth email exchanges.</p>
+<p>An event-driven platform that connects to tools like GitHub, Linear, and Slack to automatically transform team activity (merged PRs, closed issues, conversations) into ready-to-publish drafts for changelogs, blog posts, and social media, tailored to a team's brand voice.</p>
+<p>A collection of portable Agent Skills for AI coding tools (Codex, Cursor, Claude Code) designed to improve AI-generated frontend interfaces with better layout, typography, motion, and spacing. It also includes image-generation skills for producing reference boards like web comps, mobile screens, and brand kits that can then be handed off to coding agents for implementation.</p>
+<p>A security-first authority and delegation system for AI agents that acts as an authority plane, enabling agents to safely access tools, APIs, and providers through scoped, short-lived, revocable, and fully auditable credentials, all without ever embedding any provider secrets directly in agent code.</p>
+<p>A persistent memory compression system for Claude Code (and other agents like Gemini CLI, OpenCode, and Codex) that automatically captures session activity, generates semantic summaries, and injects relevant context into future sessions, seamlessly preserving context across sessions.</p>
+<p>An open-source, Apache 2.0-licensed database client supporting PostgreSQL, MySQL/MariaDB, and SQLite, built with React and Rust/Tauri. It features SQL notebooks, visual EXPLAIN, a built-in MCP server for AI agents, and a plugin system that lets developers add support for additional databases in any language.</p>
+<p>A collection of AI agent skills for marketing tasks, designed to help technical marketers and founders use AI coding agents for areas like conversion optimization, copywriting, SEO, analytics, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the Agent Skills spec.</p>
+<p>An open-source, MIT-licensed AI engineering curriculum spanning a total of 503 lessons across 20 distinct phases, covering everything from the math foundations all the way to autonomous agents and production deployment. Each lesson has learners build algorithms from scratch first (in Python, TypeScript, Rust, or Julia) before moving on to using production frameworks, shipping a reusable artifact such as a prompt, skill, agent, or MCP server.</p>
+<p>Thank you to the spring 2026 cohort of our Open Source Program. We’re looking forward to watching these projects grow and give back to the community.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/vercel-open-source-program-spring-2026-cohort" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2113. Expanded Audit Log coverage, now delivered through Vercel Drains</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/expanded-audit-log-coverage-now-delivered-through-vercel-drains" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4qr79a7I9t0yubW3b85LkZ/ba3957711a13505d263236da2a5f558c/expanded_audit_log_coverage_delivered_through_verc_og_card__1_.jpg" alt="Expanded Audit Log coverage, now delivered through Vercel Drains" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4qr79a7I9t0yubW3b85LkZ/ba3957711a13505d263236da2a5f558c/expanded_audit_log_coverage_delivered_through_verc_og_card__1_.jpg" alt="Expanded Audit Log coverage, now delivered through Vercel Drains" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Audit Logs now capture 400+ unique team activity events, giving teams broader coverage for security reviews, compliance workflows, and investigations.</p>
+<p>With Vercel Drains support, teams can export those events to custom HTTP endpoints or Amazon S3, replacing Custom SIEM Log Streaming with a flexible Drains-based workflow.</p>
+<p>Audit Log Drains are available for all Enterprise teams, replacing Custom SIEM Log Streaming. They are priced at $0.50/GB through standard Drains pricing, replacing a separate paid add-on.</p>
+<p>Try it out or learn more about Audit Log Drains and draining Audit Logs to S3.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/expanded-audit-log-coverage-now-delivered-through-vercel-drains" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2110. Bring your Dockerfile to Vercel Functions</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/bring-your-dockerfile-to-vercel-functions" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5X4foSIiuznsfFYCxDCCVm/a6c2c1ad392e3417bbf02393e986f61f/dockerfile-changelog-og.png" alt="Bring your Dockerfile to Vercel Functions" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5X4foSIiuznsfFYCxDCCVm/a6c2c1ad392e3417bbf02393e986f61f/dockerfile-changelog-og.png" alt="Bring your Dockerfile to Vercel Functions" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Functions now support deploying HTTP servers from a Dockerfile or Containerfile, using Open Container Initiative (OCI) compatible images on Fluid compute.</p>
+<p>This makes it easier to bring existing applications written in any language to Vercel while keeping the preview deployments, logs, routing, and autoscaling benefits of using Vercel Functions and Fluid compute.</p>
+<p>To use container images with your functions, create a project with a Dockerfile.vercel (or Containerfile.vercel) file that starts an HTTP server listening on $PORT:</p>
+<p>This image will be built, pushed, and deployed on every commit to Vercel Container Registry.</p>
+<p>Learn more about using container images in the docs and see seven ways you can use Docker containers on Vercel.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/bring-your-dockerfile-to-vercel-functions" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html" class="active">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

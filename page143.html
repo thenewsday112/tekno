@@ -1,0 +1,2390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 143</title>
+<meta name="description" content="Page 143">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page143.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 143</h1>
+<article class="article-card">
+    <h2>#629. Deno 2.2: OpenTelemetry, Lint Plugins, node:sqlite</h2>
+    <div class="article-meta">
+        📅 Feb 19, 2025 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v2.2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v2.2/og.webp" alt="Deno 2.2: OpenTelemetry, Lint Plugins, node:sqlite" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v2.2/og.webp" alt="Deno 2.2: OpenTelemetry, Lint Plugins, node:sqlite" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>To upgrade to Deno 2.2, run the following in your terminal:</p>
+<p>If Deno is not yet installed, run one of the following commands to install or
+learn how to install it here.</p>
+<p>There’s a lot included in this release. Here’s a quick overview to help you
+dive in to what you care most about:</p>
+<p>You can also see demos of all of these features in the
+v2.2 demos video.</p>
+<p>Deno 2.2 includes built-in OpenTelemetry for
+monitoring logs, metrics, and traces.</p>
+<p>Deno automatically instruments APIs like console.log, Deno.serve, and
+fetch. You can also instrument your own code using npm:@opentelemetry/api.</p>
+<p>Let’s look at some logs and traces from Deno.serve API:</p>
+<p>To capture observability data, you’ll need to provide an OTLP endpoint. If you
+already have an observability system set up, you can use it. If not, the easiest
+way to get something running is to spin up
+a local LGTM stack in Docker:</p>
+<p>We are now ready to run our server and capture some data:</p>
+<p>The OpenTelemetry integration’s API is still subject to change. As such it is
+designated as an “unstable API” which requires the use of the
+--unstable-otel flag in order to use it.</p>
+<p>Now, connect to our server using a browser or curl:</p>
+<p>You can now look at the logs and traces in your observability system. If you are
+using the LGTM stack, you can access the Grafana dashboard at
+http://localhost:3000.</p>
+<p>We’ve barely scratched the surface here. Deno also exports auto-instrumented
+metrics, and you can create your own metrics and trace spans using the
+npm:@opentelemetry/api package. To learn more about it, visit
+Deno docs.</p>
+<p>You can watch a
+demo of the OpenTelemetry integration in this video for v2.2 demos</p>
+<p>Deno 2.2 introduces a major upgrade to
+deno lint, including a
+new plugin system and 15 new rules, particularly for React and Preact users.</p>
+<p>This release adds new lint rules, mainly targeting JSX and React best practices.</p>
+<p>To complement these rules, two new tags have been added: jsx and react.</p>
+<p>See the complete list of available lint rules and tags
+in the Deno docs.</p>
+<p>The biggest update to deno lint is the ability to extend its functionality with
+a new plugin system.</p>
+<p>NOTE: The plugin API is still in the phase where its API has potential to
+change, and so is currently marked as an unstable feature.</p>
+<p>While there are many built-in rules, in some situations you might need a rule
+tailored to your specific project.</p>
+<p>The plugin API is modelled after
+the ESLint plugin API, but
+is not 100% compatible. In practice, we expect that some of the existing
+ESLint plugins to work with deno lint without problems.</p>
+<p>Here’s an example of a simple lint plugin. We’ll create a plugin that reports an
+error if you name a variable foo:</p>
+<p>In addition to a visitor based API, you can also use CSS-like selectors for
+targeting specific nodes. Let’s rewrite above rule, using the selector syntax.</p>
+<p>Lint plugins can be authored in TypeScript, and Deno provides full type
+declarations out-of-the-box under the Deno.lint namespace.</p>
+<p>You can consume local lint plugins, as well as plugins from npm and
+JSR:</p>
+<p>Read more about deno lint plugin API
+at the Deno docs.</p>
+<p>deno lint --rules was changed in this release to always print all available
+lint rules, marking which ones are enabled with the current configuration.</p>
+<p>Additionally, deno lint --rules --json no longer prints raw Markdown
+documentation, but instead links to the relevant rule page
+in the Deno docs.</p>
+<p>You can watch
+a more detailed demo of the lint plugin API in this video for v2.2 demos</p>
+<p>deno check, Deno’s tools
+for type checking, received two major improvements in this release:</p>
+<p>@import JSDoc tags are now respected
+when type checking. This lets you define imports inline, improving type checking
+in JavaScript files.</p>
+<p>Previously, deno.json applied the same compilerOptions to all workspace
+members, making it hard to configure a frontend and backend separately. Now,
+workspace members can define their own settings.</p>
+<p>It’s now possible to specify a different compilerOptions.lib setting in a
+directory for your frontend code, thanks to the new
+support for compilerOptions per workspace member.</p>
+<p>You can watch
+a demo of the the updates to deno check in this video for v2.2 demos</p>
+<p>Deno 2.2 makes
+deno lsp much
+faster and more responsive, with major improvements for web framework users.</p>
+<p>There’s too much to go into in detail here, but let’s look at some of the
+highlights:</p>
+<p>This release brings several updates to
+deno task. The first will
+help deno task be more robust and predicatable:</p>
+<p>And two more that make deno task even more useful and convenient to use. We’ll
+look at these in a little more detail:</p>
+<p>You can now use
+deno task with wildcards in task names,
+like so:</p>
+<p>Make sure to quote the task name with a wildcard, otherwise your shell will
+try to expand this character and you will run into errors.</p>
+<p>The wildcard character (*) can be placed anywhere to match against task names.
+All tasks matching the wildcard will be run in parallel.</p>
+<p>Task dependencies became popular in v2.1. Now, you can
+group tasks more easily by
+defining a task without a command.</p>
+<p>In the above example dev task is used to group dev-client and dev-server
+tasks, but has no command of its own. It’s a handy way to group tasks together
+to run from a single task name.</p>
+<p>You can watch a
+demo of the updates to deno task in this video for v2.2 demos</p>
+<p>Deno 2.2 ships with a change to
+deno outdated tool,
+that adds a new, interactive way
+to update dependencies:</p>
+<p>Besides this improvement, a number of bug fixes have landed that make
+deno install and
+deno outdated more robust and faster. Including, but not limited to:</p>
+<p>This release brings a highly requested node:sqlite module to Deno, making it
+easy to work with in-memory or local databases:</p>
+<p>See an example in our docs as well as
+the complete API reference.</p>
+<p>Deno 2.2 removes a requirement for the full --allow-read permission when using
+the Deno.cwd() API.</p>
+<p>Before this change, it was already possible to acquire the CWD path without
+permissions, eg. by creating an error and inspecting its stack trace.</p>
+<p>This change was originally intended to ship in Deno 2.0, but missed the party.
+We’re happy to welcome it here in v2.2.</p>
+<p>A number of performance and quality of life improvements to deno compile:</p>
+<p>deno bench is the built-in tool that allows you to benchmark your code quickly
+and easily. Deno v1.21
+changed behavior of deno bench
+to automatically perform warm up of the benchmark, as well as automatically
+deciding how many iterations to perform, stopping when the time difference
+between subsequent runs is statistically insignificant.</p>
+<p>In most cases this works great, but sometimes, you want to have a granular
+control over how many warmup runs and measured runs are performed. To this end,
+Deno v2.2 brings back Deno.BenchDefinition.n and Deno.BenchDefinition.warmup
+options. Specifying them will make deno bench perform the requested amount of
+runs:</p>
+<p>The above benchmark will perform exactly 1000 “warmup runs” - these are not
+measured and are only used to “warm up” V8 engine’s JIT compiler. Then the bench
+will do 100 000 measured runs and show metrics based on these iterations.</p>
+<p>Deno 2.2 ships with
+an experimental support for
+WebTransport API
+and new,
+unstable Deno.connectQuic and Deno.QuicEndpoint APIs.
+If you aren’t familiar, QUIC (Quick UDP
+Internet Connections) is a modern transport protocol designed to replace
+TCP+TLS, and is the foundation for HTTP/3.</p>
+<p>As these are experimental, their APIs may change in the future, and so they
+require the use of the --unstable-net flag to be used.</p>
+<p>Let’s see these APIs in action. Here’s an example of a QUIC echo server and a
+WebTransport client.</p>
+<p>Please note that WebTransport requires HTTPS to be used. These example use a
+certificate/key pair; You can generate a self-signed cert using OpenSSL:
+openssl req -x509 -newkey rsa:4096 -keyout my_key.pem -out my_cert.pem -days 365</p>
+<p>As always, Deno 2.2 brings a plethora of improvements to Node.js and npm
+compatibility. Here’s a list of highlights:</p>
+<p>Performance improvements are a part of every Deno release, and this one is no
+exception. Here’s a list of some of the improvements:</p>
+<p>Our WebGPU implementation got a major revamp, which fixes many issues that were
+being encountered, and should also improve overall performance of the available
+APIs.</p>
+<p>In addition to these fixes, our Jupyter integration is now able to display
+GPUTextures as images, and GPUBuffers as text:</p>
+<p>Check out some examples of using WebGPU with Deno.</p>
+<p>Thanks to using full
+Link Time Optimization
+we
+managed to save almost 15Mb of the binary size.
+That makes deno shrink from 137Mb to 122Mb.</p>
+<p>Deno 2.2 upgrades to TypeScript 5.7 and V8 13.4, bringing new language
+features and performance improvements.</p>
+<p>One major TypeScript 5.7 change is that Uint8Array and other TypedArrays are
+now generic over ArrayBufferLike. This allows better type safety when
+working with SharedArrayBuffer and ArrayBuffer, but it may require updates
+to some codebases.</p>
+<p>This change might introduce type errors. If you see errors like:</p>
+<p>You may need to update @types/node to the latest version.</p>
+<p>Read more about this change in
+Microsoft’s announcement
+and the TypeScript PR.</p>
+<p>Deno v2.1
+remains the Long Term Support release
+and will receive bug fixes, security updates and critical performance
+improvements regularly for the next 6 months.</p>
+<p>We couldn’t build Deno without the help of our community! Whether by answering
+questions in our community Discord server or
+reporting bugs, we are incredibly
+grateful for your support. In particular, we’d like to thank the following
+people for their contributions to Deno 2.2: Aaron Ang, Alvaro Parker, Benjamin
+Swerdlow, Bhuwan Pandit, Caleb Cox, Charlie Bellini, Cornelius Krassow, Cre3per,
+Cyan, Dimitris Apostolou, Espen Hovlandsdal, Filip Stevanovic, Gowtham K,
+Hajime-san, HasanAlrimawi, Ian Bull, Je Xia, João Baptista, Kenta Moriuchi,
+Kitson Kelly, Masato Yoshioka, Mathias Lykkegaard Lorenzen, Mohammad Sulaiman,
+Muthuraj Ramalingakumar, Nikolay Karadzhov, Rajhans Jadhao, Rano, Sean McArthur,
+TateKennington, Tatsuya Kawano, Timothy, Trevor Manz, ZYSzys, hongmengning,
+ingalless, jia wei, printfn, ryu, siaeyy, ud2.</p>
+<p>Would you like to join the ranks of Deno contributors?
+Check out our contribution docs here,
+and we’ll see you on the list next time.</p>
+<p>Believe it or not, the changes listed above still don’t tell you everything that
+got better in 2.2. You can view the
+full list of pull requests merged in Deno
+2.2 on GitHub.</p>
+<p>Thank you for catching up with our 2.2 release, and we hope you love building
+with Deno!</p>
+<p>Get technical support, share your project, or simply say hi on
+Twitter, Discord,
+BlueSky, and
+Mastodon.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v2.2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#91. Sunsetting Create React App</h2>
+    <div class="article-meta">
+        📅 Feb 14, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://react.dev/blog/2025/02/14/sunsetting-create-react-app" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://react.dev/images/og/blog-2025-02-14-sunsetting-create-react-app.png" alt="Sunsetting Create React App" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://react.dev/images/og/blog-2025-02-14-sunsetting-create-react-app.png" alt="Sunsetting Create React App" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>February 14, 2025 by Matt Carroll and Ricky Hanlon</p>
+<p>Today, we’re deprecating Create React App for new apps, and encouraging existing apps to migrate to a framework, or to migrate to a build tool like Vite, Parcel, or RSBuild.</p>
+<p>We’re also providing docs for when a framework isn’t a good fit for your project, you want to build your own framework, or you just want to learn how React works by building a React app from scratch.</p>
+<p>When we released Create React App in 2016, there was no clear way to build a new React app.</p>
+<p>To create a React app, you had to install a bunch of tools and wire them up together yourself to support basic features like JSX, linting, and hot reloading. This was very tricky to do correctly, so the community created boilerplates for common setups. However, boilerplates were difficult to update and fragmentation made it difficult for React to release new features.</p>
+<p>Create React App solved these problems by combining several tools into a single recommended configuration. This allowed apps a simple way to upgrade to new tooling features, and allowed the React team to deploy non-trivial tooling changes (Fast Refresh support, React Hooks lint rules) to the broadest possible audience.</p>
+<p>This model became so popular that there’s an entire category of tools working this way today.</p>
+<p>Although Create React App makes it easy to get started, there are several limitations that make it difficult to build high performant production apps. In principle, we could solve these problems by essentially evolving it into a framework.</p>
+<p>However, since Create React App currently has no active maintainers, and there are many existing frameworks that solve these problems already, we’ve decided to deprecate Create React App.</p>
+<p>Starting today, if you install a new app, you will see a deprecation warning:</p>
+<p>We’ve also added a deprecation notice to the Create React App website and GitHub repo. Create React App will continue working in maintenance mode, and we’ve published a new version of Create React App to work with React 19.</p>
+<p>We recommend creating new React apps with a framework. All the frameworks we recommend support client-side rendering (CSR) and single-page apps (SPA), and can be deployed to a CDN or static hosting service without a server.</p>
+<p>For existing apps, these guides will help you migrate to a client-only SPA:</p>
+<p>If your app has unusual constraints, or you prefer to solve these problems by building your own framework, or you just want to learn how react works from scratch, you can roll your own custom setup with React using Vite, Parcel or Rsbuild.</p>
+<p>For existing apps, these guides will help you migrate to a build tool:</p>
+<p>To help get started with Vite, Parcel or Rsbuild, we’ve added new docs for Building a React App from Scratch.</p>
+<p>Most apps would benefit from a framework, but there are valid cases to build a React app from scratch. A good rule of thumb is if your app needs routing, you would probably benefit from a framework.</p>
+<p>Just like Svelte has Sveltekit, Vue has Nuxt, and Solid has SolidStart, React recommends using a framework that fully integrates routing into features like data-fetching and code-splitting out of the box. This avoids the pain of needing to write your own complex configurations and essentially build a framework yourself.</p>
+<p>However, you can always build a React app from scratch using a build tool like Vite, Parcel, or Rsbuild.</p>
+<p>Continue reading to learn more about the limitations of build tools and why we recommend frameworks.</p>
+<p>Create React App and build tools like it make it easy to get started building a React app. After running npx create-react-app my-app, you get a fully configured React app with a development server, linting, and a production build.</p>
+<p>For example, if you’re building an internal admin tool, you can start with a landing page:</p>
+<p>This allows you to immediately start coding in React with features like JSX, default linting rules, and a bundler to run in both development and production. However, this setup is missing the tools you need to build a real production app.</p>
+<p>Most production apps need solutions to problems like routing, data fetching, and code splitting.</p>
+<p>Create React App does not include a specific routing solution. If you’re just getting started, one option is to use useState to switch between routes. But doing this means that you can’t share links to your app - every link would go to the same page - and structuring your app becomes difficult over time:</p>
+<p>This is why most apps that use Create React App solve add routing with a routing library like React Router or Tanstack Router. With a routing library, you can add additional routes to the app, which provides opinions on the structure of your app, and allows you to start sharing links to routes. For example, with React Router you can define routes:</p>
+<p>With this change, you can share a link to /dashboard and the app will navigate to the dashboard page . Once you have a routing library, you can add additional features like nested routes, route guards, and route transitions, which are difficult to implement without a routing library.</p>
+<p>There’s a tradeoff being made here: the routing library adds complexity to the app, but it also adds features that are difficult to implement without it.</p>
+<p>Another common problem in Create React App is data fetching. Create React App does not include a specific data fetching solution. If you’re just getting started, a common option is to use fetch in an effect to load data.</p>
+<p>But doing this means that the data is fetched after the component renders, which can cause network waterfalls. Network waterfalls are caused by fetching data when your app renders instead of in parallel while the code is downloading:</p>
+<p>Fetching in an effect means the user has to wait longer to see the content, even though the data could have been fetched earlier. To solve this, you can use a data fetching library like TanStack Query, SWR, Apollo, or Relay which provide options to prefetch data so the request is started before the component renders.</p>
+<p>These libraries work best when integrated with your routing “loader” pattern to specify data dependencies at the route level, which allows the router to optimize your data fetches:</p>
+<p>On initial load, the router can fetch the data immediately before the route is rendered. As the user navigates around the app, the router is able to fetch both the data and the route at the same time, parallelizing the fetches. This reduces the time it takes to see the content on the screen, and can improve the user experience.</p>
+<p>However, this requires correctly configuring the loaders in your app and trades off complexity for performance.</p>
+<p>Another common problem in Create React App is code splitting. Create React App does not include a specific code splitting solution. If you’re just getting started, you might not consider code splitting at all.</p>
+<p>This means your app is shipped as a single bundle:</p>
+<p>But for ideal performance, you should “split” your code into separate bundles so the user only needs to download what they need. This decreases the time the user needs to wait to load your app, by only downloading the code they need to see the page they are on.</p>
+<p>One way to do code-splitting is with React.lazy. However, this means that the code is not fetched until the component renders, which can cause network waterfalls. A more optimal solution is to use a router feature that fetches the code in parallel while the code is downloading. For example, React Router provides a lazy option to specify that a route should be code split and optimize when it is loaded:</p>
+<p>Optimized code-splitting is tricky to get right, and it’s easy to make mistakes that can cause the user to download more code than they need. It works best when integrated with your router and data loading solutions to maximize caching, parallelize fetches, and support “import on interaction” patterns.</p>
+<p>These are just a few examples of the limitations of Create React App.</p>
+<p>Once you’ve integrated routing, data-fetching, and code splitting, you now also need to consider pending states, navigation interruptions, error messages to the user, and revalidation of the data. There are entire categories of problems that users need to solve like:</p>
+<p>All of these work together to create the most optimal loading sequence.</p>
+<p>Solving each of these problems individually in Create React App can be difficult as each problem is interconnected with the others and can require deep expertise in problem areas users may not be familiar with. In order to solve these problems, users end up building their own bespoke solutions on top of Create React App, which was the problem Create React App originally tried to solve.</p>
+<p>Although you could solve all these pieces yourself in a build tool like Create React App, Vite, or Parcel, it is hard to do well. Just like when Create React App itself integrated several build tools together, you need a tool to integrate all of these features together to provide the best experience to users.</p>
+<p>This category of tools that integrates build tools, rendering, routing, data fetching, and code splitting are known as “frameworks” — or if you prefer to call React itself a framework, you might call them “metaframeworks”.</p>
+<p>Frameworks impose some opinions about structuring your app in order to provide a much better user experience, in the same way build tools impose some opinions to make tooling easier. This is why we started recommending frameworks like Next.js, React Router, and Expo for new projects.</p>
+<p>Frameworks provide the same getting started experience as Create React App, but also provide solutions to problems users need to solve anyway in real production apps.</p>
+<p>The frameworks we recommend all provide the option to create a client-side rendered (CSR) app.</p>
+<p>In some cases, CSR is the right choice for a page, but many times it’s not. Even if most of your app is client-side, there are often individual pages that could benefit from server rendering features like static-site generation (SSG) or server-side rendering (SSR), for example a Terms of Service page, or documentation.</p>
+<p>Server rendering generally sends less JavaScript to the client, and a full HTML document which produces a faster First Contentful Paint (FCP) by reducing Total Blocking Time (TBD), which can also lower Interaction to Next Paint (INP). This is why the Chrome team has encouraged developers to consider static or server-side render over a full client-side approach to achieve the best possible performance.</p>
+<p>There are tradeoffs to using a server, and it is not always the best option for every page. Generating pages on the server incurs additional cost and takes time to generate which can increase Time to First Byte (TTFB). The best performing apps are able to pick the right rendering strategy on a per-page basis, based on the tradeoffs of each strategy.</p>
+<p>Frameworks provide the option to use a server on any page if you want to, but do not force you to use a server. This allows you to pick the right rendering strategy for each page in your app.</p>
+<p>The frameworks we recommend also include support for React Server Components.</p>
+<p>Server Components help solve these problems by moving routing and data fetching to the server, and allowing code splitting to be done for client components based on the data you render, instead of just the route rendered, and reducing the amount of JavaScript shipped for the best possible loading sequence.</p>
+<p>Server Components do not require a server. They can be run at build time on your CI server to create a static-site generated app (SSG) app, at runtime on a web server for a server-side rendered (SSR) app.</p>
+<p>See Introducing zero-bundle size React Server Components and the docs for more info.</p>
+<p>A common misunderstanding is that server rendering is only for SEO.</p>
+<p>While server rendering can improve SEO, it also improves performance by reducing the amount of JavaScript the user needs to download and parse before they can see the content on the screen.</p>
+<p>This is why the Chrome team has encouraged developers to consider static or server-side render over a full client-side approach to achieve the best possible performance.</p>
+<p>Thank you to Dan Abramov for creating Create React App, and Joe Haddad, Ian Schmitz, Brody McKee, and many others for maintaining Create React App over the years. Thank you to Brooks Lybrand, Dan Abramov, Devon Govett, Eli White, Jack Herrington, Joe Savona, Lauren Tan, Lee Robinson, Mark Erikson, Ryan Florence, Sophie Alpert, Tanner Linsley, and Theo Browne for reviewing and providing feedback on this post.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://react.dev/blog/2025/02/14/sunsetting-create-react-app" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#902. Node.js 23.8.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Feb 13, 2025 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v23.8.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.8.0%20(Current)" alt="Node.js 23.8.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.8.0%20(Current)" alt="Node.js 23.8.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This version adds the --use-system-ca command-line flag, which instructs Node.js
+to use the trusted CA certificates present in the system store along with
+the --use-bundled-ca, --use-openssl-ca options.</p>
+<p>This option is available on macOS and Windows for now.</p>
+<p>Contributed by Tim Jacomb in #56599
+and Joyee Cheung in #56833.</p>
+<p>An implementation of the URL Pattern API
+is now available.</p>
+<p>The URLPattern constructor is exported from the node:url module and will be
+available as a global in Node.js 24.</p>
+<p>Contributed by Yagiz Nizipli and Daniel Lemire in #56452.</p>
+<p>Node.js now includes support for the Zstandard (zstd) compression algorithm.
+Various APIs have been added to the node:zlib module for both compression and decompression
+of zstd streams.</p>
+<p>Threads created by the Node.js process are now named to improve the debugging experience.
+Worker threads will use the name option that can be passed to the Worker constructor.</p>
+<p>Windows 64-bit Installer: https://nodejs.org/dist/v23.8.0/node-v23.8.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v23.8.0/node-v23.8.0-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v23.8.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v23.8.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v23.8.0/node-v23.8.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v23.8.0/node-v23.8.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v23.8.0/node-v23.8.0.tar.gz 
+Other release files: https://nodejs.org/dist/v23.8.0/ 
+Documentation: https://nodejs.org/docs/v23.8.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v23.8.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#306. Launching Interop 2025</h2>
+    <div class="article-meta">
+        📅 Feb 13, 2025 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://hacks.mozilla.org/2025/02/interop-2025/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://hacks.mozilla.org/wp-content/uploads/2025/02/Pasted-image.png" alt="Launching Interop 2025" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://hacks.mozilla.org/wp-content/uploads/2025/02/Pasted-image.png" alt="Launching Interop 2025" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Interop Project is a collaboration between browser vendors and other platform implementors to provide users and web developers with high quality implementations of the web platform.</p>
+<p>Each year we select a set of focus areas representing key areas where we want to improve interoperability. Encouraging all browser engines to prioritize common features ensures they become usable for web developers as quickly as possible.</p>
+<p>Progress in each engine and the overall Interop score are measured by tracking the pass rate of a set of web-platform tests for each focus area using the Interop dashboard.</p>
+<p>Before introducing the new focus areas for this year, we should look at the successes of Interop 2024.</p>
+<p>The Interop score, measuring the percentage of tests that pass in all of the major browser engines, has reached 95% in latest browser releases, up from only 46% at the start of the year. In pre-release browsers it’s even higher — over 97%. This is a huge win that shows how effective Interop can be at aligning browsers with the specifications and each other.</p>
+<p>Each browser engine individually achieved a test pass score of 98% in stable browser releases and 99% in pre-release, with Firefox finishing slightly ahead with 98.8% in release and 99.1% in Nightly.</p>
+<p>For users, this means features such as requestVideoFrameCallback, Declarative Shadow DOM, and Popover, which a year ago only had limited availability, are now implemented interoperably in all browsers.</p>
+<p>Building on Interop 2024’s success, we are excited to continue the project into 2025. This year we have 19 focus areas; 17 new and 2 from previous years. A full description of all the focus areas is available in the Interop repository.</p>
+<p>From 2024 we’re carrying forward Layout (really “Flexbox and Grid”), and Pointer and Mouse Events. These are important platform primitives where the Interop project has already led to significant interoperability improvements. However, with technologies that are so fundamental to the modern web we think it’s important to set ambitious goals and continue to prioritize these areas, creating rock solid foundations for developers to build on.</p>
+<p>The new focus areas represent a broad cross section of the platform. Many of them — like Anchor Positioning and View Transitions — have been identified from clear developer demand in surveys such as State of HTML and State of CSS. Inclusion in Interop will ensure they’re usable as soon as possible.</p>
+<p>In addition to these high profile new features, we’d like to highlight some lesser-known focus areas and explain why we’re pleased to see them in Interop.</p>
+<p>The Web Compat focus area is unique in Interop. It isn’t about one specific standard, but focuses on browser bugs known to break sites. These are often in older parts of the platform with long-standing inconsistencies. Addressing these requires either aligning implementations with the standard or, where that would break sites, updating the standard itself.</p>
+<p>One feature in the Web Compat focus area for 2025 is CSS Zoom. Originally a proprietary feature in Internet Explorer, it allowed scaling layout by adjusting the computed dimensions of elements at a time before CSS transforms. WebKit reverse-engineered it, bringing it into Blink, but Gecko never implemented it, due to the lack of a specification and the complexities it created in layout calculations.</p>
+<p>Unfortunately, a feature not being standardised doesn’t prevent developers from using it. Use of CSS Zoom led to layout issues on some sites in Firefox, especially on mobile. We tried various workarounds and have had success using interventions to replace zoom with CSS transforms on some affected sites, but an attempt to implement the same approach directly in Gecko broke more sites than it fixed and was abandoned.</p>
+<p>The situation seemed to be at an impasse until 2023 when Google investigated removing CSS Zoom from Chromium. Unfortunately, it turned out that some use cases, such as Microsoft Excel Online’s worksheet zoom, depended on the specific behaviour of CSS Zoom, so removal was not feasible. However, having clarified the use cases, the Chromium team was able to propose a standardized model for CSS Zoom that was easier to implement without compromising compatibility. This proposal was accepted by the CSS WG and led to the first implementation of CSS Zoom in Firefox 126, 24 years after it was first released in Internet Explorer.</p>
+<p>With Interop 2025, we hope to bring the story of CSS Zoom to a close with all engines finally converging on the same behaviour, backed by a real open standard.</p>
+<p>Video conferencing is now an essential feature of modern life, and in-browser video conferencing offers both ease of use and high security, as users are not required to download a native binary. Most web-based video conferencing relies on the WebRTC API, which offers high level tools for implementing real time communications. However, WebRTC has long suffered from interoperability issues, with implementations deviating from the standards and requiring nonstandard extensions for key features. This resulted in confusion and frustration for users and undermined trust in the web as a reliable alternative to native apps.</p>
+<p>Given this history, we’re excited to see WebRTC in Interop for the first time. The main part of the focus area is the RTCRtpScriptTransform API, which enables cross browser end-to-end encryption. Although there’s more to be done in the future, we believe Interop 2025 will be a big step towards making WebRTC a truly interoperable web standard.</p>
+<p>The focus area for Removing Mutation Events is the first time Interop has been used to coordinate the removal of a feature. Mutation events fire when the DOM changes, meaning the event handlers run on the critical path for DOM manipulation, causing major performance issues, and significant implementation complexity. Despite the fact that they have been implemented in all engines, they’re so problematic that they were never standardised. Instead, mutation observers were developed as a standard solution for the use cases of mutation events without their complexity or performance problems. Almost immediately after mutation observers were implemented, a Gecko bug was filed:</p>
+<p>“We now have mutation observers, and we’d really like to kill support for mutation events at some point in the future. Probably not for a while yet.”</p>
+<p>That was in 2012. The difficulty is the web’s core commitment to backwards compatibility. Removing features that people rely on is unacceptable. However, last year Chromium determined that use of mutation events had dropped low enough to allow a “deprecation trial“, disabling mutation events by default, but allowing specific sites to re-enable them for a limited time.</p>
+<p>This is good news, but long-running deprecation trials can create problems for other browsers. Disabling the feature entirely can break sites that rely on the opt-out. On the other hand we know from experience that some sites actually function better in a browser with mutation events disabled (for example, because they are used for non-critical features, but impact performance).</p>
+<p>By including this removal in Interop 2025, we can ensure that mutation events are fully removed in 2025 and end the year with reduced platform complexity and improved web performance.</p>
+<p>As well as focus areas, the Interop project also runs investigations aimed at long-term interoperability improvements to areas where we can’t measure progress using test pass rates. For example Interop investigations can be looking to add new test capabilities, or increase the test coverage of platform features.</p>
+<p>The accessibility testing started as part of Interop 2023. It has added APIs for testing accessible name and computed role, as well as more than 1000 new tests. Those tests formed the Accessibility focus area in Interop 2024, which achieved an Interop score of 99.7%.</p>
+<p>In 2025 the focus will be expanding the testability of accessibility features. Mozilla is working on a prototype of AccessibleNode; an API that enables verifying the shape of the accessibility tree, along with its states and properties. This will allow us to test the effect of features like CSS display: contents or ::before/::after on the accessibility tree.</p>
+<p>Today, all Interop focus areas are scored in desktop browsers. However, some features are mobile-specific or have interoperability challenges unique to mobile.</p>
+<p>Improving mobile testing has been part of Interop since 2023, and in that time we’ve made significant progress standing up mobile browsers in web-platform-tests CI systems. Today we have reliable runs of Chrome and Firefox Nightly on Android, and Safari runs on iOS are expected soon. However, some parts of our test framework were written with desktop-specific assumptions in the design, so the focus for 2025 will be on bringing mobile testing to parity with desktop. The goal is to allow mobile-specific focus areas in future Interop projects, helping improve interoperability across all device types.</p>
+<p>The unique and distinguishing feature of the web platform is its basis in open standards, providing multiple implementations and user choice. Through the Interop project, web platform implementors collaborate to ensure that these core strengths are matched by a seamless user experience across browsers.</p>
+<p>With focus areas covering some of the most important new and existing areas of the modern web, Interop 2025 is set to deliver some of the biggest interoperability wins of the project so far. We are confident that Firefox and other browsers will rise to the challenge, providing users and developers with a more consistent and reliable web platform.</p>
+<p>Software engineer focused on maintaining a healthy open web. Web-platform-tests core team member.</p>
+<p>Sign up for the Mozilla Developer Newsletter:</p>
+<p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.</p>
+<p>Except where otherwise noted, content on this site is licensed
+          under the
+          Creative Commons Attribution Share-Alike License v3.0
+          or any later version.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://hacks.mozilla.org/2025/02/interop-2025/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#640. If you&#x27;re not using npm specifiers, you&#x27;re doing it wrong</h2>
+    <div class="article-meta">
+        📅 Feb 13, 2025 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/not-using-npm-specifiers-doing-it-wrong" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/not-using-npm-specifiers-doing-it-wrong/og.png" alt="If you&#x27;re not using npm specifiers, you&#x27;re doing it wrong" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/not-using-npm-specifiers-doing-it-wrong/og.png" alt="If you're not using npm specifiers, you're doing it wrong" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>During the early days of Deno, we recommended importing npm packages via HTTP
+with transpile services such as esm.sh and
+unpkg.com. However, there are limitations to importing npm
+packages this way, such as lack of install hooks, duplicate dependency
+resolution issues, loading data files, etc. That’s why after native npm support
+was added with the release of Deno 2, we recommend using npm: specifiers
+directly.</p>
+<p>In this blog post, we’ll cover the limitations from using npm via these
+transpile services, as well as all the benefits to natively importing npm
+packages:</p>
+<p>Deno offers backwards compatibilty with Node/npm, built-in package management,
+all-in-one zero-config toolchain,
+native TypeScript support,
+and more.</p>
+<p>When you import https://esm.sh/react and https://esm.sh/react-dom, the
+latter dependency might import a duplicate react version:</p>
+<p>And while there are some ways to manage this via special esm.sh URL flags, they
+can be tedious and fiddly.
+Importing from esm.sh lacks semantic versioning,
+making it hard to dedup dependencies.</p>
+<p>Conversely, importing from npm natively via npm: specifiers allows Deno to
+understand semantic versions of your dependencies. This is just like using npm
+with Node and will work as expected. This means smaller module graph and smaller
+number of loaded modules.</p>
+<p>Some npm packages require native add-ons to be compiled at install time. When
+importing natively with npm, install hooks will run an install script that calls
+node-gyp to build the add-on.</p>
+<p>Unfortunately, there are no install hooks when importing npm packages via HTTP,
+so some of these npm packages that require a separate install step can not be
+fully installed.</p>
+<p>Deno’s native npm support allows install hooks to run with
+the --allow-scripts flag:</p>
+<p>Certain npm packages ship with non-JavaScript files, such as text files, csv,
+json, etc., which it will load at runtime. However, these transpile services are
+unable to serve a compatible version, which results in unusual errors and an
+overall subpar developer experience.</p>
+<p>Importing npm packages natively in Deno is the same as importing in Node — data
+files are downloaded and can be accessed from the module at runtime, which is
+the expected behavior.</p>
+<p>Programming is a battle against complexity. Any superfluous code, config,
+folders, processes, etc. can divert focus and mindshare from critical business
+logic. This is why Deno is
+zero config (with sane defaults) and
+has
+a complete built-in toolchain so
+you can dive right into writing code.</p>
+<p>You can use npm: specifiers with Deno to install npm packages without needing
+to create a node_modules folder in your directory. This is beacuse
+Deno will then install your npm package to your global cache:</p>
+<p>You can even use npm: specifiers in your deno.json :</p>
+<p>Note that if you have a package.json present, Deno will automatically default
+to creating a node_modules folder, as many npm packages expect and require it.
+However, you can control whether a node_modules is created with
+the nodeModulesDir attribute in your deno.json
+.</p>
+<p>Sometimes you want to write a simple JavaScript or TypeScript program, and run
+it and share it without extra code or steps.</p>
+<p>In Node, package.json is the dependency manifest, and is necessary to
+accompany your program if you have any dependencies. If you were to share your
+program with someone else, they would need the package.json, as well as use an
+extra step to install these dependencies, before they can run your program.</p>
+<p>In Deno, you can inline npm: specifiers in your import statement (as well as
+package versions) so you don’t need package.json at all. You can share your
+code by sharing your JS or TS file. If someone else runs it with Deno, Deno will
+automatically download the correct dependencies, and your program will run the
+same way as it did on your machine. Fewer files, steps, and frustrations.</p>
+<p>In fact,
+treating single file scripts without dependency manifests as “immutable scripts”
+can lead to creating ecosystems of composable programs.</p>
+<p>Windmill.dev uses Deno’s optional dependency manifest to
+create immutable scripts, a foundational building block for their user-generated
+workflows.</p>
+<p>Of course, you can always use package.json in cases where your dependencies
+might require one.</p>
+<p>Importing npm and jsr packages is recommended in any Deno program — CLI,
+servers, libraries, etc. — even in other contexts where Deno is used, such as
+Jupyter notebooks and REPL. Let’s take a look at that next.</p>
+<p>Deno’s jupyter support
+is great for exploring datasets in JavaScript/TypeScript, or even to use as a
+REPL (though you can use deno repl as well — more below).</p>
+<p>You can use npm: directly in Jupyter notebooks so you can import key npm
+modules for data exploration, analysis, and even charting. Here’s an example of
+using npm:polars in Jupyter
+notebooks:</p>
+<p>Working with data sets in JavaScript and TypeScript not only has many data
+libraries that is available in Python, but also allows you to easily render your
+analysis to HTML. Here’s an example using
+npm:@observablehq/plot:</p>
+<p>Interested in using JS/TS to explore datasets in Deno jupyter? Here are some
+awesome libraries (and their Python counterparts) to help get you started:</p>
+<p>Note that just like any other Deno program, both Jupyter notebooks and REPL make
+use of your global cache for dependencies. That not only means less vendor
+clutter in your directories, but also faster execution once your dependencies
+are cached.</p>
+<p>In Node, when you import an npm module, that
+module has unfettered access to everything.
+And due to the hyper composability of npm modules, there have been dozens of
+reported security vulnerabilities from malicious npm modules that have
+stolen user data from forms,
+performed shell injection attacks,
+installed malware onto your machine,
+and more.</p>
+<p>Deno, designed with security in mind from the outset, uses an opt-in-permissions
+model that will alert you when any of your dependencies are requesting access
+to anything sensitive. For instance, npm:chalk requires access to several
+environment variables:</p>
+<p>On top of having an additional security layer with Deno’s permission system,
+Deno also requires you to opt into allowing pre- and post- install scripts
+during the npm install process. While certain npm packages require these
+lifecycle install scripts to run properly, they also have full access to your
+systems. This means essentially allowing the package author to run any scripts
+on your machine, CI environment, etc., which is dangerous if you don’t recognize
+what packages are being installed.</p>
+<p>In Deno, if you install an npm package that requires a lifecycle install script
+to execute, you’ll be prompted with the following warning message:</p>
+<p>To enable install scripts, you can use the
+--allow-scripts
+flag. Note that this flag can also accept parameters for specific package names,
+giving you not only more visibility, but also more granular control.</p>
+<p>Many large organizations host their own private npm registries to manage
+internal packages.
+Deno supports this in the same way Node does
+— with an .npmrc file to configure Deno to fetch packages from this private
+registry:</p>
+<p>You can also use private npm packages in your package.json file:</p>
+<p>While Deno will always offer HTTP imports due to its web native protocol, we
+recommend defaulting to using npm: or jsr: specifiers for Deno 2 and above.</p>
+<p>To learn more about what npm packages and frameworks you can use with Deno 2,
+check out our tutorials:</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/not-using-npm-specifiers-doing-it-wrong" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#906. Node.js 22.14.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 Feb 11, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v22.14.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.14.0%20(LTS)" alt="Node.js 22.14.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.14.0%20(LTS)" alt="Node.js 22.14.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v22.14.0/node-v22.14.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v22.14.0/node-v22.14.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v22.14.0/node-v22.14.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v22.14.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v22.14.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v22.14.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v22.14.0/node-v22.14.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v22.14.0/node-v22.14.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v22.14.0/node-v22.14.0.tar.gz 
+Other release files: https://nodejs.org/dist/v22.14.0/ 
+Documentation: https://nodejs.org/docs/v22.14.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v22.14.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#909. Node.js 20.18.3 (LTS)</h2>
+    <div class="article-meta">
+        📅 Feb 10, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v20.18.3" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.18.3%20(LTS)" alt="Node.js 20.18.3 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.18.3%20(LTS)" alt="Node.js 20.18.3 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v20.18.3/node-v20.18.3-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v20.18.3/node-v20.18.3-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v20.18.3/node-v20.18.3-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v20.18.3/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v20.18.3/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v20.18.3/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v20.18.3/node-v20.18.3.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v20.18.3/node-v20.18.3-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v20.18.3/node-v20.18.3.tar.gz 
+Other release files: https://nodejs.org/dist/v20.18.3/ 
+Documentation: https://nodejs.org/docs/v20.18.3/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v20.18.3" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#650. How Deno&#x27;s documentation is evolving</h2>
+    <div class="article-meta">
+        📅 Feb 07, 2025 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/docs-update" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/docs-update/og.webp" alt="How Deno&#x27;s documentation is evolving" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/docs-update/og.webp" alt="How Deno's documentation is evolving" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Documentation is a critical part of the experience of using a tool or service.
+As developers, we often depend on docs to help us discover a tool’s capabilities
+or to teach us how to use its features, and the ease (or difficulty) with which
+we find what we’re looking for can inform our opinion of the tool itself.</p>
+<p>Making good docs is a big task, but an important one.</p>
+<p>With that in mind, we’re on a constant journey to improve
+our docs. Deno is a big project, with a large surface
+area, so we have plenty to do, and thankfully, we get great help and feedback
+from the community.</p>
+<p>Here are a few things that we’ve done to improve our docs lately, and some
+things we have planned for the future.</p>
+<p>Previously, our examples were spread around the docs site and located within
+different sections and products. That was fine if you knew exactly what you were
+looking for, but made it hard to discover examples and references.</p>
+<p>Now all our examples are categorized and organized, in one place. If you prefer
+to learn with videos rather than code examples, you can filter your view, but
+you don’t need to go hunting around our growing docs site or blog to uncover the
+examples. The examples page is the place to
+go, and as a sign of how useful we think this is, we added it to the global
+navigation of the docs site.</p>
+<p>For those who prefer to learn by watching rather than reading, we added a set of
+videos to introduce concepts and techniques for working with Deno. As short,
+digestible videos, these proved popular and we’re keen to add more. Let us know
+if there are particular topics you’d like to see. We welcome your feedback and
+would love to address the gaps that matter most to you.</p>
+<p>Since adding videos to the examples, we’ve heard from some folks that they
+prefer to read than to watch, so we’ll be adding transcripts to these videos and
+making sure that there are equivalent text-based tutorials or examples. We want
+the content to suit as many learning styles as possible.</p>
+<p>In addition to chatting with us on the Deno Discord -
+where we even have a dedicated channel for discussing documentation - you can
+now provide feedback directly on our docs site. Each page features a feedback
+widget where you can let us know if the content was helpful and share any
+details or suggestions for how we can improve.</p>
+<p>All the feedback is collected and reviewed each week in our docs planning
+meeting. We’ve had some excellent suggestions already, and these all help to
+make the docs better for everyone.</p>
+<p>Sometimes removing things can give the best improvement. By collecting our
+examples in one place, we’ve been able to remove a lot of items from the sidebar
+navigation. This should help those exploring the site and looking for something
+specific, while not sacrificing easy access to the examples.</p>
+<p>We discovered that some of the colors we use around the site can, in some
+combinations and font sizes, result in poor contrast. We made some small but
+important adjustments to keep things legible in both light and dark themes and
+are much happier with the result.</p>
+<p>Some parts of the docs site, such as our
+API reference section, display content generated
+directly from the source code. Where the source code includes descriptions,
+examples, and references, these are used by our site generator to create and
+populate the pages.</p>
+<p>We’re actively working to add more and more content this way, which not only
+improves the docs, but also adds useful documentation directly into the open
+source code it is documenting for a double win.</p>
+<p>The vast majority of the visits to our docs happens on a desktop rather than a
+mobile device. But we were still cross with ourselves when we spotted a silly
+oversight in the primary navigation when viewed on mobile. Some of the primary
+navigation to other sections of the docs site were not visible. Not ideal!</p>
+<p>We’ve fixed this now with some improvement to the global navigation and better
+consistency around the site. Come on in to the other parts of the docs site,
+mobile friends!</p>
+<p>Last year we adopted the use of a new site generator to build our docs. We
+selected Lume as the tool to improve our flexibility and development velocity.</p>
+<p>Lume is emerging as a very capable and elegantly designed
+site generator. It shares some principles that will be familiar to fans of
+Astro, Eleventy, and Jekyll, and gives excellent control over what code you
+generate and ship to your users.</p>
+<p>With a well-curated set of plugins which extend the core features, Lume gives
+lots of flexibility over templating, build pipelines for CSS and JavaScript, and
+has thoughtful APIs for sourcing and querying your data.</p>
+<p>Nope. While we continuously work to refine and improve the content in the Deno
+docs, we’ll also keep on working on the user experience and discoverability. We
+don’t expect that we’ll ever be truly finished, but hope we can keep on
+iterating and improving things.</p>
+<p>We’re grateful to everyone who contributes feedback, suggestions, and even
+examples to the site. Thanks for all your efforts. We’ll keep working too.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/docs-update" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#660. Oracle justified its JavaScript trademark with Node.js—now it wants that ignored</h2>
+    <div class="article-meta">
+        📅 Feb 04, 2025 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/deno-v-oracle2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/deno-v-oracle2/og.png" alt="Oracle justified its JavaScript trademark with Node.js—now it wants that ignored" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/deno-v-oracle2/og.png" alt="Oracle justified its JavaScript trademark with Node.js—now it wants that ignored" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Yesterday, Oracle filed
+a motion to dismiss
+in response to Deno’s petition to cancel its “JavaScript” trademark. But instead
+of addressing the real issue—that JavaScript is an open standard with multiple
+independent implementations—Oracle is trying to stall the process and sidestep
+accountability.</p>
+<p>Two years ago, I published a blog post
+asking Oracle to release the JavaScript trademark as a goodwill gesture. That
+got no response.</p>
+<p>Last September, I published an open letter co-signed
+by Brendan Eich (creator of JavaScript), current TC39 editors, and over 16,000
+JavaScript developers. Many were shocked to learn that Oracle even claimed
+ownership of JavaScript. Oracle still said nothing.</p>
+<p>So last November, I filed
+a formal petition with the USPTO through
+my company, Deno, to cancel Oracle’s “JavaScript” trademark. Among other things,
+we pointed out that in 2019, Oracle renewed its trademark by submitting a
+screenshot of the Node.js website—a project I created—as proof of use, despite
+having no affiliation with it.</p>
+<p>Our petition challenges Oracle’s trademark on three grounds:</p>
+<p>You can read the full peititon for cancellation
+here.</p>
+<p>Oracle has finally responded—but
+only to the fraud claim. Their argument: Yes, we used a screenshot from
+Node.js, but it doesn’t matter because we also submitted another specimen.</p>
+<p>Here’s how they frame our petition in their filing:</p>
+<p>“The Petition ignores completely that Oracle submitted two specimens.
+Moreover, on its face, the Petition fails to allege a claim of fraud as to the
+renewal in Class 42 because the specimen it touts as ‘fraudulent’ was
+submitted to support only the renewal in Class 9 and not Class 42.”</p>
+<p>Oracle’s JavaScript trademark covers both software products (Class 9) and
+technology services (Class 42). Their argument is that the Node.js screenshot
+was only for Class 9 and that their primary specimen—an Oracle JET page—was
+sufficient for both.</p>
+<p>“Petitioner has not challenged and could not plausibly challenge the
+JAVASCRIPT Extension Toolkit page from Oracle’s own website that Oracle
+submitted as its primary specimen in Class 9 and as its only specimen in Class
+42.”</p>
+<p>“Oracle does not concede that submission of the Node.js Specimen was improper.
+However, the Board need not address that question in connection with this
+Motion.”</p>
+<p>Oracle isn’t denying that it used my project—it’s just arguing that it doesn’t
+matter. If a company misrepresents something in a legal filing, you’d expect
+them to acknowledge it. But Oracle hasn’t even addressed it. No apology. No
+explanation. Just an attempt to move past it as if nothing happened.</p>
+<p>I created Node.js and released it under the MIT license to benefit developers,
+not so it could be used as a legal pawn by a Fortune 500 company. Now, instead
+of correcting their misrepresentation, they’re using it to stall the case.</p>
+<p>Oracle waited until the deadline to file this motion, delaying their response to
+the real issue: whether “JavaScript” is a generic term.</p>
+<p>“This motion tolls the deadline to otherwise answer the Petition, and Oracle
+requests that the Board reset the answer deadline to at least 30 days after
+the date of its decision on this motion.”</p>
+<p>Oracle won’t even discuss whether “JavaScript” should remain a trademark until
+they’ve finished dragging out this fraud claim.</p>
+<p>This legal maneuvering puts us in a difficult position:</p>
+<p>The situation is self-evident to anyone working in tech: Oracle did not create
+JavaScript. Oracle does not control JavaScript. Oracle should not own the
+trademark for JavaScript.</p>
+<p>JavaScript is defined by an open specification (ECMA-262), maintained by TC39,
+an industry group with representatives from Google, Apple, Microsoft, Mozilla,
+and others. The major implementations of JavaScript are in the browsers built by
+Mozilla, Google, Apple, and Microsoft. Oracle has no role in JavaScript’s
+governance, implementation, or evolution—yet it continues to wield this
+trademark as a legal cudgel.</p>
+<p>This isn’t just about JavaScript. If Oracle can hold onto this trademark, what
+does that say about the trademark system as a whole? Should corporations be able
+to warehouse trademarks indefinitely, even when they play no meaningful role in
+the things they claim to own? Even when they commit fraud to maintain them?</p>
+<p>A company with no role in JavaScript’s past or future has no right to control
+its name.</p>
+<p>Let one thing be clear: we are not intimidated by Oracle’s legal maneuvering,
+and we will continue to fight this case on its very strong merits. You can
+follow us here to be kept up to date.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/deno-v-oracle2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#671. Introducing the JSR open governance board</h2>
+    <div class="article-meta">
+        📅 Feb 03, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/jsr-open-governance-board" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/jsr-open-governance-board/og.png" alt="Introducing the JSR open governance board" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/jsr-open-governance-board/og.png" alt="Introducing the JSR open governance board" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Although the Deno team built JSR, the open source registry is
+intended not to be a Deno project, but rather an openly governed community
+service that benefits the greater JavaScript and TypeScript ecosystem. Today
+marks a big shift towards that vision, as we’re thrilled to announce that JSR
+now has an independent governing board of directors with
+a governance charter.</p>
+<p>In this blog post, we’ll
+introduce the new board members, share
+the governance charter, and
+provide ways to get involved and stay in the loop.</p>
+<p>We are happy and grateful for these following individuals who are willing to
+contribute their time and expertise to JSR:</p>
+<p>The board members will meet monthly to discuss progress, set direction, and
+address any challenges pertaining to the JSR project.</p>
+<p>To articulate and align on the future direction of JSR, we have created a
+Governance Charter, which you can review below and on the JSR website.</p>
+<p>The JSR board exists to improve the JavaScript and TypeScript ecosystem by
+providing a community service for sharing code through mechanisms such as
+hosting, moderation, and facilitating easy access to shared resources.</p>
+<p>We’re eager to kick JSR development into overdrive over the coming months, and
+there is plenty to work on. If you’re
+interested in staying up to date with JSR, helping shape the future of JSR, or
+contributing to JSR, we have created a
+dedicated JSR Discord.</p>
+<p>We’ve also started holding
+bi-weekly JSR public office hours in Discord,
+where the JSR engineers share updates, answer any of your questions, and even
+help projects convert or migrate their existing SDKs to publish to JSR.</p>
+<p>If you’re not on Discord, then you can stay up to date on JSR by following the
+project on Twitter,
+Bluesky, or even
+YouTube.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/jsr-open-governance-board" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#912. Node.js 23.7.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Jan 30, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v23.7.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.7.0%20(Current)" alt="Node.js 23.7.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.7.0%20(Current)" alt="Node.js 23.7.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 64-bit Installer: https://nodejs.org/dist/v23.7.0/node-v23.7.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v23.7.0/node-v23.7.0-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v23.7.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v23.7.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v23.7.0/node-v23.7.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v23.7.0/node-v23.7.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v23.7.0/node-v23.7.0.tar.gz 
+Other release files: https://nodejs.org/dist/v23.7.0/ 
+Documentation: https://nodejs.org/docs/v23.7.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v23.7.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#684. Intro to Wasm in Deno</h2>
+    <div class="article-meta">
+        📅 Jan 28, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/intro-to-wasm" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/intro-to-wasm/og.webp" alt="Intro to Wasm in Deno" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/intro-to-wasm/og.webp" alt="Intro to Wasm in Deno" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>JavaScript is a scripting language—distant from the machine code your CPU
+actually consumes. But JavaScript has a way to execute binary machine code, or
+something close to it, called WebAssembly. WebAssembly, or Wasm, is a low-level,
+portable binary format that runs at near-native speeds in the browser.</p>
+<p>Wasm is a compilation target for languages like C, C++, and Rust, enabling
+high-performance applications like
+Google Earth
+and Photoshop to run directly in the
+browser. It’s also highly secure, thanks to strict sandboxing, making it ideal
+for sensitive applications like financial or healthcare platforms. With
+Deno 2.1’s first-class Wasm support,
+using Wasm modules is simpler than ever.</p>
+<p>In this post, we’ll show you how to build a simple Wasm module and use it to
+call Rust from JavaScript.</p>
+<p>Let’s build a simple Wasm module and import it into Deno.</p>
+<p>Start with a small function, add, using
+WebAssembly text format.
+Create a new file, add.wat, and add the following:</p>
+<p>To visualize the generated Wasm binary, use
+Wasm Code Explorer:</p>
+<p>When importing Wasm with Deno, it understands the exports and
+typechecks them.
+For more on importing Wasm,
+refer to the documentation.</p>
+<p>This example is simple, but most production use cases compile Wasm from Rust,
+C++, or Go, rather than writing in wat.</p>
+<p>Now, let’s import a Rust function into JavaScript using
+wasmbuild. This CLI tool generates
+glue code for calling Rust crates in JavaScript via
+wasm-bindgen.</p>
+<p>First, ensure Deno and Rust are installed (deno -v, rustup -v, and
+cargo -v). In a new directory, create a deno.json:</p>
+<p>This scaffolds a Rust crate in rs_lib, including example functions and tests:</p>
+<p>This file defines a function called add, which takes two signed integers and
+returns a signed integer back, and a structure Greeter with two of its own
+functions. It’s then exported for use in JavaScript by the #[wasm_bindgen]
+attribute.</p>
+<p>Here you can write your own Rust, but for our example, we’ll use this generated
+code.</p>
+<p>Next, to build the project, we can run the wasmbuild task:</p>
+<p>We can visualize the generated wasm binary, lib/rs_lib.wasm, with
+Wasm Code Explorer:</p>
+<p>Now let’s import it. The last file listed, mod.js actually includes an example
+of how to import the Rust function in JavaScript:</p>
+<p>This imports add and Greeter, functions originally defined in Rust but then
+converted to JavaScript, and executes them. You can try it by running
+deno mod.js:</p>
+<p>Want to learn more about using Rust and JavaScript? Check out
+Roll Your Own JavaScript Runtime with Rust.</p>
+<p>We hope this gentle introduction to WebAssembly has not only showed you how to
+use it with JavaScript and in the browser, but inspired some potential use
+cases.</p>
+<p>With Deno 2.1, importing Wasm modules is as easy as importing any JavaScript
+module. If you’re using Rust, we intend to improve importing Rust into
+JavaScript via wasmbuild by
+simplifying the Wasm compilation step and only exposing higher level JavaScript API.</p>
+<p>Finally, here are some additional resources that shows what you can do with Wasm
+and how it can be used to improve your projects:</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/intro-to-wasm" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#696. Announcing OpenAI on JSR</h2>
+    <div class="article-meta">
+        📅 Jan 24, 2025 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/openai-on-jsr" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/openai-on-jsr/og.png" alt="Announcing OpenAI on JSR" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/openai-on-jsr/og.png" alt="Announcing OpenAI on JSR" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>JSR is a modern open source
+JavaScript registry that simplifies publishing and importing JavaScript and
+TypeScript modules. JSR supports publishing TypeScript source code,
+auto-generating documentation and type definition files, provenance attestation
+for more security, and can be used with npm-like package managers. You can use
+JSR modules not just with Deno, but in other runtimes like Node and environments
+like the browser and the edge. JSR has seen continued growth since launch, with
+over 400 new packages published weekly.</p>
+<p>We’re thrilled to announce that
+the OpenAI JavaScript SDK is now available on
+JSR.</p>
+<p>OpenAI is a leading development platform for building AI
+products and experiences using a diverse set of models including GPT, DALL-E,
+and more. It can also be used across any JavaScript environment, such as
+browsers and various runtimes.</p>
+<p>Using OpenAI’s SDK via JSR offers an unbeatable developer experience, with first
+class TypeScript support, auto-generated documentation right in your code
+editor, and more.</p>
+<p>🚨️ Looking to publish your own libraries on JSR? 🚨️</p>
+<p>Try Stainless - the comprehensive API platform
+that ingests OpenAPI specs to autogenerate SDKs including JSR-ready TypeScript
+modules. In fact, this OpenAI SDK was built using Stainless.</p>
+<p>You can get started with OpenAI using the deno add command:</p>
+<p>The first command will generate and add @openai to a deno.json file, while
+the second will generate and add @openai to a package.json file. Looking at
+our deno.json:</p>
+<p>Let’s use the OpenAI SDK to create a human-like response based on a text prompt.
+In our main.ts file, we can write:</p>
+<p>Next, let’s create an OpenAI key here
+and set it as an environment variable. In Mac/Linux, that looks like this:</p>
+<p>It works! (And if you’re hitting
+the 429 error code,
+you may need to upgrade.)</p>
+<p>Check out OpenAI’s documentation to
+learn more about working with their various models and creating AI driven
+experiences.</p>
+<p>With OpenAI’s JavaScript SDK now on JSR, it’s even easier to add AI experiences
+to your products or build AI products.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/openai-on-jsr" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#916. Node.js 23.6.1 (Current)</h2>
+    <div class="article-meta">
+        📅 Jan 21, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v23.6.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.6.1%20(Current)" alt="Node.js 23.6.1 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.6.1%20(Current)" alt="Node.js 23.6.1 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 64-bit Installer: https://nodejs.org/dist/v23.6.1/node-v23.6.1-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v23.6.1/node-v23.6.1-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v23.6.1/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v23.6.1/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v23.6.1/node-v23.6.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v23.6.1/node-v23.6.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v23.6.1/node-v23.6.1.tar.gz 
+Other release files: https://nodejs.org/dist/v23.6.1/ 
+Documentation: https://nodejs.org/docs/v23.6.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v23.6.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#919. Node.js 22.13.1 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jan 21, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v22.13.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.13.1%20(LTS)" alt="Node.js 22.13.1 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.13.1%20(LTS)" alt="Node.js 22.13.1 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v22.13.1/node-v22.13.1-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v22.13.1/node-v22.13.1-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v22.13.1/node-v22.13.1-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v22.13.1/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v22.13.1/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v22.13.1/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v22.13.1/node-v22.13.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v22.13.1/node-v22.13.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v22.13.1/node-v22.13.1.tar.gz 
+Other release files: https://nodejs.org/dist/v22.13.1/ 
+Documentation: https://nodejs.org/docs/v22.13.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v22.13.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#923. Node.js 20.18.2 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jan 21, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v20.18.2" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.18.2%20(LTS)" alt="Node.js 20.18.2 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.18.2%20(LTS)" alt="Node.js 20.18.2 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v20.18.2/node-v20.18.2-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v20.18.2/node-v20.18.2-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v20.18.2/node-v20.18.2-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v20.18.2/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v20.18.2/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v20.18.2/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v20.18.2/node-v20.18.2.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v20.18.2/node-v20.18.2-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v20.18.2/node-v20.18.2.tar.gz 
+Other release files: https://nodejs.org/dist/v20.18.2/ 
+Documentation: https://nodejs.org/docs/v20.18.2/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v20.18.2" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#927. Node.js 18.20.6 (LTS)</h2>
+    <div class="article-meta">
+        📅 Jan 21, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v18.20.6" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2018.20.6%20(LTS)" alt="Node.js 18.20.6 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2018.20.6%20(LTS)" alt="Node.js 18.20.6 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 32-bit Installer: https://nodejs.org/dist/v18.20.6/node-v18.20.6-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v18.20.6/node-v18.20.6-x64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v18.20.6/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v18.20.6/win-x64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v18.20.6/node-v18.20.6.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v18.20.6/node-v18.20.6-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v18.20.6/node-v18.20.6.tar.gz 
+Other release files: https://nodejs.org/dist/v18.20.6/ 
+Documentation: https://nodejs.org/docs/v18.20.6/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v18.20.6" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#706. Deno in 2024</h2>
+    <div class="article-meta">
+        📅 Jan 21, 2025 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/deno-in-2024" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/deno-in-2024/og.webp" alt="Deno in 2024" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/deno-in-2024/og.webp" alt="Deno in 2024" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>In 2024, the Deno team made significant strides towards our vision of
+simplifying programming. We launched the highly anticipated Deno 2, which
+provides backwards compatibility with Node and npm, adds dependency management
+to the toolchain, and expanded flexibility with monorepo and workspace support.
+Here’s a summary of notable technical improvements in 2024:</p>
+<p>Let’s take a deeper look into these updates below.</p>
+<p>In 2022, our survey responses indicated the importance of being able to use npm
+packages with Deno. Two years of diligent work later, with the release of Deno
+2, we’re thrilled to announce that Deno provides backwards compatibility with
+Node and npm.</p>
+<p>Some key updates to Deno to enable backwards compatibility include understanding
+package.json, removing global variable window and adding process, making
+the
+“bring your own node modules”
+functionality the default, and dozens of bug fixes to node: built-ins and
+more. With Deno 2, not only can you run existing Node projects in Deno, but also
+you can import and use npm packages, such as playwright, prisma, sqlite3,
+duckdb, and
+gRPC. On top of
+that, Deno 2 supports JavaScript frameworks such as Next.js, Astro, Remix, Qwik,
+Solid, and much more.</p>
+<p>Though we firmly believe ES modules are the future of JavaScript, many legacy
+projects and libraries rely on CommonJS. In 2024, we have
+improved our CommonJS support.
+Deno can run and import CommonJS files with the .cjs extension, as well as
+offering more descriptive errors when dealing with CommonJS issues.</p>
+<p>Finally, to allow for more flexibility in your Deno project, we’ve added
+monorepo and workspace support.
+Deno workspaces also understands npm workspaces, meaning you can create a hybrid
+Deno-npm monorepo with members having either a package.json or deno.json.
+You can even publish workspace members to JSR with deno publish without
+needing to manually figure out what order to publish them (see the
+Deno Standard Library as an example).</p>
+<p>As of Deno 2, Deno comes with a package manager with the addition of these new
+subcommands: deno install, deno add, and deno remove. These subcommands
+will be familiar if you’ve used npm, but they are much faster: deno install is
+15% faster than npm with a cold cache and 90% faster with a hot cache.</p>
+<p>These package management commands can pull/remove packages from either npm or
+JSR based on the provided specifier or if the package was found in
+package.json or deno.json.</p>
+<p>To broaden support for npm packages that require executing pre or post-install
+scripts, we’ve also added
+support for npm lifecycle scripts with the new flag --allow-scripts
+:</p>
+<p>Finally, to make it easier to share internal modules in a larger development
+team, we’ve added
+private npm registry support.
+These work the exact same way as they do in Node and npm: with an .npmrc file:</p>
+<p>This year,
+we introduced a new JavaScript registry,
+JSR. It supports TypeScript natively (you can publish modules
+as source), handles module loading across runtimes and environments,
+auto-generates documentation from JSDoc-style comments,
+and can be used with npm/npx-like systems.</p>
+<p>Since TypeScript source can be directly uploaded to JSR, it has a deep
+understanding of the code. This enables a smoother, seamless developer
+experience for both publishing and consuming modules. To learn more about all
+that goes under the hood, read our post on
+how we architected JSR.</p>
+<p>Publishing modules to JSR is very straightforward with deno publish, and you
+can even quickly scaffold a JSR module with deno init --lib.</p>
+<p>Though the Deno team built JSR, it is intended for the larger JavaScript
+community. We’re currently working towards building an open governing body for
+JSR. If you’re interested and want to learn more, check out
+the JSR discord and
+join one of our bi-weekly office hours, where we
+answer community questions and share the JSR roadmap.</p>
+<p>Since Deno v1.6, deno compile has enabled developers to turn JavaScript and
+TypeScript programs into single, standalone binaries that run on all major
+platforms — no dependencies, no additional installs. This means streamlined
+deployment and faster startups. And unlike
+Node’s 8-step compilation process,
+deno compile is a single command.</p>
+<p>This past year,
+we have made major improvements
+to deno compile, such as
+slimming down the compiled binary by up to 50%,
+adding code signing for software verification, Windows icon support, and
+asset bundling.
+In addition, programs created with deno compile can also use
+V8 code caching for even faster startup time.
+With these updates, you can now compile complete applications
+like HTML/JS/CSS games into native desktop binaries.</p>
+<p>To demonstrate the performance boost from using deno compile, here’s an
+example of compiling npm:</p>
+<p>In our observations,
+Deno-compiled npm binary ran ~1.9x faster than regular npm:</p>
+<p>We will continue to iterate and improve on deno compile , such as the ability
+to support compiling full stack frameworks, and more.</p>
+<p>Building web servers is a common use case for Deno, and last year we’ve made
+notable improvements in both its performance and usability. We re-worked
+the Deno.serve() API to make it faster by 8-15%.</p>
+<p>Writing servers in Deno is easier, too. We’ve also added
+the command deno serve to allow you to write servers declaratively:</p>
+<p>deno serve also supports multi-threaded servers with the --parallel flag,
+which enables automatic load-balancing across multiple CPU cores with the same
+ease-of-use.</p>
+<p>You can
+kickstart a new server in seconds with deno init --serve
+option. Deno also added the ability to
+typecheck your server entrypoint file with satisfies Deno.ServeDefaultExport.</p>
+<p>Deno is committed to building the fastest, most performant JavaScript and
+TypeScript runtime, and last year we made significant strides towards that.
+We’ve improved startup time by adding
+V8 code caching
+and
+warming up bootstrap initialization during snapshot time.</p>
+<p>We’ve also made significant performance improvements in Deno when in serverless
+environments, where Deno is commonly used in production. Deno added
+a Write-Ahead Logging (WAL) journal for SQLite databases in DENO_DIR,
+improving code caching, startup time, and cold starts. To compare performance in
+serverless contexts, we published
+a cold starts benchmark on JavaScript runtimes on AWS Lambda,
+which includes our methodology, as well as a few tips to maximize performance.</p>
+<p>There were many other improvements to the overall Deno performance story from
+last year. And though benchmarks can never reveal the full story, they can
+provide insight into where a runtime excels. Here are some benchmarks from the
+2.0 release that can hopefully provide a better idea.</p>
+<p>The Temporal API, designed the
+address the limitations and complexities of the Date object in JavaScript, is
+being actively implemented in all major JavaScript engines. You can try it out
+in Deno already
+with the --unstable-temporal flag.</p>
+<p>While WebAssembly (”Wasm”) support had always been available in Deno, our 2.1
+release promotes
+Wasm support to first-class,
+making importing Wasm modules as trivial as importing any other module or file:</p>
+<p>Loading Wasm modules is now even more performant in Deno, as they’re part of the
+“module graph”, which can be analyzed and cached for faster use. Not only that,
+but Deno understands exporting Wasm modules and can type check their use in your
+code base.</p>
+<p>As more and more Wasm is used on the web to improve application performance in
+the browser, we’ll continue to work towards making using Wasm with Deno as easy
+and fast as possible.</p>
+<p>Programming should be simple, which is why we built Deno to be zero config with
+sane defaults. However, we acknowledge that larger projects often require more
+sophisticated setups, so we’ve continuously improved our optional deno.json
+configuration file to meet these needs without sacrificing ease-of-use:</p>
+<p>These improvements help make Deno not only powerful and flexible for large-scale
+applications, but also simple and accessible for smaller projects.</p>
+<p>Over 4 years, 151 releases, and 4k commits later, the
+Deno Standard Library is finally stabilized. This
+collection of 40+, closely audited, utility modules cover a wide gamut of uses
+in JavaScript, the web, and general data manipulation. The best part is that
+this library can be used across all JavaScript runtimes and environments like
+the browser.</p>
+<p>To give you a sense of what kinds of modules are available in the Deno Standard
+Library, here is a partial list of the Standard Library modules and their
+equivalent in npm:</p>
+<p>For a complete list of available packages visit https://jsr.io/@std.</p>
+<p>Building Deno means touching a wide range of open source projects that we
+contribute to in order to expand Deno’s features and optimize performance. Here
+are some Rust crates that developers may find useful independently of Deno
+itself:</p>
+<p>While we marked a significant milestone with the launch of Deno 2, we continued
+to operate and iterate our serverless compute platform, Deno Deploy,
+the simplest way to run arbitrary JavaScript/TypeScript in the cloud.</p>
+<p>We’ve given Deno Deploy users an improved onboarding flow with
+new tutorials
+that show how easy it is to get started with Deno’s cloud primitives,
+as well as
+a streamlined project creation flow
+that auto-detects frameworks and provides more transparency into the build and
+deployment steps. We also
+got Next.js to work on Deno Deploy!</p>
+<p>We’ve also given users more flexibility in how they use Deno Deploy.
+We released deployctl, the CLI for Deno
+Deploy that lets users create, manage, and observe your deployments from the
+terminal. The Web Cache API support
+also grants users fine tuned control over the performance of their deployments.
+Also, we’ve implemented
+safeguards over cloud billing with new spending limits.</p>
+<p>Our enterprise product, Deno Subhosting, continued to see improvements over the
+past year. We’ve added support for
+programmatically managing custom domains and subdomains
+and configuring data backups. If
+you’d like to learn more about how your product can safely run your users’
+untrusted code without months of engineering effort,
+please get in touch.</p>
+<p>Finally, we’re continuing to iterate on our next generation, islands-based full
+stack web framework, Fresh, with 2.0 on the horizon.
+(Actually, Fresh 2 is already available in beta, with documentation and a formal
+launch coming soon. If you want access to Fresh 2, let us know in
+Discord.) This next major version is a material
+overhaul of the internal APIs, but should unlock the ability to create
+composable and modular middleware. Stay tuned!</p>
+<p>Last year we released Deno 2, expanding what developers already love about
+Deno — it’s simplicity, all-in-one toolchain, built-in web standards APIs and
+TypeScript support — to become more flexible and usable in a wider variety of
+projects and use cases:</p>
+<p>This year, we’ll focus on making Deno more reliable and efficient for production
+scenarios. For instance, in our next minor release, we plan to improve
+observability, tracing, and debugging. We’re also working towards much faster
+cloud performance in Deno and our commercial product, Deno Deploy, which hope to
+talk more about soon.</p>
+<p>Stay in the loop — follow us on Bluesky,
+Twitter,
+YouTube, and
+Discord.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/deno-in-2024" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#931. Tuesday, January 21, 2025 Security Releases</h2>
+    <div class="article-meta">
+        📅 Jan 21, 2025 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/vulnerability/january-2025-security-releases" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20Tuesday,%20January%2021,%202025%20Security%20Releases" alt="Tuesday, January 21, 2025 Security Releases" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20Tuesday,%20January%2021,%202025%20Security%20Releases" alt="Tuesday, January 21, 2025 Security Releases" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Updates are now available for the 23.x, 22.x, 20.x, 18.x Node.js release lines for the
+following issues.</p>
+<p>This security release includes the following dependency updates to address public vulnerabilities:</p>
+<p>Along with the security fixes, the Node.js team has also issued CVEs for
+End-of-Life (EOL) versions of Node.js.</p>
+<p>With the aid of the diagnostics_channel utility, an event can be hooked into whenever a worker thread is created. This is not limited only to workers but also exposes internal workers, where an instance of them can be fetched, and its constructor can be grabbed and reinstated for malicious usage.</p>
+<p>This vulnerability affects Permission Model users (--permission) on Node.js v20, v22, and v23.</p>
+<p>Thank you, to leodog896 for reporting this vulnerability and thank you RafaelGSS for fixing it.</p>
+<p>A vulnerability has been identified in Node.js, specifically affecting the handling of drive names in the Windows environment. Certain Node.js functions do not treat drive names as special on Windows. As a result, although Node.js assumes a relative path, it actually refers to the root directory.</p>
+<p>On Windows, a path that does not start with the file separator is treated as relative to the current directory.</p>
+<p>This vulnerability affects Windows users of path.join API.</p>
+<p>Thank you, to ryotak and taise for reporting this vulnerability and thank you tniessen for fixing it.</p>
+<p>A memory leak could occur when a remote peer abruptly closes the socket without sending a GOAWAY notification. Additionally, if an invalid header was detected by nghttp2, causing the connection to be terminated by the peer, the same leak was triggered. This flaw could lead to increased memory consumption and potential denial of service under certain conditions.</p>
+<p>This vulnerability affects HTTP/2 Server users on Node.js v18.x, v20.x, v22.x and v23.x.</p>
+<p>Thank you, to newtmitch for reporting this vulnerability and thank you RafaelGSS for fixing it.</p>
+<p>The Node.js project will release new versions of the 23.x, 22.x, 20.x, 18.x
+releases lines on or shortly after, Tuesday, January 21, 2025 in order to address:</p>
+<p>The 23.x release line of Node.js is vulnerable to 1 high severity issues, 2 medium severity issues.
+The 22.x release line of Node.js is vulnerable to 1 high severity issues, 2 medium severity issues.
+The 20.x release line of Node.js is vulnerable to 1 high severity issues, 2 medium severity issues.
+The 18.x release line of Node.js is vulnerable to 2 medium severity issues.</p>
+<p>It's important to note that End-of-Life versions are always affected when a security release occurs.
+To ensure your system's security, please use an up-to-date version as outlined in our
+Release Schedule.</p>
+<p>Releases will be available on, or shortly after, Tuesday, January 21, 2025.</p>
+<p>The current Node.js security policy can be found at https://nodejs.org/en/security/.
+Please follow the process outlined in https://github.com/nodejs/node/blob/master/SECURITY.md if you wish to report a vulnerability in Node.js.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/vulnerability/january-2025-security-releases" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#714. Goodbye WinterCG, welcome WinterTC</h2>
+    <div class="article-meta">
+        📅 Jan 10, 2025 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/wintertc" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/wintertc/cover.jpg" alt="Goodbye WinterCG, welcome WinterTC" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/wintertc/cover.jpg" alt="Goodbye WinterCG, welcome WinterTC" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Deno has always been
+committed to web standards and runtime
+interoperability. Here at Deno, we believe that the web is the most important
+development platform in the world - poised to outlive all other development
+platforms. We believe that the APIs that make up the web are so ubiquitous that
+they should not be constrained to just the browser. They should be usable by any
+developer, including server-side developers.</p>
+<p>That is why in 2021, Deno joined Ecma International to participate in TC39, and
+in 2022 co-founded the Web Interoperable Runtimes Community Group (WinterCG) at
+the W3C to promote runtime interoperability through web standards. Since then
+WinterCG has been working on standards of it’s own, such as the
+Minimum Common API. However, as
+a W3C Community Group, WinterCG was not able to publish this standard.</p>
+<p>Today, we are excited to announce that WinterCG is moving to Ecma
+International, as Ecma International Technical Committee 55 (TC55). This move
+enables WinterTC (the new name of the group) to publish standards, such as our
+Minimum Common API.</p>
+<p>We are grateful to the W3C for hosting WinterCG and for the support they have
+provided us in the past year. We are excited to continue our work in the new TC
+at Ecma International, and look forward to collaborating more with the broader
+web standards community to bring the benefits of web standards to even more
+server-side developers.</p>
+<p>You can read more about WinterTC at the wintertc.org
+website.</p>
+<p>Read more about this announcement on the W3C blog, in the
+Ecma International press release, and in the
+blog post of fellow WinterTC member Igalia.</p>
+<p>We would like to expressly thank Daniel Ehrenberg, Aki Rose Braun, and Samina
+Husain for their help in making this transition possible.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/wintertc" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html" class="active">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

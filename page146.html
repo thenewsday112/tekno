@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 146</title>
+<meta name="description" content="Page 146">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page146.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 146</h1>
+<article class="article-card">
+    <h2>#1067. ClickHouse Partnership, improved Postgres Replication, and Disk Management</h2>
+    <div class="article-meta">
+        📅 Oct 30, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-clickhouse-partnership" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/clickhouse-supabase/supabase-clickhouse-og.png" alt="ClickHouse Partnership, improved Postgres Replication, and Disk Management" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/clickhouse-supabase/supabase-clickhouse-og.png" alt="ClickHouse Partnership, improved Postgres Replication, and Disk Management" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're seeing an emerging trend for AI customers: Postgres and ClickHouse is becoming the “default data stack”.</p>
+<p>This makes sense - AI companies typically generate a lot of logs and analytical data, which is better suited for an OLAP database like ClickHouse.</p>
+<p>The combination of Supabase and ClickHouse together are perfect for Helicone.ai, providing the flexibility of Postgres with the analytical power of ClickHouse — an open-source stack we can trust and customize.</p>
+<p>The partnership between Supabase and ClickHouse aims to create a seamless experience, building on the already solid Postgres + ClickHouse foundation. Today, we're releasing new features to enhance this integration.</p>
+<p>ClickHouse is very excited to partner with Supabase to make it easy for customers to use both technologies together. Through this partnership, we aim to make it even simpler for Postgres developers to use ClickHouse in conjunction and build real-time, data-driven applications at scale.</p>
+<p>Before diving into those changes, some context on how most customers use Supabase and ClickHouse together. While both are databases, they serve different use-cases:</p>
+<p>Postgres is a row-oriented database, ClickHouse is column-oriented. The ClickHouse team have a great write up about the difference between the two formats.</p>
+<p>To provide an interface between these, Supabase customers generally use:</p>
+<p>We're making a number of changes to our platform based on the feedback we've had from customers.</p>
+<p>Using the ClickHouse FDW, you can directly query your ClickHouse database from Postgres:</p>
+<p>This means you can query your ClickHouse data using the Postgres tooling that you're familiar with.</p>
+<p>The Wrapper now has support for ClickHouse Parameterized Views. With this update, you can pass query parameters directly to ClickHouse, taking full advantage of its analytical engine::</p>
+<p>Many of our customers use PeerDB to replicate data from Postgres to ClickHouse. This has occasionally presented challenges, particularly with Postgres's default 1GB WAL size, which, for large data volumes, can result in data loss if the WAL exceeds this size.</p>
+<p>To resolve this, we've added 13 configurable Postgres parameters, enabling you to adjust replication settings through the CLI. For example, you can increase the default WAL size to 2GB:</p>
+<p>The new CLI config includes the following Postgres parameters:</p>
+<p>Supabase now provides granular control over disk usage for your Postgres database:</p>
+<p>This is driven directly by customers using tools like PeerDB. With adjustable WAL configuration, it's important that developers can manage the disk as well. For example, on the Pro Plan's 8GB disk, you can configure your project with options like:</p>
+<p>Additionally, we're introducing High-performance Disks. We'll release more details about this later.</p>
+<p>The ClickHouse team have also been busy. They've released a number of updates to their platform, including:</p>
+<p>You can learn more about these features in the Supabase Partnership post they released today.</p>
+<p>Improving the experience between Postgres and ClickHouse is the first phase of this partnership. We're already working on native platform integrations. If you're using (or plan to use) Supabase and ClickHouse together please reach out - we'd love more design partners to help shape the future of this integration.</p>
+<p>If you simply want to try out the tools and updates we've described above, you can get started with all of them, free of charge:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-clickhouse-partnership" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#968. Node.js 22.11.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v22.11.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.11.0%20(LTS)" alt="Node.js 22.11.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.11.0%20(LTS)" alt="Node.js 22.11.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This release marks the transition of Node.js 22.x into Long Term Support (LTS)
+with the codename 'Jod'. The 22.x release line now moves into "Active LTS"
+and will remain so until October 2025. After that time, it will move into
+"Maintenance" until end of life in April 2027.</p>
+<p>Other than updating metadata, such as the process.release object, to reflect
+that the release is LTS, no further changes from Node.js 22.10.0 are included.</p>
+<p>Official binaries for Node.js 22.x currently include OpenSSL 3.0.x (more
+specifically, the quictls OpenSSL fork).
+OpenSSL 3.0.x is the currently designated long term support version that is
+scheduled to be supported until 7th September 2026, which is within the expected
+lifetime of Node.js 22.x. We are expecting upstream OpenSSL to announce a
+successor long term support version prior to that date and since OpenSSL now
+follows a semantic versioning-like versioning scheme we expect to be able to
+update to the next long term supported version of OpenSSL during the lifetime of
+Node.js 22.x.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v22.11.0/node-v22.11.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v22.11.0/node-v22.11.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v22.11.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v22.11.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v22.11.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v22.11.0/node-v22.11.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v22.11.0/node-v22.11.0.tar.gz 
+Other release files: https://nodejs.org/dist/v22.11.0/ 
+Documentation: https://nodejs.org/docs/v22.11.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v22.11.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#791. Build an Astro site with Deno</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/build-astro-with-deno" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/build-astro-with-deno/og.png" alt="Build an Astro site with Deno" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/build-astro-with-deno/og.png" alt="Build an Astro site with Deno" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Astro is a modern web framework focused on
+content-centric websites, which leverages islands architecture and sends zero
+JavaScript to the client by default. And with the recent release of
+Deno 2, now
+backwards compatible with Node and npm,
+the experience of using Astro and Deno has improved.</p>
+<p>Deno 2 is backwards compatible with Node and npm,
+allowing you to use your preferred JavaScript framework.
+Watch the full Deno 2 announcement video.</p>
+<p>We’ll go over how to build a simple Astro project using Deno:</p>
+<p>Feel free to skip directly to
+the source code or
+follow along below!</p>
+<p>Deno offers backwards compatibilty with Node/npm, built-in package management,
+all-in-one zero-config toolchain,
+native TypeScript support,
+and more.</p>
+<p>Astro provides a CLI tool to quickly scaffold a new Astro project. In your
+terminal, run the command deno -A npm:create-astro@latest to create a new
+Astro project with Deno. For this tutorial, we’ll select the “Empty” template so
+we can start from scratch, and skip installing dependencies so we can install
+them with Deno later:</p>
+<p>As of Deno 2,
+Deno can also install packages with the new deno install command.
+So let’s run
+deno install with the
+flag --allow-scripts to execute any npm lifecycle scripts:</p>
+<p>To see what commands we have, let’s run deno task:</p>
+<p>We can start the Astro server with deno task dev:</p>
+<p>Our app will display facts about a variety of dinosaurs. The first page to
+create will be the index page that lists links to all dinosaurs in our
+“database”.</p>
+<p>First, let’s create the data that will be used in the app. In this example,
+we’ll hardcode the data in a json file, but you can use any data storage in
+practice. We’ll create a data folder in the root of the project, then a
+dinosaurs.json file with
+this text
+in it.</p>
+<p>⚠️️ In this tutorial we hard code the data. But you can connect to
+a variety of databases
+and
+even use ORMs like Prisma
+with Deno.</p>
+<p>Once we have the data, let’s create an index page that lists all of the
+dinosaurs. In the ./src/pages/index.astro page, let’s write the following:</p>
+<p>Let’s start the server with deno task dev and point our browser to
+localhost:4321:</p>
+<p>Awesome! But when you click on a dinosaur, it 404’s. Let’s fix that.</p>
+<p>Our app will display facts about a variety of dinosaurs. In order to do that,
+we’ll create a dynamic server-side rendered (”SSR”), which
+offers better performance for end users while improving your pages SEO.</p>
+<p>Next, let’s create a new file under /src/pages/ called [dinosaur].astro. At
+the top of the file, we’ll add some logic to pull data from our hardcoded data
+source and filter that against the dinosaur parameter set from the URL path.
+At the bottom, we’ll render the data. Your file should look like this:</p>
+<p>⚠️️ The
+Deno language server
+does not currently support .astro files, so you may experience false red
+squigglies. We’re working on improving this experience.</p>
+<p>Let’s run it with deno task dev, and point our browser to
+localhost:4321/abrictosaurus:</p>
+<p>We hope this tutorial gives you a good idea of how to get started building with
+Astro and Deno. You can learn more about Astro and
+their progressive approach to building websites.
+If you’re interested in swapping out our hardcoded data store, here are some
+resources on
+connecting to databases with Deno,
+including
+Planetscale,
+Redis, and
+more. Or you can learn how to
+deploy your Astro project to Deno Deploy,
+or follow these guides on how to self-host Deno to
+AWS,
+Digital Ocean, and
+Google Cloud Run.</p>
+<p>Check out our new tutorial series, Learn Deno, to learn how to use Deno’s
+all-in-one toolchain,
+web platform APIs, and
+Deno-namespace APIs, and more,
+in short bite-sized videos.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/build-astro-with-deno" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#972. Node.js 23.1.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Oct 24, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v23.1.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.1.0%20(Current)" alt="Node.js 23.1.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.1.0%20(Current)" alt="Node.js 23.1.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>When a Buffer is created using a resizable ArrayBuffer, the Buffer length
+will now correctly change as the underlying ArrayBuffer size is changed.</p>
+<p>MockTimers, introduced in April 2023, has just reached stable status. This
+API provides comprehensive support for mocking Date and all major timers in
+Node.js, including setTimeout, setInterval, and setImmediate, both from
+the node:timers, node:timers/promises modules and global objects. After
+months of refinement, developers can now fully rely on MockTimers for testing
+time-based operations with confidence, ensuring better control over asynchronous
+behavior in their Node.js applications.</p>
+<p>Example usage with initial Date object as time set:</p>
+<p>The two proposals reached stage 4 of the TC39 process, at the October 2024
+meeting. The Node.js implementation already matches exactly the semantics
+required by the proposals.</p>
+<p>Windows 64-bit Installer: https://nodejs.org/dist/v23.1.0/node-v23.1.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v23.1.0/node-v23.1.0-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v23.1.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v23.1.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v23.1.0/node-v23.1.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v23.1.0/node-v23.1.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v23.1.0/node-v23.1.0.tar.gz 
+Other release files: https://nodejs.org/dist/v23.1.0/ 
+Documentation: https://nodejs.org/docs/v23.1.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v23.1.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#108. React Compiler Beta Release</h2>
+    <div class="article-meta">
+        📅 Oct 21, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://react.dev/blog/2024/10/21/react-compiler-beta-release" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://react.dev/images/og/blog-2024-10-21-react-compiler-beta-release.png" alt="React Compiler Beta Release" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://react.dev/images/og/blog-2024-10-21-react-compiler-beta-release.png" alt="React Compiler Beta Release" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Please see the stable release blog post for details.</p>
+<p>The React team is excited to share new updates:</p>
+<p>At React Conf 2024, we announced the experimental release of React Compiler, a build-time tool that optimizes your React app through automatic memoization. You can find an introduction to React Compiler here.</p>
+<p>Since the first release, we’ve fixed numerous bugs reported by the React community, received several high quality bug fixes and contributions1 to the compiler, made the compiler more resilient to the broad diversity of JavaScript patterns, and have continued to roll out the compiler more widely at Meta.</p>
+<p>In this post, we want to share what’s next for React Compiler.</p>
+<p>At React India 2024, we shared an update on React Compiler. Today, we are excited to announce a new Beta release of React Compiler and ESLint plugin. New betas are published to npm using the @beta tag.</p>
+<p>You can watch Sathya Gunasekaran’s talk at React India here:</p>
+<p>React Compiler’s ESLint plugin helps developers proactively identify and correct Rules of React violations. We strongly recommend everyone use the linter today. The linter does not require that you have the compiler installed, so you can use it independently, even if you are not ready to try out the compiler.</p>
+<p>After installation you can enable the linter by adding it to your ESLint config. Using the linter helps identify Rules of React breakages, making it easier to adopt the compiler when it’s fully released.</p>
+<p>React Compiler produces code that depends on runtime APIs added in React 19, but we’ve since added support for the compiler to also work with React 17 and 18. If you are not on React 19 yet, in the Beta release you can now try out React Compiler by specifying a minimum target in your compiler config, and adding react-compiler-runtime as a dependency. You can find docs on this here.</p>
+<p>Our initial release was focused on identifying major issues with using the compiler in applications. We’ve gotten great feedback and have substantially improved the compiler since then. We’re now ready for broad feedback from the community, and for library authors to try out the compiler to improve performance and the developer experience of maintaining your library.</p>
+<p>React Compiler can also be used to compile libraries. Because React Compiler needs to run on the original source code prior to any code transformations, it is not possible for an application’s build pipeline to compile the libraries they use. Hence, our recommendation is for library maintainers to independently compile and test their libraries with the compiler, and ship compiled code to npm.</p>
+<p>Because your code is pre-compiled, users of your library will not need to have the compiler enabled in order to benefit from the automatic memoization applied to your library. If your library targets apps not yet on React 19, specify a minimum target and add react-compiler-runtime as a direct dependency. The runtime package will use the correct implementation of APIs depending on the application’s version, and polyfill the missing APIs if necessary.</p>
+<p>We previously announced the invite-only React Compiler Working Group at React Conf to provide feedback, ask questions, and collaborate on the compiler’s experimental release.</p>
+<p>From today, together with the Beta release of React Compiler, we are opening up Working Group membership to everyone. The goal of the React Compiler Working Group is to prepare the ecosystem for a smooth, gradual adoption of React Compiler by existing applications and libraries. Please continue to file bug reports in the React repo, but please leave feedback, ask questions, or share ideas in the Working Group discussion forum.</p>
+<p>The core team will also use the discussions repo to share our research findings. As the Stable Release gets closer, any important information will also be posted on this forum.</p>
+<p>At React Conf, we shared that our rollout of the compiler on Quest Store and Instagram were successful. Since then, we’ve deployed React Compiler across several more major web apps at Meta, including Facebook and Threads. That means if you’ve used any of these apps recently, you may have had your experience powered by the compiler. We were able to onboard these apps onto the compiler with few code changes required, in a monorepo with more than 100,000 React components.</p>
+<p>We’ve seen notable performance improvements across all of these apps. As we’ve rolled out, we’re continuing to see results on the order of the wins we shared previously at ReactConf. These apps have already been heavily hand tuned and optimized by Meta engineers and React experts over the years, so even improvements on the order of a few percent are a huge win for us.</p>
+<p>We also expected developer productivity wins from React Compiler. To measure this, we collaborated with our data science partners at Meta2 to conduct a thorough statistical analysis of the impact of manual memoization on productivity. Before rolling out the compiler at Meta, we discovered that only about 8% of React pull requests used manual memoization and that these pull requests took 31-46% longer to author3. This confirmed our intuition that manual memoization introduces cognitive overhead, and we anticipate that React Compiler will lead to more efficient code authoring and review. Notably, React Compiler also ensures that all code is memoized by default, not just the (in our case) 8% where developers explicitly apply memoization.</p>
+<p>This is not a final roadmap, and is subject to change.</p>
+<p>We intend to ship a Release Candidate of the compiler in the near future following the Beta release, when the majority of apps and libraries that follow the Rules of React have been proven to work well with the compiler. After a period of final feedback from the community, we plan on a Stable Release for the compiler. The Stable Release will mark the beginning of a new foundation for React, and all apps and libraries will be strongly recommended to use the compiler and ESLint plugin.</p>
+<p>These releases also include the compiler’s ESLint plugin, which surfaces diagnostics statically analyzed by the compiler. We plan to combine the existing eslint-plugin-react-hooks plugin with the compiler’s ESLint plugin, so only one plugin needs to be installed.</p>
+<p>Post-Stable, we plan to add more compiler optimizations and improvements. This includes both continual improvements to automatic memoization, and new optimizations altogether, with minimal to no change of product code. Upgrading to each new release of the compiler is aimed to be straightforward, and each upgrade will continue to improve performance and add better handling of diverse JavaScript and React patterns.</p>
+<p>Throughout this process, we also plan to prototype an IDE extension for React. It is still very early in research, so we expect to be able to share more of our findings with you in a future React Labs blog post.</p>
+<p>Thanks to Sathya Gunasekaran, Joe Savona, Ricky Hanlon, Alex Taylor, Jason Bonta, and Eli White for reviewing and editing this post.</p>
+<p>Thanks @nikeee, @henryqdineen, @TrickyPi, and several others for their contributions to the compiler. ↩</p>
+<p>Thanks Vaishali Garg for leading this study on React Compiler at Meta, and for reviewing this post. ↩</p>
+<p>After controlling on author tenure, diff length/complexity, and other potential confounding factors. ↩</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://react.dev/blog/2024/10/21/react-compiler-beta-release" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#973. Node.js 22.10.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Oct 16, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v22.10.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.10.0%20(Current)" alt="Node.js 22.10.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.10.0%20(Current)" alt="Node.js 22.10.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This release introduces a "module-sync" exports condition that's enabled when
+require(esm) is enabled, so packages can supply a synchronous ES module to the
+Node.js module loader, no matter if it's being required or imported. This is
+similar to the "module" condition that bundlers have been using to support
+require(esm) in Node.js, and allows dual-package authors to opt into ESM-first
+only on newer versions of Node.js that supports require(esm) to avoid the
+dual-package hazard.</p>
+<p>Or if the package is only meant to be run on Node.js and wants to fallback to
+CJS on older versions that don't have require(esm):</p>
+<p>For package authors: this only serves as a feature-detection mechanism for
+packages that wish to support both CJS and ESM users during the period when some
+active Node.js LTS versions support require(esm) while some older ones don't.
+When all active Node.js LTS lines support require(esm), packages can simplify
+their distributions by bumping the major version, dropping their CJS exports,
+and removing the module-sync exports condition (with only main or default
+targetting the ESM exports). If the package needs to support both bundlers and
+being run unbundled on Node.js during the transition period, use both
+module-sync and module and point them to the same ESM file. If the package
+already doesn't want to support older versions of Node.js that doesn't support
+require(esm), don't use this export condition.</p>
+<p>For bundlers/tools: they should avoid implementing this stop-gap condition.
+Most existing bundlers implement the de-facto bundler standard
+module
+exports condition, and that should be enough to support users who want to bundle
+ESM from CJS consumers. Users who want both bundlers and Node.js to recognize
+the ESM exports can use both module/module-sync conditions during the
+transition period, and can drop module-sync+module when they no longer need
+to support older versions of Node.js. If tools do want to support this
+condition, it's recommended to make the resolution rules in the graph pointed by
+this condition match the Node.js native ESM rules to avoid divergence.</p>
+<p>We ended up implementing a condition with a different name instead of reusing
+"module", because existing code in the ecosystem using the "module"
+condition sometimes also expect the module resolution for these ESM files to
+work in CJS style, which is supported by bundlers, but the native Node.js loader
+has intentionally made ESM resolution different from CJS resolution (e.g.
+forbidding import './noext' or import './directory'), so it would be
+breaking to implement a "module" condition without implementing the forbidden
+ESM resolution rules. For now, this just implements a new condition as
+semver-minor so it can be backported to older LTS.</p>
+<p>This CLI flag runs a specified command from a package.json's "scripts" object.</p>
+<p>You can run node --run test and that would start the test suite.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v22.10.0/node-v22.10.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v22.10.0/node-v22.10.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v22.10.0/node-v22.10.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v22.10.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v22.10.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v22.10.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v22.10.0/node-v22.10.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v22.10.0/node-v22.10.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v22.10.0/node-v22.10.0.tar.gz 
+Other release files: https://nodejs.org/dist/v22.10.0/ 
+Documentation: https://nodejs.org/docs/v22.10.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v22.10.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#977. Node.js 23.0.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Oct 16, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v23.0.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.0.0%20(Current)" alt="Node.js 23.0.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2023.0.0%20(Current)" alt="Node.js 23.0.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We’re excited to announce the release of Node.js 23! Key highlights include:</p>
+<p>Node.js 23 will replace Node.js 22 as the ‘Current’ release line when Node.js 22 enters long-term support (LTS) later this month.
+According to the release schedule, Node.js 23 will remain the ‘Current’ release for the next six months, until April 2025.</p>
+<p>Support for loading native ES modules using require() had been available on v20.x and v22.x under the command line flag --experimental-require-module. In v23.x, this feature is now enabled by default. This feature is still experimental, and we are looking for user feedback to make more final tweaks before fully stabilizing it. For this reason, on v23.x, when the Node.js instance encounters a native ES module in require() for the first time, it will emit an experimental warning.</p>
+<p>If there happens to be any regressions caused by this feature, users can report it to the Node.js issue tracker. Meanwhile this feature can also be disabled using --no-experimental-require-module as a workaround. We expect to test this feature using v23.x, find out any potential regressions and make adjustments accordingly, before backporting the unflagging to v22.x. This will likely happen in a later semver-minor release after the LTS promotion at the end of October.</p>
+<p>With this feature enabled, Node.js will no longer throw ERR_REQUIRE_ESM if require() is used to load a ES module. It can, however, throw ERR_REQUIRE_ASYNC_MODULE if the ES module being loaded or its dependencies contain top-level await. When the ES module is loaded successfully by require(), the returned object will be a ES module namespace object similar to what's returned by import(), and can be checked using util.isModuleNamespaceObject().</p>
+<p>Users can check process.features.require_module to see whether require(esm) is enabled in the current Node.js instance. For packages, the "module-sync" exports condition can be used as a way to detect require(esm) support in the current Node.js instance and allow both require() and import to load the same native ES module. See the documentation for more details about this feature.</p>
+<p>Windows 64-bit Installer: https://nodejs.org/dist/v23.0.0/node-v23.0.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v23.0.0/node-v23.0.0-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v23.0.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v23.0.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v23.0.0/node-v23.0.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v23.0.0/node-v23.0.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v23.0.0/node-v23.0.0.tar.gz 
+Other release files: https://nodejs.org/dist/v23.0.0/ 
+Documentation: https://nodejs.org/docs/v23.0.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v23.0.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#321. Llamafile v0.8.14: a new UI, performance gains, and more</h2>
+    <div class="article-meta">
+        📅 Oct 16, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://hacks.mozilla.org/2024/10/llamafile-v0-8-14-a-new-ui-performance-gains-and-more/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p><p>Discover the latest release of Llamafile 0.8.14, an open-source AI tool by Mozilla Builders. With a new command-line chat interface, enhanced performance, and support for powerful models, Llamafile makes it easy to run large language models (LLMs) on your own hardware. Learn more about the updates and how to get involved with this cutting-edge project.</p>
+<p>The post <a href="https://hacks.mozilla.org/2024/10/llamafile-v0-8-14-a-new-ui-performance-gains-and-more/">Llamafile v0.8.14: a new UI, performance gains, and more</a> appeared first on <a href="https://hacks.mozilla.org">Mozilla Hacks - the Web developer blog</a>.</p></p>
+                <p style="margin-top: 25px;">
+                    <a href="https://hacks.mozilla.org/2024/10/llamafile-v0-8-14-a-new-ui-performance-gains-and-more/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#797. How to convert CommonJS to ESM</h2>
+    <div class="article-meta">
+        📅 Oct 16, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/convert-cjs-to-esm" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/convert-cjs-to-esm/og.png" alt="How to convert CommonJS to ESM" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/convert-cjs-to-esm/og.png" alt="How to convert CommonJS to ESM" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>ECMAScript modules (”ESM”) are the official, modern way of writing and sharing
+JavaScript — it’s supported in many environments (e.g. browsers, the edge, and
+modern runtimes like Deno), and offers a better development experience (e.g.
+async loading and being able to export without globals). While CommonJS was the
+standard for many years, supporting
+CommonJS today is hurting the JavaScript community.</p>
+<p>All new JavaScript should be written in ESM for future proofing. However, there
+are many cases where a legacy code base needs to be modernized for compatibility
+reasons with newer packages. In this blog post, we’ll show you how to
+migrate the syntax of a legacy CommonJS project to one that supports ESM
+and tools to help smooth out that process.</p>
+<p>Want to write modern JavaScript and TypeScript without tedious config or
+boilerplate?</p>
+<p>Check out Deno, a “batteries-included”,
+secure-by-default
+all-in-one toolchain for
+JavaScript development with native
+TypeScript
+and
+web standard API
+support.</p>
+<p>Here’s how you can update import and export syntax from CommonJS to ESM.</p>
+<p>Note that in ESM, the file extension must be included in the module path. Fully
+specified imports reduce ambiguity by ensuring the correct file is always
+imported by the module resolution process. Plus, it aligns with how browsers
+handle module imports, making it easier to write isomorphic code that’s
+predictable and maintainable.</p>
+<p>What about conditional imports? If you are using Node.js v14.8 or later (or
+Deno), then you’ll have access to top-level await, which you can use to make
+import synchronous:</p>
+<p>If you’re using package.json, you’ll need to make a few adjustments to support
+ESM:</p>
+<p>Note the leading "./" in ESM is necessary as every reference has to use the
+full pathname, including directory and file extension.</p>
+<p>Also, both "main" and "exports" define entry points for a project. However,
+"exports" is a modern alternative to "main" in that it gives authors the
+ability to clearly define the public interface for their package by allowing
+multiple entry points, supporting conditional entry resolution between
+environments, and preventing other entry points outside of those defined in
+"exports".</p>
+<p>Finally, another way to tell Node to run the file in ESM is to use the .mjs
+file extension. This is great if you want to update a single file to ESM. But if
+your goal is to convert your entire code base, it’s easier to update the type
+in your package.json.</p>
+<p>Since JavaScript inside an ESM will automatically run in
+strict mode,
+you can remove all instances of "use strict"; from your code base:</p>
+<p>CommonJS also supported a handful of built-in globals that do not exist in ESM,
+such as __dirname and __filename. One simple way to get around that is to
+use a quick shim to populate those values:</p>
+<p>While the above touches upon the changes necessary to convert a CommonJS code
+base to an ESM one, there are a few tools to help with that transition.</p>
+<p>With VSCode, you can quickly convert all
+import and export statements from CommonJS to ESM. Simply hover over the
+require keyword, hit “quick fix”, and all of those statements in that file
+will be updated to ESM:</p>
+<p>You’ll notice that VSCode can swap out the proper keywords for importing and
+exporting, but the specifiers are missing filename extensions. You can quickly
+add them by running
+deno lint --fix.
+Deno’s linter comes with a no-sloppy-imports rule that will show a linting
+error when an import path doesn’t contain the file extension.</p>
+<p>For a more end-to-end approach to converting CommonJS to ESM, there are a few
+transpilation options. There is the CLI tool
+ts2esm, which converts CJS to ESM, and
+includes
+step-by-step instructions
+and even
+a nifty video walkthrough.</p>
+<p>There are ones like cjs2esm and
+cjstoesm, as well as the Babel plugin
+babel-plugin-transform-commonjs,
+though these tools are not actively maintained so keep that in mind when
+evaluating them.</p>
+<p>ESM is the standard JavaScript way to share code and all new JavaScript should
+support it. Choosing to support CommonJS today can be extremely painful for
+module authors and developers who don’t want to troubleshoot legacy
+compatibility issues. In fact, JSR, our open source modern JavaScript registry
+explicitly forbids modules using CommonJS. We urge everyone to do their part in
+leveling up the JavaScript ecosystem.</p>
+<p>Deno offers backwards compatibilty with Node/npm, built-in package management,
+all-in-one zero-config toolchain,
+native TypeScript support,
+and more.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/convert-cjs-to-esm" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1073. Live Share: Connect to in-browser PGlite with any Postgres client</h2>
+    <div class="article-meta">
+        📅 Oct 10, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/database-build-live-share" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/database-build-live-share/database-build-live-share-og.png" alt="Live Share: Connect to in-browser PGlite with any Postgres client" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/database-build-live-share/database-build-live-share-og.png" alt="Live Share: Connect to in-browser PGlite with any Postgres client" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We just rolled out an exciting new feature for database.build (formerly postgres.new): Live Share.</p>
+<p>Live Share allows you to connect to your in-browser PGlite databases from outside the browser.</p>
+<p>In case you missed it, database.build is an in-browser Postgres sandbox with AI assistance. You can spin up an unlimited number of Postgres databases and interact with them using natural language (via LLM). This is possible thanks to PGlite - a WASM build of Postgres that can run directly in the browser.</p>
+<p>With database.build, simply describe what you would like to build and AI will help you scaffold your tables. You can also drag-and-drop CSVs to automatically generate tables based on their contents, then query them using regular SQL.</p>
+<p>After creating a database on database.build, you can now tap its sidebar menu and choose Live Share. A unique Postgres connection string will appear which you can use to connect to the in-browser instance via any Postgres client.</p>
+<p>You could, for example, copy-paste this connection string into psql. Once connected, you can interact with your in-browser PGlite instance as if it were any regular Postgres database.</p>
+<p>Some other tools you might want to connect to this:</p>
+<p>Note PGlite has a single-connection limit which may not work with all clients - see Limitations.</p>
+<p>To make this possible, we developed a websocket-to-tcp proxy that relays Postgres wire protocol messages between the in-browser PGlite instance and a PostgreSQL client over TCP.</p>
+<p>On the browser side, we establish a persistent Web Socket connection that acts as a reverse tunnel for future messages sent from clients. Since Web Sockets support bidirectional communication, we simply send Postgres client messages in reverse - from our proxy back through the Web Socket tunnel to the PGlite instance in the browser. We are running a server from the browser!</p>
+<p>From the Postgres client side, we use pg-gateway to handle incoming TCP connections. It handles startup and authentication messages, then routes future messages back through the appropriate Web Socket tunnel to the browser.</p>
+<p>pg-gateway is an open source library we developed to speak the Postgres wire protocol from the server-side. It allows us to run a Postgres-native proxy - meaning we can host a single TCP server that understands Postgres wire messages and route connections to multiple downstream databases via a wildcard domain (*.browser.db.build).</p>
+<p>Though you might be thinking - API gateways like nginx and HAProxy already exist to reverse proxy connections. Why can't we use one of these to route Postgres connections?</p>
+<p>In order to proxy a connection, you need to know its intended destination. With a protocol like HTTP, this is easy: simply read the HOST header in the request and forward the connection to the appropriate downstream server. This is often referred to as “virtual hosting” and is how backends are able to serve multiple websites over a single IP/port.</p>
+<p>Adding TLS encryption is slightly more complicated, but not too bad. The problem is: how do you read an HTTP HOST header if the channel is encrypted? Thankfully a TLS extension called Server Name Indication (SNI) was created to solve this problem, which passes the server name in plain text prior to encrypting the channel. The API gateway can simply read this server name and forward the connection to the appropriate downstream server.</p>
+<p>Now back to Postgres. Let's say your Postgres client connects to the host 123.browser.db.build. We need to retrieve the database ID (123) from the host name in order to know which Web Socket tunnel to proxy the connection to. Unfortunately this host name is lost by the time it arrives at the proxy, since your client will first resolve 123.browser.db.build to an IP address via DNS before establishing the connection. And unlike HTTP, the Postgres wire protocol has no HOST-like header, so our gateway has no real way to know which downstream server the request was intended for.</p>
+<p>But - what if we encrypt the Postgres wire channel via TLS, and then just use the same SNI extension to identify the downstream server? This would give us a means to route, and then we can just use an existing API gateway like nginx (which supports TLS + SNI). Right?</p>
+<p>Yes and no. While Postgres does support TLS encryption, it must be established as an upgrade mechanism within its wire protocol. This means that, unlike HTTPS where a TLS handshake is established first before any future HTTP messages, Postgres first expects an unencrypted SSLRequest message and response prior to establishing the connection, similar to the STARTTLS message in other protocols like SMTP and IMAP.</p>
+<p>This is where pg-gateway comes in. The library understands not only Postgres-specific startup and authentication messages, but also SSLRequest messages. When it receives an SSLRequest from the client, it establishes a TLS connection, and importantly, also reads the SNI server name sent by the client. Now we get the best of both worlds - we can encrypt the channel, handle startup and authentication, then forward future messages back through the appropriate Web Socket tunnel based on the ID we pull from the SNI server name.</p>
+<p>Since PGlite is a single-user mode compiled version of PostgreSQL, you can only connect with one Postgres client at a time. If you try to connect multiple clients using the same connection string, you will receive a “too many clients” error.</p>
+<p>We considered multiplexing multiple connections over a single PGlite connection, but the more we dug into it, the more we realized this is a bad idea. To get this to work, you'd need to factor in:</p>
+<p>Be aware that some ORMs like Prisma will create a shadow database and connect to it in parallel in order to generate migrations. This unfortunately will fail with PGlite due to the single-connection limit. If you wish to connect your database with Prisma, you will need to manually configure your shadow database to point to another temporary DB.</p>
+<p>Some IDEs like DBeaver will attempt to open multiple connections in parallel by default. Be sure to disable these settings before connecting via Live Share.</p>
+<p>Live Share is also limited to the protocol messages that PGlite supports. For example, COPY ... FROM STDIN is not yet supported, so attempting to run /copy commands from psql will result in the connection hanging.</p>
+<p>For the initial release, we are also enforcing the following limits on the proxy:</p>
+<p>If you hit any of these limits, just reconnect your Live Share session and you can continue on as before.</p>
+<p>One last thing - we're transitioning postgres.new to a new name: database.build.</p>
+<p>Why rename? The term “Postgres” is reserved for official Postgres projects and we don't want to mislead anyone. We're renaming to database.build because, well, that's what this does. This will still be 100% Postgres-focused, just with a different URL.</p>
+<p>Below are the repos for the projects mentioned in this post - open source as always. Feel free to give them a star, add an issue, or contribute some code yourself:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/database-build-live-share" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#804. Announcing Deno 2</h2>
+    <div class="article-meta">
+        📅 Oct 09, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v2.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v2.0/ogp.jpg" alt="Announcing Deno 2" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v2.0/ogp.jpg" alt="Announcing Deno 2" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The web is humanity’s largest software platform — building for it means
+potentially reaching over 5 billion people.
+But as
+web development has accelerated in recent years,
+it has also become increasingly and unmanageably complex. Before writing a
+single line of code, developers must deal with tedious configuration and wading
+through unnecessary boilerplate, when they would rather focus on shipping
+product and delivering value to users.</p>
+<p>Yet
+despite these complexities,
+JavaScript, the language of the web,
+has remained the most popular language for the past decade,
+with TypeScript quickly emerging as number three. This is a testament to
+JavaScript’s ubiquity and usefulness for web development — and a sign that
+JavaScript is not going anywhere.</p>
+<p>In an effort to simplify web programming, we created Deno: a modern, all-in-one,
+zero-config toolchain for JavaScript and TypeScript development.</p>
+<p>Today, hundreds of thousands of developers love using Deno,
+with repository becoming one of the highest starred Rust project on GitHub second
+only to the Rust language itself.</p>
+<p>While we’ve accomplished a ton in Deno 1, the next major version is focused on
+using Deno at scale. This means seamless interoperability with legacy
+JavaScript infrastructure and support for a wider range of projects and
+development teams. All without sacrificing the simplicity, security, and
+“batteries included” nature that Deno users love.</p>
+<p>Today, we’re thrilled to announce Deno 2, which includes:</p>
+<p>We are also continually improving many existing Deno features:</p>
+<p>Deno 2 is backwards compatible with Node and npm. This allows you to not only
+run Deno in your current Node projects, but also incrementally adopt pieces of
+Deno’s all-in-one toolchain. For instance, you can use deno install after you
+clone a Node project to install your dependencies at lightning speed or run
+deno fmt to format your code without needing Prettier.</p>
+<p>Deno 2’s compatibility with Node and npm is robust. Deno 2 understands
+package.json , the node_modules folder, and even npm workspaces, allowing
+you to run Deno in any Node project using ESM. And if there are minor syntax
+adjustments needed, you can fix them with deno lint --fix.</p>
+<p>Don’t like the clutter of package.json and the node_modules directory, but
+still need to use that npm package? You can directly import npm packages using
+npm: specifiers. Without package.json and the node_modules folder, Deno
+will install your package in the global cache. This allows you to write programs
+with npm dependencies
+in a single file —
+no dependency manifest, configuration files, or node_modules needed.</p>
+<p>For larger projects, a dependency manifest makes it simple to manage your
+dependencies. Placing an npm: specifier into an import map in a deno.json
+file allows importing the bare name of the package:</p>
+<p>With the ability to import npm packages via the npm: specifier, you can access
+over 2 million npm modules in Deno. This even includes complex packages such as
+gRPC, ssh2, Prisma, temporal.io,
+duckdb, polars. Deno even supports advanced features like Node-API native
+addons.</p>
+<p>Finally, you can use Deno 2 with your favorite JavaScript framework. Deno 2
+supports Next.js, Astro, Remix, Angular, SvelteKit, QwikCity and many other
+frameworks.</p>
+<p>Not only does Deno 2 support package.json and the node_modules folder, it
+also comes with three important subcommands that allow you to easily install and
+manage your dependencies.</p>
+<p>deno install installs your dependencies at lightning speed. If you have a
+package.json it will create a node_modules folder in the blink of an eye. If
+you don’t use package.json, it will cache all of your dependencies to the
+global cache.</p>
+<p>deno install is 15% faster than npm with a cold cache, and 90% faster with a
+hot cache. We’re already exceptionally fast here, but expect more improvements,
+especially in cold cache scenarios, in the coming weeks.</p>
+<p>deno add and deno remove can be used to add and remove packages to/from your
+package.json or deno.json. If you’ve used npm install or npm remove
+before, these will feel very familiar.</p>
+<p>Earlier this year we introduced a
+modern, open sourced JavaScript registry
+called JSR.</p>
+<p>It supports TypeScript natively (you can publish modules as TypeScript source
+code), handles the module loading intricacies multiple runtimes and
+environments, only allows ESM,
+auto-generates documentation from JSDoc-style comments,
+and can be used with npm- and npx-like systems (yes, JSR turns TypeScript into
+.js and .d.ts files, as well).</p>
+<p>Because you upload TypeScript to JSR, it has an outstanding understanding of the
+code that is being published. This allows us to deliver a seamless developer
+experience for both publishing and consuming modules. If you are interested in
+the details, you can read our post on
+how we architected JSR.</p>
+<p>While there are over 2 million modules available on npm, the process of
+searching, evaluating, and using a new module can be time consuming. That’s why
+we’ve been building the Deno Standard Library for over 4 years.</p>
+<p>The Standard Library consists of dozens of heavily audited utility modules
+covering everything from data manipulation, web-related logic,
+JavaScript-specific functionalities, and more. It is
+available on JSR, and can be used by other runtimes and
+environments.</p>
+<p>To give you a sense of what kinds of modules are available in the Deno Standard
+Library, here is a partial list of the Standard Library modules and their
+equivalent in npm:</p>
+<p>For a complete list of available packages visit https://jsr.io/@std.</p>
+<p>Private npm registries in Deno 2 work
+the same way they do in Node and npm, with an .npmrc file:</p>
+<p>Deno will pick up this .npmrc file automatically, and will let you pull
+private packages with no additional configuration.</p>
+<p>Deno 2 also supports workspaces, which is a robust solution to manage
+monorepos. Simply use the workspace attribute in your deno.json to list
+the member directories:</p>
+<p>These members can have separate dependencies, linter and formatter
+configuration, and more.</p>
+<p>Not only does Deno support workspaces for Deno packages, it also understands
+npm workspaces. This means
+that you can create a hybrid Deno-npm monorepo
+(see this example),
+with workspace members that either have a package.json or deno.json:</p>
+<p>You can also publish workspace members to JSR by running deno publish. For
+example, refer to the Deno Standard Library.
+No need to manually figure out in what order you need to publish your packages -
+just run deno publish, and it will do it all for you.</p>
+<p>Often, development teams in larger organizations need to carefully audit new
+releases before using them in production. With Deno’s weekly bug-fix releases,
+and 6 weekly minor releases this can become time-consuming. To make it easier
+for these teams, we’re introducing a Long Term Support (LTS) release
+channel.</p>
+<p>Starting with Deno 2.1, the LTS channel will receive critical bug fixes
+back-ported for six months, ensuring a stable and reliable base for production
+use. After six months, a new LTS branch will be created based on the latest
+stable version. All LTS releases are freely available and MIT licensed, making
+them accessible to any team that needs a more stable and secure environment.</p>
+<p>Finally, for teams needing advanced support, we’ve introduced the
+Deno for Enterprise program. It offers priority
+support, direct access to our engineers, guaranteed response times, and priority
+for your feature requests. We’ve partnered with companies like Netlify, Slack,
+and Deco.cx to help their engineers move faster and deliver
+more value to their users.</p>
+<p>We’ve put tremendous effort into making Deno fast across a wide range of
+real-world scenarios. Our focus is on delivering performance improvements that
+truly matter in everyday JavaScript and TypeScript development—whether it’s
+startup time, handling complex requests, or overall efficiency.</p>
+<p>While benchmarks can never tell the full story, they can provide insight into
+where a runtime excels. Here are some benchmarks that showcase Deno’s strengths,
+demonstrating its ability to deliver top-notch performance for both development
+and production environments.</p>
+<p>Correction:
+The first HTTP benchmark
+shown above was conducted using Deno 1.45, not Deno 2.0. In reality, Deno 2.0 is
+about 20% slower than indicated here. This difference is due to
+our recent disabling of V8 pointer compression
+to address cases where users exceeded the 4GB heap limit. We plan to re-enable
+pointer compression soon, as it’s the ideal default for most users, and
+introduce a deno64 build for those needing larger heaps.</p>
+<p>While Deno can run Node programs, it’s designed to push JavaScript and
+TypeScript forward. Deno offers features that Node lacks, such as native
+TypeScript support, web-standard APIs, a complete toolchain for JavaScript
+development, and a secure-by-default execution model—all in a single executable
+with no external dependencies. Using Deno over Node can save you time on setup
+and configuration, letting you start coding and delivering value faster.</p>
+<p>Yes, Deno’s secure-by-default execution model applies when running Node programs
+or importing npm modules, ensuring the same level of security.</p>
+<p>Since the beginning, the cute sauropod in the rain has been Deno’s face. Its
+quirky charm has always been a hallmark of Deno, but the design was never
+consistent—there were at least two “official” versions and countless variations.
+With Deno 2.0, we decided it was time for a refresh.</p>
+<p>We wanted to keep the essence of the original character that Deno users love
+while giving it a more refined look to match Deno’s professional and
+production-grade nature. During the redesign, we realized that the rainy
+background, while nostalgic, didn’t scale well and often went unnoticed. It was
+too busy, especially at small sizes, so we had to let it go.</p>
+<p>After many iterations, we found that simplifying the design to its core elements
+struck the right balance—simple and friendly, yet serious and reliable—just like
+Deno.</p>
+<p>(Don’t worry, the cute dino is still here!)</p>
+<p>Rewriting the entire JavaScript ecosystem isn’t practical. As Deno has scaled
+beyond small programs, we’ve recognized that supporting Node and npm
+compatibility is essential—especially for tools like gRPC and AWS SDKs, which
+are impractical to rewrite from scratch.</p>
+<p>But Deno’s goal is not to become a Node clone in Rust or a drop-in replacement.
+Our aim is to level up JavaScript, moving beyond 2010-era CommonJS and narrowing
+the gap between server-side and browser environments in a way that developers
+can adopt practically. We refuse to accept that JavaScript must remain a tangle
+of mismatched tooling and endless layers of transpilation, unable to evolve.</p>
+<p>Deno’s original vision remains central to everything we do. This includes native
+TypeScript support, built-in web standards like Promises, top-level await, Wasm,
+fetch, and ES Modules, and a batteries-included toolchain—all packaged in a
+single, dependency-free executable. And, of course, it is secure by default,
+just like the web.</p>
+<p>Supporting npm is just one step toward making Deno more versatile. Our mission
+is to provide a modern, streamlined toolchain that enhances the JavaScript
+experience—not just to support legacy code. While we’ve adjusted our approach,
+our vision remains the same: to simplify and empower web development.</p>
+<p>Not at all. You can still run single-file programs or scripts without any config
+or dependency manifest—nothing has changed there. The new package management
+commands (deno install, deno add, and deno remove) are optional tools
+designed to simplify managing dependencies, whether you use a deno.json or
+package.json file. They’re especially useful for larger, more complex projects
+but won’t get in the way if you prefer the simplicity of no configuration.</p>
+<p>One of our core goals is that Deno scales down to simple, single-file programs
+that can import any package without additional ceremony. For example, in
+contexts like Jupyter notebooks or quick scripts, you can easily do:</p>
+<p>At the same time, Deno scales up to handle large projects with multiple files or
+even multiple packages, such as in monorepos. This flexibility ensures that Deno
+is just as effective for small scripts as it is for large, production-grade
+applications.</p>
+<p>Nope! Your Fresh project should work out of the box
+with Deno 2—no changes needed.</p>
+<p>Deno 2 takes all of the features developers love about Deno 1.x — zero-config,
+all-in-one toolchain for JavaScript and TypeScript development, web standard API
+support, secure by default — and makes it fully backwards compatible with Node
+and npm (in ESM). This makes not only running Deno in any Node project simple,
+but also allows incremental adoption of Deno (e.g. running deno fmt or
+deno lint ) possible in larger, more complex projects. Along with improved
+package management, JSR, and a slew of features for more advanced development
+teams, Deno is ready to simplify and accelerate your development today.</p>
+<p>However, given Deno’s vast capabilities, we weren’t able to cover everything in
+a single blog post and video. There are many exciting features and use cases
+with Deno that we didn’t touch upon. For instance, being able to use
+deno compile to
+turn a JavaScript game into a desktop executable
+with cross compilation (yes, Windows) support. Or Deno’s
+Jupyter notebook support
+that allows you to explore and visualize data in TypeScript and
+@observable/plot. Or generating documentation
+or a static documentation site from your JSDoc comments and source code with
+deno doc.</p>
+<p>We invite you to try Deno 2 today and experience the future of JavaScript and
+TypeScript development. Get started with Deno 2 now:</p>
+<p>Join our community and let’s shape the future of JavaScript together!</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v2.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1075. MongoDB Realm &amp; Device Sync Alternatives - Supabase</h2>
+    <div class="article-meta">
+        📅 Oct 09, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/mongodb-realm-and-device-sync-alternatives" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2024-10-09-mongodb-realm-alternatives/mongodb-og-realtime.png" alt="MongoDB Realm &amp; Device Sync Alternatives - Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2024-10-09-mongodb-realm-alternatives/mongodb-og-realtime.png" alt="MongoDB Realm & Device Sync Alternatives - Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>With the recent announcement of MongoDB Realm’s deprecation, developers are looking for alternatives that can support offline-first and real-time sync capabilities in their apps. This post explores some of the tools and integrations available within Supabase that can help you transitioning from MongoDB Realm.</p>
+<p>Legend-State is a library to make offline-first state management easy and reliable. It ensures seamless data synchronization by adopting a local-first approach, allowing users to work offline without losing data when they reconnect.</p>
+<p>With Legend-State, developers can integrate real-time data sync while maintaining performance and consistency during network outages—something previously handled by MongoDB Realm.</p>
+<p>For React Native apps, WatermelonDB is an excellent solution for handling large-scale offline data. This database ensures your app runs smoothly, thanks to its fast synchronization and ability to handle complex queries.</p>
+<p>PowerSync is another solution with offline-first capabilities. It adds real-time synchronization while handling data conflicts intelligently.</p>
+<p>Replicache enhances Supabase’s real-time syncing capabilities, enabling low-latency synchronization of offline-first data.</p>
+<p>With Replicache, you can easily add real-time syncing to your Supabase applications, ensuring high-performance data management even when offline.</p>
+<p>ElectricSQL adds automatic sync to any database, including Supabase. It's a powerful tool for building offline-first applications with automatic conflict handling and multi-user collaboration.</p>
+<p>If you would like to investigate any of these solutions further, please fill out this form to request a meeting with our Growth team. We’ll work with you to ensure your applications continue to run seamlessly.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/mongodb-realm-and-device-sync-alternatives" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1080. Building offline-first mobile apps with Supabase, Flutter and Brick</h2>
+    <div class="article-meta">
+        📅 Oct 08, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/offline-first-flutter-apps" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/flutter-offline-first/flutter-offline-first-og.jpg" alt="Building offline-first mobile apps with Supabase, Flutter and Brick" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/flutter-offline-first/flutter-offline-first-og.jpg" alt="Building offline-first mobile apps with Supabase, Flutter and Brick" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Don’t have time for reading? Skip to the example.</p>
+<p>Brick is an all-in-one data manager for Flutter that handles querying and uploading between Supabase and local caches like SQLite. Using Brick, developers can focus on implementing the application without worrying about translating or storing their data.</p>
+<p>Most significantly, Brick focuses on offline-first data parity: an app should function the same with or without connectivity.</p>
+<p>The worst version of your app is always the unusable one. People use their phones on subways, airplanes, and on sub-3G connections. Building for offline-first provides the best user experience when you can’t guarantee steady bandwidth.</p>
+<p>Even if you’re online-only, Brick’s round trip time is drastically shorter because all data from Supabase is stored in a local cache. When you query the same data again, your app retrieves the local copy, reducing the time and expense of a round trip. And, if SQLite isn’t performant enough, Brick also offers a third cache in memory. When requests are made while the app is offline, they’ll be continually retried until the app comes online, ensuring that your local state syncs up to your remote state.</p>
+<p>Of course, you can always opt-out of the cache on a request-by-request basis for sensitive or must-be-fresh data.</p>
+<p>Add the Brick dependencies to your pubspec.yaml:</p>
+<p>Set up directories for Brick’s generated code:</p>
+<p>Brick synthesizes your remote data to your local data through code generation. From a Supabase table, create Dart fields that match the table’s columns:</p>
+<p>When some (or all) of your models have been defined, generate the code:</p>
+<p>This will generate adapters to serialize/deserialize to and from Supabase. Migrations for SQLite are also generated for any new, dropped, or changed columns. Check these migrations after they are generated - Brick is smart, but not as smart as you.</p>
+<p>After every model change, run this command to ensure your adapters will serialize/deserialize the way they need to.</p>
+<p>Your application does not need to touch SQLite or Supabase directly. By interacting with this single entrypoint, Brick makes the hard choices under the hood about where to fetch and when to cache while the application code remains consistent in online or offline modes.</p>
+<p>Which databaseFactory is used depends on your platform. For unit testing, use import 'package:sqflite_common_ffi/sqflite_ffi.dart' show databaseFactory. Please see SQFlite’s docs for specific installation and usage instructions on web, Linux, or Windows.</p>
+<p>The fun part. Brick’s DSL queries are written once and transformed for local and remote integration. For example, to retrieve all users with the name “Thomas”:</p>
+<p>Queries can be much more advanced, leveraging contains, not, like operators as well as sub clauses. Please note that, as of writing, not all Supabase operators are supported.</p>
+<p>This does not leverage Supabase’s channels by default; if Supabase updates, your app will not be notified. This opt-in feature is currently under active development.</p>
+<p>After a model has been created, it can uploaded to Supabase without serializing it to JSON first:</p>
+<p>All attached associations will be upserted too.</p>
+<p>Brick allows very granular model configuration - you can specify specific tables, individual columns, and more.</p>
+<p>Quickly mock your Supabase endpoints to add uncluttered unit testing:</p>
+<p>Brick manages a lot. It can be overwhelming at times. But it’s been used in production across thousands of devices for more than five years, so it’s got a sturdy CV. There’s likely an existing solution to a seemingly novel problem. Please reach out to the community or package maintainers with any questions.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/offline-first-flutter-apps" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#809. The Final Touches: What’s New In v2.0.0-rc.10</h2>
+    <div class="article-meta">
+        📅 Oct 04, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v2.0-release-candidate-update" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v2.0-release-candidate-update/ogp.png" alt="The Final Touches: What’s New In v2.0.0-rc.10" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v2.0-release-candidate-update/ogp.png" alt="The Final Touches: What’s New In v2.0.0-rc.10" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Deno 2 is imminent, but if you want to try it right now, you can use the
+Deno 2.0 Release Candidate. Since we published
+the release candidate two weeks ago, we’ve made 10 patch updates, where we’ve
+fixed bugs and added features like a new permission flag for importing modules
+via HTTP. Read on the full list of changes.</p>
+<p>To try out the release candidate, run these instructions in your terminal:</p>
+<p>ℹ️ If you are using alternative distribution method like Homebrew,
+deno upgrade might not be available.</p>
+<p>Follow (the shell or powershell installation
+instructions)[https://docs.deno.com/runtime/getting_started/installation/],
+then run the aforementioned commands.</p>
+<p>This release candidate helps us identify issues prior to the final 2 release.
+If you encounter any issues or need extra guidance, please
+create an issue in GitHub or ask
+in our Discord’s #deno-2-help channel. Our team
+is actively monitoring both places and will help out as soon as we can.</p>
+<p>New --allow-import permission flag
+for importing via HTTP</p>
+<p>Errors reported by net APIs, eg. Deno.listen() or Deno.startTls() will now
+throw a Deno.errors.Busy error instead of a generic Deno.errors.BadResource error.</p>
+<p>Using npm:esbuild is now easier, thanks
+to not requiring --allow-scripts flag.</p>
+<p>Running a program that uses npm packages with Node-API addons will now
+provide helpful hints if the
+installation was not correct.</p>
+<p>Language server quick fix that
+adds // @ts-types="npm:..." for npm packages that don’t distribute types and
+have a corresponding @types package</p>
+<p>deno fmt
+stabilized CSS, HTML and YAML formatters.
+Using --unstable-css, --unstable-html and --unstable-yaml flags is not
+required anymore. The component formatter now
+supports .vto and .njk files.</p>
+<p>node:buffer module now
+supports transcode method</p>
+<p>New Deno releases will
+ship with sha256 checksum files</p>
+<p>globalThis.location is now
+a configurable property</p>
+<p>Helpful hints are now shown
+when using window global that was removed in Deno 2.</p>
+<p>fetch API throughput for compressed data
+has been improved by upgrading tower_http</p>
+<p>performance.measure() API
+has been optimized</p>
+<p>Support for deno run npm:<package> when
+package is not in package.json</p>
+<p>Warn repeatedly about not-run
+lifecycle scripts on explicit installs</p>
+<p>As always, we couldn’t build Deno without the help of our community! Whether by
+answering questions in our community Discord server
+or reporting bugs, we are incredibly
+grateful for your support. In particular, we’d like to thank the following
+people for their contributions to the Deno 2 release candidate: Ian Bull, Kenta
+Moriuchi, Mohammad Sulaiman, MujahedSafaa, Óscar Otero, Pig Fang, Simon Lecoq,
+Volker Schlecht, and Carles Escrig Royo.</p>
+<p>A lot of work has gone into Deno 2.0, which we plan to release NEXT WEEK. Thank
+you not only for your patience, but also for trying the release candidate and
+giving feedback in Discord or
+GitHub. We’ll continue to actively
+monitor both areas to ensure all major bugs are fixed.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v2.0-release-candidate-update" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#979. Node.js 20.18.0 (LTS)</h2>
+    <div class="article-meta">
+        📅 Oct 03, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v20.18.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.18.0%20(LTS)" alt="Node.js 20.18.0 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2020.18.0%20(LTS)" alt="Node.js 20.18.0 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This update introduces the initial support for network inspection in Node.js.
+Currently, this is an experimental feature, so you need to enable it using the --experimental-network-inspection flag.
+With this feature enabled, you can inspect network activities occurring within a JavaScript application.</p>
+<p>To use network inspection, start your Node.js application with the following command:</p>
+<p>Please note that the network inspection capabilities are in active development.
+We are actively working on enhancing this feature and will continue to expand its functionality in future updates.</p>
+<p>Contributed by Kohei Ueno in #53593 and #54246</p>
+<p>This releases introduces a new option to the API tls.createSecureContext. From
+now on, tls.createSecureContext({ allowPartialTrustChain: true }) can be used
+to treat intermediate (non-self-signed) certificates in the trust CA certificate
+list as trusted.</p>
+<p>Node.js implements a flavor of vm.createContext() and friends that creates a context without contextifying its global
+object when vm.constants.DONT_CONTEXTIFY is used. This is suitable when users want to freeze the context
+(impossible when the global is contextified i.e. has interceptors installed) or speed up the global access if they
+don't need the interceptor behavior.</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v20.18.0/node-v20.18.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v20.18.0/node-v20.18.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v20.18.0/node-v20.18.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v20.18.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v20.18.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v20.18.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v20.18.0/node-v20.18.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v20.18.0/node-v20.18.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v20.18.0/node-v20.18.0.tar.gz 
+Other release files: https://nodejs.org/dist/v20.18.0/ 
+Documentation: https://nodejs.org/docs/v20.18.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v20.18.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1083. Supabase Launch Week 12 Hackathon Winners</h2>
+    <div class="article-meta">
+        📅 Sep 30, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/lw12-hackathon-winners" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/lw12/hackathon-winners/thumbnail.png" alt="Supabase Launch Week 12 Hackathon Winners" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/lw12/hackathon-winners/thumbnail.png" alt="Supabase Launch Week 12 Hackathon Winners" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Launch Week 12 brought us a whole new set of Supabase features to build with. And to showcase what developers can build with Supabase, we announced the Launch Week 12 hackathon a while back, and it’s finally time to announce the winners!</p>
+<p>The entire Supabase team had the pleasure of going through each amazing project, and we were so impressed with the quality of them. You can check out all of the submissions here. Now, without a further ado, let’s take a look at the winners!</p>
+<p>🐱🎸 Create a realtime virtual rock band made up of cats! Host the jam session on a TV, and join on your phone.</p>
+<p>Spiceblow - Raycast Extension for Database Management by Tommy</p>
+<p>Database management directly inside Raycast. Search, update, delete and insert in your Supabase database from Raycast.</p>
+<p>An AI Postgres Query Plan Explainer that helps visualize & optimize your queries with AI.</p>
+<p>Small tool to track npm packages and ask questions about them.</p>
+<p>Minecraft Server by Gaëtan Huszovits, and Romain San Vicente</p>
+<p>A Laser Game server on Minecraft (bedrock edition) and a real-time statistics site with Supabase</p>
+<p>Orora is a northern lights platform that's almost as beautiful as the aurora itself. Real-time stats & map visualization</p>
+<p>supagen (Supabase Generator) by Andika, Ezza, and David</p>
+<p>A CLI tool to automate manual effort/repetitive things when using Supabase.</p>
+<p>This project allows you to chat with your starred GitHub repositories to easily find the repos you need. It utilizes RAG</p>
+<p>A fun and knowledgeable app made with react for sharing facts backed by Supabase.</p>
+<p>Aura is an AI mood-tracking application built with Flutter & Supabase. It helps users monitor their emotional well-being</p>
+<p>The winner of the best overall project will receive a mechanical keyboard, and the winners and the runner-ups in other categories will each receive a Supabase swag kit.</p>
+<p>If you're inspired to build, check out some of the latest resources:</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/lw12-hackathon-winners" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#818. Announcing Stable V8 Bindings for Rust</h2>
+    <div class="article-meta">
+        📅 Sep 24, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/rusty-v8-stabilized" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/rusty-v8-stabilized/og.png" alt="Announcing Stable V8 Bindings for Rust" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/rusty-v8-stabilized/og.png" alt="Announcing Stable V8 Bindings for Rust" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Deno is a modern, zero-config JavaScript runtime written in Rust. At its core is
+Rusty V8, a library that provides high-quality,
+zero-overhead Rust bindings to V8’s C++ API. Over the past five years, Rusty V8
+has undergone nearly 150 releases, racking up more than 3.1 million downloads on
+crates.io. Today, we’re excited to announce a major
+milestone: Rusty V8 is now stable and production-ready.</p>
+<p>While we’d love to mark this moment with a “1.0” release, Rusty V8 is skipping
+version 1.0 entirely. Instead, we’re aligning with Chrome’s versioning scheme to
+stay in sync with V8. The first stable release of Rusty V8 will be version
+129.0.0, in line with Chrome 129. This version guarantees API stability, moving
+us beyond years of 0.x releases, and solidifies Rusty V8 as a dependable tool
+for developers building on top of V8.</p>
+<p>Rusty V8 gives Rust developers direct, zero-overhead access to V8’s C++ API. It
+stands out for its completeness and seamless integration with high-performance
+environments. A key feature is Rusty V8’s automatic integration of V8’s complex
+build system into Cargo, allowing developers to easily embed V8 in Rust projects
+without manual setup. With Rusty V8, you can:</p>
+<p>The journey to Rusty V8 started in 2015, when I was experimenting with building
+a JavaScript runtime in Go using a library called
+v8worker. Eventually, v8worker
+was used in the first
+Deno demo.
+However, as Deno evolved, it became clear that Go wasn’t the right fit for the
+project because of worries that Go’s own GC would conflict poorly with V8’s.</p>
+<p>In late 2019, Deno co-founder Bert Belder led the effort to create a direct Rust
+binding to V8. The challenge was to bind V8’s complex C++ API to Rust without
+compromising on performance or safety. After much effort, Rusty V8 was born—a
+zero-overhead Rust binding to V8 that provides full control over V8, while
+ensuring memory safety through Rust’s ownership model.</p>
+<p>Here’s a simple example of how you can embed JavaScript in a Rust program using
+Rusty V8:</p>
+<p>Rusty V8’s memory safety features are a core advantage over the C++ API. For
+example, in Rust, handles like Local<T> are tied to specific scopes and
+enforced at compile time. This prevents bugs caused by using or returning
+invalid handles—something that C++ developers must manage manually. In Rust, if
+you attempt to use a Local<T> outside its scope, the compiler will catch the
+mistake.</p>
+<p>Here’s a quick example of Rust preventing invalid handle usage:</p>
+<p>To keep in sync with V8, Rusty V8 will follow Chrome’s versioning scheme. The
+first stable release is version 129.0.0, corresponding to Chrome 129. While V8
+does not follow semantic versioning (semver) and can introduce breaking changes
+even in minor versions, Rusty V8 will follow semver to ensure compatibility and
+stability for Rust developers.</p>
+<p>Every 4 weeks, Rusty V8 will upgrade its V8 dependency and bump its major
+version. This means breaking changes to the Rusty V8 API will only happen when
+V8 upgrades, and the version will always reflect the underlying V8 version.</p>
+<p>Rusty V8 is now a stable, production-ready library for building high-performance
+JavaScript and WebAssembly runtimes in Rust. Whether you’re creating custom
+JavaScript runtimes, embedding JS in Rust-backed apps, or exploring server-side
+JavaScript applications, Rusty V8 provides the flexibility of V8 with the safety
+and performance guarantees of Rust.</p>
+<p>Dive deeper by exploring the full documentation at
+docs.rs/v8.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/rusty-v8-stabilized" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#1086. Local-first Realtime Apps with Expo and Legend-State</h2>
+    <div class="article-meta">
+        📅 Sep 23, 2024 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/local-first-expo-legend-state" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/local-first-expo-legend_state/local-first-expo-legend_state-thumb.png" alt="Local-first Realtime Apps with Expo and Legend-State" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/local-first-expo-legend_state/local-first-expo-legend_state-thumb.png" alt="Local-first Realtime Apps with Expo and Legend-State" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Do you prefer audio-visual learning? Watch the video guide!</p>
+<p>Or run npx create-expo-app --example with-legend-state-supabase to create a new app with this example.</p>
+<p>Legend-State is a super fast all-in-one state and sync library that lets you write less code to make faster apps. Legend-State has four primary goals:</p>
+<p>And, to put the cherry on top, it works with Expo and React Native (via React Native Async Storage). This makes it a perfect match for building local-first mobile and web apps.</p>
+<p>In local-first software, "the availability of another computer should never prevent you from working" (via Martin Kleppmann). When you are offline, you can still read and write directly from/to a database on your device. You can trust the software to work offline, and you know that when you are connected to the internet, your data will be seamlessly synced and available on any of your devices running the app. When you're online, this architecture is well suited for "multiplayer" apps, as popularized by Figma.</p>
+<p>To dig deeper into what local-first is and how it works, refer to the Expo docs.</p>
+<p>A primary goal of Legend-State is to make automatic persisting and syncing both easy and very robust, as it's meant to be used to power all storage and sync of complex apps.</p>
+<p>To set up a new React Native project you can use the create-expo-app utility. You can create a blank app or choose from different examples.</p>
+<p>For this tutorial, go ahead and create a new blank Expo app:</p>
+<p>The main dependencies you need are Legend State and supabase-js. Additionally, to make things work for React Native, you will need React Native Async Storage and react-native-get-random-values (to generate uuids).</p>
+<p>Install the required dependencies via expo install:</p>
+<p>If you don't have a Supabase project already, head over to database.new and create a new project.</p>
+<p>Next, create a .env.local file in the root of your project and add the following env vars. You can find these in your Supabase dashboard.</p>
+<p>Next, set up a utils file to hold all the logic for interacting with Supabase, we'll call it utils/SupaLegend.ts.</p>
+<p>Legend-State is very versatile and allows you to choose different persistence and storage strategies. For this example, we'll use React Native Async Storage for local persistence across platforms and supabase for remote persistence.</p>
+<p>Extend your utils/SupaLegend.ts file with the following configuration:</p>
+<p>syncedSupabase is the Legend-State sync plugin for Supabase and adds some default configuration for usage with supabase-js.</p>
+<p>If you haven't alread, install the Supabase CLI and run supabase init to initialize your project.</p>
+<p>Next, create the initial database migration to set up the todos table:</p>
+<p>This will create a new SQL migration file in the supabase/migrations directory. Open it and add the following SQL code:</p>
+<p>The created_at, updated_at, and deleted columns are used by Legend-State to track changes and sync efficiently. The handle_times function is used to automatically set the created_at and updated_at columns when a new row is inserted or an existing row is updated. This allows to efficiently sync only the changes since the last sync.</p>
+<p>Next, run supabase link to link your local project to your Supabase project and run supabase db push to apply the init migration to your Supabase database.</p>
+<p>Legend-State integrates with supabase-js to provide end-to-end type safety. This means you can use the existing Supabase CLI workflow to generate TypeScript types for your Supabase tables.</p>
+<p>Next, in your utils/SupaLegend.ts file, import the generated types inject them into the Supabase client.</p>
+<p>From here, Legend-State will automatically infer the types for your Supabase tables and make them available within the observable.</p>
+<p>Above, you've configured the todos$ observable. You can now import this in your tsx files to fetch and automatically sync changes.</p>
+<p>observer is the suggested way of consuming observables for the best performance and safety.</p>
+<p>It turns the entire component into an observing context - it automatically tracks observables for changes when get() is called, even from within hooks or helper functions.</p>
+<p>This means, as long as realtime is enabled on the respective table, the component will automatically update when changes are made to the data!</p>
+<p>Also, thanks to the persist and retry settings above, Legend-State will automatically retry to sync changes if the connection is lost.</p>
+<p>To add a new todo from the application, you will need to generate a uuid locally to insert it into our todos observable. You can use the uuid package to generate a uuid. For this to work in React Native you will also need the react-native-get-random-values polyfill.</p>
+<p>In your SupaLegend.ts file add the following:</p>
+<p>Now, in your App.tsx file, you can import the addTodo and toggleDone methods and call them when the user submits a new todo or checks off one:</p>
+<p>Since Legend-State utilizes supabase-js under the hood, you can use Supabase Auth and row level security to restrict access to the data.</p>
+<p>For a tutorial on how to add user management to your Expo React Native application, refer to this guide.</p>
+<p>Legend-State and Supabase are a powerful combination for building local-first applications. Legend-State pairs nicely with supabase-js, Supabase Auth and Supabase Realtime, allowing you to tap into the full power of the Supabase Stack while building fast and delightful applications that work across web and mobile platforms.</p>
+<p>Want to learn more about Legend-State? Refer to their docs and make sure to follow Jay Meistrich on Twitter!</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/local-first-expo-legend-state" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#825. Deno 2.0 Release Candidate</h2>
+    <div class="article-meta">
+        📅 Sep 19, 2024 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/v2.0-release-candidate" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/v2.0-release-candidate/ogp.png" alt="Deno 2.0 Release Candidate" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/v2.0-release-candidate/ogp.png" alt="Deno 2.0 Release Candidate" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>UPDATE 2024/10/04:
+We’ve released several updates to the Deno 2.0 Release
+Candidate.</p>
+<p>We’ve been planning a new major version of Deno for years. Many times, it seemed
+imminent, but we realized the features we wanted required more work. Now, it’s
+finally happening. Last month, we released the final 1.x version with
+1.46, and today, we’re cutting the release candidate for Deno
+2.0, which includes everything we expect in the final release. This is the
+largest update since 1.0, with major changes like the introduction of Node’s
+process global. We’ve also made some philosophical shifts, like preferring
+deno install over the now-deprecated deno cache. Read on for the full list
+of changes and
+share your feedback!</p>
+<p>To try out the release candidate, run these instructions in your terminal:</p>
+<p>ℹ️ If you are using alternative distribution method like Homebrew,
+deno upgrade might not be available.</p>
+<p>Follow the installation instructions at https://deno.com, then run the
+aforementioned commands.</p>
+<p>This release candidate helps us identify issues prior to the final 2 release.
+If you encounter any issues or need extra guidance, please
+create an issue in GitHub or ask
+in our Discord’s #deno-2-help channel. Our team
+is actively monitoring both places and will help out as soon as we can.</p>
+<p>Deno 2 comes with two major changes to global variables — window is gone and
+Node’s process is now available.</p>
+<p>We introduced the window global in Deno v1.0, with the goal being to make Deno
+as browser-compatible as possible. Unfortunately, the window global variable
+became a source of problems for users.</p>
+<p>Many libraries check if they are executed in the browser by probing for a
+window global variable instead of checking for the existence of DOM. This led
+to a class of bugs in libraries that would otherwise work in Deno, due to window
+being globally available.</p>
+<p>Deno started to
+discourage use of window global in v1.40
+suggesting to use globalThis or self instead.</p>
+<p>In contrast, the process global has been widely requested.</p>
+<p>While it has been possible to use process by importing it from node:process
+module for a long time, many popular frameworks rely on its presence in the
+global scope, often used in configuration files.</p>
+<p>Although adding import process from 'node:process'; seems simple, it often
+causes friction for users of popular frameworks that would otherwise work
+seamlessly in Deno.</p>
+<p>So with addition of process global, you can expect a lot more code written
+originally for Node.js to work with no changes in Deno. However, we still
+encourage users to prefer explicit imports. Thus a new no-process-global lint
+rule was added that will provide hints and quick-fixes in your editor to use an
+import statement instead.</p>
+<p>Deno 2 comes with several new features that improve dependency management.</p>
+<p>The deno add subcommand now handles specifiers with a subpath:</p>
+<p>ℹ️ Using jsr: or npm: prefixes is now required when adding dependencies to
+avoid potential ambiguity between packages with same names in both registries.</p>
+<p>If you omit the prefix Deno will print a suggestion with correct invocation,
+checking which registries contain the package.</p>
+<p>Additionally, if your project contains package.json file, Deno will prefer
+adding npm: dependencies to package.json, rather than deno.json.</p>
+<p>You can also add “dev dependencies” to package.json using the --dev flag:</p>
+<p>deno install now supports the --entrypoint flag, which allows you to install
+all dependencies from a given module(s):</p>
+<p>A new deno remove subcommand has been added to quickly remove some of the
+dependencies:</p>
+<p>You can also use deno remove to handle dependencies listed in package.json.</p>
+<p>Deno 2 ships with a new, more concise lockfile format (v4), that will minimize
+diffs when updating dependencies and ensure reproducible builds.</p>
+<p>Deno will automatically migrate you to the new lockfile format.</p>
+<p>Finally, Deno has improved its error messaging, providing helpful hints for
+common issues like incorrectly formatted relative import paths, or missing
+dependencies when using “bare specifiers”:</p>
+<p>These updates collectively streamline the process of managing dependencies in
+Deno projects, making it more intuitive and aligned with modern development
+workflows.</p>
+<p>Deno’s permission system is one of its most loved features. When a program tries
+to access an API that was not allowed using --allow-* flags an error is
+raised. In Deno v1.x, this was Deno.errors.PermissionDenied.</p>
+<p>There was one problem with that though. All operating systems raise this error
+too, for example when your user does not have access to an admin-only file, or
+when you are trying to listen on a privledged port. Because of this, users were
+often confused to see that error raised despite running with --allow-all flag.</p>
+<p>In Deno v2.0, a lack of Deno permissions now raises the Deno.errors.NotCapable
+error instead to make it easier to discriminate between OS-level errors and Deno
+errors.</p>
+<p>Permissions check for Deno.mainModule API, which gives you a full path of the
+main module, has been relaxed and no longer requires full --allow-read
+permission. This also applies to process.argv API.</p>
+<p>This requirement is deprecated, but the path to the main module can be obtained
+by creating an Error instance and inspecting its stack trace.</p>
+<p>Deno v1.x had an --allow-hrtime flag that affected APIs like
+performance.now() providing high resolution timing. In Deno 2, this flag is
+gone and these APIs always provide high resolution timing.</p>
+<p>This flag was deprecated as high-resolution timing can be achieved using
+standard JavaScript APIs like Worker and SharedArrayBuffer.</p>
+<p>There are a few big changes for --allow-run flag to guide you towards safer
+execution of subprocesses.</p>
+<p>First, a warning will appear if you use the --allow-run flag without
+specifying an allow list of binary names or paths to binaries:</p>
+<p>Then, anytime a subprocess is spawned with LD_* or DYLD_* environmental
+variables, a full --allow-run permission will be required. Note that these
+environmental variables should rarely be relied on. If you really need to use
+them, you should consider further sandboxing Deno by running additional layers
+of protection (e.g. a Docker container).</p>
+<p>It is now possible to grant permissions for reading and writing files that
+contain commas in the file name.</p>
+<p>In Deno v1.x, a comma was used to delimit between multiple file names:</p>
+<p>making it impossible to grant permission to a file that contains a comma in its
+name.</p>
+<p>In Deno 2 this can be done by escaping a comma with another comma:</p>
+<p>Several APIs have been stablized in this Deno 2:</p>
+<p>The error messages have been improved as well, providing useful hints when you
+try to use an unstable API without a corresponding flag:</p>
+<p>ℹ️ For more information how to migrate away from the deprecated APIs visit the
+Deno 1 to 2 Migration Guide</p>
+<p>Handling of TLS options was updated, and following options are no longer
+supported:</p>
+<p>Additionally several interfaces related to DNS record handling have been
+renamed:</p>
+<p>The “resource IDs” are no longer available in following APIs:</p>
+<p>Finally, a few APIs have been “soft-deprecated”. These APIs will keep working,
+but will no longer receive updates or bug fixes. It is highly recommended and
+encouraged to migrate to stable counterparts:</p>
+<p>Deno 2 removes support for two subcommands:</p>
+<p>deno bundle - this subcommand
+was deprecated in Deno v1.31 due to
+mismatch in expectations of users and the actual functionality provided by the
+built-in bundler.</p>
+<p>Many Deno users expected a general-purpose, highly customizable bundler.
+However Deno’s built-in bundler was meant as a simple tool to concatenate
+multiple files into a single-file for easier distribution; there were not
+settings to customize any behavior either.</p>
+<p>We plan to implement a new built-in bundler, so look out for updates in future
+releases.</p>
+<p>deno vendor -
+was deprecated in Deno v1.45 and
+superseded by a much easier solution of using
+vendor option in deno.json file introduced in Deno v1.37</p>
+<p>Additionally, you can enable debug logging by using DENO_LOG environmental
+variable, instead of RUST_LOG.</p>
+<p>Lastly, the files options in the config file are now deprecated.</p>
+<p>In Deno 2, the files configuration has been simplified, being flattened into
+the parent configuration:</p>
+<p>Import Assertions support
+was deprecated in Deno v1.46 and
+is no longer available in Deno 2.</p>
+<p>The reason being, the proposal has undergone major changes, including updating
+the keyword from assert to with, and being renamed to
+Import Attributes,
+additionally some browsers (eg. Chrome) had already unshipped support for Import
+Assertions too.</p>
+<p>Since its 1.0 release, Deno has prioritized ES modules as the primary module
+system, offering only limited support for CommonJS through manual creation of
+require:</p>
+<p>While we firmly believe that
+ES modules are the future of JavaScript,
+the landscape in 2024 still includes numerous libraries and projects relying on
+CommonJS.</p>
+<p>Despite Deno’s robust handling of CJS libraries over the past year, users
+occasionally faced challenges when integrating CommonJS, particularly within
+their own codebases.</p>
+<p>In Deno 2, several improvements were made to help working with CommonJS modules
+and make transition to ES modules easier:</p>
+<p>deno run index.cjs - Deno can now execute CommonJS files, provided that they
+use .cjs extension. Deno does not look for package.json files and type
+option to determine if the file is CommonJS or ESM.</p>
+<p>When using this option, Deno will also not automatically install dependencies,
+so you will need to manually run deno install upfront to ensure all required
+dependencies are available.</p>
+<p>NOTE: Deno permissions system is still in effect, so require() calls will
+prompt for --allow-read permissions.</p>
+<p>The “bring your own node modules” functionality
+was introduced in Deno v1.38.</p>
+<p>ℹ️ While we still strongly advocate to not rely on local node_modules
+directory, a lot of existing projects and frameworks operate on the assumption
+that this directory will be present.</p>
+<p>But sometimes you still want to have a local node_modules directory even if
+you don’t have a package.json - eg. when using frameworks like Next.js, Remix
+or Svelte; or when depending on npm packages that use Node-API like duckdb,
+sqlite3, esbuild and others. To improve compatibility, if a project contains
+package.json file, Deno will expect that node_modules directory will be set
+up manually.</p>
+<p>In previous Deno release you could use --node-modules-dir flag or
+nodeModulesDir option in the config file to tell Deno if the node_modules
+directory should be created or not.</p>
+<p>Deno 2 changes this configuration option - it’s no longer a boolean, but rather
+an enum with three options:</p>
+<p>This is the default mode for Deno-first projects - ie. projects that do not have
+package.json file. It automatically installs dependencies into the global
+cache and doesn’t create a local node_modules directory.</p>
+<p>ℹ️ Recommended for new projects. Note that frameworks that expect a
+node_modules directory will not work, in addition to any npm dependencies
+that rely on postinstall scripts.</p>
+<p>The auto mode automatically install dependencies into the global cache and
+creates a local node_modules directory in the project root.</p>
+<p>ℹ️ Recommended for projects that have npm dependencies that rely on
+node_modules directory - mostly projects using bundlers or ones that have
+npm dependencies with postinstall scripts.</p>
+<p>The manual mode is the default mode for projects using package.json. This
+mode is the workflow that Node.js uses and requires an explicit installation
+step using deno install/npm install/pnpm install or any other package
+manager.</p>
+<p>ℹ️ Recommended for projects using frameworks like Next.js, Remix, Svelte,
+Qwik, etc; or tools like Vite, Parcel, Rollup.</p>
+<p>It is recommended to use the default none mode, and fallback to auto or
+manual mode if you get errors complaining about missing packages inside
+node_modules directory.</p>
+<p>Once again, a great progress was made in terms of supported built-in Node.js
+APIs, resulting in even more popular packages being supported:</p>
+<p>JSDoc is a format for writing inline documentation for
+JavaScript and TypeScript. It’s how
+deno doc
+and
+JSR automatically generate documentation
+for its modules.</p>
+<p>JSDoc allows us to write code examples directly in comments:</p>
+<p>There’s one problem though… How do you ensure that these examples stay up to
+date and don’t code-rot?</p>
+<p>Deno v1.10 added feature to type-check the examples,
+which helped the situation, but did not solve it completely. The only way to
+ensure the examples are up to date is to actually execute them.</p>
+<p>In Deno 2, deno test --doc not only type-checks the examples in JSDoc, but
+also executes them:</p>
+<p>To test your JSDoc examples, simply run deno test --doc and Deno will
+automatically discover and run relevant codeblocks.</p>
+<p>ℹ️ If you want to only type-check your examples, you can still do so by
+running deno check --doc.</p>
+<p>But that’s not all! In addition to testing JSDoc example, you can also execute
+codeblocks in Markdown files:</p>
+<p>This is the first iteration of this feature and we’d
+appreciate any feedback.</p>
+<p>Deno v2.0 ships with TypeScript 5.6, you can read about it more in
+Announcing TypeScript 5.6
+blog post.</p>
+<p>To help catch common pitfalls, these TypeScript settings are now enabled by
+default:</p>
+<p>Additionally, Deno 2 ships with built-in support for @types/node at version 22
+to make it easier to type-check code relying on Node.js APIs.</p>
+<p>Finally, to ensure your compilerOptions settings are up-to-date, we’ve made it
+an allow list, so Deno will complain and flag it if you use an unsupported
+option.</p>
+<p>We couldn’t build Deno without the help of our community! Whether by answering
+questions in our community Discord server or
+reporting bugs, we are incredibly
+grateful for your support. In particular, we’d like to thank the following
+people for their contributions to the Deno 2 release candidate: Andreas
+Deininger, Armaan Salam, Bedis Nbiba, Birk Skyum, Bob Callaway, Caleb Cox, Caleb
+Lloyd, Coty, Hajime-san, HasanAlrimawi, Ian Bull, Ivancing, Jake Abed, Kamil
+Ogórek, Kenta Moriuchi, Kyle Kelley, Mohammad Sulaiman, MrEconomical,
+MujahedSafaa, Pig Fang, Rano | Ranadeep, Roy Ivy III, Sean McArthur, Sʜɪᴍᴜʀᴀ Yū,
+Victor Turansky, Yazan AbdAl-Rahman, Zebreus, chirsz, cions, i-api,
+melbourne2991, seb, vwh, and Łukasz Czerniawski.</p>
+<p>Would you like to join the ranks of Deno contributors?
+Check out our contribution docs here,
+and we’ll see you on the list next time.</p>
+<p>Thank you for catching up with our Deno 2 release candidate, and we hope you
+love building with Deno!</p>
+<p>This release candidate is working towards our 2.0 release and it should be
+expected that there will be bugs and issues. If you encounter any, please let us
+know in GitHub issues (with the 2.0
+tag) or on
+our Discord’s dedicated #deno-2-help channel. We’re
+actively monitoring both areas to ensure that all major bugs are fixed prior to
+our 2.0 release.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/v2.0-release-candidate" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#984. Node.js 22.9.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Sep 17, 2024 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v22.9.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.9.0%20(Current)" alt="Node.js 22.9.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2022.9.0%20(Current)" alt="Node.js 22.9.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A new API getCallSite has been introduced to the util module. This API allows users
+to retrieve the stacktrace of the current execution. Example:</p>
+<p>Thanks to Rafael Gonzaga for making this work on #54380.</p>
+<p>We have seen several crashes/unexpected JS behaviors with maglev on v22
+(which ships V8 v12.4). The bugs lie in the codegen so it would be difficult for
+users to work around them or even figure out where the bugs are coming from.
+Some bugs are fixed in the upstream while some others probably remain.</p>
+<p>As v22 will get stuck with V8 v12.4 as LTS, it will be increasingly difficult to
+backport patches for them even if the bugs are fixed. So disable it by default
+on v22 to reduce the churn and troubles for users.</p>
+<p>Thanks to Joyee Cheung for making this work on #54384</p>
+<p>This releases introduces a new option to the API tls.createSecureContext. For
+now on users can use tls.createSecureContext({ allowPartialTrustChain: true })
+to treat intermediate (non-self-signed) certificates in the trust CA certificate
+list as trusted.</p>
+<p>Thanks to Anna Henningsen for making this work on #54790</p>
+<p>Windows 32-bit Installer: https://nodejs.org/dist/v22.9.0/node-v22.9.0-x86.msi 
+Windows 64-bit Installer: https://nodejs.org/dist/v22.9.0/node-v22.9.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v22.9.0/node-v22.9.0-arm64.msi 
+Windows 32-bit Binary: https://nodejs.org/dist/v22.9.0/win-x86/node.exe 
+Windows 64-bit Binary: https://nodejs.org/dist/v22.9.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v22.9.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v22.9.0/node-v22.9.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-aix-ppc64.tar.gz 
+ARMv7 32-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-linux-armv7l.tar.xz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v22.9.0/node-v22.9.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v22.9.0/node-v22.9.0.tar.gz 
+Other release files: https://nodejs.org/dist/v22.9.0/ 
+Documentation: https://nodejs.org/docs/v22.9.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v22.9.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html" class="active">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

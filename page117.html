@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 117</title>
+<meta name="description" content="Page 117">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page117.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 117</h1>
+<article class="article-card">
+    <h2>#670. Part 2: Evals as a deployment gate — and how to know when they drift</h2>
+    <div class="article-meta">
+        📅 Oct 07, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://stackoverflow.blog/2026/10/07/evals-as-a-deployment-gate-and-how-to-know-when-they-drift/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/1d3b4a8953f24499f8d4efeb586549a0baa73f73-3000x1500.png?rect=72,0,2857,1500&amp;w=1200&amp;h=630&amp;auto=format" alt="Part 2: Evals as a deployment gate — and how to know when they drift" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/1d3b4a8953f24499f8d4efeb586549a0baa73f73-3000x1500.png?rect=72,0,2857,1500&w=1200&h=630&auto=format" alt="Part 2: Evals as a deployment gate — and how to know when they drift" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>If you can deploy a prompt change without an eval failing the build, you don’t have evals — you have a notebook. And once the gate is green, the slow leaks are still coming for you. Here’s the gate, the baseline, and the shadow-eval loop that catch both.</p>
+<p>This is Level 2 of the maturity model: evaluation. The principle is short — you don’t ship on hope, you ship on a gate, and then you watch for drift afterward. A gate protects the moment of deploy. Drift detection protects the weeks in between. You need both, and they’re built from different machinery.</p>
+<p>Most teams “do evals” the way they once “did tests” before CI: occasionally, manually, in a notebook, after something already went wrong. For LLM systems that’s not enough, because the thing most likely to silently break your product isn’t a code change — it’s a prompt tweak, a model upgrade, or a temperature nudge that looks harmless and quietly tanks quality on 8% of inputs. The fix is to treat evaluation like tests: a gate that runs in CI and fails the build on regression.</p>
+<p>Curate it like tests: cover the common cases, the known-hard cases, and every past failure you’ve fixed (regression cases never get deleted). It lives in version control next to the code, so a change to the set is a reviewable diff.</p>
+<p>Per case, run the current prompt/model and score the result. Keep scoring explicit and typed — a mix of exact assertions and tolerances.</p>
+<p>One command, wired into CI, that fails the build when the pass rate (or any keyed metric) drops below the bar.</p>
+<p>Now a prompt change that improves one scenario but breaks two others can’t ship silently — the author sees it in their PR, not a customer three weeks later.</p>
+<p>As the system grows, “the golden set” becomes many sub-suites for different request types, segments, or locales. Don’t make a human pick which suite to run — tag each case with its slice and let the runner route cases to the matching slice using the same attributes the system uses at runtime. The eval for a slice runs the cases that belong to it; no manual selection, no drift between "what we test" and "what we run." And don't gate on one global pass rate: a 99% overall can hide a 70% slice, so gate per slice too.</p>
+<p>The gate above is excellent at one thing and blind to another:</p>
+<p>You can have a green eval gate and a system that’s quietly getting worse. Gates test the inputs you thought of, at the moment you deploy. Production changes underneath you: inputs shift, the provider updates a model, a prompt tweak helps the cases you tested and hurts the ones you didn’t. Drift detection defends against the second kind. It needs different machinery.</p>
+<p>A gate asks “above the line?” Drift asks “worse than before?” So capture a baseline — the metrics from the last known-good release — and compare every run to it.</p>
+<p>The common bug: dividing the baseline std by sqrt(n) ignores the current run's own size and variance — sample 50 live decisions against a 2,400-row baseline and you'll flag pure noise. The SE of a difference uses both; proportions get the pooled two-proportion form, not a stored std.</p>
+<p>A change can be above your floor and still meaningfully below baseline — that’s the signal the gate misses:</p>
+<p>Re-baseline deliberately (when you validate a new known-good), never automatically, or you let drift become the new normal.</p>
+<p>Your golden set is finite and curated; production is infinite and surprising. A shadow eval samples real (de-identified) inputs, scores the actual decisions, and tracks the pass rate over time.</p>
+<p>Failures become new golden cases — production hardens your suite exactly where reality is hardest. Use a deterministic hash of the id, not RNG, so sampling is reproducible and doesn’t make tests flaky.</p>
+<p>Make evals a gate, not a notebook: cases as versioned data, an explicit scorer, a CI command that fails the build on regression, auto-routing to slices. Then add the part the gate can’t do — baseline every run against known-good with a real significance check, shadow-eval a sample of live traffic into a pass ratio, watch override/confidence/disagreement trends, and feed production’s surprises back into the golden set. Cliffs are easy; the slow leaks sink quality, and they only show up if you’re watching for worse than before, not just below the line. Do both and “ship a prompt change” stops being a gamble and becomes a green check — the only way to move fast on an LLM system without breaking it quietly.</p>
+<p>Series: Running LLM systems in production — Level 2 of 6: Evaluation.</p>
+<p>These articles are licensed under a Creative Commons Attribution-ShareAlike 4.0 International license.</p>
+<p>creativecommons.org/licenses/by-sa/4.0/deed.en</p>
+<p>Submit an idea for an article and we may reach out to you in the future.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://stackoverflow.blog/2026/10/07/evals-as-a-deployment-gate-and-how-to-know-when-they-drift/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#674. Part 1: Make your AI agents boring: the determinism layer</h2>
+    <div class="article-meta">
+        📅 Oct 07, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://stackoverflow.blog/2026/10/07/part-1-make-your-ai-agents-boring-the-determinism-layer/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/a5c8228cbc74e5c74e42a697b184129575a925a1-3000x1500.png?rect=72,0,2857,1500&amp;w=1200&amp;h=630&amp;auto=format" alt="Part 1: Make your AI agents boring: the determinism layer" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/a5c8228cbc74e5c74e42a697b184129575a925a1-3000x1500.png?rect=72,0,2857,1500&w=1200&h=630&auto=format" alt="Part 1: Make your AI agents boring: the determinism layer" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The trick to putting LLM agents in high-stakes systems isn’t a smarter model — it’s containing the model to one node so the rest of the system is ordinary, testable code. Here are the structural moves, with the contracts and types to implement them.</p>
+<p>Demos love autonomous agents that loop, call tools, and “figure it out.” Production hates them. The moment an agent’s behavior depends on which path the model wandered down today, you can’t test it, can’t audit it, and can’t let it touch anything that matters. In a regulated or high-consequence system — money movement, healthcare, infrastructure — “it usually works” is a non-starter.</p>
+<p>This is Level 1 of a six-level maturity model for running LLM systems in production: the determinism layer. Before you can do evals, confidence routing, or anything else higher up the stack, you need the part underneath to hold still. The whole game at this level is one idea — contain the model to a single node so everything around it is ordinary, testable code — expressed through a handful of design moves. You keep the model’s intelligence and remove almost all of the unpredictability. This post gives the contracts, not just the concepts.</p>
+<p>The most important rule: an agent is a pure function from context to a proposed decision — pure with respect to business state, and deterministic given its gateway (the one nondeterministic call, the model, is injected so tests can fake it). It has no authority to change the world. A separate, dumb, heavily-tested component — the substrate — applies proposals, and only after the required approval.</p>
+<p>Because propose() is pure, its headline property is one assertion:</p>
+<p>This single constraint turns “an AI did something we can’t explain” into “an AI suggested something, and here’s exactly what approved it.”</p>
+<p>Free-form ReAct loops are great for exploration and terrible for guarantees. Model each capability as a fixed sequence of nodes where the model is used only where judgment is needed and everything else is ordinary code. The arrow sketch below is abridged for readability; the full node list (with pre_check and memory_write`) is in the next section.</p>
+<p>You give up some cleverness; you get back the ability to reason about what the system will do. The clever part — judgment on messy inputs — stays exactly where the model is good at it, in one node, surrounded by code you can read.</p>
+<p>“Make agents deterministic” is hard to act on until you’ve seen the shape of one. So let’s walk a single request through the graph, node by node — the implementation behind the diagram above.</p>
+<p>The state object. Every node reads and writes one typed state value threaded through the graph. Making this explicit is half the battle — it’s what lets you test a node in isolation by constructing a state and asserting on the result.</p>
+<p>The node contract. Every node is the same shape: state -> state. Deterministic except the one model node. This uniformity is why you can unit-test each node and reason about the whole.</p>
+<p>The graph. Eight nodes are shared across every capability; only a few are capability-specific. New capability = implement ~4 nodes, inherit the other 8.</p>
+<p>The two load-bearing nodes are llm_decision and verification`. The first is the only nondeterministic node — structured input, schema-constrained output, retry-on-mismatch — and everything around it treats its output as untrusted until checked (more on that next section). The second is deterministic, capability-specific code that the whole “contain the model” thesis rests on:</p>
+<p>The point of the fixed shape: you can read the control flow (the path is the graph), the model stays contained to one node, and every decision is uniform — same shape every time means the same audit row every time, and the same place to add a check, a metric, or a guardrail.</p>
+<p>Node 4 deserves its own treatment, because a surprising amount of LLM fragility comes from one choice: letting the model return free text and then parsing it. Prose is ambiguous, the format drifts between calls, and your downstream code is one unexpected phrasing away from breaking. “Sure! It’s probably Approve, though it could be Escalate” — now you own an NLU problem to extract Approve, and tomorrow's rephrase breaks your regex. You've coupled your system to the model's prose style, the least stable thing about it.</p>
+<p>The fix is boring and powerful: constrain the model to emit a validated structure, and treat anything else as a failed call to retry. There are three ways to constrain, picked by how hard the guarantee must be:</p>
+<p>Constrained generation reduces malformed output; it doesn’t eliminate it. So close the loop: validate every response, and on a mismatch retry — feeding the validation error back. Bound the retries and fail closed.</p>
+<p>Validation at the boundary means the rest of the system only ever sees well-formed decisions; the messy “did the model behave” question is contained to this one function. You trade a vague NLU problem for a crisp validation problem — no parsing layer, stability across model/prompt swaps, a built-in guardrail (a fixed enum cannot return something off-list), and a typed contract golden tests can assert against.</p>
+<p>One caveat worth stating loudly: structure constrains form, not correctness. A perfectly valid {"decision":"approve","confidence":0.99} can be completely wrong. Structured output removes the parsing failure mode, not the judgment failure mode — which is why it's the floor of a production system, under evals, verification, and confidence, not a substitute for them.</p>
+<p>Confidence (model signal + verification + sampled judge) is composed at the confidence node; the routing node turns it into one of four paths with a single threshold, and prepare_proposal later stamps that result onto the proposal:</p>
+<p>verified is derived from the verification node (verified = all(checks.values())), not a field the agent sets on itself, and the router emits all four routing states. Note the order: routing runs before the proposal is shaped (node 9 → node 10), so it takes a plain confidence and a verified flag — not a Proposal. Start T conservative — everything to a human — and lower it per slice only as data proves it safe. Human attention, the expensive resource, gets spent exactly where the system is unsure.</p>
+<p>Every proposed decision becomes one immutable row — written as the last node of every decision, unconditionally. Not a log line; the canonical record of what happened and why.</p>
+<p>Hash the inputs, don’t warehouse them — verifiability without the liability. Make it append-only: corrections supersede, never overwrite. If you can UPDATE the ledger, it’s not an audit trail; revoke the grant. And never skip the write under load — it’s the record of record, not droppable telemetry.</p>
+<p>If you’ve followed all of the above — fixed graphs, the model contained to one node — you’ll eventually hit a problem that doesn’t fit: something open-ended where the model must look something up, reason about what it found, maybe look up more, then decide. That is what ReAct-style tool loops are for. The mistake isn’t the loop; it’s the unbounded loop. Allow autonomy as a deliberate, rail-guarded exception — and nowhere else.</p>
+<p>Four rails keep it controlled: (1) a hard iteration cap — for, never while(not done)`, so the model doesn’t decide when to stop; (2) a per-capability tool allow-list — it can only call tools on an explicit list scoped to this capability; (3) a full per-iteration trace — every step recorded, so the decision is replayable; and (4) the same exits as everything else — the loop’s output still flows through guardrails, verification, confidence, and routing, and still proposes, never acts.</p>
+<p>The trace rides into the ledger entry, so a loop-based decision is exactly as reconstructable as a fixed-graph one. The two rails worth a test each — it always terminates, and it can't reach an off-list tool:</p>
+<p>The decision rule for whether you even need this: does reaching the decision require steps whose number and order depend on what’s discovered along the way? No → fixed graph (most capabilities). Yes → bounded loop, four rails, documented as an exception. If you reach for a loop “to be safe” or “for flexibility,” stop — that’s usually the fixed-graph case in a costume. Flexibility you don’t need is nondeterminism you’ll debug at 2am.</p>
+<p>Level 1 is one discipline applied consistently: contain the model to one node, make the agent a pure function that only proposes, constrain that node to a validated schema, compose confidence from independent signals to route the close calls to a human, let a dumb substrate be the sole mutator after approval, and write every decision to an append-only ledger. When a capability genuinely needs autonomy, budget it — a step cap, a tool allow-list, a trace, the same output checks as everything else.</p>
+<p>The model still does what it’s uniquely good at — judgment on messy inputs — but the system around it is deterministic, testable, and auditable. Boring, in the best way: predictable enough to test, contained enough to trust, and defensible enough to ship. That’s the floor everything else in this series is built on.</p>
+<p>Series: Running LLM systems in production — Level 1 of 6: Determinism.</p>
+<p>These articles are licensed under a Creative Commons Attribution-ShareAlike 4.0 International license.</p>
+<p>creativecommons.org/licenses/by-sa/4.0/deed.en</p>
+<p>Submit an idea for an article and we may reach out to you in the future.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://stackoverflow.blog/2026/10/07/part-1-make-your-ai-agents-boring-the-determinism-layer/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#679. Part 6: An operating system for coding agents: the disciplined build</h2>
+    <div class="article-meta">
+        📅 Oct 07, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://stackoverflow.blog/2026/10/07/part-6-an-operating-system-for-coding-agents-the-disciplined-build/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/e5e6fca9968957d7046532ac4ba40b5a3c32e871-3000x1500.png?rect=72,0,2857,1500&amp;w=1200&amp;h=630&amp;auto=format" alt="Part 6: An operating system for coding agents: the disciplined build" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/e5e6fca9968957d7046532ac4ba40b5a3c32e871-3000x1500.png?rect=72,0,2857,1500&w=1200&h=630&auto=format" alt="Part 6: An operating system for coding agents: the disciplined build" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Coding agents are great for an afternoon and mediocre for a quarter. Here’s the small set of files and rules — with the actual configs — that keeps quality from decaying across months and thousands of edits, whether you run one agent or a fleet of them on the same repo.</p>
+<p>The first session with a coding agent is crisp: it reads the code, makes a clean change, writes a test. By the thirtieth, something has rotted — it re-discovers the same files, contradicts a decision it made three weeks ago, guesses the test command, and quietly stops writing tests because nobody made it. The fix isn’t a better model. It’s an operating system around the model: a constitution, an autonomy boundary, tiered context, durable memory, a review panel, and a post-edit hook.</p>
+<p>A useful way to say it: the agent is the model plus its harness — the prompts, the tools, the context policies, the hooks, the sandboxes, the sub-agents, the observability wrapped around the raw model. The model is maybe a tenth of what decides whether you get working software over a quarter; the harness is the rest. The evidence is blunt. On the public Terminal-Bench 2.0 benchmark, LangChain moved a coding agent from outside the top 30 to the top 5 — a jump from 52.8% to 66.5%, or 13.7 points — by changing only the harness (system prompt, tools, and middleware like self-verification and loop detection), keeping the same model.</p>
+<p>Examined honestly, most agent failures aren’t just model failures — they’re configuration failures: a missing tool, a vague rule, an absent guardrail, a context window stuffed with noise. So when quality decays across a long project, the lever is almost never “wait for a smarter model.” It’s the harness — and unlike the model, the harness is yours to build. The rest of this post is the concrete one.</p>
+<p>A lean, always-loaded file stating the non-negotiables: the workflow loop (Plan → Document → Implement → Test → Review → Commit), the autonomy boundary, the quality bars (tests in the same diff, no dead code, conventional commits), and adapter discipline (no vendor SDK in domain code). Keep it short — it’s read on every turn, so every line costs context budget.</p>
+<p>The highest-leverage single decision: let the agent run free on everything reversible, pause only on the two things that aren’t — pushing to a remote and deploying. As a permissions config:</p>
+<p>Now it works for an hour and commits a dozen times; you review at the push, not at every keystroke. The blast radius of “autonomous” stays bounded because the irreversible ops are the only gated ones. (Verify your runner’s match semantics — prefix vs substring differ — so --no-verify/--force denials and npm publish actually trip; broad globs like npm:* quietly allow npm publish.)</p>
+<p>One giant context file rots and blows the budget. Tier it:</p>
+<p>Rule: stale context is a bug, fixed in the same change that invalidated it — not “later.”</p>
+<p>Context describes the code; memory holds what the code can’t tell you across sessions — one fact per file, indexed:</p>
+<p>The graph answers the question agents are worst at: “what breaks if I change this?”</p>
+<p>Instead of one self-review, run focused sub-agents in parallel, each one lens, strict output:</p>
+<p>Only high-confidence BLOCKER/MAJOR gate. Diverse lenses catch what a single pass misses; the confidence threshold keeps it from drowning you in nits. (Note: these are parallel agents reviewing one change — distinct from parallel agents making changes, which is Part II’s whole problem.)</p>
+<p>The piece that ties it together — fires after every edit and emits a checklist (a PostToolUse hook):</p>
+<p>Wire it in settings.json, pointed at a tiny script:</p>
+<p>It emits a checklist; the agent makes the edits in the same diff — reviewable, not a silent rewrite. It’s a reminder, not a silent rewriter — you always see what it changed.</p>
+<p>That’s the whole harness for one agent: six artifacts and a loop. Each is a few lines of config or a markdown file; together they’re the difference between an agent that’s brilliant for an afternoon and one that’s still trustworthy on the thousandth edit.</p>
+<p>One agent, harnessed like this, stays productive for months. Now run several on the same repo at once — and a new failure mode appears that none of the artifacts above address: the agents collide. They edit the same files, undo each other’s work, and re-litigate a decision one of them already made. The instinct is to have them “communicate.” That doesn’t scale and isn’t reliable. What works is exactly what lets human teams parallelize: coordinate through shared, written state, not conversation — and write down the hard-won decisions so nobody, carbon or silicon, silently reverses them.</p>
+<p>Agents shouldn’t message each other. They read and write a small set of shared files that encode the state of the work — who owns what, what’s decided, what’s claimed, what’s done. Each agent acts on the world (the repo plus these files); the next one reads the world to decide what to do. Coordination becomes a property of the shared state, not of a conversation — which means it survives a restart and is auditable. Insects coordinate huge builds this way, by changing and reading a shared environment rather than talking. The same trick works here.</p>
+<p>Ownership map — who owns which paths. Default ownership by directory; editing outside your area needs a claim.</p>
+<p>Claim / release — cheap mutual exclusion, no lock server:</p>
+<p>Rule: before claiming, scan for an open CLAIM on overlapping paths in the last few hours; if found, pick different work. Be honest that this is advisory/optimistic, not a lock — two agents can both scan, both see nothing, and both claim the same path (a TOCTOU race). If you need real mutual exclusion, use a primitive with atomic check-and-set: a uniquely-named git branch (the push fails if it already exists), or a conditional write to a coordination store. The file-append claim is good enough when collisions are rare and a human merges; don’t sell it as a lock.</p>
+<p>Progress log — append-only, timestamped. An agent starting up reads the last day to orient itself: what got done, who’s working where.</p>
+<p>Decision log — append-only; the spine that stops agent-B undoing agent-A’s reasoned choice. It’s load-bearing enough to get its own section, next.</p>
+<p>The rules that keep this from unraveling:</p>
+<p>Every non-trivial system accumulates decisions: we use this datastore, agents only propose, all model traffic goes through one gateway, this component may loop and the rest may not. Six weeks later nobody remembers why, someone “fixes” one of them, and a load-bearing choice quietly reverses. The classic remedy is the Architecture Decision Record. In an AI-assisted build — where agents make changes too — a decision log isn’t just hygiene, it’s the mechanism that keeps humans and agents from contradicting each other. A human team has hallway memory; agents don’t. An agent picking up a task reads the log to learn the constraints it must honor — and won’t reverse a choice whose reason it can’t see. (This is the DECISIONS.md from §3, grown up: once agents — not just you — make changes, it stops being a notebook and becomes an enforced contract.)</p>
+<p>A single append-only file (or directory), each entry short and structured:</p>
+<p>The why and the rejected alternatives are the valuable part — they’re what stop the decision from being re-argued every quarter. Keep it as YAML if you want it machine-readable, so tooling can lint against it:</p>
+<p>You never edit or delete a past decision; you change your mind with a new entry:</p>
+<p>The history — reversals included — is itself valuable: it tells the story of how the system’s thinking evolved, and a half-remembered old entry is never silently wrong, it’s visibly superseded. Note status isn't a stored field you flip — it's derived from the supersedes pointers (an entry is superseded iff a later one points at it), so a past entry is never edited at all.</p>
+<p>A log nobody enforces rots. Wire it into review so a diff that violates an accepted decision gets rejected:</p>
+<p>governs is what makes this runnable — without it the gate can't know which decisions apply to a diff. forbids_imports is one cheap, fully machine-checkable violates() rule; richer checks need a human or an agent reviewer. Now the log isn't documentation that decays — it's an active constraint the build maintains. To change a decision, an agent writes a superseding entry and flags a human; it never silently codes around one.</p>
+<p>Put in the log: non-obvious, hard-to-reverse choices; architecture, data stores, security postures; the boundaries of agent autonomy; anything you'd be annoyed to see quietly undone.</p>
+<p>Keep out: things the code already says plainly; transient implementation details; anything that changes freely without consequence; trivia (padding hides the important entries).</p>
+<p>A disciplined build ends up with a few records that rhyme — all append-only, dated, never rewritten: the decision log (why the system is built the way it is), the progress/coordination log (what got done and who’s working where — the file the parallel agents share above), and, if you’re building a system that makes decisions at runtime, an audit ledger (why it decided what it did in production). That shared discipline is what makes a fast build legible after the fact — to a new teammate, an auditor, an agent, or you in three months.</p>
+<p>We’ve crossed from “AI writes a function” to “AI runs a project for weeks” — and then to “a fleet of agents runs it in parallel.” The bottleneck moved from can the model code to can the harness around it keep it honest, oriented, and reviewed over time. For one agent that harness is a constitution, an autonomy boundary, tiered context, durable memory, a review panel, and a post-edit hook. For several, add a shared written world to act on — an ownership map, a claim/release protocol, branch-per-task with human merges, and an append-only decision log wired into review so it’s binding.</p>
+<p>None of this is specific to building AI systems — it’s how you run coding agents on any codebase. You don’t make the model reliable; you can’t. You contain the model and build the disciplined system around it. It’s cheap to set up and compounds every session — the difference between an intern who’s brilliant for an afternoon and an engineering team that gets better at your codebase every week.</p>
+<p>I will package this as a drop-in kit later.</p>
+<p>This is the build layer — the discipline applied to the agents that build the system. The five runtime layers underneath it (determinism, evaluation, confidence, safety, operability) are the rest of the series.</p>
+<p>Series: Running LLM systems in production — Level 6 of 6: the disciplined build.</p>
+<p>These articles are licensed under a Creative Commons Attribution-ShareAlike 4.0 International license.</p>
+<p>creativecommons.org/licenses/by-sa/4.0/deed.en</p>
+<p>Submit an idea for an article and we may reach out to you in the future.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://stackoverflow.blog/2026/10/07/part-6-an-operating-system-for-coding-agents-the-disciplined-build/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#683. Implementing a Modular Master-Agent Telemetry &amp; Diagnostic Framework in Python: Prime-Sentinel Command (PSC)</h2>
+    <div class="article-meta">
+        📅 Oct 07, 2026 &nbsp;|&nbsp; Category: <strong>Health</strong> &nbsp;|&nbsp; 
+        <a href="https://stackoverflow.blog/2026/10/07/implementing-a-modular-master-agent-telemetry-and-diagnostic-framework-in-python-prime-sentinel-command-psc/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Tags: python architecture oop design-patterns distributed-systemsWhen engineering distributed monitoring agents or designing low-latency health-checking pipelines, separating centralized governance from autonomous edge execution is essential.</p>
+<p>I designed the Prime-Sentinel Command (PSC) architecture as an object-oriented master-agent pattern to coordinate edge diagnostic nodes (Sentinels) via a centralized orchestrator (Prime). Below is an architectural walkthrough and minimal reference implementation for engineers looking to build similar decoupled telemetry collectors.</p>
+<p>Many diagnostic setups tightly couple data polling loops with central processing routines. This creates bottlenecks, complicates retry logic, and degrades network fault isolation.</p>
+<p>These articles are licensed under a Creative Commons Attribution-ShareAlike 4.0 International license.</p>
+<p>creativecommons.org/licenses/by-sa/4.0/deed.en</p>
+<p>Submit an idea for an article and we may reach out to you in the future.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://stackoverflow.blog/2026/10/07/implementing-a-modular-master-agent-telemetry-and-diagnostic-framework-in-python-prime-sentinel-command-psc/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#177. Node.js 26.11.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Oct 07, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v26.11.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2026.11.0%20(Current)" alt="Node.js 26.11.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2026.11.0%20(Current)" alt="Node.js 26.11.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 64-bit Installer: https://nodejs.org/dist/v26.11.0/node-v26.11.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v26.11.0/node-v26.11.0-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v26.11.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v26.11.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v26.11.0/node-v26.11.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v26.11.0/node-v26.11.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v26.11.0/node-v26.11.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v26.11.0/node-v26.11.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v26.11.0/node-v26.11.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v26.11.0/node-v26.11.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v26.11.0/node-v26.11.0-aix-ppc64.tar.gz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v26.11.0/node-v26.11.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v26.11.0/node-v26.11.0.tar.gz 
+Other release files: https://nodejs.org/dist/v26.11.0/ 
+Documentation: https://nodejs.org/docs/v26.11.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v26.11.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#10. What&#x27;s New in WebGPU (Chrome 155-156)</h2>
+    <div class="article-meta">
+        📅 Oct 07, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://developer.chrome.com/blog/new-in-webgpu-155-156?hl=en" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://developer.chrome.com/static/blog/new-in-webgpu-155-156/image/new-in-webgpu-155-156.png" alt="What&#x27;s New in WebGPU (Chrome 155-156)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://developer.chrome.com/static/blog/new-in-webgpu-155-156/image/new-in-webgpu-155-156.png" alt="What's New in WebGPU (Chrome 155-156)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>In geometry-intensive render passes, early-Z optimizations are developers' best friend. They provide a massive performance boost by letting the GPU discard hidden pixels before running expensive fragment shaders. If a rasterized depth fails the depth test, the GPU skips the fragment shader entirely, provided the shader doesn't have other side effects.</p>
+<p>If you want to read into how hardware handles this, MJP has an excellent write-up on When Does Early-Z Have to be Disabled?.</p>
+<p>While custom depth manipulation is useful, doing it in your fragment shader comes with a hidden tax. Writing to @builtin(frag_depth) inside a fragment shader typically forces drivers to disable these early-Z optimizations for the entire draw call. This happens because driver heuristics can't guarantee that the shader's calculated output depth matches the depth interpolated by the rasterizer.</p>
+<p>To address this performance penalty, the WGSL extension fragment_depth lets you specify a less or greater depth mode name on @builtin(frag_depth) to explicitly state how the written depth compares to the interpolated depth, enabling the GPU to safely apply early-Z optimizations.</p>
+<p>This language extension can be feature-detected in JavaScript using navigator.gpu.wgslLanguageFeatures. It's recommended to use a requires-directive to signal the potential for non-portability with requires fragment_depth; at the top of your WGSL shader code. See the following example and intent to ship.</p>
+<p>The "texture-compression-unaligned" GPU feature enables the creation of compressed textures with dimensions that aren't integer multiples of the block size (such as 4x4 for BC, ETC2, and ASTC formats). Previously, WebGPU strictly required texture sizes to align with these block boundaries. By removing the need to pad or scale textures to fit block alignments, this feature preserves original compression fidelity without introducing scaling distortion. See the intent to ship.</p>
+<p>The following code snippet checks if the adapter supports texture compression unaligned and, if available, requests a device with it.</p>
+<p>Many thanks to external contributor Ignacio Castaño of spark.js for driving this feature, spec and CTS work!</p>
+<p>With the addition of the "srgb-linear" and "display-p3-linear" predefined color spaces, the WebGPU canvas context can now render directly into extended-range linear color spaces to support wide-gamut displays. These color spaces maintain a linear relationship between pixel values and physical luminance. This makes them ideal for physical light rendering in games as well as spatial processing tasks like anti-aliasing, interpolation, and decimation. See the intent to ship and the Particles (HDR) sample PR #574.</p>
+<p>The "snorm10-10-10-2" vertex format is a packed 32-bit format holding four signed normalized values: three 10-bit components (r, g, b) and one 2-bit component (a). With this format, you can efficiently store attributes, like 3D normal vectors with an extra 2-bit scalar, or alignment flag while saving memory bandwidth. See spec PR 6491.</p>
+<p>The optional "shader-f16" feature, which provides support for 16-bit floating-point values in WGSL, is now supported on Linux for recent NVIDIA GPU drivers. See issue chromium:42251215.</p>
+<p>You can now query the LUID of the underlying DXGIAdapter for a given GPU adapter using the WGPUAdapterPropertiesD3D struct. See issue chromium:562849566.</p>
+<p>This covers some of the key highlights. Check out the exhaustive list of commits.</p>
+<p>A list of everything that has been covered in the What's New in WebGPU series.</p>
+<p>Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://developer.chrome.com/blog/new-in-webgpu-155-156?hl=en" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#688. “Impossible to Hide Secret …”: Uncovering Security and Privacy Issues in LLM-Native IDEs</h2>
+    <div class="article-meta">
+        📅 Oct 06, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://stackoverflow.blog/2026/10/06/impossible-to-hide-secret-uncovering-security-and-privacy-issues-in-llm-native-ides/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Preprint: https://arxiv.org/abs/2607.26390</p>
+<p>LLM-native IDEs (LIDEs) increasingly allow AI agents to read repositories, execute commands, and modify code, introducing significant security and privacy risks. Developers regularly report incidents on Reddit involving leaked API secrets, unauthorized access to system files, and file deletion on live servers. In one case, despite configuring both .gitignore and .copilotignore to exclude a secrets file, Copilot read and attempted to modify it while debugging a database connection issue, exposing live API keys and credentials. This study systematically analyzes such incidents and develops a taxonomy to characterize the reported security and privacy risks.</p>
+<p>The authors followed a three-stage selection pipeline. First, they collected 15.4 million posts and comments from 46 subreddits related to LLM coding tools (January 2023–March 2026). Second, a high-recall LLM classifier filtered these to 3,801 candidate posts. Third, manual verification identified 446 relevant posts, along with 6,280 associated comments, for qualitative coding. Open and axial coding were then applied to develop the taxonomy.</p>
+<p>The study identifies 16 popular LIDEs in the Reddit posts, with Cursor (34.5%) and Claude (23.7%) dominating the discussions. Although the authors do not explicitly interpret this distribution as evidence of higher risk, it reflects the prevalence and use of these tools. The authors developed a taxonomy of 32 issues across 10 categories, covering security (297 posts) and privacy (194 posts) concerns:</p>
+<p>Additionally, the authors show that 7 out of 10 issues stem from system-level design choices (how the IDE grants access, executes actions, and manages context) rather than from the underlying LLM’s reasoning itself.</p>
+<p>With little built-in protection, developers commonly suggested 13 self-devised mitigation strategies, grouped into five categories: Configuration Management (33%, e.g., restricting permissions, disabling telemetry), Code Governance (31%, manual review, version control as a safety net), Data Protection (13%, isolating secrets via .gitignore), Isolation (13%, sandboxing or running local models), and External Guidance (9%, consulting vendor docs). The reliance on workarounds signals a real trust gap between what developers expect and what LIDEs actually guarantee.</p>
+<p>These articles are licensed under a Creative Commons Attribution-ShareAlike 4.0 International license.</p>
+<p>creativecommons.org/licenses/by-sa/4.0/deed.en</p>
+<p>Submit an idea for an article and we may reach out to you in the future.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://stackoverflow.blog/2026/10/06/impossible-to-hide-secret-uncovering-security-and-privacy-issues-in-llm-native-ides/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#691. Tales from the 2026 Developer Survey results</h2>
+    <div class="article-meta">
+        📅 Oct 06, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://stackoverflow.blog/2026/10/06/tales-from-the-2026-developer-survey-results/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/e35a0c5eb319e7928c9ac0a2c2c782d29e644876-3120x1640.png?rect=0,1,3120,1638&amp;w=1200&amp;h=630&amp;auto=format" alt="Tales from the 2026 Developer Survey results" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/e35a0c5eb319e7928c9ac0a2c2c782d29e644876-3120x1640.png?rect=0,1,3120,1638&w=1200&h=630&auto=format" alt="Tales from the 2026 Developer Survey results" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Ryan chats with Erin Yepis, Senior Analyst at Stack Overflow, about the results from this year’s Annual Developer Survey, including the overwhelming daily usage of AI coding assistants despite lingering developer trust issues, the critical role of well-organized documentation in providing verifiable context to mitigate AI hallucinations, and the evolving ways developers are shifting away from active community posting in favor of passive knowledge consumption.</p>
+<p>Check out the full 2026 Developer Survey results.</p>
+<p>Connect with Erin on LinkedIn and read her past articles on the Stack Overflow blog.</p>
+<p>Congrats to Stellar Question badge winner Franck Freiburger for winning the badge on their question Biggest integer that can be stored in a double.</p>
+<p>Ryan Donovan: Hello, and welcome to the Stack Overflow podcast, a place to talk all things software and technology. My name is Ryan Donovan, and today we are talking about the results of the 2026 developer survey. My guest for that is Erin Yepez. She's Market Research and Insights here at Stack Overflow. So welcome back to the show, Erin.</p>
+<p>RD: Of course, of course. So this is the 16th developer survey we've done, and I think it's the third one with AI on it. And this year sort of feels like the year that everybody's sort of standardizing using AI. I keep hearing people are not writing code anymore. What did we learn from the survey about AI this year?</p>
+<p>EY: So it's actually the fourth year that we've had AI on the survey. And we have some... continuity questions. In all of our surveys, we've asked about usage in general of AI tools. This year and last year, we specifically also asked about using AI agents. We also asked about how people are liking them. Do they find AI tools in their workflow to be favorable? We asked about what they're using them for specifically at work. This year, we asked quite a few new questions as well, just in terms of where do you find impact? We kind of tweaked some of the wording from last year. To be a little bit more specific, we asked also about whether anyone is avoiding using AI tools and why. And also, if anyone's building software with AI tools, what are they building? And if they're switching AI tools, what caused the switch? Things like that. Overall, though, I mean, we've seen compared to last year, usage still pretty high. We're at 83%. It's actually just about the same as last year for usage. But we added on to that. So now we specifically also know frequency of usage. Are you using AI tools at work daily, weekly, monthly or less? And then we also found out whether everyone's using AI tools daily, how many hours a day. Some great insights there.</p>
+<p>RD: Yeah. So you said 83% of developers use AI at work. How many of them are using it every day and how much every day?</p>
+<p>EY: All right. So overall, we have 73% of users indicate they're using AI tools daily for a variety of reasons, mostly using them for AI coding assistance or general purpose AI chatbots.</p>
+<p>RD: And, you know, you mentioned AI agents. How many people are using AI agents?</p>
+<p>EY: So we show when we break it up, 66% of respondents indicated using AI agents, 63% general AI chatbots.</p>
+<p>RD: So some of what we do is kind of technology leaderboards and the AI section has its own kind of technology leaderboards. Any surprises on who's top of the LLM or the AI agent leaderboards?</p>
+<p>EY: Surprises? I would say no. I think we still see the frontier companies have</p>
+<p>most market share, the most usage amongst our respondents. We asked about a lot of different</p>
+<p>companies though. So in particular, I know I was interested to see how some of the open weights companies were doing. I looked at some comparisons for, for year over year values as well. They're staying steady. So they're not decreasing, not really increasing either. The big one being DeepSeek that I'm thinking of. Which I know DeepSeek is not completely open weights now, but that's kind of the first one most people think of when you mention open weights.</p>
+<p>RD: Right. Yeah. I thought it was interesting that, you know, the top two, the Anthropic and OpenAM models are both 74%. So there's a lot of crossover there. A lot of people using both.</p>
+<p>RD: So I think we've heard a lot about kind of tokenomics question. Are people, you know, is the data reflecting that? Are people switching? Are people you know, adjusting how they behave based on token costs?</p>
+<p>EY: No, we asked about specifically if in our question about switching AI tools, you know, if you have switched using tools in the past year, what made you switch? And people indicated that cost was part of that reason, but it was one of the lower ranked reasons. So only 6% indicated switching because of costs. We also asked another question specifically about tokens and if people limited themselves personally while using AI tools due to costs at work. And 33% indicated that they self-monitor their own usage, but we found out that 75% of people are changing their prompts for quality reasons. And then only 38% of users have indicated that they're changing their prompts due to cost.</p>
+<p>RD: Yeah. So we have a question about whether AI is making everybody productive, right? Like, is there some magic bullet tool? We looked at how many AI tools people use. Is it narrowing how many tools they're using?</p>
+<p>EY: Well, we haven't asked about how many AI tools people are using before in the dev survey. So we don't have anything to compare it to. We did ask last year how many software tools overall people are using. I know that was pretty high. On average, it was eight. And for more early career respondents, that number, the average number was higher than eight. So for most users in this year's survey, we did specifically ask about using AI tools. And we saw that upwards of 60% were using between two and five.</p>
+<p>RD: It's pretty clear that there's this pretty broad AI adoption right now. But every time I go to a conference, there's half the companies are trust and context and governance. Do people trust AI any more this year?</p>
+<p>EY: I think that there's a lot of conditions to it. So we asked a few different ways about how individuals decide that they trust the tools that they're using. Specifically, we asked, how much do you trust the output from AI tools or agents as part of your workflow? It's slightly a different variation of the trust question that we've asked in the past. In the past, we've asked just in a typical Likert sense, how much do you trust the accuracy of the AI tools you use at work? I trust it very much. I sort of trust it. Neutral. I don't trust it. I definitely don't trust it. So some variation of that, but this year we were a little bit more specific asking how much do you trust the output? And so select one of the following, uh, when I can verify it was what most people selected. So 48%, just about half of users trust AI tools when they can verify it. And opposed to that, we see that 7% have trust in AI tools for many tasks and decisions.</p>
+<p>RD: Right. For all the important stuff, they'll give it to AI.</p>
+<p>EY: Yeah. Yeah. So not very many people, but there were some people that indicated that. 1% indicated that they weren't sure or that they didn't use AI. So that's always in there. Even though that question was a conditional question in the survey, it wouldn't have showed up if you already indicated you don't use AI.</p>
+<p>RD: Right. One of the early kind of paradigms for AI was the retrieval augmented generation to sort of get some sense of information source. Is that something that's still important today?</p>
+<p>EY: Yeah, so 79% indicated that source attribution was either important or very important when evaluating an AI-generated answer.</p>
+<p>RD: And, you know, the RAG was sort of like to eliminate or mitigate the hallucinations that the AI was doing. Is there still a question about that? I mean, I know we asked about what were the sort of top pitfalls.</p>
+<p>EY: Yeah. Actually, we asked about, in the past year, has your company experienced a disruption due to AI? And if so, what would you indicate was the one that cost the most time slash money? And the top reason for that AI disruption was plausible but wrong code, which tracks with some of the survey results that we got last year, too, we asked the question in a different way, but we saw, again, top two responses as far as what caused people pause when using AI tools or what was giving them friction at work was almost right code. And then second was security concerns.</p>
+<p>RD: You know, I know one of the primary use cases of it is generating code. And it feels like the AI-generated code is putting a lot more pressure on code review. I think there was a fantasy or a dream that AI-assisted coding could be complete without human validation, but that doesn't seem to be quite the case.</p>
+<p>EY: Yeah, I would say, if anything, one of the bigger themes that I found in this survey, which tracks with some of the other research that we've done, is that In order to get ahead of those hallucinations and get ahead of the problems that come with your agent or coding assistants not being able to get fully correct code is the documentation, the context that comes with documentation. We see that coming up a lot in the survey. We have similarly asked about documentation in last year's survey too. So we can see that people are using AI a little bit more this year for documenting code. We saw that 51% are currently using AI for documenting code. Last year, we asked about it as well. We saw 33% mostly are partially using AI for documenting code. Then we also asked in a poll survey earlier in 2026 about what was affecting developers' time and what was sort of affecting developers' frustrations and some typical workflows that went along with that. Documentation was something that most spent the least amount of time on, but found to be one of the more frustrating parts of their job.</p>
+<p>RD: So I'd be remiss if I didn't talk about ourselves here. One of the stats I saw that was interesting is that 16% of folks say they're visiting Stack Overflow more to verify the AI output. Does that feel like a trend?</p>
+<p>EY: Yes, we do see a trend. Specifically, we asked last year about if anyone was visiting Stack Overflow specifically because they ran into a problem with AI. More people indicated that they were last year. 35% said that they did. So comparatively, we would see that if this was a trend, it's declining just year-over-year comparisons there.</p>
+<p>RD: Right. But there's still a need for verification. I think overall, you said there's trust issues except on code that they can easily verify. What are we verifying against?</p>
+<p>EY: Yeah. Just like we mentioned earlier, that's those attributable sources, the context that powers the AI engines to come up with the responses that they come up with and documentation.</p>
+<p>RD: I know we've here at Stack Overflow talked about getting context and documentation outside of AI agents. What did the survey say about how much time they spend looking for information?</p>
+<p>EY: Yeah. So we asked specifically about spending time searching for answers. 75% of developers said they spend five or more hours a week looking for information. A third of respondents also indicated more than that, five to nine hours. 20% indicated spending 10 to 14 hours a week. 10 to 14 hours a week. That's a day or two loss to just looking for information. Yeah. And we also asked about a similar question a while ago in the 2023 survey. And we didn't ask in hours and we didn't ask in weeks. We asked in minutes and days. So comparatively, we see that there might be a slightly less time spent searching for answers. We saw that 63% of respondents in 2023 spent anywhere between 30 and over 120 minutes a day searching for answers.</p>
+<p>EY: Feels like a lot. I think it might be slightly getting better, but it's still a lot.</p>
+<p>RD: Yeah. Is this some information that's just like, you know, they look for it, they find it, they get their thing done. Did we ask anything about that?</p>
+<p>EY: Well, we did ask about after you started working on a project, how often, yeah, if you needed context for that project, how often does it arrive after you've already started? So 79% of users indicated that they found important context after they already started. 43% said that sometimes that happens. Sometimes they start, they have everything they need. 12% said very often they found important context after they had started a project.</p>
+<p>RD: I know we asked about how people are doing context management. Is it something that people have tools for at this point?</p>
+<p>EY: I think they must have tools, but they might not be using them very regularly. We see that context is still pretty disorganized, as we would expect, given the little amount of time people are spending on documentation and the growing, slow-to-grow acceptance of using AI to help with documentation as well. 54% of users this year said they keep separate notes for important context. Whenever they start a new AI session, 45% of users said they also just start a fresh AI session to reset context. And then 35% said they manually go find files that they need every time that a specific question comes up that they know they have the answer to. In those files, 33% of users are copying and pasting in between tools.</p>
+<p>RD: Oh, wow. That sounds super frustrating. I know we asked about other frustrations with the context itself. What were people saying about that?</p>
+<p>EY: So top context problems, information quality. 63% said they struggle with incomplete information. 61% said knowledge is trapped in people's heads, so it's not even documented. They know they have to go to a person to get it. 57% say they find documentation that's outdated. And 53%, similar to the copying and pasting functions, are just their documented context is in separate tools. They have to go find them to bring them together.</p>
+<p>RD: Wow. So it sounds like people are spending five to 14 hours just searching for information, even with AI tools. Do you feel like AI tools are going to make the problem a little less bad?</p>
+<p>EY: I really do like the organized style that… AI prompting has forced us all to accommodate. And it goes right back to the issue of documentation. Documentation has always, I think, been sort of a, what do you call it?</p>
+<p>RD: It's been a chore for a lot. A lot of developers think it's a chore.</p>
+<p>EY: Yeah. I was thinking of whatever that, the cliche of something like the monster on your back. I don't even remember what it is.</p>
+<p>EY: So it's, yeah, it's more than a chore. It's just like, I definitely don't have time for this, you know, amongst all of the other things I have to do. Spending the least amount of time on it, regularly finding it the most frustrating. So, but for... AI workflows everything becomes so much smoother if you have all these organized files. You organize your markdown files with that updated context, you have a method of finding out how something is outdated, if it has been the source it can you can attribute the source to a subject matter experts or that you have reasons to trust the source. Like that is the number one source for getting that information and that, yeah, you have easy ways of keeping it up to date and also, yeah, you're just keeping files updated as you work. So as things change, the files are changing too, so you have that regular refreshed context documentation organized file structure ready to go and then you're also able to use that whenever you need to trace back to: why did we make these decisions when I was deep in the flow state of work? And just making sure that everything was coming out correct. You also have the luxury of traceability with all of that documentation and that good context, which is also important. We see in some of the questions that we asked about in the survey.</p>
+<p>RD: Yeah, I know that traceability has always been important. But as a community that provides trusted knowledge, I know we asked about ourselves a little bit in here. There's been a fair amount of talk about the drops in traffic around the internet. What did we find about that sort of drop in traffic?</p>
+<p>EY: Yeah. So, well, we specifically asked about, are you visiting the site? If you're already visiting Stack Overflow, if you are, what are you doing on the site? 78% of users indicate that they're still coming to the site to read posts and discussions. Only 31% are coming to Stack Overflow to ask questions. 34% coming to Stack Overflow to answer questions. So I think while a majority of users are not taking part in those engaging activities, the passive activities of learning through reading through questions and answers and comments is still happening.</p>
+<p>RD: Yeah. I remember there's 1% who are asking and answering more because of AI. They're the real heroes. This is obviously the answer is AI, but why are people not visiting as much? They're not posting as much.</p>
+<p>EY: So 65% indicate that they are able to find answers without posting. So that might be coming from a Google search, might be coming from an agent. So whenever they're attributing sources, they're clicking on links and they're seeing what they need to see. Like, okay, I feel confident about whatever this AI assistant has told me is the right thing to do. 45% of users are using those AI tools to just get enough of the answer that they can move forward with. So no need to go do the extra verification, which saves a step. I totally understand. There's some things that I think a lot of us who visit Stack Overflow, we're going to visit some of the same problems. Like, I know I've gone to Stack Overflow to find this answer before. I just need you to remind me what it was. Here I am again asking the same question. And then besides that, 36% have also indicated they don't have the time to go to Stack Overflow to find, just sort of read through all of that, all of the context that goes along with the questions and answers. And then we also saw that 21% do not want to engage with posting because of fear of being judged or criticized.</p>
+<p>RD: Oh, all you big meanies out there, look at what you did.</p>
+<p>EY: Actually just pulled up a YouTube video that I was using for an example to do some content. And someone posted a great video about, it was titled the best question ever asked on Stack Overflow. Have you seen this?</p>
+<p>EY: Well, it's a very technical question. So I didn't get into the specifics of the technical question. But what this user was mostly concerned about was that it had so many views. It was an older post, older question, and it was closed. And he was just kind of going through all of the reasons why this was the wrong thing to do. There were some great discussions in there. I'll share that video with you. I think it's very interesting how much content you can find about Stack Overflow.</p>
+<p>RD: Yeah, everybody has their opinions. And if you've ever dipped into meta, you know that as much. So for the folks that are learning, did you find that they're learning about AI or general coding?</p>
+<p>EY: We see that users are still learning to code. We asked about if users are learning to code. We've asked this question in the survey quite a few years. So yes, they are still learning. For those that are learning to code or learning a new technology skill, we see the typical responses. They're using tech– technical documentation. We've asked this now for a couple of years. Are you using AI tools to learn to code? So yes, they are. 53% of users are now using AI tools to learn to code. We also specifically asked are you learning to code for AI, which is a little bit different. So of those, we see even more people, well, about the same amount, 51% are using AI tools to learn to code for AI. So letting the tool teach you how, what is the right way to use it might not be the best way to do it, but it is a way. So AI is being involved in the learning process either way.</p>
+<p>RD: Yeah. I mean, people are definitely learning from AI, but there's still a little bit of human there, right? There's a little bit of human in the loop. There's still direction from humans on what to learn. Why do you think AI hasn't replaced the human signals there?</p>
+<p>EY: Well, as far as the direction goes, when we asked in the survey, what resources do you use when you want to decide what it is that you want to learn next? What skill or coding language you'd like to learn next? So the top response for that, 44% indicate that they learn about what it is they want to learn from coworkers and peers. And then 33% from their managers. So there's a lot of work interaction going on there.</p>
+<p>RD: Yeah. Well, I know a lot of folks come to the survey to see what tech is hot, how loved is Rust at this point. So what's the, you know, start with the sort of languages. Who's topping the leaderboards there?</p>
+<p>EY: So this year, not a surprise, JavaScript is, again, the most used programming language now for the 12th straight year. 62% indicate having using it. We also see the typical leaders that we have been seeing for the past couple of years. Python is up there. 58% have indicated using it. HTML, CSS is up there as well. We also saw, yeah, speaking of most loved languages, most desired languages, Rust is back. And we see an increase in the usage this year too. They're up to 18% are now using Rust as per the survey.</p>
+<p>RD: There's a bunch of other technologies on there. Any changes in the database leaderboards?</p>
+<p>EY: Yes. We saw that Postgres is now the top database. I believe it was also the top database last year, too.</p>
+<p>RD: Yeah, they're pretty solidly number one.</p>
+<p>EY: Yeah, 58% have indicated using Postgres as a database in the past year. And we actually have featured on the survey this year a great time series that shows the databases over the years what has been the usage stats. So now you can see the diametrically opposed trends of MySQL and Postgres over the years back to 2018. It's very interesting.</p>
+<p>RD: Yeah. I mean, Postgres, I talked to a lot of folks on the podcast or repping Postgres all day. So how about in the other technology areas? What else did you see in there?</p>
+<p>EY: We asked about a new section this year, co-testing tools. For co-testing tools, we saw that ESLint was the number one tool that people are using. Only by 37%. So I guess co-testing is not for everybody.</p>
+<p>RD: That one's a linter. I think, I don't know how many people are still linting. I mean, I guess a lot, right?</p>
+<p>EY: A lot. I mean, compared to the other tools that we have here. We had, and I mean, considering, I know that ESLint is tied to the JavaScript Foundation. That makes sense to me that it's going along with JavaScript being the most used, that it would be the most used code testing tool. We also saw Postman and Newman on there right under ESLint for most usage. And PyTest, PyTest solid number three, again, with all of those Python users that we know that indicate they're using Python in the past year.</p>
+<p>RD: And do we have some AI technologies on this leaderboard? I think we had orchestration and such, right? The sort of things that developers would build with.</p>
+<p>EY: So for AI orchestration tools, top of the list is Langchain, 30% indicated having used it last year. Right under that, for the top three, we have number two OpenAI Agents SDK, which makes sense since we see that OpenAI's LLM is used just about as much as Anthropic’s. ChatGPT is still one of the top agent tools out there on the survey site as well. But number three for orchestration tools is Terminal.</p>
+<p>RD: Yeah. You don't mean just like a regular Terminal program?</p>
+<p>RD: All right. So the testing tools are new this year. Obviously, testing isn't new. Why did we decide to add a new section for testing?</p>
+<p>EY: Yeah, I wanted to add this section. I just thought it was interesting with, as we've seen in the survey results, that there's fluctuating trust and favorability with AI tools. We know that there's problems with almost but not quite right code responses from AI tools. It should go hand in hand that we're seeing more testing going on. I know that we also ask about testing with the AI itself. You can add that as part of your workflow or set up a separate agent. Ask the agent you're working with, hey, let's set up some tests and make sure that's part of our process here. I think that most people would want to use– my hypothesis is that people want to use something that's separate from AI to test code more now than ever to make sure that they are catching the things that AI is sort of overlooking because of whatever is causing hallucinations. They're suggesting these issues, so maybe they wouldn't be the best tools to catch the issues. And a lot of these co-testing tools are still part of open source projects that are maintained by individuals who want to make sure that they survive AI, they survive whatever changes happen with these new emerging technologies. So I definitely wanted to make sure that was covered in here so we could see maybe a little bit of that diversity of some of the non-AI tools people are using.</p>
+<p>RD: So if you had to pull out one stat or chain of stats that you think is the big takeaway for you,</p>
+<p>EY: Yes, everything and anything to do with documentation. We have quite a few stats in the survey this year about documentation that reference documentation and context. Also, all of the stats that we have that reference attributable sources and how to find quality checks amongst your sources. I think that just proves a whole point about where the problems come from. It's not necessarily that AI itself is causing the problem. It might be something more foundational that we've always had as a problem, which is documentation.</p>
+<p>RD: That's right. Well, as a former technical writer, I love to hear the greater focus on documentation, you know?</p>
+<p>EY: Yeah. And I mean, technical documentation is still the number one tool for learning how to code.</p>
+<p>Well, it's that time of the show where we shout out somebody who came on to Stack Overflow,</p>
+<p>dropped some knowledge, shared some curiosity, and earned themselves a badge. Today, in honor of us asking questions in the survey, we are shouting out the winner of a stellar question badge. Somebody who asked a question that was saved by 100 users. And today, shouting out Frank Freeburger, who asked, biggest integer that can be stored in a double? If you're curious about that, we'll have the answer for you in the show notes. I'm Ryan Donovan. I host the podcast, edit the blog here at Stack Overflow. If you have questions, concerns, topics to cover, et cetera, please email me at podcast@stackoverflow.com. And if you want to reach out to me directly, you can find me on LinkedIn.</p>
+<p>EY: My name is Erin Yepez. I'm market research and insights at Stack Overflow. I would say the same thing. You can find me posting about surveys on the Stack Overflow blog or on LinkedIn.</p>
+<p>RD:And where can folks check out the full survey results?</p>
+<p>EY: Yes. So the full survey results will be on our survey website. That's where all of our survey results are. So if you go to insights.stackoverflow.co, C-O, not C-O-M, you'll see every single year's survey results and 2026 will be there. Just click on that.</p>
+<p>RD: All right. Thank you for listening, everyone. And we'll talk to you next time.</p>
+<p>Get The Stack Overflow Podcast at your favorite listening service.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://stackoverflow.blog/2026/10/06/tales-from-the-2026-developer-survey-results/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#695. The results of the 2026 Developer Survey are here!</h2>
+    <div class="article-meta">
+        📅 Oct 06, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://stackoverflow.blog/2026/10/06/the-results-of-the-2026-developer-survey-are-here/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/38cc717508afa8cc3a85ac3a849aea2e8baf53e2-1200x627.png?rect=3,0,1194,627&amp;w=1200&amp;h=630&amp;auto=format" alt="The results of the 2026 Developer Survey are here!" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/38cc717508afa8cc3a85ac3a849aea2e8baf53e2-1200x627.png?rect=3,0,1194,627&w=1200&h=630&auto=format" alt="The results of the 2026 Developer Survey are here!" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Below, we’ll highlight some of the results we found interesting about what's going in the life of technologists, their technologies, AI usage, and more.</p>
+<p>With fall upon us, it’s time to pumpkin spice up your life with the tasty results of the 2026 Developer Survey. Over seven weeks, more than 30,000 people took the survey and answered questions about their work, technologies, learning strategies, and, yes, AI use. We diligently worked in our data mines to harvest insights that you can use to build better software and engineering teams. We’ll be releasing the full data set SoonTM so you can find data to back your own hot takes.</p>
+<p>Below, we’ll highlight some of the results we found interesting. If you want to skip ahead to the results themselves, check out the Survey overview then dive into the results.</p>
+<p>This is the 16th Developer Survey, which means it’s old enough to drive in the US. Hand the keys over to us, and let’s get rolling!</p>
+<p>Work for developers has certainly changed, and only some of that is due to AI. Only a small fraction (18%) of devs go into offices every day to work. Those that do probably aren’t going into offices with the ping pong tables, endless snack cabinets, and tactical bean bag chairs. AI and layoffs have changed the calculus between software developers and employers. Before 2020, you could walk to the corner store and trip over a job offer. Now LinkedIn profiles declare, “Open to Work!” for months on end.</p>
+<p>But if companies won’t hire you, maybe you can hire yourself. While about the same percentage of respondents said they were freelancers, contractors, or self-employed, those that said they worked in an organization of one jumped from 4% to 10%. We’ve heard anecdotally about how some folks are using AI agents to soloprenuer their way to a viable company, so this may be the data to back it up.</p>
+<p>See more results about how developers work today.</p>
+<p>For plenty of you, the technology rankings are the meat of the survey. There’s not a ton of movement among the leaders—the top ten is mostly the same, though SQL passed HTML/CSS to take the number two spot. Meanwhile, Rust increased its standings by moving up to the 12th most used language. Perhaps that White House memo about memory safety made an impact?</p>
+<p>For AI fans, the top model providers, Anthropic and OpenAI, are neck and neck, with Google a distant third. Similar levels of usage don’t translate to similar levels of admiration: more respondents want to keep using Anthropic models than OpenAI models, though not by much.</p>
+<p>There’s no question that AI has become prevalent in the software industry—even if that prevalence has some folks feeling frustrated. 73% of respondents who indicate using AI coding assistants/agents use them daily, and a third of daily users using any AI tools use AI four or more hours per day. With that increased use has come greater positive sentiment—62% of all respondents view AI at least somewhat positively, while that jumps to 71% for daily users .</p>
+<p>Many of those AI users live in coding agents (66%) and chatbots (63%). No surprise; developers use the tools that are best for developing. The agents of choice are Claude Code (66%) and GitHub Copilot (59%). When they develop with AI, it’s primarily generating code in familiar areas (67%) and debugging (61%), not deploying, operating, or troubleshooting production systems (20%). AI gets to muck about with familiar code, but once that code reaches prod server, it gets shown the door.</p>
+<p>AI has definitely changed how people find answers to their questions: 83% still ask a search engine for answers, but 70% hit up their AI. Those search engines used to bring folks to a Stack Overflow question, but AI overviews and chatbots don’t. They still use our answers, but they don’t always give the person who answered the credit that they deserve. People are visiting less for simple questions (64%), but many are visiting more just to check the source of information for those AI answers (16%). While that’s less than last year, it still indicates that there are people increasing how much they visit even when using AI.</p>
+<p>When developers are looking to learn something new, what skills are they learning? No surprise, but a large majority (79%) want to upskill their AI game. It’s the new hotness. Everybody is being asked to get onboard or get left behind, so these are skills that need attention. But that doesn’t mean your standard programming skills gather rust and dust: 52% of people are still learning new coding skills.</p>
+<p>Context is the big buzzword in agentic engineering right now, and we wanted to know what that means for everyone. We’ve seen that good context is trusted context, and to trust what the AI gives requires source attribution (93%). The best sources of trusted context are project goals and requirements (85%) and code and docs (73%). The places to look for specific answers are the people you work with (72%), the code (63%), and documentation (60%). That explains why senior devs spend half their day answering DMs.</p>
+<p>Developers and their employers have started to pay attention to token costs as AI use rises. We’ve seen model routing and usage limits emerge as solutions. But developers care more about quality (75%) over cost (38%) when it comes to shaping prompts and picking models. Their organizations (and their CFOs no doubt) have placed some sort of cost-control measures in place: 38% set limits on usage, 28% reviewed spending data, 27% use different models for different work, and 25% set limits on who gets to use AI. But some orgs take the developer’s side: 21% said their organizations are spending more.</p>
+<p>This is just a little sample of what the survey results contain, so please do go over to the survey site and browse the full details yourself. We’re taking a more editorial approach this year, doing what we can to highlight more of the data points that we think show interesting trends in the industry. If you want to skip over the chat and hit the numbers directly, feel free. In a few weeks, we’ll have the full data set available for download so you can comb through the numbers yourself.</p>
+<p>If you find anything interesting or have alternate, complimentary, or disagreeable takes off of what you see, let us know. We’re always interested in what the community thinks.</p>
+<p>If you want to check how we’re looking to solve the context and knowledge issues found above, check out Stack Internal.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://stackoverflow.blog/2026/10/06/the-results-of-the-2026-developer-survey-are-here/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#152. The Shift to cgroup v2 in Kubernetes: What You Need to Know</h2>
+    <div class="article-meta">
+        📅 Oct 06, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Join us for four days of incredible opportunities to collaborate, learn and share with the cloud native community.Buy your ticket now! 9 - 12 November | Salt Lake City, Utah</p>
+<p>In Linux, cgroups (control groups) are a kernel feature used for managing system resources.
+Kubernetes uses cgroups to allocate resources like CPU and memory to containers,
+ensuring that applications run smoothly without interfering with each other.
+With the release of Kubernetes v1.31, support for v1 cgroup management moved into
+maintenance mode.
+Support for v2 cgroup management has been stable since Kubernetes v1.25.</p>
+<p>Compared with cgroup v1, cgroup v2 provides a single unified hierarchy,
+a more consistent interface, and a stronger foundation for resource isolation
+and modern resource-management features.</p>
+<p>Kubernetes has deprecated cgroup v1.
+Starting with Kubernetes v1.35, failCgroupV1 defaults to true, so the kubelet does not start
+on a cgroup v1 node by default. Administrators can temporarily set failCgroupV1: false in the
+kubelet configuration file, but removal will
+follow the Kubernetes deprecation policy.
+Further removal work is tracked in KEP-5573: Remove cgroup v1 support.</p>
+<p>If you are still on a release older than v1.35, migrate every Linux node to
+cgroup v2 before upgrading, or plan to set the temporary failCgroupV1: false
+override. If you are already on v1.35 or later, confirm that every Linux node
+runs cgroup v2 (or that you intentionally keep the override). Under the default
+configuration, a remaining cgroup v1 node fails during kubelet startup.</p>
+<p>For kubeadm-managed clusters, Kubernetes v1.35 also makes this an earlier, stricter check. The
+SystemVerification preflight check, provided by k8s.io/system-validators, returns an error during
+kubeadm init, kubeadm join, and kubeadm upgrade when it detects cgroup v1 with kubelet v1.35 or
+later; with an older kubelet, the check remains a warning. See
+kubernetes/system-validators#1.12.1 release notes for details.</p>
+<p>The top FAQs cover three main areas: why to migrate, the benefits and drawbacks,
+and key points to keep in mind when using cgroup v2.</p>
+<p>The Linux kernel documentation describes both interfaces:</p>
+<p>The kubelet treats active_file memory as not reclaimable. For I/O-intensive workloads, a large
+page cache can therefore make the kubelet report memory pressure and evict Pods. This is a
+known kubelet issue
+(kubernetes/kubernetes#43916); migrating to
+cgroup v2 does not by itself change that calculation. The documented workaround is to set equal
+memory requests and limits for containers that perform intensive I/O, after measuring an appropriate
+value.</p>
+<p>Memory QoS was introduced as an alpha feature in Kubernetes v1.22 and
+updated in v1.27. It remains alpha in v1.36, but now separates memory throttling from memory
+reservation and adds tiered memory protection:</p>
+<p>Memory QoS is available only on Linux nodes that use cgroup v2. It relies on the cgroup v2 memory
+controller: memory.high provides throttling, while memory.min and memory.low provide hard and
+soft protection when tiered reservation is enabled. cgroup v1 cannot provide this protection model.</p>
+<p>Enabling the MemoryQoS feature gate applies memory.high throttling to Burstable containers.
+The threshold is derived from the request, limit, and memoryThrottlingFactor (default 0.9).</p>
+<p>memoryReservationPolicy: None is the default. It does not write memory.min or memory.low.</p>
+<p>memoryReservationPolicy: TieredReservation maps Guaranteed Pod memory requests to memory.min
+(hard protection) and Burstable Pod requests to memory.low (soft protection). BestEffort Pods
+receive neither protection.</p>
+<p>The kubelet exposes Alpha metrics for the total memory.min and memory.low reservations on a node.</p>
+<p>Kernel 5.9 or later is recommended. On older kernels, memory.high reclaim can trigger a known
+livelock; from v1.36 the kubelet logs a warning when Memory QoS is enabled on an affected kernel.</p>
+<p>For example, to opt in to tiered protection:</p>
+<p>The overall Kubernetes recommendation is not to enable Alpha features in production; however, if you
+judge that memory QoS with tiered reservations is useful for your platform in production, make sure
+to test the configuration and account for hard-reserved memory before you enable
+the TieredReservation feature gate.
+See the
+Pod QoS documentation
+for the current mapping of Kubernetes QoS classes to cgroup v2 controls.</p>
+<p>On cgroup v2 nodes, the kubelet defaults singleProcessOOMKill to false. It therefore sets
+memory.oom.group for each container cgroup so that an OOM event kills all processes in that
+container together, rather than leaving a partially functioning multi-process container. Set
+singleProcessOOMKill: true only if you need the cgroup v1-compatible behavior where the kernel
+may kill one process at a time. See the
+KubeletConfiguration reference
+for this setting.</p>
+<p>This behavior is scoped to a container cgroup, not the whole Pod. Also, cgroup.kill is a separate
+administrative interface: writing 1 to it sends SIGKILL to every process in that cgroup and its
+descendants; it does not configure OOM behavior. The cgroup v2 memory controller additionally
+provides memory.events counters that monitoring systems and userspace OOM managers can observe.</p>
+<p>In cgroup v1, delegating controllers to less privileged containers may be dangerous.</p>
+<p>Unlike cgroup v1, cgroup v2 officially supports delegation.
+Most implementations of rootless containers rely on systemd for
+delegating v2 controllers to non-root users.</p>
+<p>This delegation mechanism is separate from Kubernetes Pod user namespaces, which map container
+users to unprivileged host users. Pod user namespace support
+graduated to stable in Kubernetes v1.36; check its filesystem, kernel, CRI runtime, and OCI runtime
+prerequisites before enabling it.</p>
+<p>cgroup v1 uses cpu.shares, whereas cgroup v2 uses cpu.weight. Newer OCI runtimes use an improved
+non-linear conversion that preserves the default priority and gives small CPU requests more usable
+granularity. The change is implemented in the OCI runtime rather than Kubernetes: it is available
+in crun v1.23 and runc v1.3.2. After upgrading a runtime, monitoring or policy tools that predict
+exact cpu.weight values may need updates. Read
+New Conversion from cgroup v1 CPU Shares to v2 CPU Weight
+for the formula, examples, and compatibility considerations.</p>
+<p>In-place Pod vertical scaling
+graduated to stable in Kubernetes v1.35. Kubernetes v1.36 then [enabled]
+(/blog/2026/04/30/kubernetes-v1-36-inplace-pod-level-resources-beta/)
+in-place vertical scaling for Pod-level resources
+by default, as a Beta feature. The kubelet coordinates changes between the Pod-level and container
+cgroups so that increases create headroom before container limits grow, while decreases constrain
+containers before shrinking the Pod-level boundary. Accurate aggregate enforcement for this
+v1.36 feature requires cgroup v2.</p>
+<p>Here's what you need to use cgroup v2 with Kubernetes.
+First up, you need to be using a version of Kubernetes with support for v2 cgroup management;
+that's been stable since Kubernetes v1.25 and all supported Kubernetes releases include this support.</p>
+<p>For now, you can opt back in to use cgroup v1; the Kubernetes project recommends using cgroup v2, but in Kubernetes 1.36 (the current release) the cgroup v1 option remains
+supported as a fallback.
+That fallback is scheduled for removal in
+Kubernetes v1.38. If you are running an older cluster, plan to migrate; if you are setting
+up a new cluster with Linux nodes, you should prefer cgroup v2.
+In either case, review both the Kubernetes runtime documentation
+and (if relevant) the containerd compatibility matrix.</p>
+<p>When Kubernetes was first announced, in 2014, only v1 cgroup existed.
+Version 2 cgroup management first appeared in Linux kernel 4.5, released in 2016.</p>
+<p>Configure the kubelet's cgroup driver to match the container runtime cgroup driver.</p>
+<p>If you use kubeadm to manage your cluster, Kubernetes recommends that you use the systemd cgroup driver,
+because kubeadm manages the kubelet as a systemd service. For other management tooling,
+check the documentation for the tool you're using to manage your cluster.</p>
+<p>If you can pick either option, I recommend using the systemd driver.</p>
+<p>Whatever tooling you've chosen, the kubelet automatically tries to detect the runtime's recommended cgroup driver.
+This automatic detection relies on using a runtime
+that implements the RuntimeConfig
+CRI RPC (for example: containerd v2.0+ or CRI-O v1.28+).</p>
+<p>If you're using a container runtime that supports cgroup v2 but doesn't support automatic cgroup driver detection,
+you can manually configure an override by editing
+the kubelet configuration file. For example:</p>
+<p>Automatic discovery of the runtime's cgroup driver through the CRI, tracked by
+KEP-4033, graduated to stable in Kubernetes v1.34. It requires a runtime
+that implements the RuntimeConfig CRI RPC (containerd v2.0+ or CRI-O v1.28+). When available,
+the kubelet uses the value reported by the runtime instead of its configured cgroupDriver value.</p>
+<p>Tools and commands that you should know about cgroups:</p>
+<p>Work from the API object down to the node. Identify the node, then compare
+desired resources in the spec with the enacted values in status (in-place
+resize can leave those out of sync):</p>
+<p>On that node, as root, with the systemd cgroup driver and cgroup v2 (these
+snippets also need jq). Pin the container with kubelet labels; a container
+name alone is not unique on a node. Use crictl ps -a if the container is
+not running:</p>
+<p>Do not treat info.runtimeSpec.linux.cgroupsPath as a filesystem path when
+the runtime uses the systemd driver; that value is a systemd unit path
+(slice:runtime:id), not a directory under /sys/fs/cgroup.</p>
+<p>© 2026 The Kubernetes Authors | Documentation Distributed under CC BY 4.0</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#22. Shipping JPEG XL in Chrome</h2>
+    <div class="article-meta">
+        📅 Oct 06, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://developer.chrome.com/blog/jpeg-xl-in-chrome?hl=en" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://developer.chrome.com/static/blog/jpeg-xl-in-chrome/images/cover.png" alt="Shipping JPEG XL in Chrome" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://developer.chrome.com/static/blog/jpeg-xl-in-chrome/images/cover.png" alt="Shipping JPEG XL in Chrome" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Luca Versari
+          
+
+
+
+X
+
+
+
+
+GitHub
+
+
+
+
+Homepage
+
+
+
+
+
+
+
+
+
+
+ 
+            Moritz Firsching
+          
+
+
+
+X
+
+
+
+
+GitHub
+
+
+
+
+Mastodon
+
+
+
+
+Homepage
+
+
+
+
+
+
+
+
+
+
+ 
+            Philip Jägenstedt
+          
+
+
+
+GitHub
+
+
+
+
+Bluesky
+
+
+
+
+
+Homepage</p>
+<p>We're excited to announce that Chrome is shipping decoding support for the JPEG
+XL (.jxl) image format starting from Chrome 155. JPEG XL is a next-generation
+image format designed to meet the needs of modern web developers and
+photographers. It offers 30-50% better compression than JPEG, lossless
+compression, built-in HDR support, lossless JPEG transcoding, and more.</p>
+<p>In general, we recommend trying both AVIF and JPEG XL to get the best results.
+We expect that JPEG XL is most helpful for high-fidelity or lossless
+compression, especially of photographic images or in cases in which fine-grained
+progressive decoding is preferred.</p>
+<p>In this post, we share why we brought JPEG XL to Chrome, how we used Rust to
+ensure memory safety first, the extensive performance work that makes it fast,
+and what the journey tells us about developer feedback and the web standards
+ecosystem.</p>
+<p>Image decoders are one of the most critical and targeted attack surfaces in any
+modern web browser. They process complex, untrusted binary structures directly
+from the network and run inside the renderer process. Historically, decoders
+written in memory-unsafe languages like C++ have been prone to vulnerabilities
+such as out-of-bounds reads, heap overflows, and use-after-free bugs.</p>
+<p>Our security model relies on sandboxing and defense-in-depth, guided by the
+rule of
+two.
+However, sandboxing is a secondary layer of defense. To eliminate these security
+risks at the source, we have integrated jxl-rs, a pure Rust implementation of
+the JPEG XL decoder.</p>
+<p>Memory safety is crucial, but a memory-safe decoder that is approximately as
+fast as the best non-memory-safe alternative is a much more obvious choice than
+a choice with a significant performance compromise.</p>
+<p>A fundamental part of the performance of modern codecs is making full use of the
+SIMD hardware available on modern devices. To do so safely,
+target_feature_11 Rust
+feature had to be stabilized, which allowed the use of SIMD instructions without
+requiring unsafe code.</p>
+<p>The next step was to build a SIMD abstraction layer (jxl_simd), inspired by
+the C++ Highway library (itself originally
+developed for libjxl, the C++ reference implementation of JPEG XL). Together,
+those developments allowed writing a multi-platform library that doesn't
+compromise on SIMD performance optimizations, while restricting unsafe
+operations to a small number of highly-vetted locations.</p>
+<p>Performance optimizations in jxl-rs build on those in libjxl. This includes
+a generic processing pipeline for steps crossing region borders, while
+minimizing data copies to maximize hardware performance. We've been tracking the
+performance of the Rust reimplementation across different hardware platforms on
+the jxl-rs performance dashboard.</p>
+<p>We verified the jxl-rs implementation with various state-of-the-art
+techniques, including fuzzing and AI review of the code, and have not found any
+memory safety bugs throughout the entire implementation history, providing yet
+another validation of the huge improvements that Rust brings to memory safety.</p>
+<p>The Chrome team considers web developer feedback from a wide range of channels,
+such as bugs, surveys, the Developer Signals
+Project,
+and the Interop Project. Our
+decision to ship JPEG XL was based on consistent feedback and requests from web
+developers, most visible in the Interop Process, where it was a popular
+proposal in 2026 and
+several years prior.</p>
+<p>To ensure the format is interoperable across browsers, we have participated in
+the Interop 2026 JPEG XL
+Investigation to ensure
+there is test coverage for all of JPEG XL's features in browsers, and that those
+tests pass in Chrome.</p>
+<p>With JPEG XL officially landing in Chrome, the web becomes faster, richer, and
+safer. We encourage developers, content creators, and platform owners to start
+using .jxl images and animations in their pipelines.</p>
+<p>Try it out, file bugs,
+and help us continue building a faster and safer web for everyone.</p>
+<p>We'd like to thank all the people who contributed to jxl-rs or its integration
+in Chrome, and especially Helmut Januschka for the substantial contributions
+both to the Chrome integration and jxl-rs, and Martin Bruse, Zoltan Szabadka,
+Sami Boukortt and Wonwoo Choi for their substantial contributions to jxl-rs
+itself.</p>
+<p>Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://developer.chrome.com/blog/jpeg-xl-in-chrome?hl=en" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#623. Why don&#x27;t more developers &#x27;use the platform&#x27;?</h2>
+    <div class="article-meta">
+        📅 Oct 06, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://javascriptweekly.com/issues/805" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        
+        
+            
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Why Don't More Developers 'Use the Platform'? — A thoughtful look at why we often rebuild what browsers already offer, from someone usually on the platform's side. It kicked off an extensive Hacker News discussion, with many arguing native controls and APIs are too limited or awkward to depend on.</p>
+<p>Free Course: Build Ambitious Modern Interfaces Faster with OpenAI Codex — Join Katia Gil Guzman for this free Codex course and learn how agentic coding has changed frontend development. You'll cover setup, prompting, feedback, skills, automations, deployment and more.</p>
+<p>Preact 11 Released — Six years after the road to Preact 11 began, the latest version of the popular "alternative to React with the same modern API" is here, with improved hydration, automatic ref forwarding, and an ESM-only package. The upgrade guide covers the changes.</p>
+<p>Nuxt 4.6: A Big Step Towards a Server-Agnostic Nuxt — A meaty release for the full-stack Vue framework with a server layer that no longer ties you to Nitro (pure Vite server builds are now an experimental option), built-in sessions, Vue Vapor support, and a new CLI (Nuxt CLI 4.0).</p>
+<p>Prolific package maintainer Sindre Sorhus has disabled outside pull requests due to AI contribution spam, though he'll keep maintaining his projects. SWC also now restricts PRs to trusted contributors.</p>
+<p>📊 The JavaScript Framework Benchmark site has added results for Chrome 154 covering 196(!) ways to implement an app, how each performs, and how large they are.</p>
+<p>npm stage publish can now create new packages, so automated workflows no longer need a manual first publish.</p>
+<p>Remix 3.0 – No official post yet, but the new stable release of the rebuilt full-stack framework, with no React required. The RC release post has more info, though.</p>
+<p>Ink 8.0 – The popular TUI renderer now requires React 19.3 and adds scroll offsets for building scrollable views, now common in coding agent UIs.</p>
+<p>Inferno 10 – React-like UI library built for raw rendering speed. Now shifts more work from runtime to its JSX compiler.</p>
+<p>Qwik 2.0 RC, pnpm 12.10, Ember 7.3, Video.js 10, ESLint 10.12</p>
+<p>Getting Started with Claude Code Mods — Claude Code has just added support for Mods, a way to extend the agentic coding harness with JavaScript so you can watch events, change behavior, and draw custom UI. Addy builds a mod here in ~80 lines that shows a live 'forecast' of your context window.</p>
+<p>Friendship Ended with Deno, Now Node is My Best Friend — David felt good about Deno in 2021, but has now returned to Node and is surprised by how much has improved. He ported his site generator back with barely any changes, and doesn't hold back on where he thinks Deno went wrong.</p>
+<p>100+ Search Engines. One Simple API — Build with real-time data from Google, YouTube, Amazon, and more. SerpApi delivers structured JSON and Markdown for AI agents and your apps. Skip scraping headaches.</p>
+<p>I Tested 11 HTTP Resilience Libraries — How do fetch wrappers like Ky, ofetch, and Wretch behave if you abort mid-retry? The author of ffetch tested eleven options and found five still attempt retries after cancellation.</p>
+<p>📄 How Booking.com Cut Its Node.js Service's Costs by 38% – By moving from PM2 to Watt's worker threads and reworking load balancing and worker configuration. Ilya Malyavin</p>
+<p>📄 Readable Regular Expressions for TypeScript, Inspired by Emacs – Rebuilding the SemVer regex from named, composable pieces. Rahul M. Juliato</p>
+<p>📄 On Automatic Type Refinements – Which filter callbacks let TypeScript narrow an array's type, and which don't. Radosław Miernik</p>
+<p>TanStack Charts 1.0: A Composable, Typed Charting Library — A framework-neutral way to declaratively specify visualizations in typed, tree-shakable JavaScript which are then rendered with SVG or Canvas. The extensive sample catalog (with code) shows off line, bar, pie and area charts, plus heatmaps, box plots, histograms, etc.</p>
+<p>SvelteKit 3: 'The Same Framework with a Little More Polish' — Svelte's official app framework gets a cleanup/polish release. Few new features, and remote functions remain experimental, but existing users have some work to do to migrate (though sv migrate can handle much of it).</p>
+<p>Publish to Miris Straight from Adobe Substance 3D Painter — Stop sharing decimated 3D content. Stream your high-fidelity Adobe Substance 3D Painter assets via the Miris plugin.</p>
+<p>Effect 4.0: A Smaller Core, Rebuilt Runtime — A ground-up rewrite of the popular library for building reliable apps that handles tricky stuff like resource management, concurrency, retries, typed errors, and more. v4.0 boasts 5x smaller minimal bundles and 86% less memory used per concurrent task.</p>
+<p>Lightpanda 1.0: A Headless Browser for Automation — A headless browser built from scratch in Zig. With no graphical rendering, it uses a fraction of Chrome's CPU and memory (~35MB memory in a run I just did!). Drive it with Puppeteer/Playwright or, the fun bit, script it with plain JavaScript.</p>
+<p>eslint-cssicorn 0.1 – Sindre Sorhus has moved the CSS-only rules from his mammoth eslint-plugin-unicorn ESLint ruleset into a new CSS-focused package.</p>
+<p>pixelmatch 8.0 – Tiny, fast pixel-level image comparison library. Switches to a more perceptually accurate color metric, so diff counts will change.</p>
+<p>PR Comment Inbox – Nicholas Zakas's email-style inbox for GitHub review comments, with threads and read/unread state.</p>
+<p>Electron Forge 8 – Toolkit for building, packaging, and publishing Electron apps.</p>
+<p>Redux Toolkit 2.13 – The official Redux toolset adds TypeScript 7 support.</p>
+<p>Bring your wild ideas to Mozilla Festival. Gather and connect with other developers and creatives in Barcelona, Oct. 28-30. Get your badge.</p>
+<p>Trigger.dev runs your TypeScript agents and workflows in production, with queues, retries, and no timeouts on long-running tasks.</p>
+<p>📊 The State of Devs 2026 survey results are out with over 5,000 developers sharing their thoughts on software development career security, AI use/sentiment, hobbies, and the workplace (including income).</p>
+<p>Why does example.com now load JavaScript? The IANA says since most clients hitting the site are automated and don't load JavaScript, it's a way to save bandwidth. There's more on the site's recent redesign here.</p>
+<p>Netlify explains how it reduced Edge Function invocation latency by ~5x, switching from hosted V8 isolates to Unikraft MicroVMs on its own edge network.</p>
+<p>🤖 Pi 1.0, the minimal Node.js-based coding agent, adds MCP and non-LLM model support through 'Codemode'. They also launched an experimental Pi Durable runtime for running resilient, long-term agent flows.</p>
+<p>Published by Cooperpress and edited by Peter Cooper</p>
+<p>'JavaScript' is a trademark of Oracle Corporation in the USWe are not endorsed by or affiliated with Oracle.</p>
+<p>Change your email address or stop getting this newsletter.</p>
+<p>© Cooper Press Ltd · Fairfield Enterprise Centre, Louth, LN11 0LS, United Kingdom</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://javascriptweekly.com/issues/805" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#76. A Practical Guide To Naming Things</h2>
+    <div class="article-meta">
+        📅 2026-10-06 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://smashingmagazine.com/2026/10/how-name-things/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/how-name-things.jpg" alt="A Practical Guide To Naming Things" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://files.smashing.media/articles/how-name-things-choose-accordion-icons/how-name-things.jpg" alt="A Practical Guide To Naming Things" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vitaly Friedman loves beautiful content and doesn’t like to give in easily. When he is not writing, he’s most probably running front-end & UX …
+More about
+Vitaly ↬</p>
+<p>Weekly tips on front-end & UX.Trusted by 182,000+ folks.</p>
+<p>Naming is hard. The language we use shapes the way we think about things, but also the conversation we have about it. That’s why we have so much confusion about colors, icons, UI components, features — and that’s why we struggle to name design tokens, HTML classes, and variables.</p>
+<p>Sometimes, the names we choose are too generic, so it’s difficult to understand what exactly is meant. And sometimes they are too specific, leaving little room for flexibility and reuse. How do we choose the right names? And which naming conventions work best? Let’s take a closer look.</p>
+<p>If you’re looking for some inspiration for naming HTML classes, CSS properties, or JavaScript functions, Classnames is a wonderful resource jam-packed with ideas that get you thinking outside the box.</p>
+<p>The site provides thematically grouped lists of words perfect for naming. You’ll find terms to describe different kinds of behavior, likeness between things, order, grouping, and association, but also themed collections of words that wouldn’t instantly come to one’s mind when it comes to code, among them words from nature, art, theater, music, architecture, fashion, and publishing.</p>
+<p>How would you choose the right name for a given color? Fortunately, David Aerne maintains a tremendous repository of color names, currently with 30355 unique color names, sourced from various references and 1000s of user contributions.</p>
+<p>Of course, the repository comes with a color picker and name search and plenty of other color pickers as well. Tremendous work, which is also a fantastic reference to keep nearby.</p>
+<p>What makes a good name? Javier Cuello summarized a set of naming best practices that help you name your layers, groups, and components in a consistent and scalable way.</p>
+<p>As Javier points out, a good name has a logical structure, is short, meaningful, known by everyone, and not related to visual properties. He shares do’s and don’ts to illustrate how to achieve that and also takes a closer look at all the fine little details you need to consider when naming sizes, colors, groups, layers, and components.</p>
+<p>How to build a flexible design token taxonomy that works across different products? That was the challenge that the team at Intuit faced. The parent company of products such as Mailchimp, QuickBooks, TurboTax, and Mint developed a flexible token system that goes beyond the brand theme to serve as the foundational system for a wide array of products.</p>
+<p>Nate Baldwin wrote a case study in which he shares valuable insights into the making of Intuit’s design token taxonomy. It dives deeper into the pain points of the old taxonomy system, the criteria they defined for the new system, and how it was created. Lots of takeaways for building your own robust and flexible token taxonomy are guaranteed.</p>
+<p>Looking at what other people call similar things is a great way to start when you’re struggling with naming. And what better source could there be than other design systems? Before you end up in the design system rabbit hole, Iain Bean did the research for you and created the Component Gallery.</p>
+<p>It’s a collection that includes plenty of examples for more than 50 UI components — from accordion to visually hidden — and also lists other names that the UI components go by. A fantastic resource, and not only with regard to naming.</p>
+<p>Features often have low adoption due to poor discoverability. Feature adoption needs time — first the feature must be discovered, then understood, then tried, learned, and eventually built into existing workflow. Erin Gannon has written a helpful practical guide on how to make sure all of it happens.</p>
+<p>Good names are driven by user needs and problems. They should signal the value or outcome of a feature (the job-to-be-done), and — most importantly! — tap into the user’s own language. So ask people to explain a feature in their own words and then use the words they use.</p>
+<p>A wonderful example of naming guidelines for a complex multi-brand, multi-themed design system comes from the Vodafone UK Design System team. Their Variables Taxonomy Map breaks down the anatomy and categorization of a design token into a well-orchestrated system of collections.</p>
+<p>The map illustrates four collections required to support the system and connections between tokens — from brand and primitives to semantics and pages. It builds on top of Nathan Curtis’ work on naming design tokens and enables everyone to gather insight about where a token is used and what it represents, just from its name.</p>
+<p>If you want to explore more approaches to naming design tokens, I’ve put together a list of useful Figma kits and resources that are worth checking out.</p>
+<p>Romina Kavcic created a helpful little tool for naming design tokens — from learning how they work and how to name them well to configuring your own naming structure with components, categories, states, and roles.</p>
+<p>If you are looking for the right name for your product or service, Onym is a fantastic open-source repository that organizes tools and resources for finding names for brainstorming, vetting, guides, sprints, etymologies — all the way to cautionary tales and agencies that name things, as well as useful books to take a look at.</p>
+<p>A quick-reference list of tools and guides for naming just about… well, anything, in one place:</p>
+<p>The right name is the one that’s well-understood and used by the team and users. So much time is wasted speaking about the very same thing but in different dialects — the designer’s dialect, the developer’s dialect, the product manager’s dialect, and the user’s dialect. That’s what often causes frustration and confusion.</p>
+<p>So if you see low adoption, it might be merely because of the name. And pay attention to potential naming conflicts and put them in a backlog of things to address later. It’s one of those fine little details that can reduce frustration and confusion and help teams work together better.</p>
+<p>We hope you’ll find these wonderful projects useful — put together by wonderful creators. A friendly shout-out to everyone sharing their work with folks to use and learn from! That’s one of the reasons why we truly love the web and people building and designing it. 💚</p>
+<p>At Smashing, we love the web. That’s why we publish articles and books, run workshops and events around everything web. We love seeing what we all can do to make the web more accessible and usable. We also love organizing and attending online events — with friendly discounts for large groups (5+ attendees) and schools and students. Interested? Just send us an email and we’ll sort it out!</p>
+<p>Tips on front-end & UX, delivered weekly in your inbox. Just the things you can actually use.</p>
+<p>With practical takeaways, live sessions, video recordings and a friendly Q&A.</p>
+<p>Everything TypeScript, with code walkthroughs and examples. And other printed books.</p>
+<p>With a commitment to quality content for the design community.</p>
+<p>Founded by Vitaly Friedman and Sven Lennartz. 2006–2026.</p>
+<p>Smashing is proudly running on Netlify, TinaCMS and Swell.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://smashingmagazine.com/2026/10/how-name-things/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#163. Scaling Kubernetes Workloads with Node Swap</h2>
+    <div class="article-meta">
+        📅 Oct 05, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/node-swap-chart.svg" alt="Scaling Kubernetes Workloads with Node Swap" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/node-swap-chart.svg" alt="Scaling Kubernetes Workloads with Node Swap" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Join us for four days of incredible opportunities to collaborate, learn and share with the cloud native community.Buy your ticket now! 9 - 12 November | Salt Lake City, Utah</p>
+<p>Memory is often the first hard limit a Kubernetes cluster hits.
+Nodes run out of RAM long before they run out of CPU, and the new wave of agentic AI workloads makes this worse.
+These workloads demand large memory footprints to start up and run untrusted code, then sit idle waiting for the next prompt.
+That idle but resident memory is expensive, and it caps how many pods a node can hold. This is where swap helps. Kubernetes support for running nodes with swap enabled reached General Availability in v1.34, and by backing that swap with fast NVMe solid state drives (SSDs), a node can page out dormant memory and pack in far more pods.
+This post explains how we benchmarked that approach across three workloads, including CI/CD kernel builds, sandboxed headless browsers, and isolated Python runtimes; we found density gains of up to 3×, often with little or no latency cost.</p>
+<p>The Kubernetes ecosystem has reached a fundamental physical resource constraint: the strict limits of hardware memory versus the growing demand for dynamic, bursty workloads in the new agentic era.</p>
+<p>Historically, administrators provisioning memory-intensive workloads encountered a persistent dilemma: set memory limits too high and you waste expensive infrastructure on idle RAM; set them too low and you risk Out-Of-Memory (OOM) kills.</p>
+<p>This conflict is amplified when deploying autonomous AI agents using secure execution environments like the agent-sandbox framework. These agentic pods require large memory footprints to initialize and execute untrusted code. However, after their burst of activity, they typically enter long-tail idle phases waiting for user prompts. Keeping this idle state in physical RAM caps cluster density and makes AI infrastructure expensive to run.</p>
+<p>With the introduction of Kubernetes' support for running nodes with swap enabled (which reached General Availability in v1.34), this paradigm shifts. By enabling the Linux kernel to page out anonymous memory to disk, node swap acts as a shock absorber during traffic spikes or periods of heavy memory oversubscription.</p>
+<p>Historically, swap was discouraged in Kubernetes for two reasons. The first was memory accounting. Under cgroup v1, the controls treated memory and swap as a single combined limit rather than letting operators set an independent limit for disk swap. Without independent tracking, a process could page large amounts of anonymous memory out to disk, which made a container's real memory usage unpredictable and hard to isolate. Kubernetes' swap support resolves this by relying on cgroup v2, whose separate swap accounting tracks disk swap on its own. The second reason was the latency penalty of paging to slow spinning disks, which fast NVMe Local SSDs largely eliminate. Together, these make it practical to increase pod density and buffer against memory spikes without sacrificing cluster stability.</p>
+<p>To quantify the performance boundaries and cost-saving potential of Local SSD-backed node swap, this analysis covers three distinct workload categories: a Traditional Build Workload for CI/CD pipelines, High-Density Browser Sandboxes, and Isolated Python Sandboxes.</p>
+<p>Before exploring specialized agentic architectures, swap was validated against classic batch workloads by running a complete Linux 6.1.1 kernel build. The kernel compilation process leverages concurrent worker threads, balloons in memory to hold compiled object files, and requires a large memory spike during the brief linking phase.</p>
+<p>This workload mirrors the memory behavior of enterprise CI/CD pipelines. Because earlier compiled objects sit inactive in memory while the pipeline progresses, CI/CD jobs frequently hoard unused physical RAM, which makes them well suited to node swap compression.</p>
+<p>On a baseline node without swap, the minimum memory limit to prevent an OOM crash during compilation was 600 MB. Routing swap to a Local SSD cut the container memory limit by 50% to 300 MB without incurring any execution slowdown (in fact, it ran cleanly in 374s vs the baseline 433s). However, as an explicit tradeoff, compressing the limit further to 200 MB forced the active working set into swap, causing long I/O wait times and increasing execution time by over 40%. This reinforces that swap serves as an insurance policy for burst memory, not a replacement for active RAM.</p>
+<p>AI agent workloads frequently require manipulating headless browsers via Chromium. However, trusting external code execution often requires stricter security isolation than standard Linux namespaces. This benchmark cross-evaluated several container runtime environments. The raw logs and testing methodologies for the default runtime are available in the Agent Sandbox GKE Swap directory.</p>
+<p>At these maximum densities, the per-pod latency increase is driven mainly by pods competing for CPU, not by swap I/O. An operator tuning for a specific latency target would run at a lower density than the peak numbers here and see a proportionally smaller latency cost.</p>
+<p>For a comprehensive architectural breakdown and density metrics for gVisor and Kata, see the Agent Sandbox GKE Swap Runtimes directory.</p>
+<p>The advantages of node swap also extend to untrusted, isolated code-execution environments.
+This sweep deployed simultaneous Python sandbox sessions analyzing 5 million rows of data from the MovieLens 20M dataset, requiring a ≃375 MiB resident memory footprint per execution.
+The in-depth scaling results and deployment code for this sweep can be reviewed in the Agent Sandbox GKE Swap Python Density directory.</p>
+<p>Without swap, heavy concurrent bursts exhausted physical memory, causing the node to hit a hard RAM limit and fail at 80 concurrent sessions.
+Enabling Local SSD swap offloaded dormant anonymous memory, freeing up physical RAM and preserving the node's page cache.
+This allowed the node to scale to 240 concurrently isolated Python sandboxes—a 3× density improvement.
+As with the browser workloads, the latency rise at peak density comes mainly from the sandboxes competing for CPU rather than from swap itself.</p>
+<p>If you manage Kubernetes infrastructure for developer environments, browser testing farms, JVM applications, or AI execution runtimes, leveraging Local SSD swap can multiply your density efficiency.</p>
+<p>In Kubernetes v1.34+, node swap is Generally Available. You enable it via the kubelet configuration:</p>
+<p>Pairing this upstream configuration with your cloud provider's high-speed local disk gives you dynamic memory balancing. For example, this is natively supported on Google Kubernetes Engine via Node Memory Swap configured on Local SSD profiles.</p>
+<p>To get the benefits, configure your workloads with Burstable QoS: set your container's memory limits higher than its requests. The node automatically rations fast swap space based on idle application memory usage while keeping active processes responsive.</p>
+<p>As the Kubernetes ecosystem transitions into the agentic era, administrators face a growing conflict between finite hardware memory limits and the bursty behavior of AI workloads. Frameworks like Agent Sandbox provide the security isolation required for running untrusted agents, but that isolation traditionally demands large amounts of idle memory overhead.</p>
+<p>By configuring the kubelet with LimitedSwap and routing it to Local SSDs, you can mitigate this conflict. Fast swap offloads the dormant states of idle agents, allowing you to increase pod density and node utilization on the same infrastructure without compromising security boundaries.</p>
+<p>© 2026 The Kubernetes Authors | Documentation Distributed under CC BY 4.0</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#32. Email verification updates, October 2026</h2>
+    <div class="article-meta">
+        📅 Oct 05, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://developer.chrome.com/blog/email-verification-october-2026?hl=en" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://developer.chrome.com/static/blog/email-verification-october-2026/image/email-verification-october.png" alt="Email verification updates, October 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://developer.chrome.com/static/blog/email-verification-october-2026/image/email-verification-october.png" alt="Email verification updates, October 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Rowan Merewood
+          
+
+
+
+GitHub
+
+
+
+
+LinkedIn
+
+
+
+
+Mastodon
+
+
+
+
+Bluesky
+
+
+
+
+
+Homepage</p>
+<p>As the Email Verification origin trial continues, we have made further updates
+based on your feedback. We don't anticipate further breaking changes and are
+preparing to ship the feature. We have also launched a new
+documentation section for Email
+Verification with dedicated sections for
+verifiers and
+issuers.</p>
+<p>The Email Verification origin trial started in Chrome 150 on desktop. Following
+developer feedback and testing across the ecosystem, we are continuing to refine
+the implementation. This post covers updates from Chrome 154, including Android
+support, third-party origin trials, key discovery handling during token
+validation, and a header update for email providers.</p>
+<p>Changes in the user interface or user-facing behavior.</p>
+<p>Starting in Chrome 154, Chrome for Android supports email verification.
+Verifiers or providers don't need to make any changes because the API or
+protocol remains the same. The same prerequisites apply, including the
+requirement that the user must be signed in to their email provider in the
+browser.</p>
+<p>Users can access their settings under Settings > Addresses and more >
+Verified Email.</p>
+<p>Changes for sites collecting and verifying emails.</p>
+<p>From Chrome 154, third-party origin
+trials are supported for email
+verification (See issue
+534377131). If you provide an
+embedded script or identity SDK, you can now register for a third-party trial
+token and inject it into pages hosting your script. Websites embedding your
+script don't need to register separate origin trial tokens.</p>
+<p>There is an important caveat: the origin trial registrant and the issuer must
+be same-site. Specifically, the origin registered for the trial must match the
+issuer domain.</p>
+<p>When validating the Email Verification Token (EVT), your server fetches the
+provider's JSON Web Key Set (JWKS) to verify the issuer's cryptographic
+signature. The keys optionally include a kid key identifier which is also
+optionally included in the JWT indicating which key was used to sign the token.
+If the token does not include the kid claim (for example, with Gmail) iterate
+through the keys to find the correct one. The
+documentation
+and demo show the code to do this.</p>
+<p>Starting in Chrome 156, the email address in the token will be returned exactly
+as provided in the form submission (see issue
+549217427). Previously, issuers
+might have returned the account's canonical email address (for example,
+returning First.Last@example.com when the form submission contained
+first.last@example.com). Note that it is always a good practice to use a
+case-insensitive comparison on the returned email, so this shouldn't be a
+breaking change.</p>
+<p>From the provider side, this requirement is more strict: if the provider does
+not return the email exactly as provided, Chrome will reject the token. This
+avoids exposing more data than would be revealed by sending a confirmation
+email. Validate the incoming email against the signed-in user for a match in the
+same way you would handle email delivery.</p>
+<p>From Chrome 154, the Sec-Fetch-Dest header sent on token issuance requests has
+been updated to use a hyphen:</p>
+<p>This change standardizes the fetch destination identifier with web platform
+naming conventions (see issue
+546618576).</p>
+<p>If your issuance endpoint validates the Sec-Fetch-Dest header (recommended to
+protect against CSRF and unintended request contexts), update your check to
+accept email-verification. To avoid disruption during browser rollouts, accept
+both values during the transition.</p>
+<p>Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://developer.chrome.com/blog/email-verification-october-2026?hl=en" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#420. Supabase Select 2026 Recap</h2>
+    <div class="article-meta">
+        📅 Oct 02, 2026 &nbsp;|&nbsp; Category: <strong>Health</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-select-2026-recap" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/supabase-select-2026-recap/og.png" alt="Supabase Select 2026 Recap" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/supabase-select-2026-recap/og.png" alt="Supabase Select 2026 Recap" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today at Supabase Select, we showed how Supabase works for your app from day one to millions of users, and how your agent builds and runs it with you.</p>
+<p>Your coding agent already writes your application code. Setting up the backend is still your job. So is watching it in production and fixing it when it breaks. That work happens in the dashboard and the docs, and your agent can't do it end to end.</p>
+<p>Supabase now works code first. Schema and config can live in code, so your agent can set up and change a project the same way you do. It can also check the project and report the problems it finds. You decide what gets fixed and merged.</p>
+<p>You can build anything, because your agent works in the same code you do. You can operate with confidence, because your agent finds problems and you decide what merges. And you can scale without limits, because when the app grows, the same Postgres carries it from prototype to petabyte.</p>
+<p>Local Supabase can now run as native processes, so it starts on machines without a Docker daemon, like Claude Code's sandbox. You can also run multiple local Supabase instances, one per directory, so several checkouts of the same repo run at the same time. In alpha, off by default. Update the Supabase CLI to try it.</p>
+<p>Write your schema as SQL files and pg-delta generates the migration, so the schema lives in your repo. Project settings live in code too, and a dashboard change comes back into the file with supabase config pull. Docs.</p>
+<p>Run web services and agents in any language next to your database, with no limit on how long they run. Each service gets a full Linux environment and the same default environment variables as your Edge Functions. Private alpha. Join the waitlist.</p>
+<p>Let your users connect their own agents to your app. The server runs as an Edge Function next to your data, users sign in through your existing Auth flow, and every tool call runs as that user, with your RLS policies deciding what it can reach. It's separate from the official Supabase MCP server, and it's built on @supabase/server and the new Supabase Middleware, which also work on their own in any server code that needs to know who is signed in. Add the MCP server block.</p>
+<p>Learn more in Build anything: Supabase from code, and an MCP server for your app.</p>
+<p>Pick a prompt and suggested schedule for health, security, performance, or resource checks, and run it in Claude, Codex, or Cursor. Your agent reads your project through the Supabase MCP server, connected read-only, and reports what it finds. Pick a prompt.</p>
+<p>Advisors now flag elevated error rates in the Data API, Auth, Storage, and Edge Functions, next to the security and performance issues they already catch. Open the Health tab on your project's Advisors page. Changelog.</p>
+<p>See which sessions hold connections, run long, or are blocked, and who holds the lock, then cancel the query or terminate the connection. On by default for every project, including self-hosted. Open it in the dashboard.</p>
+<p>A new MCP tool lets your agent query your logs directly, and the Supabase agent skill now points to a living document of the health, security, performance, and resource signals your agent should watch for. Install the Supabase plugin.</p>
+<p>Explorer is the next version of the SQL editor. Query your logs or your database in one workspace, and save the investigation as a Notebook anyone on your team can rerun. Rolling out to every project through October 12. Once it reaches your project, turn it on under Feature Previews. Open Explorer.</p>
+<p>Your company decides who can connect to the Supabase MCP server through its identity provider, starting with Okta. Each token is bound to the member who signs in. Generally available. Set it up on a Team or Enterprise plan with SSO configured.</p>
+<p>Limit a token to the organizations, projects, and permissions you choose. Generally available, and the default for new tokens created in the dashboard. Create one at Account, Access Tokens.</p>
+<p>Before your agent creates a paid project or branch, or runs SQL that could delete data, the Supabase MCP server asks you to confirm first. It helps prevent unwanted charges and data loss, but it isn't a guarantee. On by default. MCP docs.</p>
+<p>Stream Postgres data to BigQuery, ClickHouse, DuckLake, or Snowflake in near real time, so analytics queries run there instead of on your production database. Public alpha on the Pro, Team, and Enterprise plans. Docs.</p>
+<p>Multi-node high availability for Postgres, built by the team behind Vitess. When a node fails, Multigres promotes a replica in seconds and committed writes survive, with no changes to your application. Connection pooling is built in. The Multigres project is open source. On Supabase, it's in private alpha, by invite. Request access.</p>
+<p>A storage engine that replaces the default heap with an undo log, avoids table bloat and VACUUM, and keeps familiar Postgres behavior. Public beta. Choose it at project creation. Docs.</p>
+<p>Open, reproducible database benchmarks. The benchmark code, the data, absolute throughput, and throughput per dollar are all published, so you can inspect the method and rerun the result. Visit the website.</p>
+<p>Learn more in Scale without limits: Multigres, OrioleDB, and dbarena.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-select-2026-recap" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#428. Scale without limits: Multigres, OrioleDB, and dbarena</h2>
+    <div class="article-meta">
+        📅 Oct 02, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/select-2026-scale-without-limits" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/select-2026-scale-without-limits/og.png" alt="Scale without limits: Multigres, OrioleDB, and dbarena" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/select-2026-scale-without-limits/og.png" alt="Scale without limits: Multigres, OrioleDB, and dbarena" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today at Supabase Select, we announced Multigres for high availability and scalable connection pooling, and OrioleDB for high performance storage. We launched dbarena, an open benchmarks site for comparing managed Postgres providers’ performance results and costs.</p>
+<p>Every Supabase project starts with a single Postgres database. As your project grows, vertically upgrading the database’s available RAM & CPU resources can help, but it isn’t a solution to every challenge.</p>
+<p>Scaling Postgres isn’t a singular problem — users encounter new challenges at different stages of scale and under different workloads. Our users often report needing help scaling concurrent client connections, reducing the overhead of bloat and frequent VACUUM operations, increasing read and write throughput, avoiding transaction ID wraparound, and guaranteeing uptime with high availability.</p>
+<p>Our focus is to remove every scaling limitation from our users’ journey. That means tackling bottlenecks at every layer of Postgres, building in public, and making the improvements fully open source and available to the broader builder community.</p>
+<p>Multigres is an open source operating system for Postgres, built by the team behind Vitess. It adds scalable connection pooling and automated multi-node failover to Postgres out-of-the-box. With Multigres, there's no separate pooler to run, and your app can connect far more clients than one Postgres instance can hold.</p>
+<p>Many developers are familiar with basic Primary / Standby HA architecture and its known issues. Traditionally, if the primary database fails before data has been replicated to the standby, those rows may be lost. In contrast, Multigres uses a generalized consensus protocol built on top of postgres synchronous replication. If a Multigres node fails, the cluster agrees on exactly which writes were committed before accepting new ones, then promotes a replica in seconds. You keep every committed write through the failover.</p>
+<p>Multigres runs three Postgres nodes across availability zones in one region, so losing one zone doesn't take your database down. You don't need to change your application code to move to Multigres.</p>
+<p>You can also add read replicas and gateways for more read throughput and client connections. During the alpha, our team adds them for you.</p>
+<p>Multigres is in private alpha, by invite. It works with Supabase Auth, Storage, and Edge Functions, and it's built for testing during the alpha, not production workloads. Request access.</p>
+<p>OrioleDB is an open source, scalable storage engine for Postgres. It replaces Postgres traditional heap storage and eliminates its fundamental limitations, such as table bloat, VACUUM overhead, and txid wraparound inherent to the limited range of 32-bit transaction IDs.</p>
+<p>With heap storage, Postgres never updates a row in place: every update writes a new row version and leaves the old one behind as a dead tuple. On hot tables with frequent updates and deletes, this creates significant bloat over time, and cleaning it up requires constant VACUUM activity. VACUUM is one of the most common causes of Postgres performance degradation and outages under load. Teams typically mitigate it with careful tuning, scheduled pg_repack runs, and over-provisioned compute.</p>
+<p>OrioleDB's undo log removes this problem at the source. Instead of leaving dead tuples behind, updates and deletes write page-level undo records, which the system reclaims automatically. This eliminates bloat entirely and VACUUM is no longer needed.</p>
+<p>Allowing lock-free page reads also makes OrioleDB more efficient under high concurrency, especially in IOPS use. OrioleDB delivers up to 1.8x higher throughput than Postgres heap in our public, TPC-C-derived benchmarks, published on dbarena.com.</p>
+<p>During the public beta, you can choose OrioleDB under advanced configuration when you create a project. You can also use OrioleDB and heap storage per table in one project, with USING orioledb or USING heap.</p>
+<p>OrioleDB uses 64-bit transaction IDs (XIDs) by default, so it avoids Postgres's wraparound problem. With 32-bit XIDs, wraparound hits after roughly 4 billion transactions and forces the database to aggressively freeze old rows. With heap storage, XIDs are directly stored in every tuple, so expanding them from 32 to 64 bits would add 8 bytes to every row version. That simple 8-byte change cascades across billions of row versions with dead tuples, resulting in more pages, more I/O, greater cache pressure, and larger indexes.</p>
+<p>Because OrioleDB replaces heap's vacuum-based MVCC with an undo log, it sidesteps this constraint entirely: transaction metadata can use 64-bit XIDs without inheriting heap's legacy tuple format.</p>
+<p>OrioleDB has been under active development by the Supabase team and open source contributors since 2021. Supabase employs the engine's creators, including major Postgres contributor Alexander Korotkov, who have shipped eighteen beta releases.</p>
+<p>dbarena.com publishes open, reproducible database benchmarks across providers: the benchmark code, published methodology, downloadable raw data per result, and shareable comparison links. It compares Supabase, Amazon RDS, and Google Cloud SQL at launch. For each run, dbarena reports transactions per dollar, monthly total cost, transactions per minute, p95, and machine specs, and it plots throughput over time.</p>
+<p>Developers evaluating hosted Postgres have few trustworthy sources for comparing providers. Vendor benchmarks often run under favorable conditions, community benchmarks are one-off snapshots, and a rigorous in-house evaluation costs weeks to produce.</p>
+<p>dbarena follows three rules: every published result can be checked independently, comparisons are normalized for cost, and the methodology is public.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/select-2026-scale-without-limits" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#439. Operate with confidence</h2>
+    <div class="article-meta">
+        📅 Oct 02, 2026 &nbsp;|&nbsp; Category: <strong>Health</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/select-2026-operate-with-confidence" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/select-2026-operate-with-confidence/og.png" alt="Operate with confidence" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/select-2026-operate-with-confidence/og.png" alt="Operate with confidence" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today at Supabase Select, we announced new tools that let your coding agent find production problems, test fixes, and report back, and new controls that set what the agent can access and when it stops to ask you first.</p>
+<p>Diagnosing a production problem today means reading logs, usage charts, and database reports separately and correlating them yourself. Your agent could already read that data, but it had no procedure for investigating and no safe place to test a fix.</p>
+<p>For an agent to confidently operate a project:</p>
+<p>Previously your agents were limited in what logs they could access via our MCP. We’ve introduced a new MCP tool that gives your agents raw access to your project logs via SQL, which enables more in-depth and precise investigations.</p>
+<p>Programmatic checks can catch obvious issues and provide signal for an agent to investigate further. Advisor previously focused on security and performance checks. We’ve now extended it to health. Advisor will signal when error rates go beyond what is considered normal across Data API, Auth, Storage, and Edge Functions. Checks run on demand from the dashboard or the Management API, and results show up under a new Health tab on the Advisors page.</p>
+<p>See which sessions hold connections, which queries run long, which are idle in a transaction, which are blocked, and who holds the lock. You can cancel a query or terminate its connection from there. It's on by default for every project, including self-hosted.</p>
+<p>A notebook is a file in your supabase folder that combines saved database or log queries with markdown notes. Run Notebooks yourself or get your agents to run them as part of their ongoing observations. You can create notebooks directly in the dashboard via the Assistant, then pull them down locally as files with supabase notebooks pull if needed. You can also create notebooks locally (including with your own agent) and push them with supabase notebooks push to make them accessible in the dashboard.</p>
+<p>Notebooks can be found in the new Explorer, an evolution of the SQL editor, which is rolling out to every project through October 12. Once it reaches your project, you can turn it on under Feature Previews in the dashboard. Notebook CLI tools are available in the beta version of our CLI.</p>
+<p>Supabase skills now point to a living document of common health, security, performance, and resource signals your agent should watch for and how to monitor those signals.</p>
+<p>Agents operate best in code. Today at Supabase Select we announced several improvements to how Supabase projects are expressed as code, and how that code can run in more environments. This is an important upgrade for the observing → detection → resolving loop: it lets agents test and validate proposed fixes in their own environment before opening a PR. That environment may not be your local machine.</p>
+<p>Read more about pg-delta and upgrades to the local runtime in the Build post.</p>
+<p>Give your agent only the access it needs to do its job, and get alerted when it attempts a riskier action.</p>
+<p>Your company decides who can connect to the Supabase MCP server through its identity provider, starting with Okta. Each token is short-lived and bound to the member who signed in. To cut off access, remove the app from Authorized Apps, or remove the member. This is generally available.</p>
+<p>Limit a token to the organizations, projects, and permissions you choose. Start with a read-only token. It's generally available and is now the default for new tokens created in the dashboard.</p>
+<p>Before the agent creates a paid project or branch, the Supabase MCP server asks you to confirm the resource, rate, and billing interval in your agent client, then waits for your answer. It also asks for confirmation before running SQL that could delete data. This helps prevent unwanted charges and data loss, but it’s not a guarantee. Your agent client must support elicitations for the prompt to appear.</p>
+<p>Pipelines stream your Postgres data to analytical destinations in near real time, so heavy analytics queries don’t impact primary Postgres. Create a pipeline in the dashboard, choose the destination, and select the tables to replicate. The initial sync starts, and schema changes are detected and applied to the destination automatically. The dashboard shows each pipeline's health and the status of every replicated table.</p>
+<p>Pipelines are in public alpha on the Pro, Team, and Enterprise plans, with BigQuery, ClickHouse, DuckLake, and Snowflake as destinations.</p>
+<p>Setting up an agent that autonomously observes your project, detects issues, and proposes fixes can be daunting, but it’s really only a prompt away with your favorite agent harness. We’ve created a few prompts and suggested schedules to set your agent up for success.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/select-2026-operate-with-confidence" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#448. Build anything: Supabase from code, and an MCP server for your app</h2>
+    <div class="article-meta">
+        📅 Oct 02, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/select-2026-build-anything" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/select-2026-build-anything/og.png" alt="Build anything: Supabase from code, and an MCP server for your app" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/select-2026-build-anything/og.png" alt="Build anything: Supabase from code, and an MCP server for your app" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today at Supabase Select, we announced new tools that let your coding agent set up your backend, test changes locally, and deploy the services behind your app. We also gave your users’ agents a way to work inside your app as the signed-in user. Your agent already writes your application code, but the backend was still your job, because most of that work happened in the dashboard: create a table, change an RLS policy, then pull the change into a migration with the CLI. Your agent works in your repo, and changes made in the dashboard don't appear there.</p>
+<p>Now your schema and project config can live in your repo, where your agent can work on them. The agent writes the schema as SQL files, and pg-delta works out the migration. A setting changed in the dashboard comes back to your config file with one command. Before a change ships, your agent can try it locally: local development doesn’t need Docker, and each directory gets its own stack, so the agent can test two changes side by side and keep the one that works.</p>
+<p>Many apps require long-running processes: agents, embeddings for a large set agents, embeddings for a large set of files, a service that stays up, or code that needs its own sandbox. Supabase Compute runs that work as a long-lived service in the same project as your database.</p>
+<p>Your users are already in Claude, ChatGPT, or Cursor, and when one of them asks their agent to do something in your app, the agent needs a way in. Your app can now have its own MCP server, deployed inside the Supabase project you already have. Users sign in the way they already do, and their agent sees only what they're allowed to see.</p>
+<p>Local Supabase can now run as native processes, so it starts on machines without a Docker daemon: Claude Code's sandbox, Codex, Perplexity Computer, and CI runners. On a machine with Docker, nothing changes. You can also run multiple local Supabase instances, one per directory, so several checkouts or git worktrees of the same repo run at the same time. It's in alpha today, off by default.</p>
+<p>Declarative Schemas 2.0: coding agents are good at editing schema files and bad at writing migrations. Your agent edits the SQL files, which are the source of truth, and pg-delta, the CLI's new diff engine, generates the migration from them. New projects created with supabase init use pg-delta by default, and existing projects can turn it on in config.toml.</p>
+<p>Config in code: settings like auth providers, API limits, and storage buckets live in config.toml next to the schema. A setting changed in the dashboard comes back into the file with supabase config pull, and supabase pull pulls config, schema, and Edge Functions in one command.</p>
+<p>Compute runs web services and agents in any language next to your database. There's no limit on how long a service runs, you choose the memory and CPU, and each service gets a full Linux environment, which Edge Functions don't have.</p>
+<p>Deploy from the Supabase CLI, or manage services through the Management API. The service definition lives in config.toml, and agent skills for Compute let your coding agent write, deploy, monitor, and debug a service for you. A service gets the same default environment variables as your Edge Functions, so it connects to your database and other Supabase services. In the dashboard you see each service's runtime, invocations, and logs.</p>
+<p>Each service gets a public HTTP URL, like an Edge Function. Set the number of instances, and Supabase balances requests across them. You can also deploy a service as private, with no HTTP endpoint, for background jobs from a database queue or as a sandbox for an agent. To tighten security further, network restrictions can limit database access to your Compute instances.</p>
+<p>Join the waitlist for private alpha here.</p>
+<p>MCP is the standard that lets agents talk to your app on behalf of your users. Your app's MCP server is separate from the official Supabase MCP server, which helps you build your app.</p>
+<p>Add a customizable MCP server to your own app from the Supabase library. One shadcn command adds an authenticated Edge Function to your codebase, ready to deploy to Supabase. You own the code, so your agent can use the included instructions and Supabase client to add the tools that fit your product, and your RLS policies still decide which rows each user can reach.</p>
+<p>It's built on @supabase/server and the new Supabase Middleware, which also work on their own in any server code that needs to know who is signed in.</p>
+<p>We also built a headless app template: a backend with an agent as the main interface, ready to deploy to Supabase.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/select-2026-build-anything" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#455. Supabase is acquiring Turso</h2>
+    <div class="article-meta">
+        📅 Oct 02, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-is-acquiring-turso" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2026-10-02-supabase-is-acquiring-turso/thumb.png" alt="Supabase is acquiring Turso" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2026-10-02-supabase-is-acquiring-turso/thumb.png" alt="Supabase is acquiring Turso" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>AI is enabling builders to create an immense amount of software. Today, agents are spinning up millions of databases to power the prototypes, explorations, dashboards, and apps they're building. This new pattern, at this massive scale, requires an evolution in database infrastructure. Turso is joining Supabase to build this evolution.</p>
+<p>For existing users, nothing changes. Supabase will continue building around Postgres, while Turso will continue its work on SQLite. And together, we’re creating something new that will bring the Supabase experience to every agent.</p>
+<p>Supabase is already launching over one million databases per week. As agents build more software, we believe database demand will outpace the world’s current capacity to support them. So we need infrastructure that can scale to meet this growth and is suited to how we build with agents.</p>
+<p>Agents should be able to create a database as easily as creating a file, with just as little concern about cost. For smaller workloads, that shouldn’t require provisioning a dedicated machine every time. Databases should be cheap to create, available on demand, and have a clear path to production when needed.</p>
+<p>SQLite is well suited to these small, on-demand workloads. Postgres is what you want as your application scales. We want builders to have the same developer experience from prototyping to production.</p>
+<p>Turso has built an architecture for exactly this pattern. They rebuilt SQLite in Rust and created a cloud platform where a single server can manage millions of databases, loading them when needed and suspending them when they’re not.</p>
+<p>This architecture makes it possible to provision a database for each agent on demand, whether on Turso Cloud or in customers’ own clouds, as Superhuman, Sauna.ai, CTO.new, and Mastra do.</p>
+<p>We share a vision for how infrastructure needs to evolve to support agentic AI. Turso will continue operating, with a clear path into the broader Supabase ecosystem as workloads grow.</p>
+<p>Turso and Supabase have a lot in common: a commitment to open source, a focus on developer experience, and an appetite to tackle hard infrastructure problems.</p>
+<p>We’re excited to welcome Glauber Costa and Pekka Enberg to Supabase with the rest of the Turso team. Glauber will lead this agentic infrastructure effort.</p>
+<p>Our mission is to store the world’s data, and agents are going to create a lot more of it. This gets us closer to that goal.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-is-acquiring-turso" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html" class="active">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

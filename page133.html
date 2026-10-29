@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 133</title>
+<meta name="description" content="Page 133">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page133.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 133</h1>
+<article class="article-card">
+    <h2>#702. Supabase incident on February 12, 2026</h2>
+    <div class="article-meta">
+        📅 Feb 13, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-incident-on-february-12-2026" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2026-02-12-supabase-incident/og.png" alt="Supabase incident on February 12, 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2026-02-12-supabase-incident/og.png" alt="Supabase incident on February 12, 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>On February 12, 2026, at 21:12 UTC, Supabase experienced a major outage affecting all services in the us-east-2 (Ohio) region. The outage lasted 3 hours and 42 minutes, with full service recovery at 00:54 UTC on February 13.</p>
+<p>During this period, customers with projects in us-east-2 were unable to access their Postgres databases, Auth, Data APIs, Edge Functions, Storage, Realtime, and any other Supabase service in that region.</p>
+<p>I am sorry for the impact this caused. We know you depend on Supabase to be reliable. We let you down. This post is a transparent account of what happened, how it happened, and the concrete steps we are taking to make sure it does not happen again.</p>
+<p>We deployed a new internal monitoring service on February 12th that inadvertently enabled AWS's VPC Block Public Access feature at the regional level in us-east-2. This blocked all internet gateway traffic across every VPC in the region.</p>
+<p>We resolved the outage by rolling back the deployment, which removed the regional block and restored normal network connectivity. This was not caused by an external attack or an AWS service disruption. It was a configuration error stemming from insufficient guardrails in our infrastructure deployment pipeline.</p>
+<p>All Supabase customers with projects hosted in the us-east-2 region were affected. This includes dashboard operations, database connections, Auth, Storage, Realtime, Authentication, and any other service that relied upon the project’s database. Connections via VPC peering and private networking were not affected, as these do not traverse internet gateways.</p>
+<p>AWS VPC Block Public Access (BPA) is a security feature designed for compliance-sensitive environments where organizations need to guarantee that no resource can accidentally be exposed to the internet. When enabled, it blocks all traffic flowing through all internet gateways in a region, unless specific subnets are explicitly excluded.</p>
+<p>When the new monitoring service was deployed to a pre-existing account, it used a shared construct that created a BPA in block-bidirectional mode, blocking all external traffic for production VPCs within the account.</p>
+<p>Traffic to external VPCs as well as traffic through VPC peering, VPN connections, Direct Connect, and AWS PrivateLink was unaffected.</p>
+<p>Resolution took an unacceptably long time due to several factors diverting the response team’s attention away from what we ultimately determined to be the root cause.</p>
+<p>The outage triggered alarms on shared services in a different region. The investigation initially focused on these services as potential causal factors, when it turned out that their failures were symptoms of network connectivity loss in the us-east-2 region.</p>
+<p>The deployment contained additional networking changes. The ModifyVpcBlockPublicAccessOptions event appeared as a single line item in the CloudTrail logs, and did not immediately jump out at the response team. Other networking changes in the same deployment were more complex and prominent in the logs, drawing investigative attention away from the actual issue.</p>
+<p>Our pre-production environment did not make use of the us-east-2 region in AWS. The monitoring stack had been deployed to a pre-production environment for a week prior without surfacing any issues. However, that pre-production environment did not match our production environment, so the regional BPA had no visible impact there.</p>
+<p>We did not have representation from the right infrastructure teams at the start of the incident. This incident initially manifested in our monitoring and alerting as an API outage, but turned out to be a much wider issue caused by the loss of network connectivity. Had we had the right infrastructure teams involved in the response from the outset, we would have made the connection between the outage and the deployment sooner. Once the relevant infrastructure team was paged, we were able to establish that link by correlating timestamps of the incident and the deployment.</p>
+<p>We have organized our response into three categories: immediate actions already completed, near-term safeguards, and structural changes to prevent this class of issue.</p>
+<p>We have audited every region where Supabase operates to confirm VPC Block Public Access is not enabled. We have confirmed that no IAC stacks contain VpcBlockPublicAccessOptions resources.</p>
+<p>We have deployed AWS Organizations Service Control Policies (SCPs) across both our pre-production and production organizations to prevent VpcBlockPublicAccessOptions and other account/region-scoped resources from being modified outside of a dedicated, controlled pipeline.</p>
+<p>Guardrails. We are implementing a blocklist of resource types within our Infrastructure-as-Code to ensure that they cannot be provisioned automatically or manually.</p>
+<p>Access controls. We are improving access control for internal monitoring so that all engineers can inspect infrastructure audit logs during incidents without requiring escalation.</p>
+<p>Account isolation. All non-customer-facing services will be deployed in separate AWS accounts, isolated from production infrastructure. This ensures that configuration changes in auxiliary services cannot affect production.</p>
+<p>External connectivity probes. We are adding continuous external health checks for network connectivity in ever production region, probing endpoints from outside our network to detect complete connectivity loss within seconds.</p>
+<p>Full parity between production and pre-production environments. Our pre-production checks covered fewer regions than production. We will expand our pre-production environments to include all supported production regions.</p>
+<p>Faster incident coordination. We are implementing more aggressive automated triggers and establishing clearer escalation paths that include the right infrastructure teams from the start.</p>
+<p>Cross-region resilience via Multigres. Today, Supabase does not offer automatic cross-region failover for customer Postgres databases. Multigres will enable a cross-region failover workflow in the future for customers whose workloads can accept the added latency. In the near-term, we will publish guidance on failover strategies and multi-region architecture patterns for customers who require multi-region availability.</p>
+<p>Our communication was insufficient and at times misleading. We are taking this as an opportunity to overhaul our approach to customer communication during incidents.</p>
+<p>First, we did not announce the incident quickly enough. While the team did update the status page systematically during the incident, we were slow to communicate at the start of the incident. Customers noticed the issue and reported it before we posted anything publicly. That should never happen. Improvements to our monitoring and alerting will enable us to detect incidents faster, and we will ensure that the status page is updated upon detection.</p>
+<p>Second, the Supabase dashboard banner never appeared during the incident. This was due to a change we made earlier in the week to eliminate noisy updates that were not relevant to the customer’s project. We are rebuilding our notifications system with a more robust approach that integrates banner alerts directly into the incident management flow, ensuring customers always see dashboard notifications during major incidents.</p>
+<p>Third, the status page did not indicate component-level degradation correctly. The uptime calculation on the status page is derived from individual service components being marked as degraded, and we failed to update component-level statuses quickly enough during investigation.</p>
+<p>Fourth, we should have updated the status page more frequently and with more context. We should have made the precise customer impact clearer. And even when we had no new technical findings to report, we should have clearly stated that we were still investigating and when the next update would be posted.</p>
+<p>Finally, social media updates went out too late. We did not post about the incident on our official channels until hours after the incident began, and a previously-scheduled, unrelated post went out in the meantime. This came across as insensitive and irresponsible. We are including social media communication as part of our incident response playbook going forward and will treat it as a first-class tool for communicating with our customers.</p>
+<p>This outage was caused by a deployment that enabled a regional AWS networking feature without accounting for its full scope. Our deployment pipeline did not have guardrails to catch this, and our pre-production environment did not surface the impact due to a lack of full parity with production.</p>
+<p>We are closing the gaps that allowed this to happen: isolating auxiliary services into separate AWS accounts, preventing region-scoped changes from application stacks, adding external connectivity monitoring, and improving our incident detection, response times, and communication. We will continue to share updates as we implement these changes.</p>
+<p>We are grateful to every customer who reported issues, waited patiently, and provided feedback on how we can improve. If you have questions about this incident or how it may have affected your project, please reach out to our support team.</p>
+<p>Request counts dropped to zero for nearly all ALBs in us-east-2 during the incident period, showing blocked access to platform services located in the region.</p>
+<p>Inbound traffic dropped to zero for all public NAT gateways during the incident period, showing blocked access to project databases and other services.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-incident-on-february-12-2026" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#283. Launching Interop 2026</h2>
+    <div class="article-meta">
+        📅 Feb 12, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://hacks.mozilla.org/2026/02/launching-interop-2026/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://hacks.mozilla.org/wp-content/uploads/2026/02/interop-scores.png" alt="Launching Interop 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://hacks.mozilla.org/wp-content/uploads/2026/02/interop-scores.png" alt="Launching Interop 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Interop Project is a cross-browser initiative to improve web compatibility in areas that offer the most benefit to both users and developers.</p>
+<p>The group, including Apple, Google, Igalia, Microsoft, and Mozilla, takes proposals of features that are well defined in a sufficiently stable web standard, and have good test suite coverage. Then, we come up with a subset of those proposals that balances web developer priorities (via surveys and bug reports) with our collective resources.</p>
+<p>We focus on features that are well-represented in Web Platform Tests as the pass-rate is how we measure progress, which you can track on the Interop dashboard.</p>
+<p>Once we have an agreed set of focus areas, we use those tests to track progress in each browser throughout the year. And after that, we do it all again!</p>
+<p>But, before we talk about 2026, let’s take a look back at Interop 2025…</p>
+<p>Firefox started Interop 2025 with a score of 46, so we’re really proud to finish the cycle on 99. But the number that really matters is the overall Interop score, which is a combined score for all four browsers – and the higher this number is, the fewer developer hours are lost to frustrating browser differences.</p>
+<p>The overall Interop score started at 25, and it’s now 95. As a result, huge web platform features became available cross-browser, such as Same-Document View Transitions, CSS Anchor Positioning, the Navigation API, CSS @scope, and the URLPattern API.</p>
+<p>That’s the headline-grabbing part, but in my experience, it’s way more frustrating when a feature is claimed to be supported, but doesn’t work as expected. That’s why Interop 2025 also focused on improving the reliability of existing features like WebRTC, CSS Flexbox, CSS Grid, Pointer Events, CSS backdrop-filter, and more.</p>
+<p>With some focus areas, in particular CSS Anchor Positioning and the Navigation API, we noticed that it was possible to achieve a good score on the tests while having inconsistent behavior compared to other browsers.</p>
+<p>In some cases this was due to missing tests, but in some cases the tests contradicted the spec. This usually happens when tests are written against a particular implementation, rather than the specified behavior.</p>
+<p>I experienced this personally before I joined Mozilla – I tried to use CSS Anchor Positioning back when it was only shipping in Chrome and Safari, and even with simple use-cases, the results were wildly inconsistent.</p>
+<p>Although it caused delays in these features landing in Firefox, we spent time highlighting these problems by filing issues against the relevant specs, and ensured they got priority in their working groups. As a result, specs became less ambiguous, tests were improved, and browser behavior became more reliable for developers.</p>
+<p>Okay, that’s enough looking at the past. Let’s move on to…</p>
+<p>Over 150 proposals were submitted for Interop 2026. We looked through developer feedback, on the issues themselves, and developer surveys like The State of HTML and The State of CSS. As an experiment for 2026, we at Mozilla also invited developers to stack-rank the proposals, the results of which we used in combination with the other data to compare developer preferences between individual features – this is something we want to expand on in the future.</p>
+<p>After carefully examining all the proposals, the Interop group has agreed on 20 focus areas (formed of 33 proposals) and 4 investigation areas. See the Interop repository for the full list, but here are the highlights:</p>
+<p>As with 2025, part of the effort is about bringing new features to all browser engines.</p>
+<p>Cross-document View Transitions allow transitions to work across documents, without any JavaScript. The sub-features rel="expect" and blocking="render" are included in this focus area..</p>
+<p>Scroll-driven animations allow you to drive animations based on the user’s scroll position. This replaces heavy JavaScript solutions that run on the main thread.</p>
+<p>WebTransport provides a low-level API over HTTP/3, allowing for multiple unidirectional streams, and optional out-of-order delivery. This is a modern alternative to WebSockets.</p>
+<p>CSS container style queries allow you to apply a block of styles depending on the computed values of custom properties on the nearest container. This means, for example, you can have a simple --theme property that impacts a range of other properties.</p>
+<p>JavaScript Promise Integration for Wasm allows WebAssembly to asynchronously ‘suspend’, waiting on the result of an external promise. This simplifies the compilation of languages like C/C++ which expect APIs to run synchronously.</p>
+<p>CSS attr() has been supported across browsers for over 15 years, but only for pseudo-element content. For Interop 2026, we’re focusing on more recent changes that allow attribute values to be used in most CSS values (with URLs being an exception).</p>
+<p>CSS custom highlights let you register a bunch of DOM ranges as a named highlight, which you can style via the ::highlight(name) pseudo-element. The styling is limited, but it means these ranges can span between elements, don’t impact layout, and don’t disrupt things like text selection.</p>
+<p>Scoped Custom Element Registries allow different parts of your DOM tree (such as a shadow root) to use a different set of custom elements definitions, meaning the same tag name can refer to different custom elements depending on where they are in the DOM.</p>
+<p>CSS shape() is a reimagining of path() that, rather than using SVG path syntax, uses a CSS syntax, allowing for mixed units and calc(). In practice, this makes it much easier to design responsive clip-paths and offset-paths.</p>
+<p>And more, including CSS contrast-color, accent-color, dialog closedby, popover=”hint”, fetch upload streams, IDB getAllRecords(), media pseudo-classes such as :playing, and the Navigation API’s precommitHandler.</p>
+<p>Like in previous years, the backbone of Interop is in improving the reliability of existing features, removing frustrations for web developers.</p>
+<p>In 2026, we’ll be focusing these efforts on particular edge cases in:</p>
+<p>Some of these are carried over from 2025 focus areas, as shortcomings in the tests and specs were fixed, but too late to be included in Interop 2025.</p>
+<p>Again, these are less headline-grabbing than the shiny new features, but it’s these edge cases where us web developers lose hours of our time. Frustrating, frustrating, hours.</p>
+<p>Sometimes, we see a focus area proposal that’s clearly important, but doesn’t fit the requirements of Interop. This is usually because the tests for the feature aren’t sufficient, are in the wrong format, or browsers are missing automation features that are needed to make the feature testable.</p>
+<p>In these cases, we identify what’s missing, and set up an investigation area.</p>
+<p>Accessibility. This is a continuation of work in 2025. Ultimately, we want browsers to produce consistent accessibility trees from the same DOM and CSS, but before we can write tests for this, we need to improve our testing infrastructure.</p>
+<p>Mobile testing. Another continuation from 2025. In particular, in 2026, we want to figure out an approach for testing viewport changes caused by dynamic UI, such as the location bar and virtual keyboard.</p>
+<p>JPEG XL. The current tests for this are sparse. Existing decoders have more comprehensive test suites, but we need to figure out how these relate to browsers. For example, progressive rendering is an important feature for developers, but how and when browsers should do this (to avoid performance issues) is currently being debated.</p>
+<p>WebVTT. This feature allows for text to be synchronised to video content. The investigation is to go through the test suite and ensure it’s fit for purpose, and amend it where necessary.</p>
+<p>The selected focus areas mean we’ve committed to more work compared to the other browsers, which is quite the challenge being the only engine that isn’t owned by billionaires. But it’s a challenge we’re happy to take on!</p>
+<p>Together with other members of the Interop group, we’re looking forward to delivering features and fixes over the next year. You can follow along with the progress of all browsers on the Interop dashboard.</p>
+<p>If your favorite feature is missing from Interop 2026, that doesn’t mean it won’t be worked on. JPEG XL is a good example of this. The current test suite meant it wasn’t a good fit for Interop 2026, but we’ve challenged the JPEG XL team at Google Research to build a memory-safe decoder in Rust, which we’re currently experimenting with in Firefox, as is Chrome.</p>
+<p>Interop isn’t the limit of what we’re working on, but it is a cross-browser commitment.</p>
+<p>If you’re interested in details of features as they land in Firefox, and discussions of future features from spec groups, you can follow us on:</p>
+<p>This is a team effort, and we’ve all made announcement posts like this one. Get other members’ take on it:</p>
+<p>Sign up for the Mozilla Developer Newsletter:</p>
+<p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.</p>
+<p>Except where otherwise noted, content on this site is licensed
+          under the
+          Creative Commons Attribution Share-Alike License v3.0
+          or any later version.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://hacks.mozilla.org/2026/02/launching-interop-2026/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#174. Announcing TypeScript 6.0 Beta</h2>
+    <div class="article-meta">
+        📅 Feb 11, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-beta/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2018/08/typescriptfeature.png" alt="Announcing TypeScript 6.0 Beta" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2018/08/typescriptfeature.png" alt="Announcing TypeScript 6.0 Beta" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today we are announcing the beta release of TypeScript 6.0!
+To get started using the beta, you can get it through npm with the following command:</p>
+<p>TypeScript 6.0 is a unique release in that we intend for it to be the last release based on the current JavaScript codebase.
+As announced last year (with recent updates here), we are working on a new codebase for the TypeScript compiler and language service written in Go that takes advantage of the speed of native code and shared-memory multi-threading.
+This new codebase will be the foundation of TypeScript 7.0 and beyond.
+TypeScript 6.0 will be the immediate precursor to that release, and in many ways it will act as the bridge between TypeScript 5.9 and 7.0.
+As such, most changes in TypeScript 6.0 are meant to help align and prepare for adopting TypeScript 7.0.</p>
+<p>With that said, there are some new features and improvements that are not just about alignment.
+Let’s take a look at some of the highlights of this release, followed by a more detailed look at what’s changing for 7.0 and how to prepare for it.</p>
+<p>When parameters don’t have explicit types written out, TypeScript can usually infer them based on an expected type, or even through other arguments in the same function call.</p>
+<p>Here, TypeScript can infer the type of y in the consume function based on the inferred T from the produce function, regardless of the order of the properties.
+But what about if these functions were written using method syntax instead of arrow function syntax?</p>
+<p>Strangely enough, the second call to callIt results in an error because TypeScript is not able to infer the type of y in the consume method.
+What’s happening here is that when TypeScript is trying to find candidates for T, it will first skip over functions whose parameters don’t have explicit types.
+It does this because certain functions may need the inferred type of T to be correctly checked – in our case, we need to know the type of T to analyze our consume function.</p>
+<p>These functions are called contextually sensitive functions – basically, functions that have parameters without explicit types.
+Eventually the type system will need to figure out types for these parameters – but this is a bit at odds with how inference works in generic functions because the two "pull" on types in different directions.</p>
+<p>To solve this, TypeScript skips over contextually sensitive functions during type argument inference, and instead checks and infers from other arguments first.
+If skipping over contextually sensitive functions doesn’t work, inference just continues across any unchecked arguments, going left-to-right in the argument list.
+In the example immediately above, TypeScript will skip over the callback during inference for T, but will then look at the second argument, 42, and infer that T is number.
+Then, when it comes back to check the callback, it will have a contextual type of (x: number) => void, which allows it to infer that x is a number as well.</p>
+<p>So what’s going on in our earlier examples?</p>
+<p>In both examples, produce is assigned a function with an explicitly-typed x parameter.
+Shouldn’t they be checked identically?</p>
+<p>The issue is subtle: most functions (like the ones using method syntax) have an implicit this parameter, but arrow functions do not.
+Any usage of this could require "pulling" on the type of T – for example, knowing the type of the containing object literal could in turn require the type of consume, which uses T.</p>
+<p>But we’re not using this!
+Sure, the function might have a this value at runtime, but it’s never used!</p>
+<p>TypeScript 6.0 takes this into account when it decides if a function is contextually sensitive or not.
+If this is never actually used in a function, then it is not considered contextually sensitive.
+That means these functions will be seen as higher-priority when it comes to type inference, and all of our examples above now work!</p>
+<p>This change was provided thanks to the work of Mateusz Burzyński.</p>
+<p>When Node.js added support for modules, it added a feature called "subpath imports".
+This is basically a field called imports which allows packages to create internal aliases for modules within their package.</p>
+<p>This allows modules in my-package to import from #root instead of having to use a relative path like ../../index.js, and basically allows any other module to write something like</p>
+<p>instead of using a relative path like the following.</p>
+<p>One minor annoyance with this feature has been that developers always had to write something after the # when specifying a subpath import.
+Here, we used root, but it is a bit useless since there is no directory we’re mapping over other than ./dist/</p>
+<p>Developers who have used bundlers are also accustomed to using path-mapping to avoid long relative paths.
+A familiar convention with bundlers has been to use a simple @/ as the prefix.
+Unfortunately, subpath imports could not start with #/ at all, leading to a lot of confusion for developers trying to adopt them in their projects.</p>
+<p>But more recently, Node.js added support for subpath imports starting with #/.
+This allows packages to use a simple #/ prefix for their subpath imports without needing to add an extra segment.</p>
+<p>This is supported in newer Node.js 20 releases, and so TypeScript now supports it under the options node20, nodenext, and bundler for the --moduleResolution setting.</p>
+<p>This work was done thanks to magic-akari, and the implementing pull request can be found here.</p>
+<p>TypeScript’s --moduleResolution bundler setting was previously only allowed to be used with --module esnext or --module preserve;
+however, with the deprecation of --moduleResolution node (a.k.a. --moduleResolution node10), this new combination is often the most suitable upgrade path for many projects.</p>
+<p>Projects will often want to instead plan out a migration towards either</p>
+<p>depending on your project type (e.g. bundled web app, Bun app, or Node.js app).</p>
+<p>More information can be found at this implementing pull request.</p>
+<p>As part of our ongoing work on TypeScript’s native port, we’ve introduced a new flag called --stableTypeOrdering intended to assist with 6.0-to-7.0 migrations.</p>
+<p>Today, TypeScript assigns type IDs (internal tracking numbers) to types in the order they are encountered, and uses these IDs to sort union types in a consistent manner.
+A similar process occurs for properties.
+As a result, the order in which things are declared in a program can have possibly surprising effects on things like declaration emit.</p>
+<p>For example, consider the declaration emit from this file:</p>
+<p>If we add an unrelated const above foo, the declaration emit changes:</p>
+<p>This happens because the literal type 500 gets a lower type ID than 100 because it was processed first when analyzing the const x declaration.
+In very rare cases this change in ordering can even cause errors to appear or disappear based on program processing order, but in general, the main place you might notice this ordering is in the emitted declaration files, or in the way types are displayed in your editor.</p>
+<p>One of the major architectural improvements in TypeScript 7 is parallel type checking, which dramatically improves overall check time.
+However, parallelism introduces a challenge: when different type-checkers visit nodes, types, and symbols in different orders, the internal IDs assigned to these constructs become non-deterministic.
+This in turn leads to confusing non-deterministic output, where two files with identical contents in the same program can produce different declaration files, or even calculate different errors when analyzing the same file.
+To fix this, TypeScript 7.0 sorts its internal objects (e.g. types and symbols) according to a deterministic algorithm based on the content of the object.
+This ensures that all checkers encounter the same object order regardless of how and when they were created.
+As a consequence, in the given example, TypeScript 7 will always print 100 | 500, removing the ordering instability entirely.</p>
+<p>This means that TypeScript 6 and 7 can and do sometimes display different ordering.
+While these ordering changes are almost always benign, if you’re comparing compiler outputs between runs (for example, checking emitted declaration files in 6.0 vs 7.0), these different orderings can produce a lot of noise that makes it difficult to assess correctness.
+Occasionally though, you may witness a change in ordering that causes a type error to appear or disappear, which can be even more confusing.</p>
+<p>To help with this situation, in 6.0, you can specify the new --stableTypeOrdering flag.
+This makes 6.0’s type ordering behavior match 7.0’s, reducing the number of differences between the two codebases.
+Note that we don’t necessarily encourage using this flag all the time as it can add a substantial slowdown to type-checking (up to 25% depending on codebase).</p>
+<p>If you encounter a type error using --stableTypeOrdering, this is typically due to inference differences.
+The previous inference without --stableTypeOrdering happened to work based on the current ordering of types in your program.
+To help with this, you’ll often benefit from providing an explicit type somewhere.
+Often, this will be a type argument</p>
+<p>or a variable annotation for an argument you intend to pass into a call.</p>
+<p>Note that this flag is only intended to help diagnose differences between 6.0 and 7.0 – it is not intended to be used as a long-term feature</p>
+<p>TypeScript 6.0 adds support for the es2025 option for both target and lib.
+While there are no new JavaScript language features in ES2025, this new target adds new types for built-in APIs (e.g. RegExp.escape), and moves a few declarations from esnext into es2025 (e.g. Promise.try, Iterator methods, and Set methods).
+Work to enable the new target was contributed thanks to Kenta Moriuchi.</p>
+<p>The long-awaited Temporal proposal has reached stage 3 and is expected to be added to JavaScript in the near future.
+TypeScript 6.0 now includes built-in types for the Temporal API, so you can start using it in your TypeScript code today via --target esnext or "lib": ["esnext"] (or the more-granular temporal.esnext).</p>
+<p>Temporal is already usable in several runtimes, so you should be able to start experimenting with it soon.
+Documentation on the Temporal APIs is available on MDN, though it may still be incomplete.</p>
+<p>This work was contributed thanks to GitHub user Renegade334.</p>
+<p>A common pattern with Maps is to check if a key exists, and if not, set and fetch a default value.</p>
+<p>This pattern can be tedious.
+ECMAScript’s "upsert" proposal recently reached stage 4, and introduces 2 new methods on Map and WeakMap:</p>
+<p>These methods have been added to the esnext lib so that you can start using them immediately in TypeScript 6.0.</p>
+<p>With getOrInsert, we can replace our code above with the following:</p>
+<p>getOrInsertComputed works similarly, but is for cases where the default value may be expensive to compute (e.g. requires lots of computations, allocations, or does long-running synchronous I/O).
+Instead, it takes a callback that will only be called if the key is not already present.</p>
+<p>This callback is also given the key as an argument, which can be useful for cases where the default value is based on the key.</p>
+<p>This update was contributed thanks to GitHub user Renegade334.</p>
+<p>When constructing some literal string to match within a regular expression, it is important to escape special regular expression characters like *, +, ?, (, ), etc.
+The RegExp Escaping ECMAScript proposal has reached stage 4, and introduces a new RegExp.escape function that takes care of this for you.</p>
+<p>RegExp.escape is available in the es2025 lib, so you can start using it in TypeScript 6.0 today.</p>
+<p>This work was contributed thanks Kenta Moriuchi.</p>
+<p>TypeScript’s lib option allows you to specify which global declarations your target runtime has.
+One option is dom to represent web environments (i.e. browsers, who implement the DOM APIs).
+Previously, the DOM APIs were partially split out into dom.iterable and dom.asynciterable for environments that didn’t support Iterables and AsyncIterables.
+This meant that you had to explicitly add dom.iterable to use iteration methods on DOM collections like NodeList or HTMLCollection.</p>
+<p>In TypeScript 6.0, the contents of lib.dom.iterable.d.ts and lib.dom.asynciterable.d.ts are fully included in lib.dom.d.ts.
+You can still reference dom.iterable and dom.asynciterable in your configuration file’s "lib" array, but they are now just empty files.</p>
+<p>This is a quality-of-life improvement that eliminates a common point of confusion, since no major modern browser lacks these capabilities.
+If you were already including both dom and dom.iterable, you can now simplify to just dom.</p>
+<p>See more at this issue and its corresponding pull request.</p>
+<p>TypeScript 6.0 arrives as a significant transition release, designed to prepare developers for TypeScript 7.0, the upcoming native port of the TypeScript compiler.
+While TypeScript 6.0 maintains full compatibility with your existing TypeScript knowledge and continues to be API compatible with TypeScript 5.9, this release introduces a number of breaking changes and deprecations that reflect the evolving JavaScript ecosystem and set the stage for TypeScript 7.0.</p>
+<p>In the two years since TypeScript 5.0, we’ve seen ongoing shifts in how developers write and ship JavaScript:</p>
+<p>So TypeScript 6.0 and 7.0 are designed with these realities in mind.
+For TypeScript 6.0, these deprecations can be ignored by setting "ignoreDeprecations": "6.0" in your tsconfig; however, note that TypeScript 7.0 will not support any of these deprecated options.</p>
+<p>Some necessary adjustments can be automatically performed with a codemod or tool.
+For example, the experimental ts5to6 tool can automatically adjust baseUrl and rootDir across your codebase.</p>
+<p>We’ll cover specific adjustments below, but we have to note that some deprecations and behavior changes do not necessarily have an error message that directly points to the underlying issue.
+So we’ll note up-front that many projects will need to do at least one of the following:</p>
+<p>Set the "types" array in tsconfig, typically to "types": ["node"].</p>
+<p>"types": ["*"] will restore the 5.9 behavior, but we recommend using an explicit array to improve build performance and predictability.</p>
+<p>You’ll typically know this is the issue if you see a lot of type errors related to missing identifiers or unresolved built-in modules.</p>
+<p>Set "rootDir": "./src" if you were previously relying on this being inferred</p>
+<p>You’ll often know this is the issue if you see files being written to ./dist/src/index.js instead of ./dist/index.js.</p>
+<p>Several compiler options now have updated default values that better reflect modern development practices.</p>
+<p>strict is now true by default:
+The appetite for stricter typing continues to grow, and we’ve found that most new projects want strict mode enabled.
+If you were already using "strict": true, nothing changes for you.
+If you were relying on the previous default of false, you’ll need to explicitly set "strict": false in your tsconfig.json.</p>
+<p>module defaults to esnext:
+Similarly, the new default module is esnext, acknowledging that ESM is now the dominant module format.</p>
+<p>target defaults to current-year ES version:
+The new default target is the most recent supported ECMAScript spec version (effectively a floating target).
+Right now, that target is es2025.
+This reflects the reality that most developers are shipping to evergreen runtimes and don’t need to transpile down to older ECMAScript versions.</p>
+<p>noUncheckedSideEffectImports is now true by default:
+This helps catch issues with typos in side-effect-only imports.</p>
+<p>libReplacement is now false by default:
+This flag previously incurred a large number of failed module resolutions for every run, which in turn increased the number of locations we needed to watch under --watch and editor scenarios.
+In a new project, libReplacement never does anything until other explicit configuration takes place, so it makes sense to turn this off by default for the sake of better performance by default.</p>
+<p>If these new defaults break your project, you can specify the previous values explicitly in your tsconfig.json.</p>
+<p>rootDir controls the directory structure of your output files relative to the output directory.
+Previously, if you did not specify a rootDir, it was inferred based on the common directory of all non-declaration input files.
+But this often meant that it was impossible to know if a file belonged to a project without trying to load and parse that project.
+It also meant that TypeScript had to spend more time inferring that common source directory by analyzing every file path in the program.</p>
+<p>In TypeScript 6.0, the default rootDir will always be the directory containing the tsconfig.json file.
+rootDir will only be inferred when using tsc from the command line without a tsconfig.json file.</p>
+<p>If you have source files any level deeper than your tsconfig.json directory and were relying on TypeScript to infer a common root directory for source files, you’ll need to explicitly set rootDir:</p>
+<p>Likewise, if your tsconfig.json referenced files outside of the containing tsconfig.json, you would need to adjust your rootDir to include those files.</p>
+<p>See more at the discussion here and the implementation here.</p>
+<p>In a tsconfig.json, the types field of compilerOptions specifies a list of package names to be included in the global scope during compilation.
+Typically, packages in node_modules are automatically included via imports in your source code;
+but for convenience, TypeScript would also include all packages in node_modules/@types by default, so that you can get global declarations like process or the "fs" module from @types/node, or describe and it from @types/jest, without needing to import them directly.</p>
+<p>In a sense, the types value previously defaulted to "enumerate everything in node_modules/@types".
+This can be very expensive, as a normal repository setup these days might transitively pull in hundreds of @types packages, especially in multi-project workspaces with flattened node_modules.
+Modern projects almost always need only @types/node, @types/jest, or a handful of other common global-affecting packages.</p>
+<p>In TypeScript 6.0, the default types value will be [] (an empty array).
+This change prevents projects from unintentionally pulling in hundreds or even thousands of unneeded declaration files at build time.
+Many projects we’ve looked at have improved their build time anywhere from 20-50% just by setting types appropriately.</p>
+<p>This will affect many projects. You will likely need to add "types": ["node"] or a few others:</p>
+<p>You can also specify a * entry to re-enable the old enumeration behavior:</p>
+<p>If you end up with new error messages like the following:</p>
+<p>it’s likely that you need to add some entries to your types field.</p>
+<p>See more at the proposal here along with the implementing pull request here.</p>
+<p>The ECMAScript 5 target was important for a long time to support legacy browsers; but its successor, ECMAScript 2015 (ES6), was released over a decade ago, and all modern browsers have supported it for many years.
+With Internet Explorer’s retirement, and the universality of evergreen browsers, there are very few use cases for ES5 output today.</p>
+<p>TypeScript’s lowest target will now be ES2015, and the target: es5 option is deprecated. If you were using target: es5, you’ll need to migrate to a newer target or use an external compiler.
+If you still need ES5 output, we recommend using an external compiler to either directly compile your TypeScript source, or to post-process TypeScript’s outputs.</p>
+<p>See more about this deprecation here along with its implementing pull request.</p>
+<p>--downlevelIteration only has effects on ES5 emit, and since --target es5 has been deprecated, --downlevelIteration no longer serves a purpose.</p>
+<p>Subtly, using --downlevelIteration false with --target es2015 did not error in TypeScript 5.9 and earlier, even though it had no effect.
+In TypeScript 6.0, setting --downlevelIteration at all will lead to a deprecation error.</p>
+<p>--moduleResolution node encoded a specific version of Node.js’s module resolution algorithm that most-accurately reflected the behavior of Node.js 10.
+Unfortunately, this target (and its name) ignores many updates to Node.js’s resolution algorithm that have occurred since then, and it is no longer a good representation of the behavior of modern Node.js versions.</p>
+<p>In TypeScript 6.0, --moduleResolution node (specifically, --moduleResolution node10) is deprecated.
+Users who were using --moduleResolution node should usually migrate to --moduleResolution nodenext if they plan on targeting Node.js directly, or --moduleResolution bundler if they plan on using a bundler or Bun.</p>
+<p>See more at this issue and its corresponding pull request.</p>
+<p>The following flag values are no longer supported</p>
+<p>AMD, UMD, and SystemJS were important during the early days of JavaScript modules when browsers lacked native module support.
+Today, ESM is universally supported in browsers and Node.js, and both import maps and bundlers have become favored ways for filling in the gaps.
+If you’re still targeting these module systems, consider migrating to an appropriate ECMAScript module-emitting target, adopt a bundler or different compiler, or stay on TypeScript 5.x until you can migrate.</p>
+<p>This also implies dropped support for the amd-module directive, which will no longer have any effect.</p>
+<p>See more at the proposal issue along with the implementing pull request.</p>
+<p>The baseUrl option is most-commonly used in conjunction with paths, and is typically used as a prefix for every value in paths.
+Unfortunately, baseUrl is also considered a look-up root for module resolution.</p>
+<p>For example, given the following tsconfig.json</p>
+<p>TypeScript will probably resolve this to src/someModule.js, even if the developer only intended to add mappings for modules starting with @app/ and @lib/.</p>
+<p>In the best case, this also often leads to "worse-looking" paths that bundlers would ignore;
+but it often meant that that many import paths that would never have worked at runtime are considered "just fine" by TypeScript.</p>
+<p>path mappings have not required specifying baseUrl for a long time, and in practice, most projects that use baseUrl only use it as a prefix for their paths entries.
+In TypeScript 6.0, baseUrl is deprecated and will no longer be considered a look-up root for module resolution.</p>
+<p>Developers who used baseUrl as a prefix for path-mapping entries can simply remove baseUrl and add the prefix to their paths entries:</p>
+<p>Developers who actually did use baseUrl as a look-up root can also add an explicit path mapping to preserve the old behavior:</p>
+<p>However, this is extremely rare.
+We recommend most developers simply remove baseUrl and add the appropriate prefixes to their paths entries.</p>
+<p>See more at this issue and the corresponding pull request.</p>
+<p>The moduleResolution: classic setting has been removed.
+The classic resolution strategy was TypeScript’s original module resolution algorithm, and predates Node.js’s resolution algorithm becoming a de facto standard.
+Today, all practical use cases are served by nodenext or bundler.
+If you were using classic, migrate to one of these modern resolution strategies.</p>
+<p>See more at this issue and the implementing pull request.</p>
+<p>The following settings can no longer be set to false:</p>
+<p>esModuleInterop and allowSyntheticDefaultImports were originally opt-in to avoid breaking existing projects.
+However, the behavior they enable has been the recommended default for years.
+Setting them to false often led to subtle runtime issues when consuming CommonJS modules from ESM.
+In TypeScript 6.0, the safer interop behavior is always enabled.</p>
+<p>If you have imports that rely on the old behavior, you may need to adjust them:</p>
+<p>See more at this issue and its implementing pull request.</p>
+<p>The alwaysStrict flag refers to inference and emit of the "use strict"; directive.
+In TypeScript 6.0, all code will be assumed to be in JavaScript strict mode, which is a set of JS semantics that most-noticeably affects syntactic corner cases around reserved words.
+If you have "sloppy mode" code that uses reserved words like await, static, private, or public as regular identifiers, you’ll need to rename them.
+If you relied on subtle semantics around the meaning of this in non-strict code, you may need to adjust your code as well.</p>
+<p>See more at this issue and its corresponding pull request.</p>
+<p>The --outFile option has been removed from TypeScript 6.0. This option was originally designed to concatenate multiple input files into a single output file. However, external bundlers like Webpack, Rollup, esbuild, Vite, Parcel, and others now do this job faster, better, and with far more configurability. Removing this option simplifies the implementation and allows us to focus on what TypeScript does best: type-checking and declaration emit. If you’re currently using --outFile, you’ll need to migrate to an external bundler. Most modern bundlers have excellent TypeScript support out of the box.</p>
+<p>Early versions of TypeScript used the module keyword to declare namespaces:</p>
+<p>This syntax was later aliased to the modern preferred form using the namespace keyword:</p>
+<p>When namespace was introduced, the module syntax was simply discouraged.
+A few years ago, the TypeScript language service started marking the keyword as deprecated, suggesting namespace in its place.</p>
+<p>In TypeScript 6.0, using module where namespace is expected is now a hard deprecation.
+This change is necessary because module blocks are a potential ECMAScript proposal that would conflict with the legacy TypeScript syntax.</p>
+<p>The ambient module declaration form remains fully supported:</p>
+<p>See this issue and its corresponding pull request for more details.</p>
+<p>The asserts keyword was proposed to the JavaScript language via the import assertions proposal;
+however, the proposal eventually morphed into the import attributes proposal, which uses the with keyword instead of asserts.</p>
+<p>Thus, the asserts syntax is now deprecated in TypeScript 6.0, and using it will lead to an error:</p>
+<p>Instead, use the with syntax for import attributes:</p>
+<p>See more at this issue and its corresponding pull request.</p>
+<p>The /// <reference no-default-lib="true"/> directive has been largely misunderstood and misused.
+In TypeScript 6.0, this directive is no longer supported.
+If you were using it, consider using --noLib or --libReplacement instead.</p>
+<p>See more here and at the corresponding pull request.</p>
+<p>Currently, if you run tsc foo.ts in a folder where a tsconfig.json exists, the config file is completely ignored.
+This was often very confusing if you expected checking and emit options to apply to the input file.</p>
+<p>In TypeScript 6.0, if you run tsc with file arguments in a directory containing a tsconfig.json, an error will be issued to make this behavior explicit:</p>
+<p>If it is the case that you wanted to ignore the tsconfig.json and just compile foo.ts with TypeScript’s defaults, you can use the new --ignoreConfig flag.</p>
+<p>See more at this issue and its corresponding pull request.</p>
+<p>TypeScript 6.0 is designed as a transition release.
+While the options deprecated in TypeScript 6.0 will continue to work without errors when "ignoreDeprecations": "6.0" is set, they will be removed entirely in TypeScript 7.0 (the native TypeScript port).
+If you’re seeing deprecation warnings after upgrading to TypeScript 6.0, we strongly recommend addressing them before trying to adopt TypeScript 7 (or its native previews) in your project.</p>
+<p>As to the schedule between TypeScript 6.0 and 7.0, we plan for 7.0 to be released soon after 6.0.
+This should help us keep some continuity in our development with the chance to address issues sooner after the release of 7.0.</p>
+<p>At this point, TypeScript 6.0 is "feature stable", and we don’t plan on any new features or breaking changes.
+Over the next few weeks, we’ll be addressing any new issues reported on the 6.0 codebase, so we encourage you to leave feedback and report any issues you encounter.
+And while the beta release is a great way to try out the next version of TypeScript, we also publish nightly builds on npm and in your editor which are typically very stable.
+These releases can often give you a better snapshot of which issues have been fixed.</p>
+<p>We are also continuing to work on TypeScript 7.0, and publish nightly builds of our native previews along with a VS Code extension too.
+Feedback on both 6.0 and 7.0 are very much appreciated, and we encourage you to try out both if you can.</p>
+<p>So try TypeScript 6.0 beta in your project today, and let us know what you think!</p>
+<p>– Daniel Rosenwasser and the TypeScript Team</p>
+<p>Daniel Rosenwasser is the product manager of the TypeScript team. He has a passion for programming languages, compilers, and great developer tooling.</p>
+<p>Discussion is closed.				Login to edit/delete existing comments.</p>
+<p>> module defaults to esnext: Similarly, the new default module is esnext, acknowledging that ESM is now the dominant module format.</p>
+<p>Am I missing something or there is a repetition here? Or perhaps after “similarly” it was meant to reference (making a guess) `target` ?</p>
+<p>Looks like every functionality the compiler is best suited for is being handed to external tools.  Now I need to find or build a custom tool not only to concatenate outputs, but also to remove “var __decorate = …” from every single file using decorators.</p>
+<p>Even if this blog post (and 6.0 Deprecation List at github) says
+“The following flag values are no longer supported: module=amd, module=umd and module=systemjs”
+using module=none raises an error in ts6.0-beta:</p>
+<p>…/tsconfig.json(5,19): error TS5107: Option ‘module=None’ is deprecated and will stop functioning in TypeScript 7.0.</p>
+<p>> but also to remove “var __decorate = …” from every single file using decorators.</p>
+<p>You want to use tsconfig option noEmitHelpers or importHelpers instead.</p>
+<p>It’s not unnecessary extra work on their end?</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-beta/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#466. Python 3.15.0 alpha 6</h2>
+    <div class="article-meta">
+        📅 Feb 11, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://blog.python.org/2026/02/python-3150-alpha-6/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://blog.python.org/og/python-3150-alpha-6.png" alt="Python 3.15.0 alpha 6" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://blog.python.org/og/python-3150-alpha-6.png" alt="Python 3.15.0 alpha 6" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This is an early developer preview of Python 3.15</p>
+<p>www.python.org/downloads/release/python-3150a6/</p>
+<p>Python 3.15 is still in development. This release, 3.15.0a6, is the sixth of eight planned alpha releases.</p>
+<p>Alpha releases are intended to make it easier to test the current state of new features and bug fixes and to test the release process.</p>
+<p>During the alpha phase, features may be added up until the start of the beta phase (2026-05-05) and, if necessary, may be modified or deleted up until the release candidate phase (2026-07-28). Please keep in mind that this is a preview release and its use is not recommended for production environments.</p>
+<p>Many new features for Python 3.15 are still being planned and written. Among the new major new features and changes so far:</p>
+<p>The next pre-release of Python 3.15 will be 3.15.0a7, currently scheduled for 2026-03-10.</p>
+<p>By reason of these things, then, the whaling voyage was welcome; the great flood-gates of the wonder-world swung open, and in the wild conceits that swayed me to my purpose, two and two there floated into my inmost soul, endless processions of the whale, and, mid most of them all, one grand hooded phantom, like a snow hill in the air.</p>
+<p>Thanks to all of the many volunteers who help make Python development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p>
+<p>Regards as the snow slowly falls in Helsinki,</p>
+<p>Your release team,
+Hugo van Kemenade
+Ned Deily
+Steve Dower
+Łukasz Langa</p>
+<p>https://pythoninsider.blogspot.com/2026/02/python-3150-alpha-6.html</p>
+<p>The official blog of the Python core development team. News about releases, features, and the community.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://blog.python.org/2026/02/python-3150-alpha-6/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#708. Hydra joins Supabase</h2>
+    <div class="article-meta">
+        📅 Feb 10, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/hydra-joins-supabase" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=partnerships&amp;layout=icon-only&amp;copy=BKND+is+joining+Supabase&amp;icon=1770827339509-Hydra.png&amp;icon2=supabase.svg&amp;v=1793274993216" alt="Hydra joins Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://zhfonblqamxferhoguzj.supabase.co/functions/v1/generate-og?template=partnerships&layout=icon-only&copy=BKND+is+joining+Supabase&icon=1770827339509-Hydra.png&icon2=supabase.svg&v=1793274993216" alt="Hydra joins Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today we're welcoming Joe, the co-creator of Hydra, to the Supabase team. He is joining us to build Supabase Warehouse: an open data warehouse architecture for developers.</p>
+<p>Hydra co-developed pg_duckdb, a popular open source (MIT-licensed) extension that accelerates analytics queries on Postgres by over 600x.</p>
+<p>Joe's work on Hydra pioneered the modern lakebase architecture before most even considered it possible.</p>
+<p>Last year, Supabase started looking at warehousing, announcing Analytics Buckets to store data in Iceberg format in S3. This year, Hydra and pg_duckdb will make it easier than ever to get fast analytics on large data volumes in Postgres.</p>
+<p>Joe will oversee our Open Warehouse Architecture initiative and help push our Postgres + Analytics roadmap forward.</p>
+<p>We're building an open warehouse architecture that keeps Postgres at the center while unlocking modern analytics workflows.</p>
+<p>Everything will stay open source. We'll help MotherDuck with pg_duckdb contributions and take over the maintenance of Hydra's existing repos. We will work in the open as we develop the Open Warehouse Architecture and the broader Postgres + Analytics vision.</p>
+<p>We are assembling a team to build the Open Warehouse Architecture on Supabase. If you are a C++ programmer or storage engineer and want to get involved, apply online.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/hydra-joins-supabase" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#587. Node.js 25.6.1 (Current)</h2>
+    <div class="article-meta">
+        📅 Feb 10, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v25.6.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2025.6.1%20(Current)" alt="Node.js 25.6.1 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2025.6.1%20(Current)" alt="Node.js 25.6.1 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 64-bit Installer: https://nodejs.org/dist/v25.6.1/node-v25.6.1-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v25.6.1/node-v25.6.1-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v25.6.1/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v25.6.1/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v25.6.1/node-v25.6.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v25.6.1/node-v25.6.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v25.6.1/node-v25.6.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v25.6.1/node-v25.6.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v25.6.1/node-v25.6.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v25.6.1/node-v25.6.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v25.6.1/node-v25.6.1-aix-ppc64.tar.gz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v25.6.1/node-v25.6.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v25.6.1/node-v25.6.1.tar.gz 
+Other release files: https://nodejs.org/dist/v25.6.1/ 
+Documentation: https://nodejs.org/docs/v25.6.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v25.6.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#596. Node.js 24.13.1 (LTS)</h2>
+    <div class="article-meta">
+        📅 Feb 10, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v24.13.1" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2024.13.1%20(LTS)" alt="Node.js 24.13.1 (LTS)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2024.13.1%20(LTS)" alt="Node.js 24.13.1 (LTS)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 64-bit Installer: https://nodejs.org/dist/v24.13.1/node-v24.13.1-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v24.13.1/node-v24.13.1-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v24.13.1/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v24.13.1/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v24.13.1/node-v24.13.1.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v24.13.1/node-v24.13.1-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v24.13.1/node-v24.13.1-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v24.13.1/node-v24.13.1-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v24.13.1/node-v24.13.1-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v24.13.1/node-v24.13.1-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v24.13.1/node-v24.13.1-aix-ppc64.tar.gz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v24.13.1/node-v24.13.1-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v24.13.1/node-v24.13.1.tar.gz 
+Other release files: https://nodejs.org/dist/v24.13.1/ 
+Documentation: https://nodejs.org/docs/v24.13.1/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v24.13.1" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#181. Build a dinosaur runner game with Deno, pt. 5</h2>
+    <div class="article-meta">
+        📅 Feb 09, 2026 &nbsp;|&nbsp; Category: <strong>Health</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/build-a-game-with-deno-5" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/build-a-game-with-deno-5/og.webp" alt="Build a dinosaur runner game with Deno, pt. 5" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/build-a-game-with-deno-5/og.webp" alt="Build a dinosaur runner game with Deno, pt. 5" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This series of blog posts will guide you through building a simple
+browser-based dinosaur runner game using Deno.</p>
+<p>In Stage 4, we wired Oak, PostgreSQL, and a leaderboard route so every run could
+be recorded. The UI was still anonymous though: everyone shared the same dino,
+the same desert background, and you had to hard refresh the page each time you
+wanted to switch difficulty. In Stage 5, we’ll keep that leaderboard code, but
+layer on player identity and customization so the experience matches what ships
+in the
+game-tutorial-stage-4
+repository.</p>
+<p>Start by extending the markup in
+public/index.html.
+We add three things near the game canvas:</p>
+<p>The modal triggers call helper functions we’ll add in game.js so there’s no
+framework dependency—plain DOM APIs keep things deploy-friendly.</p>
+<p>Layer in the modal utility classes inside
+public/css/styles.css. They reuse the existing btn
+palette from earlier stages, so everything feels cohesive.</p>
+<p>Feel free to tweak the palette! The logic we’ll add next pulls the chosen colors
+right into the canvas background and dino sprite.</p>
+<p>With the UI in place we can extend the DinoGame class inside
+public/js/game.js,
+the key additions are:</p>
+<p>showPlayerNamePrompt() looks for saved state; if none is found it opens the
+modal and focuses the input.</p>
+<p>Once a player name exists we look up settings on the server, fall back to
+localStorage, and immediately apply the palette + difficulty multipliers.</p>
+<p>Instead of wiring everything through class instances, game.js exposes a few
+functions on window. They open/close modals, persist names, and populate the
+customization controls.</p>
+<p>Hook everything up inside window.addEventListener("load", ...) so the health
+check runs, the DinoGame instance is created, and your modals are ready the
+moment the DOM finishes loading.</p>
+<p>Stage 4 already introduced a database connection pool, migrations runner, and a
+high_scores table. To store customization data we add players and
+player_settings tables to
+src/database/schema.sql:</p>
+<p>high_scores still stores anonymous runs (player_name), but if someone has a
+registered player_id we can connect their customization + leaderboard data in
+one query.</p>
+<p>All API logic lives in
+src/routes/customization.routes.ts. We
+reuse the ctx.state.db pool set by middleware, so every handler can grab a
+client from the pool, execute queries, and release connections.</p>
+<p>There’s also a simple /api/customization/options handler that returns
+available themes, colors, and difficulty presets for future UI work.</p>
+<p>The rest of the backend is Oak boilerplate.
+src/middleware/database.ts
+attaches the pool to every request.
+src/main.ts
+initializes the schema, registers middleware, and mounts the routers before
+falling back to the static file server:</p>
+<p>With those pieces in place the leaderboard API, customization API, and static
+assets all share a single Deploy project (or run locally via deno task dev).</p>
+<p>You can view and edit your PostgreSQL databases directly from the Deno Deploy
+dashboard. This is especially useful for inspecting the players,
+player_settings, and high_scores tables as you test your game. To access the
+database:</p>
+<p>At this point you should have a fully functional game with player identities,
+customizable themes, and persistent preferences. To validate everything is wired
+up correctly:</p>
+<p>You can explore the full reference implementation and Deploy link here:
+https://game-tutorial-stage-4.thisisjofrank.deno.net/</p>
+<p>Stage 6 will concentrate on observability—metrics, logging, and alerting—so you
+can understand how players behave at scale. We’ll wire up structured logs,
+shipping analytics events, and dashboards that track leaderboard health and
+customization adoption. For now, enjoy the custom player experience you just
+delivered! 🦕✨</p>
+<p>What else are you building with Deno? Let us know on
+Twitter,
+Bluesky, or
+Discord.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/build-a-game-with-deno-5" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#715. X / Twitter OAuth 2.0 is now available for Supabase Auth</h2>
+    <div class="article-meta">
+        📅 Feb 06, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/x-twitter-oauth-2-provider" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/x-twitter-oauth-2-provider/og.png" alt="X / Twitter OAuth 2.0 is now available for Supabase Auth" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/x-twitter-oauth-2-provider/og.png" alt="X / Twitter OAuth 2.0 is now available for Supabase Auth" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now add "Sign in with X" to your application using the new X / Twitter (OAuth 2.0) provider in Supabase Auth.</p>
+<p>The new provider uses X's OAuth 2.0 implementation, replacing the legacy OAuth 1.0a flow. OAuth 2.0 offers a more modern authentication experience with better security practices, including PKCE support.</p>
+<p>Setting up X / Twitter authentication takes a few steps:</p>
+<p>Once configured, you can use the Supabase client libraries to authenticate users via X / Twitter:</p>
+<p>For a complete guide on setting up X / Twitter authentication, see the full documentation.</p>
+<p>If you're currently using the legacy Twitter (OAuth 1.0a) provider, we recommend migrating to the new OAuth 2.0 provider. The legacy provider will remain available while X / Twitter continues to support OAuth 1.0a.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/x-twitter-oauth-2-provider" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#720. BKND joins Supabase</h2>
+    <div class="article-meta">
+        📅 Feb 03, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/bknd-joins-supabase" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/bknd-joins-supabase/og.png" alt="BKND joins Supabase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/bknd-joins-supabase/og.png" alt="BKND joins Supabase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We're excited to welcome Dennis Senn, creator of BKND, to the Supabase team.</p>
+<p>Dennis brings experience building lightweight backends and developer-first tooling into our ecosystem. The focus isn't to immediately integrate BKND into Supabase. Instead, Dennis will be working on a Supabase Lite offering, designed specifically for agentic workloads.</p>
+<p>There's a lot of excitement around building agentic systems. The right shape for a "Supabase Lite" offering is still a work-in-progress and we want to get it right. This move is about Dennis's expertise and collaboration, not a product announcement. We'll share more as the development progresses. Some ideas include:</p>
+<p>BKND will stay open source. We will work in a separate repo to explore how to best build a lightweight Supabase experience. We're excited for what's to come and welcome any ideas as we build.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/bknd-joins-supabase" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#199. Introducing Deno Sandbox</h2>
+    <div class="article-meta">
+        📅 Feb 03, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/introducing-deno-sandbox" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/introducing-deno-sandbox/og.webp" alt="Introducing Deno Sandbox" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/introducing-deno-sandbox/og.webp" alt="Introducing Deno Sandbox" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Over the past year, we’ve seen a shift in what Deno Deploy customers are
+building: platforms where users generate code with LLMs, and that code runs
+immediately without review. That code frequently calls LLMs itself, which means
+it needs API keys and network access.</p>
+<p>This isn’t the traditional “run untrusted plugins” problem. It’s deeper:
+LLM-generated code, calling external APIs with real credentials, without human
+review. Sandboxing the compute isn’t enough. You need to control network egress
+and protect secrets from exfiltration.</p>
+<p>Deno Sandbox provides both. And when the code is ready, you can deploy it
+directly to Deno Deploy without rebuilding.</p>
+<p>You don’t want to run untrusted code (generated by your LLMs, your users LLMs,
+or even hand written by users) directly on your server. It will compromise your
+system, steal your API keys, and call out to evil.com. You need isolation.</p>
+<p>Deno Sandbox gives you lightweight Linux microVMs (running in the Deno Deploy
+cloud) to run untrusted code with defense-in-depth security. You can create them
+programmatically via our JavaScript or Python SDKs, and they boot in under a
+second. You can also interact with them via SSH, HTTP, or even open a VS Code
+window directly into the sandbox.</p>
+<p>But there is more. In Deno Sandbox, secrets never enter the environment. Code
+sees only a placeholder:</p>
+<p>The real key materializes only when the sandbox makes an outbound request to an
+approved host. If prompt-injected code tries to exfiltrate that placeholder to
+evil.com? Useless.</p>
+<p>You can also restrict which hosts the sandbox can talk to:</p>
+<p>Any request to an unlisted host gets blocked at the VM boundary.</p>
+<p>Both features are implemented via an outbound proxy similar to
+coder/httpjail. This gives us a chokepoint
+for policy enforcement. We plan to add more capabilities here: analytics for
+outbound connections and programmatic hooks for trusted code to inspect or
+modify requests.</p>
+<p>If you’re running untrusted JavaScript or TypeScript, combine this with Deno’s
+--allow-net flag for defense in depth: VM-level network restrictions plus
+runtime-level permissions.</p>
+<p>sandbox.deploy() deploys code from your sandbox directly to Deno Deploy.</p>
+<p>One call to go from sandbox to production deployment. No rebuilding in a
+different CI system, no re-authenticating with a different tool. Just turn your
+dev environment directly into a production ready, auto-scaling serverless
+deployment.</p>
+<p>Sandboxes are ephemeral by default, but when you need state we have you covered:</p>
+<p>Run apt-get install once, snapshot it, and every future sandbox boots with
+everything already installed. Create read-write volumes from the snapshots to
+create a fresh development environment in seconds.</p>
+<p>Perfect for AI agents executing code, vibe-coding environments, secure plugin
+systems, ephemeral CI runners, and customer-supplied code.</p>
+<p>Deno Sandbox is included in your Deno Deploy plan with competitive, usage-based
+pricing. You pay for compute time, not wall-clock time.</p>
+<p>Enterprise pricing available—contact deploy@deno.com.</p>
+<p>Deno Sandbox launches in beta today, alongside the
+general availability of Deno Deploy.</p>
+<p>We’re excited to see what you (or your AI agents) build with Deno Sandbox.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/introducing-deno-sandbox" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#190. Deno Deploy is Generally Available</h2>
+    <div class="article-meta">
+        📅 Feb 03, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/deno-deploy-is-ga" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/deno-deploy-is-ga/og.png" alt="Deno Deploy is Generally Available" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/deno-deploy-is-ga/og.png" alt="Deno Deploy is Generally Available" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>What if deploying a web app was as simple as running it locally? No adapters. No
+build config. No vendor-specific config files. Sveltekit, Next, Astro — whatever
+you’re using.</p>
+<p>That’s Deno Deploy, the easiest way to deploy and run any JavaScript
+or TypeScript to the web, and today it is generally available.</p>
+<p>As part of this announcement, we’ll share how Deno Deploy simplifies building
+and deploying code, as well as
+introduce Deno Sandbox, a new service on Deno
+Deploy that allows you to programmatically manage microVMs for executing any
+code securely.</p>
+<p>Deno Deploy supports all major JavaScript frameworks, regardless of whether you
+are building or running with Deno. Not only that, but it will automatically
+detect which framework you’re using, and run the build commands specific to your
+framework. This allows us to make the most of your framework’s features, such as
+with the "use cache" directive in Next.js 16.</p>
+<p>Deno Deploy is built for modern development workflows and is flexible enough to
+fit you and your team’s needs.</p>
+<p>If you connect your GitHub repo to Deno Deploy, you’ll automatically get
+zero-config continuous delivery:</p>
+<p>If you want more control over your release process, there’s the new
+deno deploy subcommand
+that you can use from your terminal (great for testing and quick iterations) or
+from your CI environment.</p>
+<p>In addition to supporting Deno KV, our global key-value
+store, Deno Deploy now also supports Postgres databases. Not only can you
+easily link third party databases,
+but thanks to our partnership with Prisma, you can also provision new databases
+for free right through our dashboard.</p>
+<p>Deno Deploy will provision a new database for every pull-request opened. This
+avoids dangerous mistakes and makes development easier.</p>
+<p>Not only that, but your application code remains the same in all contexts, even
+though the database is different. That’s because environment variables are
+managed automatically by Deno Deploy:</p>
+<p>In addition to all that, you can now explore your data right in the Deno Deploy
+console.</p>
+<p>Want to see a specific database supported? Let us know on
+Twitter,
+Bluesky, or
+Discord!</p>
+<p>One of the biggest headaches when deploying software is that a project that
+works locally behaves differently in production. We’ve bridged those two
+environments, making it easy to develop locally with confidence using the flag
+--tunnel.</p>
+<p>Simply add the flag to your command and you will automatically pull centrally
+managed environment variables from Deno Deploy, run your dev server locally,
+expose a public, shareable URL instantly, and send telemetry data to Deno
+Deploy.</p>
+<p>The --tunnel flag simplifies working on the same code base across a team, as
+you can all access the same environment variables, as well as serving your local
+version on a public URL for easier sharing. Also, it is currently available for
+the run and
+task commands, but expect
+that it will become even more powerful as more utilities are added.</p>
+<p>Any project hosted on Deno Deploy, regardless of Node or Deno, or even if there
+are specific telemetry instrumentation, will automatically show logs, traces,
+and metrics in the application console.</p>
+<p>By default, Deno will capture the following: console.log, fetch, http, V8
+events, garbage collection, and IO. Your
+logs will also be automatically associated with the request,
+so triaging and debugging is much simpler. Check out our documentation for more
+examples.</p>
+<p>Read the full Deno Sandbox announcement here.</p>
+<p>We’ve noticed a rise of LLM generated code deployed to Deno Deploy and wanted to
+make that path as smooth as possible. Our key design considerations were:</p>
+<p>With this in mind, we have built a new primitive called Deno Sandbox, which are
+real linux microVMs that boot in under a second, offering instant safe compute
+programmatically.</p>
+<p>Here’s an example of a script that will create a Deno Sandbox, writes a dev
+server, runs it, and exposes a port for anyone to access:</p>
+<p>Read the full announcement on Deno Sandbox.</p>
+<p>Deno Deploy comes with a generous free plan, offering one million requests per
+month, 100 GB of egress, and 15 CPU hours. For those needing more resources,
+there are various pro plans available, allowing for flexible scaling based on
+usage.</p>
+<p>For teams with greater security, support, and performance needs, we offer custom
+enterprise pricing. Learn more on our pricing page.</p>
+<p>Deploying one of the simple starter apps here is an easy way to dive into the
+new Deno Deploy and see what it’s all about. You can sign up, create an
+organization, and start deploying apps for free.</p>
+<p>We’re excited to see what you — or your AI agents — build with Deno Deploy.</p>
+<p>What are you building with Deno? Let us know on
+Twitter,
+Bluesky, or
+Discord!</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/deno-deploy-is-ga" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#606. Node.js 25.6.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Feb 03, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v25.6.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2025.6.0%20(Current)" alt="Node.js 25.6.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2025.6.0%20(Current)" alt="Node.js 25.6.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Windows 64-bit Installer: https://nodejs.org/dist/v25.6.0/node-v25.6.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v25.6.0/node-v25.6.0-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v25.6.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v25.6.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v25.6.0/node-v25.6.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v25.6.0/node-v25.6.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v25.6.0/node-v25.6.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v25.6.0/node-v25.6.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v25.6.0/node-v25.6.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v25.6.0/node-v25.6.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v25.6.0/node-v25.6.0-aix-ppc64.tar.gz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v25.6.0/node-v25.6.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v25.6.0/node-v25.6.0.tar.gz 
+Other release files: https://nodejs.org/dist/v25.6.0/ 
+Documentation: https://nodejs.org/docs/v25.6.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v25.6.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#725. Supabase is now an official Claude connector</h2>
+    <div class="article-meta">
+        📅 Feb 03, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-is-now-an-official-claude-connector" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2026-02-03-supabase-is-now-an-official-claude-connector/og.png" alt="Supabase is now an official Claude connector" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2026-02-03-supabase-is-now-an-official-claude-connector/og.png" alt="Supabase is now an official Claude connector" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Supabase MCP server is now listed on Claude's official connectors. Connect your Supabase projects to Claude and manage your entire database infrastructure by telling Claude what you need.</p>
+<p>With the Supabase MCP server, you can execute SQL queries, modify schemas, deploy edge functions, manage branches, and troubleshoot your projects without leaving your conversation with Claude.</p>
+<p>Ask Claude to check security advisors on your project and fix any issues. Request a schema change and Claude executes it. Deploy an edge function with a single prompt.</p>
+<p>The Supabase MCP server includes 32 tools covering the entire platform:</p>
+<p>In Claude.ai or Claude Desktop, open the connectors menu and select Supabase. Authorize Claude to access your Supabase organization.</p>
+<p>The connector works on all Supabase plans and all paid Claude plans (Pro, Team, Enterprise, Max).</p>
+<p>If you don't have a Supabase account yet, start your project for free at supabase.com. Then connect it to Claude and manage your projects by describing what you need.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-is-now-an-official-claude-connector" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#472. Python 3.14.3 and 3.13.12 are now available!</h2>
+    <div class="article-meta">
+        📅 Feb 03, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://blog.python.org/2026/02/python-3143-and-31312-are-now-available/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://blog.python.org/og/python-3143-and-31312-are-now-available.png" alt="Python 3.14.3 and 3.13.12 are now available!" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://blog.python.org/og/python-3143-and-31312-are-now-available.png" alt="Python 3.14.3 and 3.13.12 are now available!" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Two snakes enjoying a pie with 3.14 on the top and π crimping538×507 110 KB</p>
+<p>Python 3.14.3 is the third maintenance release of 3.14, containing around 299 bugfixes, build improvements and documentation changes since 3.14.2.</p>
+<p>Some of the major new features and changes in Python 3.14 are:</p>
+<p>For more details on the changes to Python 3.14, see What’s new in Python 3.14.</p>
+<p>The installer we offer for Windows is being replaced by our new install manager, which can be installed from the Windows Store or from its download page. See our documentation for more information. The JSON file available for download contains the list of all the installable packages available as part of this release, including file URLs and hashes, but is not required to install the latest release. The traditional installer will remain available throughout the 3.14 and 3.15 releases.</p>
+<p>python.org/downloads/release/python-31312</p>
+<p>Python 3.13.12 is the twelfth maintenance release of 3.13, containing around 250 bugfixes, build improvements and documentation changes since 3.13.11.</p>
+<p>Thanks to all of the many volunteers who help make Python Development and these releases possible! Please consider supporting our efforts by volunteering yourself or through organisation contributions to the Python Software Foundation.</p>
+<p>Regards from an international releasing task force spread out over a whopping 10 timezones this time,</p>
+<p>Your release team,
+Thomas Wouters
+Hugo van Kemenade
+Ned Deily
+Steve Dower
+Łukasz Langa</p>
+<p>https://pythoninsider.blogspot.com/2026/02/python-3143-and-31312-are-now-available.html</p>
+<p>The official blog of the Python core development team. News about releases, features, and the community.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://blog.python.org/2026/02/python-3143-and-31312-are-now-available/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#279. What&#x27;s new in Swift: January 2026 Edition</h2>
+    <div class="article-meta">
+        📅 Jan 30, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://www.swift.org/blog/whats-new-in-swift-january-2026/" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://www.swift.org/apple-touch-icon-180x180.png" alt="What&#x27;s new in Swift: January 2026 Edition" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://www.swift.org/apple-touch-icon-180x180.png" alt="What's new in Swift: January 2026 Edition" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>A Reddit thread earlier this month asked about building web apps with Swift. For this edition of “What’s new in Swift,” we invited a developer to share their experience:</p>
+<p>Hi, I’m Nick Sloan. I’m the head of engineering at Studioworks, a platform that makes it easy and fun to run your creative studio, agency or freelance business.</p>
+<p>We chose Swift for Studioworks because of how easy it is to write safe and reliable code with great performance. Our Swift project makes use of Hummingbird 2, Soto (for its incredible DynamoDB Codable support), Hummingbird MacroRouting, and Elementary. Studioworks is a big and growing project. We are the largest Elementary codebase, and I suspect we are among the biggest projects using Hummingbird as well.</p>
+<p>We’ve already processed millions of dollars in invoices for our customers, and after 20 years of shipping web applications, I have never seen fewer crashes and bugs make it to production. Performance has also been excellent, especially after moving our templates to Elementary. Our heaviest pages make it to the browser in less than 100ms.</p>
+<p>We’ve been deploying web applications with PHP and Python for decades, and getting started with a Swift web project was certainly a bit slower. We had to recreate some of the build, deployment and chat tooling we had been relying on in our Python projects for years, and it took us a bit of experimenting to realize that Elementary was the best choice for templating. Once we got past those hurdles we’ve been able to build about as fast as we ever did with Python, and the quality is much better.</p>
+<p>Swift on the web has been a resounding success for us, and I hope we’ll see this part of the community continue to grow!</p>
+<p>Learn more about Swift on Linux and server-based use cases by checking out our October edition, which featured highlights from the Server-Side Swift Conference. The swift.org website also has a use case page dedicated to cloud services, including a tutorial to get started.</p>
+<p>And now for what’s new in Swift this month.</p>
+<p>The Swift project adds new language features through the Swift Evolution process. These are some of the proposals currently under review or recently accepted for a future Swift release.</p>
+<p>We are excited to announce the creation of the Windows workgroup!</p>
+<p>We are excited to announce the 1.0 release of Swift System Metrics, a Swift package that collects process-level system metrics like CPU utilization time and memory usage. Swift System Metrics runs on both Linux and macOS, providing a common API across platforms.</p>
+<p>Swift and the Swift logo are trademarks of Apple Inc.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://www.swift.org/blog/whats-new-in-swift-january-2026/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#615. OpenSSL Security Advisory Assessment, January 2026</h2>
+    <div class="article-meta">
+        📅 Jan 28, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/vulnerability/openssl-fixes-in-regular-releases-jan2026" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20OpenSSL%20Security%20Advisory%20Assessment,%20January%202026" alt="OpenSSL Security Advisory Assessment, January 2026" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/vulnerability/Node.js%20%E2%80%94%20OpenSSL%20Security%20Advisory%20Assessment,%20January%202026" alt="OpenSSL Security Advisory Assessment, January 2026" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The OpenSSL project released a security advisory that includes 12 CVEs.
+After assessment, we have concluded that three CVEs affect Node.js (severity Low to Moderate).
+Given the limited attack surface, the OpenSSL updates will be included in
+upcoming regular Node.js releases rather than dedicated security releases.</p>
+<p>All three vulnerabilities relate to how Node.js processes PFX (PKCS#12) certificate files,
+which are used when configuring TLS connections via the pfx option.
+An attacker would need to provide a specially crafted PFX file to trigger any of these issues.
+Since PFX files typically come from trusted local sources (e.g., your own private keys
+and certificates), the attack surface is limited in practice.</p>
+<p>OpenSSL 3.0 (used by v20.x) does not support PBMAC1 and is therefore not affected.</p>
+<p>This function is called internally by PKCS12_parse(). All branches are affected.</p>
+<p>Both OpenSSL 3.0 and 3.5 are vulnerable. All branches are affected.</p>
+<p>The following 9 CVEs do not affect Node.js on any branch:</p>
+<p>The current Node.js security policy can be found at https://github.com/nodejs/node/security/policy#security,
+including information on how to report a vulnerability in Node.js.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/vulnerability/openssl-fixes-in-regular-releases-jan2026" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#729. Supabase PrivateLink is now available</h2>
+    <div class="article-meta">
+        📅 Jan 27, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://supabase.com/blog/supabase-privatelink-available" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://supabase.com/images/blog/2026-01-27-supabase-privatelink-available/og.png" alt="Supabase PrivateLink is now available" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://supabase.com/images/blog/2026-01-27-supabase-privatelink-available/og.png" alt="Supabase PrivateLink is now available" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today we're launching Supabase PrivateLink, a new capability that lets you connect your database to AWS cloud resources over private networks. When enabled, your database connections stay entirely within the AWS network. No public internet exposure. No additional attack surface.</p>
+<p>If you work in a regulated industry or handle sensitive data, you've had this conversation with your security team: "Can we connect to the database without going over the public internet?" Until now, the answer was complicated. You could use IP allowlists and SSL, but traffic still flowed over public networks. For some organizations, that's a non-starter.</p>
+<p>Supabase PrivateLink solves this. Traffic never leaves private networks. From a network perspective, your Supabase database behaves like it's inside your own VPC.</p>
+<p>This matters for compliance. Many regulatory frameworks require private network connectivity for sensitive data. It also matters for security. Fewer public endpoints mean fewer attack vectors. You can disable public database access entirely once PrivateLink is configured.</p>
+<p>Our AWS PrivateLink implementation uses AWS VPC Lattice under the hood. When you enable PrivateLink, we share a VPC Lattice Resource Configuration with your AWS account. You accept the share and create an endpoint in your VPC.</p>
+<p>Your applications connect to the endpoint using a private DNS name. Traffic flows through AWS infrastructure to your Supabase database. The connection supports both direct Postgres connections and PgBouncer for connection pooling.</p>
+<p>Latency is typically lower than public connections because traffic takes a more direct path through AWS networks.</p>
+<p>PrivateLink is not necessary for every use case. If you're building a side project or your security requirements are satisfied by SSL and IP allowlists, the standard public connection works fine.</p>
+<p>Supabase PrivateLink is in Beta with some constraints:</p>
+<p>If you're familiar with AWS networking, setup is straightforward. Here's the overview:</p>
+<p>The full walkthrough with screenshots is in our documentation.</p>
+<p>Supabase PrivateLink is available today for Team and Enterprise customers. Head to Settings > Integrations in your dashboard to get started.</p>
+<p>If you run into issues or have questions, open a support ticket or ask in our Discord. We're collecting feedback during the Beta to improve the experience.</p>
+<p>Get product updates and news from Supabase.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://supabase.com/blog/supabase-privatelink-available" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#624. Node.js 25.5.0 (Current)</h2>
+    <div class="article-meta">
+        📅 Jan 26, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://nodejs.org/en/blog/release/v25.5.0" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2025.5.0%20(Current)" alt="Node.js 25.5.0 (Current)" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://nodejs.org/en/next-data/og/release/Node.js%20%E2%80%94%20Node.js%2025.5.0%20(Current)" alt="Node.js 25.5.0 (Current)" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This release introduces a new --build-sea command-line flag that simplifies the process of building Single Executable Applications (SEA) using Node.js.</p>
+<p>Previously, SEA generation involved copying the executable, generating the preparation blob with --experimental-sea-config, and injecting the blob into the copy using nodejs/postject. With the new --build-sea flag, these steps are now consolidated into a single step available from Node.js core.</p>
+<p>For the time being, backward compatibility with the postject-based SEA building process as well as the --experimental-sea-config will be maintained, until there's motivation to break it (e.g. for optimizations).</p>
+<p>Windows 64-bit Installer: https://nodejs.org/dist/v25.5.0/node-v25.5.0-x64.msi 
+Windows ARM 64-bit Installer: https://nodejs.org/dist/v25.5.0/node-v25.5.0-arm64.msi 
+Windows 64-bit Binary: https://nodejs.org/dist/v25.5.0/win-x64/node.exe 
+Windows ARM 64-bit Binary: https://nodejs.org/dist/v25.5.0/win-arm64/node.exe 
+macOS 64-bit Installer: https://nodejs.org/dist/v25.5.0/node-v25.5.0.pkg 
+macOS Apple Silicon 64-bit Binary: https://nodejs.org/dist/v25.5.0/node-v25.5.0-darwin-arm64.tar.gz 
+macOS Intel 64-bit Binary: https://nodejs.org/dist/v25.5.0/node-v25.5.0-darwin-x64.tar.gz 
+Linux 64-bit Binary: https://nodejs.org/dist/v25.5.0/node-v25.5.0-linux-x64.tar.xz 
+Linux PPC LE 64-bit Binary: https://nodejs.org/dist/v25.5.0/node-v25.5.0-linux-ppc64le.tar.xz 
+Linux s390x 64-bit Binary: https://nodejs.org/dist/v25.5.0/node-v25.5.0-linux-s390x.tar.xz 
+AIX 64-bit Binary: https://nodejs.org/dist/v25.5.0/node-v25.5.0-aix-ppc64.tar.gz 
+ARMv8 64-bit Binary: https://nodejs.org/dist/v25.5.0/node-v25.5.0-linux-arm64.tar.xz 
+Source Code: https://nodejs.org/dist/v25.5.0/node-v25.5.0.tar.gz 
+Other release files: https://nodejs.org/dist/v25.5.0/ 
+Documentation: https://nodejs.org/docs/v25.5.0/api/</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://nodejs.org/en/blog/release/v25.5.0" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#210. Build a dinosaur runner game with Deno, pt. 4</h2>
+    <div class="article-meta">
+        📅 Jan 26, 2026 &nbsp;|&nbsp; Category: <strong>World</strong> &nbsp;|&nbsp; 
+        <a href="https://deno.com/blog/build-a-game-with-deno-4" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://deno.com/blog/build-a-game-with-deno-4/og.png" alt="Build a dinosaur runner game with Deno, pt. 4" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://deno.com/blog/build-a-game-with-deno-4/og.png" alt="Build a dinosaur runner game with Deno, pt. 4" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>This series of blog posts will guide you through building a simple
+browser-based dinosaur runner game using Deno.</p>
+<p>Now that we have a fully playable endless runner, it is time to persist scores.
+In this post, we will add a database, expose a leaderboard API, and render those
+rankings inside the UI. Later we can build on this foundation to add player
+profiles and make the leaderboard global across multiple sessions and devices.</p>
+<p>We’ll start by creating a new HTML page to display the leaderboard. For now this
+will only display your top score, but in later stages we will enhance it with
+global rankings once we introduce player profile settings.</p>
+<p>Create a new file called public/leaderboard.html and add the following:</p>
+<p>We can also add some basic styling in public/css/styles.css to make the
+leaderboard look nice:</p>
+<p>And finally, we’ll add a link to the leaderboard page into the index page. Open
+public/index.html and add a link under the controls section:</p>
+<p>Serve the leaderboard page by short-circuiting Oak before the regular static
+middleware takes over. In your main.ts file, add the following before the
+static file serving middleware:</p>
+<p>Create public/js/leaderboard.js to fetch and render leaderboard rows every 30
+seconds. For now we’ll only see one row, but later we will expand this to show
+global rankings.</p>
+<p>The helper wraps everything needed to keep the leaderboard fresh client-side:
+refreshLeaderboard() swaps in a loading state, loadLeaderboard() fetches the
+latest scores, and the rendering helpers sanitize incoming values, format dates,
+and hydrate the DOM so you never risk injection issues. A setInterval and a
+DOMContentLoaded hook ensure the scoreboard initializes when the page loads
+and keeps polling every 30 seconds without user interaction.</p>
+<p>Head to the Deno Deploy dashboard and create a new
+managed PostgreSQL database:</p>
+<p>With the
+[deno –tunnel`](https://docs.deno.com/runtime/reference/cli/run/#options-tunnel)
+command, you can connect to your managed database from your local machine
+without needing to set up environment variables or other configuration.</p>
+<p>Simply use the run command with the --tunnel flag and Deno will do the rest.</p>
+<p>If you prefer, you can also connect to your managed database using a standard
+DATABASE_URL connection string (for example if you’re using a local Postgres
+instance for development). Set up a DATABASE_URL environment variable in your
+.env file. To get the connection string for your managed database, go to the
+Deno Deploy dashboard, navigate to your database, and copy the URL from the
+Databases tab:</p>
+<p>Then, paste it into your .env file. Be sure to append ?sslmode=require to
+the end of your connection string, which ensures the connection is encrypted via
+SSL/TLS:</p>
+<p>Place the following file at src/database/connection.ts. It lazily creates a
+connection pool and gracefully degrades through three credential sources.</p>
+<p>At the bottom of the same file, lets release clients back to the pool:</p>
+<p>Create src/database/schema.sql (or a migration) to store scores and the
+metadata we collect from the game client.</p>
+<p>Make a simple migration script to run the schema against the database. This
+script, which will create the necessary tables and columns for the global
+leaderboard, must be executed before the game starts. Create
+src/database/migration.ts:</p>
+<p>Then, call it from your main.ts before starting the server:</p>
+<p>We will have to add a router to handle API routes for /api/leaderboard and
+/api/scores for returning the right data for the leaderboard and scores. Let’s
+create the file /src/routes/leaderboard.routes.ts and fill it with the below:</p>
+<p>BigInt note: PostgreSQL numeric types can bubble up as JavaScript bigint.
+Convert them to Number (as shown above) before serializing to JSON to avoid
+runtime errors.</p>
+<p>After you have created leaderboardRouter, we’ll need to import that into
+main.ts and include those routes in our app:</p>
+<p>Extend public/js/game.js with a helper function submitScoreToDatabase that
+posts the score after each run.</p>
+<p>Note that for now, you can hard code your playerName, but in the next lesson,
+we will show you how you can create player profiles that allow users to update
+it themselves.</p>
+<p>Then update the game over logic to call this function:</p>
+<p>We will have to make a few other updates to public/js/game.js so that we can
+pass the right information in a function call in submitScoreToDatabase. First,
+let’s update startGame to instantiate a new private variable, gameStartTime,
+which will be used to calculate the duration the player played in a game.</p>
+<p>Next, we’ll have to update our gameOver logic to calculate gameDuration and
+to call submitScoreToDatabase:</p>
+<p>Once you have done that, we can start the server with deno task dev, play a
+round, and then see our score on the global leaderboard:</p>
+<p>✅ Persistent PostgreSQL storage for scores and analytics metrics.</p>
+<p>✅ Global leaderboard API (GET /api/leaderboard, POST /api/scores) with rank
+calculation.</p>
+<p>✅ Dedicated leaderboard page plus in-game auto-refresh to keep data in sync.</p>
+<p>✅ Robust connection pooling, environment-variable fallbacks, and BigInt-safe
+serialization.</p>
+<p>In Stage 5, we will lean into personalization: player profiles, cosmetic
+customization. Once we have player profiles, we can make the leaderboard truly
+global by associating scores with user accounts. We’ll update our database to
+store user preferences and scores.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://deno.com/blog/build-a-game-with-deno-4" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html" class="active">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>

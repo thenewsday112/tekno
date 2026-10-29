@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>News Portal Indonesia - Page 77</title>
+<meta name="description" content="Page 77">
+<link rel="canonical" href="https://thenewsday112.github.io/tekno/page77.html">
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#f4f6f8;margin:0;padding:20px;color:#333;line-height:1.6}
+.container{max-width:1000px;margin:0 auto}
+header{background:#1e293b;color:#fff;padding:20px;border-radius:12px;margin-bottom:20px;text-align:center;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+header h1{margin:0;font-size:26px;letter-spacing:1px}
+nav{background:#fff;padding:10px;border-radius:12px;margin-bottom:24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;box-shadow:0 2px 4px rgba(0,0,0,.05)}
+nav a{padding:8px 16px;border-radius:8px;color:#475569;text-decoration:none;font-weight:600;transition:all .2s;font-size:14px}
+nav a:hover,nav a.active{background:#2563eb;color:#fff}
+.article-card{background:#fff;padding:24px;margin-bottom:24px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);border-left:4px solid #2563eb}
+.article-card h2{margin:0 0 12px;font-size:22px;color:#1e293b}
+.article-meta{font-size:13px;color:#64748b;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #e2e8f0}
+.article-meta a{color:#2563eb;text-decoration:none;font-weight:bold}
+.article-body{font-size:16px;line-height:1.8;color:#334155}
+.article-body img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
+.pagination{text-align:center;margin:40px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.pagination a{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;color:#334155;font-weight:bold;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:all .2s}
+.pagination a:hover{background:#f1f5f9}
+.pagination a.active{background:#2563eb;color:#fff}
+footer{text-align:center;color:#64748b;font-size:14px;padding:30px 0;border-top:1px solid #e2e8f0;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<header><h1>News Portal Indonesia</h1></header>
+<nav><a href="index.html" class="active">🏠 All News</a><a href="technology.html">📰 Technology</a><a href="business.html">📰 Business</a><a href="sports.html">📰 Sports</a><a href="entertainment.html">📰 Entertainment</a><a href="health.html">📰 Health</a><a href="science.html">📰 Science</a><a href="world.html">📰 World</a><a href="travel.html">📰 Travel</a><a href="food.html">📰 Food</a><a href="automotive.html">📰 Automotive</a><a href="education.html">📰 Education</a><a href="lifestyle.html">📰 Lifestyle</a><a href="other.html">📰 Other</a></nav>
+<h1 style="color:#1e293b;border-left:5px solid #2563eb;padding-left:15px;margin-bottom:30px;">News Portal Indonesia - Page 77</h1>
+<article class="article-card">
+    <h2>#2404. Postgres connections now work through Sandbox firewall</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-postgres-connections" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2ua1K0lZjLL9w4WP4Qo7Wj/e8e1664e46677dbef1b03b6ebf4659eb/image__7_.png" alt="Postgres connections now work through Sandbox firewall" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2ua1K0lZjLL9w4WP4Qo7Wj/e8e1664e46677dbef1b03b6ebf4659eb/image__7_.png" alt="Postgres connections now work through Sandbox firewall" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Sandbox can now connect to hosted Postgres databases, including Neon, Supabase, AWS RDS, Nile, and Prisma Postgres. To enable a connection, add the database host to your Sandbox's allowed domains.</p>
+<p>When SNI based filtering is used with Vercel Sandbox, the sandbox firewall restricts outbound network access by checking the domain name during a connection's TLS handshake. This works seamlessly for HTTPS traffic, where the domain is visible at the start of the connection.</p>
+<p>Postgres, however, negotiates TLS differently. A Postgres client first opens a plain TCP connection and then upgrades to TLS. Because the domain isn't available when the firewall first needs it, Postgres connections through a standard domain-restricted Sandbox would fail.</p>
+<p>The Sandbox firewall now adjusts for the Postgres TLS negotiation flow. It detects the protocol's startup sequence, waits for the TLS upgrade, and then applies your domain policy before forwarding the connection to the database. No changes are needed to your code or database configuration.</p>
+<p>Here's a full example: create a Sandbox, install a Postgres client, lock down the network to only the database host, and run a query.</p>
+<p>TLS is required: Domain-based rules rely on the hostname being visible during the TLS handshake, so clients must connect with sslmode=require or higher. If your database doesn't support TLS, you can allow it by IP range instead. Most managed Postgres providers require TLS by default.</p>
+<p>GSSAPI encryption is not supported: Clients using  gssencmode=prefer will fall back to TLS automatically; gssencmode=require will not connect.</p>
+<p>No silent downgrades: If a client uses sslmode=prefer and the database doesn't support TLS, the connection will fail rather than silently falling back to plain-text.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-postgres-connections" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2402. How GitBook serves 30,000 sites with sub-second content updates</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-gitbook-serves-30000-sites-with-sub-second-content-updates" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2gBtn5CLOi4Y9er4LRnesT/88479ff379bbf2ae287c224531cd37f4/image.png" alt="How GitBook serves 30,000 sites with sub-second content updates" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2gBtn5CLOi4Y9er4LRnesT/88479ff379bbf2ae287c224531cd37f4/image.png" alt="How GitBook serves 30,000 sites with sub-second content updates" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>30,000 documentation sites hosted on a single Vercel deployment</p>
+<p>120 million monthly page views served from the edge</p>
+<p>40,000 cache invalidations processed daily, each resolved in under 300ms</p>
+<p>41% of all traffic now comes from AI crawlers and automated systems</p>
+<p>GitBook hosts 30,000 documentation sites on Vercel, serving 120 million page views every month. Companies like n8n, Nvidia, and Zoom trust the platform to keep their docs fast and current. For modern engineering teams and coding agents, documentation is as critical as the production code it describes, and GitBook sits at the center of that expectation.</p>
+<p>GitBook's publishing model mirrors how teams ship software: propose changes, review, and merge. With 30,000 independently managed sites each on its own update cadence, keeping content fast and fresh was a complicated engineering problem.</p>
+<p>Before migrating to Vercel, site editors would hit merge, visit the published site to validate, and see old version of the content. "One of our customers planned a large feature release, and on launch day, the docs lagged behind the rest of the product," says Steven Hall, Head of Engineering at GitBook. "That was the moment we really internalized that docs are as important as your code going to production."</p>
+<p>GitBook's published content frontend runs on Next.js and is open source. When Vercel's use cache directive became available, the team saw a solution to their speed problem: cache individual data-fetching functions rather than full page responses. That meant expensive API calls were deduplicated across requests, and cache behavior became visible directly in code rather than buried in external configuration.</p>
+<p>The harder problem was invalidation. In a multi-tenant system, a broad cache purge is expensive and wasteful. One team merging a typo fix shouldn't trigger revalidation for 29,999 other sites. GitBook already had a reliable signal for when content becomes stale: a merge event, whether through GitBook's app, GitHub, or GitLab. The team built tag-based invalidation triggered directly by those events. Cached data is tagged by content unit, and when a merge occurs, only the affected tags are revalidated. Everything else stays cached.</p>
+<p>Today, when a change is merged, updated content becomes visible globally within 300 milliseconds. GitBook processes 40,000 of these invalidations daily. "Outside of building our own caching, I don't think we considered anything else," says Hall.</p>
+<p>AI-driven traffic to GitBook documentation surged 5x year-over-year in 2025 and now accounts for 41% of all page views. LLMs and automated systems crawl docs programmatically, using GitBook as a source of truth for internal tooling, SDKs, and AI applications.</p>
+<p>That changes the infrastructure math. A human reader might visit a handful of pages on a single docs site, but an AI crawler can sweep every page across hundreds of sites in a single session, hitting cold cache paths that no human would visit. Multiply that across 30,000 sites and the caching foundation has to handle not just more traffic, but fundamentally less predictable traffic. Content still has to be immediately consistent after every change, and infrastructure costs have to stay predictable even as volume climbs.</p>
+<p>Hall says they didn't choose the caching architecture because of AI specifically, but it turned out to be the right foundation. "We need fast docs regardless of whether AI or humans are reading them," he says. "Our target is closer to 100% cache hits. Cache hits mean fast docs, and fast docs are a critical feature of GitBook."</p>
+<p>The caching infrastructure isn't finished. Features like adaptive documentation, which modifies content based on who's reading it, make multi-tenant caching meaningfully more complex. And as AI traffic keeps climbing, the volume of requests flowing through 30,000 sites will only grow.</p>
+<p>"Volume is going up everywhere," Hall says. "Engineers shipping more means more docs changes. LLMs are crawling more pages every day. Our main goal is to maintain that high bar for latency and predictability as we scale."</p>
+<p>GitBook is an intelligent documentation platform used by more than 30,000 teams to create, publish, and maintain product and developer documentation at scale. GitBook's published content frontend is open-source.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-gitbook-serves-30000-sites-with-sub-second-content-updates" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2399. Introducing deepsec: The security harness for finding vulnerabilities in your codebase</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/14ZZEKbRNYYQ6n92X39wtB/82238872c2153cadaa080afe29e5578f/55039.png" alt="Introducing deepsec: The security harness for finding vulnerabilities in your codebase" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/14ZZEKbRNYYQ6n92X39wtB/82238872c2153cadaa080afe29e5578f/55039.png" alt="Introducing deepsec: The security harness for finding vulnerabilities in your codebase" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Today we’re open sourcing deepsec: a security harness powered by coding agents. It runs on your own infrastructure and surfaces hard-to-find issues in large codebases.</p>
+<p>You can run deepsec on your laptop without setting up a cloud service for privileged source code access. For inference, you can use your existing Claude or Codex subscription without any additional setup.</p>
+<p>Scanning large repos can take multiple days on a single machine. To run research jobs in parallel, deepsec supports optional fanout to Vercel Sandboxes for remote execution. Scans on Vercel’s codebases routinely scale up to 1,000+ concurrent sandboxes.</p>
+<p>At its core, deepsec uses claude and codex to perform tailored investigation of a codebase using Opus 4.7 at max effort and GPT 5.5 at xhigh reasoning.</p>
+<p>Scans start with static analysis to identify security-sensitive files, then coding agents investigate each candidate, tracing data flows, checking for mitigations, and producing actionable findings with severity ratings. Here is the workflow:</p>
+<p>Scan: It starts by performing a regex-only scan of all files for security-sensitive areas that subsequent steps will focus on.</p>
+<p>Investigate: Agents investigate each file identified in the scan.</p>
+<p>Revalidate: A second agent run validates investigation findings to remove false positives and reclassify severity.</p>
+<p>Enrich: Once investigation is complete, an agent uses git metadata and other optional services to identify the contributors responsible for fixing each issue.</p>
+<p>Export: The export command formats the findings as instructions so that they can be turned into tickets for humans and coding agents.</p>
+<p>deepsec has been highly useful on our own monorepos and for our customers' codebases. During development, we ran deepsec on several open source repositories of Vercel customers and partners.</p>
+<p>For example, deepsec scanned the open source version of dub.co. Dub is a marketing attribution platform for affiliate programs and short links that is also available as SaaS. It features authenticated access, interacts with a database, and runs several backend services, creating a large security surface. When we shared our deepsec findings with founder Steven Tey, he replied:</p>
+<p>Running against Vercel’s own monorepos, deepsec identified subtle edge cases in auth conditions, leading us to develop a custom scanner plugin that covers every authentication path in our code.</p>
+<p>Some of deepsec's findings will be false positives. In our experience the false positive rate is roughly 10-20%. Given the impact of true positive findings in our own research, we’ve been happy with this outcome, and we built the revalidate step to have the agent further verify its findings to reduce false positives.</p>
+<p>deepsec works best for applications and services. It may be usable for libraries and frameworks, but those would likely require custom prompts and scanners.</p>
+<p>deepsec ships with a plugin system for adapting it to your codebase. The most common plugins are custom scanners: regex matchers tuned to your auth model, data layer, or team conventions. We recommend using deepsec with your coding agent and asking it to write those matchers based on findings from an initial scan:</p>
+<p>Both Anthropic and OpenAI offer “cyber” versions of their most capable models, fine-tuned to accept security tasks the base models won’t. deepsec works with these, but is also fully functional with off-the-shelf models.</p>
+<p>deepsec ships with a classifier that checks whether the task was refused after each research step. In our experience, for the prompt that deepsec is using, refusals are a non-issue for both Opus 4.7 and GPT 5.5.</p>
+<p>To get started, run npx deepsec init at the root of your repository. This will create a directory called ./.deepsec, which is used to configure the system and store a catalog of your deepsec investigations. From there, follow the output of the command. Read the full documentation.</p>
+<p>While we’ve used deepsec extensively, it is still early in its development. Feedback and contributions on GitHub are welcome.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/introducing-deepsec-find-and-fix-vulnerabilities-in-your-code-base" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2397. How General Intelligence used agents to build an agent platform on Vercel</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-general-intelligence-used-agents-to-build-an-agent-platform-on-vercel" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/64X75550zOuhazV56rKwcB/ecf1c4fd5fc774efdc33dc802646054c/image.png" alt="How General Intelligence used agents to build an agent platform on Vercel" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/64X75550zOuhazV56rKwcB/ecf1c4fd5fc774efdc33dc802646054c/image.png" alt="How General Intelligence used agents to build an agent platform on Vercel" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>8-person team (5 engineers) shipping 10 PRs and 70+ commits per engineer, per day</p>
+<p>4,000+ preview branches with ~100 parallel app versions running at any moment</p>
+<p>90% of SRE work automated through Vercel and their own agent (Cofounder)</p>
+<p>Cofounder launches with a managed Vercel account for every customer</p>
+<p>General Intelligence is building a platform that lets any founder run a company entirely with AI agents. Their vision is the one-person, billion-dollar company where every department is driven by agents.</p>
+<p>Their flagship product, Cofounder, gives founders a full team of agents that cover engineering, marketing, SEO, finance, sales, customer support, and operations.</p>
+<p>General Intelligence is an 8-person company with 5 engineers. To ship a platform that lets their customers run agentic companies, they had to operate as one themselves. They wanted to use Cofounder's CTO agent to build out other agentic business functions, and their developers quickly learned that was an infrastructure problem, not an agent problem.</p>
+<p>For a complex, multi-tenant platform, the requirement was total programmatic control: every action a human could take on the underlying cloud platform had to be available to a coding agent through a CLI or APIs. That meant killing deployments, changing DNS, managing billing, editing configs, all of it. Most cloud providers failed that test, and that's why General Intelligence migrated to Vercel.</p>
+<p>A coding agent runs dozens of processes in parallel. It queries logs as data, parses errors as input, and treats every dashboard click as a missing API. The bottleneck stops being how fast the agent can write code and becomes how much of the cloud it can actually reach.</p>
+<p>Most clouds aren't shaped for that pattern. They're built for human developers: dashboards to click, consoles to read, APIs that cover some operations but stop short of others. The closer an agent gets to running development end-to-end, the more those gaps stack up.</p>
+<p>General Intelligence started out hosting on Render. It worked for the early product, but provisioning preview environments for the full stack was painful from day one.</p>
+<p>When they started building Cofounder's CTO agent, that pain became a blocker. The platform had to be reachable end-to-end through code, and Render's Python support couldn't keep up with what the agent needed.</p>
+<p>"There are vendors that let an agent do 5% of the work, and vendors that let an agent do 50%," explained Pignanelli. "We needed a platform that would let an agent do 100%." They evaluated vendors against that bar and made the choice to migrate to Vercel.</p>
+<p>Migrating to Vercel changed how General Intelligence builds software, and their engineers don't develop locally anymore. Every change Cofounder's CTO agent makes goes straight to a Git branch, spins up a preview environment, and gets tested end-to-end by a browser agent on the live URL.</p>
+<p>General Intelligence has over 4,000 branches in flight. At any moment during a workday, around 100 versions of their app are running on Vercel, each on its own preview environment with a coding agent or browser agent operating it. Earlier this year, Fluid compute grew 6.5x month-over-month, and most of that growth was internal engineering work: coding agents building business agents in Cofounder.</p>
+<p>Today, engineers ships an average of 10 PRs a day with 70+ commits each, on a token budget of $5,000 per engineer per month.</p>
+<p>General Intelligence runs a Python backend, and they were one of the first teams to migrate a complex full stack app Vercel. They did it deliberately, because the agent had to drive deployments, configs, and compute across the whole stack, not just the frontend.</p>
+<p>Unifying on one platform shrank the surface area for the team and the agent to one CLI, one API, and one observability layer. When something breaks, the agent and the developers have the full picture in one place.</p>
+<p>When a founder spins up a company on Cofounder, they get more than a set of agents, they get a real GitHub repository and a managed Vercel deployment, provisioned automatically through Vercel for Platforms. Each company also gets its own domain, with SSL and DNS handled automatically.</p>
+<p>The engineering agent inside the customer's company is Cofounder's CTO, the same product General Intelligence uses internally. It runs the same workflow: branches, preview environments, browser agents testing the live URL.</p>
+<p>General Intelligence will keep building their own company on the same products they ship to customers. As they add new departments and agents, Pignanelli says Vercel allows them to focus on the customer, not configuring the cloud underneath.</p>
+<p>General Intelligence is building Cofounder, the first full-stack agent company platform.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-general-intelligence-used-agents-to-build-an-agent-platform-on-vercel" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2394. How KIKO Milano scales for Black Friday</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Business</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-kiko-milano-scales-for-black-friday" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2b4909Vf7BlHb7KlgnSrmm/67763b77d5f1eeedf7ffdb4328d921d3/image.png" alt="How KIKO Milano scales for Black Friday" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2b4909Vf7BlHb7KlgnSrmm/67763b77d5f1eeedf7ffdb4328d921d3/image.png" alt="How KIKO Milano scales for Black Friday" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Eliminated 3 weeks of Black Friday infrastructure prep</p>
+<p>Went from minimal releases to deploying multiple times per day</p>
+<p>KIKO Milano’s ecommerce team used to treat peak traffic as an operations project. Weeks before Black Friday, they had to manually scale AWS infrastructure and adjust application configuration, knowing that if demand exceeded forecasts, their site could slow down or even break, costing them real revenue.</p>
+<p>After migrating to Vercel, they removed manual prep from their playbook. Instead of provisioning infrastructure, their team now ships campaigns and tests daily.</p>
+<p>Before Vercel, KIKO ran their ecommerce app on AWS EC2 instances sized for normal traffic, then scaled by hand ahead of peak periods.</p>
+<p>This was their previous process leading into Black Friday:</p>
+<p>Black Friday prep began 2–3 weeks ahead of the event, then had to be unwound after the traffic spike passed.</p>
+<p>The infra team manually adjusted AWS EC2 capacity to support expected traffic.</p>
+<p>Scaling also required application-side changes, making peak readiness more than just an infrastructure task.</p>
+<p>Chat channels and conference rooms were set up for teams to triage performance and downtime problems.</p>
+<p>Beyond the manual prep work, KIKO’s dev team had to anticipate failure modes that hurt the business. Slow navigation and site instability made it hard for users to purchase, and, in Ant’s words, they knew that at any point, “everything could break.”</p>
+<p>Vercel changed the work from preparation to execution. With environments available on demand, faster builds, and automatic scaling during traffic spikes, Ant’s team stopped planning around infrastructure limits and focused on the ecommerce experience itself.</p>
+<p>KIKO's old setup ran on a fixed number of shared environments, which constrained how the team handled dev, test, pre-prod, and prod work in parallel. On Vercel, Ant described provisioning new environments as "snapping your fingers," including spinning them up on the fly when a project calls for it. Cloning environment variables is quick, and many changes that used to require code edits now "just require redeployment."</p>
+<p>The dev team’s old pipeline took around 20 minutes to run, which meant they had to keep releases to a minimum. Builds on Vercel finish in under four minutes on average, even with many locales and a large catalog of pre-rendered pages. The deployments view in the Vercel dashboard gives the team one place to check build status and surface failures without digging through logs.</p>
+<p>Performance used to swing with traffic, which meant the team felt every spike. Ant said that on Vercel, "everything scales automatically."</p>
+<p>That’s possible because their Next.js app runs on infrastructure that separates static delivery, cached pages, and dynamic compute, so each part can scale independently during traffic spikes, instead of forcing the team to size and tune servers ahead of time.</p>
+<p>The infrastructure migration didn’t just change how KIKO prepares for traffic spikes, it changed how much operational work the team carries every week.</p>
+<p>Ant estimates that Vercel saves his team almost an entire day per week when all of the friction is added up, and that time savings has made the team more confident: the platform works, they can ship quickly, and when they need support, they know Vercel is there with them.</p>
+<p>About KIKO Milano: KIKO Milano is a global beauty brand delivering cosmetics and ecommerce experiences to customers worldwide.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-kiko-milano-scales-for-black-friday" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2392. Query observability metrics using the Vercel CLI</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-metrics-in-cli" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6QcngQopkRbC4KbfiGlkss/c076c37d3114af94286e77bffbed2898/vc_metrics_og.png" alt="Query observability metrics using the Vercel CLI" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6QcngQopkRbC4KbfiGlkss/c076c37d3114af94286e77bffbed2898/vc_metrics_og.png" alt="Query observability metrics using the Vercel CLI" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now access Observability Plus metrics in the Vercel CLI.</p>
+<p>Query observability data for any Vercel team or project using the new vercel metrics command. Coding agents can also leverage this new command to better analyze the performance, reliability, or security of applications on Vercel, as well as debug issues.</p>
+<p>This feature is available in public beta for all teams with Observability Plus.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-metrics-in-cli" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2390. Secure Marketplace credentials with Production-only access</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/secure-marketplace-credentials-with-production-only-access" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2BpU01EHhndKQxRjkOBXDW/2ed13ae401349ccb3da1e75e5530caa9/secure_integration_credentials_for_production_acce_og_card.jpg" alt="Secure Marketplace credentials with Production-only access" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2BpU01EHhndKQxRjkOBXDW/2ed13ae401349ccb3da1e75e5530caa9/secure_integration_credentials_for_production_acce_og_card.jpg" alt="Secure Marketplace credentials with Production-only access" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now secure native integration resources by restricting where they can be used. Setting a resource to Production only removes non-production access and protects credentials as sensitive environment variables. This makes it so secret values or no longer readable from the dashboard or CLI</p>
+<p>From the integration resource Settings, select Allowed Environments → Production only and save. We recommend that you rotate the secrets of the integration resource after saving.</p>
+<p>Development and Preview connections are removed</p>
+<p>New non-production connections are blocked</p>
+<p>Connections without a Production target are disconnected</p>
+<p>Credentials are protected and no longer readable</p>
+<p>Reverting this setting requires Owner permissions for your Vercel team. Owners can re-enable Development and Preview environment from Settings and reconnect projects if needed. You may be prompted to reauthenticate with an MFA challenge depending on your settings. Learn more in the Vercel documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/secure-marketplace-credentials-with-production-only-access" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2388. Auto-add Git committers to your team</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/auto-add-git-committers-to-your-team" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6whDxG6btJ08TYXJiHesHZ/30d1c8db082fd29839f3829582edc361/image__5_.png" alt="Auto-add Git committers to your team" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/6whDxG6btJ08TYXJiHesHZ/30d1c8db082fd29839f3829582edc361/image__5_.png" alt="Auto-add Git committers to your team" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Pro teams can now choose how Git committers to private repositories are added to their Vercel team.</p>
+<p>Auto Approval: non-team committers with Vercel accounts are automatically added to your team and their deployments proceed immediately. Added members count toward your team seats at standard Pro pricing.</p>
+<p>Manual Approval: deployments are blocked until an owner approves the new member.</p>
+<p>Choose your approval preference in team settings.</p>
+<p>Learn more about collaboration settings and troubleshooting project collaboration.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/auto-add-git-committers-to-your-team" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2386. Vercel Flags now supports JSON values</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-flags-now-supports-json-values" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/Hazxbv9JX8lRVS43CgAcL/fdce11640ae631518ce2d90aec18d06a/image.png" alt="Vercel Flags now supports JSON values" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/Hazxbv9JX8lRVS43CgAcL/fdce11640ae631518ce2d90aec18d06a/image.png" alt="Vercel Flags now supports JSON values" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now store JSON values in Vercel Flags, extending the existing support for boolean, string, and number values. This allows you to collapse what used to take several related flags into a single feature flag.</p>
+<p>For example, to A/B test how a different model performs, you can now define a single model flag. This allows you to manage one flag that serves the full object rather than managing ai_model, ai_temperature, and ai_max_tokens separately:</p>
+<p>A feature flag holding JSON configuration in its variants</p>
+<p>Use Vercel Flags to progressively route traffic to a new model, A/B test, or quickly switch models in case a provider is having issues.</p>
+<p>Try it out or learn more about Vercel Flags.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-flags-now-supports-json-values" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2384. Next.js May 2026 security release</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/next-js-may-2026-security-release" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/xcOcmUoYf2hpjoNPrNkDh/ff7363f483ddc0af63916a4abf526b1f/image__3_.png" alt="Next.js May 2026 security release" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/xcOcmUoYf2hpjoNPrNkDh/ff7363f483ddc0af63916a4abf526b1f/image__3_.png" alt="Next.js May 2026 security release" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>We have shipped a coordinated security release for Next.js addressing 13 advisories across denial of service, middleware and proxy bypass, server-side request forgery, cache poisoning, and cross-site scripting. One advisory addresses an upstream React Server Components vulnerability tracked as CVE-2026-23870.</p>
+<p>Patched versions are available for both React and Next.js, and all affected users should upgrade immediately.</p>
+<p>The release addresses the following advisories:</p>
+<p>Affects applications that rely on middleware.js or proxy.js for authorization.</p>
+<p>High: Auth bypass via App Router segment-prefetch URL</p>
+<p>High: App Router segment-prefetch bypass, incomplete fix follow-up</p>
+<p>High: Pages Router i18n default-locale path bypasses proxy authorization</p>
+<p>High: Bypass via dynamic route parameter injection</p>
+<p>Low: Middleware redirects can be cache-poisoned</p>
+<p>Affects applications using Server Functions, Partial Prerendering with Cache Components, or the Image Optimization API.</p>
+<p>High: DoS in React Server Components (tracked upstream as CVE-2026-23870)</p>
+<p>High: DoS via connection exhaustion in applications using Cache Components</p>
+<p>Moderate: DoS via the Image Optimization API</p>
+<p>Affects applications that handle WebSocket upgrade requests.</p>
+<p>High: SSRF in applications using WebSocket upgrades</p>
+<p>Affects applications with caching layers in front of React Server Component responses.</p>
+<p>Moderate: Cache poisoning in React Server Component responses</p>
+<p>Low: Cache poisoning via collisions in RSC cache-busting</p>
+<p>Affects applications using CSP nonces in App Router, or beforeInteractive scripts that consume untrusted input.</p>
+<p>Moderate: XSS in App Router applications using CSP nonces</p>
+<p>Moderate: XSS in beforeInteractive scripts with untrusted input</p>
+<p>These vulnerabilities are addressed by the patched releases of React and Next.js. Patching is the only complete mitigation, and all affected users should upgrade immediately.</p>
+<p>Vercel has not deployed new WAF rules for this release; these advisories cannot be reliably blocked at the WAF layer.</p>
+<p>React: 19.0.6, 19.1.7, 19.2.6 for the react-server-dom-parcel, react-server-dom-webpack and react-server-dom-turbopack packages</p>
+<p>Frameworks and bundlers using react-server-dom-* packages should install the latest versions provided by their respective maintainers.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/next-js-may-2026-security-release" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2382. Chat SDK now supports conversation history</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/chat-sdk-conversation-history" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7ly10UlIHPqQr4qvGmi9zE/07495ac42c469171b5f9d684c8b87a6e/image__8_.png" alt="Chat SDK now supports conversation history" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/7ly10UlIHPqQr4qvGmi9zE/07495ac42c469171b5f9d684c8b87a6e/image__8_.png" alt="Chat SDK now supports conversation history" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Chat SDK now supports cross-platform conversation history through the new transcripts and identity options. User transcripts persist across every platform adapter, allowing the same user to keep their message history wherever they message your bot.</p>
+<p>Identify users by email and keep up to 200 messages per user for 30 days</p>
+<p>bot.transcripts exposes four methods, backed by one of the official state adapters:</p>
+<p>append: persist an inbound message or a bot reply</p>
+<p>list: return entries chronologically with filters</p>
+<p>Read the documentation to get started, or try one of the templates.</p>
+<p>Learn how Chat SDK works end-to-end: from core concepts to building your first chatbot to deploying it across platforms.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/chat-sdk-conversation-history" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2381. Chat SDK adds web adapter support</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/chat-sdk-adds-web-adapter-support" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2DovACXMhmzcWU4Z02WU9E/ececc97d8e14a5a7b76d48c00670db9b/image__9_.png" alt="Chat SDK adds web adapter support" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2DovACXMhmzcWU4Z02WU9E/ececc97d8e14a5a7b76d48c00670db9b/image__9_.png" alt="Chat SDK adds web adapter support" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now build chat UIs that connect to Chat SDK with the new web adapter. Build in-product assistants, support agents, or any other browser-based chat experience.</p>
+<p>Then stream replies to the browser with a preconfigured @ai-sdk/react useChat hook:</p>
+<p>Read the documentation to get started, browse the directory, or build your own adapter.</p>
+<p>Learn how Chat SDK works end-to-end: from core concepts to building your first chatbot to deploying it across platforms.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/chat-sdk-adds-web-adapter-support" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2379. Chat SDK adds Messenger adapter support</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/chat-sdk-adds-messenger-adapter" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/O5ioHygBcr4WNWVUO1993/714c2761c14eed577a57c837d0956d23/OG-Chat-SDK-Messenger.png" alt="Chat SDK adds Messenger adapter support" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/O5ioHygBcr4WNWVUO1993/714c2761c14eed577a57c837d0956d23/OG-Chat-SDK-Messenger.png" alt="Chat SDK adds Messenger adapter support" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Chat SDK now supports Messenger, extending its single-codebase approach to Slack, Discord, GitHub, Teams, and Telegram with the new Messenger adapter.</p>
+<p>Teams can build bots that support messages, reactions, attachments, postback buttons, and direct conversations, with display names fetched automatically from user profiles.</p>
+<p>The adapter does not support message history, editing, or deletion. Certain components, like tables and fields, render as text fallbacks. Streaming is handled by accumulating and then sending the final message.</p>
+<p>Read the documentation to get started, browse the directory, or build your own adapter.</p>
+<p>Special thanks to @mitkodkn, whose community contribution in PR #461 laid the groundwork for this adapter.</p>
+<p>Learn how Chat SDK works end-to-end: from core concepts to building your first chatbot to deploying it across platforms.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/chat-sdk-adds-messenger-adapter" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2376. How Superset built the IDE for AI agents on Vercel</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/how-superset-built-the-ide-for-ai-agents-on-vercel" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/203zgPyZagniriSInD7ttf/4c1bab4f0c3720580dc68d10b2907a20/image.png" alt="How Superset built the IDE for AI agents on Vercel" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/203zgPyZagniriSInD7ttf/4c1bab4f0c3720580dc68d10b2907a20/image.png" alt="How Superset built the IDE for AI agents on Vercel" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Software development with AI started as a single engineer chatting with a single agent about a local repo. Today, developers direct fleets of agents in the cloud, but traditional tools were built for the old shape of the job: IDEs, terminals, and review systems designed for one developer moving one ticket at a time.</p>
+<p>Co-founders Kiet Ho, Satya Patel, and Avi Peltz, all former CTOs at YC-backed companies, built Superset as the IDE for multi-agent development. It runs up to 10 coding agents in parallel, each in its own isolated workspace. Developers use it to direct teams of agents generating code across multiple branches simultaneously.</p>
+<p>Running a team of agents in parallel changes what the platform underneath has to do. The product Superset offers its users only feels parallel because nothing on the platform forces the work to wait. If any layer slows down, even briefly, the parallelism on top collapses with it.</p>
+<p>This workflow has a dependency that's invisible from the product surface. Every agent thread needs its own isolated environment, every branch needs a live URL, and every change needs a safe place to run.</p>
+<p>Without instant provisioning, parallel agents stop being parallel. CI pipelines have to be configured per branch, preview environments have to be managed by hand, and deploys back up behind one another. For a team running a dozen agents at once, that serialization is what breaks the product. Twelve workflows collapse into one queue, and a task that should take minutes takes hours. The developer is back to waiting, which is the exact problem Superset exists to solve.</p>
+<p>Vercel was the default choice from the start, as all three founders had built on it at previous companies. From day one, Superset ran six Next.js projects on Vercel: the web app, marketing site, docs, and three supporting services. The team skipped platform engineering entirely and stayed focused on the product.</p>
+<p>Every branch a Superset developer or agent creates becomes a preview deployment automatically, often spinning up multiple services. At its peak, Superset generates roughly 600 preview deployments a day internally. Every branch gets a live URL, and the team never waits on a deploy queue.</p>
+<p>Superset's AI stack grew with the product, and each piece of the Vercel platform was pulled in to solve a specific problem as functionality was added.</p>
+<p>AI SDK and AI Elements run the agent orchestration itself, giving Superset a single interface for multi-model, multi-agent workflows.</p>
+<p>AI Gateway handles model routing without custom routing logic.</p>
+<p>Vercel Blob stores artifacts from agents and users, no object storage to manage.</p>
+<p>Fluid compute absorbs parallel tasks as agents fan out, scaling underneath without forcing the team to rearchitect. Active CPU pricing means cost is only incurred on actual compute, not round-trip time waiting on model responses.</p>
+<p>Cron Jobs prevent parallel environments from piling up.</p>
+<p>BotID filters bots during high traffic periods, no custom middleware needed.</p>
+<p>As Superset has expanded into new product areas, the entire stack has stayed on Vercel. There's no second cloud to glue in, no orchestration layer to maintain, and no platform engineering team to keep it glued together. New surface areas gets built on the same primitives that handled the old surface area, which is what frees the team to keep moving on product instead of plumbing.</p>
+<p>The most credible proof how the Superset team uses Superset themselves. GitHub issues flow into Superset and get split across parallel workspaces, and Satya has tuned the team's setup to run up to a dozen instances at once. Multiple efforts move forward without anyone waiting on serial decisions. Compared to their previous dev workflows, Superset's commit graph looks exponential.</p>
+<p>During a Hacker News "Show HN" launch, user counts tripled overnight. Superset absorbed the spike without anyone provisioning infrastructure mid-flight.</p>
+<p>That extends to incidents. If a customer reports an issue to Superset, their agents can spin up, write the fix, generate a preview, and merge the code in under thirty minutes. If the fix makes things worse, rollbacks are instant, so the cost of a bad deploy drops to near zero.</p>
+<p>For Superset, immediate deployment matters because it keeps the loop between writing code, previewing it, and shipping it short enough that velocity never stalls, even across dozens of parallel workstreams. Build time averages around 30 seconds, and deployment volume runs between 1,000 and 1,400 a week.</p>
+<p>The pattern for success is already clear: a product built for parallelism, by a team that works in parallel, on agentic infrastructure that doesn't force them back into a queue. Every new agent capability they ship to customers gets stress-tested first by their own engineers running a dozen at once. The dozen will become two dozen, and the infrastructure underneath was built to expect it.</p>
+<p>About Superset: Superset is built by a team of three ex-YC CTOs and its the IDE for the AI agents era, letting developers run multiple coding agents in parallel.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/how-superset-built-the-ide-for-ai-agents-on-vercel" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2374. Vercel Sandbox firewall now supports request proxying and filtering</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-request-proxying-and-filtering" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4FvYp1SHRb8uxbJJrUP3nT/b5b187f0e00c53f6aa16d1f8cc056836/image__8_.png" alt="Vercel Sandbox firewall now supports request proxying and filtering" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/4FvYp1SHRb8uxbJJrUP3nT/b5b187f0e00c53f6aa16d1f8cc056836/image__8_.png" alt="Vercel Sandbox firewall now supports request proxying and filtering" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>The Vercel Sandbox firewall now supports forwarding specific HTTP requests to a proxy you control. You can also use matchers to filter forwarding and credentials brokering to only the requests that need it.</p>
+<p>You can now route outbound sandbox traffic through your own proxy for logging, debugging, or transforming requests and responses. Set a forwardURL on any allowed domain, and the firewall will forward matching HTTPS requests to your server.</p>
+<p>The proxy receives the original request along with additional headers to identify the source:</p>
+<p>vercel-forwarded-host: The original request's SNI</p>
+<p>vercel-forwarded-scheme: The original request's scheme</p>
+<p>vercel-forwarded-port: The original request's port</p>
+<p>vercel-sandbox-oidc-token: A Vercel-issued OIDC token that the proxy can use to authenticate the request and identity the source team / project / sandbox. Learn more about it in the docs</p>
+<p>Additionally, you can now use matchers to filter request forwarding or credentials brokering to requests matching a specific path, method, query string, or headers. This gives you fine-grained control over which requests get transformed; for example, only forwarding POST requests to a specific API path while allowing all other traffic through untouched.</p>
+<p>These features are available in beta for Pro and Enterprise plans. Get started by installing the @vercel/sandbox@beta SDK, and learn more in the docs about requests proxying and matchers.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/vercel-sandbox-firewall-now-supports-request-proxying-and-filtering" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2372. Automate progressive rollouts with Vercel Flags</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/progressive-rollouts-in-vercel-flags" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/40xUP6ol69UkmWVWW8S36E/d60548b89d01028853bfde18189c4d27/image.png" alt="Automate progressive rollouts with Vercel Flags" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/40xUP6ol69UkmWVWW8S36E/d60548b89d01028853bfde18189c4d27/image.png" alt="Automate progressive rollouts with Vercel Flags" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now use Vercel Flags to roll out a feature to a growing percentage of users on a schedule, with progressive rollouts.</p>
+<p>Unlike weighted splits, which hold a fixed distribution (for example, 50/50) for experiments, a progressive rollout follows a predefined schedule that gradually shifts the traffic percentage to the new variant. Each stage has a target percentage and a duration.</p>
+<p>Exposing a change in stages lets you catch a regression on a small slice of users before it hits everyone.</p>
+<p>Progressive rollouts are now available in the dashboard and through the new vercel flags rollout CLI command.</p>
+<p>Learn more in the Vercel Flags documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/progressive-rollouts-in-vercel-flags" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2370. Node.js 26.x now available on Vercel Sandboxes</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/node-js-26-x-now-available-on-vercel-sandboxes" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://vercel.com/api/dynamic-og?title=Node.js%2026.x%20now%20available%20on%20Vercel%20Sandboxes&amp;format=changelog" alt="Node.js 26.x now available on Vercel Sandboxes" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://vercel.com/api/dynamic-og?title=Node.js%2026.x%20now%20available%20on%20Vercel%20Sandboxes&format=changelog" alt="Node.js 26.x now available on Vercel Sandboxes" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Vercel Sandbox now supports Node.js version 26.</p>
+<p>To run a Sandbox with Node.js 26, upgrade @vercel/sandbox to 1.10.2 or later, or to 2.0.0-beta.19 or later if you're using v2 and set the runtime property to node26:</p>
+<p>Get started today and learn more in the documentation.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/node-js-26-x-now-available-on-vercel-sandboxes" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2368. Manage Vercel Firewall in the CLI</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Other</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/manage-vercel-firewall-in-the-cli" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5jrbRxB2g2N2XOcd5Yuc6m/89522878b840176c8c9125ebd827c0c0/33198.png" alt="Manage Vercel Firewall in the CLI" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/5jrbRxB2g2N2XOcd5Yuc6m/89522878b840176c8c9125ebd827c0c0/33198.png" alt="Manage Vercel Firewall in the CLI" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>You can now manage your project's Vercel Firewall configuration through the Vercel CLI.</p>
+<p>Use the new vercel firewall command to manage custom rules, IP blocks, system bypasses, Attack Mode, and system mitigations from the terminal.</p>
+<p>Manage Vercel Firewall functionality from the CLI</p>
+<p>The Vercel Firewall skill also helps agents by detailing best practices for rolling out new rules safely.</p>
+<p>Update Vercel CLI and run vercel firewall to get started. Learn more about the Vercel Firewall CLI commands.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/manage-vercel-firewall-in-the-cli" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2365. AI Gateway production index</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/blog/ai-gateway-production-index" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1dZPKdjsX9adGVuW49oPrF/9657c5fee4858df4a5b29dc2c018cde7/image.png" alt="AI Gateway production index" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1dZPKdjsX9adGVuW49oPrF/9657c5fee4858df4a5b29dc2c018cde7/image.png" alt="AI Gateway production index" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Ask which AI model is best, and the answer changes before the ink dries. That's what happens in an industry where new models are released weekly.</p>
+<p>Every benchmark measures a different race, and every race crowns its own winner, but Vercel has a unique view of the industry through production workloads. AI Gateway serves tens of trillions of tokens across hundreds of models through real applications and agents.</p>
+<p>Anthropic leads in spend despite a higher unit price, Google leads in volume</p>
+<p>OSS models are gaining traction, but there is no loyalty to specific labs</p>
+<p>OpenAI spend share is growing quickly after recent model updates</p>
+<p>High-volume workloads route across 30+ distinct models on average</p>
+<p>Agentic workloads carry 59% of all token volume (up 2x over 6 months)</p>
+<p>This report is built on data from seven months of production traffic from AI Gateway, with usage from over 200K+ unique teams.</p>
+<p>Cost and volume rankings disagree because they measure two different workloads, even for the same customer.</p>
+<p>By spend in April 2026, Anthropic took 61%, Google 21%, and OpenAI 12%.</p>
+<p>By token volume, the picture flipped. 38% of April traffic through AI Gateway routed to Google, 26% to Anthropic, 13% to OpenAI, and 10% to xAI. Smaller labs split the rest.</p>
+<p>Some models are positioned to win by being cheap enough per token to carry huge volume, while others are priced high enough to make sense only for quality-critical work. The different models are not competing for the same call. In aggregate the same customer base sits on both leaderboards, with premium reasoning calls landing on Claude Opus and cheap fast calls landing on Gemini Flash. Spend follows the high-stakes calls, and volume follows the low-stakes ones, with the labs each holding a different layer of the same applications.</p>
+<p>Volume-vs-spend also changes quickly at the lab level. A few specific signals:</p>
+<p>Gemini Flash helped Google take the lead on volume at a smaller share of spend</p>
+<p>Claude Opus helps Anthropic lead on spend with less volume than Google</p>
+<p>OpenAI's spend share tripled from March to April after the GPT-5.4/5.5 releases</p>
+<p>Google's spend share climbed from 8% in March to 21% in April as Gemini Flash usage scaled</p>
+<p>The same cost/volume divide exists at a finer grain inside specific kinds workloads:</p>
+<p>Personal assistants account for 20% of cost on 40% of token volume</p>
+<p>Coding agents sit roughly balanced at 22% of cost on 20% of tokens</p>
+<p>Back office agents run at 6% of cost on 15% of tokens</p>
+<p>App generation runs at 7% of cost on 11% of tokens</p>
+<p>What a workload spends per token is a function of how expensive a wrong answer is to the use case. Personal assistants can run on cheap, fast models because mistakes only impact individual users and are quickly corrected. Back-office workflows pay for stronger reasoning because errors can trigger legal, financial, or operational risks that outweigh the per-call savings. The per-token economics are a stake map: applications spend more per token when mistakes cost more.</p>
+<p>The same pattern holds in a broader B2C/B2B split. B2C applications generate many low-cost calls, while B2B applications run fewer, more expensive ones. On a per-token basis, B2B costs roughly two times as much as B2C.</p>
+<p>Cutting the data by use case shows a fragmented provider landscape:</p>
+<p>Anthropic notably leads in software building</p>
+<p>xAI and others are split across coding, consumer, and long-tail use cases</p>
+<p>Anthropic's pattern is concentration at the high-stakes layer. As the workload moves from back office to consumer, Anthropic's token share drops from 71% down to 7%. Its cost share follows a much shallower curve and keeps the lead through three of the four categories. The revenue concentrates wherever the answer has to be right, regardless of how much volume passes through.</p>
+<p>Google is the inverse shape. Its footprint concentrates in consumer, where Gemini Flash carries 28% of tokens at 15% of cost, and barely appears on the cost chart outside it. The position is a single-SKU bet that rises and falls with Flash adoption.</p>
+<p>xAI is a price wedge. Grok carries 20% of building tokens and 18% of outreach tokens at materially smaller cost shares in each. xAI wins on price-to-quality fit, and whoever matches the price closes the wedge.</p>
+<p>OpenAI is the most balanced of the four at 6% of building cost, 18% of consumer cost, and 28% of outreach cost. No single layer is load-bearing for OpenAI's overall share, which makes the company the least exposed of the four to disruption in any one layer.</p>
+<p>Open-weights families like Kimi, MiniMax, and GLM rotate through the consumer and building tiers where the cost ceiling is lowest. Their cost share stays small, and their token share inside consumer and building is large enough that any cost-only view of the market understates them.</p>
+<p>There is no single dominant provider across the whole market because there is no single dominant use case. The right question is not "Who is winning AI?", it is "Which models are winning the use case I care about?" The labs that look closest to even on a blended chart are competing for different layers of the same stack.</p>
+<p>The shape of production AI requests has changed underneath all of this. In April 2026, 22.2% of AI Gateway requests ended with a tool call, up from 11.4% in October 2025. Measured by tokens, the shift is bigger. 58.9% of all tokens are now in tool-call requests, up from 31.6% six months ago.</p>
+<p>By both measures the agentic share roughly doubled in half a year, but the more telling number is the gap between the two shares. 22.2% of requests carry 58.9% of tokens, which means tool-using requests are about 2.6× more token-heavy than the rest. The cost surface of AI has shifted from chat-shaped to agent-shaped, while headline request counts barely budged.</p>
+<p>Every kind of round trip bills against the same meter, whether it's a function execution, an API call, a database query, or a code run, so an agent shipping ten tool calls bills roughly ten times the tokens a chat would. Where a chat bills one round trip per prompt, an agent bills a chain.</p>
+<p>At scale, multi-model stops being a choice and becomes standard agent architecture.</p>
+<p>Teams running 1K to 10K requests averaged 3 distinct models. By the 10M+ requests bucket, the average is 35 models in regular use. The jump from 18 models in the 1M to 10M bucket to 35 in the 10M+ bucket is the inflection point.</p>
+<p>A 35-model fleet runs as a routing graph, with a cheap classifier for intent detection, a frontier model for the reasoning step, an embedding model for retrieval, a fast model for summarization, and a vision model for screenshots. Every one of those models is swappable. If a provider raises prices, degrades quality, or has an outage, traffic redistributes across the rest in hours. At the scale that produces most of the spend on the leaderboards, switching between labs is closer to a config change than to a vendor migration, and the standard story about lab lock-in inverts the higher you go on the request-volume curve.</p>
+<p>The same fleet design explains how fast new releases get absorbed. When a new version ships inside a model family, traffic moves to it within weeks.</p>
+<p>Claude Sonnet 4.6 absorbed most of the Sonnet family's share by its first full month after launch.</p>
+<p>The Opus family is moving through the same shape now, with Claude Opus 4.7 taking share from Opus 4.6 on a near-identical curve.</p>
+<p>Predecessor models stayed live and routable on AI Gateway throughout both windows, but teams moved anyway. The migration is a config change, and the labs no longer set the upgrade timeline of their own product lines.</p>
+<p>Roughly 3.5% of requests on AI Gateway complete after a fallback. That means the initial route hit an error, a rate limit, or a timeout, and the gateway reissued the request to a healthy alternative fast enough that the user still got a successful response.</p>
+<p>Measured in tokens the rescue rate runs at 5.1%, and in dollars at 4.9%. The token-weighted and cost-weighted rates run higher than the request-weighted rate because the requests that get rescued are, on average, bigger and more expensive than the ones that don't. Long context windows hit rate limits more often than short ones, multi-step agent runs accumulate failure across steps, and heavy reasoning calls time out under sustained load. Each of those failure modes targets the expensive end of the workload, which is why the dollar rate sits higher than the request rate.</p>
+<p>A provider's SLA measures request-level uptime, but a production application experiences cost-weighted uptime, and the two come apart on exactly the calls that paid for the model.</p>
+<p>Production workloads are designed for efficiency, reliability, and flexibility, not to match the latest model leaderboards.</p>
+<p>Across six cuts of the same data, the shape underneath stays the same. Different labs win different layers of the same applications, and the architecture that handles those layers is the one production teams at scale have already built for.</p>
+<p>This echoes the early cloud era. Teams expanded compute first (more instances, regions, redundancy) and squeezed per-unit cost later. The 35-model fleets visible at the top of the spend curve are the same patter at a faster cadence; the optimization that follows happens at the routing layer.</p>
+<p>Plan for multiple models across providers</p>
+<p>Assume the need for fallbacks to optimize for uptime and cost</p>
+<p>Design routing as a core unit of architecture from the beginning</p>
+<p>We expect to revisit this data on a recurring cadence as the patterns shift. Live model rankings are available on the AI Gateway Leaderboards.</p>
+<p>This analysis is based on anonymized, aggregate routing data from the Vercel AI Gateway through April 2026.</p>
+<p>Spend uses market-rate pricing (published list price) to provide a normalized view across teams that bring their own API keys.</p>
+<p>Volume counts tokens routed through AI Gateway.</p>
+<p>B2C, B2B, and use-case classifications are aggregate. No individual team or workload is identified.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/blog/ai-gateway-production-index" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article>
+<article class="article-card">
+    <h2>#2363. Fast mode for Opus 4.7 available on AI Gateway</h2>
+    <div class="article-meta">
+        📅 Oct 29, 2026 &nbsp;|&nbsp; Category: <strong>Technology</strong> &nbsp;|&nbsp; 
+        <a href="https://vercel.com/changelog/fast-mode-for-opus-4-7-available-on-ai-gateway" target="_blank" rel="nofollow">Read Source &rarr;</a>
+    </div>
+    <div class="article-body">
+        <img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3QL3sh1TJhTTI5HyJ3xz65/c4f22db29c762cad66200662ce54213a/Vercel_x_Anthropic.jpeg" alt="Fast mode for Opus 4.7 available on AI Gateway" loading="lazy">
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/3QL3sh1TJhTTI5HyJ3xz65/c4f22db29c762cad66200662ce54213a/Vercel_x_Anthropic.jpeg" alt="Fast mode for Opus 4.7 available on AI Gateway" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="font-size: 16px; line-height: 1.8; color: #333;">
+                <p>Fast mode for Claude Opus 4.7 is now available on AI Gateway in research preview.</p>
+<p>Fast mode delivers ~2.5x faster output token generation with full Opus 4.7 intelligence. This is an early, experimental feature.</p>
+<p>To enable fast mode, pass speed: 'fast' in the anthropic provider options with anthropic/claude-opus-4.7.</p>
+<p>You can use fast mode with Claude Code via AI Gateway by setting the CLAUDE_CODE_SKIP_FAST_MODE_ORG_CHECK and CLAUDE_CODE_ENABLE_OPUS_4_7_FAST_MODE variables in your shell configuration file or in ~/.claude/settings.json.</p>
+<p>Fast mode is priced at 6x standard Opus rates.</p>
+<p>Input: $5 / 1M tokensOutput: $25 / 1M tokens</p>
+<p>Input: $30 / 1M tokensOutput: $150 / 1M tokens</p>
+<p>All standard pricing multipliers (e.g., prompt caching) apply on top of these rates.</p>
+<p>The AI Gateway model leaderboard tracks the most popular models over time, ranking them by the total volume of tokens processed across all Gateway traffic.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://vercel.com/changelog/fast-mode-for-opus-4-7-available-on-ai-gateway" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Baca artikel asli
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+<div style="text-align:center;margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+    </div>
+</article><div class="pagination"><a href="index.html">1</a><a href="page2.html">2</a><a href="page3.html">3</a><a href="page4.html">4</a><a href="page5.html">5</a><a href="page6.html">6</a><a href="page7.html">7</a><a href="page8.html">8</a><a href="page9.html">9</a><a href="page10.html">10</a><a href="page11.html">11</a><a href="page12.html">12</a><a href="page13.html">13</a><a href="page14.html">14</a><a href="page15.html">15</a><a href="page16.html">16</a><a href="page17.html">17</a><a href="page18.html">18</a><a href="page19.html">19</a><a href="page20.html">20</a><a href="page21.html">21</a><a href="page22.html">22</a><a href="page23.html">23</a><a href="page24.html">24</a><a href="page25.html">25</a><a href="page26.html">26</a><a href="page27.html">27</a><a href="page28.html">28</a><a href="page29.html">29</a><a href="page30.html">30</a><a href="page31.html">31</a><a href="page32.html">32</a><a href="page33.html">33</a><a href="page34.html">34</a><a href="page35.html">35</a><a href="page36.html">36</a><a href="page37.html">37</a><a href="page38.html">38</a><a href="page39.html">39</a><a href="page40.html">40</a><a href="page41.html">41</a><a href="page42.html">42</a><a href="page43.html">43</a><a href="page44.html">44</a><a href="page45.html">45</a><a href="page46.html">46</a><a href="page47.html">47</a><a href="page48.html">48</a><a href="page49.html">49</a><a href="page50.html">50</a><a href="page51.html">51</a><a href="page52.html">52</a><a href="page53.html">53</a><a href="page54.html">54</a><a href="page55.html">55</a><a href="page56.html">56</a><a href="page57.html">57</a><a href="page58.html">58</a><a href="page59.html">59</a><a href="page60.html">60</a><a href="page61.html">61</a><a href="page62.html">62</a><a href="page63.html">63</a><a href="page64.html">64</a><a href="page65.html">65</a><a href="page66.html">66</a><a href="page67.html">67</a><a href="page68.html">68</a><a href="page69.html">69</a><a href="page70.html">70</a><a href="page71.html">71</a><a href="page72.html">72</a><a href="page73.html">73</a><a href="page74.html">74</a><a href="page75.html">75</a><a href="page76.html">76</a><a href="page77.html" class="active">77</a><a href="page78.html">78</a><a href="page79.html">79</a><a href="page80.html">80</a><a href="page81.html">81</a><a href="page82.html">82</a><a href="page83.html">83</a><a href="page84.html">84</a><a href="page85.html">85</a><a href="page86.html">86</a><a href="page87.html">87</a><a href="page88.html">88</a><a href="page89.html">89</a><a href="page90.html">90</a><a href="page91.html">91</a><a href="page92.html">92</a><a href="page93.html">93</a><a href="page94.html">94</a><a href="page95.html">95</a><a href="page96.html">96</a><a href="page97.html">97</a><a href="page98.html">98</a><a href="page99.html">99</a><a href="page100.html">100</a><a href="page101.html">101</a><a href="page102.html">102</a><a href="page103.html">103</a><a href="page104.html">104</a><a href="page105.html">105</a><a href="page106.html">106</a><a href="page107.html">107</a><a href="page108.html">108</a><a href="page109.html">109</a><a href="page110.html">110</a><a href="page111.html">111</a><a href="page112.html">112</a><a href="page113.html">113</a><a href="page114.html">114</a><a href="page115.html">115</a><a href="page116.html">116</a><a href="page117.html">117</a><a href="page118.html">118</a><a href="page119.html">119</a><a href="page120.html">120</a><a href="page121.html">121</a><a href="page122.html">122</a><a href="page123.html">123</a><a href="page124.html">124</a><a href="page125.html">125</a><a href="page126.html">126</a><a href="page127.html">127</a><a href="page128.html">128</a><a href="page129.html">129</a><a href="page130.html">130</a><a href="page131.html">131</a><a href="page132.html">132</a><a href="page133.html">133</a><a href="page134.html">134</a><a href="page135.html">135</a><a href="page136.html">136</a><a href="page137.html">137</a><a href="page138.html">138</a><a href="page139.html">139</a><a href="page140.html">140</a><a href="page141.html">141</a><a href="page142.html">142</a><a href="page143.html">143</a><a href="page144.html">144</a><a href="page145.html">145</a><a href="page146.html">146</a><a href="page147.html">147</a><a href="page148.html">148</a><a href="page149.html">149</a><a href="page150.html">150</a><a href="page151.html">151</a><a href="page152.html">152</a><a href="page153.html">153</a><a href="page154.html">154</a><a href="page155.html">155</a><a href="page156.html">156</a><a href="page157.html">157</a><a href="page158.html">158</a><a href="page159.html">159</a><a href="page160.html">160</a><a href="page161.html">161</a><a href="page162.html">162</a><a href="page163.html">163</a><a href="page164.html">164</a><a href="page165.html">165</a><a href="page166.html">166</a><a href="page167.html">167</a><a href="page168.html">168</a><a href="page169.html">169</a><a href="page170.html">170</a><a href="page171.html">171</a><a href="page172.html">172</a><a href="page173.html">173</a><a href="page174.html">174</a><a href="page175.html">175</a><a href="page176.html">176</a><a href="page177.html">177</a><a href="page178.html">178</a><a href="page179.html">179</a><a href="page180.html">180</a><a href="page181.html">181</a><a href="page182.html">182</a><a href="page183.html">183</a><a href="page184.html">184</a><a href="page185.html">185</a><a href="page186.html">186</a><a href="page187.html">187</a><a href="page188.html">188</a><a href="page189.html">189</a><a href="page190.html">190</a><a href="page191.html">191</a><a href="page192.html">192</a><a href="page193.html">193</a><a href="page194.html">194</a><a href="page195.html">195</a><a href="page196.html">196</a><a href="page197.html">197</a><a href="page198.html">198</a><a href="page199.html">199</a><a href="page200.html">200</a><a href="page201.html">201</a><a href="page202.html">202</a><a href="page203.html">203</a><a href="page204.html">204</a><a href="page205.html">205</a><a href="page206.html">206</a><a href="page207.html">207</a><a href="page208.html">208</a><a href="page209.html">209</a><a href="page210.html">210</a><a href="page211.html">211</a><a href="page212.html">212</a><a href="page213.html">213</a><a href="page214.html">214</a><a href="page215.html">215</a><a href="page216.html">216</a><a href="page217.html">217</a><a href="page218.html">218</a></div><footer>&copy; 2026 News Portal Indonesia. All rights reserved.</footer>
+</div></body></html>
